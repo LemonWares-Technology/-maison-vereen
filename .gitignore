@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ── Next.js build output ──────────────────────────────────────────────────────
+/.next/
+/out/
+/build
+
+# ── Testing / coverage ────────────────────────────────────────────────────────
+/coverage
+
+# ── Environment variables ─────────────────────────────────────────────────────
+# Do NOT commit secrets. Add a .env.example with dummy values instead.
+.env
+.env.*
+!.env.example
+
+# ── Docs folder ───────────────────────────────────────────────────────────────
+# Contains the original .docx brief, extracted XML, design reference images,
+# and temp zip — none of these belong in version control.
+/docs/
+
+# ── Design reference images copied to public ──────────────────────────────────
+# These were used during development only.
+/public/images/ref-1.jpeg
+/public/images/ref-2.jpeg
+/public/images/ref-3.jpeg
+
+# ── Editor & OS ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.pem
+.vscode/*
+# Keep workspace settings if the team agrees to share them:
+# !.vscode/settings.json
+# !.vscode/extensions.json
+
+# ── Debug / misc logs ─────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# ── TypeScript ────────────────────────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Deployment ────────────────────────────────────────────────────────────────
+.vercel
