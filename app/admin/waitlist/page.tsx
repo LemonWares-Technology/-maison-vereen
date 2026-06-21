@@ -23,10 +23,10 @@ export default async function WaitlistPage() {
           </p>
         </div>
 
-        <div className="border border-white/[0.06] overflow-hidden">
+        <div className="border border-white/6 overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-white/[0.06] bg-[#0D0D0D]">
+              <tr className="border-b border-white/6 bg-[#0D0D0D]">
                 <th className="text-left px-5 py-3 text-[9px] uppercase tracking-[0.18em] text-[#4A4438] font-medium">
                   #
                 </th>
@@ -38,7 +38,7 @@ export default async function WaitlistPage() {
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/[0.04]">
+            <tbody className="divide-y divide-white/4">
               {entries.length === 0 ? (
                 <tr>
                   <td colSpan={3} className="px-5 py-16 text-center text-[#3A3530] text-sm">
@@ -46,8 +46,8 @@ export default async function WaitlistPage() {
                   </td>
                 </tr>
               ) : (
-                entries.map((entry, idx) => (
-                  <tr key={entry.id} className="hover:bg-white/[0.02] transition-colors">
+                entries.map((entry: any, idx: any) => (
+                  <tr key={entry.id} className="hover:bg-white/2 transition-colors">
                     <td className="px-5 py-3.5 text-[11px] text-[#3A3530] font-mono">
                       {String(idx + 1).padStart(3, "0")}
                     </td>
@@ -70,7 +70,7 @@ export default async function WaitlistPage() {
           <div className="flex justify-end">
             <a
               href="/api/waitlist/export"
-              className="text-[10px] uppercase tracking-widest text-[#C9A84C] hover:text-[#E8E2D9] transition-colors"
+              className="text-[10px] uppercase tracking-widest text-gold hover:text-[#E8E2D9] transition-colors"
             >
               Export CSV →
             </a>
