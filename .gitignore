@@ -51,6 +51,9 @@ yarn-error.log*
 .pnpm-debug.log*
 *.log
 
+# ── Prisma generated client (regenerate with: npm run db:generate) ────────────
+/prisma/generated/
+
 # ── TypeScript ────────────────────────────────────────────────────────────────
 *.tsbuildinfo
 next-env.d.ts

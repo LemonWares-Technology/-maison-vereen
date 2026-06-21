@@ -1,0 +1,57 @@
+// Maison Vereen — Prisma 7 Schema
+// NOTE: datasource url is NOT set here in Prisma 7 — it lives in prisma.config.ts
+
+generator client {
+  provider = "prisma-client"
+  output   = "../prisma/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ── Application — full 7-field form ──────────────────────────────────────────
+model Application {
+  id          String            @id @default(cuid())
+  name        String
+  email       String
+  country     String
+  occupation  String
+  drives      String            @db.Text
+  legacy      String            @db.Text
+  howHeard    String            @default("Not specified")
+  consent     Boolean           @default(true)
+  status      ApplicationStatus @default(PENDING)
+  notes       String?           @db.Text
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ── Waitlist — simple email entry from Access page ───────────────────────────
+model WaitlistEntry {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// ── Admin users ───────────────────────────────────────────────────────────────
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // bcrypt hash — never store plain text
+  name      String
+  createdAt DateTime @default(now())
+}
+
+enum ApplicationStatus {
+  PENDING
+  REVIEWING
+  APPROVED
+  REJECTED
+}

@@ -192,7 +192,21 @@ export default function AccessPage() {
                 </h3>
                 {!joined ? (
                   <form
-                    onSubmit={(e) => { e.preventDefault(); if (email) setJoined(true); }}
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      if (!email) return;
+                      try {
+                        const res = await fetch("/api/waitlist", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ email }),
+                        });
+                        if (res.ok || res.status === 409) setJoined(true);
+                      } catch {
+                        // fail silently — UI still shows joined on 409 (already exists)
+                        setJoined(true);
+                      }
+                    }}
                     className="space-y-4"
                   >
                     <input

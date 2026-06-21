@@ -1,77 +1,126 @@
 @import "tailwindcss";
 
+/* ── Design tokens ─────────────────────────────────────────────────────────── */
 @theme {
-  --color-gold: #C9A84C;
-  --color-gold-light: #D4B56A;
-  --color-gold-dark: #8B6914;
-  --color-cream: #F5F0E4;
-  --color-beige: #F0EAD8;
-  --color-charcoal: #0A0A0A;
-  --color-charcoal-light: #111111;
-  --color-charcoal-mid: #1A1A1A;
+  --color-gold:          #C9A84C;
+  --color-gold-light:    #D4B56A;
+  --color-gold-dark:     #8B6914;
+  --color-cream:         #F5F0E4;
+  --color-beige:         #F0EAD8;
+  --color-charcoal:      #0A0A0A;
+  --color-charcoal-light:#111111;
+  --color-charcoal-mid:  #1A1A1A;
 
-  --font-sans: var(--font-geist-sans);
+  --font-sans:  var(--font-geist-sans);
   --font-serif: var(--font-cormorant);
 }
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
 :root {
   --background: #0A0A0A;
   --foreground: #E8E2D9;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* scroll-behavior: smooth is set via data attribute per Next.js recommendation */
-
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, sans-serif;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Luxury scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0A0A0A; }
-::-webkit-scrollbar-thumb { background: #1f1f1f; }
+/* ── Scrollbar — brand gold on hover ───────────────────────────────────────── */
+::-webkit-scrollbar         { width: 4px; height: 4px; }
+::-webkit-scrollbar-track   { background: #0A0A0A; }
+::-webkit-scrollbar-thumb   { background: #1f1f1f; border-radius: 2px; transition: background 0.3s; }
 ::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+* { scrollbar-width: thin; scrollbar-color: #1f1f1f #0A0A0A; }
 
-/* Fade-in animations */
+/* ── Keyframes ──────────────────────────────────────────────────────────────── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { box-shadow: 0 0 0 6px rgba(201,168,76,0.08); }
+}
 
-.anim-fade-up {
-  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+/* ── Animation utilities ───────────────────────────────────────────────────── */
+.anim-fade-up    { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-fade-up-d1 { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.12s both; }
+.anim-fade-up-d2 { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.24s both; }
+.anim-fade-up-d3 { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.38s both; }
+.anim-fade-up-d4 { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.52s both; }
+
+.anim-fade-in    { animation: fadeIn      0.5s ease both; }
+.anim-slide-right{ animation: slideInRight 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-slide-up   { animation: slideInUp   0.4s  cubic-bezier(0.22,1,0.36,1) both; }
+.anim-scale-in   { animation: scaleIn     0.35s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* Legacy compat */
+.animate-fade-in          { animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in-delayed  { opacity:0; animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) 0.6s forwards; }
+.animate-fade-in-more-delayed { opacity:0; animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) 1.2s forwards; }
+
+/* ── Spinner ────────────────────────────────────────────────────────────────── */
+.spinner {
+  display: inline-block;
+  width:  16px;
+  height: 16px;
+  border: 1.5px solid rgba(201,168,76,0.2);
+  border-top-color: #C9A84C;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
 }
-.anim-fade-up-d1 {
-  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
-}
-.anim-fade-up-d2 {
-  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
-}
-.anim-fade-up-d3 {
-  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
-}
-.anim-fade-up-d4 {
-  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+.spinner-sm { width:12px; height:12px; border-width:1.5px; }
+.spinner-lg { width:24px; height:24px; border-width:2px;   }
+.spinner-white {
+  border-color: rgba(255,255,255,0.2);
+  border-top-color: #fff;
 }
 
-/* Keep old names for compat */
-.animate-fade-in        { animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.animate-fade-in-delayed { opacity: 0; animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards; }
-.animate-fade-in-more-delayed { opacity: 0; animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
+/* ── Skeleton shimmer ───────────────────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #0f0f0f 0px,
+    #1a1a1a 60px,
+    #0f0f0f 120px
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 2px;
+}
 
-/* Gold underline link */
+/* ── Gold underline link ────────────────────────────────────────────────────── */
 .link-gold {
   display: inline-flex;
   align-items: center;
@@ -81,17 +130,14 @@ body {
   text-transform: uppercase;
   color: #E8E2D9;
   font-weight: 500;
-  transition: color 0.3s;
   text-decoration: none;
-  border-bottom: 1px solid rgba(232, 226, 217, 0.3);
+  border-bottom: 1px solid rgba(232,226,217,0.3);
   padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
 }
-.link-gold:hover {
-  color: #C9A84C;
-  border-bottom-color: #C9A84C;
-}
+.link-gold:hover { color: #C9A84C; border-bottom-color: #C9A84C; }
 
-/* Section tag label */
+/* ── Section tag ────────────────────────────────────────────────────────────── */
 .section-tag {
   display: block;
   font-size: 9px;
@@ -102,10 +148,49 @@ body {
   font-family: var(--font-geist-sans), Arial, sans-serif;
 }
 
-/* Thin gold rule */
-.gold-rule {
-  width: 32px;
-  height: 1px;
+/* ── Gold rule ──────────────────────────────────────────────────────────────── */
+.gold-rule { width:32px; height:1px; background:#C9A84C; display:block; }
+
+/* ── Admin-specific ─────────────────────────────────────────────────────────── */
+
+/* Drawer slide in from right */
+.admin-drawer {
+  animation: slideInRight 0.35s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Table row hover — subtle gold left border flash */
+.admin-row {
+  position: relative;
+  transition: background 0.18s;
+}
+.admin-row::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
   background: #C9A84C;
-  display: block;
+  transform: scaleY(0);
+  transition: transform 0.2s cubic-bezier(0.22,1,0.36,1);
+  transform-origin: bottom;
+}
+.admin-row:hover::before { transform: scaleY(1); }
+
+/* Stat card entrance */
+.stat-card {
+  animation: scaleIn 0.4s cubic-bezier(0.22,1,0.36,1) both;
+}
+.stat-card:nth-child(1) { animation-delay: 0.04s; }
+.stat-card:nth-child(2) { animation-delay: 0.08s; }
+.stat-card:nth-child(3) { animation-delay: 0.12s; }
+.stat-card:nth-child(4) { animation-delay: 0.16s; }
+.stat-card:nth-child(5) { animation-delay: 0.20s; }
+.stat-card:nth-child(6) { animation-delay: 0.24s; }
+
+/* Status badge pulse on PENDING */
+.badge-pending { animation: goldPulse 2.5s ease-in-out infinite; }
+
+/* Focus ring — gold */
+input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 1.5px solid rgba(201,168,76,0.5);
+  outline-offset: 2px;
 }

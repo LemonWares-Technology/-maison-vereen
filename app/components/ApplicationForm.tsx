@@ -25,6 +25,7 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -33,11 +34,39 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.consent) return;
     setSubmitting(true);
-    setTimeout(() => { setSubmitting(false); setSubmitted(true); }, 1600);
+
+    try {
+      const res = await fetch("/api/applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name:       form.name,
+          email:      form.email,
+          country:    form.country,
+          occupation: form.occupation,
+          drives:     form.drives,
+          legacy:     form.legacy,
+          howHeard:   form.howHeard === HOW_HEARD_OPTIONS[0] ? "Not specified" : form.howHeard,
+        }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        // Show the API error inline
+        setSubmitError(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setSubmitError("Network error. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -158,6 +187,13 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
                   </span>
                 </label>
               </div>
+
+              {/* Submit error */}
+              {submitError && (
+                <div className="border border-red-900/40 bg-red-950/20 px-4 py-3 text-[11px] text-red-400 leading-relaxed">
+                  {submitError}
+                </div>
+              )}
 
               {/* Submit */}
               <button
