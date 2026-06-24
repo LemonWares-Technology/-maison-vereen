@@ -58,7 +58,7 @@ export default function EditionIPage() {
               {/* Bottle — silhouette only, anticipation not unveiling */}
               <div className="relative min-h-[420px] lg:min-h-0 bg-[#060608] overflow-hidden">
                 <Image
-                  src="/images/hero-bottle.png"
+                  src="/images/the bottle.png"
                   alt="Maison Vereen Edition I bottle"
                   fill priority
                   sizes="(max-width:1024px) 100vw, 50vw"
@@ -178,7 +178,7 @@ export default function EditionIPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[52vh]">
               <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
-                  src="/images/hero-bottle.png"
+                  src="/images/the bottle.png"
                   alt="Maison Vereen Edition I — bottle design"
                   fill
                   sizes="(max-width:1024px) 100vw, 50vw"
