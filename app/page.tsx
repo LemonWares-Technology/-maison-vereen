@@ -69,7 +69,7 @@ export default function HomePage() {
         {/* 9 — Journal Preview
             Intellectual depth. The house has a point of view, not just a product.
             Softens the visitor before the final hard ask. */}
-        <Journal />
+        {/* <Journal /> */}
 
         {/* 10 — Application CTA
             The visitor has now been fully earned. They understand the house,

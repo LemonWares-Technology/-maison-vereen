@@ -23,7 +23,7 @@ export const articles: Article[] = [
     excerpt: "Not 'what fragrance do people want to wear?' The question that started Maison Vereen was different. Harder. More personal. What does the fragrance of someone who changes rooms smell like?",
     date: "June 2024",
     readTime: "6 min read",
-    image: "/images/dark-stone.jpg",
+    image: "/images/maison-vereen-access.png",
     imagePos: "30% center",
     body: [
       "There is a quality in certain people that is impossible to manufacture. It is not confidence. Confidence can be performed. It is not success — success can be recent, borrowed, or accidental. It is something older than all of those things. Something that exists before the room fills.",
@@ -45,7 +45,7 @@ export const articles: Article[] = [
     excerpt: "The word luxury has been borrowed, diluted, and redistributed until it covers almost everything. What remains when you remove the borrowed meaning? What does genuine craft actually look like?",
     date: "May 2024",
     readTime: "5 min read",
-    image: "/images/luxury-dark.jpg",
+    image: "/images/the-house-hero.png",
     imagePos: "50% center",
     body: [
       "The word luxury has been borrowed so many times it has almost lost its shape. It now covers hotel chains and skincare serums and rental cars and airline seats. It is used to describe things that are merely expensive, things that are merely pleasant, things that are merely new.",
@@ -66,7 +66,7 @@ export const articles: Article[] = [
     excerpt: "Africa is the youngest continent by median age. The fastest-growing consumer class. The source of more undocumented creative and intellectual authority than perhaps any civilization in recent history.",
     date: "April 2024",
     readTime: "7 min read",
-    image: "/images/dark-architecture.jpg",
+    image: "/images/house-section-image.png",
     imagePos: "40% center",
     body: [
       "Africa is the youngest continent by median age. It is the fastest-growing consumer class in the world. It is the source of more undocumented creative and intellectual authority than perhaps any civilization in recent history. The world is beginning to understand what those of us who have built things on this continent have always known: the quality of mind that comes from building in difficult environments is exceptional.",
@@ -88,7 +88,7 @@ export const articles: Article[] = [
     excerpt: "Some people arrive in rooms with noise. Others arrive with weight. The difference is not volume. It is not charisma. It is something more fundamental — a quality that precedes the entry.",
     date: "March 2024",
     readTime: "5 min read",
-    image: "/images/journal-dark.jpg",
+    image: "/images/the-house-hero.png",
     imagePos: "20% center",
     body: [
       "Some people arrive in rooms with noise. They announce themselves — loudly or strategically, with a handshake or a performance or a credential. They require the room to pay attention.",
@@ -109,7 +109,7 @@ export const articles: Article[] = [
     excerpt: "250 was not chosen for scarcity's sake. It was chosen because the founding chapter of a house should be owned by people who understand its significance.",
     date: "February 2024",
     readTime: "6 min read",
-    image: "/images/dark-stone.jpg",
+    image: "/images/house-section-image.png",
     imagePos: "70% center",
     body: [
       "Scarcity in luxury is almost always manufactured. A brand produces ten times what it needs, stores nine of them, and releases one — creating the impression of rarity while keeping the economics of volume. The customer feels privileged. The brand books the margin. The scarcity is theater.",
@@ -130,7 +130,7 @@ export const articles: Article[] = [
     excerpt: "The houses she admires most were built by people who were not thinking about next quarter. They were thinking about next century. She is building with the same intention.",
     date: "January 2024",
     readTime: "5 min read",
-    image: "/images/luxury-dark.jpg",
+    image: "/images/the-house-belonging.png",
     imagePos: "60% center",
     body: [
       "Success and legacy are not the same thing. They can coexist, but they require different orientations. Success is measured from the outside — revenue, recognition, scale, market position. Legacy is measured from the inside — by the decisions made when no one was watching, by what was refused as much as what was built.",
@@ -151,7 +151,7 @@ export const articles: Article[] = [
     excerpt: "Edition I is the beginning of a house that is designed to endure. The only question is whether you were there when it started.",
     date: "December 2023",
     readTime: "4 min read",
-    image: "/images/dark-architecture.jpg",
+    image: "/images/maison-vereen-access.png",
     imagePos: "35% center",
     body: [
       "Maison Vereen was built to prove one thing: that a luxury house born on the African continent, built by an African founder, drawing from African materials and African creative authority, can stand alongside the world's most respected houses without qualification, without apology, and without compromise.",
