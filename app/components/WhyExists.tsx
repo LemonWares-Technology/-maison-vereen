@@ -10,33 +10,32 @@ export default function WhyExists() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[580px]">
 
           {/* Left — text panel */}
-          <div className="flex items-center px-6 sm:px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28">
+          <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28">
             <div className="space-y-8 max-w-[520px]">
               <span className="section-tag">Why Maison Vereen Exists</span>
 
               <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-                style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+                className="type-display"
               >
                 There was a gap.{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>
+                <em className="not-italic text-gold">
                   We built the house to fill it.
                 </em>
               </h2>
 
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+              <p className="type-body">
                 Every luxury fragrance house in the world was built by someone,
                 somewhere, for a vision they could not find elsewhere. Chanel
                 saw a woman the fashion world hadn&apos;t dressed yet. Hermès
                 saw an object the market hadn&apos;t built yet. We saw an
                 individual the fragrance world had never celebrated.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+              <p className="type-body">
                 The builder. The visionary. The founder. The creator. The
                 leader who moves without permission. The individual whose
                 presence is felt before they speak.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+              <p className="type-body">
                 No fragrance house was built for this person. Until now.
               </p>
 

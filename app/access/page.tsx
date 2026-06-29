@@ -81,7 +81,7 @@ const circles = [
     body: "The founding membership tier. Open continuously as the house grows.",
     privileges: [
       "Advance notice of all future releases before public announcement",
-      "Access to the private Journal",
+      "Access to The HouseBook",
       "Invitations to all house events",
       "Priority allocation for future limited editions",
     ],
@@ -127,7 +127,7 @@ export default function AccessPage() {
   const [submitError, setSubmitError] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const inputClass = "w-full bg-transparent border border-white/[0.1] px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300";
+  const inputClass = "w-full bg-transparent border border-white/10 px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -162,12 +162,12 @@ export default function AccessPage() {
         <section className="pt-[72px] border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
-              <div className="flex flex-col justify-center px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-7">
+              <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-7">
                 <span className="section-tag">Application</span>
-                <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.02] uppercase" style={{ fontSize: "clamp(2rem, 6vw, 4.2rem)" }}>
+                <h1 className="type-display uppercase">
                   Access is earned.<br />Not given.
                 </h1>
-                <div className="space-y-3 text-[#7A7268] font-light leading-[1.85]" style={{ fontSize: "15px" }}>
+                <div className="type-body-sm space-y-3">
                   <p>Maison Vereen is a house of rare creation. Edition I is limited to 250 bottles worldwide. Access is by application only.</p>
                   <p>We select not for quantity, but for alignment.</p>
                 </div>
@@ -184,22 +184,22 @@ export default function AccessPage() {
 
         {/* ── FOR THE PERSON WHO BUILDS THINGS ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24">
             <div className="max-w-[760px] space-y-8">
               <span className="section-tag">For the Person Who Builds Things</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 You have already built something worth being proud of.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 This is not for someone who is still figuring out who they are. This is for someone who already knows — and is looking for things in the world that reflect that standard back at them.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 You lead. You create. You hold yourself to a level most people find uncomfortable. You have a reputation you take seriously and a name you are building carefully. You are not interested in things that are merely expensive. You are interested in things that are worth something.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 Maison Vereen was built for you.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 We create luxury fragrances. Our first edition — 250 numbered bottles, produced once and never again — is now in allocation. The people who own it will be the founding generation of the first serious African luxury house. That is what we are offering. Below, we will explain exactly what that means and why it is worth your attention.
               </p>
             </div>
@@ -208,51 +208,51 @@ export default function AccessPage() {
 
         {/* ── IDENTITY & DISTINCTION ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="space-y-5">
                 <span className="section-tag">Identity &amp; Distinction</span>
-                <p className="font-serif font-light text-[#C8BFB2] leading-[1.3] italic" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)" }}>
+                <p className="type-pullquote">
                   The objects you choose say something about how you see yourself.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   You have built enough to know that quality is not a luxury. It is a standard. You do not buy things to impress people. You choose things that align with who you are becoming — objects that reflect your values, your taste, and your sense of what is worth owning.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Most luxury fragrance in the world is built for aspiration — for who you want to become. We made a different decision. Maison Vereen was built to recognize who you already are.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Our fragrances are not designed to give you an identity. They are designed to amplify the one you already carry. The founding edition — Edition I — was built around a single question: what does the presence of someone who has actually built something smell like?
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Not their ambition. Not their aspiration. Their presence. The quality that exists before achievement — that makes a room feel different when they walk in.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   That question led us to African raw materials that produce a depth unavailable in the standard global fragrance supply chain. To a master perfumer. To a bottle designed as a sculpture before a vessel. To an authentication system built with the same seriousness as the fragrance itself.
                 </p>
               </div>
               <div className="space-y-5">
                 <span className="section-tag">Opportunity &amp; Timing</span>
-                <p className="font-serif font-light text-[#C8BFB2] leading-[1.3] italic" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)" }}>
+                <p className="type-pullquote">
                   The people who recognise something early earn something permanent.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   You have been early to things before. You know what that feels like — the clarity of seeing something others have not noticed yet, the quiet confidence of knowing before the world catches up.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   That is the position this creates.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   We are building Africa's first internationally serious luxury house — the kind of institution that, if built correctly, earns a place in the history of how this continent is represented in global culture. We are at the very beginning of that story. Edition I is the opening chapter.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   When the 250 founding positions are filled, Edition I closes permanently. It is never reproduced, never restocked, never reformulated. The numbered bottle you own will be one of 250 that exist in the world — authenticated, documented, and permanent — for the rest of its existence.
                 </p>
                 <div className="border border-white/6 px-6 py-5 space-y-2">
                   <p className="font-mono text-gold" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", letterSpacing: "0.1em" }}>250</p>
                   <p className="text-[#7A7068] font-light" style={{ fontSize: "14px" }}>Bottles worldwide. Not per country. Not per year. Total, globally, forever.</p>
                 </div>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   The question is not whether this will matter. It is whether you will have been part of it when it did.
                 </p>
               </div>
@@ -262,44 +262,44 @@ export default function AccessPage() {
 
         {/* ── COMMUNITY & BELONGING + LEGACY & PERMANENCE ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="space-y-5">
                 <span className="section-tag">Community &amp; Belonging</span>
-                <p className="font-serif font-light text-[#C8BFB2] leading-[1.3] italic" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)" }}>
+                <p className="type-pullquote">
                   You are more careful about what you join than most people are.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   You have earned the right to be selective. The communities you belong to, the rooms you enter, the networks you maintain — you have made those choices deliberately. You do not join things for the sake of joining.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   The 250 founding owners of Maison Vereen will be a specific kind of person. People who build things. People who lead. People who value quality as a personal standard rather than a social signal. People who understand what it means to be early to something serious.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   That is the community you would be entering.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Not a fan base. Not a customer list. A founding generation. The people who are there when an institution begins. Documented. Numbered. Permanent.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   We are not looking for the largest possible audience. We are looking for the right 250 people. If you are one of them, you already sense it.
                 </p>
               </div>
               <div className="space-y-5">
                 <span className="section-tag">Legacy &amp; Permanence</span>
-                <p className="font-serif font-light text-[#C8BFB2] leading-[1.3] italic" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)" }}>
+                <p className="type-pullquote">
                   What will your name be attached to twenty years from now?
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   You think about legacy. Not in an abstract way — in the real, practical way of someone who is actively building something and making choices about what they want to be associated with.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   The objects you own, the communities you belong to, the things you chose early — these become part of your story. They reflect your judgment. Your taste. Your ability to see value before others do.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Founding ownership of Maison Vereen Edition I is a permanent entry in the house's founding record. Your name and bottle number are documented. That documentation does not expire, does not change, and cannot be revisited.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="type-body">
                   Twenty years from now, the founding owners of Maison Vereen Edition I will be the people who were there at the beginning of Africa's first serious luxury house — before it became what it is being built to become. That is worth something. Whether you measure it financially, reputationally, or simply as the satisfaction of having made a decision that turns out to have been correct.
                 </p>
               </div>
@@ -309,13 +309,13 @@ export default function AccessPage() {
 
         {/* ── YOUR COMPLETE OWNERSHIP PACKAGE ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">Your Complete Ownership Package</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 Everything that comes with founding ownership.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 Every founding position includes the following. All of it. No additional tiers within the ownership package.
               </p>
             </div>
@@ -335,16 +335,16 @@ export default function AccessPage() {
 
         {/* ── MEMBERSHIP CIRCLES ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">Membership Circles</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 Three tiers. One founding generation.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 The 250 founding positions are distributed across three circles. You do not select your circle on this form — it is offered to you based on availability when your application is reviewed. Each circle includes the complete ownership package above, plus the additional privileges listed.
               </p>
-              <p className="text-[#5A5449] font-light" style={{ fontSize: "14px" }}>
+              <p className="type-caption">
                 Pricing for each circle is communicated in your personal invitation email after your application is reviewed. Nothing is charged at the application stage.
               </p>
             </div>
@@ -357,7 +357,7 @@ export default function AccessPage() {
                     <p className="text-gold/60 font-medium uppercase tracking-[0.2em]" style={{ fontSize: "10px" }}>{c.positions}</p>
                     <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>{c.closing}</p>
                   </div>
-                  <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "14px" }}>{c.body}</p>
+                  <p className="type-caption">{c.body}</p>
                   <ul className="space-y-2.5 flex-1">
                     {c.privileges.map((p, j) => (
                       <li key={j} className="flex items-start gap-3">
@@ -375,10 +375,10 @@ export default function AccessPage() {
 
         {/* ── HOW IT WORKS ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
             <div className="space-y-4 max-w-[580px]">
               <span className="section-tag">How It Works</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 Simple. Personal. Nothing hidden.
               </h2>
             </div>
@@ -388,7 +388,7 @@ export default function AccessPage() {
                   <div className="absolute top-0 left-0 w-full h-px bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   <span className="font-mono text-gold/50" style={{ fontSize: "11px" }}>{step.num}</span>
                   <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "17px" }}>{step.title}</h3>
-                  <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "14px" }}>{step.body}</p>
+                  <p className="type-caption">{step.body}</p>
                 </div>
               ))}
             </div>
@@ -397,13 +397,13 @@ export default function AccessPage() {
 
         {/* ── BEFORE YOU APPLY ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
             <div className="space-y-4 max-w-[580px]">
               <span className="section-tag">Before You Apply</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 You should be certain before you commit to anything.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 You are a careful person. You do not make decisions without enough information. Here is everything you need to verify before applying.
               </p>
             </div>
@@ -413,17 +413,17 @@ export default function AccessPage() {
                   <div className="absolute top-0 left-0 w-full h-px bg-gold/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   <span className="font-serif text-gold/40" style={{ fontSize: "13px" }}>{v.num}</span>
                   <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "16px" }}>{v.title}</h3>
-                  <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "14px" }}>{v.body}</p>
+                  <p className="type-caption">{v.body}</p>
                 </div>
               ))}
             </div>
             <div className="border border-white/6 bg-[#080808] px-6 sm:px-8 py-6">
-              <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "14px" }}>
+              <p className="type-caption">
                 <span className="text-[#8A8178] font-medium">Security notice:</span> All official Maison Vereen communications, including payment instructions, come only from{" "}
                 <span className="text-gold/70 break-all">hello@maisonvereen.com</span>. We will never request payment through WhatsApp, social media, or any unverified channel. If you receive a payment request from any other source, do not act on it — contact us first.
               </p>
             </div>
-            <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "15px" }}>
+            <p className="type-body-sm">
               If you have questions before applying, write to us at{" "}
               <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors break-all">hello@maisonvereen.com</a>.
               {" "}A member of our team responds personally, usually within a few hours.
@@ -433,10 +433,10 @@ export default function AccessPage() {
 
         {/* ── QUESTIONS ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-8">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-8">
             <div className="space-y-3">
               <span className="section-tag">Questions</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 The questions most people ask first.
               </h2>
             </div>
@@ -463,20 +463,20 @@ export default function AccessPage() {
 
         {/* ── IF THIS RESONATES ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             <div className="max-w-[680px] space-y-5">
               <span className="section-tag">If This Resonates</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 If this resonates, you already know what to do.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 You have read this far. That is not an accident. The people this house was built for tend to recognise themselves in it quickly — not because the writing is persuasive, but because the idea of it is something they have felt for a long time without quite having a name for it.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>250 positions. One founding edition. No reprints.</p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">250 positions. One founding edition. No reprints.</p>
+              <p className="type-body">
                 Every day that passes is a day fewer positions remain. If this is the right moment for you, the form below takes five minutes. There is no payment at this stage and no obligation. You will receive a personal response within 24 to 48 hours.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+              <p className="type-body">
                 If you want to speak to us first, write to{" "}
                 <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors break-all">hello@maisonvereen.com</a>{" "}and you will hear from a person.
               </p>
@@ -486,14 +486,14 @@ export default function AccessPage() {
 
         {/* ── THE APPLICATION FORM ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="w-full max-w-[840px] space-y-8">
                 <div className="space-y-3">
                   <span className="section-tag">The Application Form</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>Tell us about yourself.</h2>
+                  <h2 className="type-headline">Tell us about yourself.</h2>
                   <p className="text-[#7A7068] font-light" style={{ fontSize: "15px" }}>Five minutes. No commitment.</p>
-                  <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "15px" }}>
+                  <p className="type-body-sm">
                     Every question below helps us understand who you are and whether this is the right moment for you to join Maison Vereen. Answer as naturally as you can. There are no wrong answers.
                   </p>
                 </div>
@@ -586,16 +586,16 @@ export default function AccessPage() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </div>
                 <span className="section-tag block">Application Received</span>
-                <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)" }}>Welcome to Maison Vereen.</h2>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
-                  Your application has been received. We will review it personally and respond within 48 hours. In the meantime, you have been added to the Maison Vereen Registry as a House Circle member. You now have access to the private Journal and will receive all future house announcements.
+                <h2 className="type-headline">Welcome to Maison Vereen.</h2>
+                <p className="type-body">
+                  Your application has been received. We will review it personally and respond within 48 hours. In the meantime, you have been added to the Maison Vereen Registry as a House Circle member. You now have access to The HouseBook and will receive all future house announcements.
                 </p>
                 <p className="text-[#3A3530] font-light" style={{ fontSize: "13px" }}>
                   Confirmation sent to <span className="text-[#5A5449] break-all">{form.email}</span>.
                 </p>
                 <div className="border-t border-white/5 pt-6">
                   <div className="w-8 h-px bg-gold/30 mb-5" />
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "15px" }}>
+                  <p className="type-body-sm">
                     If there is someone in your world who should know this house exists — someone who carries the kind of presence this house was built for — you may contact us to nominate them for private access.
                   </p>
                   <a href="mailto:hello@maisonvereen.com" className="inline-block mt-5 border border-gold/50 hover:border-gold hover:bg-gold/10 px-6 sm:px-8 py-3 text-[#E8E2D9] transition-all duration-500 text-center w-full sm:w-auto" style={{ fontSize: "11px", letterSpacing: "0.22em" }}>
@@ -609,7 +609,7 @@ export default function AccessPage() {
 
         {/* ── CLOSING STAMP ── */}
         <section className="bg-[#080808]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-12 text-center space-y-4">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 text-center space-y-4">
             <div className="w-8 h-px bg-gold/30 mx-auto" />
             <p className="font-mono text-gold" style={{ fontSize: "clamp(2rem, 8vw, 3rem)", letterSpacing: "0.1em" }}>250</p>
             <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Positions in the world. Total. Forever.</p>

@@ -25,7 +25,7 @@ export default async function AdminDashboard() {
   const session = await getAdminSession();
   if (!session) redirect("/admin/login");
 
-  const [total, pending, reviewing, approved, rejected, waitlist, recent] =
+  const [total, pending, reviewing, approved, rejected, waitlist, enquiries, recent] =
     await Promise.all([
       prisma.application.count(),
       prisma.application.count({ where: { status: "PENDING" } }),
@@ -33,17 +33,13 @@ export default async function AdminDashboard() {
       prisma.application.count({ where: { status: "APPROVED" } }),
       prisma.application.count({ where: { status: "REJECTED" } }),
       prisma.waitlistEntry.count(),
+      prisma.fragranceEnquiry.count({ where: { status: "NEW" } }),
       prisma.application.findMany({
         orderBy: { createdAt: "desc" },
         take: 8,
         select: {
-          id: true,
-          name: true,
-          email: true,
-          country: true,
-          whatYouDo: true,
-          status: true,
-          createdAt: true,
+          id: true, name: true, email: true, country: true,
+          whatYouDo: true, status: true, createdAt: true,
         },
       }),
     ]);
@@ -67,7 +63,7 @@ export default async function AdminDashboard() {
         {/* Stats grid */}
         <div className="anim-fade-up-d1">
           <DashboardStats
-            stats={{ total, pending, reviewing, approved, rejected, waitlist }}
+            stats={{ total, pending, reviewing, approved, rejected, waitlist, enquiries }}
           />
         </div>
 

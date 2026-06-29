@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface MembershipCirclesProps {
   onOpenApply: () => void;
 }
@@ -40,7 +42,7 @@ const tiers = [
     body: "Registry members who join after Edition I's founding period. Open continuously as the house grows.",
     benefits: [
       "Advance notice of all future releases",
-      "Access to exclusive house content and the Journal",
+      "Access to exclusive house content and The HouseBook",
       "Invitations to public house events",
       "Priority allocation requests for future limited editions",
     ],
@@ -51,13 +53,13 @@ const tiers = [
 export default function MembershipCircles({ onOpenApply }: MembershipCirclesProps) {
   return (
     <section id="registry" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy Page 1 + Page 7 */}
         <div className="space-y-6 max-w-[680px]">
           <span className="section-tag">Membership &amp; Registry</span>
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-            style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+            style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
           >
             Not a loyalty program.{" "}
             <em className="not-italic" style={{ color: "#C9A84C" }}>
@@ -103,7 +105,7 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
                 </div>
                 <h3
                   className="font-serif font-light text-[#E8E2D9] group-hover:text-gold transition-colors duration-300"
-                  style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)" }}
+                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.5rem)" }}
                 >
                   {tier.name}
                 </h3>
@@ -143,13 +145,13 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
 
         {/* CTA — single composed CTA per document rules */}
         <div className="text-center">
-          <button
-            onClick={onOpenApply}
-            className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
+          <Link
+            href="/access"
+            className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500 inline-block"
             style={{ fontSize: "9px", letterSpacing: "0.3em" }}
           >
             <span className="uppercase font-medium">Join the Registry</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

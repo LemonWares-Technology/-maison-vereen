@@ -20,7 +20,7 @@ export default function FirstTwoFifty({ onOpenApply }: FirstTwoFiftyProps) {
         }}
       />
 
-      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
+      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
         <div className="max-w-[760px] mx-auto space-y-0">
 
           {/* The number — the hero of this section per blueprint */}

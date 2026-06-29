@@ -64,12 +64,12 @@
 //               {/* Exact headline from document */}
 //               <h2
 //                 className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-//                 style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+//                 style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
 //               >
 //                 Collection One.
 //                 <span
 //                   className="block font-serif font-light text-[#C8BFB2] mt-2"
-//                   style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}
+//                   style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}
 //                 >
 //                   250 numbered bottles.
 //                 </span>
@@ -188,12 +188,12 @@ export default function CollectionPreview({
               {/* Exact headline from document */}
               <h2
                 className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-                style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+                style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
               >
                 Collection One.
                 <span
                   className="block font-serif font-light text-[#C8BFB2] mt-2"
-                  style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}
+                  style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}
                 >
                   250 numbered bottles.
                 </span>

@@ -1,19 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 import Link from "next/link";
 
 // Page 3 — OUR STORY
 
 export default function OurStoryPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── HERO — split layout ── */}
@@ -23,7 +19,7 @@ export default function OurStoryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[580px] space-y-8">
                   <span className="section-tag">Our Story</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     It started with a question{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>no one was asking.</em>
                   </h1>
@@ -59,7 +55,7 @@ export default function OurStoryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="space-y-8 max-w-[520px]">
                   <span className="section-tag">The Vision</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.08]" style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.08]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                     Africa&apos;s first.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>The world&apos;s next.</em>
                   </h2>
@@ -89,7 +85,7 @@ export default function OurStoryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">The Obsession with Excellence</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     Three years. One edition.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>No shortcuts.</em>
                   </h2>
@@ -133,7 +129,7 @@ export default function OurStoryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28 order-1 lg:order-2">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Why Africa</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     Not in spite of where we are from.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>Because of it.</em>
                   </h2>
@@ -156,7 +152,7 @@ export default function OurStoryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">The Future Being Built</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     Edition I is the first word.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>Not the last.</em>
                   </h2>
@@ -171,13 +167,13 @@ export default function OurStoryPage() {
                       <span>Collection One</span>
                       <span className="text-gold">→</span>
                     </Link>
-                    <button
-                      onClick={() => setIsApplyOpen(true)}
-                      className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+                    <Link
+                      href="/access"
+                      className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
                       style={{ fontSize: "11px", letterSpacing: "0.28em" }}
                     >
                       <span className="uppercase font-medium">Apply for Ownership</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -194,7 +190,6 @@ export default function OurStoryPage() {
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

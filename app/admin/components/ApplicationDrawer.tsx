@@ -136,7 +136,7 @@ export default function ApplicationDrawer({
 
       {/* Drawer */}
       <div
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-[520px] bg-charcoal border-l border-white/[0.07] flex flex-col shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-[520px] bg-charcoal border-l border-white/7 flex flex-col shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{ transform: visible ? "translateX(0)" : "translateX(100%)" }}
       >
         {/* Header */}
@@ -206,7 +206,7 @@ export default function ApplicationDrawer({
                       key={s.value}
                       onClick={() => handleStatusChange(s.value)}
                       disabled={!!updating}
-                      className="flex items-center gap-2.5 px-3.5 py-2.5 border border-white/[0.07] bg-[#0D0D0D] hover:border-white/15 transition-all duration-200 disabled:opacity-50 text-left"
+                      className="flex items-center gap-2.5 px-3.5 py-2.5 border border-white/7 bg-[#0D0D0D] hover:border-white/15 transition-all duration-200 disabled:opacity-50 text-left"
                     >
                       {isUpdating ? (
                         <span
@@ -268,7 +268,7 @@ export default function ApplicationDrawer({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Private notes about this applicant…"
-              className="w-full bg-[#0D0D0D] border border-white/[0.07] px-4 py-3 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200 resize-none leading-[1.7]"
+              className="w-full bg-[#0D0D0D] border border-white/7 px-4 py-3 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200 resize-none leading-[1.7]"
             />
             <button
               onClick={saveNotes}

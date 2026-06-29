@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -117,7 +117,7 @@ export default function WaitlistPage() {
   const [error, setError] = useState("");
 
   const inputClass =
-    "w-full bg-transparent border border-white/[0.1] px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300";
+    "w-full bg-transparent border border-white/1 px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -161,20 +161,14 @@ export default function WaitlistPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
 
               {/* Left */}
-              <div className="flex flex-col justify-center px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-8">
+              <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-8">
                 <span className="section-tag">Official Waiting List</span>
-                <h1
-                  className="font-serif font-light text-[#E8E2D9] leading-[1.02] uppercase"
-                  style={{ fontSize: "clamp(2rem, 6vw, 4rem)" }}
-                >
+                <h1 className="type-display uppercase">
                   Be among the few.
                   <br />
                   Be part of the first.
                 </h1>
-                <div
-                  className="space-y-2 text-[#7A7268] font-light leading-[1.85]"
-                  style={{ fontSize: "15px" }}
-                >
+                <div className="type-body-sm space-y-2">
                   <p>Edition I is limited to 250 bottles.</p>
                   <p>
                     Join the official waiting list for priority access when
@@ -187,8 +181,7 @@ export default function WaitlistPage() {
                       .getElementById("waitlist-form")
                       ?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="self-start border border-gold/60 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
-                  style={{ fontSize: "11px", letterSpacing: "0.3em" }}
+                  className="self-start border border-gold/60 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500 text-[11px] tracking-[0.3em]"
                 >
                   <span className="uppercase font-medium">
                     Join the Waiting List
@@ -213,9 +206,11 @@ export default function WaitlistPage() {
           </div>
         </section>
 
+        {/* ── WAITLIST COUNTER ── */}
+        <WaitlistCounter />
+
         {/* ── FOUR BENEFITS ── */}
-        <section className="bg-[#080808] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="bg-[#080808] border-b border-white/5">          <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-x sm:divide-y-0 md:divide-y-0 divide-white/5">
               {benefits.map((b, i) => (
                 <div
@@ -226,16 +221,10 @@ export default function WaitlistPage() {
                     {b.icon}
                   </div>
                   <div className="w-4 h-px bg-gold/20 group-hover:w-8 group-hover:bg-gold/40 transition-all duration-500" />
-                  <h3
-                    className="uppercase tracking-[0.22em] text-[#8A8178] font-medium"
-                    style={{ fontSize: "10px" }}
-                  >
+                  <h3 className="type-caption uppercase tracking-widest text-[#8A8178]">
                     {b.title}
                   </h3>
-                  <p
-                    className="text-[#4A4440] font-light leading-[1.7]"
-                    style={{ fontSize: "13px" }}
-                  >
+                  <p className="text-[13px] text-[#4A4440] font-light leading-[1.7]">
                     {b.body}
                   </p>
                 </div>
@@ -264,30 +253,21 @@ export default function WaitlistPage() {
               </div>
 
               {/* Right — Waitlist form */}
-              <div className="flex flex-col justify-center px-6 sm:px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 bg-charcoal lg:bg-charcoal lg:border-l lg:border-white/5">
+              <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 bg-charcoal lg:bg-charcoal lg:border-l lg:border-white/5">
                 {!joined ? (
                   <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-[440px]">
                     <div className="space-y-2 mb-8">
-                      <span
-                        className="block uppercase tracking-[0.28em] text-[#5A5449] font-medium"
-                        style={{ fontSize: "10px" }}
-                      >
+                      <span className="section-tag">
                         Join the Official Waiting List
                       </span>
-                      <p
-                        className="text-[#4A4440] font-light leading-[1.7]"
-                        style={{ fontSize: "13px" }}
-                      >
+                      <p className="type-body-sm">
                         Enter your details to join the Maison Vereen community.
                       </p>
                     </div>
 
                     {/* Full Name */}
                     <div className="space-y-2">
-                      <label
-                        className="block uppercase tracking-[0.22em] text-[#5A5449] font-medium"
-                        style={{ fontSize: "10px" }}
-                      >
+                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
                         Full Name
                       </label>
                       <input
@@ -304,10 +284,7 @@ export default function WaitlistPage() {
 
                     {/* Email */}
                     <div className="space-y-2">
-                      <label
-                        className="block uppercase tracking-[0.22em] text-[#5A5449] font-medium"
-                        style={{ fontSize: "10px" }}
-                      >
+                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
                         Email Address
                       </label>
                       <input
@@ -324,10 +301,7 @@ export default function WaitlistPage() {
 
                     {/* Country */}
                     <div className="space-y-2">
-                      <label
-                        className="block uppercase tracking-[0.22em] text-[#5A5449] font-medium"
-                        style={{ fontSize: "10px" }}
-                      >
+                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
                         Country
                       </label>
                       <div className="relative">
@@ -378,7 +352,7 @@ export default function WaitlistPage() {
                         onClick={() =>
                           setForm({ ...form, consent: !form.consent })
                         }
-                        className={`shrink-0 w-3.5 h-3.5 border mt-0.5 flex items-center justify-center transition-all duration-300 ${
+                        className={`shrink-0 w-3.5 h-3.5 border mt-1 flex items-center justify-center transition-all duration-300 ${
                           form.consent
                             ? "border-gold bg-gold/15"
                             : "border-white/15 group-hover:border-white/25"
@@ -401,10 +375,7 @@ export default function WaitlistPage() {
                           </svg>
                         )}
                       </button>
-                      <span
-                        className="text-[#5A5449] font-light leading-[1.75]"
-                        style={{ fontSize: "12px" }}
-                      >
+                      <span className="type-caption text-[#5A5449]">
                         I agree to receive updates and understand that this is
                         not an application.
                       </span>
@@ -421,21 +392,14 @@ export default function WaitlistPage() {
                     <button
                       type="submit"
                       disabled={submitting || !form.consent}
-                      className="w-full py-4 bg-gold/90 hover:bg-gold text-charcoal transition-all duration-500 disabled:opacity-30 disabled:cursor-not-allowed"
-                      style={{
-                        fontSize: "11px",
-                        letterSpacing: "0.3em",
-                      }}
+                      className="w-full py-4 bg-gold/90 hover:bg-gold text-charcoal transition-all duration-500 disabled:opacity-30 disabled:cursor-not-allowed text-[11px] tracking-[0.3em]"
                     >
                       <span className="uppercase font-semibold">
                         {submitting ? "Joining..." : "Join the Waiting List"}
                       </span>
                     </button>
 
-                    <p
-                      className="text-[#3A3530] font-light text-center"
-                      style={{ fontSize: "12px" }}
-                    >
+                    <p className="type-caption text-center">
                       We respect your privacy. Unsubscribe at any time.
                     </p>
                   </form>
@@ -460,24 +424,15 @@ export default function WaitlistPage() {
                     </div>
                     <div className="space-y-2">
                       <span className="section-tag">You&apos;re on the list.</span>
-                      <h3
-                        className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                        style={{ fontSize: "clamp(1.4rem, 2vw, 1.8rem)" }}
-                      >
+                      <h3 className="type-headline">
                         Thank you, {form.name.split(" ")[0]}.
                       </h3>
-                      <p
-                        className="text-[#7A7268] font-light leading-[1.7]"
-                        style={{ fontSize: "15px" }}
-                      >
+                      <p className="type-body-sm">
                         You will receive priority notification when applications
                         for Edition I open.
                       </p>
                     </div>
-                    <p
-                      className="text-[#3A3530] font-light"
-                      style={{ fontSize: "12px" }}
-                    >
+                    <p className="type-caption">
                       Confirmation sent to{" "}
                       <span className="text-[#4A4440]">{form.email}</span>
                     </p>
@@ -489,11 +444,262 @@ export default function WaitlistPage() {
         </section>
       </main>
 
+      {/* ── APPROVED WAITING LIST ── */}
+      <ApprovedList />
+
       <Footer />
       <ApplicationForm
         isOpen={isApplyOpen}
         onClose={() => setIsApplyOpen(false)}
       />
     </>
+  );
+}
+
+// ── Approved Waiting List Component ─────────────────────────────────────────
+
+interface ApprovedRecord {
+  verificationNumber: string;
+  displayName: string;
+  country: string;
+  approvedAt: string;
+}
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+}
+
+function ApprovedList() {
+  const [records, setRecords] = useState<ApprovedRecord[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetch("/api/applications/approved?limit=50")
+      .then((r) => r.json())
+      .then((data) => {
+        setRecords(data.records ?? []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  const filtered = records.filter((r) => {
+    if (!search.trim()) return true;
+    const q = search.trim().toLowerCase();
+    return (
+      r.verificationNumber.includes(q) ||
+      r.displayName.toLowerCase().includes(q) ||
+      r.country.toLowerCase().includes(q)
+    );
+  });
+
+  return (
+    <section className="bg-[#080808] border-t border-white/5">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 space-y-10">
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+          <div className="space-y-3">
+            <span className="section-tag">Approved Waiting List</span>
+            <h2 className="type-headline">
+              Verified members of the{" "}
+              <em className="not-italic text-gold">
+                Maison Vereen founding community.
+              </em>
+            </h2>
+            <p className="type-body-sm">
+              Approved applicants are listed chronologically. Verification numbers are permanent.
+            </p>
+          </div>
+
+          {/* Search */}
+          <div className="relative shrink-0 w-full sm:w-[280px]">
+            <svg
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#3A3530] pointer-events-none"
+              width="13" height="13" viewBox="0 0 24 24" fill="none"
+            >
+              <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search by name, number, country…"
+              className="w-full bg-[#0D0D0D] border border-white/8 pl-9 pr-4 py-2.5 text-xs text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/40 transition-colors duration-200"
+            />
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#3A3530] hover:text-[#E8E2D9] transition-colors"
+              >
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                  <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Content */}
+        {loading ? (
+          /* Skeleton */
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="bg-[#0D0D0D] px-6 py-7 space-y-3">
+                <div className="skeleton h-3 w-24 rounded" />
+                <div className="skeleton h-5 w-32 rounded" />
+                <div className="skeleton h-3 w-20 rounded" />
+                <div className="skeleton h-3 w-28 rounded" />
+              </div>
+            ))}
+          </div>
+        ) : filtered.length === 0 ? (
+          <div className="py-16 text-center border border-white/5">
+            <p className="type-body-sm">
+              {search ? "No results match your search." : "No approved applicants yet."}
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
+            {filtered.map((r, i) => (
+              <div
+                key={i}
+                className="group bg-[#0D0D0D] px-6 py-7 space-y-4 hover:bg-white/2 transition-colors duration-300 relative"
+              >
+                <div className="absolute top-0 left-0 w-full h-px bg-gold/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
+                {/* Badge row */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    {/* Verification badge icon */}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        stroke="#C9A84C"
+                        strokeWidth="1.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span className="type-mono text-gold/70">
+                      Verified Applicant
+                    </span>
+                  </div>
+                  {/* Approved status */}
+                  <span
+                    className="uppercase tracking-widest text-emerald-400/80 border border-emerald-400/25 bg-emerald-400/6 px-2 py-0.5 text-[9px]"
+                  >
+                    Approved
+                  </span>
+                </div>
+
+                {/* Verification number */}
+                <p className="font-mono text-gold text-[20px] tracking-wide">
+                  #{r.verificationNumber}
+                </p>
+
+                {/* Name */}
+                <p className="font-serif font-light text-[#E8E2D9] text-[17px]">
+                  {r.displayName}
+                </p>
+
+                {/* Location + date */}
+                <div className="space-y-1.5 border-t border-white/5 pt-4">
+                  <div className="flex items-center gap-2">
+                    <span className="type-mono">Location</span>
+                    <span className="type-caption text-[#7A7068]">{r.country}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="type-mono">Approved</span>
+                    <span className="type-caption text-[#7A7068]">{formatDate(r.approvedAt)}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Count */}
+        {!loading && filtered.length > 0 && (
+          <p className="type-caption text-center">
+            Showing {filtered.length} verified {filtered.length === 1 ? "member" : "members"}
+            {search && ` matching "${search}"`}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+// ── Waitlist Counter Component ───────────────────────────────────────────────
+
+function WaitlistCounter() {
+  const [count, setCount] = useState<number | null>(null);
+  const [displayed, setDisplayed] = useState(0);
+
+  useEffect(() => {
+    fetch("/api/waitlist/count")
+      .then((r) => r.json())
+      .then((data) => setCount(data.count ?? 0))
+      .catch(() => setCount(0));
+  }, []);
+
+  // Animate number from 0 to count
+  useEffect(() => {
+    if (count === null) return;
+    const duration = 1400;
+    const start = Date.now();
+    const tick = () => {
+      const elapsed = Date.now() - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplayed(Math.round(eased * count));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [count]);
+
+  return (
+    <section className="border-b border-white/5 bg-[#0D0D0D]">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 md:py-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center sm:text-left">
+
+          {/* Rule */}
+          <div className="hidden sm:block w-16 h-px bg-gold/30" />
+
+          {/* Counter */}
+          <div className="flex items-baseline gap-3">
+            <span
+              className="font-serif font-light text-gold leading-none tabular-nums"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.01em" }}
+            >
+              {count === null ? "—" : displayed.toLocaleString()}
+            </span>
+            <span className="font-serif font-light text-[#5A5449]" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)" }}>
+              of 250
+            </span>
+          </div>
+
+          {/* Rule */}
+          <div className="hidden sm:block w-16 h-px bg-gold/30" />
+
+          {/* Label */}
+          <p className="font-light text-[#7A7068] leading-[1.6]" style={{ fontSize: "14px" }}>
+            {count === null ? (
+              <span className="inline-block w-40 h-4 skeleton rounded" />
+            ) : (
+              <>people have joined the official waiting list</>
+            )}
+          </p>
+
+          {/* Rule */}
+          <div className="hidden sm:block w-16 h-px bg-gold/30" />
+        </div>
+      </div>
+    </section>
   );
 }

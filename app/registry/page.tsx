@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 // Page 7 — MEMBERSHIP & REGISTRY
 
@@ -43,7 +42,7 @@ const tiers = [
     body: "Registry members who join after Edition I's founding period. Open continuously as the house grows.",
     benefits: [
       "Advance notice of all future releases",
-      "Access to exclusive house content and the Journal",
+      "Access to exclusive house content and The HouseBook",
       "Invitations to public house events",
       "Priority allocation requests for future limited editions",
     ],
@@ -51,11 +50,9 @@ const tiers = [
 ];
 
 export default function RegistryPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── HERO — split layout ── */}
@@ -65,7 +62,7 @@ export default function RegistryPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Membership &amp; Registry</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     The Maison Vereen Registry is{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>the founding record of the house.</em>
                   </h1>
@@ -97,7 +94,7 @@ export default function RegistryPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">The Three Tiers</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 Not a loyalty program.{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>A founding circle.</em>
               </h2>
@@ -112,7 +109,7 @@ export default function RegistryPage() {
                       <span className="font-mono text-gold/50" style={{ fontSize: "10px" }}>{tier.num}</span>
                       <span className="uppercase tracking-[0.2em] text-[#4A4438]" style={{ fontSize: "9px" }}>{tier.status}</span>
                     </div>
-                    <h3 className="font-serif font-light text-[#E8E2D9] group-hover:text-gold transition-colors duration-300" style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.45rem)" }}>
+                    <h3 className="font-serif font-light text-[#E8E2D9] group-hover:text-gold transition-colors duration-300" style={{ fontSize: "clamp(1.25rem, 1.8vw, 1.6rem)" }}>
                       {tier.name}
                     </h3>
                     <span className="block uppercase tracking-[0.2em] text-[#5A5449]" style={{ fontSize: "10px" }}>{tier.eligibility}</span>
@@ -131,20 +128,19 @@ export default function RegistryPage() {
             </div>
 
             <div className="pt-4 text-center">
-              <button
-                onClick={() => setIsApplyOpen(true)}
-                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
+              <Link
+                href="/access"
+                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500 inline-block"
                 style={{ fontSize: "11px", letterSpacing: "0.3em" }}
               >
                 <span className="uppercase font-medium">Join the Registry</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

@@ -43,13 +43,11 @@ export default function FounderStory() {
 
               {/* Exact headline from document Page 1 */}
               <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-                style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+                className="type-display"
               >
                 She didn&apos;t find the house she was looking for.{" "}
                 <em
-                  className="block not-italic mt-2"
-                  style={{ color: "#C9A84C" }}
+                  className="block not-italic mt-2 text-gold"
                 >
                   So she built it.
                 </em>
@@ -57,8 +55,7 @@ export default function FounderStory() {
 
               {/* Exact copy from document Page 1 Founder Story */}
               <p
-                className="text-[#7A7068] font-light leading-[1.85]"
-                style={{ fontSize: "17px" }}
+                className="type-body"
               >
                 Some things are built because someone saw a gap in the market.
                 Maison Vereen was built because someone saw a gap in the world.
@@ -67,8 +64,7 @@ export default function FounderStory() {
                 who build things. People who lead without being asked to.
               </p>
               <p
-                className="text-[#7A7068] font-light leading-[1.85]"
-                style={{ fontSize: "17px" }}
+                className="type-body"
               >
                 She has spent years studying what it means to carry an aura.
                 What it means to leave a room different from how you found it.
@@ -79,8 +75,7 @@ export default function FounderStory() {
                 like.
               </p>
               <p
-                className="text-[#7A7068] font-light leading-[1.85]"
-                style={{ fontSize: "17px" }}
+                className="type-body"
               >
                 She is the founder of Maison Vereen. Her name is the
                 house&apos;s covenant.

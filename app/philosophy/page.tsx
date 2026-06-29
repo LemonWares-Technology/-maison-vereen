@@ -1,10 +1,8 @@
 ﻿"use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 import Link from "next/link";
 
 // Page 1 philosophy pillars — exact from document
@@ -32,11 +30,9 @@ const pillars = [
 ];
 
 export default function PhilosophyPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
@@ -46,7 +42,7 @@ export default function PhilosophyPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="space-y-7 max-w-[520px]">
                   <span className="section-tag">The House Philosophy</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.05]" style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.05]" style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.4rem)" }}>
                     The fragrance is not the luxury.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>You are.</em>
                   </h1>
@@ -101,7 +97,7 @@ export default function PhilosophyPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[700px] mx-auto text-center space-y-8">
               <div className="gold-rule mx-auto" />
-              <p className="font-serif font-light italic text-[#8A8178] leading-[1.55] tracking-[0.03em]" style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}>
+              <p className="font-serif font-light italic text-[#8A8178] leading-[1.55] tracking-[0.03em]" style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}>
                 &ldquo;We do not believe in selling people an identity. We believe in recognizing the identity they already carry.&rdquo;
               </p>
               <div className="gold-rule mx-auto" />
@@ -162,20 +158,19 @@ export default function PhilosophyPage() {
                 <span>Edition I</span>
                 <span className="text-gold">→</span>
               </Link>
-              <button
-                onClick={() => setIsApplyOpen(true)}
-                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+              <Link
+                href="/access"
+                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500 inline-block"
                 style={{ fontSize: "11px", letterSpacing: "0.28em" }}
               >
                 <span className="uppercase font-medium">Apply for Access</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

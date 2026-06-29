@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from 'next/link';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 // Page 11 — QUESTIONS & ANSWERS (exact from document)
 
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "How does the Registry work?",
-    a: "The Registry is the permanent membership record of Maison Vereen. Joining the Registry places your name in the house's founding documentation, grants access to the private portal and journal content, and ensures you receive all future announcements — including edition openings — before the public. Registry membership is free. Ownership positions require allocation through the application process.",
+    a: "The Registry is the permanent membership record of Maison Vereen. Joining the Registry places your name in the house's founding documentation, grants access to the private portal and HouseBook content, and ensures you receive all future announcements — including edition openings — before the public. Registry membership is free. Ownership positions require allocation through the application process.",
   },
   {
     q: "Who is Maison Vereen for?",
@@ -43,12 +43,11 @@ const faqs = [
 ];
 
 export default function FAQPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── HERO — split layout ── */}
@@ -58,7 +57,7 @@ export default function FAQPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-24">
                 <div className="max-w-[540px] space-y-6">
                   <span className="section-tag">Questions &amp; Answers</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}>
                     Every hesitation deserves{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>a direct answer.</em>
                   </h1>
@@ -133,20 +132,19 @@ export default function FAQPage() {
                 <span>Contact the House</span>
                 <span className="text-gold">→</span>
               </a>
-              <button
-                onClick={() => setIsApplyOpen(true)}
-                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+              <Link
+                href="/access"
+                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
                 style={{ fontSize: "11px", letterSpacing: "0.28em" }}
               >
                 <span className="uppercase font-medium">Begin Your Application</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

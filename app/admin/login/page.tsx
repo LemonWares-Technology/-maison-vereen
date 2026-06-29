@@ -78,7 +78,7 @@ function LoginForm() {
         </div>
 
         {/* Card */}
-        <div className="border border-white/[0.07] bg-[#0D0D0D] p-8 space-y-7 anim-scale-in">
+        <div className="border border-white/7 bg-[#0D0D0D] p-8 space-y-7 anim-scale-in">
           <h1
             className="font-serif font-light text-[#E8E2D9] leading-tight"
             style={{ fontSize: "22px" }}

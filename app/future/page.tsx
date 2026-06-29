@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from 'next/link';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 // Page 8 — THE FUTURE OF THE HOUSE
 
@@ -46,11 +46,10 @@ const futureItems = [
 ];
 
 export default function FuturePage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
 
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── HERO — split layout ── */}
@@ -60,7 +59,7 @@ export default function FuturePage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[540px] space-y-8">
                   <span className="section-tag">The Future of the House</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     We are not building for the current moment.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>We are building for the permanent record.</em>
                   </h1>
@@ -85,7 +84,7 @@ export default function FuturePage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">What Is Coming</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 We are not building a brand.{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>We are building an institution.</em>
               </h2>
@@ -130,17 +129,17 @@ export default function FuturePage() {
                   </p>
                   <div className="border-t border-white/5 pt-8">
                     <div className="w-8 h-px bg-gold/40 mb-6" />
-                    <p className="font-serif font-light italic text-[#5A5449]" style={{ fontSize: "clamp(1rem, 1.6vw, 1.3rem)" }}>
+                    <p className="font-serif font-light italic text-[#5A5449]" style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}>
                       &ldquo;Edition I is the beginning of a house that is designed to endure. The house being built today will still be standing in fifty years. The only question is whether you were there when it started.&rdquo;
                     </p>
                   </div>
-                  <button
-                    onClick={() => setIsApplyOpen(true)}
-                    className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
+                  <Link
+                    href="/access"
+                    className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
                     style={{ fontSize: "11px", letterSpacing: "0.28em" }}
                   >
                     <span className="uppercase font-medium">Join the Registry</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -149,7 +148,6 @@ export default function FuturePage() {
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

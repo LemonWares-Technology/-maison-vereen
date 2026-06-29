@@ -128,7 +128,7 @@ export default function ApplicationsTable({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search name, email, country…"
-              className="w-full bg-[#0D0D0D] border border-white/[0.07] pl-9 pr-8 py-2.5 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200"
+              className="w-full bg-[#0D0D0D] border border-white/7 pl-9 pr-8 py-2.5 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200"
             />
             {search && (
               <button
@@ -145,7 +145,7 @@ export default function ApplicationsTable({
           </div>
           <button
             type="submit"
-            className="border border-l-0 border-white/[0.07] bg-[#0D0D0D] px-4 text-xs uppercase tracking-widest text-[#4A4438] hover:text-gold transition-colors duration-200 shrink-0"
+            className="border border-l-0 border-white/7 bg-[#0D0D0D] px-4 text-xs uppercase tracking-widest text-[#4A4438] hover:text-gold transition-colors duration-200 shrink-0"
           >
             Go
           </button>
@@ -159,7 +159,7 @@ export default function ApplicationsTable({
             onChange={(e) =>
               updateParams({ status: e.target.value, page: "1" })
             }
-            className="bg-[#0D0D0D] border border-white/[0.07] pl-8 pr-4 py-2.5 text-xs text-[#8A8178] focus:outline-none focus:border-gold/40 transition-colors cursor-pointer appearance-none sm:w-[160px]"
+            className="bg-[#0D0D0D] border border-white/7 pl-8 pr-4 py-2.5 text-xs text-[#8A8178] focus:outline-none focus:border-gold/40 transition-colors cursor-pointer appearance-none sm:w-[160px]"
           >
             {STATUSES.map((s) => (
               <option key={s} value={s} className="bg-[#0D0D0D]">
