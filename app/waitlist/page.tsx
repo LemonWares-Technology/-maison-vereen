@@ -151,7 +151,7 @@ export default function WaitlistPage() {
 
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header  />
 
       <main className="bg-charcoal">
 

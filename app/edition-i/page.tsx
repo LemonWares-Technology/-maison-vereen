@@ -29,7 +29,7 @@ export default function EditionIPage() {
 
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header  />
       <main className="bg-charcoal">
 
         {/* ── HERO — "The first chapter is always the most significant." ── */}
@@ -138,7 +138,7 @@ export default function EditionIPage() {
               </p>
             </div>
             {/* Scent notes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/4">
               {(["Top Notes", "Heart Notes", "Base Notes"] as const).map((label, i) => {
                 const key = (["top", "heart", "base"] as const)[i];
                 return (
@@ -152,7 +152,7 @@ export default function EditionIPage() {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </section>
 

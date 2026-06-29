@@ -22,7 +22,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Header onOpenApply={openApply} />
+      <Header  />
 
       <main className="flex-1 bg-charcoal">
         
