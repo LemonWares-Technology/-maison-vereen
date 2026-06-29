@@ -67,3 +67,24 @@ enum ApplicationStatus {
   APPROVED
   REJECTED
 }
+
+// ── Fragrance Enquiry — Signature Collection acquire flow ─────────────────────
+model FragranceEnquiry {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  fragrance String
+  message   String?       @db.Text
+  status    EnquiryStatus @default(NEW)
+  createdAt DateTime      @default(now())
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum EnquiryStatus {
+  NEW
+  CONTACTED
+  COMPLETED
+}

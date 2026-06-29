@@ -12,12 +12,14 @@ import {
   X,
   ExternalLink,
   Key,
+  ShoppingBag,
 } from "lucide-react";
 
 const NAV = [
   { href: "/admin", icon: LayoutDashboard, label: "Dashboard" },
   { href: "/admin/applications", icon: Users, label: "Applications" },
   { href: "/admin/waitlist", icon: ListChecks, label: "Waitlist" },
+  { href: "/admin/fragrance-enquiries", icon: ShoppingBag, label: "Enquiries" },
   { href: "/admin/settings", icon: Key, label: "Security" },
 ];
 

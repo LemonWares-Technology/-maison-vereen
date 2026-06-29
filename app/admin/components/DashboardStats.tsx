@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { Users, Clock, Eye, CheckCircle, XCircle, Mail } from "lucide-react";
+import { Users, Clock, Eye, CheckCircle, XCircle, Mail, ShoppingBag } from "lucide-react";
 
 interface Stats {
   total: number;
@@ -10,63 +10,22 @@ interface Stats {
   approved: number;
   rejected: number;
   waitlist: number;
+  enquiries: number;
 }
 
 const CARDS = (s: Stats) => [
-  {
-    label: "Total",
-    sub: "Applications",
-    value: s.total,
-    icon: Users,
-    accent: "#C9A84C",
-    bg: "rgba(201,168,76,0.08)",
-  },
-  {
-    label: "Pending",
-    sub: "Awaiting review",
-    value: s.pending,
-    icon: Clock,
-    accent: "#F59E0B",
-    bg: "rgba(245,158,11,0.08)",
-    pulse: true,
-  },
-  {
-    label: "Reviewing",
-    sub: "Under consideration",
-    value: s.reviewing,
-    icon: Eye,
-    accent: "#60A5FA",
-    bg: "rgba(96,165,250,0.08)",
-  },
-  {
-    label: "Approved",
-    sub: "Access granted",
-    value: s.approved,
-    icon: CheckCircle,
-    accent: "#34D399",
-    bg: "rgba(52,211,153,0.08)",
-  },
-  {
-    label: "Rejected",
-    sub: "Not accepted",
-    value: s.rejected,
-    icon: XCircle,
-    accent: "#F87171",
-    bg: "rgba(248,113,113,0.08)",
-  },
-  {
-    label: "Waitlist",
-    sub: "Email sign-ups",
-    value: s.waitlist,
-    icon: Mail,
-    accent: "#C084FC",
-    bg: "rgba(192,132,252,0.08)",
-  },
+  { label: "Total", sub: "Applications", value: s.total, icon: Users, accent: "#C9A84C", bg: "rgba(201,168,76,0.08)" },
+  { label: "Pending", sub: "Awaiting review", value: s.pending, icon: Clock, accent: "#F59E0B", bg: "rgba(245,158,11,0.08)", pulse: true },
+  { label: "Reviewing", sub: "Under consideration", value: s.reviewing, icon: Eye, accent: "#60A5FA", bg: "rgba(96,165,250,0.08)" },
+  { label: "Approved", sub: "Access granted", value: s.approved, icon: CheckCircle, accent: "#34D399", bg: "rgba(52,211,153,0.08)" },
+  { label: "Rejected", sub: "Not accepted", value: s.rejected, icon: XCircle, accent: "#F87171", bg: "rgba(248,113,113,0.08)" },
+  { label: "Waitlist", sub: "Email sign-ups", value: s.waitlist, icon: Mail, accent: "#C084FC", bg: "rgba(192,132,252,0.08)" },
+  { label: "Enquiries", sub: "New fragrance", value: s.enquiries, icon: ShoppingBag, accent: "#FB923C", bg: "rgba(251,146,60,0.08)", pulse: true },
 ];
 
 export default function DashboardStats({ stats }: { stats: Stats }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-7 gap-3">
       {CARDS(stats).map(
         ({ label, sub, value, icon: Icon, accent, bg, pulse }) => (
           <div

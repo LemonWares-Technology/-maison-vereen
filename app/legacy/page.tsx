@@ -1,18 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import Link from 'next/link';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 // Page 15 — LEGACY (exact copy from document)
 
 export default function LegacyPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
 
   return (
     <>
-      <Header onOpenApply={() => setIsApplyOpen(true)} />
+      <Header onOpenApply={() => {}} />
       <main className="bg-charcoal">
 
         {/* ── OPENING — split layout ── */}
@@ -22,7 +21,7 @@ export default function LegacyPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[560px] space-y-10">
                   <span className="section-tag">Legacy</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     What makes it endure is not{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>the intention.</em>
                   </h1>
@@ -50,7 +49,7 @@ export default function LegacyPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">What We Are Building</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                     Not a brand.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>A permanent contribution.</em>
                   </h2>
@@ -79,7 +78,7 @@ export default function LegacyPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">What This House Will Mean</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                 In ten years. In twenty.{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>In fifty.</em>
               </h2>
@@ -124,7 +123,7 @@ export default function LegacyPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Why Beginnings Matter</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                     History does not remember the people who arrived{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>when everyone else did.</em>
                   </h2>
@@ -150,20 +149,19 @@ export default function LegacyPage() {
                 We are building the house we always needed. We are building it with the seriousness it deserves. We are building it for the individuals who were always worthy of it. And we are building it to last.
               </p>
               <div className="w-8 h-px bg-gold/40 mx-auto" />
-              <button
-                onClick={() => setIsApplyOpen(true)}
-                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500"
+              <Link
+                href="/access"
+                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500"
                 style={{ fontSize: "11px", letterSpacing: "0.3em" }}
               >
                 <span className="uppercase font-medium">Join the House. Begin the Story.</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   );
 }

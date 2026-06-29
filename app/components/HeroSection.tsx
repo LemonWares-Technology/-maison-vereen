@@ -1,7 +1,8 @@
 ﻿"use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeroSectionProps {
   onOpenApply: () => void;
@@ -51,8 +52,8 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
         <div className="max-w-[700px] py-28 md:py-36 space-y-8">
           {/* Headline — exact from document */}
           <h1
-            className="font-serif font-light text-[#EDE7DC] leading-[1.08] anim-fade-up"
-            style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.8rem)" }}
+            className="font-serif font-light text-[#EDE7DC] leading-[1.05] anim-fade-up"
+            style={{ fontSize: "clamp(2.4rem, 6vw, 5rem)" }}
           >
             Some people change every room they enter.{" "}
             <em className="not-italic" style={{ color: "#C9A84C" }}>
@@ -60,18 +61,18 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
             </em>
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline — clearly smaller than h1, clearly larger than body */}
           <p
-            className="font-serif font-light text-[#C8BFB2] tracking-wide anim-fade-up-d1"
-            style={{ fontSize: "24px" }}
+            className="font-serif font-light text-[#C8BFB2] italic tracking-wide anim-fade-up-d1"
+            style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.6rem)" }}
           >
             Maison Vereen was built for them.
           </p>
 
-          {/* Supporting copy */}
+          {/* Supporting copy — body scale, muted */}
           <p
             className="text-[#8A8070] font-light leading-[1.85] max-w-[500px] anim-fade-up-d2"
-            style={{ fontSize: "17px", letterSpacing: "0.02em" }}
+            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
           >
             A House of Distinction. Africa&apos;s first. Not a perfume company.
             Not a brand. A house — built around the belief that the individuals
@@ -87,16 +88,16 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
               transform: showCTA ? "translateY(0)" : "translateY(8px)",
             }}
           >
-            <button
-              onClick={onOpenApply}
-              className="border border-[#E8E2D9]/40 hover:border-gold hover:text-gold px-7 py-3 text-[#E8E2D9] transition-all duration-500 pointer-events-auto"
+            <Link
+              href="/access"
+              className="inline-block border border-[#E8E2D9]/40 hover:border-gold hover:text-gold px-7 py-3 text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "10px", letterSpacing: "0.3em" }}
-              aria-label="Join the Ownership Registry"
+              aria-label="Apply for Access"
             >
               <span className="uppercase font-medium">
                 Join the Ownership Registry
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

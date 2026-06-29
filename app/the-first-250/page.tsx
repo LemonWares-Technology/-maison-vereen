@@ -32,7 +32,7 @@ export default function TheFirst250Page() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[540px] space-y-8">
                   <span className="section-tag">The First 250</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     Because rarity is a form of respect —{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>for the object and for its owners.</em>
                   </h1>
@@ -63,7 +63,7 @@ export default function TheFirst250Page() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">The Numbered Bottles</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     Your bottle number is permanent.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>So is your place in this story.</em>
                   </h2>
@@ -97,7 +97,7 @@ export default function TheFirst250Page() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Historical Significance</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     What is happening here has happened before.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>The people who recognized it early were glad they did.</em>
                   </h2>
@@ -134,7 +134,7 @@ export default function TheFirst250Page() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Collector Value</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     The value of a founding edition is set by{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>the future of the house, not the present.</em>
                   </h2>
@@ -155,7 +155,7 @@ export default function TheFirst250Page() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">What Owners Receive</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 Complete Edition I{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>Ownership Package.</em>
               </h2>

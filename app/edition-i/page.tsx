@@ -39,7 +39,7 @@ export default function EditionIPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="space-y-8 max-w-[480px]">
                   <span className="section-tag">Collection One</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2rem, 3.8vw, 3.4rem)" }}>
+                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
                     The first chapter is always{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>the most significant.</em>
                   </h1>
@@ -107,7 +107,7 @@ export default function EditionIPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[760px] space-y-8">
               <span className="section-tag">Inspiration</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 Drawn from the continent.{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>Expressed for the individual.</em>
               </h2>
@@ -126,7 +126,7 @@ export default function EditionIPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[760px]">
               <span className="section-tag">The Fragrance</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 A fragrance built for{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>the long game.</em>
               </h2>
@@ -146,7 +146,7 @@ export default function EditionIPage() {
                     <span className="uppercase tracking-[0.28em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>{label}</span>
                     <ul className="space-y-2">
                       {notes[key].map((n) => (
-                        <li key={n} className="font-serif font-light text-[#C8C0B4]" style={{ fontSize: "18px" }}>{n}</li>
+                        <li key={n} className="font-serif font-light text-[#C8C0B4]" style={{ fontSize: "20px" }}>{n}</li>
                       ))}
                     </ul>
                   </div>
@@ -161,7 +161,7 @@ export default function EditionIPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[760px] space-y-8">
               <span className="section-tag">Craftsmanship</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 Built by a master.{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>Finished by design.</em>
               </h2>
@@ -192,7 +192,7 @@ export default function EditionIPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
                 <div className="space-y-8 max-w-[480px]">
                   <span className="section-tag">Bottle Design</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                     A sculpture that holds{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>something rare.</em>
                   </h2>
@@ -213,7 +213,7 @@ export default function EditionIPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-[680px]">
               <span className="section-tag">The Ownership Experience</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 Receiving it should feel like{" "}
                 <em className="not-italic" style={{ color: "#C9A84C" }}>receiving a title.</em>
               </h2>
@@ -238,7 +238,7 @@ export default function EditionIPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[760px] space-y-8">
               <span className="section-tag">Who It Was Created For</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 You will know.
               </h2>
               <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>

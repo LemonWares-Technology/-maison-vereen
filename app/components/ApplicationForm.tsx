@@ -82,14 +82,14 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
   };
 
   const inputClass =
-    "w-full bg-transparent border-b border-white/[0.08] py-3.5 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/60 transition-colors duration-300";
+    "w-full bg-transparent border-b border-white/8 py-3.5 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/60 transition-colors duration-300";
 
   return (
     <div
       className="fixed inset-0 z-60 bg-black/92 backdrop-blur-sm overflow-y-auto flex items-start justify-center"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative w-full max-w-[1000px] min-h-screen md:min-h-0 md:my-10 bg-charcoal border-0 md:border border-white/[0.07] shadow-2xl grid grid-cols-1 md:grid-cols-[1fr_420px]">
+      <div className="relative w-full max-w-[1000px] min-h-screen md:min-h-0 md:my-10 bg-charcoal border-0 md:border border-white/7 shadow-2xl grid grid-cols-1 md:grid-cols-[1fr_420px]">
         <button onClick={onClose} className="absolute top-5 right-5 z-10 text-[#5A5449] hover:text-[#E8E2D9] transition-colors duration-300 p-1" aria-label="Close">
           <X className="w-5 h-5" />
         </button>
@@ -100,7 +100,7 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-2">
                 <span className="section-tag">Application</span>
-                <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)" }}>
+                <h2 className="type-headline">
                   Access is earned.
                   <br />
                   <em className="text-gold not-italic">Not given.</em>

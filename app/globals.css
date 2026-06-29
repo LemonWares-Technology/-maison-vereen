@@ -11,8 +11,15 @@
   --color-charcoal-light:#111111;
   --color-charcoal-mid:  #1A1A1A;
 
-  --font-size-xs:        1rem;     /* 16px */
-  --font-size-sm:        1rem;     /* 16px */
+  /* Typography scale — Brochure Blueprint */
+  --font-display:   clamp(3.5rem, 8vw, 5rem);    /* Hero display: 56–80px */
+  --font-headline:  clamp(2rem, 4vw, 2.75rem);    /* Section heads: 32–44px */
+  --font-subhead:   clamp(1.35rem, 2.2vw, 1.875rem); /* Pull quotes: 22–30px */
+  --font-body:      1.0625rem;                    /* Body: 17px */
+  --font-body-sm:   1rem;                         /* Body small: 16px */
+  --font-label:     0.6875rem;                    /* Labels/eyebrows: 11px */
+  --font-caption:   0.625rem;                     /* Captions: 10px */
+  --font-micro:     0.5625rem;                    /* Micro: 9px */
 
   --font-sans:  var(--font-geist-sans);
   --font-serif: var(--font-cormorant);
@@ -128,8 +135,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
-  letter-spacing: 0.22em;
+  font-size: 0.6875rem;  /* 11px — matches label/CTA scale */
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #E8E2D9;
   font-weight: 500;
@@ -140,19 +147,97 @@ body {
 }
 .link-gold:hover { color: #C9A84C; border-bottom-color: #C9A84C; }
 
-/* ── Section tag ────────────────────────────────────────────────────────────── */
+/* ── Section tag / eyebrow label ───────────────────────────────────────────── */
+/* Blueprint: Label/eyebrow — 10–11px, small caps feel, 0.4–0.5em tracking, gold */
 .section-tag {
   display: block;
-  font-size: 16px;
-  letter-spacing: 0.3em;
+  font-size: 0.6875rem;        /* 11px */
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   color: #C9A84C;
   font-weight: 500;
   font-family: var(--font-geist-sans), Arial, sans-serif;
+  line-height: 1.4;
 }
 
 /* ── Gold rule ──────────────────────────────────────────────────────────────── */
 .gold-rule { width:32px; height:1px; background:#C9A84C; display:block; }
+
+/* ── Typography hierarchy utilities ────────────────────────────────────────── */
+/* Display — hero statements, max 6 words, Cormorant Garamond 200 weight */
+.type-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(3rem, 7vw, 4.75rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: #EDE8DE;
+}
+
+/* Headline — section titles, Cormorant 300 */
+.type-headline {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #EDE8DE;
+}
+
+/* Subheadline — supporting context, slightly smaller */
+.type-subhead {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 300;
+  line-height: 1.35;
+  color: #C8BFB2;
+}
+
+/* Pull quote — italic, max emotional impact */
+.type-pullquote {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: #8A8178;
+  letter-spacing: 0.03em;
+}
+
+/* Body — primary reading text, Inter 300 */
+.type-body {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 1.0625rem;  /* 17px */
+  font-weight: 300;
+  line-height: 1.85;
+  color: #7A7068;
+}
+
+/* Body small — secondary reading text */
+.type-body-sm {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.9375rem;  /* 15px */
+  font-weight: 300;
+  line-height: 1.8;
+  color: #5A5449;
+}
+
+/* Caption — fine print, dates, metadata */
+.type-caption {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.75rem;    /* 12px */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4A4440;
+}
+
+/* Mono label — bottle numbers, issue numbers */
+.type-mono {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.625rem;   /* 10px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #3A3530;
+}
 
 /* ── Admin-specific ─────────────────────────────────────────────────────────── */
 

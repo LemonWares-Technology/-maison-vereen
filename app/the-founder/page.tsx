@@ -25,14 +25,14 @@ export default function TheFounderPage() {
                 <div className="space-y-9 max-w-[520px]">
                   <span className="section-tag">The Founder</span>
                   {/* Opening statement — exact from document Page 4 */}
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2rem, 4vw, 3.4rem)" }}>
+                  <h1 className="type-display">
                     She didn&apos;t find the house she was looking for.{" "}
-                    <em className="block not-italic mt-3" style={{ color: "#C9A84C" }}>
+                    <em className="block not-italic mt-3 text-gold">
                       So she built it.
                     </em>
                   </h1>
                   {/* Exact opening statement from doc Page 4 */}
-                  <p className="font-serif font-light italic text-[#C8BFB2]" style={{ fontSize: "clamp(1rem, 1.6vw, 1.3rem)" }}>
+                  <p className="type-pullquote">
                     &ldquo;I did not build Maison Vereen to compete with existing houses. I built it because the house I was looking for did not exist. And I needed it to.&rdquo;
                   </p>
                 </div>
@@ -65,14 +65,14 @@ export default function TheFounderPage() {
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[760px] space-y-8">
               <span className="section-tag">Why She Started</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+              <h2 className="type-headline">
                 She looked for it first.{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>Then she built it.</em>
+                <em className="not-italic text-gold">Then she built it.</em>
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+              <p className="type-body">
                 There was a version of this story where she found the house she was looking for — an existing fragrance built for the kind of woman she was becoming. Authoritative. Grounded. Building something serious in a world that had not finished deciding how seriously to take her.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+              <p className="type-body">
                 That house did not exist. Not in Paris. Not in London. Not anywhere she looked. Every great house she admired was built for a different version of a person she was not. So she built the version that was missing.
               </p>
             </div>
@@ -98,14 +98,14 @@ export default function TheFounderPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
                 <div className="space-y-8 max-w-[480px]">
                   <span className="section-tag">Her Philosophy</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="type-headline">
                     Luxury is not what you wear.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>It is what you project without trying.</em>
+                    <em className="not-italic text-gold">It is what you project without trying.</em>
                   </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     She has spent years thinking about the nature of presence. What it is. How it is built. Why some people carry rooms with them and others perform for rooms. Her conclusion: presence is not cultivated. It is revealed. And the objects that serve people with genuine presence should reveal, not perform.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     Maison Vereen is the physical manifestation of that belief. A fragrance designed not to make you smell like someone. To smell like you — amplified, clarified, and permanent.
                   </p>
                 </div>
@@ -121,14 +121,14 @@ export default function TheFounderPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">What Drives Her</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="type-headline">
                     Not the market.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>The people the market ignores.</em>
+                    <em className="not-italic text-gold">The people the market ignores.</em>
                   </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     She did not build Maison Vereen for a market gap. She built it for a person gap. The fragrance world has spent decades building products for aspiration — for the person you want to become. She spent years thinking about the person who does not need to become anyone. Who already is. Who has been overlooked by every house because their identity is not for sale.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     That is who Maison Vereen was built for. And she believes there are more of them than the market has noticed.
                   </p>
                 </div>
@@ -170,20 +170,20 @@ export default function TheFounderPage() {
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
                   <span className="section-tag">Her View on Legacy</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.4rem)" }}>
+                  <h2 className="type-headline">
                     She is building for people{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>she will never meet.</em>
+                    <em className="not-italic text-gold">she will never meet.</em>
                   </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     The houses she admires most were built by people who were not thinking about next quarter. They were thinking about next century. She is building with the same intention. Edition I will be owned by 250 people. Some of them will pass their bottles to their children. Some will be referenced in future discussions of African luxury that have not yet been written.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="type-body">
                     She is building for those future moments — even the ones she cannot predict.
                   </p>
                   {/* Closing quote from document */}
                   <div className="border-t border-white/5 pt-8">
                     <div className="w-8 h-px bg-gold/40 mb-6" />
-                    <p className="font-serif font-light italic text-[#5A5449]" style={{ fontSize: "clamp(1rem, 1.6vw, 1.3rem)" }}>
+                    <p className="type-pullquote text-[#5A5449]">
                       &ldquo;The measure of a house is not what it achieves in its founding decade. It is what it means in its founding century.&rdquo;
                     </p>
                   </div>

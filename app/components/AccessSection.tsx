@@ -23,7 +23,7 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
         }}
       />
 
-      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-40">
+      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-40">
         <div className="max-w-[680px] mx-auto text-center space-y-10">
           <div className="w-8 h-px bg-gold/40 mx-auto" />
 
@@ -32,7 +32,7 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
           {/* Exact headline from document Page 1 — Waiting List CTA */}
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.05]"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.6rem)" }}
+            style={{ fontSize: "clamp(2.2rem, 4.2vw, 3.8rem)" }}
           >
             The Ownership Application is open.
           </h2>
@@ -40,7 +40,7 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
           {/* Exact subheadline from document Page 1 */}
           <p
             className="font-serif font-light text-[#C8BFB2]"
-            style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.6rem)" }}
+            style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}
           >
             250 positions. Individually numbered. Not available to everyone.
           </p>
@@ -61,13 +61,13 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
 
           {/* Single CTA — doc: "Begin Your Application" */}
           <div className="space-y-4">
-            <button
-              onClick={onOpenApply}
-              className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500"
+            <a
+              href="/access"
+              className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "9px", letterSpacing: "0.3em" }}
             >
               <span className="uppercase font-medium">Begin Your Application</span>
-            </button>
+            </a>
             {/* Exact small-type disclaimer from document */}
             <p
               className="text-[#3A3530] font-light"

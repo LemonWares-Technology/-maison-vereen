@@ -11,11 +11,9 @@ interface HeaderProps {
 
 const NAV_LINKS = [
   { label: "The House", href: "/the-house" },
-  { label: "Philosophy", href: "/philosophy" },
   { label: "Edition I", href: "/edition-i" },
-  { label: "Journal", href: "/journal" },
-  { label: "Access", href: "/access" },
-  { label: "Waitlist", href: "/waitlist" },
+  { label: "Signature Collection", href: "/fragrance-library" },
+  { label: "The HouseBook", href: "/housebook" },
 ];
 
 export default function Header({ onOpenApply }: HeaderProps) {
@@ -47,7 +45,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
               : "bg-black/95 backdrop-blur-md border-b border-white/6"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-6 sm:px-8 md:px-14 h-[72px] flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 md:px-14 h-[72px] flex items-center justify-between">
           {/* ── LOGO — left-aligned stacked two lines ── */}
           <Link
             href="/"
@@ -87,12 +85,12 @@ export default function Header({ onOpenApply }: HeaderProps) {
 
           {/* ── RIGHT CTA + MOBILE TOGGLE ── */}
           <div className="flex items-center gap-5 shrink-0">
-            <button
-              onClick={onOpenApply}
+            <Link
+              href="/access"
               className="hidden md:block border border-gold/50 hover:border-gold hover:bg-gold/10 px-6 py-2.5 text-xs tracking-[0.28em] uppercase font-medium text-[#E8E2D9] transition-all duration-500"
             >
               Apply for Access
-            </button>
+            </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -147,15 +145,13 @@ export default function Header({ onOpenApply }: HeaderProps) {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => {
-              setIsOpen(false);
-              onOpenApply();
-            }}
+          <Link
+            href="/access"
+            onClick={() => setIsOpen(false)}
             className="mt-4 border border-gold/50 px-8 py-3 text-xs tracking-[0.28em] uppercase font-medium text-[#E8E2D9] hover:bg-gold/10 transition-all duration-300"
           >
             Apply for Access
-          </button>
+          </Link>
         </nav>
       </div>
     </>

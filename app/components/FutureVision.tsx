@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface FutureVisionProps {
   onOpenApply: () => void;
 }
@@ -34,13 +36,13 @@ export default function FutureVision({ onOpenApply }: FutureVisionProps) {
       id="future-vision"
       className="bg-[#0D0D0D] border-t border-white/5"
     >
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy Page 1 */}
         <div className="space-y-6 max-w-[680px]">
           <span className="section-tag">The Future of the House</span>
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-            style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+            style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
           >
             We are not building a brand.{" "}
             <em className="not-italic" style={{ color: "#C9A84C" }}>
@@ -101,19 +103,19 @@ export default function FutureVision({ onOpenApply }: FutureVisionProps) {
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <p
             className="font-serif font-light italic text-[#4A4540] tracking-[0.04em] max-w-[580px]"
-            style={{ fontSize: "clamp(1rem, 1.6vw, 1.3rem)" }}
+            style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}
           >
             &ldquo;The people who are part of Maison Vereen in its founding
             decade are not buying into what it is. They are buying into what it
             will be.&rdquo;
           </p>
-          <button
-            onClick={onOpenApply}
-            className="shrink-0 border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
+          <Link
+            href="/access"
+            className="shrink-0 border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500 inline-block"
             style={{ fontSize: "9px", letterSpacing: "0.3em" }}
           >
             <span className="uppercase font-medium">Join the Registry</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
