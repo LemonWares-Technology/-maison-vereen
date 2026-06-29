@@ -71,7 +71,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header onOpenApply={() => {}} />
+      <Header  />
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
