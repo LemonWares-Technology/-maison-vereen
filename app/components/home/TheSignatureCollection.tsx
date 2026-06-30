@@ -35,10 +35,10 @@ export default function TheSignatureCollection() {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 space-y-20">
         
         {/* Header */}
-        <div className="max-w-[640px] space-y-6">
+        <div className="max-w-[640px] space-y-6 mx-auto text-center md:text-left md:mx-0 flex flex-col items-center md:items-start">
           <span className="section-tag">World Two — The Signature Collection</span>
-          <h2 className="type-headline">The Art of Maison VEREEN, Available Today.</h2>
-          <p className="type-body-sm">
+          <h2 className="type-headline text-center md:text-left">The Art of Maison VEREEN, Available Today.</h2>
+          <p className="type-body-sm text-center md:text-left">
             These perfumes embody the same commitment to craftsmanship, artistry, and refinement — designed for everyday enjoyment and available to anyone who values the work.
           </p>
         </div>

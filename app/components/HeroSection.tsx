@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -48,8 +48,8 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pt-[72px]">
-        <div className="max-w-[700px] py-28 md:py-36 space-y-8">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pt-[72px] flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="max-w-[700px] py-28 md:py-36 space-y-8 flex flex-col items-center md:items-start">
           {/* Headline — exact from document */}
           <h1
             className="font-serif font-light text-[#EDE7DC] leading-[1.05] anim-fade-up"
@@ -71,7 +71,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
 
           {/* Supporting copy — body scale, muted */}
           <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[500px] anim-fade-up-d2"
+            className="text-[#8A8070] font-light leading-[1.85] max-w-[500px] mx-auto md:mx-0 anim-fade-up-d2"
             style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
           >
             A House of Distinction. Africa&apos;s first. Not a perfume company.
@@ -82,7 +82,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
 
           {/* CTA — appears after 3 seconds, subtle fade-in, never urgent */}
           <div
-            className="pt-2 transition-all duration-1000 ease-out"
+            className="pt-2 flex justify-center md:block transition-all duration-1000 ease-out"
             style={{
               opacity: showCTA ? 1 : 0,
               transform: showCTA ? "translateY(0)" : "translateY(8px)",

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -162,9 +162,9 @@ export default function AccessPage() {
         <section className="pt-[72px] border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
-              <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-7">
+              <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-7 w-full">
                 <span className="section-tag">Application</span>
-                <h1 className="type-display uppercase">
+                <h1 className="type-display uppercase text-center lg:text-left">
                   Access is earned.<br />Not given.
                 </h1>
                 <div className="type-body-sm space-y-3">

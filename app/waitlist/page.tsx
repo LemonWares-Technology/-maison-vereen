@@ -161,9 +161,9 @@ export default function WaitlistPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
 
               {/* Left */}
-              <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-8">
+              <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-8 w-full">
                 <span className="section-tag">Official Waiting List</span>
-                <h1 className="type-display uppercase">
+                <h1 className="type-display uppercase text-center lg:text-left">
                   Be among the few.
                   <br />
                   Be part of the first.

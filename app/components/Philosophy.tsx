@@ -31,7 +31,7 @@ export default function Philosophy() {
     <section id="philosophy" className="bg-[#0D0D0D] border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy */}
-        <div className="space-y-6 max-w-[680px]">
+        <div className="space-y-6 max-w-[680px] mx-auto text-center md:text-left md:mx-0 flex flex-col items-center md:items-start">
           <span className="section-tag">The House Philosophy</span>
           <h2 className="type-headline">
             The fragrance is not the luxury.{" "}
@@ -47,7 +47,7 @@ export default function Philosophy() {
             you smell like exactly who you already are — amplified, clarified,
             and impossible to forget.
           </p>
-          <Link href="/philosophy" className="link-gold w-fit">
+          <Link href="/philosophy" className="link-gold w-fit mx-auto md:mx-0">
             <span>Read More</span>
             <span className="text-gold">→</span>
           </Link>
