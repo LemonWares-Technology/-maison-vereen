@@ -50,9 +50,19 @@ const NAV_GROUPS = [
   },
 ];
 
-const MOBILE_LINKS = NAV_GROUPS.flatMap((group) =>
-  group.dropdown ? group.dropdown : [group]
-);
+// 10 curated mobile nav links — brand identity, products, conversion, contact
+const MOBILE_LINKS = [
+  { label: "Home",                 href: "/"                  },
+  { label: "The House",           href: "/the-house"         },
+  { label: "Philosophy",          href: "/philosophy"        },
+  { label: "The Founder",         href: "/the-founder"       },
+  { label: "Edition I",           href: "/edition-i"         },
+  { label: "Signature Collection",href: "/fragrance-library" },
+  { label: "Access",              href: "/access"            },
+  { label: "Waitlist",            href: "/waitlist"          },
+  { label: "The HouseBook",       href: "/housebook"         },
+  { label: "Contact",             href: "/contact"           },
+];
 
 // ─────────────────────────────────────────────
 //  COMPONENT
@@ -93,16 +103,16 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${headerBg}`}
       >
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 md:px-14 h-[100px] flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 md:px-14 h-[100px] md:h-[125px] flex items-center justify-between">
 
           {/* ── LOGO ── */}
           <Link href="/" className="shrink-0 group" aria-label="Maison Vereen — Home">
             <Image
               src="/logo.png"
               alt="Maison Vereen"
-              width={240}
-              height={80}
-              className="h-28 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+              width={320}
+              height={110}
+              className="h-32 md:h-[110px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
               priority
             />
           </Link>
@@ -212,14 +222,14 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="Maison Vereen"
-            width={160}
-            height={54}
-            className="h-10 w-auto object-contain opacity-90"
+            width={240}
+            height={80}
+            className="h-14 w-auto object-contain opacity-90"
           />
         </div>
 
         {/* Nav links scroll container */}
-        <div className="flex-1 flex flex-col justify-center items-center py-24 overflow-y-auto w-full px-6">
+        <div className="flex-1 flex flex-col justify-start items-center pt-32 pb-16 overflow-y-auto w-full px-6">
           <nav className="flex flex-col items-center gap-4 w-full text-center">
             {MOBILE_LINKS.map(({ label, href }) => {
               const active = pathname === href;

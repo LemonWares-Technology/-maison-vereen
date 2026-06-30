@@ -12,13 +12,13 @@ export default function FounderStory() {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[640px]">
           {/* Left — image: side profile, low light, looking away — from document design note */}
-          <div className="relative min-h-[440px] lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1">
+          <div className="relative min-h-[440px] lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1 group">
             <Image
               src="/founder-image-1.png"
               alt="Founder of Maison Vereen — side profile"
               fill
               sizes="(max-width:1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
               style={{ opacity: 0.9 }}
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#060608]/70 via-transparent to-transparent" />
@@ -37,8 +37,8 @@ export default function FounderStory() {
           </div>
 
           {/* Right — text: exact copy from document Page 1 and Page 4 */}
-          <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D] order-1 lg:order-2">
-            <div className="space-y-9 max-w-[480px]">
+          <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D] order-1 lg:order-2 w-full">
+            <div className="space-y-9 max-w-[480px] text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="section-tag">The Covenant of the House</span>
 
               {/* Exact headline from document Page 1 */}
@@ -81,7 +81,7 @@ export default function FounderStory() {
                 house&apos;s covenant.
               </p>
 
-              <Link href="/the-founder" className="link-gold w-fit">
+              <Link href="/the-founder" className="link-gold w-fit mx-auto lg:mx-0">
                 <span>The Founder</span>
                 <span className="text-gold">→</span>
               </Link>

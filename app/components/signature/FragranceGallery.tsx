@@ -115,11 +115,10 @@ export default function FragranceGallery() {
               {MOODS.map((mood) => (
                 <button key={mood.id} role="option" aria-selected={activeMood === mood.id}
                   onClick={() => { setActiveMood(mood.id); setActiveSlide(0); }}
-                  className={`px-4 py-2 border transition-all duration-300 uppercase tracking-[0.18em] font-medium ${
-                    activeMood === mood.id
-                      ? "border-gold text-gold bg-gold/10"
-                      : "border-[#8C7235]/30 text-[#8C7235] hover:border-[#8C7235] hover:text-[#F5F0E8]"
-                  }`}
+                  className={`px-4 py-2 border transition-all duration-300 uppercase tracking-[0.18em] font-medium ${activeMood === mood.id
+                    ? "border-gold text-gold bg-gold/10"
+                    : "border-[#8C7235]/30 text-[#8C7235] hover:border-[#8C7235] hover:text-[#F5F0E8]"
+                    }`}
                   style={{ fontSize: "10px" }}>
                   {mood.label}
                 </button>
@@ -158,16 +157,16 @@ export default function FragranceGallery() {
                   <div className="flex-1 flex flex-col">
                     <span className="font-mono uppercase tracking-[0.2em] text-[#8C7235] mb-2" style={{ fontSize: "9px" }}>{f.family}</span>
                     <h3 className="font-serif font-light text-[#F5F0E8] mb-1 leading-none" style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)" }}>{f.name}</h3>
-                    <p className="font-mono text-[#6B6450] mb-4" style={{ fontSize: "10px" }}>{f.accord}</p>
+                    <p className="font-mono text-[#6B6450] mb-4" style={{ fontSize: "13px" }}>{f.accord}</p>
 
-                    <p className="font-serif font-light italic text-[#A09888] mb-6 leading-[1.6] flex-1" style={{ fontSize: "15px" }}>
+                    <p className="font-serif font-light italic text-[#A09888] mb-6 leading-[1.6] flex-1" style={{ fontSize: "20px" }}>
                       {f.quote}
                     </p>
 
                     {/* Notes */}
                     <div className="flex flex-wrap gap-1.5 mb-6">
                       {f.notes.map((note) => (
-                        <span key={note} className="px-2.5 py-1 border border-[#8C7235]/20 text-[#A09888] group-hover:border-gold/30 group-hover:text-[#F5F0E8] transition-colors duration-300" style={{ fontSize: "10px" }}>
+                        <span key={note} className="px-2.5 py-1 border border-[#8C7235]/20 text-[#A09888] group-hover:border-gold/30 group-hover:text-[#F5F0E8] transition-colors duration-300" style={{ fontSize: "12px" }}>
                           {note}
                         </span>
                       ))}

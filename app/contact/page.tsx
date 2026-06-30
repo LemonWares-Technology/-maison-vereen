@@ -78,8 +78,8 @@ export default function ContactPage() {
         <section className="pt-[72px] border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-16 md:py-24">
-                <div className="max-w-[520px] space-y-7">
+              <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 py-16 md:py-24 w-full">
+                <div className="space-y-7 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
                   <span className="section-tag">Contact</span>
                   <h1
                     className="font-serif font-light text-[#E8E2D9] leading-[1.06]"

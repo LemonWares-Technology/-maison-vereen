@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -10,8 +10,8 @@ export default function WhyExists() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[580px]">
 
           {/* Left — text panel */}
-          <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28">
-            <div className="space-y-8 max-w-[520px]">
+          <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28 w-full">
+            <div className="space-y-8 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="section-tag">Why Maison Vereen Exists</span>
 
               <h2
@@ -39,7 +39,7 @@ export default function WhyExists() {
                 No fragrance house was built for this person. Until now.
               </p>
 
-              <Link href="/the-house" className="link-gold w-fit">
+              <Link href="/the-house" className="link-gold w-fit mx-auto lg:mx-0">
                 <span>The House</span>
                 <span className="text-gold">→</span>
               </Link>
@@ -47,13 +47,13 @@ export default function WhyExists() {
           </div>
 
           {/* Right — image, same treatment as the-house page sections */}
-          <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
+          <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608] group">
             <Image
               src="/images/the-house-hero.png"
               alt="The vision behind Maison Vereen"
               fill
               sizes="(max-width:1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
               style={{ opacity: 0.9 }}
             />
             <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/50" />

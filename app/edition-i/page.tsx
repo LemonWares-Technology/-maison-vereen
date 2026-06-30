@@ -18,18 +18,18 @@ const ownershipItems = [
   "Priority access to Edition II — confirmed register members receive first access before any public announcement.",
 ];
 
-const notes = {
-  top: ["Bergamot", "Pink Pepper", "Cardamom"],
-  heart: ["Oud", "Iris", "Vetiver"],
-  base: ["Amber", "Sandalwood", "Musk"],
-};
+// const notes = {
+//   top: ["Bergamot", "Pink Pepper", "Cardamom"],
+//   heart: ["Oud", "Iris", "Vetiver"],
+//   base: ["Amber", "Sandalwood", "Musk"],
+// };
 
 export default function EditionIPage() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
 
   return (
     <>
-      <Header  />
+      <Header />
       <main className="bg-charcoal">
 
         {/* ── HERO — "The first chapter is always the most significant." ── */}

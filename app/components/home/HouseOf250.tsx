@@ -7,20 +7,20 @@ export default function HouseOf250() {
     <section className="bg-[#050505] border-b border-white/5">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         {/* Image / Visual side */}
-        <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#020202]">
+        <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#020202] group">
           <Image
             src="/images/maison-vereen-access.png"
             alt="The House of 250"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-1000 scale-105 hover:scale-100"
+            className="object-cover object-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-transform duration-1000 ease-out group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#050505]/80" />
         </div>
 
         {/* Content side */}
-        <div className="flex flex-col justify-center px-6 sm:px-8 md:px-16 py-20 lg:py-32 space-y-12">
-          <div className="space-y-6 max-w-[540px]">
+        <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-16 py-20 lg:py-32 space-y-12 w-full">
+          <div className="space-y-6 max-w-[540px] flex flex-col items-center lg:items-start">
             <span className="section-tag">World One — The Prestige Collection</span>
             <h2 className="type-headline">
               The House of 250
@@ -38,19 +38,19 @@ export default function HouseOf250() {
             </div>
           </div>
 
-          <div className="space-y-8 max-w-[540px] pt-8 border-t border-white/10">
+          <div className="space-y-8 max-w-[540px] pt-8 border-t border-white/10 flex flex-col items-center lg:items-start w-full">
             <h3 className="type-caption uppercase tracking-widest text-[#E8E2D9]">The Acquisition Process</h3>
             
-            <div className="grid gap-6">
+            <div className="grid gap-6 w-full">
               {[
                 { step: "I", title: "Learn the Philosophy", desc: "Understand what it means to become a custodian of a numbered bottle." },
                 { step: "II", title: "Submit Your Application", desc: "A considered application allows us to understand who you are." },
                 { step: "III", title: "Receive Your Invitation", desc: "Approved applicants receive a private invitation to acquire their bottle." },
                 { step: "IV", title: "Become One of the 250", desc: "Your numbered bottle marks your permanent place within the House." }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-4">
+                <div key={idx} className="flex flex-col items-center sm:flex-row sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
                   <span className="type-mono text-gold/60 mt-1">{item.step}.</span>
-                  <div>
+                  <div className="flex flex-col items-center sm:items-start">
                     <h4 className="type-body-sm text-[#E8E2D9]">{item.title}</h4>
                     <p className="type-caption text-[#5A5449] mt-1">{item.desc}</p>
                   </div>
@@ -58,7 +58,7 @@ export default function HouseOf250() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-6 pt-6">
+            <div className="flex flex-wrap gap-6 pt-6 justify-center lg:justify-start">
               <Link href="/access" className="border border-gold/60 hover:border-gold hover:bg-gold/10 px-8 py-3.5 transition-all duration-500 type-caption uppercase tracking-[0.25em] text-[#E8E2D9] font-medium">
                 Apply for Consideration
               </Link>

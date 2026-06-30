@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Header from "../components/Header";
@@ -39,12 +39,12 @@ export default function PhilosophyPage() {
         <section className="border-b border-white/5 pt-[72px]">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="space-y-7 max-w-[520px]">
+              <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 py-20 md:py-28 w-full">
+                <div className="space-y-7 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
                   <span className="section-tag">The House Philosophy</span>
                   <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.05]" style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.4rem)" }}>
                     The fragrance is not the luxury.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>You are.</em>
+                    <em className="not-italic text-gold">You are.</em>
                   </h1>
                   <p className="font-serif font-light text-[#C8BFB2]" style={{ fontSize: "22px" }}>
                     Maison Vereen does not create distinction. It recognizes it.
