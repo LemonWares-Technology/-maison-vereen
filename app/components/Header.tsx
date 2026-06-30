@@ -4,23 +4,61 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 // ─────────────────────────────────────────────
-//  NAV LINKS
+//  NAV LINKS AND GROUPS
 // ─────────────────────────────────────────────
-const NAV_LINKS = [
-  { label: "The House",           href: "/the-house"       },
-  { label: "Edition I",           href: "/edition-i"       },
-  { label: "Signature Collection", href: "/fragrance-library" },
-  { label: "The HouseBook",       href: "/housebook"       },
+const NAV_GROUPS = [
+  {
+    label: "The House",
+    dropdown: [
+      { label: "The House", href: "/the-house" },
+      { label: "Philosophy", href: "/philosophy" },
+      { label: "The Founder", href: "/the-founder" },
+      { label: "Our Story", href: "/our-story" },
+      { label: "Future Vision", href: "/future" },
+    ],
+  },
+  {
+    label: "Collections",
+    dropdown: [
+      { label: "Edition I", href: "/edition-i" },
+      { label: "Signature Collection", href: "/fragrance-library" },
+      { label: "The First 250", href: "/the-first-250" },
+      { label: "Legacy", href: "/legacy" },
+    ],
+  },
+  {
+    label: "Registry",
+    dropdown: [
+      { label: "The Registry", href: "/registry" },
+      { label: "Join Waitlist", href: "/waitlist" },
+    ],
+  },
+  {
+    label: "HouseBook",
+    dropdown: [
+      { label: "The HouseBook", href: "/housebook" },
+      { label: "House Journal", href: "/journal" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
 ];
+
+const MOBILE_LINKS = NAV_GROUPS.flatMap((group) =>
+  group.dropdown ? group.dropdown : [group]
+);
 
 // ─────────────────────────────────────────────
 //  COMPONENT
 // ─────────────────────────────────────────────
 export default function Header() {
-  const [isOpen,   setIsOpen]   = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -71,22 +109,58 @@ export default function Header() {
 
           {/* ── DESKTOP NAV ── */}
           <nav
-            className="hidden md:flex items-center gap-7 lg:gap-10"
+            className="hidden md:flex items-center gap-7 lg:gap-10 h-full"
             aria-label="Main navigation"
           >
-            {NAV_LINKS.map(({ label, href }) => {
-              const active = pathname === href;
+            {NAV_GROUPS.map((group) => {
+              if (group.dropdown) {
+                const isAnyActive = group.dropdown.some((sub) => pathname === sub.href);
+                return (
+                  <div key={group.label} className="relative group py-5">
+                    <button
+                      className={`flex items-center gap-1.5 text-xs tracking-[0.28em] uppercase font-medium transition-colors duration-300 cursor-pointer ${isAnyActive
+                        ? "text-gold"
+                        : "text-[#9A9189] hover:text-[#E8E2D9]"
+                        }`}
+                    >
+                      {group.label}
+                      <ChevronDown className="w-3 h-3 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                    </button>
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                      <div className="bg-[#0B0B0B]/98 backdrop-blur-md border border-white/8 py-3 shadow-2xl flex flex-col">
+                        {group.dropdown.map((subLink) => {
+                          const active = pathname === subLink.href;
+                          return (
+                            <Link
+                              key={subLink.href}
+                              href={subLink.href}
+                              className={`px-6 py-3 text-[10px] tracking-[0.22em] uppercase font-medium transition-colors duration-300 ${active
+                                ? "text-gold bg-white/3"
+                                : "text-[#9A9189] hover:text-[#E8E2D9] hover:bg-white/5"
+                                }`}
+                            >
+                              {subLink.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              const active = pathname === group.href;
               return (
                 <Link
-                  key={href}
-                  href={href}
-                  className={`text-xs tracking-[0.28em] uppercase font-medium transition-colors duration-300 ${
-                    active
-                      ? "text-gold"
-                      : "text-[#9A9189] hover:text-[#E8E2D9]"
-                  }`}
+                  key={group.href}
+                  href={group.href!}
+                  className={`text-xs tracking-[0.28em] uppercase font-medium transition-colors duration-300 ${active
+                    ? "text-gold"
+                    : "text-[#9A9189] hover:text-[#E8E2D9]"
+                    }`}
                 >
-                  {label}
+                  {group.label}
                 </Link>
               );
             })}
@@ -119,23 +193,22 @@ export default function Header() {
           MOBILE FULL-SCREEN DRAWER
       ════════════════════════════════════════ */}
       <div
-        className={`fixed inset-0 z-40 bg-charcoal flex flex-col justify-center items-center transition-all duration-500 md:hidden ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-charcoal flex flex-col transition-all duration-500 md:hidden ${isOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+          }`}
       >
         {/* Close button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-6 right-8 text-[#9A9189] hover:text-[#E8E2D9] transition-colors"
+          className="absolute top-6 right-8 text-[#9A9189] hover:text-[#E8E2D9] transition-colors z-50"
           aria-label="Close menu"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Logo */}
-        <div className="absolute top-6 left-8">
+        <div className="absolute top-6 left-8 z-50">
           <Image
             src="/logo.png"
             alt="Maison Vereen"
@@ -145,28 +218,34 @@ export default function Header() {
           />
         </div>
 
-        {/* Nav links */}
-        <nav className="flex flex-col items-center gap-7">
-          {NAV_LINKS.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setIsOpen(false)}
-              className="font-serif text-2xl font-light tracking-widest text-[#E8E2D9] hover:text-gold transition-colors duration-300"
-            >
-              {label}
-            </Link>
-          ))}
+        {/* Nav links scroll container */}
+        <div className="flex-1 flex flex-col justify-center items-center py-24 overflow-y-auto w-full px-6">
+          <nav className="flex flex-col items-center gap-4 w-full text-center">
+            {MOBILE_LINKS.map(({ label, href }) => {
+              const active = pathname === href;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={`font-serif text-lg font-light tracking-widest transition-colors duration-300 py-1 ${active ? "text-gold" : "text-[#E8E2D9] hover:text-gold"
+                    }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
 
-          {/* Mobile CTA */}
-          <Link
-            href="/access"
-            onClick={() => setIsOpen(false)}
-            className="mt-4 border border-gold/50 px-8 py-3 text-xs tracking-[0.28em] uppercase font-medium text-[#E8E2D9] hover:bg-gold/10 transition-all duration-300"
-          >
-            Apply for Access
-          </Link>
-        </nav>
+            {/* Mobile CTA */}
+            <Link
+              href="/access"
+              onClick={() => setIsOpen(false)}
+              className="mt-6 border border-gold/50 px-8 py-3 text-xs tracking-[0.28em] uppercase font-medium text-[#E8E2D9] hover:bg-gold/10 transition-all duration-300"
+            >
+              Apply for Access
+            </Link>
+          </nav>
+        </div>
       </div>
     </>
   );
