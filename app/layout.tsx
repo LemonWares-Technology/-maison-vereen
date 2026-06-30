@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       "Africa's first serious luxury fragrance house. Edition I — 250 numbered bottles worldwide. Access by application only.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Maison Vereen — A House of Distinction. Africa's First.",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "Maison Vereen | A New Chapter in African Luxury",
     description:
       "Africa's first serious luxury fragrance house. Edition I — 250 numbered bottles worldwide.",
-    images: ["/images/og-image.jpg"],
+    images: ["/logo.png"],
     creator: "@maisonvereen",
   },
 

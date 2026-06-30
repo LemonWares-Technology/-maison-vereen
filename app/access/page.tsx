@@ -155,7 +155,7 @@ export default function AccessPage() {
 
   return (
     <>
-      <Header  />
+      <Header />
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
@@ -411,14 +411,14 @@ export default function AccessPage() {
               {verifications.map((v, i) => (
                 <div key={i} className="bg-[#0D0D0D] px-6 sm:px-8 py-8 space-y-4 relative group hover:bg-white/2 transition-colors duration-300">
                   <div className="absolute top-0 left-0 w-full h-px bg-gold/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  <span className="font-serif text-gold/40" style={{ fontSize: "13px" }}>{v.num}</span>
-                  <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "16px" }}>{v.title}</h3>
-                  <p className="type-caption">{v.body}</p>
+                  <span className="font-serif text-gold/40" style={{ fontSize: "20px" }}>{v.num}</span>
+                  <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "20px" }}>{v.title}</h3>
+                  <p className="type-caption" style={{ fontSize: "15px" }}>{v.body}</p>
                 </div>
               ))}
             </div>
             <div className="border border-white/6 bg-[#080808] px-6 sm:px-8 py-6">
-              <p className="type-caption">
+              <p className="type-caption" style={{ fontSize: "14px" }}>
                 <span className="text-[#8A8178] font-medium">Security notice:</span> All official Maison Vereen communications, including payment instructions, come only from{" "}
                 <span className="text-gold/70 break-all">hello@maisonvereen.com</span>. We will never request payment through WhatsApp, social media, or any unverified channel. If you receive a payment request from any other source, do not act on it — contact us first.
               </p>
