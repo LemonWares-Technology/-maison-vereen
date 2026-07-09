@@ -140,11 +140,18 @@ export default function RegistryPage() {
                   <div className="flex flex-col sm:flex-row gap-5 pt-2">
                     <Link
                       href="/access"
-                      className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
+                      className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500"
                       style={{ fontSize: "11px", letterSpacing: "0.28em" }}
                     >
-                      <span className="uppercase font-medium">Apply to the Founding Registry</span>
+                      <span className="uppercase font-semibold">Apply to the Founding Registry</span>
                     </Link>
+                    <a
+                      href="#live-registry"
+                      className="inline-block border border-white/15 hover:border-gold/50 px-8 py-3.5 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500"
+                      style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                    >
+                      <span className="uppercase font-medium">View the Live Registry</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -255,7 +262,7 @@ export default function RegistryPage() {
         </section>
 
         {/* ── LIVE REGISTRY COUNTER — PAGE 9 ── */}
-        <section className="border-b border-white/5">
+        <section id="live-registry" className="border-b border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-start">
               {/* Left — live counter */}
@@ -339,7 +346,7 @@ export default function RegistryPage() {
                     ))
                   )}
                 </div>
-                <p className="text-[#3A3530] font-light italic" style={{ fontSize: "13px" }}>
+                <p className="text-[#5A5449] font-light italic" style={{ fontSize: "13px" }}>
                   This number only moves forward.
                 </p>
               </div>
@@ -471,35 +478,36 @@ export default function RegistryPage() {
         </section>
 
         {/* ── CLOSING CTA ── */}
-        <section className="bg-[#060608]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 text-center space-y-8">
+        <section className="bg-[#060608] border-b border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 text-center space-y-6">
             <div className="w-8 h-px bg-gold/30 mx-auto" />
-            <p
-              className="font-serif font-light text-[#C8BFB2] leading-[1.55] max-w-[560px] mx-auto"
-              style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.45rem)" }}
-            >
-              &ldquo;Acceptance into the Registry is only the beginning of what membership in this House means.&rdquo;
+            <p className="font-serif font-light text-[#C8BFB2] leading-[1.55] max-w-[560px] mx-auto" style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.45rem)" }}>
+              &ldquo;The Registry is not an abstraction. It is growing, member by member, in real time.&rdquo;
             </p>
             <div className="w-8 h-px bg-gold/30 mx-auto" />
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-              <Link
-                href="/access"
-                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
-                style={{ fontSize: "11px", letterSpacing: "0.3em" }}
-              >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-2">
+              <Link href="/access" className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500" style={{ fontSize: "11px", letterSpacing: "0.3em" }}>
                 <span className="uppercase font-medium">Apply to the Founding Registry</span>
               </Link>
-              <Link
-                href="/access"
-                className="text-[#5A5449] hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
-                style={{ fontSize: "11px" }}
-              >
+              <Link href="/membership" className="text-[#C8BFB2] hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "11px" }}>
                 Learn About Membership &amp; Access →
               </Link>
             </div>
-            <p className="text-[#3A3530] font-light" style={{ fontSize: "13px" }}>
+            <p className="text-[#7A7068] font-light" style={{ fontSize: "13px" }}>
               The application is free and carries no financial obligation.
             </p>
+          </div>
+        </section>
+
+        {/* PAGE 8+9 → PAGE 10 transition */}
+        <section className="bg-[#060506] border-t border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+              Acceptance into the Registry is only the beginning of what membership in this House means.
+            </p>
+            <Link href="/membership" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+              Learn About Membership &amp; Access →
+            </Link>
           </div>
         </section>
 

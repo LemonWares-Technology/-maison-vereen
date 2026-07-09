@@ -8,15 +8,20 @@ import Link from "next/link";
 //  CONSTANTS
 // ─────────────────────────────────────────────
 const NAV_LINKS = [
-  { label: "The House",          href: "/the-house"        },
-  { label: "Philosophy",         href: "/philosophy"       },
-  { label: "Edition I",          href: "/edition-i"        },
-  { label: "Founding Registry",  href: "/registry"         },
-  { label: "Signature Collection", href: "/fragrance-library" },
-  { label: "Social Proof",       href: "/social-proof"     },
-  { label: "FAQ",                href: "/faq"              },
-  { label: "Contact",            href: "/contact"          },
-  { label: "Final Invitation",   href: "/final-invitation" },
+  { label: "The House",            href: "/the-house"        },
+  { label: "Discover",             href: "/our-story"        },
+  { label: "Philosophy",           href: "/philosophy"       },
+  { label: "The Founder",          href: "/the-founder"      },
+  { label: "The Difference",       href: "/the-difference"   },
+  { label: "The Craft",            href: "/the-craft"        },
+  { label: "Edition I",            href: "/edition-i"        },
+  { label: "Founding Registry",    href: "/registry"         },
+  { label: "Membership",           href: "/membership"       },
+  { label: "Signature Collection", href: "/fragrance-library"},
+  { label: "Social Proof",         href: "/social-proof"     },
+  { label: "FAQ",                  href: "/faq"              },
+  { label: "Contact",              href: "/contact"          },
+  { label: "Final Invitation",     href: "/final-invitation" },
 ];
 
 const SOCIAL_LINKS = [

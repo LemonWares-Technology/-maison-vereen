@@ -1,66 +1,82 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+// PAGE 11 — SIGNATURE COLLECTION HERO
+// Exact blueprint: "The Permanent Work of the House."
 
 export default function SignatureHero() {
-  const [scrolled, setScrolled] = useState(false);
+  const [showCTA, setShowCTA] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const t = setTimeout(() => setShowCTA(true), 800);
+    return () => clearTimeout(t);
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] bg-[#0A0A08] overflow-hidden flex flex-col md:flex-row">
-      {/* Left Text Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-end px-6 sm:px-8 md:px-16 pb-24 md:pb-32 h-full order-2 md:order-1 pt-12 md:pt-0">
-        <div className="max-w-[500px]">
-          <h1 className="type-display text-[#F5F0E8] anim-fade-up mb-6">
-            Crafted for <br />
-            <em className="italic text-gold">living beautifully.</em>
+    <section className="relative w-full min-h-screen flex items-end overflow-hidden bg-[#060506] pt-[100px] md:pt-[125px]">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/maison-vereen-access.png"
+          alt="Maison Vereen Signature Collection"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          style={{ opacity: 0.5 }}
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-[#060506]/98 via-[#060506]/65 to-[#060506]/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#060506]/80 via-transparent to-[#060506]/20" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pb-20 md:pb-28">
+        <div className="max-w-[680px] space-y-8">
+          <span className="section-tag">Signature Collection</span>
+          <h1
+            className="font-serif font-light text-[#EDE7DC] leading-[1.05] anim-fade-up"
+            style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.5rem)" }}
+          >
+            The Permanent Work{" "}
+            <em className="not-italic" style={{ color: "#C9A84C" }}>
+              of the House.
+            </em>
           </h1>
-          <p className="type-body text-[#A09888] anim-fade-up-d1 mb-10 max-w-[420px]">
-            The same obsession. The same materials. The same hands. Now available to wear every day, without ceremony or waiting — simply because you value the art of fragrance.
+          <p
+            className="font-serif font-light text-[#C8BFB2] italic anim-fade-up-d1"
+            style={{ fontSize: "clamp(1rem, 1.8vw, 1.3rem)" }}
+          >
+            The Signature Collection represents Maison Vereen&apos;s permanent body of work — fragrances available on an ongoing basis, each developed with the same standard applied to Edition I.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 anim-fade-up-d2">
-            <button className="bg-gold text-[#0A0A08] px-8 py-4 font-medium uppercase tracking-[0.2em] text-[11px] hover:bg-gold-light transition-colors">
-              Explore the Collection
-            </button>
-            <button className="border border-[#8C7235] text-[#F5F0E8] px-8 py-4 font-medium uppercase tracking-[0.2em] text-[11px] hover:bg-[#8C7235]/10 transition-colors">
-              Discover Our Craft
-            </button>
+          <p
+            className="text-[#8A8070] font-light leading-[1.85] max-w-[520px] anim-fade-up-d2"
+            style={{ fontSize: "1.0625rem" }}
+          >
+            Where Edition I is finite by design, the Signature Collection is the House&apos;s enduring body of work — fragrances intended to remain part of Maison Vereen&apos;s offering for years, refined and revisited as the House&apos;s craft continues to evolve, but never produced at the expense of quality.
+          </p>
+          <div
+            className="flex flex-col sm:flex-row gap-4 transition-all duration-1000 ease-out anim-fade-up-d3"
+            style={{ opacity: showCTA ? 1 : 0 }}
+          >
+            <a
+              href="#fragrances"
+              className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500"
+              style={{ fontSize: "10px", letterSpacing: "0.3em" }}
+            >
+              <span className="uppercase font-semibold">Speak to a Concierge</span>
+            </a>
+            <Link
+              href="/contact"
+              className="inline-block border border-[#E8E2D9]/25 hover:border-gold/50 px-8 py-3.5 text-[#8A8070] hover:text-[#E8E2D9] transition-all duration-500"
+              style={{ fontSize: "10px", letterSpacing: "0.3em" }}
+            >
+              <span className="uppercase font-medium">Request Details</span>
+            </Link>
           </div>
         </div>
-      </div>
-
-      {/* Right Atmospheric Visual */}
-      <div className="relative flex-1 h-[50vh] md:h-full order-1 md:order-2 bg-[#0A0A08]">
-        {/* Abstract bottle / atmospheric gradient */}
-        <div className="absolute inset-0 bg-linear-to-t from-[#0A0A08] via-transparent to-transparent z-10 md:bg-linear-to-l" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center md:bg-right opacity-80" 
-          style={{
-            backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(201, 168, 76, 0.15) 0%, transparent 60%)",
-          }}
-        />
-        {/* Placeholder for editorial bottle silhouette */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-40">
-           <div className="w-1/3 h-2/3 max-w-[200px] border border-gold/20 rounded-t-[100px] blur-[2px]" />
-        </div>
-        
-        {/* Animated Gold Line */}
-        <div className="hidden md:block absolute top-0 right-16 w-px h-[40vh] bg-linear-to-b from-gold to-transparent anim-slide-up origin-top" />
-      </div>
-
-      {/* Scroll Indicator */}
-      <div 
-        className={`absolute bottom-8 left-16 flex flex-col items-center gap-2 transition-opacity duration-500 ${scrolled ? "opacity-0 pointer-events-none" : "opacity-100"}`}
-        aria-hidden="true"
-      >
-        <div className="w-px h-12 bg-linear-to-b from-gold to-transparent animate-pulse" />
       </div>
     </section>
   );

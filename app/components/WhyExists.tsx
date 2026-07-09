@@ -12,35 +12,29 @@ export default function WhyExists() {
           {/* Left — text panel */}
           <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28 w-full">
             <div className="space-y-8 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="section-tag">Why Maison Vereen Exists</span>
+              <span className="section-tag">A House, Not a Brand.</span>
 
               <h2
                 className="type-display"
               >
-                There was a gap.{" "}
+                Some houses sell scent.{" "}
                 <em className="not-italic text-gold">
-                  We built the house to fill it.
+                  This one builds legacy.
                 </em>
               </h2>
 
               <p className="type-body">
-                Every luxury fragrance house in the world was built by someone,
-                somewhere, for a vision they could not find elsewhere. Chanel
-                saw a woman the fashion world hadn&apos;t dressed yet. Hermès
-                saw an object the market hadn&apos;t built yet. We saw an
-                individual the fragrance world had never celebrated.
+                Maison Vereen exists to elevate fragrance into collectible art — and to prove that a luxury house of true global standing can be born in Africa.
               </p>
               <p className="type-body">
-                The builder. The visionary. The founder. The creator. The
-                leader who moves without permission. The individual whose
-                presence is felt before they speak.
+                The House exists because a gap was left unfilled. Africa has supplied the world&apos;s perfumers with some of their rarest materials for generations, yet has never produced a fragrance house the world recognised as a serious luxury institution in its own right.
               </p>
               <p className="type-body">
-                No fragrance house was built for this person. Until now.
+                Maison Vereen was founded to close that gap — not by imitating the houses of Paris or Geneva, but by holding itself to the same uncompromising standard while remaining unmistakably of its own origin.
               </p>
 
-              <Link href="/the-house" className="link-gold w-fit mx-auto lg:mx-0">
-                <span>The House</span>
+              <Link href="/our-story" className="link-gold w-fit mx-auto lg:mx-0">
+                <span>Discover Maison Vereen</span>
                 <span className="text-gold">→</span>
               </Link>
             </div>

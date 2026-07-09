@@ -92,11 +92,14 @@ export default function FAQPage() {
                 <div className="max-w-[540px] space-y-6">
                   <span className="section-tag">Frequently Asked Questions</span>
                   <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}>
-                    Everything you would ask,{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>answered directly.</em>
+                    Everything You Would Ask,{" "}
+                    <em className="not-italic" style={{ color: "#C9A84C" }}>Answered Directly.</em>
                   </h1>
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Clarity, in the House&apos;s own voice. No question here is too practical.
+                    Twenty questions, answered in the unhurried, confident voice of the House — designed to dissolve objection and deepen understanding at once.
+                  </p>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    This page exists so that no serious applicant is left with an unanswered practical question before applying. Each answer is written in the House&apos;s own voice — confident, direct, and unhurried — never defensive, never evasive.
                   </p>
                 </div>
               </div>
@@ -164,24 +167,24 @@ export default function FAQPage() {
               <p className="font-serif font-light text-[#E8E2D9]" style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}>
                 Still have questions?
               </p>
-              <p className="text-[#5A5449] font-light" style={{ fontSize: "17px" }}>
+              <p className="text-[#7A7068] font-light" style={{ fontSize: "17px" }}>
                 Every inquiry is read by a person and responded to thoughtfully.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-              <a
-                href="mailto:hello@maisonvereen.com"
-                className="link-gold"
-              >
-                <span>Contact the House</span>
-                <span className="text-gold">→</span>
-              </a>
               <Link
                 href="/access"
-                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+                className="inline-block bg-gold/90 hover:bg-gold px-8 py-3 text-charcoal transition-all duration-500"
                 style={{ fontSize: "11px", letterSpacing: "0.28em" }}
               >
-                <span className="uppercase font-medium">Begin Your Application</span>
+                <span className="uppercase font-semibold">Apply to the Founding Registry</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="link-gold"
+              >
+                <span>Speak with the House Directly</span>
+                <span className="text-gold">→</span>
               </Link>
             </div>
           </div>
@@ -190,10 +193,10 @@ export default function FAQPage() {
         {/* PAGE 14 → PAGE 15 transition */}
         <section className="bg-[#060608] border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#3A3530]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Some questions are better asked directly. The House is always reachable.
             </p>
-            <a href="/contact" className="inline-block mt-4 text-gold/40 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+            <a href="/contact" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
               Speak with the House Directly →
             </a>
           </div>
