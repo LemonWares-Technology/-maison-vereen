@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 import Image from "next/image";
+import Link from "next/link";
 
 // Page 5 — COLLECTION ONE
 
@@ -38,21 +39,36 @@ export default function EditionIPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[75vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="space-y-8 max-w-[480px]">
-                  <span className="section-tag">Collection One</span>
+                  <span className="section-tag">Edition I: House of 250</span>
                   <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
-                    The first chapter is always{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>the most significant.</em>
+                    Two Hundred and Fifty.{" "}
+                    <em className="not-italic" style={{ color: "#C9A84C" }}>No More, Ever.</em>
                   </h1>
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Collection One is not Maison Vereen&apos;s debut. It is Maison Vereen&apos;s declaration. A statement about who we are, what we believe, and what we intend to build. Everything that follows will build on what begins here.
+                    Edition I of Many Editions is Maison Vereen&apos;s founding chapter — two hundred and fifty individually numbered bottles, each authenticated, documented, and permanent in a way few luxury objects remain today.
                   </p>
-                  <button
-                    onClick={() => setIsApplyOpen(true)}
-                    className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
-                    style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-                  >
-                    <span className="uppercase font-medium">Apply for Ownership of Collection One</span>
-                  </button>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Edition I exists once. When the two hundred and fiftieth bottle is placed into a collector&apos;s hands, the edition closes permanently — not paused, not revisited in a future &ldquo;anniversary&rdquo; release, but closed, in the way a first edition of any serious work closes the moment its print run ends.
+                  </p>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Each bottle carries an individual number, assigned in the sequence of acceptance into the Founding Registry, and a certificate of authenticity that documents its place within the two hundred and fifty. Ownership of an Edition I bottle is, in effect, ownership of a numbered position in the House&apos;s own founding history.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                    <button
+                      onClick={() => setIsApplyOpen(true)}
+                      className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500"
+                      style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                    >
+                      <span className="uppercase font-semibold">Apply to the Founding Registry</span>
+                    </button>
+                    <Link
+                      href="/registry"
+                      className="inline-block border border-white/20 hover:border-gold/50 px-8 py-3.5 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500"
+                      style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                    >
+                      <span className="uppercase font-medium">Understand the Founding Registry</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
               {/* Bottle — silhouette only, anticipation not unveiling */}
@@ -362,15 +378,36 @@ export default function EditionIPage() {
                 <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                   The founders of this house have committed: what is made rare stays rare. That commitment is what makes ₦400,000 not a luxury price. An ownership price.
                 </p>
-                <button
-                  onClick={() => setIsApplyOpen(true)}
-                  className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
-                  style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-                >
-                  <span className="uppercase font-medium">Apply for Ownership of Collection One</span>
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                  <button
+                    onClick={() => setIsApplyOpen(true)}
+                    className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500"
+                    style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                  >
+                    <span className="uppercase font-semibold">Apply to the Founding Registry</span>
+                  </button>
+                  <Link
+                    href="/registry"
+                    className="inline-block border border-white/20 hover:border-gold/50 px-8 py-3.5 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500"
+                    style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                  >
+                    <span className="uppercase font-medium">Understand the Founding Registry</span>
+                  </Link>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* PAGE 7 → PAGE 8 transition */}
+        <section className="bg-[#060506] border-t border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+              Two hundred and fifty bottles require somewhere for two hundred and fifty stories to begin. That place is the Founding Registry.
+            </p>
+            <Link href="/registry" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+              Apply to the Founding Registry →
+            </Link>
           </div>
         </section>
 

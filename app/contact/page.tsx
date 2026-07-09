@@ -91,7 +91,7 @@ export default function ContactPage() {
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     Not a support ticket. A conversation. Every enquiry to Maison Vereen — whether from a collector, a journalist, or a future partner — is read and answered personally by the House.
                   </p>
-                  <p className="text-[#5A5449] font-light" style={{ fontSize: "14px" }}>
+                  <p className="text-[#7A7068] font-light" style={{ fontSize: "14px" }}>
                     For direct correspondence:{" "}
                     <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors">
                       hello@maisonvereen.com
@@ -340,12 +340,12 @@ export default function ContactPage() {
         {/* PAGE 15 → PAGE 16 transition line */}
         <section className="bg-[#060608] border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#3A3530]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               You now know the House completely. What remains is a final invitation.
             </p>
             <a
               href="/final-invitation"
-              className="inline-block mt-5 text-gold/40 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
+              className="inline-block mt-5 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
               style={{ fontSize: "10px" }}
             >
               The Final Invitation →

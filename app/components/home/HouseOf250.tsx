@@ -21,19 +21,20 @@ export default function HouseOf250() {
         {/* Content side */}
         <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-16 py-20 lg:py-32 space-y-12 w-full">
           <div className="space-y-6 max-w-[540px] flex flex-col items-center lg:items-start">
-            <span className="section-tag">World One — The Prestige Collection</span>
+            <span className="section-tag">Edition I: House of 250</span>
             <h2 className="type-headline">
-              The House of 250
+              Two hundred and fifty.{" "}
+              <em className="not-italic" style={{ color: "#C9A84C" }}>No more, ever.</em>
             </h2>
             <p className="type-pullquote text-[#C8BFB2]">
-              "This fragrance is earned, not simply purchased."
+              &ldquo;The founding chapter of Maison Vereen — created to exist once, completely, and then to close.&rdquo;
             </p>
             <div className="type-body-sm space-y-4">
               <p>
-                This is not a perfume for purchase. It is a position within an exclusive circle — one that must be considered, applied for, and carefully extended.
+                Edition I is the founding chapter of Maison Vereen — the work from which every future edition will be measured. It was not created to be reordered, restocked, or repeated. It was created to exist once, completely, and then to close.
               </p>
               <p>
-                Each release produces precisely 250 numbered bottles. No more. There is no catalogue, no cart, no instant transaction. There is an application, a review, and for those found to be suitable custodians — an invitation.
+                Two hundred and fifty is not a marketing number. It is the number the House&apos;s master perfumer determined could be produced without compromising a single element of the formulation, the vessel, or the ceremony of ownership.
               </p>
             </div>
           </div>
@@ -59,11 +60,11 @@ export default function HouseOf250() {
             </div>
 
             <div className="flex flex-wrap gap-6 pt-6 justify-center lg:justify-start">
-              <Link href="/access" className="border border-gold/60 hover:border-gold hover:bg-gold/10 px-8 py-3.5 transition-all duration-500 type-caption uppercase tracking-[0.25em] text-[#E8E2D9] font-medium">
-                Apply for Consideration
+              <Link href="/access" className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500 type-caption uppercase tracking-[0.25em] font-semibold">
+                Apply for a Position
               </Link>
-              <Link href="/waitlist" className="px-4 py-3.5 type-caption uppercase tracking-[0.25em] text-[#8A8178] hover:text-[#E8E2D9] transition-colors font-medium">
-                Join the Waiting List
+              <Link href="/registry" className="px-4 py-3.5 type-caption uppercase tracking-[0.25em] text-[#8A8178] hover:text-[#E8E2D9] transition-colors font-medium">
+                View the Founding Registry
               </Link>
             </div>
           </div>

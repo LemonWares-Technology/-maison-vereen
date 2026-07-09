@@ -99,61 +99,22 @@ export default function FinalInvitationPage() {
           </div>
         </section>
 
-        {/* ── CLOSING AFFIRMATIONS — below the primary CTA ── */}
+        {/* ── CLOSING AFFIRMATIONS — exact blueprint prose ── */}
         <section className="bg-[#080808]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20">
-            <div className="max-w-[680px] mx-auto space-y-8">
+            <div className="max-w-[680px] mx-auto space-y-8 text-center">
               <div className="w-8 h-px bg-gold/20 mx-auto" />
-              <h2
-                className="font-serif font-light text-center text-[#4A4440]"
-                style={{ fontSize: "clamp(1rem, 1.5vw, 1.15rem)" }}
-              >
-                Before you apply, you should know:
-              </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: "○",
-                    text: "The application is free and carries no financial obligation.",
-                  },
-                  {
-                    icon: "○",
-                    text: "Applications are reviewed personally within 24 to 48 hours.",
-                  },
-                  {
-                    icon: "○",
-                    text: "Your information is held privately and never shared.",
-                  },
-                  {
-                    icon: "○",
-                    text: "Applying does not guarantee a position — but it begins the conversation.",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-gold/30 shrink-0 mt-0.5" style={{ fontSize: "10px" }}>
-                      {item.icon}
-                    </span>
-                    <p className="text-[#4A4440] font-light leading-[1.7]" style={{ fontSize: "14px" }}>
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "15px" }}>
+                The application is free and carries no financial obligation. Applications are reviewed personally within 24 to 48 hours. Your information is held privately and never shared. Questions before applying?{" "}
+                <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors">
+                  hello@maisonvereen.com
+                </a>
+              </p>
 
-              <div className="pt-4 text-center">
-                <p className="text-[#3A3530] font-light" style={{ fontSize: "14px" }}>
-                  Questions before applying?{" "}
-                  <a
-                    href="mailto:hello@maisonvereen.com"
-                    className="text-gold/50 hover:text-gold transition-colors"
-                  >
-                    hello@maisonvereen.com
-                  </a>
-                </p>
-              </div>
+              <div className="w-8 h-px bg-gold/20 mx-auto" />
 
-              <div className="pt-4 border-t border-white/5 text-center space-y-2">
+              <div className="pt-2 border-t border-white/5 space-y-2">
                 <p className="uppercase tracking-[0.3em] text-[#2A2520] font-medium" style={{ fontSize: "9px" }}>
                   Maison Vereen · Edition I · 250 Bottles · Lagos
                 </p>

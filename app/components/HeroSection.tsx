@@ -61,23 +61,34 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
             </em>
           </h1>
 
-          {/* Supporting statement */}
+          {/* Supporting statement — exact from blueprint */}
           <p
             className="font-serif font-light text-[#C8BFB2] italic tracking-wide anim-fade-up-d1"
-            style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.6rem)" }}
+            style={{ fontSize: "clamp(1rem, 1.8vw, 1.35rem)" }}
           >
-            Edition I. Two hundred and fifty individually numbered bottles. Africa&apos;s first serious luxury fragrance house.
+            Edition I. Two hundred and fifty individually numbered bottles. Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
           </p>
 
-          {/* Supporting copy — body scale, muted */}
+          {/* Main content — exact from blueprint */}
           <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[500px] mx-auto md:mx-0 anim-fade-up-d2"
+            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0 anim-fade-up-d2"
             style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
           >
-            A House of Distinction. Africa&apos;s first. Not a perfume company.
-            Not a brand. A house — built around the belief that the individuals
-            who shape the world deserve something shaped for them. Something
-            rare. Something permanent. Something worthy of their presence.
+            Before your name is known, before your story is told, before a single word has passed between you and a room — something has already been decided. Maison Vereen was built for that instant. The one that happens before language.
+          </p>
+
+          <p
+            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0 anim-fade-up-d3"
+            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
+          >
+            This is not a house that asks you to become someone. It recognises who has already arrived. Edition I exists for the small number of people who have always understood the difference between fitting in and belonging — and who have been waiting, without quite knowing it, for something built to that standard.
+          </p>
+
+          <p
+            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0"
+            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
+          >
+            Two hundred and fifty bottles. No more will ever be made. What follows on this page is not a product description. It is an invitation to understand what you would be applying to become part of.
           </p>
 
           {/* CTAs — appear after 3 seconds, subtle fade-in */}

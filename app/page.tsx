@@ -62,12 +62,15 @@ export default function HomePage() {
             The final choice. */}
         <DualPathway />
 
-        {/* PAGE 1 → PAGE 2 transition line (blueprint: "Before you apply, you should understand what you are applying to.") */}
+        {/* PAGE 1 → PAGE 2 transition line */}
         <section className="bg-[#060506] border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#3A3530]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Before you apply, you should understand what you are applying to.
             </p>
+            <a href="/our-story" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+              Discover Maison Vereen →
+            </a>
           </div>
         </section>
 

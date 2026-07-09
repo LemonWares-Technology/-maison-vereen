@@ -1,39 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
-import Image from "next/image";
 
-// Page 4 — THE FOUNDER
+// PAGE 4 — THE FOUNDER'S STORY
+// Exact copy from blueprint document
 
 export default function TheFounderPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-
   return (
     <>
       <Header />
       <main className="bg-charcoal">
 
-        {/* ── OPENING — split: text + founder image ── */}
+        {/* ── HERO — blueprint headline ── */}
         <section className="pt-[72px] border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
-              {/* Left — text */}
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28 order-2 lg:order-1">
-                <div className="space-y-9 max-w-[520px]">
-                  <span className="section-tag">The Founder</span>
-                  {/* Opening statement — exact from document Page 4 */}
-                  <h1 className="type-display">
-                    She didn&apos;t find the house she was looking for.{" "}
-                    <em className="block not-italic mt-3 text-gold">
-                      So she built it.
+                <div className="space-y-9 max-w-[540px]">
+                  <span className="section-tag">The Founder&apos;s Story</span>
+                  <h1
+                    className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
+                    style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
+                  >
+                    She Did Not Set Out to{" "}
+                    <em className="not-italic block mt-2" style={{ color: "#C9A84C" }}>
+                      Build a Perfume Brand.
                     </em>
                   </h1>
-                  {/* Exact opening statement from doc Page 4 */}
-                  <p className="type-pullquote">
-                    &ldquo;I did not build Maison Vereen to compete with existing houses. I built it because the house I was looking for did not exist. And I needed it to.&rdquo;
+                  <p
+                    className="font-serif font-light text-[#C8BFB2]"
+                    style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
+                  >
+                    The most prestigious houses in the world communicate through their work, not their founders. Maison Vereen was built in that tradition.
                   </p>
                 </div>
               </div>
@@ -60,33 +61,33 @@ export default function TheFounderPage() {
           </div>
         </section>
 
-        {/* ── WHY SHE STARTED — Page 4 ── */}
+        {/* ── MAIN CONTENT — exact from blueprint ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="max-w-[760px] space-y-8">
-              <span className="section-tag">Why She Started</span>
-              <h2 className="type-headline">
-                She looked for it first.{" "}
-                <em className="not-italic text-gold">Then she built it.</em>
-              </h2>
-              <p className="type-body">
-                There was a version of this story where she found the house she was looking for — an existing fragrance built for the kind of woman she was becoming. Authoritative. Grounded. Building something serious in a world that had not finished deciding how seriously to take her.
-              </p>
-              <p className="type-body">
-                That house did not exist. Not in Paris. Not in London. Not anywhere she looked. Every great house she admired was built for a different version of a person she was not. So she built the version that was missing.
-              </p>
+              <div className="space-y-6">
+                <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+                  Maison Vereen was founded on a simple, stubborn conviction: that a luxury fragrance house built to the world&apos;s highest standard could be built in Lagos, by an African founder, without asking permission or imitating anyone else&apos;s idea of what luxury should sound like.
+                </p>
+                <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+                  That conviction did not arrive as a business plan. It arrived as a refusal — a refusal to accept that craftsmanship of this calibre belonged only to certain cities, certain histories, certain names. What followed was years of formulation, refinement, and quiet obsession with getting every detail, from the raw material to the bottle&apos;s weight in the hand, exactly right.
+                </p>
+                <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+                  The founder&apos;s full story will be told over time, the way any serious house reveals itself — gradually, through the work. What matters at this stage is not her biography, but her intention: to build something that will still mean something in a hundred years, long after she is no longer the one telling its story.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── HER PHILOSOPHY — Page 4 ── */}
+        {/* ── CONVICTION OVER CREDENTIALS ── */}
         <section className="border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[52vh]">
               <div className="relative min-h-[340px] lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
                   src="/founder-image-2.png"
-                  alt="The founder's philosophy — Maison Vereen"
+                  alt="The founder's conviction — Maison Vereen"
                   fill
                   sizes="(max-width:1024px) 100vw, 50vw"
                   className="object-cover object-center"
@@ -97,16 +98,18 @@ export default function TheFounderPage() {
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
                 <div className="space-y-8 max-w-[480px]">
-                  <span className="section-tag">Her Philosophy</span>
-                  <h2 className="type-headline">
-                    Luxury is not what you wear.{" "}
-                    <em className="not-italic text-gold">It is what you project without trying.</em>
+                  <span className="section-tag">Conviction Over Credentials</span>
+                  <h2
+                    className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
+                    style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
+                  >
+                    The House speaks.{" "}
+                    <em className="not-italic" style={{ color: "#C9A84C" }}>
+                      The founder rarely needs to.
+                    </em>
                   </h2>
-                  <p className="type-body">
-                    She has spent years thinking about the nature of presence. What it is. How it is built. Why some people carry rooms with them and others perform for rooms. Her conclusion: presence is not cultivated. It is revealed. And the objects that serve people with genuine presence should reveal, not perform.
-                  </p>
-                  <p className="type-body">
-                    Maison Vereen is the physical manifestation of that belief. A fragrance designed not to make you smell like someone. To smell like you — amplified, clarified, and permanent.
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    The most prestigious houses in the world are remembered for their work, not their founders&apos; faces. Maison Vereen follows that same discipline deliberately — the House, not the individual, is what is being built to last.
                   </p>
                 </div>
               </div>
@@ -114,26 +117,36 @@ export default function TheFounderPage() {
           </div>
         </section>
 
-        {/* ── WHAT DRIVES HER — split layout ── */}
+        {/* ── BUILDING TO OUTLIVE HER ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">What Drives Her</span>
-                  <h2 className="type-headline">
-                    Not the market.{" "}
-                    <em className="not-italic text-gold">The people the market ignores.</em>
+                  <span className="section-tag">Building to Outlive Her</span>
+                  <h2
+                    className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
+                    style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
+                  >
+                    Some things are built{" "}
+                    <em className="not-italic" style={{ color: "#C9A84C" }}>
+                      to outlive their founder.
+                    </em>
                   </h2>
-                  <p className="type-body">
-                    She did not build Maison Vereen for a market gap. She built it for a person gap. The fragrance world has spent decades building products for aspiration — for the person you want to become. She spent years thinking about the person who does not need to become anyone. Who already is. Who has been overlooked by every house because their identity is not for sale.
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Every decision made today — from Edition I&apos;s scarcity to the Founding Registry&apos;s careful structure — is made with one question in mind: will this still make sense in a century, under someone else&apos;s stewardship? If the answer is no, it does not happen.
                   </p>
-                  <p className="type-body">
-                    That is who Maison Vereen was built for. And she believes there are more of them than the market has noticed.
-                  </p>
+                  <div className="border-t border-white/5 pt-8 space-y-4">
+                    <div className="w-8 h-px bg-gold/40" />
+                    <p
+                      className="font-serif font-light italic text-[#8A8070] leading-[1.55]"
+                      style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
+                    >
+                      &ldquo;Obsession, properly aimed, becomes a House.&rdquo;
+                    </p>
+                  </div>
                 </div>
               </div>
-              {/* Bottle — mid-body crop, angled light */}
               <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
                   src="/images/the bottle.png"
@@ -150,64 +163,45 @@ export default function TheFounderPage() {
           </div>
         </section>
 
-        {/* ── HER VIEW ON LEGACY — split layout ── */}
+        {/* ── CTAs ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              {/* Bottle on left — varies rhythm */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <Image
-                  src="/images/the bottle.png"
-                  alt="Maison Vereen Edition I"
-                  fill
-                  sizes="(max-width:1024px) 100vw, 50vw"
-                  className="object-contain object-center"
-                  style={{ opacity: 0.9 }}
-                />
-                <div className="absolute inset-0 bg-linear-to-r from-transparent to-charcoal/50" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/70 via-transparent to-transparent" />
-              </div>
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">Her View on Legacy</span>
-                  <h2 className="type-headline">
-                    She is building for people{" "}
-                    <em className="not-italic text-gold">she will never meet.</em>
-                  </h2>
-                  <p className="type-body">
-                    The houses she admires most were built by people who were not thinking about next quarter. They were thinking about next century. She is building with the same intention. Edition I will be owned by 250 people. Some of them will pass their bottles to their children. Some will be referenced in future discussions of African luxury that have not yet been written.
-                  </p>
-                  <p className="type-body">
-                    She is building for those future moments — even the ones she cannot predict.
-                  </p>
-                  {/* Closing quote from document */}
-                  <div className="border-t border-white/5 pt-8">
-                    <div className="w-8 h-px bg-gold/40 mb-6" />
-                    <p className="type-pullquote text-[#5A5449]">
-                      &ldquo;The measure of a house is not what it achieves in its founding decade. It is what it means in its founding century.&rdquo;
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <p
+              className="font-serif font-light text-[#E8E2D9] max-w-[480px]"
+              style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}
+            >
+              This was never meant to be finished quickly.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 shrink-0">
+              <Link href="/the-house" className="link-gold">
+                <span>See What Makes the House Different</span>
+                <span className="text-gold">→</span>
+              </Link>
+              <Link
+                href="/access"
+                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+              >
+                <span className="uppercase font-medium">Apply for a Position</span>
+              </Link>
             </div>
+          </div>
+        </section>
+
+        {/* PAGE 4 → PAGE 5 transition */}
+        <section className="bg-[#060506] border-t border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+              Conviction explains why the House exists. What follows explains why it could only ever look like this.
+            </p>
+            <Link href="/the-house" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+              See What Makes the House Different →
+            </Link>
           </div>
         </section>
 
       </main>
       <Footer />
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
-
-      {/* PAGE 4 → PAGE 5 transition */}
-      <section className="bg-[#060506] border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-          <p className="font-serif font-light italic text-[#3A3530]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
-            Conviction explains why the House exists. What follows explains why it could only ever look like this.
-          </p>
-          <a href="/the-house" className="inline-block mt-4 text-gold/40 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
-            See What Makes the House Different →
-          </a>
-        </div>
-      </section>
     </>
   );
 }

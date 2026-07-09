@@ -39,46 +39,35 @@ export default function FounderStory() {
           {/* Right — text: exact copy from document Page 1 and Page 4 */}
           <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D] order-1 lg:order-2 w-full">
             <div className="space-y-9 max-w-[480px] text-center lg:text-left flex flex-col items-center lg:items-start">
-              <span className="section-tag">The Covenant of the House</span>
+              <span className="section-tag">The Founder&apos;s Story</span>
 
-              {/* Exact headline from document Page 1 */}
+              {/* Blueprint PAGE 4 headline — home page preview */}
               <h2
                 className="type-display"
               >
-                She didn&apos;t find the house she was looking for.{" "}
+                She Did Not Set Out to Build{" "}
                 <em
                   className="block not-italic mt-2 text-gold"
                 >
-                  So she built it.
+                  a Perfume Brand.
                 </em>
               </h2>
 
-              {/* Exact copy from document Page 1 Founder Story */}
+              {/* Blueprint PAGE 4 main content — condensed for home */}
               <p
                 className="type-body"
               >
-                Some things are built because someone saw a gap in the market.
-                Maison Vereen was built because someone saw a gap in the world.
-                A world that had no house — no serious, permanent, beautifully
-                made house — built to celebrate people who create things. People
-                who build things. People who lead without being asked to.
+                Maison Vereen was founded on a simple, stubborn conviction: that a luxury fragrance house built to the world&apos;s highest standard could be built in Lagos, by an African founder, without asking permission or imitating anyone else&apos;s idea of what luxury should sound like.
               </p>
               <p
                 className="type-body"
               >
-                She has spent years studying what it means to carry an aura.
-                What it means to leave a room different from how you found it.
-                And she decided the fragrance for that person should exist. That
-                it should be African. That it should be numbered and permanent
-                and impossible to replicate. That its founding owners should
-                feel what early ownership of something serious has always felt
-                like.
+                That conviction did not arrive as a business plan. It arrived as a refusal — a refusal to accept that craftsmanship of this calibre belonged only to certain cities, certain histories, certain names.
               </p>
               <p
                 className="type-body"
               >
-                She is the founder of Maison Vereen. Her name is the
-                house&apos;s covenant.
+                The most prestigious houses in the world communicate through their work, not their founders. Maison Vereen was built in that tradition.
               </p>
 
               <Link href="/the-founder" className="link-gold w-fit mx-auto lg:mx-0">

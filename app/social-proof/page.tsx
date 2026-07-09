@@ -187,7 +187,7 @@ export default function SocialProofPage() {
                     <p className="text-[#6A6258] font-light" style={{ fontSize: "14px" }}>
                       — {t.attribution}
                     </p>
-                    <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>
+                    <p className="text-[#7A7068] font-light" style={{ fontSize: "12px" }}>
                       {t.location}
                     </p>
                     {t.bottleNumber && (
@@ -200,7 +200,7 @@ export default function SocialProofPage() {
               ))}
             </div>
 
-            <p className="text-[#3A3530] font-light italic max-w-[560px]" style={{ fontSize: "14px" }}>
+            <p className="text-[#7A7068] font-light italic max-w-[560px]" style={{ fontSize: "14px" }}>
               Nothing here will ever be fabricated or inflated. This section is built to grow honestly, even if that means starting quietly.
             </p>
           </div>
@@ -242,7 +242,7 @@ export default function SocialProofPage() {
               ))}
             </div>
 
-            <p className="text-[#3A3530] font-light" style={{ fontSize: "14px" }}>
+            <p className="text-[#5A5449] font-light" style={{ fontSize: "14px" }}>
               For press and editorial inquiries:{" "}
               <a href="mailto:press@maisonvereen.com" className="text-gold/50 hover:text-gold transition-colors">
                 press@maisonvereen.com
@@ -261,7 +261,7 @@ export default function SocialProofPage() {
               >
                 An institution is proven not by what it says about itself, but by what others say about it.
               </p>
-              <p className="text-[#5A5449] font-light" style={{ fontSize: "17px" }}>
+              <p className="text-[#7A7068] font-light" style={{ fontSize: "17px" }}>
                 This page will continue to grow. The House is being assembled now.
               </p>
             </div>
@@ -284,10 +284,10 @@ export default function SocialProofPage() {
         {/* PAGE 13 → PAGE 14 transition */}
         <section className="bg-[#060608] border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#3A3530]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Recognition answers some questions. Practical ones remain — and deserve clear answers.
             </p>
-            <a href="/faq" className="inline-block mt-4 text-gold/40 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+            <a href="/faq" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
               Read Frequently Asked Questions →
             </a>
           </div>

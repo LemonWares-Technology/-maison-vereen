@@ -30,25 +30,21 @@ export default function Philosophy() {
   return (
     <section id="philosophy" className="bg-[#0D0D0D] border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
-        {/* Header — exact doc copy */}
+        {/* Header — exact blueprint PAGE 3 preview copy */}
         <div className="space-y-6 max-w-[680px] mx-auto text-center md:text-left md:mx-0 flex flex-col items-center md:items-start">
-          <span className="section-tag">The House Philosophy</span>
+          <span className="section-tag">The Philosophy of the House</span>
           <h2 className="type-headline">
-            The fragrance is not the luxury.{" "}
-            <em className="not-italic text-gold">You are.</em>
+            Luxury Is Not Volume.{" "}
+            <em className="not-italic text-gold">It Is Conviction.</em>
           </h2>
           <p className="type-subhead">
-            Maison Vereen does not create distinction. It recognizes it.
+            Ten convictions govern Maison Vereen. None of them are negotiable, and none of them were chosen for how they would market.
           </p>
           <p className="type-body">
-            We do not believe in selling people an identity. We believe in
-            recognizing the identity they already carry. Our fragrance is not
-            designed to make you feel like someone else. It is designed to make
-            you smell like exactly who you already are — amplified, clarified,
-            and impossible to forget.
+            Every house, knowingly or not, is built on a set of beliefs. Most never state them. Maison Vereen states them plainly, because a House that intends to last a century cannot afford to leave its convictions unwritten.
           </p>
           <Link href="/philosophy" className="link-gold w-fit mx-auto md:mx-0">
-            <span>Read More</span>
+            <span>Continue to The Philosophy</span>
             <span className="text-gold">→</span>
           </Link>
         </div>

@@ -14,10 +14,11 @@ const NAV_GROUPS = [
     label: "The House",
     dropdown: [
       { label: "The House", href: "/the-house" },
+      { label: "Discover Maison Vereen", href: "/our-story" },
       { label: "Philosophy", href: "/philosophy" },
       { label: "The Founder", href: "/the-founder" },
-      { label: "Our Story", href: "/our-story" },
-      { label: "Future Vision", href: "/future" },
+      { label: "The Difference", href: "/the-difference" },
+      { label: "The Craft", href: "/the-craft" },
     ],
   },
   {
@@ -32,7 +33,8 @@ const NAV_GROUPS = [
   {
     label: "Registry",
     dropdown: [
-      { label: "The Registry", href: "/registry" },
+      { label: "The Founding Registry", href: "/registry" },
+      { label: "Membership & Access", href: "/membership" },
       { label: "Join Waitlist", href: "/waitlist" },
     ],
   },
@@ -40,7 +42,6 @@ const NAV_GROUPS = [
     label: "HouseBook",
     dropdown: [
       { label: "The HouseBook", href: "/housebook" },
-      { label: "House Journal", href: "/journal" },
       { label: "Social Proof", href: "/social-proof" },
       { label: "FAQ", href: "/faq" },
     ],
@@ -57,13 +58,17 @@ const NAV_GROUPS = [
 // 10 curated mobile nav links — brand identity, products, conversion, contact
 const MOBILE_LINKS = [
   { label: "Home", href: "/" },
-  { label: "The House", href: "/the-house" },
+  { label: "Discover Maison Vereen", href: "/our-story" },
   { label: "Philosophy", href: "/philosophy" },
   { label: "The Founder", href: "/the-founder" },
+  { label: "The Difference", href: "/the-difference" },
+  { label: "The Craft", href: "/the-craft" },
   { label: "Edition I", href: "/edition-i" },
   { label: "Signature Collection", href: "/fragrance-library" },
   { label: "Founding Registry", href: "/registry" },
-  { label: "Access", href: "/access" },
+  { label: "Membership & Access", href: "/membership" },
+  { label: "The House", href: "/the-house" },
+  { label: "Social Proof", href: "/social-proof" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
   { label: "Final Invitation", href: "/final-invitation" },

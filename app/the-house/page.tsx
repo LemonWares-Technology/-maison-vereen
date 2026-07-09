@@ -42,7 +42,7 @@ export default function TheHousePage() {
       <Header  />
       <main className="bg-charcoal">
 
-        {/* ── HERO — Page 2: "A House is not a company. It is a position." ── */}
+        {/* ── HERO — PAGE 12: "A House Is Not Built in a Season." ── */}
         <section className="pt-[72px] border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
@@ -53,19 +53,28 @@ export default function TheHousePage() {
                     className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
                     style={{ fontSize: "clamp(2.2rem, 4.2vw, 3.8rem)" }}
                   >
-                    A House is not a company.{" "}
+                    A House Is Not Built{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>
-                      It is a position.
+                      in a Season.
                     </em>
                   </h1>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Companies sell products. Houses carry meaning. The distinction matters because it changes everything — what we build, who we build it for, how long we intend it to last, and what we refuse to compromise to keep it alive.
+                  <p
+                    className="font-serif font-light text-[#C8BFB2]"
+                    style={{ fontSize: "clamp(1rem, 1.6vw, 1.2rem)" }}
+                  >
+                    Maison Vereen is building toward institutional permanence — a House whose values, culture, and craftsmanship are intended to outlast any single collection, founder, or era.
                   </p>
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Maison Vereen is a luxury identity house. Our first offering is a fragrance. Our permanent offering is a philosophy: that the individuals who shape the world deserve a house that recognizes them — not attempts to create them.
+                    Everything explored elsewhere on this site — Edition I, the Signature Collection, the Founding Registry — exists within something larger: the House itself. This page steps back from any single product to describe the institution Maison Vereen intends to become.
                   </p>
-                  <Link href="/philosophy" className="link-gold w-fit">
-                    <span>Our Philosophy</span>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    The House&apos;s values are simple and have not changed since its founding: craftsmanship without compromise, patience over speed, and an unwavering commitment to proving that African origin and global luxury standard are not opposing ideas but a single, obvious truth waiting to be demonstrated properly.
+                  </p>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Maison Vereen&apos;s ambitions extend across generations, not seasons. The House hopes, a century from now, to be spoken of the way the world&apos;s oldest maisons are spoken of today — not as a brand that once trended, but as an institution that endured because it never lowered its standard to make growth easier.
+                  </p>
+                  <Link href="/social-proof" className="link-gold w-fit">
+                    <span>Read What Others Are Saying</span>
                     <span className="text-gold">→</span>
                   </Link>
                 </div>
@@ -158,61 +167,53 @@ export default function TheHousePage() {
           </div>
         </section>
 
-        {/* ── WHAT IT MEANS TO BELONG — split layout ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              {/* Image left */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <Image
-                  src="/images/the-house-belonging.png"
-                  alt="What it means to belong to Maison Vereen"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                  style={{ opacity: 0.9 }}
-                />
-                <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0D0D0D]/50" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/65 via-transparent to-transparent" />
+        {/* ── VALUES & CULTURE ── */}
+        <section className="border-b border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-start">
+              <div className="space-y-6">
+                <span className="section-tag">Values &amp; Culture</span>
+                <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
+                  Culture,{" "}
+                  <em className="not-italic" style={{ color: "#C9A84C" }}>before commerce.</em>
+                </h2>
+                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  Every person who works within Maison Vereen, in any capacity, is held to the same standard: craftsmanship first, growth second. Decisions that would compromise quality for speed or scale are not made here, regardless of opportunity.
+                </p>
               </div>
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">What it means to belong</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                    Belonging here is not about what you own.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>It is about who you are.</em>
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Ownership of Maison Vereen Edition I is not a transaction. It is a recognition. The House selected 250 individuals to carry the founding chapter. Those individuals are documented. Their bottle numbers are permanent. Their names are in the first chapter of something that is being built to last.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    To belong to the House is to be the kind of person who recognizes something significant before the world does. It has always been this way with the greatest houses. Early ownership is not luck. It is judgment.
-                  </p>
-                </div>
+              <div className="space-y-6">
+                <span className="section-tag">The Next Century</span>
+                <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
+                  The institution behind{" "}
+                  <em className="not-italic" style={{ color: "#C9A84C" }}>the editions.</em>
+                </h2>
+                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  Maison Vereen is not building toward a successful launch. It is building toward an institution capable of outliving its founder, its first collectors, and its first century — the same way the world&apos;s most respected maisons were built, one deliberate decade at a time.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── FIVE PRINCIPLES — Page 2 ── */}
-        <section className="border-b border-white/5">
+        {/* ── FIVE PRINCIPLES ── */}
+        <section className="border-b border-white/5 bg-[#0D0D0D]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4">
               <span className="section-tag">What we stand for</span>
               <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                Five principles.{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>No compromises.</em>
+                Values do not change with trends.{" "}
+                <em className="not-italic" style={{ color: "#C9A84C" }}>Ours will not either.</em>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
               {principles.map((p, i) => (
-                <div key={i} className="group bg-charcoal px-8 py-10 space-y-4 hover:bg-white/2 transition-colors duration-300 relative">
+                <div key={i} className="group bg-[#0D0D0D] px-8 py-10 space-y-4 hover:bg-white/2 transition-colors duration-300 relative">
                   <div className="absolute top-0 left-0 w-full h-px bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   <span className="font-mono text-gold/40" style={{ fontSize: "10px" }}>{p.num}</span>
                   <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "21px" }}>
                     {p.title}
                   </h3>
-                  <p className="text-[#5A5449] font-light leading-[1.7]" style={{ fontSize: "16px" }}>
+                  <p className="text-[#7A7068] font-light leading-[1.7]" style={{ fontSize: "16px" }}>
                     {p.body}
                   </p>
                 </div>
@@ -221,48 +222,37 @@ export default function TheHousePage() {
           </div>
         </section>
 
-        {/* ── WHO MAISON VEREEN SERVES — split layout ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">Who Maison Vereen serves</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                    You will know if this is for you.
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    We do not have a customer profile. We have a character profile.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    The person Maison Vereen was built for has built something with their hands or their mind. They lead — formally or informally. They have a point of view they have never been willing to compromise. They think in decades. They have walked into rooms and shifted them without meaning to. They have been described as having a presence.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    We did not create this person. We recognized them. And we built a house worthy of the recognition.
-                  </p>
-                  <Link
-                    href="/access"
-                    className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
-                    style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-                  >
-                    <span className="uppercase font-medium">Apply for Access</span>
-                  </Link>
-                </div>
-              </div>
-              {/* Image right */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <Image
-                  src="/images/the-house-last.png"
-                  alt="The person Maison Vereen was built for"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                  style={{ opacity: 0.9 }}
-                />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0D0D0D]/50" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/65 via-transparent to-transparent" />
-              </div>
+        {/* ── CTA ── */}
+        <section className="border-b border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <p className="font-serif font-light text-[#E8E2D9] max-w-[480px]" style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}>
+              What we hope to become in a hundred years.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 shrink-0">
+              <Link href="/social-proof" className="link-gold">
+                <span>Read What Others Are Saying</span>
+                <span className="text-gold">→</span>
+              </Link>
+              <Link
+                href="/access"
+                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#E8E2D9] transition-all duration-500"
+                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+              >
+                <span className="uppercase font-medium">Apply to the Founding Registry</span>
+              </Link>
             </div>
+          </div>
+        </section>
+
+        {/* PAGE 12 → PAGE 13 transition */}
+        <section className="bg-[#060506] border-t border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+              An institution is proven not by what it says about itself, but by what others say about it.
+            </p>
+            <Link href="/social-proof" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+              Read What Others Are Saying →
+            </Link>
           </div>
         </section>
 
