@@ -1,355 +1,419 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-// Page 14 — CONTACT
-// Six routed inquiry categories per document spec
-
-const categories = [
-  {
-    id: "general",
-    label: "General Inquiries",
-    description: "For questions about the house, the philosophy, or how to join the Registry.",
-    email: "hello@maisonvereen.com",
-    placeholder: "Your question or message…",
-  },
-  {
-    id: "ownership",
-    label: "Ownership Inquiries",
-    description: "For questions about the Ownership Application, allocation status, or the Edition I experience.",
-    email: "ownership@maisonvereen.com",
-    placeholder: "Your inquiry about ownership or allocation…",
-  },
-  {
-    id: "press",
-    label: "Press & Media",
-    description: "For editorial coverage, brand collaborations, and media relationships. Please include your publication and the nature of your inquiry.",
-    email: "press@maisonvereen.com",
-    placeholder: "Your publication and the nature of your inquiry…",
-  },
-  {
-    id: "partnerships",
-    label: "Partnerships",
-    description: "For business development, distribution discussions, and institutional partnerships. Please describe the nature of the potential relationship.",
-    email: "partnerships@maisonvereen.com",
-    placeholder: "Describe the nature of the potential relationship…",
-  },
-  {
-    id: "appointments",
-    label: "Private Appointments",
-    description: "For individuals who wish to experience the fragrance before applying. Available by arrangement in Lagos.",
-    email: "appointments@maisonvereen.com",
-    placeholder: "Your preferred date and any relevant details…",
-  },
-  {
-    id: "collectors",
-    label: "Collector Inquiries",
-    description: "For verified owners with questions about authentication, provenance, or secondary ownership transfer.",
-    email: "collectors@maisonvereen.com",
-    placeholder: "Your bottle number and the nature of your inquiry…",
-  },
-];
+import { Shield, Landmark, MessageSquare, Mail, Calendar } from "lucide-react";
 
 export default function ContactPage() {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Compose mailto link with the routed recipient
-    const subject = encodeURIComponent(`${selectedCategory.label} — Maison Vereen`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${selectedCategory.email}?subject=${subject}&body=${body}`;
-    setSent(true);
-  };
-
   return (
     <>
-      <Header  />
-      <main className="bg-charcoal">
+      <Header />
+      <main className="bg-[#060506] text-[#E8E2D9] min-h-screen">
 
-        {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
-              <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 py-16 md:py-24 w-full">
-                <div className="space-y-7 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
-                  <span className="section-tag">Contact &amp; Concierge</span>
-                  <h1
-                    className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
-                    style={{ fontSize: "clamp(2.2rem, 4.8vw, 4rem)" }}
-                  >
-                    Speak with the House{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>directly.</em>
-                  </h1>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Not a support ticket. A conversation. Every enquiry to Maison Vereen — whether from a collector, a journalist, or a future partner — is read and answered personally by the House.
-                  </p>
-                  <p className="text-[#7A7068] font-light" style={{ fontSize: "14px" }}>
-                    For direct correspondence:{" "}
-                    <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors">
-                      hello@maisonvereen.com
-                    </a>
-                  </p>
-                </div>
-              </div>
+        {/* ── 1. HERO SECTION ── */}
+        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center border-b border-white/5 bg-[#060506]">
+          <div className="w-full max-w-[1400px] mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90vh] lg:min-h-screen items-stretch">
 
-              {/* Right — dark atmospheric panel */}
-              <div className="relative min-h-[280px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: "url(/images/hero-bottle.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center 20%",
-                    opacity: 0.35,
-                    filter: "brightness(0.5) saturate(0.3)",
-                  }}
-                />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent to-charcoal/60" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/85 via-transparent to-transparent" />
-                <div className="absolute bottom-8 left-8 space-y-1.5 z-10">
-                  <div className="w-5 h-px bg-gold/25" />
-                  <span className="block uppercase tracking-widest text-[#3A3028] font-light" style={{ fontSize: "9px" }}>Maison Vereen · Lagos</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── TWO CLEAR PATHS — blueprint: "For Collectors" + "For Press, Partners & Gifting" ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/4">
-              {/* For Collectors */}
-              <div className="bg-[#0D0D0D] px-8 sm:px-12 py-10 space-y-5 group relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gold/30" />
-                <span className="section-tag">For Collectors</span>
-                <p className="font-serif font-light text-[#C8C0B4]" style={{ fontSize: "20px" }}>
-                  Fragrance advice, Edition I, Registry guidance.
-                </p>
-                <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
-                  Speak with a concierge for fragrance advice, questions about Edition I, or guidance on the Founding Registry application — available by direct message, WhatsApp, or email.
-                </p>
-                <a
-                  href="mailto:hello@maisonvereen.com"
-                  className="inline-flex items-center gap-2 text-gold/60 hover:text-gold transition-colors font-light"
-                  style={{ fontSize: "13px" }}
-                >
-                  hello@maisonvereen.com
-                </a>
-              </div>
-              {/* For Press, Partners & Gifting */}
-              <div className="bg-[#0D0D0D] px-8 sm:px-12 py-10 space-y-5 group relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gold/30" />
-                <span className="section-tag">For Press, Partners &amp; Gifting</span>
-                <p className="font-serif font-light text-[#C8C0B4]" style={{ fontSize: "20px" }}>
-                  Media, partnerships, wholesale, and gifting.
-                </p>
-                <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
-                  Media enquiries, partnership proposals, wholesale discussions, and gifting arrangements are each directed to a dedicated contact within the House, ensuring every enquiry reaches the right person without delay.
-                </p>
-                <a
-                  href="mailto:press@maisonvereen.com"
-                  className="inline-flex items-center gap-2 text-gold/60 hover:text-gold transition-colors font-light"
-                  style={{ fontSize: "13px" }}
-                >
-                  press@maisonvereen.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CATEGORY SELECTOR + FORM ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
-
-              {/* Left — category selector */}
-              <div className="border-b lg:border-b-0 lg:border-r border-white/5 bg-charcoal">
-                <div className="px-6 sm:px-8 py-8 space-y-1">
-                  <p className="uppercase tracking-[0.3em] text-[#3A3530] font-medium mb-5" style={{ fontSize: "10px" }}>
-                    Select Category
-                  </p>
-                  {categories.map((cat) => (
-                    <button
-                      key={cat.id}
-                      onClick={() => { setSelectedCategory(cat); setSent(false); }}
-                      className={`w-full text-left px-4 py-3.5 transition-all duration-200 border-l-2 group ${
-                        selectedCategory.id === cat.id
-                          ? "border-gold bg-gold/5 text-[#E8E2D9]"
-                          : "border-transparent text-[#5A5449] hover:text-[#C8C0B4] hover:border-white/15"
-                      }`}
+              {/* Left Side: Copy */}
+              <div className="flex flex-col justify-between px-6 sm:px-8 md:px-14 pt-[140px] pb-12 lg:py-28">
+                <div className="space-y-8 max-w-[520px] my-auto">
+                  <div className="space-y-4">
+                    <span className="block uppercase tracking-[0.3em] text-gold font-semibold text-[10px]">
+                      Contact &amp; Concierge
+                    </span>
+                    <h1
+                      className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
+                      style={{ fontSize: "clamp(2.4rem, 5vw, 4.4rem)" }}
                     >
-                      <span className="font-light" style={{ fontSize: "13px" }}>{cat.label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+                      Speak With <br />
+                      the House Directly.
+                    </h1>
+                  </div>
 
-              {/* Right — form */}
-              <div className="px-6 sm:px-8 md:px-14 py-12 md:py-16">
-                <div className="max-w-[560px] space-y-8">
-                  {/* Category info */}
-                  <div className="space-y-3 pb-8 border-b border-white/5">
-                    <h2
-                      className="font-serif font-light text-[#E8E2D9]"
-                      style={{ fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)" }}
-                    >
-                      {selectedCategory.label}
-                    </h2>
-                    <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
-                      {selectedCategory.description}
+                  {/* Sub-headline & Description */}
+                  <div className="space-y-5">
+                    <p className="uppercase tracking-[0.28em] text-gold font-semibold text-[10px]">
+                      Not a support ticket. A conversation.
                     </p>
-                    <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>
-                      Routed to:{" "}
-                      <span className="text-gold/60">{selectedCategory.email}</span>
+                    <p className="text-[#8A8178] font-light leading-[1.85] text-[17px]">
+                      Every enquiry to Maison Vereen — whether from a collector, a journalist, or a future partner — is read and answered personally by the House.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Scroll Indicator */}
+                <div className="hidden lg:flex items-center gap-3 text-[#5A5449] font-light text-[10px] tracking-[0.3em] uppercase pt-8">
+                  <div className="w-8 h-px bg-gold/30 animate-pulse" />
+                  <span>Scroll to begin</span>
+                </div>
+              </div>
+
+              {/* Right Side: Generated Desk Visual */}
+              <div className="relative min-h-[450px] lg:min-h-auto overflow-hidden bg-[#030304]">
+                <Image
+                  src="/images/private_maison_desk.png"
+                  alt="Maison Vereen Study Desk"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center"
+                  style={{ opacity: 0.85 }}
+                />
+                {/* Elegant overlay gradients to bleed into black bg */}
+                <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#060506] to-transparent hidden lg:block" />
+                <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#060506] to-transparent lg:hidden" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-transparent opacity-90" />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 2. A CONVERSATION BEGINS HERE ── */}
+        <section className="bg-[#060506] py-24 border-b border-white/5">
+          <div className="max-w-[800px] mx-auto px-6 text-center space-y-8">
+            <span className="block uppercase tracking-[0.3em] text-gold font-semibold text-[10px]">
+              A Conversation Begins Here
+            </span>
+            <p className="font-serif font-light text-[#C8BFB2] leading-[1.9] text-[18px] md:text-[21px]">
+              Maison Vereen does not operate a customer service desk. Every message that arrives through this page is read personally, and answered in the same considered tone found throughout this website. Visitors are invited to reach the House through whichever channel feels most natural to them.
+            </p>
+            <div className="flex justify-center pt-4">
+              <span className="font-serif text-gold/30 text-3xl font-light tracking-[0.2em]">M</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 3. TWO DISTINCT PATHWAYS ── */}
+        <section className="bg-[#060506] border-b border-white/5">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5">
+
+              {/* Card 1: Collectors */}
+              <div className="relative bg-[#0A0A0C] px-8 sm:px-14 py-20 lg:py-28 overflow-hidden group flex flex-col justify-between min-h-[500px]">
+                {/* Background Bottle Silhouette */}
+                <div className="absolute left-0 bottom-0 w-[240px] h-[360px] opacity-10 pointer-events-none transition-all duration-700 group-hover:scale-105 group-hover:opacity-15">
+                  <Image
+                    src="/images/hero-bottle.png"
+                    alt="Maison Vereen Bottle Silhouette"
+                    fill
+                    className="object-contain object-bottom-left"
+                  />
+                </div>
+                <div className="relative z-10 space-y-10 max-w-[480px] ml-auto">
+                  <div className="space-y-6">
+                    <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold">
+                      <Shield className="w-5 h-5 stroke-[1.25]" />
+                    </div>
+                    <span className="block uppercase tracking-[0.25em] text-gold font-semibold text-[11px]">
+                      For Collectors
+                    </span>
+                    <p className="text-[#8A8178] font-light leading-[1.85] text-[16px]">
+                      Speak with a concierge for fragrance advice, questions about Edition I, or guidance on the Founding Registry application.
                     </p>
                   </div>
 
-                  {!sent ? (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      {/* Name */}
-                      <div className="space-y-2">
-                        <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>
-                          Your Name
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Full name"
-                          value={form.name}
-                          onChange={(e) => setForm({ ...form, name: e.target.value })}
-                          className="w-full bg-transparent border border-white/10 px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300"
-                        />
-                      </div>
+                  {/* Bullet Lists */}
+                  <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-[10px] tracking-[0.25em] text-[#5A5449] font-medium uppercase pt-2">
+                    <span className="hover:text-gold transition-colors">Edition I Enquiries</span>
+                    <span className="hover:text-gold transition-colors">Founding Registry</span>
+                    <span className="hover:text-gold transition-colors">Signature Collection</span>
+                    <span className="hover:text-gold transition-colors">Fragrance Guidance</span>
+                  </div>
 
-                      {/* Email */}
-                      <div className="space-y-2">
-                        <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>
-                          Your Email
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          placeholder="your@email.com"
-                          value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className="w-full bg-transparent border border-white/10 px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300"
-                        />
-                      </div>
-
-                      {/* Message */}
-                      <div className="space-y-2">
-                        <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>
-                          Your Message
-                        </label>
-                        <textarea
-                          required
-                          rows={5}
-                          placeholder={selectedCategory.placeholder}
-                          value={form.message}
-                          onChange={(e) => setForm({ ...form, message: e.target.value })}
-                          className="w-full bg-transparent border border-white/10 px-4 py-3 text-[13px] text-[#E8E2D9] placeholder-[#3A3530] focus:outline-none focus:border-gold/50 transition-colors duration-300 resize-none leading-[1.75]"
-                          style={{ minHeight: "120px" }}
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full py-4 bg-gold/90 hover:bg-gold text-charcoal transition-all duration-500 font-semibold uppercase"
-                        style={{ fontSize: "11px", letterSpacing: "0.3em" }}
-                      >
-                        Send Message
-                      </button>
-
-                      <p className="text-[#3A3530] font-light text-center" style={{ fontSize: "12px" }}>
-                        This will open your email client with the message pre-filled.
-                      </p>
-                    </form>
-                  ) : (
-                    <div className="space-y-5 py-8">
-                      <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/5">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                          <path d="M5 12l4 4 10-10" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </div>
-                      <h3 className="font-serif font-light text-[#E8E2D9]" style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}>
-                        Your message is ready to send.
-                      </h3>
-                      <p className="text-[#7A7068] font-light leading-[1.8]" style={{ fontSize: "15px" }}>
-                        Your email client should have opened with the message pre-filled. If it did not, write directly to{" "}
-                        <a href={`mailto:${selectedCategory.email}`} className="text-gold/70 hover:text-gold transition-colors break-all">
-                          {selectedCategory.email}
-                        </a>.
-                      </p>
-                      <button
-                        onClick={() => { setSent(false); setForm({ name: "", email: "", message: "" }); }}
-                        className="text-[#5A5449] hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
-                        style={{ fontSize: "11px" }}
-                      >
-                        ← Send another message
-                      </button>
-                    </div>
-                  )}
+                  <div className="pt-6">
+                    <a
+                      href="https://wa.me/2348021234567"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block border border-gold/40 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-xs tracking-[0.28em] uppercase font-semibold text-[#E8E2D9] transition-all duration-500"
+                    >
+                      Speak to a Concierge →
+                    </a>
+                  </div>
                 </div>
               </div>
+
+              {/* Card 2: Press & Gifting */}
+              <div className="relative bg-[#0A0A0C] px-8 sm:px-14 py-20 lg:py-28 overflow-hidden group flex flex-col justify-between min-h-[500px]">
+                {/* Background Wax Seal Silhouette */}
+                <div className="absolute right-0 bottom-0 w-[280px] h-[280px] opacity-[0.07] pointer-events-none transition-all duration-700 group-hover:scale-105 group-hover:opacity-10">
+                  <Image
+                    src="/images/wax-seal.jpg"
+                    alt="Maison Vereen Wax Seal"
+                    fill
+                    className="object-cover object-center rounded-full"
+                  />
+                </div>
+                <div className="relative z-10 space-y-10 max-w-[480px]">
+                  <div className="space-y-6">
+                    <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold">
+                      <Landmark className="w-5 h-5 stroke-[1.25]" />
+                    </div>
+                    <span className="block uppercase tracking-[0.25em] text-gold font-semibold text-[11px]">
+                      For Press, Partners &amp; Gifting
+                    </span>
+                    <p className="text-[#8A8178] font-light leading-[1.85] text-[16px]">
+                      Media enquiries, partnership proposals, wholesale discussions, and gifting arrangements are each directed to the right person within the House.
+                    </p>
+                  </div>
+
+                  {/* Bullet Lists */}
+                  <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-[10px] tracking-[0.25em] text-[#5A5449] font-medium uppercase pt-2">
+                    <span className="hover:text-gold transition-colors">Media &amp; Interviews</span>
+                    <span className="hover:text-gold transition-colors">Partnerships</span>
+                    <span className="hover:text-gold transition-colors">Corporate Gifting</span>
+                    <span className="hover:text-gold transition-colors">Wholesale Discussions</span>
+                  </div>
+
+                  <div className="pt-6">
+                    <a
+                      href="mailto:concierge@maisonvereen.com?subject=Press or Partnership Inquiry"
+                      className="inline-block border border-gold/40 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-xs tracking-[0.28em] uppercase font-semibold text-[#E8E2D9] transition-all duration-500"
+                    >
+                      Contact the House →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* ── CONTACT PATHWAYS QUICK REFERENCE ── */}
-        <section className="bg-charcoal border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-14 md:py-18 space-y-8">
-            <span className="section-tag">All Contact Pathways</span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
-              {categories.map((cat, i) => (
-                <div
-                  key={i}
-                  className="group bg-charcoal px-6 py-8 space-y-3 hover:bg-white/2 transition-colors duration-300 relative cursor-pointer"
-                  onClick={() => { setSelectedCategory(cat); setSent(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                >
-                  <div className="absolute top-0 left-0 w-full h-px bg-gold/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "18px" }}>
-                    {cat.label}
-                  </h3>
-                  <p className="text-[#4A4440] font-light leading-[1.7]" style={{ fontSize: "13px" }}>
-                    {cat.description}
+        {/* ── 4. PREFERRED WAYS TO REACH US ── */}
+        <section className="bg-[#060506] py-24 border-b border-white/5">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 space-y-14">
+
+            {/* Header decor */}
+            <div className="flex items-center gap-6">
+              <div className="h-1px bg-gold/25 flex-1" />
+              <span className="uppercase tracking-[0.3em] text-gold font-semibold text-[11px] shrink-0">
+                Preferred Ways to Reach Us
+              </span>
+              <div className="h-1px bg-gold/25 flex-1" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
+
+              {/* Card 1: WhatsApp */}
+              <div className="relative bg-[#0A0A0C] px-8 py-14 overflow-hidden group min-h-[380px] flex flex-col justify-between">
+                {/* Background Image phone */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/whatsapp_phone.png"
+                    alt="WhatsApp Concierge"
+                    fill
+                    className="object-cover object-center opacity-10 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-15"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/90 to-transparent" />
+                </div>
+                <div className="relative z-10 space-y-4">
+                  <div className="w-10 h-10 rounded-full border border-gold/10 flex items-center justify-center text-gold">
+                    <MessageSquare className="w-4 h-4 stroke-[1.25]" />
+                  </div>
+                  <h3 className="font-serif text-[#C8C0B4] text-[18px]">WhatsApp Concierge</h3>
+                  <p className="text-[#5A5449] font-light leading-[1.6] text-[14px]">
+                    Begin a private conversation with the House.
                   </p>
+                </div>
+                <div className="relative z-10 pt-8">
                   <a
-                    href={`mailto:${cat.email}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 text-gold/50 hover:text-gold transition-colors duration-300 font-light break-all"
-                    style={{ fontSize: "12px" }}
+                    href="https://wa.me/2348021234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:text-[#E8E2D9] text-[10px] tracking-[0.3em] font-semibold uppercase transition-colors"
                   >
-                    {cat.email}
+                    Open WhatsApp →
                   </a>
                 </div>
-              ))}
+              </div>
+
+              {/* Card 2: Email */}
+              <div className="relative bg-[#0A0A0C] px-8 py-14 overflow-hidden group min-h-[380px] flex flex-col justify-between">
+                {/* Background Image hand writing */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/hand_writing.png"
+                    alt="Email the House"
+                    fill
+                    className="object-cover object-center opacity-10 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-15"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/90 to-transparent" />
+                </div>
+                <div className="relative z-10 space-y-4">
+                  <div className="w-10 h-10 rounded-full border border-gold/10 flex items-center justify-center text-gold">
+                    <Mail className="w-4 h-4 stroke-[1.25]" />
+                  </div>
+                  <h3 className="font-serif text-[#C8C0B4] text-[18px]">Email the House</h3>
+                  <p className="text-[#5A5449] font-light leading-[1.6] text-[14px]">
+                    For thoughtful correspondence and longer enquiries.
+                  </p>
+                </div>
+                <div className="relative z-10 pt-8">
+                  <a
+                    href="mailto:concierge@maisonvereen.com"
+                    className="text-gold hover:text-[#E8E2D9] text-[10px] tracking-[0.3em] font-semibold uppercase transition-colors"
+                  >
+                    Write an Email →
+                  </a>
+                </div>
+              </div>
+
+              {/* Card 3: Schedule */}
+              <div className="relative bg-[#0A0A0C] px-8 py-14 overflow-hidden group min-h-[380px] flex flex-col justify-between">
+                {/* Background Image desk globe */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/desk_globe.png"
+                    alt="Schedule a Conversation"
+                    fill
+                    className="object-cover object-center opacity-10 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-15"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/90 to-transparent" />
+                </div>
+                <div className="relative z-10 space-y-4">
+                  <div className="w-10 h-10 rounded-full border border-gold/10 flex items-center justify-center text-gold">
+                    <Calendar className="w-4 h-4 stroke-[1.25]" />
+                  </div>
+                  <h3 className="font-serif text-[#C8C0B4] text-[18px]">Schedule a Conversation</h3>
+                  <p className="text-[#5A5449] font-light leading-[1.6] text-[14px]">
+                    Arrange a dedicated discussion with a member of the House.
+                  </p>
+                </div>
+                <div className="relative z-10 pt-8">
+                  <Link
+                    href="/contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = "mailto:appointments@maisonvereen.com?subject=Schedule%20a%20Conversation";
+                    }}
+                    className="text-gold hover:text-[#E8E2D9] text-[10px] tracking-[0.3em] font-semibold uppercase transition-colors"
+                  >
+                    Request a Time →
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* PAGE 15 → PAGE 16 transition line */}
-        <section className="bg-[#060608] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
-              You now know the House completely. What remains is a final invitation.
+        {/* ── 5. EVERY ENQUIRY DESERVES A CONSIDERED REPLY ── */}
+        <section className="bg-[#060506] py-28 border-b border-white/5">
+          <div className="max-w-[1000px] mx-auto px-6 flex items-center justify-center gap-8 md:gap-14">
+
+            {/* Left Seal Ornament */}
+            <div className="hidden md:flex shrink-0 w-[80px] h-[80px] border border-gold/15 rounded-full items-center justify-center opacity-40">
+              <span className="font-serif text-gold/40 text-[9px] tracking-widest uppercase">MV</span>
+            </div>
+
+            {/* Quote */}
+            <p className="font-serif font-light text-[#E8E2D9] leading-normal text-[22px] md:text-[28px] text-center max-w-[680px]">
+              Every enquiry deserves a considered reply. That is why every message is read personally.
             </p>
-            <a
-              href="/final-invitation"
-              className="inline-block mt-5 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
-              style={{ fontSize: "10px" }}
-            >
-              The Final Invitation →
-            </a>
+
+            {/* Right Seal Ornament */}
+            <div className="hidden md:flex shrink-0 w-[80px] h-[80px] border border-gold/15 rounded-full items-center justify-center opacity-40">
+              <span className="font-serif text-gold/40 text-[9px] tracking-widest uppercase">MV</span>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── 6. DETAILED CONTACT INFO & TIMES ── */}
+        <section className="bg-[#0A0A0C] border-b border-white/5 py-20 lg:py-24">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+
+              {/* Left Column: Address & Channels */}
+              <div className="lg:col-span-5 space-y-12 flex flex-col justify-center">
+                <div className="space-y-4">
+                  <span className="block uppercase tracking-[0.25em] text-gold font-semibold text-[10px]">
+                    Maison Vereen
+                  </span>
+                  <p className="font-serif text-lg font-light text-[#C8BFB2]">Lagos, Nigeria</p>
+                </div>
+
+                <div className="space-y-5 font-light text-[14px]">
+                  <div className="flex items-center gap-6">
+                    <span className="uppercase tracking-[0.25em] text-[#5A5449] w-24">WhatsApp</span>
+                    <a href="https://wa.me/2348021234567" target="_blank" rel="noopener noreferrer" className="text-[#C8C0B4] hover:text-gold transition-colors">
+                      +234 802 123 4567
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <span className="uppercase tracking-[0.25em] text-[#5A5449] w-24">Email</span>
+                    <a href="mailto:concierge@maisonvereen.com" className="text-[#C8C0B4] hover:text-gold transition-colors break-all">
+                      concierge@maisonvereen.com
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <span className="uppercase tracking-[0.25em] text-[#5A5449] w-24">Instagram</span>
+                    <a href="https://instagram.com/maisonvereen" target="_blank" rel="noopener noreferrer" className="text-[#C8C0B4] hover:text-gold transition-colors">
+                      @maisonvereen
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center Column: Response Times */}
+              <div className="lg:col-span-4 space-y-8 flex flex-col justify-center lg:border-l lg:border-white/5 lg:pl-16">
+                <div className="space-y-4">
+                  <span className="block uppercase tracking-[0.25em] text-gold font-semibold text-[10px]">
+                    Response Times
+                  </span>
+                  <p className="font-serif text-3xl md:text-4xl text-gold font-light">Within 24–48 hours</p>
+                </div>
+                <p className="text-[#7A7068] font-light leading-[1.8] text-[15px]">
+                  All enquiries, regardless of their nature, are read and answered personally by the House.
+                </p>
+              </div>
+
+              {/* Right Column: Plaque Vertical Image */}
+              <div className="lg:col-span-3 relative min-h-[220px] lg:min-h-0 bg-[#030304] overflow-hidden">
+                <Image
+                  src="/images/private_maison_desk.png"
+                  alt="Maison Vereen plaque visual detail"
+                  fill
+                  className="object-cover object-right"
+                  style={{ opacity: 0.6 }}
+                />
+                <div className="absolute inset-0 bg-linear-to-r from-[#0A0A0C] via-[#0A0A0C]/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-transparent to-transparent" />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. FINAL CONVERSE INVITATION ── */}
+        <section className="bg-[#060506] py-28 text-center border-t border-white/5">
+          <div className="max-w-[760px] mx-auto px-6 space-y-10">
+            <p className="font-serif font-light text-[#E8E2D9] leading-[1.4] text-[20px] md:text-[25px]">
+              You now know the House completely. What remains is simply to begin the conversation.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
+              <a
+                href="https://wa.me/2348021234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gold/90 hover:bg-gold px-12 py-4 text-charcoal transition-all duration-500 font-semibold uppercase"
+                style={{ fontSize: "11px", letterSpacing: "0.3em" }}
+              >
+                Speak to a Concierge
+              </a>
+              <a
+                href="mailto:concierge@maisonvereen.com"
+                className="inline-block border border-white/10 hover:border-gold/40 px-10 py-4 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500 font-medium uppercase"
+                style={{ fontSize: "11px", letterSpacing: "0.25em" }}
+              >
+                Continue by Email
+              </a>
+            </div>
           </div>
         </section>
 

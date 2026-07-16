@@ -26,10 +26,19 @@ export default function OurStoryPage() {
                     style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}
                   >
                     A House,{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>
+                    <em className="not-italic block mt-2" style={{ color: "#C9A84C" }}>
                       Not a Brand.
                     </em>
                   </h1>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    Some houses sell scent. This one builds legacy.
+                  </p>
+
                   <p
                     className="font-serif font-light text-[#C8BFB2]"
                     style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
@@ -67,42 +76,23 @@ export default function OurStoryPage() {
         {/* ── WHAT WE ARE ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-start">
-              <div className="space-y-6">
-                <span className="section-tag">What We Are</span>
-                <h2
-                  className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                  style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-                >
-                  Some houses sell scent.{" "}
-                  <em className="not-italic" style={{ color: "#C9A84C" }}>
-                    This one builds legacy.
-                  </em>
-                </h2>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                  Maison Vereen is a fragrance house, not a fragrance brand — a distinction the House holds carefully. A brand sells a product range. A house builds a body of work, a philosophy, and a relationship with the people who choose to be part of it. Every decision here, from the number of bottles in Edition I to the language used to describe a single note, is made in service of that distinction.
-                </p>
-              </div>
-              <div className="space-y-6">
-                <span className="section-tag">Why Fragrance Can Become Art</span>
-                <h2
-                  className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                  style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-                >
-                  Created once. Documented permanently.{" "}
-                  <em className="not-italic" style={{ color: "#C9A84C" }}>
-                    Never diluted by repetition.
-                  </em>
-                </h2>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                  Wine, watches, and rare manuscripts are all collected for the same underlying reasons: scarcity, craftsmanship, provenance, and the story a single object carries forward. Fragrance has rarely been built with the same discipline — most houses treat scent as renewable inventory rather than a finished work. Maison Vereen treats every formulation, especially within Edition I and subsequent Editions of 250, as a singular work: created once, documented permanently, and never diluted by repetition.
-                </p>
-              </div>
+            <div className="max-w-[760px] space-y-6">
+              <span className="section-tag">What We Are</span>
+              <h2
+                className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
+              >
+                What We{" "}
+                <em className="not-italic" style={{ color: "#C9A84C" }}>Are.</em>
+              </h2>
+              <p className="text-[#C8BFB2] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                Maison Vereen is a fragrance house, not a fragrance brand — a distinction the House holds carefully. A brand sells a product range. A house builds a body of work, a philosophy, and a relationship with the people who choose to be part of it. Every decision here, from the number of bottles in Edition I to the language used to describe a single note, is made in service of that distinction.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── SPLIT IMAGE SECTION ── */}
+        {/* ── WHY FRAGRANCE CAN BECOME ART ── */}
         <section className="border-b border-white/5">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
@@ -120,36 +110,57 @@ export default function OurStoryPage() {
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
                 <div className="space-y-8 max-w-[480px]">
-                  <span className="section-tag">Building Toward a Century</span>
+                  <span className="section-tag">Why Fragrance Can Become Art</span>
                   <h2
                     className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
                     style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
                   >
-                    Not a brand that once trended.{" "}
+                    Created once. Documented permanently.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>
-                      An institution that endured.
+                      Never diluted by repetition.
                     </em>
                   </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Maison Vereen is not building toward a season or a single collection. It is building toward a century — a House whose name will mean, decades from now, what the world&apos;s oldest maisons mean today.
+                  <p className="text-[#C8BFB2] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Wine, watches, and rare manuscripts are all collected for the same underlying reasons: scarcity, craftsmanship, provenance, and the story a single object carries forward. Fragrance has rarely been built with the same discipline — most houses treat scent as renewable inventory rather than a finished work. Maison Vereen treats every formulation, especially within Edition I and subsequent Editions of 250, as a singular work: created once, documented permanently, and never diluted by repetition.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    The House hopes, a century from now, to be spoken of the way the world&apos;s oldest maisons are spoken of today — not as a brand that once trended, but as an institution that endured because it never lowered its standard to make growth easier.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-5 pt-2">
-                    <Link
-                      href="/philosophy"
-                      className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
-                      style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-                    >
-                      <span className="uppercase font-medium">Continue to The Philosophy</span>
-                    </Link>
-                    <Link href="/access" className="link-gold self-center">
-                      <span>Apply for a Position</span>
-                      <span className="text-gold">→</span>
-                    </Link>
-                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── BUILDING TOWARD A CENTURY ── */}
+        <section className="border-b border-white/5 bg-[#0D0D0D]">
+          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+            <div className="max-w-[760px] space-y-8">
+              <span className="section-tag">Building Toward a Century</span>
+              <h2
+                className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
+              >
+                Not a brand that once trended.{" "}
+                <em className="not-italic" style={{ color: "#C9A84C" }}>
+                  An institution that endured.
+                </em>
+              </h2>
+              <p className="text-[#C8BFB2] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                Maison Vereen is not building toward a season or a single collection. It is building toward a century — a House whose name will mean, decades from now, what the world&apos;s oldest maisons mean today.
+              </p>
+              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                The House hopes, a century from now, to be spoken of the way the world&apos;s oldest maisons are spoken of today — not as a brand that once trended, but as an institution that endured because it never lowered its standard to make growth easier.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-5 pt-2">
+                <Link
+                  href="/philosophy"
+                  className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
+                  style={{ fontSize: "11px", letterSpacing: "0.28em" }}
+                >
+                  <span className="uppercase font-medium">Continue to The Philosophy</span>
+                </Link>
+                <Link href="/access" className="link-gold self-center">
+                  <span>Apply for a Position</span>
+                  <span className="text-gold">→</span>
+                </Link>
               </div>
             </div>
           </div>

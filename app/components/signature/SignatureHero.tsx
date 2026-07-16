@@ -45,8 +45,17 @@ export default function SignatureHero() {
               of the House.
             </em>
           </h1>
+
+          {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
           <p
-            className="font-serif font-light text-[#C8BFB2] italic anim-fade-up-d1"
+            className="font-serif font-light text-gold/80 italic anim-fade-up-d1"
+            style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+          >
+            Each one a character. None of them a category.
+          </p>
+
+          <p
+            className="font-serif font-light text-[#C8BFB2] italic anim-fade-up-d2"
             style={{ fontSize: "clamp(1rem, 1.8vw, 1.3rem)" }}
           >
             The Signature Collection represents Maison Vereen&apos;s permanent body of work — fragrances available on an ongoing basis, each developed with the same standard applied to Edition I.

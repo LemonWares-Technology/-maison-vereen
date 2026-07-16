@@ -74,6 +74,15 @@ export default function SocialProofPage() {
                   who know the difference.
                 </em>
               </h1>
+
+              {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+              <p
+                className="font-serif font-light text-gold/80 italic"
+                style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+              >
+                Recognition, earned quietly.
+              </p>
+
               <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                 This page exists as a living, growing record of recognition — collector testimonials, press coverage, and milestones — documented as the House&apos;s history, not displayed as advertising.
               </p>
@@ -287,9 +296,9 @@ export default function SocialProofPage() {
             <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Recognition answers some questions. Practical ones remain — and deserve clear answers.
             </p>
-            <a href="/faq" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+            <Link href="/faq" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
               Read Frequently Asked Questions →
-            </a>
+            </Link>
           </div>
         </section>
 

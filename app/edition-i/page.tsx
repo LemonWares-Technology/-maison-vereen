@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -48,6 +48,15 @@ export default function EditionIPage() {
                     Two Hundred and Fifty.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>No More, Ever.</em>
                   </h1>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    History does not get a reprint.
+                  </p>
+
                   <p
                     className="font-serif font-light text-[#C8BFB2]"
                     style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}

@@ -30,6 +30,15 @@ export default function TheFounderPage() {
                       Build a Perfume Brand.
                     </em>
                   </h1>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    Obsession, properly aimed, becomes a House.
+                  </p>
+
                   <p
                     className="font-serif font-light text-[#C8BFB2]"
                     style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
@@ -173,7 +182,7 @@ export default function TheFounderPage() {
               This was never meant to be finished quickly.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 shrink-0">
-              <Link href="/the-house" className="link-gold">
+              <Link href="/the-difference" className="link-gold">
                 <span>See What Makes the House Different</span>
                 <span className="text-gold">→</span>
               </Link>
@@ -194,7 +203,7 @@ export default function TheFounderPage() {
             <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Conviction explains why the House exists. What follows explains why it could only ever look like this.
             </p>
-            <Link href="/the-house" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+            <Link href="/the-difference" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
               See What Makes the House Different →
             </Link>
           </div>

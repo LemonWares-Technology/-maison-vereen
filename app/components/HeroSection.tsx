@@ -61,9 +61,17 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
             </em>
           </h1>
 
+          {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+          <p
+            className="font-serif font-light text-gold/80 italic anim-fade-up-d1"
+            style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+          >
+            Africa&apos;s first serious luxury fragrance house.
+          </p>
+
           {/* Supporting statement — exact from blueprint */}
           <p
-            className="font-serif font-light text-[#C8BFB2] italic tracking-wide anim-fade-up-d1"
+            className="font-serif font-light text-[#C8BFB2] italic tracking-wide anim-fade-up-d2"
             style={{ fontSize: "clamp(1rem, 1.8vw, 1.35rem)" }}
           >
             Edition I. Two hundred and fifty individually numbered bottles. Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
