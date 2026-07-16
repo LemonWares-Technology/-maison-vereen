@@ -61,6 +61,15 @@ export default function PhilosophyPage() {
                     Luxury Is Not Volume.{" "}
                     <em className="not-italic text-gold">It Is Conviction.</em>
                   </h1>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    Memory is the only packaging that lasts.
+                  </p>
+
                   <p
                     className="font-serif font-light text-[#C8BFB2]"
                     style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}

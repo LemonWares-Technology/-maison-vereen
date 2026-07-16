@@ -95,7 +95,16 @@ export default function FAQPage() {
                     Everything You Would Ask,{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>Answered Directly.</em>
                   </h1>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    Clarity, before commitment.
+                  </p>
+
+                  <p className="text-[#C8BFB2] font-serif font-light italic leading-[1.7]" style={{ fontSize: "16px" }}>
                     Twenty questions, answered in the unhurried, confident voice of the House — designed to dissolve objection and deepen understanding at once.
                   </p>
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
@@ -196,9 +205,9 @@ export default function FAQPage() {
             <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Some questions are better asked directly. The House is always reachable.
             </p>
-            <a href="/contact" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
+            <Link href="/contact" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
               Speak with the House Directly →
-            </a>
+            </Link>
           </div>
         </section>
 

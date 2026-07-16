@@ -131,6 +131,15 @@ export default function RegistryPage() {
                       before the bottles are released.
                     </em>
                   </h1>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    This is not a queue. It is the beginning of the House.
+                  </p>
+
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     Before a single bottle of Edition I is offered for acquisition, the House is assembled. The Maison Vereen Founding Registry exists for that purpose — an official, reviewed record of the individuals who have applied to become part of Maison Vereen&apos;s founding chapter.
                   </p>
@@ -273,13 +282,32 @@ export default function RegistryPage() {
                     className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
                     style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
                   >
-                    The Registry, in{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>
-                      real time.
-                    </em>
+                    {count || 127} of {MAX_REGISTRY}.{" "}
+                    <em className="not-italic text-gold">The House Is Being Assembled Now.</em>
                   </h2>
+
+                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+                  <p
+                    className="font-serif font-light text-gold/80 italic"
+                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
+                  >
+                    The Registry, in real time.
+                  </p>
+
+                  {/* Supporting Statement (Item 4) */}
+                  <p className="text-[#C8BFB2] font-serif font-light italic leading-[1.7]" style={{ fontSize: "16px" }}>
+                    The live Founding Registry count reflects every applicant the House has personally reviewed and accepted — never an estimate, never inflated.
+                  </p>
+
+                  {/* Main Content (Item 5) */}
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    The count displayed here rises only when Maison Vereen formally accepts an applicant — never automatically, never on a timer, and never adjusted for effect. This number is a living record of the Founding Registry&apos;s growth.
+                    This page exists as a living record of the Founding Registry&apos;s growth. The count displayed here rises only when Maison Vereen formally accepts an applicant — never automatically, never on a timer, and never adjusted for effect.
+                  </p>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    Recently accepted members are shown respectfully, by first name, last initial, and country only. The House will never display a member&apos;s full identity without explicit permission, regardless of how the Registry is presented elsewhere.
+                  </p>
+                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                    As the count approaches three hundred and fifty, this page becomes the clearest, most honest signal of how close the Founding Registry is to closing.
                   </p>
                 </div>
                 {loadingRecords ? (

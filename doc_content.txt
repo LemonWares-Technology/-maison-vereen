@@ -1,0 +1,727 @@
+
+M A I S O N   V E R E E N
+
+WEBSITE CONTENT BLUEPRINT
+The Complete, Production-Ready Content Architecture for the Maison Vereen Website
+16 PAGES  ·  1 STANDALONE SHAREABLE PAGE  ·  PRIVATE & CONFIDENTIAL
+
+How to Use This Document
+This is the master content blueprint for the Maison Vereen website. It is written so that designers, developers, copywriters, and marketers can begin building the site directly from this document, with minimal interpretation required.
+Every page in the website's journey follows the same twelve-part framework: Purpose, Main Headline, Five Alternative Headlines, Supporting Statement, Main Content, Supporting Sections, Visual Direction, Emotional Journey, Primary CTA, Secondary CTA, the psychology behind both CTAs, and the Transition into the next page.
+The pages are sequenced to form one continuous narrative — each page is written to lead naturally into the next, so that a visitor moving through the site in order experiences a single, unfolding story rather than a collection of disconnected pages.
+WEBSITE PAGE SEQUENCE
+PAGE 1 — Edition I: House of 250 — Landing Page
+PAGE 2 — Discover Maison Vereen
+PAGE 3 — The Philosophy of the House
+PAGE 4 — The Founder's Story
+PAGE 5 — The Maison Vereen Difference
+PAGE 6 — The Individual Behind Every Fragrance
+PAGE 7 — Edition I: House of 250 (Full Page)
+PAGE 8 — The Maison Vereen Founding Registry
+PAGE 9 — Live Founding Registry
+PAGE 10 — Membership & Access
+PAGE 11 — Signature Collection
+PAGE 12 — The House
+PAGE 13 — Social Proof
+PAGE 14 — Frequently Asked Questions
+PAGE 15 — Contact & Concierge
+PAGE 16 — Final Invitation
+STANDALONE — Shareable Discovery Page (Not in Main Navigation)
+
+Table of Contents
+PAGE 1 — Edition I: House of 250 — Landing Page
+PAGE 2 — Discover Maison Vereen
+PAGE 3 — The Philosophy of the House
+PAGE 4 — The Founder's Story
+PAGE 5 — The Maison Vereen Difference
+PAGE 6 — The Individual Behind Every Fragrance
+PAGE 7 — Edition I: House of 250 (Full Page)
+PAGE 8 — The Maison Vereen Founding Registry
+PAGE 9 — Live Founding Registry
+PAGE 10 — Membership & Access
+PAGE 11 — Signature Collection
+PAGE 12 — The House
+PAGE 13 — Social Proof
+PAGE 14 — Frequently Asked Questions
+PAGE 15 — Contact & Concierge
+PAGE 16 — Final Invitation
+STANDALONE — Shareable Discovery Page (Not in Main Navigation)
+
+PAGE 1
+Edition I: House of 250 — Landing Page
+1 · PURPOSE OF THE PAGE
+Capture attention within three seconds and establish, before a single product is mentioned, that Maison Vereen is unlike any other perfume house in existence.
+2 · MAIN HEADLINE
+"The room knows before you speak."
+3 · FIVE ALTERNATIVE HEADLINES
+You were not made to blend in.
+Luxury was not invented in Paris. It was always here.
+Two hundred and fifty people will own this. In the world. Total.
+Built in Lagos. Built for the world. Built to last a century.
+Some things are made for everyone. This is not.
+4 · SUPPORTING STATEMENT
+Edition I. Two hundred and fifty individually numbered bottles. Africa's first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
+5 · MAIN CONTENT
+Before your name is known, before your story is told, before a single word has passed between you and a room — something has already been decided. Maison Vereen was built for that instant. The one that happens before language.
+This is not a house that asks you to become someone. It recognises who has already arrived. Edition I exists for the small number of people who have always understood the difference between fitting in and belonging — and who have been waiting, without quite knowing it, for something built to that standard.
+Two hundred and fifty bottles. No more will ever be made. What follows on this page is not a product description. It is an invitation to understand what you would be applying to become part of.
+6 · SUPPORTING SECTIONS
+The Founder Edition
+Purpose: Introduce Edition I as the flagship founding chapter of the House, distinct from anything that follows it.
+Edition I is the founding chapter of Maison Vereen — the work from which every future edition will be measured. It was not created to be reordered, restocked, or repeated. It was created to exist once, completely, and then to close. Those who hold a bottle from Edition I will hold something no House can ever offer again: the first.
+Why Only 250
+Purpose: Explain the scarcity as intentional craftsmanship logic, not a marketing device.
+Two hundred and fifty is not a marketing number. It is the number the House's master perfumer determined could be produced without compromising a single element of the formulation, the vessel, or the ceremony of ownership. Founding circles of this kind have always been small — not because exclusivity is fashionable, but because true craftsmanship has a ceiling, and Maison Vereen has chosen never to exceed it.
+7 · VISUAL DIRECTION
+Full-bleed obsidian background; single bottle render centred, lit as though in a private vitrine.
+Gold serif wordmark, generous negative space, minimal navigation revealed only on scroll intent.
+Cinematic 2–3 second fade-in sequence on load; no auto-playing sound.
+Slow, deliberate scroll behaviour — content reveals at a pace that feels considered, never rushed.
+Subtle parallax on the bottle render only; everything else remains still, reinforcing permanence.
+8 · EMOTIONAL JOURNEY
+Intrigue, then recognition, then a quiet desire to belong — arriving before any commercial language has been introduced.
+9 · PRIMARY CTA
+Apply for a Position
+10 · SECONDARY CTA
+Enter the House
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+The primary CTA frames entry as a selective process rather than a purchase, signalling that access must be earned — the highest prestige signal available on a landing page. The secondary CTA lowers friction for visitors not yet ready to apply, inviting them deeper into the site without breaking the page's atmosphere or risking an abandoned visit.
+12 · TRANSITION INTO THE NEXT PAGE
+A single closing line carries the visitor downward: "Before you apply, you should understand what you are applying to." This leads directly into Page 2 — Discover Maison Vereen.
+
+PAGE 2
+Discover Maison Vereen
+2 · MAIN HEADLINE
+"A House, Not a Brand."
+3 ·   HEADLINES
+Some houses sell scent. This one builds legacy.
+4 · SUPPORTING STATEMENT
+Maison Vereen exists to elevate fragrance into collectible art — and to prove that a luxury house of true global standing can be born in Africa.
+5 · MAIN CONTENT
+Maison Vereen is a luxury maison built around two distinct experiences: Edition I, the founding collector's chapter limited to two hundred and fifty bottles, and the Signature Collection, the House's permanent body of artistic work. Both are expressions of the same conviction — that fragrance, made without compromise, deserves to be treated as art rather than inventory.
+The House exists because a gap was left unfilled. Africa has supplied the world's perfumers with some of their rarest materials for generations, yet has never produced a fragrance house the world recognised as a serious luxury institution in its own right. Maison Vereen was founded to close that gap — not by imitating the houses of Paris or Geneva, but by holding itself to the same uncompromising standard while remaining unmistakably of its own origin.
+This is a long-term undertaking. Maison Vereen is not building toward a season or a single collection. It is building toward a century — a House whose name will mean, decades from now, what the world's oldest maisons mean today.
+6 · SUPPORTING SECTIONS
+What We Are
+Maison Vereen is a fragrance house, not a fragrance brand — a distinction the House holds carefully. A brand sells a product range. A house builds a body of work, a philosophy, and a relationship with the people who choose to be part of it. Every decision here, from the number of bottles in Edition I to the language used to describe a single note, is made in service of that distinction.
+Why Fragrance Can Become Art
+Wine, watches, and rare manuscripts are all collected for the same underlying reasons: scarcity, craftsmanship, provenance, and the story a single object carries forward. Fragrance has rarely been built with the same discipline — most houses treat scent as renewable inventory rather than a finished work. Maison Vereen treats every formulation, especially within Edition I and subsequent  Editions of 250, as a singular work: created once, documented permanently, and never diluted by repetition.
+7 · VISUAL DIRECTION
+Editorial-style photography: raw materials, African landscape and light, hands at work — never staged product shots.
+Slow horizontal scroll sections; warm transitions moving from obsidian tones into cream.
+Typography-led storytelling with generous line spacing; let the words breathe.
+Minimal iconography; no stock-photo aesthetic anywhere on this page.
+8 · EMOTIONAL JOURNEY
+Curiosity resolving into understanding, then quiet respect for the seriousness of the undertaking.
+9 · PRIMARY CTA
+Continue to The Philosophy
+10 · SECONDARY CTA
+Apply for a Position
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+The primary CTA keeps visitors moving through the narrative in sequence, since the House's full credibility is built cumulatively across pages. The secondary CTA remains available for visitors already convinced, who should never be made to scroll through pages they do not need to read before applying.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Understanding what Maison Vereen is naturally raises a deeper question — what does it believe?" This leads into Page 3 — The Philosophy of the House.
+
+PAGE 3
+The Philosophy of the House
+1 · PURPOSE OF THE PAGE
+Reveal the beliefs behind Maison Vereen — the convictions that govern every decision the House makes.
+2 · MAIN HEADLINE
+"Luxury Is Not Volume. It Is Conviction."
+3 · ALTERNATIVE HEADLINES
+Memory is the only packaging that lasts.
+Quiet luxury was never quiet by accident.
+Rarity is not a strategy. It is a value.
+4 · SUPPORTING STATEMENT
+Ten convictions govern Maison Vereen. None of them are negotiable, and none of them were chosen for how they would market.
+5 · MAIN CONTENT
+Every house, knowingly or not, is built on a set of beliefs. Most never state them. Maison Vereen states them plainly, because a House that intends to last a century cannot afford to leave its convictions unwritten.
+These beliefs are not slogans. They are the standard against which every formulation, every material, every piece of correspondence with a collector, and every page of this website has been measured before being approved.
+6 · SUPPORTING SECTIONS
+Craftsmanship
+Purpose: State the House's standard for making.
+Nothing leaves Maison Vereen because a deadline arrived. It leaves because it is finished, by the only standard that matters here — the master perfumer's own.
+Time
+Purpose: State the House's relationship to pace.
+Formulation, ageing, and refinement are permitted the time they require. The House would rather delay a release by a year than release something it cannot stand behind for a century.
+Memory
+Purpose: Frame fragrance as an instrument of memory.
+A fragrance is the only object capable of returning someone, instantly and involuntarily, to a moment they thought they had lost. Maison Vereen designs for that return, not merely for how a scent performs in the first hour.
+Identity
+Purpose: Position fragrance as self-expression, not costume.
+A signature scent is not a mask. It is closer to a signature itself — unrepeatable, and recognisably the wearer's own. The House creates fragrances built to be worn for decades, not seasons.
+Rarity & Legacy
+Purpose: Tie scarcity to permanence rather than marketing urgency.
+What is rare is rare because it was never compromised to meet demand. What is rare and well made becomes legacy — passed forward, told about, remembered after the person who first wore it is gone.
+7 · VISUAL DIRECTION
+Ten convictions presented as a slow-revealing list, one per scroll stage, each accompanied by a single, deliberate photographic or textural image.
+Dark obsidian backdrop throughout, gold serif headers, generous whitespace between convictions.
+No competing content — this page should feel closer to reading a manifesto than browsing a website.
+8 · EMOTIONAL JOURNEY
+Reflection. The visitor should feel they are reading a set of beliefs they already privately held, simply never saw articulated.
+9 · PRIMARY CTA
+Meet the Founder
+10 · SECONDARY CTA
+Apply for a Position
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA continues the credibility-building sequence by introducing the person behind the philosophy. Secondary CTA remains a constant, low-friction option throughout the site for visitors who reach conviction early.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "A philosophy this deliberate does not appear by accident. It begins with one person's conviction." This leads into Page 4 — The Founder's Story.
+
+PAGE 4
+The Founder's Story
+1 · PURPOSE OF THE PAGE
+Introduce the founder through vision and conviction rather than biography.
+2 · MAIN HEADLINE
+"She Did Not Set Out to Build a Perfume Brand."
+3 · FIVE ALTERNATIVE HEADLINES
+Some things are built to outlive their founder.
+Conviction does not require an introduction.
+The House speaks. The founder rarely needs to.
+Obsession, properly aimed, becomes a House.
+This was never meant to be finished quickly.
+4 · SUPPORTING STATEMENT
+The most prestigious houses in the world communicate through their work, not their founders. Maison Vereen was built in that tradition.
+5 · MAIN CONTENT
+Maison Vereen was founded on a simple, stubborn conviction: that a luxury fragrance house built to the world's highest standard could be built in Lagos, by an African founder, without asking permission or imitating anyone else's idea of what luxury should sound like.
+That conviction did not arrive as a business plan. It arrived as a refusal — a refusal to accept that craftsmanship of this calibre belonged only to certain cities, certain histories, certain names. What followed was years of formulation, refinement, and quiet obsession with getting every detail, from the raw material to the bottle's weight in the hand, exactly right.
+The founder's full story will be told over time, the way any serious house reveals itself — gradually, through the work. What matters at this stage is not her biography, but her intention: to build something that will still mean something in a hundred years, long after she is no longer the one telling its story.
+6 · SUPPORTING SECTIONS
+Conviction Over Credentials
+Purpose: Explain why the founder's identity is intentionally understated.
+The most prestigious houses in the world are remembered for their work, not their founders' faces. Maison Vereen follows that same discipline deliberately — the House, not the individual, is what is being built to last.
+Building to Outlive Her
+Purpose: Establish institutional, multi-generational intent.
+Every decision made today — from Edition I's scarcity to the Founding Registry's careful structure — is made with one question in mind: will this still make sense in a century, under someone else's stewardship? If the answer is no, it does not happen.
+7 · VISUAL DIRECTION
+Founder imagery used sparingly and atmospherically — silhouette, hands, workspace, never a conventional headshot-led layout.
+Warm, intimate lighting; archival-feeling photographic treatment.
+Long-form, single-column text block; minimal interruption, designed to be read rather than skimmed.
+8 · EMOTIONAL JOURNEY
+Quiet admiration. The visitor should sense seriousness of purpose without feeling they are being sold a personality.
+9 · PRIMARY CTA
+See What Makes the House Different
+10 · SECONDARY CTA
+Apply for a Position
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA moves the visitor from emotional trust in the founder toward rational understanding of the House's differentiation. Secondary CTA again remains available without interrupting the narrative.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Conviction explains why the House exists. What follows explains why it could only ever look like this." This leads into Page 5 — The Maison Vereen Difference.
+
+PAGE 5
+The Maison Vereen Difference
+1 · PURPOSE OF THE PAGE
+Explain why Maison Vereen is fundamentally different, in philosophy rather than feature comparison, without criticising other houses.
+2 · MAIN HEADLINE
+"The Difference Was Never the Scent Alone."
+3 · FIVE ALTERNATIVE HEADLINES
+Most houses sell a bottle. This one offers a position.
+Ownership, not ecommerce.
+Built to be inherited, not consumed.
+Where other houses expand, this one closes.
+4 · SUPPORTING STATEMENT
+Every serious luxury house has its own philosophy. This is the architecture of Maison Vereen's — built around collectability, emotional ownership, and a culture rather than a catalogue.
+5 · MAIN CONTENT
+Visitors who have considered other fragrance houses arrive here with a quiet, reasonable question: why is this different from everything else I have already looked at? The honest answer is rarely the scent alone — formulation skill exists at the highest level in many houses. The difference is the entire architecture surrounding the work.
+Maison Vereen was not built to maximise how many bottles leave the House. It was built around collectability — limited, numbered, never-repeated editions; an artistic process that treats each formulation as a finished work rather than a renewable product line; and a culture in which ownership is something granted through relationship, not simply purchased on demand.
+This is offered as description, not comparison. Maison Vereen has no interest in positioning itself against any other house. Its difference is simply stated, and left for each visitor to weigh for themselves.
+6 · SUPPORTING SECTIONS
+Collectability & Limited Editions
+Purpose: Explain the scarcity-as-value philosophy.
+Edition I will never be remade, reissued, or extended. What is held by its two hundred and fifty owners is permanent in a way few luxury objects remain today — its value is not protected by marketing, but by the simple fact that it cannot be replicated.
+Emotional Ownership & Future Value
+Purpose: Address the collector mindset directly.
+Owning something from Maison Vereen's founding chapter is closer to holding an early work from an artist before the world recognised their name. The House cannot promise future value — no serious house ever should — but it can promise that nothing about Edition I will ever be diminished by overproduction.
+House Culture & Private Acquisition
+Purpose: Explain the relational rather than transactional buying model.
+Acquisition at Maison Vereen happens through relationship — application, review, invitation — rather than instant purchase. This is not designed to create friction for its own sake. It exists because a House is assembled deliberately, member by member, the same way any institution intended to last is built.
+7 · VISUAL DIRECTION
+Side-by-side philosophical statements rather than feature-comparison tables; no competitor names or logos anywhere.
+Architectural photography motif — symmetry, structure, permanence — reflecting the idea of the House as institution.
+Confident, unhurried pacing; this page should read like a position paper, not a sales pitch.
+8 · EMOTIONAL JOURNEY
+Clarity. The visitor should leave understanding precisely what they are being invited into, without ever feeling persuaded against an alternative.
+9 · PRIMARY CTA
+Meet the Artisans Behind Every Fragrance
+10 · SECONDARY CTA
+Apply for a Position
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA deepens credibility by moving from philosophy to craft. Secondary CTA captures visitors whose decision is already made at this stage of the journey.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Philosophy explains why the House exists. The individuals behind every bottle explain how it is made real." This leads into Page 6 — The Individual Behind Every Fragrance.
+
+PAGE 6
+The Individual Behind Every Fragrance
+1 · PURPOSE OF THE PAGE
+Celebrate the artistry, patience, and raw material discipline behind each formulation.
+2 · MAIN HEADLINE
+"Every Bottle Carries a Person's Patience."
+3 · FIVE ALTERNATIVE HEADLINES
+Nothing here was rushed to market.
+Raw material, refined by obsession.
+Craft is not a department. It is the entire House.
+Years, distilled into millilitres.
+The hand behind the formula.
+4 · SUPPORTING STATEMENT
+A finished fragrance from Maison Vereen represents years of refinement — sourcing, testing, rejecting, and beginning again, until the formula deserved the House's name.
+5 · MAIN CONTENT
+Behind every Maison Vereen fragrance is a process most houses no longer have the patience for. It begins with sourcing — rare African materials selected not for cost efficiency but for character, often requiring relationships with growers and harvesters built over years rather than transactions completed in weeks.
+From there, development is slow and frequently unforgiving. Formulas are tested, set aside, revisited months later with fresh judgment, and rejected as often as they are advanced. Refinement continues until the master perfumer judges a formulation worthy of the House's name — a standard that has no lower tier, and no exceptions for deadlines.
+This page exists to honour that process, and the discipline of the people who carry it out, long before any visitor ever encounters the finished bottle.
+6 · SUPPORTING SECTIONS
+Raw Materials
+Purpose: Highlight sourcing philosophy and African material provenance.
+Maison Vereen sources materials others overlook — rare resins, woods, and botanicals drawn from across the African continent, selected for the particular depth and character they bring rather than for ease of supply.
+Development & Refinement
+Purpose: Explain the iterative, unhurried creative process.
+A single Maison Vereen formulation may pass through dozens of iterations before approval. Patience is treated as a material in its own right — as essential to the finished work as any oil or absolute in the formula.
+7 · VISUAL DIRECTION
+Close, tactile photography — hands, raw materials, glassware, workshop light — never glamour-lit product photography.
+Slow-motion or cinemagraph-style micro-motion (liquid settling, smoke, light shifting) to convey patience visually.
+Muted, warm tones; this page should feel like a workshop, not a showroom.
+8 · EMOTIONAL JOURNEY
+Respect for craft, deepening the visitor's sense that what they are considering was made by hand and judgment, not by formula alone.
+9 · PRIMARY CTA
+Discover Edition I in Full
+10 · SECONDARY CTA
+Apply for a Position
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA returns the visitor to Edition I now carrying full appreciation for the craft behind it, making the scarcity feel earned rather than manufactured. Secondary CTA remains constant.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Understanding the craft makes one number mean something it did not before — two hundred and fifty." This leads into Page 7 — Edition I: House of 250 (full page).
+
+PAGE 7
+Edition I: House of 250 (Full Page)
+1 · PURPOSE OF THE PAGE
+Expand fully on the Founder Edition — its numbering, authentication, ownership experience, and historic, unrepeatable nature.
+2 · MAIN HEADLINE
+"Two Hundred and Fifty. No More, Ever."
+3 · FIVE  HEADLINES
+A number that will never change.
+Owned once. Documented permanently.
+The founding chapter does not have a sequel.
+Numbered by hand. Authenticated for life.
+History does not get a reprint.
+4 · SUPPORTING STATEMENT
+Edition I Of Many Editions is Maison Vereen's founding chapter — two hundred and fifty individually numbered bottles, each authenticated, documented, and permanent in a way few luxury objects remain today.
+5 · MAIN CONTENT
+Edition I exists once. When the two hundred and fiftieth bottle is placed into a collector's hands, the edition closes permanently — not paused, not revisited in a future "anniversary" release, but closed, in the way a first edition of any serious work closes the moment its print run ends.
+Each bottle carries an individual number, assigned in the sequence of acceptance into the Founding Registry, and a certificate of authenticity that documents its place within the two hundred and fifty. Ownership of an Edition I bottle is, in effect, ownership of a numbered position in the House's own founding history.
+This page exists to answer, in full, the questions a serious collector will naturally ask: why this number, how authentication works, what ownership actually entails, and why the House will never be persuaded to extend the edition under any circumstance.
+6 · SUPPORTING SECTIONS
+Numbering Philosophy
+Purpose: Explain the meaning and sequencing of bottle numbers.
+Numbers are assigned in the order applicants are formally accepted into the Founding Registry — meaning a bottle's number reflects not when it was purchased, but when its owner was recognised by the House. Early conviction is rewarded with early numbering.
+Certificate of Authenticity & Ownership Experience
+Purpose: Detail the physical and documented elements of ownership.
+Every Edition I bottle is accompanied by a signed certificate of authenticity, recording its number, its owner's name, and its place within the two hundred and fifty. Ownership includes private correspondence from the House at the time of acquisition and continued recognition as a founding member for as long as the House exists.
+Why Edition I Will Never Return
+Purpose: State the closure commitment plainly and permanently.
+Maison Vereen will not reissue, extend, or reproduce Edition I under any future circumstance, regardless of demand. This is not a marketing position. It is the same discipline that makes any founding edition, in any serious collectible category, worth holding in the first place.
+7 · VISUAL DIRECTION
+Full product photography of the bottle and certificate, lit as museum artefacts rather than retail products.
+Numbering motif used visually throughout — subtle numerals in design elements, footer, and transitions.
+Dedicated section displaying the certificate of authenticity design in detail.
+8 · EMOTIONAL JOURNEY
+Gravity. The visitor should feel the weight and permanence of the number 250 by the time they finish this page.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Understand the Founding Registry
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA captures collectors who are ready to act immediately. Secondary CTA serves visitors who want to understand the mechanism of access before committing — directing them onward rather than losing them.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Two hundred and fifty bottles require somewhere for two hundred and fifty stories to begin. That place is the Founding Registry." This leads into Page 8 — The Maison Vereen Founding Registry.
+
+PAGE 8
+The Maison Vereen Founding Registry
+1 · PURPOSE OF THE PAGE
+Explain the Founding Registry in full — what it is, why it exists, how applications and acceptance work, and what happens as it fills.
+2 · MAIN HEADLINE
+"The House Is Assembled Before the Bottles Are Released."
+3 · FIVE ALTERNATIVE HEADLINES
+History belongs to those who recognise greatness before the world does.
+This is not a queue. It is the beginning of the House.
+Acceptance is not guaranteed. That is the point.
+Three hundred and fifty founding members. No more.
+Apply first. Acquire later.
+4 · SUPPORTING STATEMENT
+The Maison Vereen Founding Registry is the House's official record of qualified applicants — the foundation from which Edition I's two hundred and fifty owners will ultimately be invited.
+5 · MAIN CONTENT
+Before a single bottle of Edition I is offered for acquisition, the House is assembled. The Maison Vereen Founding Registry exists for that purpose — an official, reviewed record of the individuals who have applied to become part of Maison Vereen's founding chapter.
+Applying to the Founding Registry is not a purchase, and it carries no financial obligation. It is an expression of serious interest, reviewed personally by the House, after which qualified applicants are formally accepted as Founding Registry members. Acceptance is the first recognition the House extends — and it precedes, often by some time, the private invitation to acquire one of the two hundred and fifty Edition I bottles.
+The Registry will accept a maximum of three hundred and fifty members. Because only two hundred and fifty bottles exist, not every accepted member will ultimately receive an invitation to acquire — a fact the House states plainly, rather than obscures, out of respect for those who apply.
+6 · SUPPORTING SECTIONS
+The Application & Review Process
+Purpose: Explain mechanically how applying and acceptance work.
+The application takes a matter of minutes and is read individually by a member of the House — never processed automatically. Applicants who reflect the values and seriousness Maison Vereen looks for in its founding members typically receive a decision within 24 to 48 hours.
+What Acceptance Means
+Purpose: Clarify the distinction between Registry acceptance and bottle acquisition.
+Acceptance into the Founding Registry confers status as a recognised founding member of the House — it does not, by itself, guarantee a bottle. Invitations to acquire one of the two hundred and fifty Edition I bottles are issued privately and individually as the House determines, in the order reflected by each member's assigned number.
+When the Registry Closes
+Purpose: Explain the 350-member ceiling and what happens after.
+Once three hundred and fifty applicants have been accepted, the Founding Registry closes permanently. No further applications will be reviewed. This ceiling exists for the same reason Edition I is limited to two hundred and fifty bottles — the House does not assemble itself beyond the scale it can honour.
+7 · VISUAL DIRECTION
+Ledger-inspired design language — fine rule lines, serif numerals, the visual feeling of an official record rather than a web form.
+Calm, unhurried copy pacing; no countdown timers or urgency graphics.
+Clear, simple application form embedded directly on the page, minimal required fields.
+8 · EMOTIONAL JOURNEY
+Seriousness and quiet urgency — the visitor should understand this is a genuine, limited process worth taking seriously, without ever feeling pressured.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+View the Live Registry
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA is the page's central conversion goal, framed around recognition rather than purchase. Secondary CTA satisfies visitors who want social proof of the Registry's authenticity before applying themselves.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "The Registry is not an abstraction. It is growing, member by member, in real time." This leads into Page 9 — Live Founding Registry.
+
+PAGE 9
+Live Founding Registry
+1 · PURPOSE OF THE PAGE
+Display a real-time, respectfully designed view of Registry growth, building social proof and urgency without compromising privacy.
+2 · MAIN HEADLINE
+"127 of 350. The House Is Being Assembled Now."
+3 · FIVE HEADLINES
+Watch the House come together.
+Every number here is a person, recognised.
+The Registry, in real time.
+A living ledger of the founding generation.
+This number only moves forward.
+4 · SUPPORTING STATEMENT
+The live Founding Registry count reflects every applicant the House has personally reviewed and accepted — never an estimate, never inflated.
+5 · MAIN CONTENT
+This page exists as a living record of the Founding Registry's growth. The count displayed here rises only when Maison Vereen formally accepts an applicant — never automatically, never on a timer, and never adjusted for effect.
+Recently accepted members are shown respectfully, by first name, last initial, and country only. The House will never display a member's full identity without explicit permission, regardless of how the Registry is presented elsewhere.
+As the count approaches three hundred and fifty, this page becomes the clearest, most honest signal of how close the Founding Registry is to closing.
+6 · SUPPORTING SECTIONS
+Accepted Members
+Purpose: Define the core live counter element.
+Accepted Members: 127 / 350. This number reflects the Registry's current size, updated each time the House formally accepts a new applicant.
+Recently Welcomed
+Purpose: Show recent, anonymised acceptances as social proof.
+James F. — Nigeria. Sarah M. — United Kingdom. Grace A. — Ghana. David K. — Canada. Each entry represents a recently accepted Founding Registry member, shown with the same respect the House extends to every applicant's privacy.
+7 · VISUAL DIRECTION
+Designed as a beautifully rendered luxury ledger — fine serif numerals, hairline rules, ink-on-paper texture beneath a digital interface.
+Counter animates subtly upward on each new acceptance rather than refreshing abruptly.
+Recently welcomed list updates gently, with restrained motion — never gamified, never resembling a sales-page countdown.
+8 · EMOTIONAL JOURNEY
+Validation and gentle urgency — the visitor sees this is real, active, and genuinely filling.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Learn About Membership & Access
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA capitalises on the social proof just demonstrated, while the moment of motivation is highest. Secondary CTA serves visitors who want to understand long-term benefits before applying.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Acceptance into the Registry is only the beginning of what membership in this House means." This leads into Page 10 — Membership & Access.
+
+PAGE 10
+Membership & Access
+1 · PURPOSE OF THE PAGE
+Explain what membership in Maison Vereen entails beyond a single transaction — the long-term relationship the House offers.
+2 · MAIN HEADLINE
+"Membership Is Not a Tier. It Is a Relationship."
+3 · FIVE ALTERNATIVE HEADLINES
+Access, extended — not sold.
+What it means to belong to a House.
+Beyond the bottle: a continuing relationship.
+Priority is earned through presence, not payment.
+This is where the relationship begins, not ends.
+4 · SUPPORTING STATEMENT
+Membership in Maison Vereen extends well beyond a single acquisition — it is an ongoing relationship between the House and the people who help compose its history.
+5 · MAIN CONTENT
+For most luxury brands, the relationship with a customer effectively ends at the point of sale. Maison Vereen was built on the opposite premise — that acquiring a piece of the House's work is the beginning of a relationship, not its conclusion.
+Founding Registry members and Edition I owners are afforded a continuing place within the House: priority access to future editions before they are announced publicly, private experiences extended only to members, and a direct line of communication with the House that does not exist for the general public.
+This page sets expectations honestly. Membership does not entitle anyone to a future bottle, and the House makes no promises it cannot keep. What it does promise is recognition, priority, and access — extended for as long as the relationship is held in good faith on both sides.
+6 · SUPPORTING SECTIONS
+Priority Access & Future Editions
+Purpose: Explain forward-looking member benefits.
+Members are informed of future editions, collaborations, and limited releases before any public announcement is made — a courtesy extended in recognition of their early conviction in the House.
+Private Experiences & Invitations
+Purpose: Describe relational, non-transactional benefits.
+From time to time, the House extends private invitations to members — tastings, workshops, and gatherings designed to deepen the relationship between Maison Vereen and the people who compose its founding history.
+7 · VISUAL DIRECTION
+Warm, intimate photography suggesting gathering and relationship rather than retail benefit tiers.
+Avoid loyalty-programme visual language entirely — no points, badges, or tier icons.
+Editorial tone throughout, presented as a statement of intent rather than a benefits chart.
+8 · EMOTIONAL JOURNEY
+Reassurance and belonging — the visitor should feel that joining the House means being remembered, not merely logged.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Explore the Signature Collection
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA remains the central goal for visitors drawn to Edition I. Secondary CTA offers a natural off-ramp toward the House's permanent, reorderable collection for visitors more interested in an immediate relationship with the House.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Membership is one path into the House. The Signature Collection is another — open, permanent, and entirely its own." This leads into Page 11 — Signature Collection.
+
+PAGE 11
+Signature Collection
+1 · PURPOSE OF THE PAGE
+Introduce the House's permanent, reorderable fragrances — completely separate in tone and mechanism from Edition I.
+2 · MAIN HEADLINE
+"The Permanent Work of the House."
+3 · FIVE HEADLINES
+Not limited. Still uncompromised.
+The ongoing craftsmanship of Maison Vereen.
+Each one a character. None of them a category.
+Always available. Never diluted.
+The collection the House will keep making.
+4 · SUPPORTING STATEMENT
+The Signature Collection represents Maison Vereen's permanent body of work  fragrances available on an ongoing basis, each developed with the same standard applied to Edition I.
+5 · MAIN CONTENT
+Where Edition I is finite by design, the Signature Collection is the House's enduring body of work — fragrances intended to remain part of Maison Vereen's offering for years, refined and revisited as the House's craft continues to evolve, but never produced at the expense of quality.
+Each fragrance in the Collection is treated as a complete artistic statement: its own story, its own inspiration, its own character. None are framed as variations on a theme or filler around Edition I. Visitors are invited to discover each one individually, the way they might discover an artist's separate works.
+There is no ecommerce experience here. Every fragrance in the Signature Collection leads to a personal conversation with the House's concierge — by design, not by limitation.
+6 · SUPPORTING SECTIONS
+Each Fragrance, In Full
+Purpose: Describe the per-fragrance template structure designers should build.
+Every fragrance page within the Signature Collection includes its story and inspiration, a description of its character and mood, its note structure, and the occasions or moments it was created to accompany — followed by concierge-based acquisition options rather than a cart.
+Concierge-Based Acquisition
+Purpose: Reaffirm the no-ecommerce model explicitly.
+At the close of every fragrance page, visitors are invited to speak with a concierge, request details, or continue the conversation by WhatsApp or email. There is no 'Add to Cart' anywhere within Maison Vereen — acquiring a Signature Collection fragrance is always a personal exchange.
+7 · VISUAL DIRECTION
+Each fragrance presented as its own editorial spread — hero image, mood photography, ingredient detail.
+Consistent template across fragrances, varied only by colour accent and imagery, maintaining House cohesion.
+Concierge CTA block styled identically across every fragrance page for consistency.
+8 · EMOTIONAL JOURNEY
+Discovery and personal connection — each fragrance should feel like meeting a distinct character within the same family.
+9 · PRIMARY CTA
+Speak to a Concierge
+10 · SECONDARY CTA
+Request Details
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA matches the visitor ready to engage personally right away. Secondary CTA serves visitors who want information first without the immediacy of a live conversation — both routes preserve the relational model the House requires.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "The Signature Collection is the ongoing work. What follows is the institution behind all of it." This leads into Page 12 — The House.
+
+PAGE 12
+The House
+1 · PURPOSE OF THE PAGE
+Introduce Maison Vereen as an institution — its history, values, culture, and century-long ambition.
+2 · MAIN HEADLINE
+"A House Is Not Built in a Season."
+3 · FIVE ALTERNATIVE HEADLINES
+What we hope to become in a hundred years.
+Values do not change with trends. Ours will not either.
+The institution behind the editions.
+Culture, before commerce.
+This is the House Maison Vereen intends to become.
+4 · SUPPORTING STATEMENT
+Maison Vereen is building toward institutional permanence — a House whose values, culture, and craftsmanship are intended to outlast any single collection, founder, or era.
+5 · MAIN CONTENT
+Everything explored elsewhere on this site — Edition I, the Signature Collection, the Founding Registry — exists within something larger: the House itself. This page steps back from any single product to describe the institution Maison Vereen intends to become.
+The House's values are simple and have not changed since its founding: craftsmanship without compromise, patience over speed, and an unwavering commitment to proving that African origin and global luxury standard are not opposing ideas but a single, obvious truth waiting to be demonstrated properly.
+Maison Vereen's ambitions extend across generations, not seasons. The House hopes, a century from now, to be spoken of the way the world's oldest maisons are spoken of today — not as a brand that once trended, but as an institution that endured because it never lowered its standard to make growth easier.
+6 · SUPPORTING SECTIONS
+Values & Culture
+Purpose: State the House's operating principles plainly.
+Every person who works within Maison Vereen, in any capacity, is held to the same standard: craftsmanship first, growth second. Decisions that would compromise quality for speed or scale are not made here, regardless of opportunity.
+The Next Century
+Purpose: Articulate long-term institutional ambition.
+Maison Vereen is not building toward a successful launch. It is building toward an institution capable of outliving its founder, its first collectors, and its first century — the same way the world's most respected maisons were built, one deliberate decade at a time.
+7 · VISUAL DIRECTION
+Archival-style design treatment — as though documenting a House already decades into its history.
+Timeline or chapter-based scroll structure suggesting the House's story is still being written.
+Restrained, institutional typography; this page should feel like reading a House's charter.
+8 · EMOTIONAL JOURNEY
+Trust in permanence — the visitor should sense they are looking at an institution being built deliberately, not a startup seeking validation.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Read What Others Are Saying
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA remains available for visitors moved to act on institutional trust alone. Secondary CTA moves visitors toward external validation before they commit, appropriate for more cautious decision-makers.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "An institution is proven not by what it says about itself, but by what others say about it." This leads into Page 13 — Social Proof.
+
+PAGE 13
+Social Proof
+1 · PURPOSE OF THE PAGE
+Design an elegant, evergreen framework for testimonials, press, and recognition that can grow with the House over time.
+2 · MAIN HEADLINE
+"Recognised by Those Who Know the Difference."
+3 · FIVE ALTERNATIVE HEADLINES
+What collectors, press, and partners are saying.
+Recognition, earned quietly.
+The record of a House, as it is written.
+Documented, not advertised.
+Proof that does not need to shout.
+4 · SUPPORTING STATEMENT
+This page exists as a living, growing record of recognition — collector testimonials, press coverage, and milestones — documented as the House's history, not displayed as advertising.
+5 · MAIN CONTENT
+Maison Vereen's social proof is designed never to feel like reviews. Reviews are what consumers leave for products. What appears here is documentation — the accumulating record of a House's recognition by collectors, press, and partners over time.
+At launch, this page will carry placeholder structures, ready to be populated as recognition arrives organically. Nothing here will ever be fabricated or inflated; the page is built to grow honestly, even if that means starting quietly.
+6 · SUPPORTING SECTIONS
+Collector & Member Reflections
+Purpose: Frame the testimonial section's tone and placeholder structure.
+Reflections shared by Founding Registry members and collectors, presented as quoted excerpts with name, country, and (where relevant) bottle number — never as star ratings or review widgets.
+Press, Editorial & Milestones
+Purpose: Frame the press and recognition section's tone and placeholder structure.
+A running record of press coverage, editorial features, interviews, awards, notable events, and House milestones, displayed chronologically as the unfolding record of Maison Vereen's history.
+7 · VISUAL DIRECTION
+Elegant placeholder design for testimonials, press logos, and milestones — ready to populate without redesign as content arrives.
+Chronological, archival presentation rather than a grid of star ratings.
+Photography section reserved for high-quality editorial or event imagery as it becomes available.
+8 · EMOTIONAL JOURNEY
+Reassurance through quiet, credible recognition rather than aggressive social proof tactics.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Read Frequently Asked Questions
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA remains constant for visitors convinced by recognition. Secondary CTA serves visitors with remaining practical questions before they are ready to act.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Recognition answers some questions. Practical ones remain — and deserve clear answers." This leads into Page 14 — Frequently Asked Questions.
+
+PAGE 14
+Frequently Asked Questions
+1 · PURPOSE OF THE PAGE
+Provide comprehensive, confident answers covering Edition I, the Founding Registry, membership, the Signature Collection, and practical concerns.
+2 · MAIN HEADLINE
+"Everything You Would Ask, Answered Directly."
+3 · FIVE ALTERNATIVE HEADLINES
+Before you apply, you should know everything.
+No question here is too practical for this House.
+Clarity, in the House's own voice.
+What collectors most often ask.
+Answers, not disclaimers.
+4 · SUPPORTING STATEMENT
+Twenty questions, answered in the unhurried, confident voice of the House — designed to dissolve objection and deepen understanding at once.
+5 · MAIN CONTENT
+This page exists so that no serious applicant is left with an unanswered practical question before applying. Each answer is written in the House's own voice — confident, direct, and unhurried — never defensive, never evasive.
+6 · SUPPORTING SECTIONS
+Edition I & The Founding Registry
+Purpose: Group and answer core questions on the founding chapter.
+Covers: what Edition I is and why only 250 bottles exist; how bottle numbering works; what the Founding Registry is and how applications are reviewed; what happens once the Registry reaches 350 accepted members; what happens after applications close; and how invitations to acquire are eventually issued.
+Membership, Signature Collection & Practical Matters
+Purpose: Group and answer membership, collection, and logistics questions.
+Covers: what membership includes; how the Signature Collection differs from Edition I and how concierge purchasing works; international shipping and buyer eligibility; how authenticity is verified; the House's pricing philosophy; and whether future editions beyond Edition I are planned.
+7 · VISUAL DIRECTION
+Accordion-style question list, organised under the two groupings above for scannability.
+Generous spacing per answer; nothing should feel compressed into a support-ticket format.
+Search or filter function recommended for ease of navigation once the full twenty questions are populated.
+8 · EMOTIONAL JOURNEY
+Confidence and resolved uncertainty — the visitor should feel every reasonable concern has been addressed before being asked to act.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Speak with the House Directly
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA captures visitors whose remaining objections have just been resolved. Secondary CTA serves the small number of visitors whose specific question was not covered, preventing drop-off.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "Some questions are better asked directly. The House is always reachable." This leads into Page 15 — Contact & Concierge.
+
+PAGE 15
+Contact & Concierge
+1 · PURPOSE OF THE PAGE
+Provide a contact experience that feels like reaching a private maison rather than a customer support desk.
+2 · MAIN HEADLINE
+"Speak With the House Directly."
+3 · FIVE ALTERNATIVE HEADLINES
+Not a support ticket. A conversation.
+The concierge is listening.
+However you wish to reach us, we are here.
+For collectors, press, and partners alike.
+Every enquiry is read personally.
+4 · SUPPORTING STATEMENT
+Every enquiry to Maison Vereen — whether from a collector, a journalist, or a future partner — is read and answered personally by the House.
+5 · MAIN CONTENT
+Maison Vereen does not operate a customer service desk. Every message that arrives through this page is read personally, and answered in the same considered tone found throughout this website. Visitors are invited to reach the House through whichever channel feels most natural to them.
+6 · SUPPORTING SECTIONS
+For Collectors
+Purpose: Route fragrance-advice and Edition I/Registry enquiries.
+Speak with a concierge for fragrance advice, questions about Edition I, or guidance on the Founding Registry application — available by direct message, WhatsApp, or email.
+For Press, Partners & Gifting
+Purpose: Route institutional and gifting enquiries separately from collector enquiries.
+Media enquiries, partnership proposals, wholesale discussions, and gifting arrangements are each directed to a dedicated contact within the House, ensuring every enquiry reaches the right person without delay.
+7 · VISUAL DIRECTION
+Warm, uncluttered layout; contact options presented as an invitation, not a form-heavy support page.
+Clear separation between collector-facing and institutional-facing contact paths.
+Direct WhatsApp and email links prioritised over a generic contact form.
+8 · EMOTIONAL JOURNEY
+Ease and reassurance — the visitor should feel that reaching out will be met with genuine attention, not an automated queue.
+9 · PRIMARY CTA
+Speak to a Concierge
+10 · SECONDARY CTA
+Continue by Email
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA offers the most immediate, personal channel for visitors ready to engage now. Secondary CTA serves visitors who prefer a written, lower-pressure first contact.
+12 · TRANSITION INTO THE NEXT PAGE
+Closing line: "You now know the House completely. What remains is a final invitation." This leads into Page 16 — Final Invitation.
+
+PAGE 16
+Final Invitation
+1 · PURPOSE OF THE PAGE
+Conclude the website journey elegantly, leaving the visitor with a clear, emotionally resonant final invitation to act.
+2 · MAIN HEADLINE
+"The Founding Chapter Closes When the Last Position Does."
+3 · FIVE ALTERNATIVE HEADLINES
+Some remain. Not many.
+You have read this far. That means something.
+History does not wait to be recognised twice.
+The question is not whether this will matter.
+This is where the House begins, for you.
+4 · SUPPORTING STATEMENT
+Two hundred and fifty bottles. Three hundred and fifty founding positions. One founding chapter that will not return.
+5 · MAIN CONTENT
+You have read this far. That means something. The people this House was built for tend to recognise themselves in its language quickly — not because the writing is persuasive, but because the idea behind it is something they have understood for a long time without quite having a name for it.
+Edition I. Two hundred and fifty individually numbered bottles, made from African materials that carry the depth of the continent that produced them, built with a master perfumer to a standard with no lower tier. Authenticated, documented, and permanent in a way most things sold in the world of luxury no longer are.
+The Founding Registry is open. Applying takes a matter of minutes, carries no financial obligation, and is read by a person. The question, ultimately, is not whether Maison Vereen will matter. It is whether you will have been part of it when it does.
+6 · SUPPORTING SECTIONS
+Closing Affirmations
+Purpose: Address final objections quietly, below the primary CTA, without raising them explicitly.
+The application is free and carries no financial obligation. Applications are reviewed personally within 24 to 48 hours. Your information is held privately and never shared. Questions before applying? hello@maisonvereen.com
+7 · VISUAL DIRECTION
+Return to the obsidian, full-bleed visual language of Page 1 — the journey should feel like it has come full circle.
+Single, unhurried closing statement; no additional content or navigation competing for attention.
+Primary and secondary CTAs presented together, clearly differentiated by visual weight.
+8 · EMOTIONAL JOURNEY
+"I hope one day I become part of Maison Vereen." The visitor should leave with aspiration, not pressure.
+9 · PRIMARY CTA
+Apply to the Maison Vereen Founding Registry
+10 · SECONDARY CTA
+Discover the Signature Collection
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA is the site's ultimate conversion goal, placed at the point of maximum accumulated trust. Secondary CTA offers a meaningful alternative path for visitors drawn to the House but not yet ready for Edition I specifically — ensuring no visitor leaves without a next step.
+12 · TRANSITION INTO THE NEXT PAGE
+This is the final page of the core navigation. From here, visitors either apply, explore the Signature Collection, or leave carrying the House's story with them — which is, itself, a quiet form of success.
+
+STANDALONE
+Shareable Discovery Page (Not in Main Navigation)
+1 · PURPOSE OF THE PAGE
+A dedicated, self-contained page designed for sharing via WhatsApp, email, QR code, presentations, LinkedIn, and social media — written for a reader who has never heard of Maison Vereen and has roughly five minutes.
+2 · MAIN HEADLINE
+"Africa's First Serious Luxury Fragrance House. Two Hundred and Fifty Bottles. One Founding Chapter."
+3 · FIVE HEADLINES
+You are seeing this before most people ever will.
+A House is being built. You can be part of its beginning.
+Why two hundred and fifty bottles will never become two hundred and fifty-one.
+This page exists because someone thought you should know first.
+Five minutes to understand what Maison Vereen is.
+4 · SUPPORTING STATEMENT
+This page exists for one reason: to explain, briefly and completely, what Maison Vereen is — and why joining the Founding Registry now matters.
+5 · MAIN CONTENT
+Maison Vereen is a luxury fragrance house founded in Lagos, built to the same uncompromising standard as the world's most respected maisons. Its founding chapter, Edition I, is limited to two hundred and fifty individually numbered bottles — a number that will never increase, and an edition that will never be reissued.
+Access to Edition I is not immediate. Interested individuals first apply to the Maison Vereen Founding Registry, the House's reviewed record of qualified applicants, capped at three hundred and fifty members. Acceptance into the Registry is the first recognition the House extends; private invitations to acquire one of the two hundred and fifty bottles follow afterward, issued individually as the House determines.
+What makes Edition I historic is simple: it is first. The first founding chapter of a House built to prove that African origin and global luxury standard were never opposing ideas. Joining the Founding Registry now means being recognised at the beginning of that history, rather than reading about it afterward.
+Applying takes a matter of minutes, carries no financial obligation, and is read personally by the House. From here, the fuller story — the philosophy, the founder, the craftsmanship — is available at maisonvereen.com for anyone who wants to go deeper before applying.
+6 · SUPPORTING SECTIONS
+Why Now
+Purpose: Create honest, non-manipulative urgency appropriate for a shared, standalone page.
+The Founding Registry will close permanently once three hundred and fifty applicants have been accepted. There is no artificial countdown here — simply a real, finite number that will eventually be reached.
+7 · VISUAL DIRECTION
+Single-scroll, self-contained page — no main site navigation, designed to load quickly when shared via link or QR code.
+Mobile-first layout, since the majority of shares will be opened on a phone via WhatsApp or social media.
+One striking hero image of the Edition I bottle; minimal additional imagery to keep load time fast.
+8 · EMOTIONAL JOURNEY
+From unfamiliarity to understanding to genuine interest, within roughly five minutes of reading.
+9 · PRIMARY CTA
+Apply to the Founding Registry
+10 · SECONDARY CTA
+Explore the Full Maison Vereen Website
+11 · PSYCHOLOGICAL EXPLANATION OF BOTH CTAS
+Primary CTA captures the reader at peak interest before they leave the page. Secondary CTA serves readers who want to verify the House's full depth and credibility before applying — directing them into the main site rather than losing them.
+12 · TRANSITION INTO THE NEXT PAGE
+This page is intentionally terminal — its sole purpose is to convert a cold reader into either a Founding Registry applicant or a visitor to the full website. It does not lead further within itself.

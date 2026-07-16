@@ -53,6 +53,14 @@ export default function FinalInvitationPage() {
                 </em>
               </h1>
 
+              {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
+              <p
+                className="font-serif font-light text-gold/80 italic"
+                style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
+              >
+                The question is not whether this will matter. It is whether you will have been part of it when it does.
+              </p>
+
               {/* Supporting statement */}
               <p
                 className="font-serif font-light text-[#8A8070] italic leading-[1.6]"

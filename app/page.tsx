@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ApplicationForm from "./components/ApplicationForm";
@@ -28,6 +29,7 @@ export default function HomePage() {
         {/* 1 — Hero
             "The room knows before you speak."
             Blueprint: Headline, supporting statement, 3 paragraphs of main content, Apply for a Position / Enter the House */}
+        <p className="sr-only">Maison Vereen</p>
         <HeroSection onOpenApply={openApply} />
 
         {/* 2 — The Founder Edition
@@ -49,13 +51,13 @@ export default function HomePage() {
             >
               Before you apply, you should understand what you are applying to.
             </p>
-            <a
+            <Link
               href="/our-story"
               className="inline-block mt-5 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium"
               style={{ fontSize: "10px" }}
             >
               Discover Maison Vereen →
-            </a>
+            </Link>
           </div>
         </section>
 
