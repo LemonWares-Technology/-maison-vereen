@@ -1,201 +1,243 @@
 "use client";
 
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ApplicationForm from "../components/ApplicationForm";
 
-// PAGE 5 — THE MAISON VEREEN DIFFERENCE
-// Exact copy from blueprint document
+const ImagePlaceholder = ({
+  className = "",
+  aspect = "aspect-4/3",
+  label,
+}: {
+  className?: string;
+  aspect?: string;
+  label?: string;
+}) => (
+  <div
+    className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
+  >
+    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506] mb-2">
+      <span className="font-serif text-gold text-sm">MV</span>
+    </div>
+    {label && (
+      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
+        {label}
+      </span>
+    )}
+  </div>
+);
 
 export default function TheDifferencePage() {
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const openApply = () => setIsApplyOpen(true);
+
   return (
-    <>
-      <Header />
-      <main className="bg-charcoal">
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
+      {/* ── Header ── */}
+      <Header onOpenApply={openApply} />
 
-        {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[560px] space-y-8">
-                  <span className="section-tag">The Maison Vereen Difference</span>
-                  <h1
-                    className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
-                    style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
-                  >
-                    The Difference Was Never{" "}
-                    <em className="not-italic block mt-2" style={{ color: "#C9A84C" }}>
-                      the Scent Alone.
-                    </em>
-                  </h1>
-
-                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
-                  <p
-                    className="font-serif font-light text-gold/80 italic"
-                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
-                  >
-                    Built to be inherited, not consumed.
-                  </p>
-
-                  <p
-                    className="font-serif font-light text-[#C8BFB2]"
-                    style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
-                  >
-                    Every serious luxury house has its own philosophy. This is the architecture of Maison Vereen&apos;s — built around collectability, emotional ownership, and a culture rather than a catalogue.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Visitors who have considered other fragrance houses arrive here with a quiet, reasonable question: why is this different from everything else I have already looked at? The honest answer is rarely the scent alone — formulation skill exists at the highest level in many houses. The difference is the entire architecture surrounding the work.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Maison Vereen was not built to maximise how many bottles leave the House. It was built around collectability — limited, numbered, never-repeated editions; an artistic process that treats each formulation as a finished work rather than a renewable product line; and a culture in which ownership is something granted through relationship, not simply purchased on demand.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    This is offered as description, not comparison. Maison Vereen has no interest in positioning itself against any other house. Its difference is simply stated, and left for each visitor to weigh for themselves.
-                  </p>
-                </div>
+      <main className="flex-1 pt-24 md:pt-28">
+        {/* ── HERO SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Narrative */}
+            <div className="space-y-8 max-w-155">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-px bg-gold" />
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
+                  THE MAISON VEREEN DIFFERENCE
+                </span>
               </div>
-              <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <Image
-                  src="/images/the-house-hero.png"
-                  alt="Maison Vereen — Architecture of difference"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                  style={{ opacity: 0.85 }}
-                />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/55" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/65 via-transparent to-transparent" />
+
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
+                The Difference Was Never the Scent Alone.
+              </h1>
+
+              {/* Bullet points */}
+              <div className="space-y-3 font-serif text-sm sm:text-base text-gold/90 italic tracking-wide">
+                <p>— Most houses sell a bottle. This one offers a position.</p>
+                <p>— Ownership, not ecommerce.</p>
+                <p>— Built to be inherited, not consumed.</p>
+                <p>— Where other houses expand, this one closes.</p>
               </div>
+
+              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+                Every serious luxury house has its own philosophy. This is the
+                architecture of Maison Vereen&apos;s — built around
+                collectability, emotional ownership, and a culture rather than a
+                catalogue.
+              </p>
+            </div>
+
+            {/* Right Image Placeholder (Arched gateway) */}
+            <div className="w-full flex justify-center lg:justify-end">
+              <ImagePlaceholder
+                aspect="aspect-3/4"
+                className="w-full max-w-125 rounded-sm shadow-2xl"
+                label="Architecture of Difference"
+              />
             </div>
           </div>
         </section>
 
-        {/* ── THREE SUPPORTING SECTIONS — exact from blueprint ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-0">
-            {[
-              {
-                tag: "Collectability & Limited Editions",
-                headline: "Most houses sell a bottle. This one offers a position.",
-                body: "Edition I will never be remade, reissued, or extended. What is held by its two hundred and fifty owners is permanent in a way few luxury objects remain today — its value is not protected by marketing, but by the simple fact that it cannot be replicated.",
-              },
-              {
-                tag: "Emotional Ownership & Future Value",
-                headline: "Built to be inherited, not consumed.",
-                body: "Owning something from Maison Vereen's founding chapter is closer to holding an early work from an artist before the world recognised their name. The House cannot promise future value — no serious house ever should — but it can promise that nothing about Edition I will ever be diminished by overproduction.",
-              },
-              {
-                tag: "House Culture & Private Acquisition",
-                headline: "Where other houses expand, this one closes.",
-                body: "Acquisition at Maison Vereen happens through relationship — application, review, invitation — rather than instant purchase. This is not designed to create friction for its own sake. It exists because a House is assembled deliberately, member by member, the same way any institution intended to last is built.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`group border-b border-white/5 py-14 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start ${i === 0 ? "border-t" : ""}`}
-              >
-                <div className="space-y-4">
-                  <span className="section-tag">{item.tag}</span>
-                  <h2
-                    className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300"
-                    style={{ fontSize: "clamp(1.4rem, 2.2vw, 2rem)" }}
-                  >
-                    {item.headline}
-                  </h2>
-                </div>
-                <p className="text-[#8A8070] font-light leading-[1.9] mt-2 lg:mt-8" style={{ fontSize: "17px" }}>
-                  {item.body}
+        {/* ── INDENTED QUOTE / ESSAY SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="max-w-225 mx-auto border-l-2 border-gold/40 pl-6 sm:pl-10 md:pl-12 space-y-6 text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p>
+              Visitors who have considered other fragrance houses arrive here with a
+              quiet, reasonable question: why is this different from everything
+              else I have already looked at? The honest answer is rarely the scent
+              alone — formulation skill exists at the highest level in many houses.
+              The difference is the entire architecture surrounding the work.
+            </p>
+            <p>
+              Maison Vereen was not built to maximise how many bottles leave the
+              House. It was built around collectability — limited, numbered,
+              never-repeated editions; an artistic process that treats each
+              formulation as a finished work rather than a renewable product line;
+              and a culture in which ownership is something granted through
+              relationship, not simply purchased on demand.
+            </p>
+            <p>
+              This is offered as description, not comparison. Maison Vereen has no
+              interest in positioning itself against any other house. Its
+              difference is simply stated, and left for each visitor to weigh for
+              themselves.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 3 COLUMNS CARDS SECTION (01, 02, 03) ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {/* Card 01 */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-6">
+                <ImagePlaceholder aspect="aspect-16/9" label="Edition I / 017 / 250" />
+                <span className="font-serif text-xl text-gold block">01</span>
+                <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
+                  Collectability &amp; Limited Editions
+                </h2>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  Edition I will never be remade, reissued, or extended. What is
+                  held by its two hundred and fifty owners is permanent in a way few
+                  luxury objects remain today — its value is not protected by
+                  marketing, but by the simple fact that it cannot be replicated.
                 </p>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
 
-        {/* ── OWNERSHIP, NOT ECOMMERCE ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <Image
-                  src="/images/the-house-belonging.png"
-                  alt="Ownership at Maison Vereen"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                  style={{ opacity: 0.85 }}
-                />
-                <div className="absolute inset-0 bg-linear-to-r from-transparent to-charcoal/40" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/65 via-transparent to-transparent" />
+            {/* Card 02 */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-6">
+                <ImagePlaceholder aspect="aspect-16/9" label="Founding Chapter" />
+                <span className="font-serif text-xl text-gold block">02</span>
+                <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
+                  Emotional Ownership &amp; Future Value
+                </h2>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  Owning something from Maison Vereen&apos;s founding chapter is
+                  closer to holding an early work from an artist before the world
+                  recognised their name. The House cannot promise future value — no
+                  serious house ever should — but it can promise that nothing about
+                  Edition I will ever be diminished by overproduction.
+                </p>
               </div>
-              <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
-                <div className="space-y-8 max-w-[480px]">
-                  <span className="section-tag">Ownership, Not Ecommerce</span>
-                  <h2
-                    className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                    style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-                  >
-                    There is no cart.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>
-                      There is a conversation.
-                    </em>
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Acquisition at Maison Vereen begins with an application and ends with an invitation. No transaction is immediate. No position is unconsidered. This is the architecture of a house that was built to last — and it begins the moment a visitor chooses to apply rather than simply purchase.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-5 pt-2">
-                    <Link
-                      href="/the-craft"
-                      className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
-                      style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-                    >
-                      <span className="uppercase font-medium">Meet the Artisans Behind Every Fragrance</span>
-                    </Link>
-                  </div>
-                </div>
+            </div>
+
+            {/* Card 03 */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-6">
+                <ImagePlaceholder aspect="aspect-16/9" label="Private Acquisition" />
+                <span className="font-serif text-xl text-gold block">03</span>
+                <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
+                  House Culture &amp; Private Acquisition
+                </h2>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  Acquisition at Maison Vereen happens through relationship —
+                  application, review, invitation — rather than instant purchase.
+                  This is not designed to create friction for its own sake. It
+                  exists because a House is assembled deliberately, member by
+                  member, the same way any institution intended to last is built.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── CTAs ── */}
-        <section className="border-b border-white/5 bg-[#080808]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <p className="font-serif font-light text-[#E8E2D9] max-w-[480px]" style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}>
-              Philosophy explains why the House exists. The individuals behind every bottle explain how it is made real.
-            </p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 shrink-0">
-              <Link href="/the-craft" className="link-gold">
-                <span>Meet the Artisans</span>
-                <span className="text-gold">→</span>
-              </Link>
-              <Link
-                href="/access"
-                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
-                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-              >
-                <span className="uppercase font-medium">Apply for a Position</span>
-              </Link>
+        {/* ── CTA BANNER SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Left Box */}
+            <div className="bg-[#0D0D10] border border-white/5 p-8 sm:p-12 flex flex-col justify-between space-y-8">
+              <div className="space-y-6">
+                <ImagePlaceholder aspect="aspect-21/9" label="Master Artisans" />
+                <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
+                  Discover the craft behind every creation.
+                </h3>
+              </div>
+              <div>
+                <Link
+                  href="/the-founder"
+                  className="inline-flex items-center justify-between w-full bg-gold hover:bg-[#b5953d] text-[#060506] px-6 py-4 text-xs tracking-[0.25em] uppercase font-semibold transition-all duration-300"
+                >
+                  <span>Meet the Artisans Behind Every Fragrance</span>
+                  <span>→</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Box */}
+            <div className="bg-[#0D0D10] border border-white/5 p-8 sm:p-12 flex flex-col justify-between space-y-8">
+              <div className="space-y-6">
+                <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
+                  Ready to be part of the Maison?
+                </h3>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  Applications are by consideration. For those who believe in what we
+                  build.
+                </p>
+              </div>
+              <div>
+                <button
+                  onClick={openApply}
+                  className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-6 py-4 text-xs tracking-[0.25em] uppercase font-medium transition-all duration-300 bg-transparent"
+                >
+                  <span>Apply for a Position</span>
+                  <span>→</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* PAGE 5 → PAGE 6 transition */}
-        <section className="bg-[#060506] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
-              Philosophy explains why the House exists. The individuals behind every bottle explain how it is made real.
-            </p>
-            <Link href="/the-craft" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
-              Meet the Artisans Behind Every Fragrance →
-            </Link>
+        {/* ── NEXT PAGE BANNER & TRANSITION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-6">
+          <div className="w-8 h-8 border border-gold/40 mx-auto flex items-center justify-center bg-[#060506]">
+            <span className="font-serif text-gold text-xs">MV</span>
           </div>
-        </section>
 
+          <h3 className="font-serif text-lg sm:text-xl md:text-2xl text-gold font-light italic max-w-200 mx-auto leading-relaxed">
+            Philosophy explains why the House exists. The individuals behind every
+            bottle explain how it is made real.
+          </h3>
+
+          <Link
+            href="/the-founder"
+            className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#8A8178] hover:text-gold transition-colors font-medium"
+          >
+            NEXT: THE INDIVIDUAL BEHIND EVERY FRAGRANCE &rarr;
+          </Link>
+        </section>
       </main>
+
+      {/* ── Footer ── */}
       <Footer />
-    </>
+
+      {/* ── Application Modal ── */}
+      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+    </div>
   );
 }

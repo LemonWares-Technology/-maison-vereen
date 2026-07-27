@@ -6,12 +6,12 @@ import Image from "next/image";
 export default function WhyExists() {
   return (
     <section id="why-exists" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[580px]">
+      <div className="max-w-350 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-145`">
 
           {/* Left — text panel */}
           <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-16 py-16 md:py-24 lg:py-28 w-full">
-            <div className="space-y-8 max-w-[520px] text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="space-y-8 max-w-130 text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="section-tag">A House, Not a Brand.</span>
 
               <h2
@@ -41,7 +41,7 @@ export default function WhyExists() {
           </div>
 
           {/* Right — image, same treatment as the-house page sections */}
-          <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608] group">
+          <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608] group">
             <Image
               src="/images/the-house-hero.png"
               alt="The vision behind Maison Vereen"

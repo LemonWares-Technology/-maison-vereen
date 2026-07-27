@@ -15,11 +15,11 @@ export default function OurStoryPage() {
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[580px] space-y-8">
+                <div className="max-w-145 space-y-8">
                   <span className="section-tag">Discover Maison Vereen</span>
                   <h1
                     className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
@@ -56,7 +56,7 @@ export default function OurStoryPage() {
                   </p>
                 </div>
               </div>
-              <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-105 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
                   src="/images/the-house-hero.png"
                   alt="Maison Vereen — Discover the House"
@@ -75,8 +75,8 @@ export default function OurStoryPage() {
 
         {/* ── WHAT WE ARE ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="max-w-[760px] space-y-6">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+            <div className="max-w-190 space-y-6">
               <span className="section-tag">What We Are</span>
               <h2
                 className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
@@ -94,9 +94,9 @@ export default function OurStoryPage() {
 
         {/* ── WHY FRAGRANCE CAN BECOME ART ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
-              <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
                   src="/images/house-section-image.png"
                   alt="Maison Vereen — African materials, hands at work"
@@ -109,7 +109,7 @@ export default function OurStoryPage() {
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/65 via-transparent to-transparent" />
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D]">
-                <div className="space-y-8 max-w-[480px]">
+                <div className="space-y-8 max-w-120">
                   <span className="section-tag">Why Fragrance Can Become Art</span>
                   <h2
                     className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
@@ -131,8 +131,8 @@ export default function OurStoryPage() {
 
         {/* ── BUILDING TOWARD A CENTURY ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="max-w-[760px] space-y-8">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+            <div className="max-w-190 space-y-8">
               <span className="section-tag">Building Toward a Century</span>
               <h2
                 className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
@@ -168,7 +168,7 @@ export default function OurStoryPage() {
 
         {/* PAGE 2 → PAGE 3 transition */}
         <section className="bg-[#060506] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
             <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Understanding what Maison Vereen is naturally raises a deeper question — what does it believe?
             </p>

@@ -37,8 +37,8 @@ export default function FinalInvitationPage() {
           />
 
           {/* Content */}
-          <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pt-[72px]">
-            <div className="max-w-[720px] mx-auto text-center py-28 md:py-36 space-y-10 flex flex-col items-center">
+          <div className="relative z-10 w-full max-w-350 mx-auto px-6 sm:px-8 md:px-14 pt-18">
+            <div className="max-w-180 mx-auto text-center py-28 md:py-36 space-y-10 flex flex-col items-center">
               {/* Eyebrow */}
               <span className="section-tag">The Final Invitation</span>
 
@@ -74,7 +74,7 @@ export default function FinalInvitationPage() {
               <div className="w-12 h-px bg-gold/30" />
 
               {/* Body */}
-              <div className="space-y-6 max-w-[600px] text-left">
+              <div className="space-y-6 max-w-150 text-left">
                 <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                   You have read this far. That means something. The people this House was built for tend to recognise themselves in its language quickly — not because the writing is persuasive, but because the idea behind it is something they have understood for a long time without quite having a name for it.
                 </p>
@@ -109,8 +109,8 @@ export default function FinalInvitationPage() {
 
         {/* ── CLOSING AFFIRMATIONS — exact blueprint prose ── */}
         <section className="bg-[#080808]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20">
-            <div className="max-w-[680px] mx-auto space-y-8 text-center">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20">
+            <div className="max-w-170 mx-auto space-y-8 text-center">
               <div className="w-8 h-px bg-gold/20 mx-auto" />
 
               <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "15px" }}>

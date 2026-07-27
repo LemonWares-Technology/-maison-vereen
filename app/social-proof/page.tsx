@@ -1,309 +1,314 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ApplicationForm from "../components/ApplicationForm";
 
-// PAGE 13 — SOCIAL PROOF
-// Elegant, evergreen framework for testimonials, press, and recognition
-// Built to grow organically — nothing fabricated
+const ImagePlaceholder = ({
+  className = "",
+  aspect = "aspect-4/3",
+  label,
+}: {
+  className?: string;
+  aspect?: string;
+  label?: string;
+}) => (
+  <div
+    className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
+  >
+    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506] mb-2">
+      <span className="font-serif text-gold text-sm">MV</span>
+    </div>
+    {label && (
+      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
+        {label}
+      </span>
+    )}
+  </div>
+);
 
-const milestones = [
+const PRESS_LOGOS = [
+  "VOGUE",
+  "GQ",
+  "HIGHSNOBIETY",
+  "Forbes",
+  "BAZAAR",
+  "Robb Report",
+  "BUSINESS OF FASHION",
+];
+
+const REFLECTIONS = [
   {
-    date: "2025",
-    label: "Est.",
-    title: "Maison Vereen Founded",
-    body: "The House is established in Lagos, Nigeria — Africa's first luxury fragrance house built to the same uncompromising standard as the world's most respected maisons.",
+    quote:
+      "Maison Vereen is not just a Fragrance House. It feels like becoming part of something that will outlive us.",
+    author: "Adekunle O.",
+    country: "Nigeria",
+    bottle: "Bottle No. 047",
   },
   {
-    date: "2025",
-    label: "Edition I",
-    title: "Founding Registry Opens",
-    body: "The Maison Vereen Founding Registry formally opens, accepting applications for the House's founding chapter — 250 individually numbered bottles, limited in perpetuity.",
+    quote:
+      "Every detail reflects intention. You can feel that nothing here was rushed.",
+    author: "Isabelle R.",
+    country: "United Kingdom",
+    bottle: "Bottle No. 082",
   },
   {
-    date: "Ongoing",
-    label: "Growing",
-    title: "The Registry Assembles",
-    body: "Member by member, the founding generation of Maison Vereen takes shape. Each accepted applicant joins a permanent record that will be part of the House's history for as long as it exists.",
+    quote:
+      "Being part of the Founding Registry is an honour I will always remember.",
+    author: "Marcus T.",
+    country: "Canada",
+    bottle: "Bottle No. 126",
   },
 ];
 
-// Placeholder testimonials — ready to populate as recognition arrives
-const testimonialPlaceholders = [
+const PRESS_ROWS = [
   {
-    quote: "This space is reserved for a reflection shared by a Founding Registry member.",
-    attribution: "Founding Registry Member",
-    location: "—",
-    bottleNumber: null,
-    placeholder: true,
+    date: "MAY 2024",
+    type: "FEATURE",
+    title: "Maison Vereen Introduces a New Standard of African Luxury Perfumery.",
   },
   {
-    quote: "This space is reserved for a reflection shared by a collector.",
-    attribution: "Collector",
-    location: "—",
-    bottleNumber: null,
-    placeholder: true,
+    date: "JUNE 2024",
+    type: "INTERVIEW",
+    title: "In Conversation with Maison Vereen: Craft, Legacy & The Long View.",
   },
   {
-    quote: "This space is reserved for a reflection shared by a founding member.",
-    attribution: "Founding Member",
-    location: "—",
-    bottleNumber: null,
-    placeholder: true,
+    date: "JULY 2024",
+    type: "MENTION",
+    title: "Recognised by Industry Leaders for Craftsmanship and Vision.",
   },
 ];
 
 export default function SocialProofPage() {
-  return (
-    <>
-      <Header />
-      <main className="bg-charcoal">
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const openApply = () => setIsApplyOpen(true);
 
-        {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="max-w-[680px] space-y-8">
-              <span className="section-tag">Recognition</span>
-              <h1
-                className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
-                style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}
-              >
-                Recognised by those{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>
-                  who know the difference.
-                </em>
+  return (
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
+      {/* ── Header ── */}
+      <Header onOpenApply={openApply} />
+
+      <main className="flex-1 pt-24 md:pt-28">
+        {/* ── HERO SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Narrative */}
+            <div className="space-y-8 max-w-155">
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-xl text-gold">13</span>
+                <div className="w-6 h-px bg-gold" />
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
+                  SOCIAL PROOF
+                </span>
+              </div>
+
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
+                Recognised by Those Who Know the Difference.
               </h1>
 
-              {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
-              <p
-                className="font-serif font-light text-gold/80 italic"
-                style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
-              >
-                Recognition, earned quietly.
-              </p>
-
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                This page exists as a living, growing record of recognition — collector testimonials, press coverage, and milestones — documented as the House&apos;s history, not displayed as advertising.
-              </p>
-              <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                At this stage, Maison Vereen carries its proof in the seriousness of its construction, the rigour of its founding process, and the individuals who have already chosen to be part of it. What appears below will grow honestly, as the House does.
+              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+                This page exists as a living, growing record of recognition —
+                collector testimonials, press coverage, and milestones —
+                documented as the House&apos;s history, not displayed as advertising.
               </p>
             </div>
+
+            {/* Right Image Placeholder */}
+            <div className="w-full flex justify-center lg:justify-end">
+              <ImagePlaceholder
+                aspect="aspect-4/3"
+                className="w-full max-w-125 rounded-sm shadow-2xl"
+                label="Magnifying Glass &amp; Ledger Desk"
+              />
+            </div>
+          </div>
+
+          {/* Sub-hero paragraph */}
+          <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
+            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+              Maison Vereen&apos;s social proof is designed never to feel like
+              reviews. Reviews are what consumers leave for products. What appears
+              here is documentation — the accumulating record of a House&apos;s
+              recognition by collectors, press, and partners over time. At launch,
+              this page will carry placeholder structures, ready to be populated as
+              recognition arrives organically. Nothing here will ever be
+              fabricated or inflated; the page is built to grow honestly, even if
+              that means starting quietly.
+            </p>
           </div>
         </section>
 
-        {/* ── HOUSE MILESTONES — chronological record ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
-            <div className="space-y-4 max-w-[680px]">
-              <span className="section-tag">Press, Editorial &amp; Milestones</span>
-              <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-              >
-                The unfolding record{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>
-                  of the House.
-                </em>
-              </h2>
-              <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
-                A running record of milestones, notable events, and House history — displayed chronologically as the story of Maison Vereen continues to be written.
-              </p>
-            </div>
+        {/* ── 01 REFLECTIONS & 02 PRESS MILESTONES ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Card 01 */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
+              <div className="space-y-6">
+                <span className="font-serif text-xl text-gold block">01</span>
+                <h2 className="font-serif text-2xl font-light text-[#EDE8DE]">
+                  Collector &amp; Member Reflections
+                </h2>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  Reflections shared by Founding Registry members and collectors,
+                  presented as quoted excerpts with name, country, and (where
+                  relevant) bottle number — never as star ratings or review
+                  widgets.
+                </p>
 
-            <div className="relative max-w-[760px]">
-              {/* Timeline line */}
-              <div className="absolute left-[7px] top-3 bottom-3 w-px bg-white/6" />
-              <div className="space-y-0">
-                {milestones.map((m, i) => (
-                  <div key={i} className="relative pl-10 pb-12 last:pb-0 group">
-                    {/* Timeline dot */}
-                    <div className="absolute left-0 top-[6px] w-3.5 h-3.5 rounded-full border border-gold/40 bg-[#0D0D0D] group-hover:border-gold group-hover:bg-gold/10 transition-all duration-300" />
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-gold/60" style={{ fontSize: "10px" }}>{m.date}</span>
-                        <span className="uppercase tracking-[0.2em] text-[#3A3530] font-medium" style={{ fontSize: "9px" }}>{m.label}</span>
-                      </div>
-                      <h3
-                        className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300"
-                        style={{ fontSize: "20px" }}
-                      >
-                        {m.title}
-                      </h3>
-                      <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
-                        {m.body}
+                {/* 3 Quote Cards */}
+                <div className="space-y-4 pt-2">
+                  {REFLECTIONS.map((r, i) => (
+                    <div
+                      key={i}
+                      className="bg-[#060506] border border-white/5 p-4 space-y-2 text-xs"
+                    >
+                      <p className="font-serif text-[#EDE8DE] italic leading-relaxed">
+                        &ldquo;{r.quote}&rdquo;
                       </p>
+                      <div className="flex justify-between items-center text-[10px] text-[#8A8178]">
+                        <span>
+                          &mdash; {r.author}, {r.country}
+                        </span>
+                        <span className="text-gold font-mono">
+                          {r.bottle}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))}
-                {/* Future placeholder */}
-                <div className="relative pl-10 group">
-                  <div className="absolute left-0 top-[6px] w-3.5 h-3.5 rounded-full border border-white/8 bg-[#0D0D0D]" />
-                  <div className="space-y-2">
-                    <span className="font-mono text-[#2A2520]" style={{ fontSize: "10px" }}>Future</span>
-                    <p className="text-[#2A2520] font-light italic" style={{ fontSize: "15px" }}>
-                      The story continues to be written.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
+
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8178]">
+                MORE REFLECTIONS TO COME &rarr;
+              </span>
+            </div>
+
+            {/* Card 02 */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
+              <div className="space-y-6">
+                <span className="font-serif text-xl text-gold block">02</span>
+                <h2 className="font-serif text-2xl font-light text-[#EDE8DE]">
+                  Press, Editorial &amp; Milestones
+                </h2>
+                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                  A running record of press coverage, editorial features, interviews,
+                  awards, notable events, and House milestones, displayed
+                  chronologically as the unfolding record of Maison Vereen&apos;s
+                  history.
+                </p>
+
+                {/* 3 Table Rows */}
+                <div className="space-y-4 pt-2">
+                  {PRESS_ROWS.map((p, i) => (
+                    <div
+                      key={i}
+                      className="bg-[#060506] border border-white/5 p-4 flex items-center justify-between gap-4 text-xs"
+                    >
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-mono text-gold block">
+                          {p.date} &bull; {p.type}
+                        </span>
+                        <p className="font-serif text-[#EDE8DE]">{p.title}</p>
+                      </div>
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-[#8A8178] shrink-0">
+                        READ MORE &rarr;
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8178]">
+                MORE COVERAGE &amp; MILESTONES TO COME &rarr;
+              </span>
             </div>
           </div>
         </section>
 
-        {/* ── COLLECTOR & MEMBER REFLECTIONS ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
-            <div className="space-y-4 max-w-[680px]">
-              <span className="section-tag">Collector &amp; Member Reflections</span>
-              <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-              >
-                Proof that does not{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>
-                  need to shout.
-                </em>
-              </h2>
-              <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
-                Reflections shared by Founding Registry members and collectors, presented as quoted excerpts with name, country, and bottle number — never as star ratings or review widgets. This section will populate as the House assembles.
-              </p>
-            </div>
+        {/* ── EDITORIAL PREVIEW BANNER ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5 text-center space-y-4">
+          <span className="font-serif text-4xl text-gold/40 block">
+            &ldquo;
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light text-[#EDE8DE] italic max-w-200 mx-auto leading-relaxed">
+            Maison Vereen is crafting more than fragrances — it is shaping a legacy
+            with every decision.
+          </h2>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold block pt-2">
+            &mdash; EDITORIAL PREVIEW
+          </span>
+        </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/4">
-              {testimonialPlaceholders.map((t, i) => (
-                <div
-                  key={i}
-                  className="bg-[#0D0D0D] px-8 py-10 space-y-6 relative flex flex-col"
-                  style={{ opacity: t.placeholder ? 0.4 : 1 }}
+        {/* ── PRESS & FEATURES LOGOS STRIP ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 border-b border-white/5">
+          <div className="space-y-8 text-center">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
+              PRESS &amp; FEATURES
+            </span>
+            <p className="text-xs text-[#8A8178]">As seen in</p>
+
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-sm sm:text-base font-serif tracking-[0.2em] text-[#8A8178]">
+              {PRESS_LOGOS.map((logo) => (
+                <span
+                  key={logo}
+                  className="hover:text-[#EDE8DE] transition-colors cursor-default"
                 >
-                  <div className="absolute top-0 left-0 w-full h-px bg-gold/15" />
-                  {/* Opening quote mark */}
-                  <span
-                    className="font-serif text-gold/20"
-                    style={{ fontSize: "48px", lineHeight: 1 }}
-                  >
-                    &ldquo;
-                  </span>
-                  <p
-                    className="font-serif font-light text-[#C8BFB2] italic leading-[1.6] flex-1"
-                    style={{ fontSize: "17px" }}
-                  >
-                    {t.quote}
-                  </p>
-                  <div className="border-t border-white/5 pt-5 space-y-1.5">
-                    <p className="text-[#6A6258] font-light" style={{ fontSize: "14px" }}>
-                      — {t.attribution}
-                    </p>
-                    <p className="text-[#7A7068] font-light" style={{ fontSize: "12px" }}>
-                      {t.location}
-                    </p>
-                    {t.bottleNumber && (
-                      <p className="font-mono text-gold/50" style={{ fontSize: "10px" }}>
-                        Bottle #{t.bottleNumber}
-                      </p>
-                    )}
-                  </div>
-                </div>
+                  {logo}
+                </span>
               ))}
             </div>
-
-            <p className="text-[#7A7068] font-light italic max-w-[560px]" style={{ fontSize: "14px" }}>
-              Nothing here will ever be fabricated or inflated. This section is built to grow honestly, even if that means starting quietly.
-            </p>
           </div>
         </section>
 
-        {/* ── PRESS & EDITORIAL PLACEHOLDER ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-10">
-            <div className="space-y-4 max-w-[680px]">
-              <span className="section-tag">Press &amp; Editorial</span>
-              <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
-                style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}
-              >
-                Recognition earned{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>quietly.</em>
-              </h2>
-              <p className="text-[#5A5449] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
-                Press coverage, editorial features, and media recognition will be documented here as they arrive. For press inquiries, contact the House directly.
-              </p>
-            </div>
+        {/* ── HOUSE MILESTONES & 4 PHOTO GRID ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="space-y-12">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block text-center">
+              HOUSE MILESTONES (THE RECORD CONTINUES)
+            </span>
 
-            {/* Press logos placeholder grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/4">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="bg-[#0D0D0D] px-8 py-10 flex items-center justify-center"
-                  style={{ opacity: 0.3 }}
-                >
-                  <div className="text-center space-y-2">
-                    <div className="w-16 h-px bg-white/8 mx-auto" />
-                    <p className="uppercase tracking-[0.25em] text-[#2A2520] font-medium" style={{ fontSize: "9px" }}>
-                      Publication
-                    </p>
-                    <div className="w-16 h-px bg-white/8 mx-auto" />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-[#5A5449] font-light" style={{ fontSize: "14px" }}>
-              For press and editorial inquiries:{" "}
-              <a href="mailto:press@maisonvereen.com" className="text-gold/50 hover:text-gold transition-colors">
-                press@maisonvereen.com
-              </a>
-            </p>
-          </div>
-        </section>
-
-        {/* ── CTA ── */}
-        <section className="bg-[#060608]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <div className="space-y-2 max-w-[560px]">
-              <p
-                className="font-serif font-light text-[#E8E2D9]"
-                style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}
-              >
-                An institution is proven not by what it says about itself, but by what others say about it.
-              </p>
-              <p className="text-[#7A7068] font-light" style={{ fontSize: "17px" }}>
-                This page will continue to grow. The House is being assembled now.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 shrink-0">
-              <Link href="/faq" className="link-gold">
-                <span>Read Frequently Asked Questions</span>
-                <span className="text-gold">→</span>
-              </Link>
-              <Link
-                href="/access"
-                className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3 text-[#E8E2D9] transition-all duration-500"
-                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-              >
-                <span className="uppercase font-medium">Apply to the Founding Registry</span>
-              </Link>
+            {/* 4 Photo Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <ImagePlaceholder aspect="aspect-4/3" label="Archival Document" />
+              <ImagePlaceholder aspect="aspect-4/3" label="Window Skyline View" />
+              <ImagePlaceholder aspect="aspect-4/3" label="Wax Seal Invitation" />
+              <ImagePlaceholder aspect="aspect-4/3" label="Private Maison Meeting" />
             </div>
           </div>
         </section>
 
-        {/* PAGE 13 → PAGE 14 transition */}
-        <section className="bg-[#060608] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
-              Recognition answers some questions. Practical ones remain — and deserve clear answers.
-            </p>
-            <Link href="/faq" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
-              Read Frequently Asked Questions →
+        {/* ── BOTTOM BANNER ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-8">
+          <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-200 mx-auto leading-relaxed">
+            Recognition answers some questions. Practical ones remain — and
+            deserve clear answers.
+          </h2>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+            <button
+              onClick={openApply}
+              className="bg-gold hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+            >
+              APPLY TO THE FOUNDING REGISTRY &rarr;
+            </button>
+
+            <Link
+              href="/faq"
+              className="border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
+            >
+              READ FREQUENTLY ASKED QUESTIONS &rarr;
             </Link>
           </div>
         </section>
-
       </main>
+
+      {/* ── Footer ── */}
       <Footer />
-    </>
+
+      {/* ── Application Modal ── */}
+      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+    </div>
   );
 }

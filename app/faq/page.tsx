@@ -1,218 +1,417 @@
 "use client";
 
 import { useState } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ApplicationForm from "../components/ApplicationForm";
 
-// Page 14 — FREQUENTLY ASKED QUESTIONS (aligned to content blueprint)
+const ImagePlaceholder = ({
+  className = "",
+  aspect = "aspect-4/3",
+  label,
+}: {
+  className?: string;
+  aspect?: string;
+  label?: string;
+}) => (
+  <div
+    className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
+  >
+    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506] mb-2">
+      <span className="font-serif text-gold text-sm">MV</span>
+    </div>
+    {label && (
+      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
+        {label}
+      </span>
+    )}
+  </div>
+);
 
-const faqGroups = [
+const GROUP_1_QUESTIONS = [
   {
-    group: "Edition I & The Founding Registry",
-    items: [
-      {
-        q: "What is Edition I and why only 250 bottles?",
-        a: "Edition I is the founding chapter of Maison Vereen — two hundred and fifty individually numbered bottles, each authenticated and documented, produced once and never repeated. Two hundred and fifty is not a marketing number. It is the number the House's master perfumer determined could be produced without compromising a single element of the formulation, the vessel, or the ceremony of ownership.",
-      },
-      {
-        q: "How does bottle numbering work?",
-        a: "Numbers are assigned in the order applicants are formally accepted into the Founding Registry — meaning a bottle's number reflects not when it was purchased, but when its owner was recognised by the House. Bottle 001 belongs to the first person the House accepted. Early conviction is rewarded with early numbering.",
-      },
-      {
-        q: "What is the Founding Registry and how do applications work?",
-        a: "The Maison Vereen Founding Registry is the House's official record of qualified applicants — the foundation from which Edition I's two hundred and fifty owners will ultimately be invited. Applying carries no financial obligation. Applications are read individually by a member of the House and typically receive a decision within 24 to 48 hours.",
-      },
-      {
-        q: "What happens once the Registry reaches 350 accepted members?",
-        a: "Once 350 applicants have been accepted, the Founding Registry closes permanently. No further applications will be reviewed. This ceiling exists for the same reason Edition I is limited to 250 bottles — the House does not assemble itself beyond the scale it can honour.",
-      },
-      {
-        q: "Not every Registry member gets a bottle — why?",
-        a: "The Registry accepts a maximum of 350 members. Because only 250 bottles exist, not every accepted member will ultimately receive an invitation to acquire — a fact the House states plainly, rather than obscures, out of respect for those who apply. Invitations to acquire are issued privately and individually as the House determines, in the order reflected by each member's assigned number.",
-      },
-      {
-        q: "Will Edition I ever be reissued or restocked?",
-        a: "No. Maison Vereen will not reissue, extend, or reproduce Edition I under any future circumstance, regardless of demand. This is not a marketing position. It is the same discipline that makes any founding edition, in any serious collectible category, worth holding in the first place.",
-      },
-    ],
+    num: "1",
+    q: "What exactly is Edition I and why are there only 250 bottles?",
+    a: "Edition I is the founding chapter of Maison Vereen — two hundred and fifty individually numbered bottles, each authenticated and documented, produced once and never repeated.",
   },
   {
-    group: "Membership, Signature Collection & Practical Matters",
-    items: [
-      {
-        q: "What does membership in Maison Vereen include?",
-        a: "Founding Registry members are afforded a continuing place within the House: priority access to future editions before they are announced publicly, private experiences extended only to members, and a direct line of communication with the House that does not exist for the general public. Membership does not entitle anyone to a future bottle, and the House makes no promises it cannot keep.",
-      },
-      {
-        q: "How does the Signature Collection differ from Edition I?",
-        a: "Where Edition I is finite by design, the Signature Collection is the House's enduring body of work — fragrances intended to remain part of Maison Vereen's offering for years, refined and revisited as the House's craft evolves. Unlike Edition I, Signature Collection fragrances are not limited to a numbered run. Both are developed to the same uncompromising standard.",
-      },
-      {
-        q: "How does concierge purchasing work for the Signature Collection?",
-        a: "There is no 'Add to Cart' anywhere within Maison Vereen. Acquiring a Signature Collection fragrance is always a personal exchange — visitors are invited to speak with a concierge, request details, or continue the conversation by WhatsApp or email. This is by design, not by limitation.",
-      },
-      {
-        q: "Is international shipping available?",
-        a: "Yes. The House ships internationally. Specific shipping arrangements, timelines, and applicable logistics are confirmed during the acquisition conversation — either through the Founding Registry invitation process or through a Signature Collection concierge inquiry.",
-      },
-      {
-        q: "How is authenticity verified?",
-        a: "Every Edition I bottle is accompanied by a signed certificate of authenticity — security-printed, UV-reactive, and holographic — permanently tied to its specific bottle number. The certificate records the collector's name, edition number, bottle number, and date of acquisition. It cannot be reproduced or transferred independently of the bottle.",
-      },
-      {
-        q: "Are future editions beyond Edition I planned?",
-        a: "Yes. Maison Vereen is a fragrance house, not a single edition. Future editions are planned, each its own numbered, limited chapter — drawing from a different African region, carrying a different story. Edition I owners receive priority access to all future editions before any public announcement is made.",
-      },
-      {
-        q: "What is the House's pricing philosophy?",
-        a: "The price of Edition I reflects not merely the fragrance, but the numbered ownership position, the bottle as a crafted object, the authentication architecture, the certificate of authenticity, the founder's personal letter, and the permanent documentation of ownership in the House's founding record. Pricing for the Signature Collection is communicated through the concierge process.",
-      },
-      {
-        q: "How do I know this is legitimate?",
-        a: "Write to us directly at hello@maisonvereen.com. We respond personally, usually within a few hours. We can provide documentation, arrange a verification call, or — for Lagos-based applicants — an in-person appointment where you can see and smell the fragrance before deciding. All official communications, including payment instructions, come only from hello@maisonvereen.com.",
-      },
-    ],
+    num: "2",
+    q: "How does the bottle numbering work?",
+    a: "Numbers are assigned in the order applicants are formally accepted into the Founding Registry — meaning a bottle's number reflects not when it was purchased, but when its owner was recognised by the House.",
+  },
+  {
+    num: "3",
+    q: "What is the Founding Registry?",
+    a: "The Maison Vereen Founding Registry is the House's official record of qualified applicants — the foundation from which Edition I's two hundred and fifty owners will ultimately be invited.",
+  },
+  {
+    num: "4",
+    q: "How are applications reviewed?",
+    a: "Applications are read individually by a member of the House — never processed automatically.",
+  },
+  {
+    num: "5",
+    q: "What happens when 350 accepted members is reached?",
+    a: "Once 350 applicants have been accepted, the Founding Registry closes permanently. No further applications will be reviewed.",
+  },
+  {
+    num: "6",
+    q: "What happens after applications close?",
+    a: "Invitations to acquire are issued privately and individually as the House determines, in the order reflected by each member's assigned number.",
+  },
+  {
+    num: "7",
+    q: "How and when are invitations to acquire Edition I issued?",
+    a: "Invitations are sent via private correspondence following application review and acceptance.",
+  },
+  {
+    num: "8",
+    q: "Can I still buy Edition I if I'm not in the Founding Registry?",
+    a: "No. Edition I is available exclusively through the Founding Registry invitation process.",
+  },
+  {
+    num: "9",
+    q: "Is the Founding Registry a guarantee that I will be able to purchase Edition I?",
+    a: "No. The Registry accepts up to 350 members for 250 bottles, ensuring carefully considered allocation.",
+  },
+  {
+    num: "10",
+    q: "Can I transfer or sell my invitation or bottle?",
+    a: "Ownership positions and invitations are non-transferable to preserve the integrity of the founding chapter.",
+  },
+];
+
+const GROUP_2_QUESTIONS = [
+  {
+    num: "11",
+    q: "What does membership in Maison Vereen include?",
+    a: "Founding Registry members receive priority access to future editions, private correspondence, and direct concierge access.",
+  },
+  {
+    num: "12",
+    q: "How is the Signature Collection different from Edition I?",
+    a: "Where Edition I is finite by design, the Signature Collection is the House's enduring, permanent body of work.",
+  },
+  {
+    num: "13",
+    q: "How do I purchase a Signature Collection fragrance?",
+    a: "Acquisition happens through a personal conversation with a House concierge, rather than an automated checkout.",
+  },
+  {
+    num: "14",
+    q: "Do you ship internationally?",
+    a: "Yes. Maison Vereen ships globally via dedicated insured luxury freight.",
+  },
+  {
+    num: "15",
+    q: "Are there countries you do not ship to?",
+    a: "Specific shipping arrangements are confirmed during concierge consultation.",
+  },
+  {
+    num: "16",
+    q: "How is authenticity verified?",
+    a: "Every bottle includes a signed, security-printed certificate of authenticity with matching serial records.",
+  },
+  {
+    num: "17",
+    q: "Why doesn't Maison Vereen sell on marketplaces or through retailers?",
+    a: "To protect provenance, pricing integrity, and direct relationships with every member.",
+  },
+  {
+    num: "18",
+    q: "What is the House's pricing philosophy?",
+    a: "Pricing reflects uncompromising raw material quality, scarcity, and permanent archival record-keeping.",
+  },
+  {
+    num: "19",
+    q: "Will there be future limited editions after Edition I?",
+    a: "Yes. Future limited chapters will be announced first to existing founding members.",
+  },
+  {
+    num: "20",
+    q: "How can I contact the House directly if my question isn't answered here?",
+    a: "You can reach out via WhatsApp concierge or by emailing concierge@maisonvereen.com directly.",
   },
 ];
 
 export default function FAQPage() {
-  const [openKey, setOpenKey] = useState<string | null>(null);
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const openApply = () => setIsApplyOpen(true);
+
+  const [openGroup1, setOpenGroup1] = useState<string | null>(null);
+  const [openGroup2, setOpenGroup2] = useState<string | null>(null);
 
   return (
-    <>
-      <Header  />
-      <main className="bg-charcoal">
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
+      {/* ── Header ── */}
+      <Header onOpenApply={openApply} />
 
-        {/* ── HERO — split layout ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-24">
-                <div className="max-w-[540px] space-y-6">
-                  <span className="section-tag">Frequently Asked Questions</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}>
-                    Everything You Would Ask,{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>Answered Directly.</em>
-                  </h1>
-
-                  {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
-                  <p
-                    className="font-serif font-light text-gold/80 italic"
-                    style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
-                  >
-                    Clarity, before commitment.
-                  </p>
-
-                  <p className="text-[#C8BFB2] font-serif font-light italic leading-[1.7]" style={{ fontSize: "16px" }}>
-                    Twenty questions, answered in the unhurried, confident voice of the House — designed to dissolve objection and deepen understanding at once.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    This page exists so that no serious applicant is left with an unanswered practical question before applying. Each answer is written in the House&apos;s own voice — confident, direct, and unhurried — never defensive, never evasive.
-                  </p>
-                </div>
+      <main className="flex-1 pt-24 md:pt-28">
+        {/* ── HERO SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Narrative */}
+            <div className="space-y-8 max-w-155">
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-xl text-gold">14</span>
+                <div className="w-6 h-px bg-gold" />
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
+                  FREQUENTLY ASKED QUESTIONS
+                </span>
               </div>
-              {/* Bottle — cap/neck only, barely revealed */}
-              <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 8%", opacity: 0.48, filter: "brightness(0.57) saturate(0.37)" }} />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/52" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/30 to-[#060608]/12" />
-                <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 44% 50% at 53% 18%, rgba(180,130,40,0.09) 0%, transparent 65%)" }} />
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ── FAQ GROUPED ACCORDION ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-20 space-y-14">
-            {faqGroups.map((group, gi) => (
-              <div key={gi} className="max-w-[880px] space-y-0">
-                <div className="mb-6">
-                  <span className="section-tag">{group.group}</span>
-                </div>
-                <div className="border-t border-white/6">
-                  {group.items.map((faq, i) => {
-                    const key = `${gi}-${i}`;
-                    return (
-                      <div key={i} className="border-b border-white/6">
-                        <button
-                          onClick={() => setOpenKey(openKey === key ? null : key)}
-                          className="w-full flex items-start justify-between py-7 text-left gap-6 group"
-                        >
-                          <span
-                            className="font-serif font-light leading-[1.4] text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300"
-                            style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
-                          >
-                            {faq.q}
-                          </span>
-                          <span
-                            className={`shrink-0 text-gold/50 transition-transform duration-300 mt-1 ${openKey === key ? "rotate-45" : ""}`}
-                            style={{ fontSize: "22px", lineHeight: 1 }}
-                          >
-                            +
-                          </span>
-                        </button>
-                        {openKey === key && (
-                          <div className="pb-7 max-w-[720px]">
-                            <p className="text-[#6A6258] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                              {faq.a}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
+                Everything You Would Ask, Answered Directly.
+              </h1>
 
-        {/* ── CTA ── */}
-        <section className="bg-[#0D0D0D] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <div className="space-y-2">
-              <p className="font-serif font-light text-[#E8E2D9]" style={{ fontSize: "clamp(1.1rem, 1.6vw, 1.3rem)" }}>
-                Still have questions?
-              </p>
-              <p className="text-[#7A7068] font-light" style={{ fontSize: "17px" }}>
-                Every inquiry is read by a person and responded to thoughtfully.
+              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+                Twenty questions, answered in the unhurried, confident voice of
+                the House — designed to dissolve objection and deepen
+                understanding at once.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-              <Link
-                href="/access"
-                className="inline-block bg-gold/90 hover:bg-gold px-8 py-3 text-charcoal transition-all duration-500"
-                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-              >
-                <span className="uppercase font-semibold">Apply to the Founding Registry</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="link-gold"
-              >
-                <span>Speak with the House Directly</span>
-                <span className="text-gold">→</span>
-              </Link>
+
+            {/* Right Image Placeholder */}
+            <div className="w-full flex justify-center lg:justify-end">
+              <ImagePlaceholder
+                aspect="aspect-4/3"
+                className="w-full max-w-125 rounded-sm shadow-2xl"
+                label="FAQ Ledger Manuscript Desk"
+              />
             </div>
           </div>
-        </section>
 
-        {/* PAGE 14 → PAGE 15 transition */}
-        <section className="bg-[#060608] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-            <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
-              Some questions are better asked directly. The House is always reachable.
+          {/* Sub-hero paragraph */}
+          <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
+            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+              This page exists so that no serious applicant is left with an
+              unanswered practical question before applying. Each answer is written
+              in the House&apos;s own voice — confident, direct, and unhurried —
+              never defensive, never evasive.
             </p>
-            <Link href="/contact" className="inline-block mt-4 text-gold/70 hover:text-gold transition-colors uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px" }}>
-              Speak with the House Directly →
+          </div>
+
+          {/* 4 Pillars */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                DIRECT ANSWERS
+              </span>
+              <p className="text-xs text-[#8A8178] font-light">
+                No ambiguity. No corporate filler.
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                PRACTICAL CLARITY
+              </span>
+              <p className="text-xs text-[#8A8178] font-light">
+                The details that matter, explained properly.
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                HOUSE PERSPECTIVE
+              </span>
+              <p className="text-xs text-[#8A8178] font-light">
+                Answers in the voice of Maison Vereen.
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 space-y-2">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                TOTAL TRANSPARENCY
+              </span>
+              <p className="text-xs text-[#8A8178] font-light">
+                Nothing hidden. Nothing exaggerated.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 2 COLUMNS ACCORDION SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Column 01 */}
+            <div className="space-y-8">
+              <div>
+                <span className="font-serif text-xl text-gold block">01</span>
+                <h2 className="font-serif text-2xl font-light text-[#EDE8DE] leading-snug">
+                  Edition I &amp; The Founding Registry
+                </h2>
+                <p className="text-xs text-[#8A8178] font-light mt-1">
+                  Questions about Edition I, the Founding Registry, and the path
+                  to becoming part of the House&apos;s founding chapter.
+                </p>
+              </div>
+
+              {/* Accordion 1-10 */}
+              <div className="divide-y divide-white/5 border-t border-b border-white/5">
+                {GROUP_1_QUESTIONS.map((item) => {
+                  const isOpen = openGroup1 === item.num;
+                  return (
+                    <div key={item.num} className="py-4">
+                      <button
+                        onClick={() =>
+                          setOpenGroup1(isOpen ? null : item.num)
+                        }
+                        className="w-full flex items-center justify-between text-left text-xs sm:text-sm font-light text-[#EDE8DE] hover:text-gold transition-colors gap-4"
+                      >
+                        <span>
+                          <span className="text-gold font-mono mr-2">
+                            {item.num}
+                          </span>
+                          {item.q}
+                        </span>
+                        <span className="text-gold font-mono">
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </button>
+                      {isOpen && (
+                        <p className="text-xs text-[#8A8178] font-light mt-3 leading-relaxed pl-6">
+                          {item.a}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Callout box */}
+              <div className="bg-[#0A0A0C] border border-white/5 p-6 flex items-center gap-6">
+                <ImagePlaceholder
+                  aspect="aspect-square"
+                  className="w-16 h-16 shrink-0"
+                  label="Wax Seal"
+                />
+                <div className="space-y-1">
+                  <p className="font-serif text-xs text-gold italic">
+                    &ldquo;The registry is not a queue. It is a circle of
+                    recognition.&rdquo;
+                  </p>
+                  <p className="text-[10px] text-[#8A8178] font-light">
+                    Every accepted member is chosen because the House believes in who
+                    they are and what they represent — not because they were first.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 02 */}
+            <div className="space-y-8">
+              <div>
+                <span className="font-serif text-xl text-gold block">02</span>
+                <h2 className="font-serif text-2xl font-light text-[#EDE8DE] leading-snug">
+                  Membership, Signature Collection &amp; Practical Matters
+                </h2>
+                <p className="text-xs text-[#8A8178] font-light mt-1">
+                  Questions about membership, the Signature Collection,
+                  concierge purchasing, and everything practical.
+                </p>
+              </div>
+
+              {/* Accordion 11-20 */}
+              <div className="divide-y divide-white/5 border-t border-b border-white/5">
+                {GROUP_2_QUESTIONS.map((item) => {
+                  const isOpen = openGroup2 === item.num;
+                  return (
+                    <div key={item.num} className="py-4">
+                      <button
+                        onClick={() =>
+                          setOpenGroup2(isOpen ? null : item.num)
+                        }
+                        className="w-full flex items-center justify-between text-left text-xs sm:text-sm font-light text-[#EDE8DE] hover:text-gold transition-colors gap-4"
+                      >
+                        <span>
+                          <span className="text-gold font-mono mr-2">
+                            {item.num}
+                          </span>
+                          {item.q}
+                        </span>
+                        <span className="text-gold font-mono">
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </button>
+                      {isOpen && (
+                        <p className="text-xs text-[#8A8178] font-light mt-3 leading-relaxed pl-6">
+                          {item.a}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Callout box */}
+              <div className="bg-[#0A0A0C] border border-white/5 p-6 flex items-center gap-6">
+                <ImagePlaceholder
+                  aspect="aspect-square"
+                  className="w-16 h-16 shrink-0"
+                  label="Bottle Hands"
+                />
+                <div className="space-y-1">
+                  <p className="font-serif text-xs text-gold italic">
+                    &ldquo;A conversation, not a cart.&rdquo;
+                  </p>
+                  <p className="text-[10px] text-[#8A8178] font-light">
+                    Every acquisition is personal because every fragrance is
+                    personal. That will never change.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── STILL HAVE A QUESTION SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 text-center space-y-4 border-b border-white/5">
+          <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE]">
+            Still have a question not covered here?
+          </h2>
+          <p className="text-xs text-[#8A8178] font-light">
+            The House is always reachable. Some questions are better asked directly.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block text-[10px] tracking-[0.25em] uppercase text-gold hover:underline pt-2"
+          >
+            SPEAK WITH THE HOUSE DIRECTLY &rarr;
+          </Link>
+        </section>
+
+        {/* ── BOTTOM BANNER ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-8">
+          <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-200 mx-auto leading-relaxed">
+            Some questions are better asked directly. The House is always
+            reachable.
+          </h2>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+            <button
+              onClick={openApply}
+              className="bg-gold hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+            >
+              APPLY TO THE FOUNDING REGISTRY &rarr;
+            </button>
+
+            <Link
+              href="/contact"
+              className="border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
+            >
+              SPEAK WITH THE HOUSE DIRECTLY &rarr;
             </Link>
           </div>
         </section>
-
       </main>
+
+      {/* ── Footer ── */}
       <Footer />
-    </>
+
+      {/* ── Application Modal ── */}
+      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+    </div>
   );
 }

@@ -14,9 +14,9 @@ export default function MembershipPage() {
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="max-w-[720px] space-y-8">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+            <div className="max-w-180 space-y-8">
               <span className="section-tag">Membership &amp; Access</span>
               <h1
                 className="font-serif font-light text-[#E8E2D9] leading-[1.06]"
@@ -59,7 +59,7 @@ export default function MembershipPage() {
 
         {/* ── PRIORITY ACCESS & FUTURE EDITIONS ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-start">
               <div className="space-y-6">
                 <span className="section-tag">Priority Access &amp; Future Editions</span>
@@ -103,8 +103,8 @@ export default function MembershipPage() {
 
         {/* ── THIS IS WHERE THE RELATIONSHIP BEGINS ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
-            <div className="max-w-[680px] mx-auto text-center space-y-8">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28">
+            <div className="max-w-170 mx-auto text-center space-y-8">
               <div className="w-8 h-px bg-gold/30 mx-auto" />
               <p
                 className="font-serif font-light text-[#C8BFB2] leading-[1.55]"
@@ -140,7 +140,7 @@ export default function MembershipPage() {
 
         {/* PAGE 10 → PAGE 11 transition */}
         <section className="bg-[#060506] border-t border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
             <p className="font-serif font-light italic text-[#7A7068]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
               Membership is one path into the House. The Signature Collection is another — open, permanent, and entirely its own.
             </p>
