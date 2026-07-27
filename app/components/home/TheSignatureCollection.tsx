@@ -29,10 +29,10 @@ const fragrances = [
 export default function TheSignatureCollection() {
   return (
     <section className="bg-[#080808] py-24 md:py-32 lg:py-40 border-b border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 space-y-20">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 space-y-20">
 
         {/* Header — exact blueprint copy */}
-        <div className="max-w-[680px] space-y-6 flex flex-col items-start">
+        <div className="max-w-170 space-y-6 flex flex-col items-start">
           <span className="section-tag">World Two — The Signature Collection</span>
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.1]"

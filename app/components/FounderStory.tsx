@@ -9,10 +9,10 @@ export default function FounderStory() {
       id="founder-story"
       className="bg-charcoal border-t border-white/5"
     >
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[640px]">
+      <div className="max-w-350 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-160">
           {/* Left — image: side profile, low light, looking away — from document design note */}
-          <div className="relative min-h-[440px] lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1 group">
+          <div className="relative min-h-110 lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1 group">
             <Image
               src="/founder-image-1.png"
               alt="Founder of Maison Vereen — side profile"
@@ -38,7 +38,7 @@ export default function FounderStory() {
 
           {/* Right — text: exact copy from document Page 1 and Page 4 */}
           <div className="flex items-center justify-center lg:justify-start px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28 bg-[#0D0D0D] order-1 lg:order-2 w-full">
-            <div className="space-y-9 max-w-[480px] text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="space-y-9 max-w-120 text-center lg:text-left flex flex-col items-center lg:items-start">
               <span className="section-tag">The Founder&apos;s Story</span>
 
               {/* Blueprint PAGE 4 headline — home page preview */}

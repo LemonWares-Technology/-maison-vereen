@@ -29,9 +29,9 @@ const pillars = [
 export default function Philosophy() {
   return (
     <section id="philosophy" className="bg-[#0D0D0D] border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact blueprint PAGE 3 preview copy */}
-        <div className="space-y-6 max-w-[680px] mx-auto text-center md:text-left md:mx-0 flex flex-col items-center md:items-start">
+        <div className="space-y-6 max-w-170 mx-auto text-center md:text-left md:mx-0 flex flex-col items-center md:items-start">
           <span className="section-tag">The Philosophy of the House</span>
           <h2 className="type-headline">
             Luxury Is Not Volume.{" "}

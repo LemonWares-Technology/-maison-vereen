@@ -1,158 +1,87 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlankBox from "./ui/BlankBox";
 
 interface HeroSectionProps {
   onOpenApply: () => void;
 }
 
 export default function HeroSection({ onOpenApply }: HeroSectionProps) {
-  const [showCTA, setShowCTA] = useState(false);
-
-  // CTA appears after 3 seconds — subtle fade-in, never urgent
-  useEffect(() => {
-    const t = setTimeout(() => setShowCTA(true), 3000);
-    return () => clearTimeout(t);
-  }, []);
-
-  const scrollDown = () => {
-    document
-      .getElementById("pillars")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
-    <section
-      id="hero"
-      className="relative w-full min-h-screen flex items-center overflow-hidden bg-[#060506]"
-    >
-      {/* Background — hero-section-image.png, city at golden hour */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-section-image.png"
-          alt="Maison Vereen"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-          style={{ opacity: 0.62 }}
-        />
-        {/* Left panel very dark so text is fully legible */}
-        <div className="absolute inset-0 bg-linear-to-r from-[#060506]/96 via-[#060506]/72 to-[#060506]/15" />
-        {/* Top and bottom fade */}
-        <div className="absolute inset-0 bg-linear-to-t from-[#060506]/85 via-transparent to-[#060506]/50" />
-        {/* Warm amber tone — matches golden hour */}
-        <div className="absolute inset-0 bg-[#1C0E04]/12" />
-      </div>
+    <section className="relative w-full min-h-screen flex items-center bg-[#060506] border-b border-white/5 pt-28 pb-16 md:pt-36 md:pb-24">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pt-[72px] flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="max-w-[700px] py-28 md:py-36 space-y-8 flex flex-col items-center md:items-start">
-          {/* Headline — exact from document PAGE 1 blueprint */}
-          <h1
-            className="font-serif font-light text-[#EDE7DC] leading-[1.05] anim-fade-up"
-            style={{ fontSize: "clamp(2.4rem, 6vw, 5rem)" }}
-          >
-            The room knows{" "}
-            <em className="not-italic" style={{ color: "#C9A84C" }}>
+          {/* Left Content Column (7 cols on lg) */}
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
+
+            {/* Main Headline */}
+            <h1
+              className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
+              style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.75rem)" }}
+            >
+              The room knows <br className="hidden sm:block" />
               before you speak.
-            </em>
-          </h1>
+            </h1>
 
-          {/* Sub-headline — chosen from blueprint Item 3 alternatives */}
-          <p
-            className="font-serif font-light text-gold/80 italic anim-fade-up-d1"
-            style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
-          >
-            Africa&apos;s first serious luxury fragrance house.
-          </p>
+            {/* Subtitle / Eyebrow Block */}
+            <div className="space-y-1.5 pt-2">
+              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
+                EDITION I.
+              </span>
+              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium">
+                TWO HUNDRED AND FIFTY INDIVIDUALLY NUMBERED BOTTLES.
+              </span>
+            </div>
 
-          {/* Supporting statement — exact from blueprint */}
-          <p
-            className="font-serif font-light text-[#C8BFB2] italic tracking-wide anim-fade-up-d2"
-            style={{ fontSize: "clamp(1rem, 1.8vw, 1.35rem)" }}
-          >
-            Edition I. Two hundred and fifty individually numbered bottles. Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
-          </p>
-
-          {/* Main content — exact from blueprint */}
-          <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0 anim-fade-up-d2"
-            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
-          >
-            Before your name is known, before your story is told, before a single word has passed between you and a room — something has already been decided. Maison Vereen was built for that instant. The one that happens before language.
-          </p>
-
-          <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0 anim-fade-up-d3"
-            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
-          >
-            This is not a house that asks you to become someone. It recognises who has already arrived. Edition I exists for the small number of people who have always understood the difference between fitting in and belonging — and who have been waiting, without quite knowing it, for something built to that standard.
-          </p>
-
-          <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[560px] mx-auto md:mx-0"
-            style={{ fontSize: "1.0625rem", letterSpacing: "0.02em" }}
-          >
-            Two hundred and fifty bottles. No more will ever be made. What follows on this page is not a product description. It is an invitation to understand what you would be applying to become part of.
-          </p>
-
-          {/* CTAs — appear after 3 seconds, subtle fade-in */}
-          <div
-            className="pt-2 flex flex-col sm:flex-row gap-4 justify-center md:justify-start transition-all duration-1000 ease-out"
-            style={{
-              opacity: showCTA ? 1 : 0,
-              transform: showCTA ? "translateY(0)" : "translateY(8px)",
-            }}
-          >
-            {/* Primary CTA: "Apply for a Position" */}
-            <Link
-              href="/access"
-              className="inline-block bg-gold/90 hover:bg-gold px-7 py-3.5 text-charcoal transition-all duration-500"
-              style={{ fontSize: "10px", letterSpacing: "0.3em" }}
-              aria-label="Apply for a Position"
+            {/* Supporting Copy */}
+            <p
+              className="text-[#8A8178] font-light leading-[1.85] max-w-145"
+              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.0625rem)" }}
             >
-              <span className="uppercase font-semibold">Apply for a Position</span>
-            </Link>
-            {/* Secondary CTA: "Enter the House" */}
-            <Link
-              href="/the-house"
-              className="inline-block border border-[#E8E2D9]/30 hover:border-gold hover:text-gold px-7 py-3.5 text-[#8A8070] transition-all duration-500"
-              style={{ fontSize: "10px", letterSpacing: "0.3em" }}
-              aria-label="Enter the House"
-            >
-              <span className="uppercase font-medium">Enter the House</span>
-            </Link>
+              Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
+            </p>
+
+            {/* Action CTAs */}
+            <div className="pt-4 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+              <button
+                onClick={onOpenApply}
+                className="bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-semibold transition-all duration-300 flex items-center justify-center gap-3 group"
+              >
+                <span>APPLY TO THE REGISTRY</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </button>
+
+              <Link
+                href="/edition-i"
+                className="border border-[#7A7068]/40 hover:border-gold` text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 text-center bg-[#060506]"
+              >
+                DISCOVER EDITION I
+              </Link>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="pt-10 flex items-center gap-3">
+              <span className="w-px h-5 bg-gold/60" />
+              <span className="font-mono text-[9px] uppercase tracking-[0.35em] text-[#7A7068]">
+                SCROLL
+              </span>
+            </div>
+
           </div>
+
+          {/* Right Column — Elegant Blank Box (5 cols on lg) */}
+          <div className="lg:col-span-5 flex items-center justify-center">
+            <BlankBox
+              aspectRatio="3/4"
+              className="w-full max-w-115"
+              label="HERO BOTTLE FRAME"
+            />
+          </div>
+
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <button
-        onClick={scrollDown}
-        aria-label="Scroll down"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 group"
-      >
-        <div className="w-8 h-8 rounded-full border border-[#2A2420] group-hover:border-gold/50 flex items-center justify-center transition-all duration-300">
-          <svg
-            width="9"
-            height="9"
-            viewBox="0 0 10 10"
-            fill="none"
-            className="text-[#3A3028] group-hover:text-gold transition-colors duration-300"
-          >
-            <path
-              d="M5 1v8M1 5l4 4 4-4"
-              stroke="currentColor"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-      </button>
     </section>
   );
 }

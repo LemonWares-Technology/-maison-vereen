@@ -1,189 +1,250 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 
-// Page 6 — THE FIRST 250
+const ImagePlaceholder = ({
+  className = "",
+  aspect = "aspect-4/3",
+  label,
+}: {
+  className?: string;
+  aspect?: string;
+  label?: string;
+}) => (
+  <div
+    className={`relative bg-[#0A0A0C] border border-[#C9A84C]/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
+  >
+    <div className="w-10 h-10 border border-[#C9A84C]/40 flex items-center justify-center bg-[#060506] mb-2">
+      <span className="font-serif text-[#C9A84C] text-sm">MV</span>
+    </div>
+    {label && (
+      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
+        {label}
+      </span>
+    )}
+  </div>
+);
 
-const ownershipItems = [
-  "The Edition I bottle — hand-blown glass, African mineral inclusions, individually numbered, engraved.",
-  "The Gold Ownership Card — 18-micron gold-plated metal, laser-engraved with owner name and bottle number, QR-authenticated.",
-  "The Private Ownership Portal — personal digital archive, founder's video letter, edition provenance, authentication record.",
-  "The Certificate of Authentication — security-printed, UV-reactive, holographic strip. Matches the bottle number.",
-  "The Founder's Personal Letter — written for Edition I. Signed. Part of the edition's permanent record.",
-  "Collector's Register entry — permanent documentation of ownership in the Maison Vereen founding archive.",
-  "Priority access to Edition II — confirmed register members receive first access before any public announcement.",
+const RECENTLY_WELCOMED = [
+  { no: "001", name: "James F.", country: "Nigeria", status: "Accepted" },
+  { no: "002", name: "Sarah M.", country: "United Kingdom", status: "Accepted" },
+  { no: "003", name: "Grace A.", country: "Ghana", status: "Accepted" },
+  { no: "004", name: "David K.", country: "Canada", status: "Accepted" },
 ];
 
 export default function TheFirst250Page() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const openApply = () => setIsApplyOpen(true);
 
   return (
-    <>
-      <Header />
-      <main className="bg-charcoal">
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-[#C9A84C]/30 selection:text-[#EDE8DE]">
+      {/* ── Header ── */}
+      <Header onOpenApply={openApply} />
 
-        {/* ── HERO — split layout ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[540px] space-y-8">
-                  <span className="section-tag">The First 250</span>
-                  <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
-                    Because rarity is a form of respect —{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>for the object and for its owners.</em>
-                  </h1>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    250 was not chosen for scarcity&apos;s sake. It was chosen because the founding chapter of a house should be owned by people who understand its significance, not everyone who can afford it. There are more than 250 people in the world who can afford ₦400,000 on a fragrance. Not all of them are the founding-chapter type. The number 250 is a filter, not a ceiling.
-                  </p>
-                </div>
+      <main className="flex-1 pt-24 md:pt-28">
+        {/* ── HERO SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-12 md:py-20 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Narrative */}
+            <div className="space-y-8 max-w-[620px]">
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-xl text-[#C9A84C]">09</span>
+                <div className="w-6 h-[1px] bg-[#C9A84C]" />
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium">
+                  LIVE FOUNDING REGISTRY
+                </span>
               </div>
-              {/* Bottle — only the neck and cap visible at top */}
-              <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 5%", opacity: 0.52, filter: "brightness(0.58) saturate(0.38)" }} />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/50" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/30 to-[#060608]/10" />
-                <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 44% 52% at 54% 16%, rgba(180,130,40,0.1) 0%, transparent 65%)" }} />
-                <div className="absolute bottom-8 left-8 space-y-1.5 z-10">
-                  <div className="w-5 h-px bg-gold/25" />
-                  <span className="block uppercase tracking-widest text-[#3A3028] font-light" style={{ fontSize: "9px" }}>250 Bottles · Edition I</span>
-                </div>
+
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
+                127 of 350. The House Is Being Assembled Now.
+              </h1>
+
+              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+                The live Founding Registry count reflects every applicant the House
+                has personally reviewed and accepted — never an estimate, never
+                inflated.
+              </p>
+            </div>
+
+            {/* Right Image Placeholder */}
+            <div className="w-full flex justify-center lg:justify-end">
+              <ImagePlaceholder
+                aspect="aspect-4/3"
+                className="w-full max-w-[500px] rounded-sm shadow-2xl"
+                label="Founding Registry Ledger"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ── A LIVING RECORD ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="max-w-[800px] mx-auto text-center space-y-6">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
+              A LIVING RECORD
+            </span>
+            <p className="text-sm sm:text-base text-[#B3A99B] font-light leading-relaxed">
+              This page exists as a living record of the Founding Registry&apos;s
+              growth. The count displayed here rises only when Maison Vereen
+              formally accepts an applicant — never automatically, never on a
+              timer, and never adjusted for effect.
+            </p>
+            <p className="text-sm sm:text-base text-[#8A8178] font-light leading-relaxed">
+              As the count approaches three hundred and fifty, this page becomes
+              the clearest, most honest signal of how close the Founding Registry
+              is to closing.
+            </p>
+          </div>
+        </section>
+
+        {/* ── BIG COUNTER BOX ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="bg-[#0A0A0C] border border-[#C9A84C]/30 p-10 sm:p-16 max-w-[900px] mx-auto text-center space-y-8">
+            <span className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#C9A84C] font-light block leading-none">
+              127
+            </span>
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#EDE8DE] font-medium">
+              ACCEPTED MEMBERS
+            </p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[#8A8178]">
+              out of 350
+            </p>
+
+            {/* Progress bar */}
+            <div className="w-full bg-white/10 h-1 relative overflow-hidden rounded-full max-w-[500px] mx-auto">
+              <div
+                className="bg-[#C9A84C] h-full transition-all duration-1000"
+                style={{ width: "36.2%" }}
+              />
+            </div>
+            <div className="flex justify-between text-[10px] font-mono text-[#8A8178] max-w-[500px] mx-auto">
+              <span>127</span>
+              <span>350</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ── RECENTLY WELCOMED ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="max-w-[900px] mx-auto space-y-8">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block text-center">
+              RECENTLY WELCOMED
+            </span>
+
+            <div className="bg-[#0A0A0C] border border-white/5 p-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-white/10 text-[9px] uppercase tracking-[0.2em] text-[#8A8178]">
+                      <th className="pb-3">MEMBER</th>
+                      <th className="pb-3">COUNTRY</th>
+                      <th className="pb-3 text-right">STATUS</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5 text-[#EDE8DE]">
+                    {RECENTLY_WELCOMED.map((row) => (
+                      <tr key={row.no}>
+                        <td className="py-4 font-serif">
+                          <span className="text-[#C9A84C] font-mono mr-3">
+                            {row.no}
+                          </span>
+                          {row.name}
+                        </td>
+                        <td className="py-4 text-[#8A8178]">{row.country}</td>
+                        <td className="py-4 text-right text-[#C9A84C] font-medium">
+                          {row.status}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── THE NUMBERED BOTTLES — split layout ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[52vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">The Numbered Bottles</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                    Your bottle number is permanent.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>So is your place in this story.</em>
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Every bottle in Edition I carries a number: 1 through 250. That number is engraved into the glass. It is registered on the blockchain. It is inscribed on your Gold Ownership Card. It is in the founding documentation of this house.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Bottle 1 exists. Bottle 250 exists. Every number in between exists — exactly once, forever. When you own one, you own a specific position in a specific history. That is not metaphor. That is the architecture of the house.
-                  </p>
-                </div>
-              </div>
-              {/* Bottle — base/number detail crop, slightly angled */}
-              <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 70%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0D0D0D]/60" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/90 via-[#060608]/25 to-transparent" />
-                <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 40% 50% at 52% 60%, rgba(180,130,40,0.07) 0%, transparent 60%)" }} />
-                <div className="absolute bottom-8 left-8 space-y-1.5 z-10">
-                  <div className="w-5 h-px bg-gold/25" />
-                  <span className="block uppercase tracking-widest text-[#3A3028] font-light" style={{ fontSize: "9px" }}>No. 001 — 250 · Edition I</span>
-                </div>
-              </div>
+        {/* ── WHY 350? ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Big Text */}
+            <div className="bg-[#0A0A0C] border border-white/5 p-10 text-center">
+              <span className="font-serif text-5xl sm:text-6xl text-[#C9A84C] font-light block mb-3">
+                350
+              </span>
+              <span className="text-xs uppercase tracking-[0.25em] text-[#EDE8DE] font-semibold">
+                MAXIMUM FOUNDING MEMBERS
+              </span>
+            </div>
+
+            {/* Right Explanation */}
+            <div className="space-y-4">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
+                WHY 350?
+              </span>
+              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                The Registry accepts a maximum of three hundred and fifty members
+                because the House honours scale as much as exclusivity. Only two
+                hundred and fifty bottles exist in Edition I. The Registry is
+                intentionally larger to ensure the House can select with care, never
+                compromise on standards, and protect the integrity of the founding
+                chapter.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── HISTORICAL SIGNIFICANCE — split layout ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">Historical Significance</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                    What is happening here has happened before.{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>The people who recognized it early were glad they did.</em>
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    The first people to own a Patek Philippe were not told it would become the most collected mechanical watch in history. They simply recognized something extraordinary and responded to it. The first owners of Hermès leatherwork did not know they were holding the beginning of a multigenerational house. But they were.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    The first 250 owners of Maison Vereen Edition I are in the same position. We cannot tell you what this house will become. We can tell you it was built to become something.
-                  </p>
-                </div>
-              </div>
-              {/* Bottle — mid section, label area */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 30%", opacity: 0.49, filter: "brightness(0.57) saturate(0.37)" }} />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent to-charcoal/55" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/90 via-[#060608]/22 to-transparent" />
-                <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 42% 50% at 52% 32%, rgba(180,130,40,0.08) 0%, transparent 63%)" }} />
-              </div>
-            </div>
+        {/* ── GOLD SHIELD EMBLEM BANNER ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 text-center space-y-4 border-b border-white/5">
+          <div className="w-10 h-10 border border-[#C9A84C]/40 mx-auto flex items-center justify-center bg-[#060506] mb-4">
+            <span className="font-serif text-[#C9A84C] text-xs">MV</span>
           </div>
+
+          <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
+            This number only moves forward.
+          </h2>
+
+          <p className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold">
+            NEVER ESTIMATED. NEVER INFLATED. NEVER RUSHED.
+          </p>
         </section>
 
-        {/* ── COLLECTOR VALUE — split layout ── */}
-        <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[50vh]">
-              {/* Bottle left, text right — alternating rhythm */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 45%", opacity: 0.48, filter: "brightness(0.55) saturate(0.35)" }} />
-                <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0D0D0D]/60" />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060608]/85 via-[#060608]/20 to-transparent" />
-                <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 42% 48% at 48% 45%, rgba(180,130,40,0.07) 0%, transparent 62%)" }} />
-              </div>
-              <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
-                  <span className="section-tag">Collector Value</span>
-                  <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                    The value of a founding edition is set by{" "}
-                    <em className="not-italic" style={{ color: "#C9A84C" }}>the future of the house, not the present.</em>
-                  </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Edition I is priced at ₦400,000 today. Its secondary market value in five years depends entirely on what Maison Vereen becomes. If the house grows into what it is designed to become — Africa&apos;s most respected luxury house — Edition I will be its rarest artifact.
-                  </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
-                    Not the most expensive. The most permanent. The most significant. The bottle owned by someone who was there first.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* ── BOTTOM CTA SECTION ── */}
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 text-center space-y-8">
+          <div className="space-y-4 max-w-[600px] mx-auto">
+            <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
+              Acceptance into the Registry is only the beginning
+            </h2>
+            <p className="text-xs sm:text-sm text-[#8A8178] font-light">
+              Membership in this House means much more.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+            <button
+              onClick={openApply}
+              className="bg-[#C9A84C] hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+            >
+              APPLY TO THE FOUNDING REGISTRY &rarr;
+            </button>
+            <Link
+              href="/membership"
+              className="border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#EDE8DE] hover:text-[#C9A84C] px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
+            >
+              LEARN ABOUT MEMBERSHIP &amp; ACCESS &rarr;
+            </Link>
           </div>
         </section>
-
-        {/* ── WHAT OWNERS RECEIVE ── */}
-        <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
-            <div className="space-y-4 max-w-[680px]">
-              <span className="section-tag">What Owners Receive</span>
-              <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
-                Complete Edition I{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>Ownership Package.</em>
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/4 max-w-[960px]">
-              {ownershipItems.map((item, i) => (
-                <div key={i} className="bg-[#0D0D0D] px-8 py-7 flex items-start gap-5 hover:bg-white/2 transition-colors duration-300">
-                  <div className="shrink-0 w-4 h-px bg-gold/35 mt-[13px]" />
-                  <p className="text-[#7A7068] font-light leading-[1.7]" style={{ fontSize: "16px" }}>{item}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-4">
-              <button
-                onClick={() => setIsApplyOpen(true)}
-                className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
-                style={{ fontSize: "11px", letterSpacing: "0.28em" }}
-              >
-                <span className="uppercase font-medium">Secure Your Position in Edition I</span>
-              </button>
-            </div>
-          </div>
-        </section>
-
       </main>
+
+      {/* ── Footer ── */}
       <Footer />
+
+      {/* ── Application Modal ── */}
       <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
-    </>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ export default function HouseOf250() {
     <section className="bg-[#050505] border-b border-white/5">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         {/* Image / Visual side */}
-        <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#020202] group">
+        <div className="relative min-h-100 lg:min-h-0 overflow-hidden bg-[#020202] group">
           <Image
             src="/images/maison-vereen-access.png"
             alt="The House of 250"
@@ -20,7 +20,7 @@ export default function HouseOf250() {
 
         {/* Content side */}
         <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-16 py-20 lg:py-32 space-y-12 w-full">
-          <div className="space-y-6 max-w-[540px] flex flex-col items-center lg:items-start">
+          <div className="space-y-6 max-w-135 flex flex-col items-center lg:items-start">
             <span className="section-tag">Edition I: House of 250</span>
             <h2 className="type-headline">
               Two hundred and fifty.{" "}
@@ -39,9 +39,9 @@ export default function HouseOf250() {
             </div>
           </div>
 
-          <div className="space-y-8 max-w-[540px] pt-8 border-t border-white/10 flex flex-col items-center lg:items-start w-full">
+          <div className="space-y-8 max-w-135 pt-8 border-t border-white/10 flex flex-col items-center lg:items-start w-full">
             <h3 className="type-caption uppercase tracking-widest text-[#E8E2D9]">The Acquisition Process</h3>
-            
+
             <div className="grid gap-6 w-full">
               {[
                 { step: "I", title: "Learn the Philosophy", desc: "Understand what it means to become a custodian of a numbered bottle." },

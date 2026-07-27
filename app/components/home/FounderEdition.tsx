@@ -1,56 +1,60 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-
-// PAGE 1 — Supporting Section: "The Founder Edition"
-// Blueprint: "Introduce Edition I as the flagship founding chapter of the House"
+import BlankBox from "../ui/BlankBox";
 
 export default function FounderEdition() {
   return (
-    <section className="border-b border-white/5 bg-[#0D0D0D]">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
-          {/* Image side */}
-          <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#060608]">
-            <Image
-              src="/images/the bottle.png"
-              alt="Maison Vereen Edition I — The Founder Edition"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain object-center"
-              style={{ opacity: 0.85 }}
-            />
-            <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0D0D0D]/60" />
-            <div className="absolute inset-0 bg-linear-to-t from-[#060608]/80 via-transparent to-transparent" />
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: "radial-gradient(ellipse 45% 55% at 50% 40%, rgba(201,168,76,0.07) 0%, transparent 65%)" }}
+    <section className="bg-[#060506] border-b border-white/5 py-20 md:py-28">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          {/* Left Column — Blank Box (5 cols on lg) */}
+          <div className="lg:col-span-5 flex items-center justify-center order-2 lg:order-1">
+            <BlankBox
+              aspectRatio="4/5"
+              className="w-full max-w-115"
+              label="FOUNDER EDITION BOTTLE FRAME"
             />
           </div>
 
-          {/* Text side */}
-          <div className="flex items-center px-6 sm:px-8 md:px-14 lg:px-20 py-20 md:py-28">
-            <div className="space-y-8 max-w-[520px]">
-              <span className="section-tag">The Founder Edition</span>
-              <h2
-                className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
-                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
-              >
-                Those who hold a bottle from Edition I will hold something{" "}
-                <em className="not-italic" style={{ color: "#C9A84C" }}>
-                  no House can ever offer again: the first.
-                </em>
-              </h2>
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
-                Edition I is the founding chapter of Maison Vereen — the work from which every future edition will be measured. It was not created to be reordered, restocked, or repeated. It was created to exist once, completely, and then to close.
+          {/* Right Column — Content (7 cols on lg) */}
+          <div className="lg:col-span-7 space-y-7 order-1 lg:order-2">
+            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-gold font-semibold block">
+              THE FOUNDER EDITION
+            </span>
+
+            <h2
+              className="font-serif font-light text-[#EDE8DE] leading-[1.08]"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
+            >
+              The first.
+            </h2>
+
+            <div className="space-y-6 text-[#8A8178] font-light leading-[1.9] max-w-150" style={{ fontSize: "1.0625rem" }}>
+              <p>
+                Those who hold a bottle from Edition I will hold something no House can ever offer again: the first.
               </p>
-              <Link href="/edition-i" className="link-gold w-fit">
-                <span>Discover Edition I in Full</span>
-                <span className="text-gold">→</span>
+              <p>
+                Edition I is the founding chapter of Maison Vereen — the work from which every future edition will be measured.
+              </p>
+              <p>
+                It was not created to be reordered, restocked, or repeated. It was created to exist once, completely, and then to close.
+              </p>
+            </div>
+
+            <div className="pt-4">
+              <Link
+                href="/edition-i"
+                className="inline-flex items-center gap-3 border border-[#7A7068]/40 hover:border-gold text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 bg-[#060506]"
+              >
+                <span>DISCOVER EDITION I IN FULL</span>
+                <span>→</span>
               </Link>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>

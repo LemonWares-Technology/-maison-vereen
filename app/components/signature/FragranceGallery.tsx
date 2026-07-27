@@ -99,7 +99,7 @@ export default function FragranceGallery() {
   return (
     <>
       <section id="gallery" className="bg-[#0A0A08] py-20 md:py-28 overflow-hidden border-b border-[#8C7235]/20">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-16">
+        <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-16">
 
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-8">
@@ -138,14 +138,14 @@ export default function FragranceGallery() {
               {filtered.map((f, i) => (
                 <article
                   key={f.id}
-                  className="snap-start shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[360px] xl:w-[400px] flex flex-col group"
+                  className="snap-start shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-90 xl:w-100 flex flex-col group"
                   role="listitem"
                 >
                   {/* Visual panel */}
-                  <div className="h-[320px] sm:h-[360px] bg-[#141410] relative mb-6 overflow-hidden border border-[#8C7235]/10 group-hover:border-gold/25 transition-colors duration-500 flex items-center justify-center">
+                  <div className="h-80 sm:h-90 bg-[#141410] relative mb-6 overflow-hidden border border-[#8C7235]/10 group-hover:border-gold/25 transition-colors duration-500 flex items-center justify-center">
                     <div className="absolute inset-0 bg-radial from-gold/0 to-transparent group-hover:from-gold/8 transition-colors duration-700" />
                     {/* Bottle silhouette */}
-                    <div className="relative z-10 w-[100px] h-[190px] border border-gold/20 rounded-t-[50px] bg-[#0A0A08]/60 backdrop-blur-sm transition-transform duration-700 group-hover:-translate-y-2">
+                    <div className="relative z-10 w-25 h-47.5 border border-gold/20 rounded-t-[50px] bg-[#0A0A08]/60 backdrop-blur-sm transition-transform duration-700 group-hover:-translate-y-2">
                       <div className="absolute bottom-2 left-2 right-2 h-1/2 bg-linear-to-t from-gold/10 to-transparent rounded-b-xl" />
                     </div>
                     <span className="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-400 font-mono uppercase tracking-[0.2em] text-gold/70" style={{ fontSize: "9px" }}>

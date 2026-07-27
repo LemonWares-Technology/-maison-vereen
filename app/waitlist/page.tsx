@@ -151,13 +151,13 @@ export default function WaitlistPage() {
 
   return (
     <>
-      <Header  />
+      <Header />
 
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
 
               {/* Left */}
@@ -190,7 +190,7 @@ export default function WaitlistPage() {
               </div>
 
               {/* Right — hero image */}
-              <div className="relative min-h-[280px] sm:min-h-[340px] lg:min-h-0 overflow-hidden bg-[#060606]">
+              <div className="relative min-h-70 sm:min-h-85 lg:min-h-0 overflow-hidden bg-[#060606]">
                 <Image
                   src="/images/maison-vereen-access.png"
                   alt="Maison Vereen"
@@ -210,33 +210,33 @@ export default function WaitlistPage() {
         <WaitlistCounter />
 
         {/* ── FOUR BENEFITS ── */}
-        <section className="bg-[#080808] border-b border-white/5">          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-x sm:divide-y-0 md:divide-y-0 divide-white/5">
-              {benefits.map((b, i) => (
-                <div
-                  key={i}
-                  className="group px-6 py-8 md:px-7 md:py-10 space-y-4 hover:bg-white/2 transition-colors duration-400"
-                >
-                  <div className="text-gold/35 group-hover:text-gold/60 transition-colors duration-400">
-                    {b.icon}
-                  </div>
-                  <div className="w-4 h-px bg-gold/20 group-hover:w-8 group-hover:bg-gold/40 transition-all duration-500" />
-                  <h3 className="type-caption uppercase tracking-widest text-[#8A8178]">
-                    {b.title}
-                  </h3>
-                  <p className="text-[13px] text-[#4A4440] font-light leading-[1.7]">
-                    {b.body}
-                  </p>
+        <section className="bg-[#080808] border-b border-white/5">          <div className="max-w-350 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-x sm:divide-y-0 md:divide-y-0 divide-white/5">
+            {benefits.map((b, i) => (
+              <div
+                key={i}
+                className="group px-6 py-8 md:px-7 md:py-10 space-y-4 hover:bg-white/2 transition-colors duration-400"
+              >
+                <div className="text-gold/35 group-hover:text-gold/60 transition-colors duration-400">
+                  {b.icon}
                 </div>
-              ))}
-            </div>
+                <div className="w-4 h-px bg-gold/20 group-hover:w-8 group-hover:bg-gold/40 transition-all duration-500" />
+                <h3 className="type-caption uppercase tracking-widest text-[#8A8178]">
+                  {b.title}
+                </h3>
+                <p className="text-[13px] text-[#4A4440] font-light leading-[1.7]">
+                  {b.body}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
         </section>
 
         {/* ── IMAGE + FORM ── */}
         <section id="waitlist-form" className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
+          <div className="max-w-350 mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-130">
 
               {/* Left — image: hidden on mobile, visible lg+ */}
               <div className="hidden lg:block relative overflow-hidden bg-[#040404]">
@@ -255,7 +255,7 @@ export default function WaitlistPage() {
               {/* Right — Waitlist form */}
               <div className="flex flex-col justify-center px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 bg-charcoal lg:bg-charcoal lg:border-l lg:border-white/5">
                 {!joined ? (
-                  <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-[440px]">
+                  <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-110">
                     <div className="space-y-2 mb-8">
                       <span className="section-tag">
                         Join the Official Waiting List
@@ -352,11 +352,10 @@ export default function WaitlistPage() {
                         onClick={() =>
                           setForm({ ...form, consent: !form.consent })
                         }
-                        className={`shrink-0 w-3.5 h-3.5 border mt-1 flex items-center justify-center transition-all duration-300 ${
-                          form.consent
-                            ? "border-gold bg-gold/15"
-                            : "border-white/15 group-hover:border-white/25"
-                        }`}
+                        className={`shrink-0 w-3.5 h-3.5 border mt-1 flex items-center justify-center transition-all duration-300 ${form.consent
+                          ? "border-gold bg-gold/15"
+                          : "border-white/15 group-hover:border-white/25"
+                          }`}
                       >
                         {form.consent && (
                           <svg
@@ -405,7 +404,7 @@ export default function WaitlistPage() {
                   </form>
                 ) : (
                   /* Success */
-                  <div className="w-full max-w-[440px] space-y-6">
+                  <div className="w-full max-w-110 space-y-6">
                     <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center bg-gold/5">
                       <svg
                         width="16"
@@ -497,7 +496,7 @@ function ApprovedList() {
 
   return (
     <section className="bg-[#080808] border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 space-y-10">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 space-y-10">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
@@ -515,7 +514,7 @@ function ApprovedList() {
           </div>
 
           {/* Search */}
-          <div className="relative shrink-0 w-full sm:w-[280px]">
+          <div className="relative shrink-0 w-full sm:w-70">
             <svg
               className="absolute left-3 top-1/2 -translate-y-1/2 text-[#3A3530] pointer-events-none"
               width="13" height="13" viewBox="0 0 24 24" fill="none"
@@ -665,7 +664,7 @@ function WaitlistCounter() {
 
   return (
     <section className="border-b border-white/5 bg-[#0D0D0D]">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-10 md:py-12">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-10 md:py-12">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center sm:text-left">
 
           {/* Rule */}

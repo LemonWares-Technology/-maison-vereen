@@ -16,7 +16,7 @@ export default function SignatureHero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex items-end overflow-hidden bg-[#060506] pt-[100px] md:pt-[125px]">
+    <section className="relative w-full min-h-screen flex items-end overflow-hidden bg-[#060506] pt-25 md:pt-31.25">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -33,8 +33,8 @@ export default function SignatureHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 pb-20 md:pb-28">
-        <div className="max-w-[680px] space-y-8">
+      <div className="relative z-10 w-full max-w-350 mx-auto px-6 sm:px-8 md:px-14 pb-20 md:pb-28">
+        <div className="max-w-170 space-y-8">
           <span className="section-tag">Signature Collection</span>
           <h1
             className="font-serif font-light text-[#EDE7DC] leading-[1.05] anim-fade-up"
@@ -61,7 +61,7 @@ export default function SignatureHero() {
             The Signature Collection represents Maison Vereen&apos;s permanent body of work — fragrances available on an ongoing basis, each developed with the same standard applied to Edition I.
           </p>
           <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-[520px] anim-fade-up-d2"
+            className="text-[#8A8070] font-light leading-[1.85] max-w-130 anim-fade-up-d2"
             style={{ fontSize: "1.0625rem" }}
           >
             Where Edition I is finite by design, the Signature Collection is the House&apos;s enduring body of work — fragrances intended to remain part of Maison Vereen&apos;s offering for years, refined and revisited as the House&apos;s craft continues to evolve, but never produced at the expense of quality.

@@ -159,8 +159,8 @@ export default function AccessPage() {
       <main className="bg-charcoal">
 
         {/* ── HERO ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
               <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24 space-y-6 md:space-y-7 w-full">
                 <span className="section-tag">Application</span>
@@ -172,7 +172,7 @@ export default function AccessPage() {
                   <p>We select not for quantity, but for alignment.</p>
                 </div>
               </div>
-              <div className="relative min-h-[260px] sm:min-h-[340px] lg:min-h-0 overflow-hidden bg-[#050505]">
+              <div className="relative min-h-65 sm:min-h-85 lg:min-h-0 overflow-hidden bg-[#050505]">
                 <Image src="/images/application-hero.png" alt="Maison Vereen Edition I" fill priority
                   sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-center" style={{ opacity: 0.9 }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent to-charcoal/40" />
@@ -184,8 +184,8 @@ export default function AccessPage() {
 
         {/* ── FOR THE PERSON WHO BUILDS THINGS ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24">
-            <div className="max-w-[760px] space-y-8">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-24">
+            <div className="max-w-190 space-y-8">
               <span className="section-tag">For the Person Who Builds Things</span>
               <h2 className="type-headline">
                 You have already built something worth being proud of.
@@ -208,7 +208,7 @@ export default function AccessPage() {
 
         {/* ── IDENTITY & DISTINCTION ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="space-y-5">
                 <span className="section-tag">Identity &amp; Distinction</span>
@@ -262,7 +262,7 @@ export default function AccessPage() {
 
         {/* ── COMMUNITY & BELONGING + LEGACY & PERMANENCE ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="space-y-5">
                 <span className="section-tag">Community &amp; Belonging</span>
@@ -309,8 +309,8 @@ export default function AccessPage() {
 
         {/* ── YOUR COMPLETE OWNERSHIP PACKAGE ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
-            <div className="space-y-4 max-w-[680px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+            <div className="space-y-4 max-w-170">
               <span className="section-tag">Your Complete Ownership Package</span>
               <h2 className="type-headline">
                 Everything that comes with founding ownership.
@@ -322,7 +322,7 @@ export default function AccessPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/4">
               {ownershipItems.map((item, i) => (
                 <div key={i} className="bg-[#0D0D0D] px-6 sm:px-8 py-8 flex items-start gap-5 hover:bg-white/2 transition-colors duration-300">
-                  <div className="shrink-0 w-4 h-px bg-gold/40 mt-[11px]" />
+                  <div className="shrink-0 w-4 h-px bg-gold/40 mt-2.75" />
                   <div className="space-y-1.5">
                     <p className="text-[#C8C0B4] font-light" style={{ fontSize: "15px" }}>{item.title}</p>
                     <p className="text-[#5A5449] font-light leading-[1.7]" style={{ fontSize: "14px" }}>{item.body}</p>
@@ -335,8 +335,8 @@ export default function AccessPage() {
 
         {/* ── MEMBERSHIP CIRCLES ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
-            <div className="space-y-4 max-w-[680px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+            <div className="space-y-4 max-w-170">
               <span className="section-tag">Membership Circles</span>
               <h2 className="type-headline">
                 Three tiers. One founding generation.
@@ -361,7 +361,7 @@ export default function AccessPage() {
                   <ul className="space-y-2.5 flex-1">
                     {c.privileges.map((p, j) => (
                       <li key={j} className="flex items-start gap-3">
-                        <div className="shrink-0 w-3 h-px bg-gold/30 mt-[9px]" />
+                        <div className="shrink-0 w-3 h-px bg-gold/30 mt-2.25" />
                         <span className="text-[#5A5449] font-light leading-[1.6]" style={{ fontSize: "13px" }}>{p}</span>
                       </li>
                     ))}
@@ -375,8 +375,8 @@ export default function AccessPage() {
 
         {/* ── HOW IT WORKS ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
-            <div className="space-y-4 max-w-[580px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+            <div className="space-y-4 max-w-145">
               <span className="section-tag">How It Works</span>
               <h2 className="type-headline">
                 Simple. Personal. Nothing hidden.
@@ -397,8 +397,8 @@ export default function AccessPage() {
 
         {/* ── BEFORE YOU APPLY ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
-            <div className="space-y-4 max-w-[580px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-10">
+            <div className="space-y-4 max-w-145">
               <span className="section-tag">Before You Apply</span>
               <h2 className="type-headline">
                 You should be certain before you commit to anything.
@@ -433,14 +433,14 @@ export default function AccessPage() {
 
         {/* ── QUESTIONS ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-8">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20 space-y-8">
             <div className="space-y-3">
               <span className="section-tag">Questions</span>
               <h2 className="type-headline">
                 The questions most people ask first.
               </h2>
             </div>
-            <div className="max-w-[880px] border-t border-white/6">
+            <div className="max-w-220 border-t border-white/6">
               {faqs.map((faq, i) => (
                 <div key={i} className="border-b border-white/6">
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
@@ -451,7 +451,7 @@ export default function AccessPage() {
                     <span className={`shrink-0 text-gold/50 transition-transform duration-300 mt-1 ${openFaq === i ? "rotate-45" : ""}`} style={{ fontSize: "20px", lineHeight: 1 }}>+</span>
                   </button>
                   {openFaq === i && (
-                    <div className="pb-6 max-w-[720px]">
+                    <div className="pb-6 max-w-180">
                       <p className="text-[#6A6258] font-light leading-[1.85]" style={{ fontSize: "16px" }}>{faq.a}</p>
                     </div>
                   )}
@@ -463,8 +463,8 @@ export default function AccessPage() {
 
         {/* ── IF THIS RESONATES ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
-            <div className="max-w-[680px] space-y-5">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+            <div className="max-w-170 space-y-5">
               <span className="section-tag">If This Resonates</span>
               <h2 className="type-headline">
                 If this resonates, you already know what to do.
@@ -486,9 +486,9 @@ export default function AccessPage() {
 
         {/* ── THE APPLICATION FORM ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 md:py-16 lg:py-20">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="w-full max-w-[840px] space-y-8">
+              <form onSubmit={handleSubmit} className="w-full max-w-210 space-y-8">
                 <div className="space-y-3">
                   <span className="section-tag">The Application Form</span>
                   <h2 className="type-headline">Tell us about yourself.</h2>
@@ -581,7 +581,7 @@ export default function AccessPage() {
                 </button>
               </form>
             ) : (
-              <div className="w-full max-w-[600px] space-y-7">
+              <div className="w-full max-w-150 space-y-7">
                 <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center bg-gold/5">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </div>
@@ -609,7 +609,7 @@ export default function AccessPage() {
 
         {/* ── CLOSING STAMP ── */}
         <section className="bg-[#080808]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-12 text-center space-y-4">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 text-center space-y-4">
             <div className="w-8 h-px bg-gold/30 mx-auto" />
             <p className="font-mono text-gold" style={{ fontSize: "clamp(2rem, 8vw, 3rem)", letterSpacing: "0.1em" }}>250</p>
             <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Positions in the world. Total. Forever.</p>
