@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export default function JournalPage() {
       <Header  />
       <main className="bg-charcoal">
 
-        {/* ── PAGE HEADER ── */}
+        {/* -- PAGE HEADER -- */}
         <section className="border-b border-white/5 pt-[72px]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 lg:py-24 space-y-6">
             <span className="section-tag">The HouseBook</span>
@@ -21,16 +21,16 @@ export default function JournalPage() {
               The HouseBook of Maison Vereen{" "}
               <em className="not-italic block mt-2" style={{ color: "#C9A84C" }}>is not a blog. It is the house&apos;s intellectual record.</em>
             </h1>
-            <p className="text-[#7A7068] font-light leading-[1.85] max-w-[680px]" style={{ fontSize: "17px" }}>
-              Here, we write about the things we think about — which are the same things the people this house was built for think about. Distinction. Excellence. Craft. The relationship between identity and what we choose to own. The African creative moment and what it means for luxury. The nature of legacy. The difference between success and significance.
+            <p className="text-[#EDE8DE] font-light leading-[1.85] max-w-[680px]" style={{ fontSize: "17px" }}>
+              Here, we write about the things we think about � which are the same things the people this house was built for think about. Distinction. Excellence. Craft. The relationship between identity and what we choose to own. The African creative moment and what it means for luxury. The nature of legacy. The difference between success and significance.
             </p>
-            <p className="text-[#7A7068] font-light leading-[1.85] max-w-[680px]" style={{ fontSize: "17px" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85] max-w-[680px]" style={{ fontSize: "17px" }}>
               These are not lifestyle posts. They are essays. Written with the belief that the people who read them are serious thinkers who deserve serious content.
             </p>
           </div>
         </section>
 
-        {/* ── ARTICLES GRID ── */}
+        {/* -- ARTICLES GRID -- */}
         <section>
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
@@ -65,16 +65,16 @@ export default function JournalPage() {
                       <h2 className="font-serif font-light text-[#C8C0B4] leading-snug group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "21px" }}>
                         {a.title}
                       </h2>
-                      <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
+                      <p className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "15px" }}>
                         {a.excerpt}
                       </p>
                       <div className="pt-3 flex items-center justify-between border-t border-white/4">
                         <span className="uppercase tracking-[0.22em] font-medium group-hover:text-gold transition-colors duration-300" style={{ fontSize: "11px", color: "rgba(201,168,76,0.45)" }}>
-                          Read →
+                          Read ?
                         </span>
                         <div className="flex items-center gap-3 text-[#3A3530]" style={{ fontSize: "11px" }}>
                           <span>{a.date}</span>
-                          <span>·</span>
+                          <span>�</span>
                           <span>{a.readTime}</span>
                         </div>
                       </div>
@@ -86,7 +86,7 @@ export default function JournalPage() {
           </div>
         </section>
 
-        {/* ── REGISTRY CTA ── */}
+        {/* -- REGISTRY CTA -- */}
         <section className="border-t border-white/5 bg-[#0D0D0D]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p className="font-serif font-light italic text-[#4A4540] max-w-[500px]" style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}>

@@ -37,7 +37,7 @@ export default function FirstTwoFifty({ onOpenApply }: FirstTwoFiftyProps) {
               250
             </p>
             <p
-              className="uppercase tracking-[0.3em] sm:tracking-[0.45em] text-[#5A5449] font-medium mt-4"
+              className="uppercase tracking-[0.3em] sm:tracking-[0.45em] text-[#EDE8DE] font-medium mt-4"
               style={{ fontSize: "10px" }}
             >
               Not per country. Not per year. In the world. Forever.
@@ -58,13 +58,13 @@ export default function FirstTwoFifty({ onOpenApply }: FirstTwoFiftyProps) {
                 One edition. No second chances.
               </em>
             </h2>
-            <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
               Edition I of Maison Vereen will exist exactly once. 250 numbered
               bottles — not per country, not per year. In the world. The
               production run is complete when it is complete. The edition retires
               when it is sold.
             </p>
-            <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
               Bottle 1 and Bottle 250 are equally permanent, equally rare,
               equally final. Owners of Edition I will hold the founding chapter
               of this house.

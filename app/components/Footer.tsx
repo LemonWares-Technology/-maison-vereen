@@ -37,7 +37,7 @@ export default function Footer() {
               <Link
                 key={label}
                 href={href}
-                className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#7A7068] hover:text-[#EDE8DE] transition-colors font-medium"
+                className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#EDE8DE] hover:text-[#EDE8DE] transition-colors font-medium"
               >
                 {label}
               </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Right: Copyright & Legal */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-right">
-            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#5A5248]">
+            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE]">
               © {year} MAISON VEREEN. ALL RIGHTS RESERVED.
             </span>
           </div>
@@ -55,19 +55,19 @@ export default function Footer() {
 
         {/* Bottom Legal Links Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#4A4238]">
+          <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
             AFRICA&apos;S FIRST SERIOUS LUXURY FRAGRANCE HOUSE
           </span>
 
-          <div className="flex items-center gap-5 font-mono text-[9px] uppercase tracking-[0.25em] text-[#5A5248]">
+          <div className="flex items-center gap-5 font-mono text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
             <a href="#" className="hover:text-gold transition-colors">
               PRIVACY
             </a>
-            <span className="text-[#3A3228]">|</span>
+            <span className="text-[#EDE8DE]/40">|</span>
             <a href="#" className="hover:text-gold transition-colors">
               TERMS
             </a>
-            <span className="text-[#3A3228]">|</span>
+            <span className="text-[#EDE8DE]/40">|</span>
             <a href="#" className="hover:text-gold transition-colors">
               COOKIES
             </a>

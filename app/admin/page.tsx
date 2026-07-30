@@ -1,4 +1,4 @@
-﻿import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { getAdminSession } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import AdminShell from "./components/AdminShell";
@@ -77,7 +77,7 @@ export default async function AdminDashboard() {
               href="/admin/applications"
               className="text-xs uppercase tracking-widest text-gold hover:text-[#E8E2D9] transition-colors duration-200"
             >
-              View all →
+              View all ?
             </Link>
           </div>
 
@@ -115,7 +115,7 @@ export default async function AdminDashboard() {
                         {app.name}
                       </p>
                       <p className="text-xs text-[#3A3530] truncate">
-                        {app.email} · {app.country}
+                        {app.email} � {app.country}
                       </p>
                     </div>
                     <StatusBadge status={app.status} />

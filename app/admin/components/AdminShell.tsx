@@ -99,7 +99,7 @@ export default function AdminShell({
                 ${
                   active
                     ? "bg-gold/8 text-gold"
-                    : "text-[#5A5449] hover:text-[#C8C0B4] hover:bg-white/3"
+                    : "text-[#EDE8DE] hover:text-[#C8C0B4] hover:bg-white/3"
                 }
               `}
             >
@@ -133,7 +133,7 @@ export default function AdminShell({
         <Link
           href="/"
           target="_blank"
-          className="flex items-center gap-2.5 px-3 py-2.5 rounded-sm text-[#3A3530] hover:text-[#5A5449] transition-colors duration-200"
+          className="flex items-center gap-2.5 px-3 py-2.5 rounded-sm text-[#3A3530] hover:text-[#EDE8DE] transition-colors duration-200"
         >
           <ExternalLink className="w-[14px] h-[14px]" />
           <span
@@ -191,7 +191,7 @@ export default function AdminShell({
         <div className="md:hidden flex items-center justify-between px-4 py-3.5 border-b border-white/5 bg-charcoal shrink-0">
           <button
             onClick={() => setOpen(true)}
-            className="text-[#5A5449] hover:text-[#E8E2D9] transition-colors p-1 -ml-1"
+            className="text-[#EDE8DE] hover:text-[#E8E2D9] transition-colors p-1 -ml-1"
             aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
@@ -227,7 +227,7 @@ export default function AdminShell({
               <h3 className="font-serif font-light text-[#E8E2D9] text-xl">
                 Leave the House?
               </h3>
-              <p className="text-xs text-[#7A7068] leading-relaxed">
+              <p className="text-xs text-[#EDE8DE] leading-relaxed">
                 Are you sure you want to end your session and sign out of the Maison Vereen admin portal?
               </p>
             </div>
@@ -236,7 +236,7 @@ export default function AdminShell({
               <button
                 type="button"
                 onClick={() => setShowLogoutConfirm(false)}
-                className="py-3 border border-white/8 hover:border-white/20 text-[#5A5449] hover:text-[#E8E2D9] transition-all duration-300 font-medium text-xs uppercase tracking-widest"
+                className="py-3 border border-white/8 hover:border-white/20 text-[#EDE8DE] hover:text-[#E8E2D9] transition-all duration-300 font-medium text-xs uppercase tracking-widest"
               >
                 Cancel
               </button>

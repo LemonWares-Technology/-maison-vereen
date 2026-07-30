@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 
@@ -101,7 +101,7 @@ export default function ThreePillars() {
               key={i}
               className="group px-10 py-12 md:py-14 flex flex-col items-center text-center gap-5 hover:bg-[#EDE8DE] transition-colors duration-500"
             >
-              {/* Icon — gold */}
+              {/* Icon � gold */}
               <div className="text-[#B8962E] group-hover:text-[#96780E] transition-colors duration-400">
                 {p.icon}
               </div>
@@ -109,7 +109,7 @@ export default function ThreePillars() {
               {/* Thin gold rule */}
               <div className="w-6 h-px bg-gold/50 group-hover:w-10 group-hover:bg-gold transition-all duration-500" />
 
-              {/* Title — dark, small caps tracking */}
+              {/* Title � dark, small caps tracking */}
               <h3
                 className="uppercase tracking-[0.22em] text-[#1A1814] font-medium"
                 style={{
@@ -120,7 +120,7 @@ export default function ThreePillars() {
                 {p.title}
               </h3>
 
-              {/* Body — muted dark */}
+              {/* Body � muted dark */}
               <p
                 className="text-[#6A6258] font-light leading-[1.75]"
                 style={{ fontSize: "16px" }}

@@ -250,7 +250,7 @@ export default function AccessPage() {
                 </p>
                 <div className="border border-white/6 px-6 py-5 space-y-2">
                   <p className="font-mono text-gold" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", letterSpacing: "0.1em" }}>250</p>
-                  <p className="text-[#7A7068] font-light" style={{ fontSize: "14px" }}>Bottles worldwide. Not per country. Not per year. Total, globally, forever.</p>
+                  <p className="text-[#EDE8DE] font-light" style={{ fontSize: "14px" }}>Bottles worldwide. Not per country. Not per year. Total, globally, forever.</p>
                 </div>
                 <p className="type-body">
                   The question is not whether this will matter. It is whether you will have been part of it when it did.
@@ -325,7 +325,7 @@ export default function AccessPage() {
                   <div className="shrink-0 w-4 h-px bg-gold/40 mt-2.75" />
                   <div className="space-y-1.5">
                     <p className="text-[#C8C0B4] font-light" style={{ fontSize: "15px" }}>{item.title}</p>
-                    <p className="text-[#5A5449] font-light leading-[1.7]" style={{ fontSize: "14px" }}>{item.body}</p>
+                    <p className="text-[#EDE8DE] font-light leading-[1.7]" style={{ fontSize: "14px" }}>{item.body}</p>
                   </div>
                 </div>
               ))}
@@ -362,7 +362,7 @@ export default function AccessPage() {
                     {c.privileges.map((p, j) => (
                       <li key={j} className="flex items-start gap-3">
                         <div className="shrink-0 w-3 h-px bg-gold/30 mt-2.25" />
-                        <span className="text-[#5A5449] font-light leading-[1.6]" style={{ fontSize: "13px" }}>{p}</span>
+                        <span className="text-[#EDE8DE] font-light leading-[1.6]" style={{ fontSize: "13px" }}>{p}</span>
                       </li>
                     ))}
                   </ul>
@@ -419,7 +419,7 @@ export default function AccessPage() {
             </div>
             <div className="border border-white/6 bg-[#080808] px-6 sm:px-8 py-6">
               <p className="type-caption" style={{ fontSize: "14px" }}>
-                <span className="text-[#8A8178] font-medium">Security notice:</span> All official Maison Vereen communications, including payment instructions, come only from{" "}
+                <span className="text-[#EDE8DE] font-medium">Security notice:</span> All official Maison Vereen communications, including payment instructions, come only from{" "}
                 <span className="text-gold/70 break-all">hello@maisonvereen.com</span>. We will never request payment through WhatsApp, social media, or any unverified channel. If you receive a payment request from any other source, do not act on it — contact us first.
               </p>
             </div>
@@ -492,73 +492,73 @@ export default function AccessPage() {
                 <div className="space-y-3">
                   <span className="section-tag">The Application Form</span>
                   <h2 className="type-headline">Tell us about yourself.</h2>
-                  <p className="text-[#7A7068] font-light" style={{ fontSize: "15px" }}>Five minutes. No commitment.</p>
+                  <p className="text-[#EDE8DE] font-light" style={{ fontSize: "15px" }}>Five minutes. No commitment.</p>
                   <p className="type-body-sm">
                     Every question below helps us understand who you are and whether this is the right moment for you to join Maison Vereen. Answer as naturally as you can. There are no wrong answers.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Full Name</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Full Name</label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>As it should appear on your Gold Ownership Card</p>
                   <input type="text" required placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Email Address</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Email Address</label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>Your invitation will be sent here</p>
                   <input type="email" required placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Phone Number <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Phone Number <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>For personal invitation confirmation</p>
                   <input type="tel" placeholder="Country code + number" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>City &amp; Country</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>City &amp; Country</label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>Where you are based</p>
                   <input type="text" required placeholder="City, Country" value={form.country} onChange={(e) => setForm({ ...form, country: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>What You Do</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>What You Do</label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>What you build, lead, or create — in your own words, not your job title</p>
                   <input type="text" required placeholder="In your own words" value={form.whatYouDo} onChange={(e) => setForm({ ...form, whatYouDo: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>How Did You Find Maison Vereen?</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>How Did You Find Maison Vereen?</label>
                   <div className="relative">
                     <select required value={form.howHeard} onChange={(e) => setForm({ ...form, howHeard: e.target.value })} className={`${inputClass} appearance-none cursor-pointer pr-8`}>
                       {HOW_HEARD_OPTIONS.map((o) => (<option key={o} value={o} disabled={o === HOW_HEARD_OPTIONS[0]} className="bg-charcoal text-[#E8E2D9]">{o}</option>))}
                     </select>
                     <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="#5A5449" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="#EDE8DE" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>If Referred, May We Know By Whom? <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>If Referred, May We Know By Whom? <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
                   <input type="text" placeholder="Their name, if you'd like to share it" value={form.referredBy} onChange={(e) => setForm({ ...form, referredBy: e.target.value })} className={inputClass} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>What Made You Apply?</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>What Made You Apply?</label>
                   <p className="text-[#3A3530] font-light" style={{ fontSize: "12px" }}>In your own words — there is no expected answer</p>
                   <textarea required rows={5} placeholder="Tell us what resonated…" value={form.whatMadeApply} onChange={(e) => setForm({ ...form, whatMadeApply: e.target.value })} className={`${inputClass} resize-none leading-[1.75]`} style={{ minHeight: "130px" }} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Optional — A Time You Were Early To Something</label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Optional — A Time You Were Early To Something</label>
                   <p className="text-[#3A3530] font-light leading-[1.7]" style={{ fontSize: "12px" }}>Describe a moment when you recognised the value of something — an idea, an opportunity, a business, a person — before most others did. Answer only if something comes to mind naturally.</p>
                   <textarea rows={4} placeholder="If something comes to mind…" value={form.earlyThing} onChange={(e) => setForm({ ...form, earlyThing: e.target.value })} className={`${inputClass} resize-none leading-[1.75]`} style={{ minHeight: "110px" }} />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block uppercase tracking-[0.25em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Anything You&apos;d Like To Ask Or Tell Us? <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
+                  <label className="block uppercase tracking-[0.25em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Anything You&apos;d Like To Ask Or Tell Us? <span className="text-[#3A3530] normal-case tracking-normal">— Optional</span></label>
                   <textarea rows={3} placeholder="Questions, context, anything at all…" value={form.anythingElse} onChange={(e) => setForm({ ...form, anythingElse: e.target.value })} className={`${inputClass} resize-none leading-[1.75]`} style={{ minHeight: "90px" }} />
                 </div>
 
@@ -567,7 +567,7 @@ export default function AccessPage() {
                     className={`shrink-0 w-3.5 h-3.5 border mt-0.5 flex items-center justify-center transition-all duration-300 ${form.consent ? "border-gold bg-gold/15" : "border-white/15 group-hover:border-white/25"}`}>
                     {form.consent && (<svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>)}
                   </button>
-                  <span className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "13px" }}>
+                  <span className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "13px" }}>
                     By submitting, you confirm your information is accurate. You are not committing to any payment. Submitting does not guarantee a position or an invitation. You will receive a personal response within 24 to 48 hours. Your information is held privately and never shared.
                   </span>
                 </label>
@@ -591,7 +591,7 @@ export default function AccessPage() {
                   Your application has been received. We will review it personally and respond within 48 hours. In the meantime, you have been added to the Maison Vereen Registry as a House Circle member. You now have access to The HouseBook and will receive all future house announcements.
                 </p>
                 <p className="text-[#3A3530] font-light" style={{ fontSize: "13px" }}>
-                  Confirmation sent to <span className="text-[#5A5449] break-all">{form.email}</span>.
+                  Confirmation sent to <span className="text-[#EDE8DE] break-all">{form.email}</span>.
                 </p>
                 <div className="border-t border-white/5 pt-6">
                   <div className="w-8 h-px bg-gold/30 mb-5" />
@@ -612,11 +612,11 @@ export default function AccessPage() {
           <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-12 text-center space-y-4">
             <div className="w-8 h-px bg-gold/30 mx-auto" />
             <p className="font-mono text-gold" style={{ fontSize: "clamp(2rem, 8vw, 3rem)", letterSpacing: "0.1em" }}>250</p>
-            <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#5A5449] font-medium" style={{ fontSize: "10px" }}>Positions in the world. Total. Forever.</p>
+            <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#EDE8DE] font-medium" style={{ fontSize: "10px" }}>Positions in the world. Total. Forever.</p>
             <div className="w-8 h-px bg-gold/30 mx-auto" />
-            <p className="text-[#4A4440] font-light" style={{ fontSize: "14px" }}>The founding chapter closes when the last position does.</p>
-            <p className="text-[#4A4440] font-light" style={{ fontSize: "14px" }}>Edition I. 250 bottles. The first and only founding generation. Every day that passes, fewer positions remain.</p>
-            <p className="text-[#4A4440] font-light leading-[1.85]" style={{ fontSize: "14px" }}>
+            <p className="text-[#EDE8DE] font-light" style={{ fontSize: "14px" }}>The founding chapter closes when the last position does.</p>
+            <p className="text-[#EDE8DE] font-light" style={{ fontSize: "14px" }}>Edition I. 250 bottles. The first and only founding generation. Every day that passes, fewer positions remain.</p>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "14px" }}>
               Questions before applying?{" "}
               <a href="mailto:hello@maisonvereen.com" className="text-gold/60 hover:text-gold transition-colors break-all">Write to hello@maisonvereen.com</a>{" "}and you will hear from a person.
             </p>

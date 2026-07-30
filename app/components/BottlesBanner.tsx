@@ -30,7 +30,7 @@ export default function BottlesBanner() {
         {/* Thin gold rule */}
         <div className="w-10 h-px bg-gold/30 mx-auto mt-6" />
         <p
-          className="text-[#5A5449] font-light tracking-wider"
+          className="text-[#EDE8DE] font-light tracking-wider"
           style={{ fontSize: "11px", letterSpacing: "0.2em" }}
         >
           Edition I of Maison Vereen will exist exactly once.

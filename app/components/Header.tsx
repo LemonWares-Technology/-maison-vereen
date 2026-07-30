@@ -70,7 +70,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
                 <Link
                   key={label}
                   href={href}
-                  className={`text-[10px] tracking-[0.28em] uppercase transition-colors duration-300 font-medium ${active ? "text-gold" : "text-[#8A8178] hover:text-[#EDE8DE]"
+                  className={`text-[10px] tracking-[0.28em] uppercase transition-colors duration-300 font-medium ${active ? "text-gold" : "text-[#EDE8DE] hover:text-[#EDE8DE]"
                     }`}
                 >
                   {label}
@@ -84,7 +84,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
             <Link
               href="/access"
               onClick={handleApplyClick}
-              className="border border-[#7A7068]/40 hover:border-gold hover:text-gold text-[#EDE8DE] px-4 py-2 sm:px-5 sm:py-2.5 text-[9px] sm:text-[10px] tracking-[0.25em] uppercase font-medium transition-all duration-300 bg-[#060506]/50"
+              className="border border-[#EDE8DE]/40 hover:border-gold hover:text-gold text-[#EDE8DE] px-4 py-2 sm:px-5 sm:py-2.5 text-[9px] sm:text-[10px] tracking-[0.25em] uppercase font-medium transition-all duration-300 bg-[#060506]/50"
             >
               Apply to the Registry
             </Link>
@@ -92,7 +92,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
             {/* Hamburger / Menu toggle button */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="text-[#8A8178] hover:text-[#EDE8DE] p-1.5 transition-colors"
+              className="text-[#EDE8DE] hover:text-[#EDE8DE] p-1.5 transition-colors"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? (
@@ -133,7 +133,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
 
           <button
             onClick={() => setIsOpen(false)}
-            className="text-[#8A8178] hover:text-[#EDE8DE] p-1.5 transition-colors"
+            className="text-[#EDE8DE] hover:text-[#EDE8DE] p-1.5 transition-colors"
             aria-label="Close menu"
           >
             <X className="w-5 h-5" />

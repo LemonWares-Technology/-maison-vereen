@@ -25,10 +25,10 @@ export default function PhilosophyBand() {
 
           {/* Right — body copy */}
           <div className="space-y-5">
-            <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
               Each fragrance in the Collection is treated as a complete artistic statement: its own story, its own inspiration, its own character. None are framed as variations on a theme or filler around Edition I. Visitors are invited to discover each one individually, the way they might discover an artist&apos;s separate works.
             </p>
-            <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
               There is no ecommerce experience here. Every fragrance in the Signature Collection leads to a personal conversation with the House&apos;s concierge — by design, not by limitation.
             </p>
           </div>

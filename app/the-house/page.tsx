@@ -67,7 +67,7 @@ export default function TheHousePage() {
                 A House Is Not Built in a Season.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Maison Vereen is building toward institutional permanence — a house
                 whose values, culture, and craftsmanship are intended to outlast
                 any single collection, founder, or era.
@@ -86,7 +86,7 @@ export default function TheHousePage() {
 
           {/* Sub-hero paragraph */}
           <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
-            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
               Everything explored elsewhere on this site — Edition I, the
               Signature Collection, the Founding Registry — exists within
               something larger: the House itself. This page steps back from any
@@ -97,7 +97,7 @@ export default function TheHousePage() {
 
           {/* 3 Feature Columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
               The House&apos;s values are simple and have not changed since its
               founding: craftsmanship without compromise, patience over speed, and
               an unwavering commitment to proving that African origin and global
@@ -105,7 +105,7 @@ export default function TheHousePage() {
               waiting to be demonstrated properly.
             </div>
 
-            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
               Maison Vereen&apos;s ambitions extend across generations, not
               seasons. The House hopes, a century from now, to be spoken of the way
               the world&apos;s oldest maisons are spoken of today — not as a brand
@@ -113,7 +113,7 @@ export default function TheHousePage() {
               never lowered its standard to make growth easier.
             </div>
 
-            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+            <div className="bg-[#0A0A0C] border border-white/5 p-6 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
               The House is not interested in being the largest. It is committed to
               being one of the few that still matter in a hundred years. Every
               decision made today is measured against that future standard, not
@@ -133,7 +133,7 @@ export default function TheHousePage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
                   Values &amp; Culture
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Every person who works within Maison Vereen, in any capacity, is
                   held to the same standard: craftsmanship first, growth second.
                   Decisions that would compromise quality for speed or scale are
@@ -158,7 +158,7 @@ export default function TheHousePage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
                   The Next Century
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Maison Vereen is not building toward a successful launch. It is
                   building toward an institution capable of outliving its founder,
                   its first collectors, and its first century — the same way the
@@ -198,7 +198,7 @@ export default function TheHousePage() {
                     <h3 className="font-serif text-sm text-[#EDE8DE] uppercase tracking-wider">
                       {t.title}
                     </h3>
-                    <p className="text-[11px] text-[#8A8178] font-light leading-relaxed">
+                    <p className="text-[11px] text-[#EDE8DE] font-light leading-relaxed">
                       {t.desc}
                     </p>
                   </div>

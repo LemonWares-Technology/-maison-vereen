@@ -61,7 +61,7 @@ export default function DiscoverPage() {
           {/* Right — edition tag, desktop only */}
           <div className="hidden md:flex items-center gap-3">
             <div className="w-4 h-px bg-gold/30" />
-            <span className="uppercase tracking-[0.3em] text-[#5A5449] font-medium" style={{ fontSize: "9px" }}>
+            <span className="uppercase tracking-[0.3em] text-[#EDE8DE] font-medium" style={{ fontSize: "9px" }}>
               Edition I · 250 Bottles · The Founding Chapter
             </span>
           </div>
@@ -104,7 +104,7 @@ export default function DiscoverPage() {
               </em>
             </h1>
             <p
-              className="font-serif font-light text-[#8A8070] italic max-w-[540px]"
+              className="font-serif font-light text-[#EDE8DE] italic max-w-[540px]"
               style={{ fontSize: "clamp(1rem, 1.8vw, 1.25rem)" }}
             >
               This page exists because someone thought you should know first.
@@ -117,22 +117,22 @@ export default function DiscoverPage() {
           <div className="max-w-[900px] mx-auto px-6 sm:px-8 py-16 md:py-20 space-y-8">
             <span className="section-tag">Five minutes to understand this</span>
             <p
-              className="font-serif font-light text-[#C8BFB2]"
+              className="font-serif font-light text-[#EDE8DE]"
               style={{ fontSize: "clamp(1rem, 1.6vw, 1.15rem)" }}
             >
               This page exists for one reason: to explain, briefly and completely, what Maison Vereen is — and why joining the Founding Registry now matters.
             </p>
             <div className="space-y-6">
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
                 Maison Vereen is a luxury fragrance house founded in Lagos, built to the same uncompromising standard as the world&apos;s most respected maisons. Its founding chapter, Edition I, is limited to two hundred and fifty individually numbered bottles — a number that will never increase, and an edition that will never be reissued.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
                 Access to Edition I is not immediate. Interested individuals first apply to the Maison Vereen Founding Registry — the House&apos;s reviewed record of qualified applicants, capped at three hundred and fifty members. Acceptance into the Registry is the first recognition the House extends; private invitations to acquire one of the two hundred and fifty bottles follow afterward, issued individually as the House determines.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
                 What makes Edition I historic is simple: it is first. The first founding chapter of a House built to prove that African origin and global luxury standard were never opposing ideas. Joining the Founding Registry now means being recognised at the beginning of that history, rather than reading about it afterward.
               </p>
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.9]" style={{ fontSize: "17px" }}>
                 Applying takes a matter of minutes, carries no financial obligation, and is read personally by the House. From here, the fuller story — the philosophy, the founder, the craftsmanship — is available at maisonvereen.com for anyone who wants to go deeper before applying.
               </p>
             </div>
@@ -150,16 +150,16 @@ export default function DiscoverPage() {
                 >
                   250
                 </p>
-                <p className="uppercase tracking-[0.3em] text-[#7A7068] font-medium" style={{ fontSize: "9px" }}>
+                <p className="uppercase tracking-[0.3em] text-[#EDE8DE] font-medium" style={{ fontSize: "9px" }}>
                   Bottles worldwide. Not per country.<br />Not per year. Total, globally, forever.
                 </p>
               </div>
               <div className="space-y-5">
                 <span className="section-tag">Why Now</span>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
                   The Founding Registry will close permanently once three hundred and fifty applicants have been accepted. There is no artificial countdown here — simply a real, finite number that will eventually be reached.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
+                <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "16px" }}>
                   Applying takes a matter of minutes, carries no financial obligation, and is read personally by the House.
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function DiscoverPage() {
                     />
                   </div>
                 </div>
-                <p className="uppercase tracking-[0.25em] text-[#5A5449] font-light" style={{ fontSize: "9px" }}>
+                <p className="uppercase tracking-[0.25em] text-[#EDE8DE] font-light" style={{ fontSize: "9px" }}>
                   Each certificate is unique, signed, and permanent
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function DiscoverPage() {
                   {ownershipItems.map((item, i) => (
                     <div key={i} className="flex items-start gap-4 group">
                       <div className="shrink-0 w-4 h-px bg-gold/35 mt-[11px]" />
-                      <p className="text-[#8A8070] font-light leading-[1.7] group-hover:text-[#C8BFB2] transition-colors duration-200" style={{ fontSize: "15px" }}>
+                      <p className="text-[#EDE8DE] font-light leading-[1.7] group-hover:text-[#EDE8DE] transition-colors duration-200" style={{ fontSize: "15px" }}>
                         {item}
                       </p>
                     </div>
@@ -242,7 +242,7 @@ export default function DiscoverPage() {
               >
                 The Founding Registry is open.
               </h2>
-              <p className="text-[#7A7068] font-light leading-[1.8]" style={{ fontSize: "16px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.8]" style={{ fontSize: "16px" }}>
                 Applying takes a matter of minutes and carries no financial obligation. Applications are read personally by the House. You will receive a response within 24 to 48 hours.
               </p>
             </div>
@@ -258,7 +258,7 @@ export default function DiscoverPage() {
               </Link>
               <Link
                 href="/"
-                className="flex-1 flex items-center justify-center border border-white/10 hover:border-gold/40 py-4 text-[#5A5449] hover:text-[#C8C0B4] transition-all duration-500"
+                className="flex-1 flex items-center justify-center border border-white/10 hover:border-gold/40 py-4 text-[#EDE8DE] hover:text-[#C8C0B4] transition-all duration-500"
                 style={{ fontSize: "11px", letterSpacing: "0.22em" }}
               >
                 <span className="uppercase font-medium">Explore the Full Maison Vereen Website</span>
@@ -274,7 +274,7 @@ export default function DiscoverPage() {
               ].map((line, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <div className="shrink-0 w-2 h-px bg-gold/25 mt-[9px]" />
-                  <p className="text-[#7A7068] font-light leading-[1.6]" style={{ fontSize: "12px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.6]" style={{ fontSize: "12px" }}>
                     {line}
                   </p>
                 </div>
@@ -282,7 +282,7 @@ export default function DiscoverPage() {
             </div>
 
             {/* Email */}
-            <p className="text-[#5A5449] font-light" style={{ fontSize: "13px" }}>
+            <p className="text-[#EDE8DE] font-light" style={{ fontSize: "13px" }}>
               Questions first?{" "}
               <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors">
                 hello@maisonvereen.com

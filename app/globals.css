@@ -189,7 +189,7 @@ body {
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 300;
   line-height: 1.35;
-  color: #C8BFB2;
+  color: #EDE8DE;
 }
 
 /* Pull quote — italic, max emotional impact */
@@ -199,7 +199,7 @@ body {
   font-weight: 300;
   font-style: italic;
   line-height: 1.5;
-  color: #8A8178;
+  color: #EDE8DE;
   letter-spacing: 0.03em;
 }
 
@@ -209,7 +209,7 @@ body {
   font-size: 1.0625rem;  /* 17px */
   font-weight: 300;
   line-height: 1.85;
-  color: #7A7068;
+  color: #EDE8DE;
 }
 
 /* Body small — secondary reading text */
@@ -218,7 +218,7 @@ body {
   font-size: 0.9375rem;  /* 15px */
   font-weight: 300;
   line-height: 1.8;
-  color: #5A5449;
+  color: #EDE8DE;
 }
 
 /* Caption — fine print, dates, metadata */
@@ -227,7 +227,7 @@ body {
   font-size: 0.75rem;    /* 12px */
   font-weight: 400;
   line-height: 1.6;
-  color: #4A4440;
+  color: #EDE8DE;
 }
 
 /* Mono label — bottle numbers, issue numbers */
@@ -236,7 +236,7 @@ body {
   font-size: 0.625rem;   /* 10px */
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #3A3530;
+  color: #EDE8DE;
 }
 
 /* ── Admin-specific ─────────────────────────────────────────────────────────── */

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, FormEvent, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -121,7 +121,7 @@ function LoginForm() {
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPass(e.target.value)}
-                placeholder="••••••••••"
+                placeholder="����������"
                 className="w-full bg-transparent border-b border-white/8 py-3 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/50 transition-colors duration-300"
               />
             </div>
@@ -135,14 +135,14 @@ function LoginForm() {
             >
               {loading && <span className="spinner spinner-sm" />}
               <span className="uppercase font-medium">
-                {loading ? "Signing in…" : "Sign in"}
+                {loading ? "Signing in�" : "Sign in"}
               </span>
             </button>
           </form>
         </div>
 
         <p className="text-center text-xs text-[#2A2420] tracking-wider">
-          Restricted access · Maison Vereen
+          Restricted access � Maison Vereen
         </p>
       </div>
     </div>

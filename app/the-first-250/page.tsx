@@ -42,7 +42,7 @@ export default function TheFirst250Page() {
                 127 of 350. The House Is Being Assembled Now.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 The live Founding Registry count reflects every applicant the House
                 has personally reviewed and accepted — never an estimate, never
                 inflated.
@@ -66,13 +66,13 @@ export default function TheFirst250Page() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
               A LIVING RECORD
             </span>
-            <p className="text-sm sm:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
               This page exists as a living record of the Founding Registry&apos;s
               growth. The count displayed here rises only when Maison Vereen
               formally accepts an applicant — never automatically, never on a
               timer, and never adjusted for effect.
             </p>
-            <p className="text-sm sm:text-base text-[#8A8178] font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
               As the count approaches three hundred and fifty, this page becomes
               the clearest, most honest signal of how close the Founding Registry
               is to closing.
@@ -89,7 +89,7 @@ export default function TheFirst250Page() {
             <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#EDE8DE] font-medium">
               ACCEPTED MEMBERS
             </p>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#8A8178]">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#EDE8DE]">
               out of 350
             </p>
 
@@ -100,7 +100,7 @@ export default function TheFirst250Page() {
                 style={{ width: "36.2%" }}
               />
             </div>
-            <div className="flex justify-between text-[10px] font-mono text-[#8A8178] max-w-[500px] mx-auto">
+            <div className="flex justify-between text-[10px] font-mono text-[#EDE8DE] max-w-[500px] mx-auto">
               <span>127</span>
               <span>350</span>
             </div>
@@ -118,7 +118,7 @@ export default function TheFirst250Page() {
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
                   <thead>
-                    <tr className="border-b border-white/10 text-[9px] uppercase tracking-[0.2em] text-[#8A8178]">
+                    <tr className="border-b border-white/10 text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE]">
                       <th className="pb-3">MEMBER</th>
                       <th className="pb-3">COUNTRY</th>
                       <th className="pb-3 text-right">STATUS</th>
@@ -133,7 +133,7 @@ export default function TheFirst250Page() {
                           </span>
                           {row.name}
                         </td>
-                        <td className="py-4 text-[#8A8178]">{row.country}</td>
+                        <td className="py-4 text-[#EDE8DE]">{row.country}</td>
                         <td className="py-4 text-right text-[#C9A84C] font-medium">
                           {row.status}
                         </td>
@@ -164,7 +164,7 @@ export default function TheFirst250Page() {
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
                 WHY 350?
               </span>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 The Registry accepts a maximum of three hundred and fifty members
                 because the House honours scale as much as exclusivity. Only two
                 hundred and fifty bottles exist in Edition I. The Registry is
@@ -197,7 +197,7 @@ export default function TheFirst250Page() {
             <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
               Acceptance into the Registry is only the beginning
             </h2>
-            <p className="text-xs sm:text-sm text-[#8A8178] font-light">
+            <p className="text-xs sm:text-sm text-[#EDE8DE] font-light">
               Membership in this House means much more.
             </p>
           </div>

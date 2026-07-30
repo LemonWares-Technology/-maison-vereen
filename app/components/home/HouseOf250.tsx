@@ -26,7 +26,7 @@ export default function HouseOf250() {
               Two hundred and fifty.{" "}
               <em className="not-italic" style={{ color: "#C9A84C" }}>No more, ever.</em>
             </h2>
-            <p className="type-pullquote text-[#C8BFB2]">
+            <p className="type-pullquote text-[#EDE8DE]">
               &ldquo;The founding chapter of Maison Vereen — created to exist once, completely, and then to close.&rdquo;
             </p>
             <div className="type-body-sm space-y-4">
@@ -53,7 +53,7 @@ export default function HouseOf250() {
                   <span className="type-mono text-gold/60 mt-1">{item.step}.</span>
                   <div className="flex flex-col items-center sm:items-start">
                     <h4 className="type-body-sm text-[#E8E2D9]">{item.title}</h4>
-                    <p className="type-caption text-[#5A5449] mt-1">{item.desc}</p>
+                    <p className="type-caption text-[#EDE8DE] mt-1">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -63,7 +63,7 @@ export default function HouseOf250() {
               <Link href="/access" className="inline-block bg-gold/90 hover:bg-gold px-8 py-3.5 text-charcoal transition-all duration-500 type-caption uppercase tracking-[0.25em] font-semibold">
                 Apply for a Position
               </Link>
-              <Link href="/registry" className="px-4 py-3.5 type-caption uppercase tracking-[0.25em] text-[#8A8178] hover:text-[#E8E2D9] transition-colors font-medium">
+              <Link href="/registry" className="px-4 py-3.5 type-caption uppercase tracking-[0.25em] text-[#EDE8DE] hover:text-[#E8E2D9] transition-colors font-medium">
                 View the Founding Registry
               </Link>
             </div>

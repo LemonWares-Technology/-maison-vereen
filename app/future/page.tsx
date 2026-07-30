@@ -63,7 +63,7 @@ export default function FuturePage() {
                     We are not building for the current moment.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>We are building for the permanent record.</em>
                   </h1>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     Every decision made in the founding of Maison Vereen is made with one question: will this be the right decision in twenty years? The scarcity model. The authentication system. The collector ecosystem. The Africa positioning. The founder-led communication. None of these are tactics. They are architecture. The house is being built to last. That is not aspiration. It is design.
                   </p>
                 </div>
@@ -100,7 +100,7 @@ export default function FuturePage() {
                   <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "20px" }}>
                     {item.title}
                   </h3>
-                  <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "16px" }}>{item.body}</p>
+                  <p className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "16px" }}>{item.body}</p>
                   <div className="flex items-center gap-3 pt-1">
                     <div className="w-3 h-px bg-gold/25" />
                     <span className="text-[#4A4438] font-light" style={{ fontSize: "13px" }}>{item.access}</span>
@@ -124,12 +124,12 @@ export default function FuturePage() {
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-130 space-y-8">
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The people who are part of Maison Vereen in its founding decade are not buying into what it is. They are buying into what it will be. And we are building to be worthy of that trust.
                   </p>
                   <div className="border-t border-white/5 pt-8">
                     <div className="w-8 h-px bg-gold/40 mb-6" />
-                    <p className="font-serif font-light italic text-[#5A5449]" style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}>
+                    <p className="font-serif font-light italic text-[#EDE8DE]" style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}>
                       &ldquo;Edition I is the beginning of a house that is designed to endure. The house being built today will still be standing in fifty years. The only question is whether you were there when it started.&rdquo;
                     </p>
                   </div>

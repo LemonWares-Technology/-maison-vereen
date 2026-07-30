@@ -39,13 +39,13 @@ export default function ContactPage() {
                 NOT A SUPPORT TICKET. A CONVERSATION.
               </p>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Every enquiry to Maison Vereen — whether from a collector, a
                 journalist, or a future partner — is read and answered personally
                 by the House.
               </p>
 
-              <div className="text-[10px] tracking-[0.3em] uppercase text-[#8A8178]">
+              <div className="text-[10px] tracking-[0.3em] uppercase text-[#EDE8DE]">
                 SCROLL TO BEGIN &darr;
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
             A CONVERSATION BEGINS HERE
           </span>
 
-          <p className="font-serif text-base sm:text-lg md:text-xl font-light text-[#B3A99B] max-w-200 mx-auto leading-relaxed">
+          <p className="font-serif text-base sm:text-lg md:text-xl font-light text-[#EDE8DE] max-w-200 mx-auto leading-relaxed">
             Maison Vereen does not operate a customer service desk. Every message
             that arrives through this page is read personally, and answered in the
             same considered tone found throughout this website. Visitors are
@@ -103,10 +103,10 @@ export default function ContactPage() {
                   <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                     FOR COLLECTORS
                   </span>
-                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                  <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                     Speak with a concierge for fragrance advice, questions about Edition I, or guidance on the Founding Registry application.
                   </p>
-                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
+                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#EDE8DE] font-mono pt-4 border-t border-white/5">
                     <p>EDITION I ENQUIRIES</p>
                     <p>FOUNDING REGISTRY</p>
                     <p>SIGNATURE COLLECTION</p>
@@ -135,10 +135,10 @@ export default function ContactPage() {
                   <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                     FOR PRESS, PARTNERS &amp; GIFTING
                   </span>
-                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                  <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                     Media enquiries, partnership proposals, wholesale discussions, and gifting arrangements are each directed to the right person within the House.
                   </p>
-                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
+                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#EDE8DE] font-mono pt-4 border-t border-white/5">
                     <p>MEDIA &amp; INTERVIEWS</p>
                     <p>PARTNERSHIPS</p>
                     <p>CORPORATE GIFTING</p>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                     <h3 className="font-serif text-lg text-[#EDE8DE]">
                       WHATSAPP CONCIERGE
                     </h3>
-                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                       Begin a private conversation with the House.
                     </p>
                   </div>
@@ -224,7 +224,7 @@ export default function ContactPage() {
                     <h3 className="font-serif text-lg text-[#EDE8DE]">
                       EMAIL THE HOUSE
                     </h3>
-                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                       For thoughtful correspondence and longer enquiries.
                     </p>
                   </div>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                     <h3 className="font-serif text-lg text-[#EDE8DE]">
                       SCHEDULE A CONVERSATION
                     </h3>
-                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                       Arrange a dedicated discussion with a member of the House.
                     </p>
                   </div>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                 MAISON VEREEN
               </span>
               <p className="font-serif text-lg text-[#EDE8DE]">Lagos, Nigeria</p>
-              <div className="space-y-1 text-xs text-[#8A8178] font-mono pt-2">
+              <div className="space-y-1 text-xs text-[#EDE8DE] font-mono pt-2">
                 <p>Whatsapp: +234 802 123 4567</p>
                 <p>Email: concierge@maisonvereen.com</p>
                 <p>Instagram: @maisonvereen</p>
@@ -300,7 +300,7 @@ export default function ContactPage() {
                 RESPONSE TIMES
               </span>
               <p className="font-serif text-2xl text-[#EDE8DE]">Within 24–48 hours</p>
-              <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                 All enquiries, regardless of their nature, are read and answered
                 personally by the House.
               </p>

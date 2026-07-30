@@ -18,7 +18,7 @@ export default async function WaitlistPage() {
           <h1 className="font-serif font-light text-[#E8E2D9] text-2xl md:text-3xl">
             Waitlist
           </h1>
-          <p className="text-[#5A5449] text-xs mt-1">
+          <p className="text-[#EDE8DE] text-xs mt-1">
             {entries.length} entr{entries.length !== 1 ? "ies" : "y"}
           </p>
         </div>
@@ -57,7 +57,7 @@ export default async function WaitlistPage() {
                     <td className="px-5 py-3.5 text-xs text-[#3A3530] font-mono">
                       {String(idx + 1).padStart(3, "0")}
                     </td>
-                    <td className="px-5 py-3.5 text-sm text-[#8A8178]">
+                    <td className="px-5 py-3.5 text-sm text-[#EDE8DE]">
                       {entry.email}
                     </td>
                     <td className="px-5 py-3.5 text-xs text-[#3A3530]">

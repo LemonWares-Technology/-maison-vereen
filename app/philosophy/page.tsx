@@ -77,7 +77,7 @@ export default function PhilosophyPage() {
                 and none of them were chosen for how they would market.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 <p>
                   Every house, knowingly or not, is built on a set of beliefs. Most
                   never state them. Maison Vereen states them plainly, because a House
@@ -131,7 +131,7 @@ export default function PhilosophyPage() {
                     {c.purpose}
                   </p>
 
-                  <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed max-w-175">
+                  <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed max-w-175">
                     {c.body}
                   </p>
                 </div>
@@ -197,7 +197,7 @@ export default function PhilosophyPage() {
 
           <Link
             href="/the-founder"
-            className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#8A8178] hover:text-gold transition-colors font-medium"
+            className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#EDE8DE] hover:text-gold transition-colors font-medium"
           >
             NEXT: THE FOUNDER&apos;S STORY &rarr;
           </Link>

@@ -63,7 +63,7 @@ export default function TheCraftPage() {
                 <p>— The hand behind the formula.</p>
               </div>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 A finished fragrance from Maison Vereen represents years of
                 refinement — sourcing, testing, rejecting, and beginning again,
                 until the formula deserved the House&apos;s name.
@@ -103,7 +103,7 @@ export default function TheCraftPage() {
                 Behind every Maison Vereen fragrance is a process most houses no
                 longer have the patience for.
               </h2>
-              <div className="space-y-4 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <div className="space-y-4 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 <p>
                   It begins with sourcing — rare African materials selected not for
                   cost efficiency but for character, often requiring relationships
@@ -139,7 +139,7 @@ export default function TheCraftPage() {
         <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 border-b border-[#D5CFBF]">
           <div className="max-w-350 mx-auto space-y-12">
             <div className="max-w-175 mx-auto text-center space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A7A59] font-medium block">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#EDE8DE] font-medium block">
                 RAW MATERIALS
               </span>
               <p className="text-xs sm:text-sm text-[#4A433A] font-light leading-relaxed">
@@ -187,7 +187,7 @@ export default function TheCraftPage() {
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE] font-semibold">
                     {item.step}
                   </span>
-                  <p className="text-[10px] text-[#8A8178] font-light leading-snug">
+                  <p className="text-[10px] text-[#EDE8DE] font-light leading-snug">
                     {item.text}
                   </p>
                   {idx < PROCESS_STEPS.length - 1 && (
@@ -213,7 +213,7 @@ export default function TheCraftPage() {
                 A single formula may pass through dozens of trials before
                 approval.
               </h2>
-              <div className="space-y-4 text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <div className="space-y-4 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 <p>
                   Patience is treated as a material in its own right — as essential
                   to the finished work as any oil or absolute in the formula.
@@ -259,7 +259,7 @@ export default function TheCraftPage() {
                 <span>DISCOVER EDITION I IN FULL</span>
                 <span>&rarr;</span>
               </Link>
-              <p className="text-[10px] text-[#8A8178] font-light">
+              <p className="text-[10px] text-[#EDE8DE] font-light">
                 Return to Edition I with full appreciation for the craft behind it.
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function TheCraftPage() {
                 <span>APPLY FOR A POSITION</span>
                 <span>&rarr;</span>
               </button>
-              <p className="text-[10px] text-[#8A8178] font-light">
+              <p className="text-[10px] text-[#EDE8DE] font-light">
                 For those who want to be part of something built to last.
               </p>
             </div>

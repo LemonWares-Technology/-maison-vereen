@@ -89,7 +89,7 @@ export default function EnquiriesTable({
         <div className="relative shrink-0">
           <Filter className="absolute left-3 top-1/2 -translate-y-1/2 w-3 h-3 text-[#3A3530] pointer-events-none" />
           <select value={currentStatus} onChange={(e) => updateParams({ status: e.target.value, page: "1" })}
-            className="bg-[#0D0D0D] border border-white/[0.07] pl-8 pr-4 py-2.5 text-xs text-[#8A8178] focus:outline-none focus:border-gold/40 cursor-pointer appearance-none sm:w-[160px]">
+            className="bg-[#0D0D0D] border border-white/[0.07] pl-8 pr-4 py-2.5 text-xs text-[#EDE8DE] focus:outline-none focus:border-gold/40 cursor-pointer appearance-none sm:w-[160px]">
             {STATUSES.map((s) => <option key={s} value={s} className="bg-[#0D0D0D]">{s || "All statuses"}</option>)}
           </select>
         </div>
@@ -117,7 +117,7 @@ export default function EnquiriesTable({
                         <p className="text-sm text-[#C8C0B4] font-medium">{enq.name}</p>
                         <p className="text-xs text-[#3A3530]">{enq.email}</p>
                       </td>
-                      <td className="px-5 py-3.5 text-xs text-[#5A5449]">{enq.fragrance}</td>
+                      <td className="px-5 py-3.5 text-xs text-[#EDE8DE]">{enq.fragrance}</td>
                       <td className="px-5 py-3.5"><StatusBadge status={enq.status} /></td>
                       <td className="px-5 py-3.5 text-xs text-[#3A3530] whitespace-nowrap">
                         {new Date(enq.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })}
@@ -137,7 +137,7 @@ export default function EnquiriesTable({
                       <tr key={`${enq.id}-msg`} className="bg-[#0D0D0D]">
                         <td colSpan={5} className="px-5 py-4">
                           <p className="text-xs uppercase tracking-[0.2em] text-[#3A3530] mb-2">Message</p>
-                          <p className="text-xs text-[#7A7068] leading-relaxed max-w-[600px]">{enq.message}</p>
+                          <p className="text-xs text-[#EDE8DE] leading-relaxed max-w-[600px]">{enq.message}</p>
                         </td>
                       </tr>
                     )}
@@ -157,11 +157,11 @@ export default function EnquiriesTable({
                   <div>
                     <p className="text-sm text-[#C8C0B4] font-medium">{enq.name}</p>
                     <p className="text-xs text-[#3A3530]">{enq.email}</p>
-                    <p className="text-xs text-[#5A5449] mt-1">{enq.fragrance}</p>
+                    <p className="text-xs text-[#EDE8DE] mt-1">{enq.fragrance}</p>
                   </div>
                   <StatusBadge status={enq.status} />
                 </div>
-                {enq.message && <p className="text-xs text-[#5A5449] leading-relaxed">{enq.message}</p>}
+                {enq.message && <p className="text-xs text-[#EDE8DE] leading-relaxed">{enq.message}</p>}
                 <div className="flex items-center gap-2 pt-1">
                   {STATUSES.filter(s => s && s !== enq.status).map((s) => (
                     <button key={s} onClick={() => updateStatus(enq.id, s)}
@@ -185,7 +185,7 @@ export default function EnquiriesTable({
                   className="p-1.5 text-[#4A4438] hover:text-gold disabled:opacity-25 transition-colors">
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <span className="px-2 text-xs text-[#5A5449] tabular-nums">{pagination.page}/{pagination.pages}</span>
+                <span className="px-2 text-xs text-[#EDE8DE] tabular-nums">{pagination.page}/{pagination.pages}</span>
                 <button disabled={pagination.page >= pagination.pages} onClick={() => updateParams({ page: String(pagination.page + 1) })}
                   className="p-1.5 text-[#4A4438] hover:text-gold disabled:opacity-25 transition-colors">
                   <ChevronRight className="w-4 h-4" />

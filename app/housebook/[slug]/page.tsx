@@ -68,7 +68,7 @@ export default function ArticlePage() {
                 >
                   {article.title}
                 </h1>
-                <div className="flex items-center gap-4 text-[#5A5449] font-light" style={{ fontSize: "12px" }}>
+                <div className="flex items-center gap-4 text-[#EDE8DE] font-light" style={{ fontSize: "12px" }}>
                   <span>{article.date}</span>
                   <span>·</span>
                   <span>{article.readTime}</span>
@@ -85,7 +85,7 @@ export default function ArticlePage() {
             {/* Back link */}
             <Link
               href="/housebook"
-              className="inline-flex items-center gap-2 text-[#5A5449] hover:text-gold transition-colors duration-300 mb-12 group"
+              className="inline-flex items-center gap-2 text-[#EDE8DE] hover:text-gold transition-colors duration-300 mb-12 group"
               style={{ fontSize: "11px", letterSpacing: "0.22em" }}
             >
               <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
@@ -160,7 +160,7 @@ export default function ArticlePage() {
                       Previous
                     </span>
                     <p
-                      className="font-serif font-light text-[#5A5449] group-hover:text-[#C8C0B4] transition-colors duration-300 leading-snug"
+                      className="font-serif font-light text-[#EDE8DE] group-hover:text-[#C8C0B4] transition-colors duration-300 leading-snug"
                       style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.1rem)" }}
                     >
                       {prev.title}
@@ -179,7 +179,7 @@ export default function ArticlePage() {
                       </svg>
                     </span>
                     <p
-                      className="font-serif font-light text-[#5A5449] group-hover:text-[#C8C0B4] transition-colors duration-300 leading-snug"
+                      className="font-serif font-light text-[#EDE8DE] group-hover:text-[#C8C0B4] transition-colors duration-300 leading-snug"
                       style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.1rem)" }}
                     >
                       {next.title}
@@ -203,7 +203,7 @@ export default function ArticlePage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
               <Link
                 href="/housebook"
-                className="text-[#5A5449] hover:text-gold transition-colors duration-300 uppercase tracking-[0.22em] font-medium"
+                className="text-[#EDE8DE] hover:text-gold transition-colors duration-300 uppercase tracking-[0.22em] font-medium"
                 style={{ fontSize: "11px" }}
               >
                 ← All Issues

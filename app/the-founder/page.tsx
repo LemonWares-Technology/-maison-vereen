@@ -43,7 +43,7 @@ export default function TheFounderPage() {
                 <p>— This was never meant to be finished quickly.</p>
               </div>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 The most prestigious houses in the world communicate through their
                 work, not their founders. Maison Vereen was built in that tradition.
               </p>
@@ -62,7 +62,7 @@ export default function TheFounderPage() {
 
         {/* ── INDENTED ESSAY / QUOTE SECTION ── */}
         <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="max-w-225 mx-auto border-l-2 border-gold/40 pl-6 sm:pl-10 md:pl-12 space-y-6 text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+          <div className="max-w-225 mx-auto border-l-2 border-gold/40 pl-6 sm:pl-10 md:pl-12 space-y-6 text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
             <p>
               Maison Vereen was founded on a simple, stubborn conviction: that a
               luxury fragrance house built to the world&apos;s highest standard could
@@ -97,7 +97,7 @@ export default function TheFounderPage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE] leading-snug">
                   Conviction Over Credentials
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   The most prestigious houses in the world are remembered for their
                   work, not their founders&apos; faces. Maison Vereen follows that
                   same discipline deliberately — the House, not the individual, is
@@ -114,7 +114,7 @@ export default function TheFounderPage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE] leading-snug">
                   Building to Outlive Her
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Every decision made today — from Edition I&apos;s scarcity to the
                   Founding Registry&apos;s careful structure — is made with one
                   question in mind: will this still make sense in a century, under
@@ -146,7 +146,7 @@ export default function TheFounderPage() {
             <div className="bg-[#0D0D10] border border-white/5 p-8 sm:p-12 flex flex-col justify-between space-y-8">
               <div className="space-y-6">
                 <ImagePlaceholder aspect="aspect-21/9" label="The House Difference" />
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Discover what sets Maison Vereen apart and why nothing here is
                   ordinary.
                 </p>
@@ -165,7 +165,7 @@ export default function TheFounderPage() {
             {/* Right CTA Box */}
             <div className="bg-[#0D0D10] border border-white/5 p-8 sm:p-12 flex flex-col justify-between space-y-8">
               <div className="space-y-6">
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   For those who feel aligned with the mission and want to contribute
                   to its legacy.
                 </p>

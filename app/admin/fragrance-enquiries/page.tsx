@@ -53,7 +53,7 @@ export default async function FragranceEnquiriesPage({
           <h1 className="font-serif font-light text-[#E8E2D9] text-2xl md:text-3xl">
             Fragrance Enquiries
           </h1>
-          <p className="text-[#5A5449] text-xs mt-1">
+          <p className="text-[#EDE8DE] text-xs mt-1">
             {total} total enquir{total !== 1 ? "ies" : "y"} — Signature Collection
           </p>
         </div>

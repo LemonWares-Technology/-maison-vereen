@@ -68,7 +68,7 @@
 //               >
 //                 Collection One.
 //                 <span
-//                   className="block font-serif font-light text-[#C8BFB2] mt-2"
+//                   className="block font-serif font-light text-[#EDE8DE] mt-2"
 //                   style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}
 //                 >
 //                   250 numbered bottles.
@@ -86,14 +86,14 @@
 
 //               {/* Exact body copy from document */}
 //               <p
-//                 className="text-[#7A7068] font-light leading-[1.85]"
+//                 className="text-[#EDE8DE] font-light leading-[1.85]"
 //                 style={{ fontSize: "17px" }}
 //               >
 //                 Edition I of Maison Vereen is not a product launch. It is the
 //                 opening of a house.
 //               </p>
 //               <p
-//                 className="text-[#7A7068] font-light leading-[1.85]"
+//                 className="text-[#EDE8DE] font-light leading-[1.85]"
 //                 style={{ fontSize: "17px" }}
 //               >
 //                 250 bottles will exist — in the world, total, forever. Each one
@@ -108,7 +108,7 @@
 //                 </Link>
 //                 <button
 //                   onClick={onOpenApply}
-//                   className="block text-[#4A4438] hover:text-[#7A7068] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-[2px] w-fit"
+//                   className="block text-[#4A4438] hover:text-[#EDE8DE] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-[2px] w-fit"
 //                   style={{ fontSize: "9px", letterSpacing: "0.22em" }}
 //                 >
 //                   <span className="uppercase font-medium">
@@ -192,7 +192,7 @@ export default function CollectionPreview({
               >
                 Collection One.
                 <span
-                  className="block font-serif font-light text-[#C8BFB2] mt-2"
+                  className="block font-serif font-light text-[#EDE8DE] mt-2"
                   style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}
                 >
                   250 numbered bottles.
@@ -210,14 +210,14 @@ export default function CollectionPreview({
 
               {/* Exact body copy from document */}
               <p
-                className="text-[#7A7068] font-light leading-[1.85]"
+                className="text-[#EDE8DE] font-light leading-[1.85]"
                 style={{ fontSize: "17px" }}
               >
                 Edition I of Maison Vereen is not a product launch. It is the
                 opening of a house.
               </p>
               <p
-                className="text-[#7A7068] font-light leading-[1.85]"
+                className="text-[#EDE8DE] font-light leading-[1.85]"
                 style={{ fontSize: "17px" }}
               >
                 250 bottles will exist — in the world, total, forever. Each one
@@ -232,7 +232,7 @@ export default function CollectionPreview({
                 </Link>
                 <button
                   onClick={onOpenApply}
-                  className="block text-[#4A4438] hover:text-[#7A7068] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-0.5 w-fit"
+                  className="block text-[#4A4438] hover:text-[#EDE8DE] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-0.5 w-fit"
                   style={{ fontSize: "9px", letterSpacing: "0.22em" }}
                 >
                   <span className="uppercase font-medium">

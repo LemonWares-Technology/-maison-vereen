@@ -26,7 +26,7 @@ export default function FoundingRegistrySection({ onOpenApply }: FoundingRegistr
               while Edition I remains available.
             </h2>
 
-            <p className="text-[#8A8178] font-light leading-[1.85]" style={{ fontSize: "1.0625rem" }}>
+            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "1.0625rem" }}>
               Apply to become one of the original 250 collectors.
             </p>
 

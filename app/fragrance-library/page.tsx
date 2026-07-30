@@ -73,7 +73,7 @@ export default function FragranceLibraryPage() {
                 The Permanent Work of the House.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 The Signature Collection represents Maison Vereen&apos;s permanent
                 body of work — fragrances available on an ongoing basis, each
                 developed with the same standard applied to Edition I.
@@ -92,7 +92,7 @@ export default function FragranceLibraryPage() {
 
           {/* Sub-hero paragraph */}
           <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
-            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
               Where Edition I is finite by design, the Signature Collection is the
               House&apos;s enduring body of work — fragrances intended to remain
               part of Maison Vereen&apos;s offering for years, refined and revisited
@@ -107,7 +107,7 @@ export default function FragranceLibraryPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 EACH A COMPLETE STATEMENT
               </span>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 Every fragrance in the Collection is treated as a complete
                 artistic statement: its own story, its own inspiration, its own
                 character.
@@ -118,7 +118,7 @@ export default function FragranceLibraryPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 DISCOVER INDIVIDUALLY
               </span>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 None are framed as variations on a theme or filler around Edition
                 I. Discover each one the way you might discover an artist&apos;s
                 separate works.
@@ -129,7 +129,7 @@ export default function FragranceLibraryPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 NO ECOMMERCE EXPERIENCE
               </span>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 There is no ecommerce experience here. Every fragrance leads to a
                 personal conversation with the House&apos;s concierge — by design,
                 not by limitation.
@@ -145,7 +145,7 @@ export default function FragranceLibraryPage() {
               <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
                 THE SIGNATURE COLLECTION
               </span>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light">
                 A selection of the House&apos;s ongoing work.
               </p>
             </div>
@@ -158,7 +158,7 @@ export default function FragranceLibraryPage() {
                 >
                   <div className="space-y-4">
                     <ImagePlaceholder aspect="aspect-3/4" label={b.label} />
-                    <span className="text-[10px] text-[#8A8178] font-mono block">
+                    <span className="text-[10px] text-[#EDE8DE] font-mono block">
                       {b.no}
                     </span>
                     <h3 className="font-serif text-xl text-[#EDE8DE] tracking-wider">
@@ -167,7 +167,7 @@ export default function FragranceLibraryPage() {
                     <span className="text-[9px] uppercase tracking-[0.2em] text-gold font-mono block">
                       {b.notes}
                     </span>
-                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    <p className="text-xs text-[#EDE8DE] font-light leading-relaxed">
                       {b.desc}
                     </p>
                   </div>
@@ -196,7 +196,7 @@ export default function FragranceLibraryPage() {
                 <h3 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Each Fragrance, In Full
                 </h3>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Every fragrance page within the Signature Collection includes its
                   story and inspiration, a description of its character and mood,
                   its note structure, and the occasions or moments it was created to
@@ -214,7 +214,7 @@ export default function FragranceLibraryPage() {
                 <h3 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Concierge-Based Acquisition
                 </h3>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   At the close of every fragrance page, visitors are invited to speak
                   with a concierge, request details, or continue the conversation by
                   WhatsApp or email. There is no &ldquo;Add to Cart&rdquo; anywhere

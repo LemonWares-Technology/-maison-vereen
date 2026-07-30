@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { Users, Clock, Eye, CheckCircle, XCircle, Mail, ShoppingBag } from "lucide-react";
