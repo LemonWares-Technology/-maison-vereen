@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const FOOTER_LINKS = [
   { label: "THE MAISON", href: "/the-house" },
@@ -19,19 +20,15 @@ export default function Footer() {
       <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-white/5">
 
-          {/* Left: Brand Monogram & Name */}
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-8 h-8 border border-gold/50 bg-[#0A0908] flex items-center justify-center group-hover:border-gold transition-colors">
-              <span className="font-serif text-gold text-sm font-semibold italic">M</span>
-            </div>
-            <div>
-              <span className="font-serif text-sm tracking-[0.25em] text-[#EDE8DE] uppercase block font-light">
-                MAISON VEREEN
-              </span>
-              <span className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#7A7068] block">
-                EXTRAIT DE PARFUM
-              </span>
-            </div>
+          {/* Left: Brand Logo */}
+          <Link href="/" className="flex items-center group py-1">
+            <Image
+              src="/logo.png"
+              alt="Maison Vereen"
+              width={400}
+              height={140}
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
+            />
           </Link>
 
           {/* Center: Footer Navigation */}

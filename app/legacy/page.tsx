@@ -11,15 +11,15 @@ export default function LegacyPage() {
 
   return (
     <>
-      <Header  />
+      <Header />
       <main className="bg-charcoal">
 
         {/* ── OPENING — split layout ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[560px] space-y-10">
+                <div className="max-w-140 space-y-10">
                   <span className="section-tag">Legacy</span>
                   <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     What makes it endure is not{" "}
@@ -32,7 +32,7 @@ export default function LegacyPage() {
                 </div>
               </div>
               {/* Bottle — deep shadow, barely visible, maximum atmospheric treatment */}
-              <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-[#060506]">
+              <div className="relative min-h-105 lg:min-h-0 overflow-hidden bg-[#060506]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 12%", opacity: 0.44, filter: "brightness(0.52) saturate(0.32)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/58" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060506]/94 via-[#060506]/35 to-[#060506]/15" />
@@ -44,10 +44,10 @@ export default function LegacyPage() {
 
         {/* ── WHAT WE ARE BUILDING ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
+                <div className="max-w-130 space-y-8">
                   <span className="section-tag">What We Are Building</span>
                   <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                     Not a brand.{" "}
@@ -63,7 +63,7 @@ export default function LegacyPage() {
                 </div>
               </div>
               {/* Bottle — partial cap reveal, warm single light source */}
-              <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 8%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0D0D0D]/55" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/30 to-transparent" />
@@ -75,8 +75,8 @@ export default function LegacyPage() {
 
         {/* ── WHAT THIS HOUSE WILL MEAN ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
-            <div className="space-y-4 max-w-[680px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
+            <div className="space-y-4 max-w-170">
               <span className="section-tag">What This House Will Mean</span>
               <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                 In ten years. In twenty.{" "}
@@ -111,17 +111,17 @@ export default function LegacyPage() {
 
         {/* ── WHY BEGINNINGS MATTER — split layout ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[52vh]">
               {/* Bottle on left — alternates rhythm from previous section */}
-              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-80 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 55%", opacity: 0.45, filter: "brightness(0.55) saturate(0.35)" }} />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0D0D0D]/60" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/88 via-[#060608]/20 to-transparent" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 42% 48% at 48% 50%, rgba(180,130,40,0.07) 0%, transparent 62%)" }} />
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
+                <div className="max-w-130 space-y-8">
                   <span className="section-tag">Why Beginnings Matter</span>
                   <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}>
                     History does not remember the people who arrived{" "}
@@ -141,8 +141,8 @@ export default function LegacyPage() {
 
         {/* ── CLOSING STATEMENT + CTA ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-24 md:py-36">
-            <div className="max-w-[680px] mx-auto text-center space-y-12">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-24 md:py-36">
+            <div className="max-w-170 mx-auto text-center space-y-12">
               <div className="w-8 h-px bg-gold/40 mx-auto" />
               {/* Exact closing statement from document Page 15 */}
               <p className="font-serif font-light text-[#C8BFB2] leading-[1.55]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.7rem)" }}>

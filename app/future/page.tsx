@@ -49,15 +49,15 @@ export default function FuturePage() {
 
   return (
     <>
-      <Header  />
+      <Header />
       <main className="bg-charcoal">
 
         {/* ── HERO — split layout ── */}
-        <section className="pt-[72px] border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+        <section className="pt-18 border-b border-white/5">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[540px] space-y-8">
+                <div className="max-w-135 space-y-8">
                   <span className="section-tag">The Future of the House</span>
                   <h1 className="font-serif font-light text-[#E8E2D9] leading-[1.06]" style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}>
                     We are not building for the current moment.{" "}
@@ -69,7 +69,7 @@ export default function FuturePage() {
                 </div>
               </div>
               {/* Bottle — top cap emerging from darkness */}
-              <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-100 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 0%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/52" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/32 to-[#060608]/12" />
@@ -81,8 +81,8 @@ export default function FuturePage() {
 
         {/* ── WHAT IS COMING ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
-            <div className="space-y-4 max-w-[680px]">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
+            <div className="space-y-4 max-w-170">
               <span className="section-tag">What Is Coming</span>
               <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
                 We are not building a brand.{" "}
@@ -113,17 +113,17 @@ export default function FuturePage() {
 
         {/* ── CLOSING — split layout ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[48vh]">
               {/* Bottle on left */}
-              <div className="relative min-h-[300px] lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-75 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 60%", opacity: 0.46, filter: "brightness(0.55) saturate(0.35)" }} />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-charcoal/55" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/88 via-[#060608]/20 to-transparent" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 40% 48% at 48% 58%, rgba(180,130,40,0.07) 0%, transparent 62%)" }} />
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
-                <div className="max-w-[520px] space-y-8">
+                <div className="max-w-130 space-y-8">
                   <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The people who are part of Maison Vereen in its founding decade are not buying into what it is. They are buying into what it will be. And we are building to be worthy of that trust.
                   </p>
