@@ -138,10 +138,10 @@ export default function CollectionPreview({
 }: CollectionPreviewProps) {
   return (
     <section id="edition-i" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-350 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left — bottle image: SILHOUETTE ONLY — anticipation, not unveiling */}
-          <div className="relative min-h-[500px] lg:min-h-[660px] overflow-hidden bg-[#060608]">
+          <div className="relative min-h-125 lg:min-h-165 overflow-hidden bg-[#060608]">
             {/* Bottle barely visible — low opacity = pure suggestion */}
             <Image
               src="/file_00000000a75471f48402160a6ed179fc.png"
@@ -182,7 +182,7 @@ export default function CollectionPreview({
 
           {/* Right — exact document copy */}
           <div className="flex items-center px-10 md:px-16 lg:px-20 py-20 md:py-28 bg-charcoal">
-            <div className="max-w-[420px] space-y-9">
+            <div className="max-w-105 space-y-9">
               <span className="section-tag">Collection One</span>
 
               {/* Exact headline from document */}
@@ -232,7 +232,7 @@ export default function CollectionPreview({
                 </Link>
                 <button
                   onClick={onOpenApply}
-                  className="block text-[#4A4438] hover:text-[#7A7068] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-[2px] w-fit"
+                  className="block text-[#4A4438] hover:text-[#7A7068] transition-colors duration-300 border-b border-[#2A2820] hover:border-[#4A4438] pb-0.5 w-fit"
                   style={{ fontSize: "9px", letterSpacing: "0.22em" }}
                 >
                   <span className="uppercase font-medium">

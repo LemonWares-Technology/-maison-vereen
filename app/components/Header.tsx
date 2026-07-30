@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -49,14 +50,16 @@ export default function Header({ onOpenApply }: HeaderProps) {
       >
         <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between">
 
-          {/* Logo Brand: Monogram M + MAISON VEREEN */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-7 h-7 border border-gold/60 flex items-center justify-center bg-[#0F0E0D] group-hover:border-gold transition-colors">
-              <span className="font-serif text-gold text-xs font-semibold leading-none">M</span>
-            </div>
-            <span className="font-serif text-sm md:text-base tracking-[0.25em] text-[#EDE8DE] uppercase group-hover:text-gold transition-colors font-light">
-              Maison Vereen
-            </span>
+          {/* Logo Brand: Main Logo Image */}
+          <Link href="/" className="flex items-center group py-1">
+            <Image
+              src="/logo.png"
+              alt="Maison Vereen"
+              width={400}
+              height={140}
+              className="h-20 sm:h-24 md:h-28 lg:h-36 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -117,13 +120,15 @@ export default function Header({ onOpenApply }: HeaderProps) {
         {/* Close button top-right */}
         <div className="max-w-350 w-full mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between py-6 md:py-7">
           {/* Logo repeated inside overlay */}
-          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 group">
-            <div className="w-7 h-7 border border-gold/60 flex items-center justify-center bg-[#0F0E0D]">
-              <span className="font-serif text-gold text-xs font-semibold leading-none">M</span>
-            </div>
-            <span className="font-serif text-sm md:text-base tracking-[0.25em] text-[#EDE8DE] uppercase font-light">
-              Maison Vereen
-            </span>
+          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center group py-1">
+            <Image
+              src="/logo.png"
+              alt="Maison Vereen"
+              width={400}
+              height={140}
+              className="h-20 sm:h-24 md:h-28 lg:h-36 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
+              priority
+            />
           </Link>
 
           <button
