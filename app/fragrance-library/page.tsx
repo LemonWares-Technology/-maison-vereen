@@ -51,20 +51,20 @@ export default function FragranceLibraryPage() {
   const openApply = () => setIsApplyOpen(true);
 
   return (
-    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-[#C9A84C]/30 selection:text-[#EDE8DE]">
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
       {/* ── Header ── */}
       <Header onOpenApply={openApply} />
 
       <main className="flex-1 pt-24 md:pt-28">
         {/* ── HERO SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-12 md:py-20 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Narrative */}
-            <div className="space-y-8 max-w-[620px]">
+            <div className="space-y-8 max-w-155">
               <div className="flex items-center gap-3">
-                <span className="font-serif text-xl text-[#C9A84C]">11</span>
-                <div className="w-6 h-[1px] bg-[#C9A84C]" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium">
+                <span className="font-serif text-xl text-gold">11</span>
+                <div className="w-6 h-px bg-gold" />
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
                   SIGNATURE COLLECTION
                 </span>
               </div>
@@ -91,7 +91,7 @@ export default function FragranceLibraryPage() {
           </div>
 
           {/* Sub-hero paragraph */}
-          <div className="mt-12 pt-8 border-t border-white/5 max-w-[900px]">
+          <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
             <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
               Where Edition I is finite by design, the Signature Collection is the
               House&apos;s enduring body of work — fragrances intended to remain
@@ -104,7 +104,7 @@ export default function FragranceLibraryPage() {
           {/* 3 Feature Columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A84C] font-semibold block">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 EACH A COMPLETE STATEMENT
               </span>
               <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
@@ -115,7 +115,7 @@ export default function FragranceLibraryPage() {
             </div>
 
             <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A84C] font-semibold block">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 DISCOVER INDIVIDUALLY
               </span>
               <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
@@ -126,7 +126,7 @@ export default function FragranceLibraryPage() {
             </div>
 
             <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A84C] font-semibold block">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 NO ECOMMERCE EXPERIENCE
               </span>
               <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
@@ -142,7 +142,7 @@ export default function FragranceLibraryPage() {
         <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
           <div className="space-y-12">
             <div className="text-center space-y-3">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
                 THE SIGNATURE COLLECTION
               </span>
               <p className="text-xs sm:text-sm text-[#8A8178] font-light">
@@ -154,7 +154,7 @@ export default function FragranceLibraryPage() {
               {SIGNATURE_BOTTLES.map((b) => (
                 <div
                   key={b.name}
-                  className="bg-[#0A0A0C] border border-white/5 p-6 flex flex-col justify-between space-y-6 group hover:border-[#C9A84C]/40 transition-colors"
+                  className="bg-[#0A0A0C] border border-white/5 p-6 flex flex-col justify-between space-y-6 group hover:border-gold/40 transition-colors"
                 >
                   <div className="space-y-4">
                     <ImagePlaceholder aspect="aspect-3/4" label={b.label} />
@@ -164,7 +164,7 @@ export default function FragranceLibraryPage() {
                     <h3 className="font-serif text-xl text-[#EDE8DE] tracking-wider">
                       {b.name}
                     </h3>
-                    <span className="text-[9px] uppercase tracking-[0.2em] text-[#C9A84C] font-mono block">
+                    <span className="text-[9px] uppercase tracking-[0.2em] text-gold font-mono block">
                       {b.notes}
                     </span>
                     <p className="text-xs text-[#8A8178] font-light leading-relaxed">
@@ -174,7 +174,7 @@ export default function FragranceLibraryPage() {
 
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] group-hover:text-[#C9A84C] transition-colors pt-2"
+                    className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] group-hover:text-gold transition-colors pt-2"
                   >
                     <span>DISCOVER</span>
                     <span>&rarr;</span>
@@ -192,7 +192,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
               <div className="space-y-6">
                 <ImagePlaceholder aspect="aspect-16/9" label="Fragrance Archives" />
-                <span className="font-serif text-xl text-[#C9A84C] block">01</span>
+                <span className="font-serif text-xl text-gold block">01</span>
                 <h3 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Each Fragrance, In Full
                 </h3>
@@ -210,7 +210,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
               <div className="space-y-6">
                 <ImagePlaceholder aspect="aspect-16/9" label="Gold Sealed Correspondence" />
-                <span className="font-serif text-xl text-[#C9A84C] block">02</span>
+                <span className="font-serif text-xl text-gold block">02</span>
                 <h3 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Concierge-Based Acquisition
                 </h3>
@@ -228,8 +228,8 @@ export default function FragranceLibraryPage() {
 
         {/* ── BOTTOM BANNER & CTAS ── */}
         <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 text-center space-y-8">
-          <div className="w-8 h-8 border border-[#C9A84C]/40 mx-auto flex items-center justify-center bg-[#060506]">
-            <span className="font-serif text-[#C9A84C] text-xs">MV</span>
+          <div className="w-8 h-8 border border-gold/40 mx-auto flex items-center justify-center bg-[#060506]">
+            <span className="font-serif text-gold text-xs">MV</span>
           </div>
 
           <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-[800px] mx-auto leading-relaxed">
@@ -240,7 +240,7 @@ export default function FragranceLibraryPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
             <Link
               href="/contact"
-              className="bg-[#C9A84C] hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors flex items-center gap-2"
+              className="bg-gold hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors flex items-center gap-2"
             >
               <span>SPEAK TO A CONCIERGE</span>
               <span>💬</span>
@@ -248,7 +248,7 @@ export default function FragranceLibraryPage() {
 
             <Link
               href="/contact"
-              className="border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#EDE8DE] hover:text-[#C9A84C] px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
+              className="border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
             >
               REQUEST DETAILS &rarr;
             </Link>

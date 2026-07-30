@@ -37,14 +37,14 @@ export default function BeforeLanguageSection() {
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-120 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
               <Image
-                src="/images/philosophy-hero.png"
+                src="/founder-image-2.png"
                 alt="The moment before language — Maison Vereen"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"
                 className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(6,5,6,0.35)_100%)] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#060506]/50 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#060506]/50 to-transparent pointer-events-none" />
             </div>
           </div>
 

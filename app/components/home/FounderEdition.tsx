@@ -13,9 +13,10 @@ export default function FounderEdition() {
           <div className="lg:col-span-5 flex items-center justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
               <Image
-                src="/images/hand_writing.png"
+                src="/file_00000000a39471f4b5714dd0617de348.png"
                 alt="The founding chapter — Maison Vereen Edition I"
                 fill
+
                 sizes="(max-width: 1024px) 100vw, 460px"
                 className="object-cover object-center"
               />
