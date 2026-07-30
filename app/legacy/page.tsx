@@ -32,7 +32,7 @@ export default function LegacyPage() {
                 </div>
               </div>
               {/* Bottle — deep shadow, barely visible, maximum atmospheric treatment */}
-              <div className="relative min-h-105 lg:min-h-0 overflow-hidden bg-[#060506]">
+              <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-[#060506]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 12%", opacity: 0.44, filter: "brightness(0.52) saturate(0.32)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/58" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060506]/94 via-[#060506]/35 to-[#060506]/15" />
@@ -63,7 +63,7 @@ export default function LegacyPage() {
                 </div>
               </div>
               {/* Bottle — partial cap reveal, warm single light source */}
-              <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 8%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0D0D0D]/55" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/30 to-transparent" />
@@ -114,7 +114,7 @@ export default function LegacyPage() {
           <div className="max-w-350 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[52vh]">
               {/* Bottle on left — alternates rhythm from previous section */}
-              <div className="relative min-h-80 lg:min-h-0 overflow-hidden bg-[#060608]">
+              <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-[#060608]">
                 <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 55%", opacity: 0.45, filter: "brightness(0.55) saturate(0.35)" }} />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0D0D0D]/60" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/88 via-[#060608]/20 to-transparent" />
