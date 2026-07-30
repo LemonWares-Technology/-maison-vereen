@@ -74,7 +74,7 @@ export default function DiscoverPage() {
         {/* ── HERO — full-bleed bottle image, headline overlaid ── */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#040404]">
           <Image
-            src="/images/the bottle.png"
+            src="/file_00000000a75471f48402160a6ed179fc.png"
             alt="Maison Vereen Edition I"
             fill
             priority
@@ -186,7 +186,7 @@ export default function DiscoverPage() {
                     }}
                   >
                     <Image
-                      src="/images/certificate.png"
+                      src="/file_000000005fc471f495c71bc758a16ffc.png"
                       alt="Maison Vereen Edition I — Certificate of Authenticity & Ownership"
                       fill
                       sizes="(max-width: 768px) 85vw, 320px"

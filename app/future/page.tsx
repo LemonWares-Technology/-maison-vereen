@@ -70,7 +70,7 @@ export default function FuturePage() {
               </div>
               {/* Bottle — top cap emerging from darkness */}
               <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 0%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
+                <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 0%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/52" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/32 to-[#060608]/12" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 45% 52% at 54% 15%, rgba(180,130,40,0.09) 0%, transparent 65%)" }} />
@@ -117,7 +117,7 @@ export default function FuturePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[48vh]">
               {/* Bottle on left */}
               <div className="relative min-h-[300px] lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/images/hero-bottle.png)", backgroundSize: "cover", backgroundPosition: "center 60%", opacity: 0.46, filter: "brightness(0.55) saturate(0.35)" }} />
+                <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)", backgroundSize: "cover", backgroundPosition: "center 60%", opacity: 0.46, filter: "brightness(0.55) saturate(0.35)" }} />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-charcoal/55" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/88 via-[#060608]/20 to-transparent" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 40% 48% at 48% 58%, rgba(180,130,40,0.07) 0%, transparent 62%)" }} />

@@ -58,7 +58,7 @@ export default function OurStoryPage() {
               </div>
               <div className="relative min-h-105 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
-                  src="/images/the-house-hero.png"
+                  src="/file_00000000a39471f4b5714dd0617de348.png"
                   alt="Maison Vereen — Discover the House"
                   fill
                   priority
@@ -98,7 +98,7 @@ export default function OurStoryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
               <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608]">
                 <Image
-                  src="/images/house-section-image.png"
+                  src="/file_00000000520071f4915a7351029b1f7b.png"
                   alt="Maison Vereen — African materials, hands at work"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

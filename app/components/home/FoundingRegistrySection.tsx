@@ -45,7 +45,7 @@ export default function FoundingRegistrySection({ onOpenApply }: FoundingRegistr
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
               <Image
-                src="/images/private_maison_desk.png"
+                src="/file_000000005fc471f495c71bc758a16ffc.png"
                 alt="The Founding Registry — Maison Vereen Private Maison Desk"
                 fill
                 sizes="(max-width: 1024px) 100vw, 460px"

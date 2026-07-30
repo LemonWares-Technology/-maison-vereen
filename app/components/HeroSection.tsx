@@ -75,7 +75,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/images/the bottle.png"
+                src="/file_00000000a75471f48402160a6ed179fc.png"
                 alt="Maison Vereen Edition I — The Bottle"
                 fill
                 sizes="(max-width: 1024px) 100vw, 460px"
@@ -85,7 +85,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
               {/* Subtle vignette overlay */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(6,5,6,0.45)_100%)] pointer-events-none" />
               {/* Bottom fade */}
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#060506]/60 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-[#060506]/60 to-transparent pointer-events-none" />
             </div>
           </div>
 
