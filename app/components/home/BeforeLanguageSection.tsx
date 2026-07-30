@@ -37,7 +37,7 @@ export default function BeforeLanguageSection() {
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-120 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
               <Image
-                src="/founder-image-2.png"
+                src="/founder-image-2.webp"
                 alt="The moment before language — Maison Vereen"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"

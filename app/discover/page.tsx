@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Maison Vereen — Africa's First Serious Luxury Fragrance House",
     description:
       "Two hundred and fifty bottles. One founding chapter that will not return. Founding Registry now open.",
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Maison Vereen" }],
+    images: [{ url: "/logo.webp", width: 1200, height: 630, alt: "Maison Vereen" }],
   },
   robots: { index: false, follow: false },
 };
@@ -40,7 +40,7 @@ export default function DiscoverPage() {
           <Link href="/" className="group shrink-0" aria-label="Maison Vereen — Home">
             {/* Mobile size: h-28 = 112px, width 280 */}
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={280}
               height={96}
@@ -49,7 +49,7 @@ export default function DiscoverPage() {
             />
             {/* Desktop size: h-[110px], width 320 */}
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={320}
               height={110}
@@ -74,7 +74,7 @@ export default function DiscoverPage() {
         {/* ── HERO — full-bleed bottle image, headline overlaid ── */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-[#040404]">
           <Image
-            src="/file_00000000a75471f48402160a6ed179fc.png"
+            src="/file_00000000a75471f48402160a6ed179fc.webp"
             alt="Maison Vereen Edition I"
             fill
             priority
@@ -186,7 +186,7 @@ export default function DiscoverPage() {
                     }}
                   >
                     <Image
-                      src="/file_000000005fc471f495c71bc758a16ffc.png"
+                      src="/file_000000005fc471f495c71bc758a16ffc.webp"
                       alt="Maison Vereen Edition I — Certificate of Authenticity & Ownership"
                       fill
                       sizes="(max-width: 768px) 85vw, 320px"

@@ -18,7 +18,7 @@ export default function NotFound() {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 md:px-14 h-[100px] md:h-[125px] flex items-center justify-between">
           <Link href="/" className="group shrink-0" aria-label="Maison Vereen — Home">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={280}
               height={96}
@@ -26,7 +26,7 @@ export default function NotFound() {
               priority
             />
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={320}
               height={110}

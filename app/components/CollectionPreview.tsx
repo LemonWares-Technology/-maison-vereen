@@ -18,7 +18,7 @@
 //           <div className="relative min-h-[500px] lg:min-h-[660px] overflow-hidden bg-[#060608]">
 //             {/* Bottle barely visible — heavy blur, very low opacity = pure suggestion */}
 //             <Image
-//               src="/images/hero-bottle.png"
+//               src="/images/hero-bottle.webp"
 //               alt="Maison Vereen Edition I — The Founding Expression"
 //               fill
 //               sizes="(max-width:1024px) 100vw, 50vw"
@@ -144,7 +144,7 @@ export default function CollectionPreview({
           <div className="relative min-h-125 lg:min-h-165 overflow-hidden bg-[#060608]">
             {/* Bottle barely visible — low opacity = pure suggestion */}
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.png"
+              src="/file_00000000a75471f48402160a6ed179fc.webp"
               alt="Maison Vereen Edition I — The Founding Expression"
               fill
               priority

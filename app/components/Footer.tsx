@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Left: Brand Logo */}
           <Link href="/" className="flex items-center group py-1">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={400}
               height={140}

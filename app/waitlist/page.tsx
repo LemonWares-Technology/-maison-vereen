@@ -192,7 +192,7 @@ export default function WaitlistPage() {
               {/* Right — hero image */}
               <div className="relative min-h-70 sm:min-h-85 lg:min-h-0 overflow-hidden bg-[#060606]">
                 <Image
-                  src="/file_00000000b1e872469e4def4b87dca0c3.png"
+                  src="/file_00000000b1e872469e4def4b87dca0c3.webp"
                   alt="Maison Vereen"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -241,7 +241,7 @@ export default function WaitlistPage() {
               {/* Left — image: hidden on mobile, visible lg+ */}
               <div className="hidden lg:block relative overflow-hidden bg-[#040404]">
                 <Image
-                  src="/file_00000000a39471f4b5714dd0617de348.png"
+                  src="/file_00000000a39471f4b5714dd0617de348.webp"
                   alt="Maison Vereen"
                   fill
                   sizes="50vw"

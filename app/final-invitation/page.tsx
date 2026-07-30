@@ -19,7 +19,7 @@ export default function FinalInvitationPage() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.png)",
+              backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center 15%",
               opacity: 0.25,

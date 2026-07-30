@@ -43,7 +43,7 @@ export default function WhyExists() {
           {/* Right — image, same treatment as the-house page sections */}
           <div className="relative min-h-90 lg:min-h-0 overflow-hidden bg-[#060608] group">
             <Image
-              src="/file_00000000a39471f4b5714dd0617de348.png"
+              src="/file_00000000a39471f4b5714dd0617de348.webp"
               alt="The vision behind Maison Vereen"
               fill
               sizes="(max-width:1024px) 100vw, 50vw"

@@ -75,7 +75,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.png"
+                src="/file_00000000a75471f48402160a6ed179fc.webp"
                 alt="Maison Vereen Edition I — The Bottle"
                 fill
                 sizes="(max-width: 1024px) 100vw, 460px"
