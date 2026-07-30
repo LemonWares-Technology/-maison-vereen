@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface ImagePlaceholderProps {
@@ -10,21 +10,22 @@ interface ImagePlaceholderProps {
   className?: string;
   alt?: string;
   theme?: "dark" | "light";
+  priority?: boolean;
 }
 
 // ─── Real image files living in /public/ ────────────────────────────────────
 const IMG = {
-  bottleMain: "/file_00000000a75471f48402160a6ed179fc.png",  // MV bottle on black marble
-  bottleEleris: "/file_000000009ffc81f4b13c80251cc456a8.png",  // ELERIS bottle on marble
-  bottleCap: "/file_00000000a97471f4be1bee83e5dedea0.png",  // Edition I cap close-up
-  certificate: "/file_000000005fc471f495c71bc758a16ffc.png",  // Box + Certificate of Authenticity
-  craftDropper: "/file_00000000520071f4915a7351029b1f7b.png",  // Hand dropper / atelier craft
-  founderAtelier: "/file_00000000a39471f4b5714dd0617de348.png",  // Founder in MV atelier
-  hourglass: "/file_00000000aba081f49f4ebc11da3f8c3d.png",  // Brass hourglass on marble
-  privateAcq: "/file_00000000b1e872469e4def4b87dca0c3.png",  // Private Acquisition door plaque
-  blackStone: "/file_00000000df2071f4ac2ce7694ace922d.png",  // Black stone with gold veins
-  founderPortrait1: "/founder-image-1.png",                     // Founder portrait side profile
-  founderPortrait2: "/founder-image-2.png",                     // Founder portrait wider
+  bottleMain: "/file_00000000a75471f48402160a6ed179fc.webp",  // MV bottle on black marble
+  bottleEleris: "/file_000000009ffc81f4b13c80251cc456a8.webp",  // ELERIS bottle on marble
+  bottleCap: "/file_00000000a97471f4be1bee83e5dedea0.webp",  // Edition I cap close-up
+  certificate: "/file_000000005fc471f495c71bc758a16ffc.webp",  // Box + Certificate of Authenticity
+  craftDropper: "/file_00000000520071f4915a7351029b1f7b.webp",  // Hand dropper / atelier craft
+  founderAtelier: "/file_00000000a39471f4b5714dd0617de348.webp",  // Founder in MV atelier
+  hourglass: "/file_00000000aba081f49f4ebc11da3f8c3d.webp",  // Brass hourglass on marble
+  privateAcq: "/file_00000000b1e872469e4def4b87dca0c3.webp",  // Private Acquisition door plaque
+  blackStone: "/file_00000000df2071f4ac2ce7694ace922d.webp",  // Black stone with gold veins
+  founderPortrait1: "/founder-image-1.webp",                     // Founder portrait side profile
+  founderPortrait2: "/founder-image-2.webp",                     // Founder portrait wider
 } as const;
 
 const LABEL_IMAGE_MAP: Record<string, string> = {
@@ -142,7 +143,9 @@ export default function ImagePlaceholder({
   aspect = "aspect-4/3",
   className = "",
   alt,
+  priority = false,
 }: ImagePlaceholderProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
   const finalSrc = src || getImageForLabel(label);
   const imageAlt = alt || label || "Maison Vereen Image";
 
@@ -150,16 +153,27 @@ export default function ImagePlaceholder({
     <div
       className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden group shadow-2xl ${aspect} ${className}`}
     >
+      {/* Luxury Dark Shimmer Skeleton while loading */}
+      <div
+        className={`absolute inset-0 bg-linear-to-r from-[#0B0A0F] via-[#1B1924] to-[#0B0A0F] animate-pulse transition-opacity duration-700 z-1 ${isLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+      />
+
       <Image
         src={finalSrc}
         alt={imageAlt}
         fill
+        priority={priority}
         sizes="(max-width: 1024px) 100vw, 600px"
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        onLoad={() => setIsLoaded(true)}
+        className={`object-cover object-center transition-all duration-700 ease-out ${isLoaded
+          ? "opacity-100 blur-0 scale-100 group-hover:scale-105"
+          : "opacity-0 blur-xs scale-102"
+          }`}
       />
       {/* Luxury Dark Vignette Overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-[#060506]/70 via-transparent to-[#060506]/30 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(6,5,6,0.35)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#060506]/70 via-transparent to-[#060506]/30 pointer-events-none z-2" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(6,5,6,0.35)_100%)] pointer-events-none z-2" />
     </div>
   );
 }

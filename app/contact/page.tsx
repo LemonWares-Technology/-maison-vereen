@@ -87,7 +87,7 @@ export default function ContactPage() {
             <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden grid grid-cols-1 sm:grid-cols-12 group">
               <div className="sm:col-span-4 relative min-h-60 sm:min-h-full">
                 <Image
-                  src="/file_00000000a75471f48402160a6ed179fc.png"
+                  src="/file_00000000a75471f48402160a6ed179fc.webp"
                   alt="For Collectors"
                   fill
                   sizes="(max-width: 640px) 100vw, 200px"
@@ -155,7 +155,7 @@ export default function ContactPage() {
               </div>
               <div className="sm:col-span-4 relative min-h-60 sm:min-h-full order-1 sm:order-2">
                 <Image
-                  src="/file_000000005fc471f495c71bc758a16ffc.png"
+                  src="/file_000000005fc471f495c71bc758a16ffc.webp"
                   alt="For Press & Gifting"
                   fill
                   sizes="(max-width: 640px) 100vw, 200px"
@@ -179,7 +179,7 @@ export default function ContactPage() {
               <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
-                    src="/file_00000000a39471f4b5714dd0617de348.png"
+                    src="/file_00000000a39471f4b5714dd0617de348.webp"
                     alt="WhatsApp Concierge"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -211,7 +211,7 @@ export default function ContactPage() {
               <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
-                    src="/file_00000000520071f4915a7351029b1f7b.png"
+                    src="/file_00000000520071f4915a7351029b1f7b.webp"
                     alt="Email The House"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -241,7 +241,7 @@ export default function ContactPage() {
               <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
-                    src="/file_00000000aba081f49f4ebc11da3f8c3d.png"
+                    src="/file_00000000aba081f49f4ebc11da3f8c3d.webp"
                     alt="Schedule A Conversation"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"

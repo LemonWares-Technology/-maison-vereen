@@ -53,7 +53,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
           {/* Logo Brand: Main Logo Image */}
           <Link href="/" className="flex items-center group py-1">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={400}
               height={140}
@@ -122,7 +122,7 @@ export default function Header({ onOpenApply }: HeaderProps) {
           {/* Logo repeated inside overlay */}
           <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center group py-1">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maison Vereen"
               width={400}
               height={140}

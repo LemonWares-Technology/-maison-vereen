@@ -14,7 +14,7 @@ export default function FounderStory() {
           {/* Left — image: side profile, low light, looking away — from document design note */}
           <div className="relative min-h-110 lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1 group">
             <Image
-              src="/founder-image-1.png"
+              src="/founder-image-1.webp"
               alt="Founder of Maison Vereen — side profile"
               fill
               sizes="(max-width:1024px) 100vw, 50vw"

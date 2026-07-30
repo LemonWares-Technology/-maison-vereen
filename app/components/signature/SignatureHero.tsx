@@ -20,7 +20,7 @@ export default function SignatureHero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/file_000000009ffc81f4b13c80251cc456a8.png"
+          src="/file_000000009ffc81f4b13c80251cc456a8.webp"
           alt="Maison Vereen Signature Collection"
           fill
           priority
