@@ -6,49 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 
-const ImagePlaceholder = ({
-  className = "",
-  aspect = "aspect-4/3",
-  label,
-  theme = "dark",
-}: {
-  className?: string;
-  aspect?: string;
-  label?: string;
-  theme?: "dark" | "light";
-}) => {
-  const isLight = theme === "light";
-  return (
-    <div
-      className={`relative overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className} ${isLight
-        ? "bg-[#E5DFD3] border border-[#8A7A59]/30"
-        : "bg-[#0A0A0C] border border-gold/25"
-        }`}
-    >
-      <div
-        className={`w-10 h-10 border flex items-center justify-center mb-2 ${isLight
-          ? "border-[#8A7A59]/40 bg-[#EDE8DE]"
-          : "border-gold/40 bg-[#060506]"
-          }`}
-      >
-        <span
-          className={`font-serif text-sm ${isLight ? "text-[#5A4D33]" : "text-gold"
-            }`}
-        >
-          MV
-        </span>
-      </div>
-      {label && (
-        <span
-          className={`text-[9px] uppercase tracking-[0.25em] font-mono ${isLight ? "text-[#7A6C4D]" : "text-[#8A8070]"
-            }`}
-        >
-          {label}
-        </span>
-      )}
-    </div>
-  );
-};
+import ImagePlaceholder from "../components/ui/ImagePlaceholder";
 
 const RAW_MATERIALS = [
   { name: "RESINS", label: "Frankincense & Myrrh" },

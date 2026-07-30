@@ -5,29 +5,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
-
-const ImagePlaceholder = ({
-  className = "",
-  aspect = "aspect-4/3",
-  label,
-}: {
-  className?: string;
-  aspect?: string;
-  label?: string;
-}) => (
-  <div
-    className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
-  >
-    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506] mb-2">
-      <span className="font-serif text-gold text-sm">MV</span>
-    </div>
-    {label && (
-      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
-        {label}
-      </span>
-    )}
-  </div>
-);
+import ImagePlaceholder from "../components/ui/ImagePlaceholder";
 
 const TIMELINE_STEPS = [
   {

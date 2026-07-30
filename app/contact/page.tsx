@@ -5,29 +5,8 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
-
-const ImagePlaceholder = ({
-  className = "",
-  aspect = "aspect-4/3",
-  label,
-}: {
-  className?: string;
-  aspect?: string;
-  label?: string;
-}) => (
-  <div
-    className={`relative bg-[#0A0A0C] border border-gold/25 overflow-hidden flex flex-col items-center justify-center p-6 ${aspect} ${className}`}
-  >
-    <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506] mb-2">
-      <span className="font-serif text-gold text-sm">MV</span>
-    </div>
-    {label && (
-      <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8070] font-mono">
-        {label}
-      </span>
-    )}
-  </div>
-);
+import Image from "next/image";
+import ImagePlaceholder from "../components/ui/ImagePlaceholder";
 
 export default function ContactPage() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
@@ -105,72 +84,85 @@ export default function ContactPage() {
         <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left Card: Collectors */}
-            <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
-              <div className="space-y-6">
-                <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506]">
-                  <span className="font-serif text-gold text-sm">🛡</span>
-                </div>
-
-                <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
-                  FOR COLLECTORS
-                </span>
-
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
-                  Speak with a concierge for fragrance advice, questions about
-                  Edition I, or guidance on the Founding Registry application.
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 text-[9px] uppercase tracking-[0.2em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
-                  <p>EDITION I ENQUIRIES</p>
-                  <p>FOUNDING REGISTRY</p>
-                  <p>SIGNATURE COLLECTION</p>
-                  <p>FRAGRANCE GUIDANCE</p>
-                </div>
+            <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden grid grid-cols-1 sm:grid-cols-12 group">
+              <div className="sm:col-span-4 relative min-h-60 sm:min-h-full">
+                <Image
+                  src="/images/the bottle.png"
+                  alt="For Collectors"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 200px"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A0A0C]/90 sm:to-[#0A0A0C]" />
               </div>
-
-              <a
-                href="https://wa.me/2348021234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-6 py-4 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
-              >
-                <span>SPEAK TO A CONCIERGE</span>
-                <span>&rarr;</span>
-              </a>
+              <div className="sm:col-span-8 p-8 flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506]">
+                    <span className="font-serif text-gold text-sm">🛡</span>
+                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                    FOR COLLECTORS
+                  </span>
+                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    Speak with a concierge for fragrance advice, questions about Edition I, or guidance on the Founding Registry application.
+                  </p>
+                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
+                    <p>EDITION I ENQUIRIES</p>
+                    <p>FOUNDING REGISTRY</p>
+                    <p>SIGNATURE COLLECTION</p>
+                    <p>FRAGRANCE GUIDANCE</p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/2348021234567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-5 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+                >
+                  <span>SPEAK TO A CONCIERGE</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
             </div>
 
             {/* Right Card: Press & Gifting */}
-            <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
-              <div className="space-y-6">
-                <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506]">
-                  <span className="font-serif text-gold text-sm">🏛</span>
+            <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden grid grid-cols-1 sm:grid-cols-12 group">
+              <div className="sm:col-span-8 p-8 flex flex-col justify-between space-y-6 order-2 sm:order-1">
+                <div className="space-y-4">
+                  <div className="w-10 h-10 border border-gold/40 flex items-center justify-center bg-[#060506]">
+                    <span className="font-serif text-gold text-sm">🏛</span>
+                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
+                    FOR PRESS, PARTNERS &amp; GIFTING
+                  </span>
+                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                    Media enquiries, partnership proposals, wholesale discussions, and gifting arrangements are each directed to the right person within the House.
+                  </p>
+                  <div className="grid grid-cols-2 gap-2 text-[9px] uppercase tracking-[0.18em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
+                    <p>MEDIA &amp; INTERVIEWS</p>
+                    <p>PARTNERSHIPS</p>
+                    <p>CORPORATE GIFTING</p>
+                    <p>WHOLESALE DISCUSSIONS</p>
+                  </div>
                 </div>
-
-                <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
-                  FOR PRESS, PARTNERS &amp; GIFTING
-                </span>
-
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
-                  Media enquiries, partnership proposals, wholesale discussions,
-                  and gifting arrangements are each directed to the right person
-                  within the House.
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 text-[9px] uppercase tracking-[0.2em] text-[#B3A99B] font-mono pt-4 border-t border-white/5">
-                  <p>MEDIA &amp; INTERVIEWS</p>
-                  <p>PARTNERSHIPS</p>
-                  <p>CORPORATE GIFTING</p>
-                  <p>WHOLESALE DISCUSSIONS</p>
-                </div>
+                <a
+                  href="mailto:concierge@maisonvereen.com"
+                  className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-5 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+                >
+                  <span>CONTACT THE HOUSE</span>
+                  <span>&rarr;</span>
+                </a>
               </div>
-
-              <a
-                href="mailto:concierge@maisonvereen.com"
-                className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-6 py-4 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
-              >
-                <span>CONTACT THE HOUSE</span>
-                <span>&rarr;</span>
-              </a>
+              <div className="sm:col-span-4 relative min-h-60 sm:min-h-full order-1 sm:order-2">
+                <Image
+                  src="/images/wax-seal.jpg"
+                  alt="For Press & Gifting"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 200px"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0A0A0C]/90 sm:to-[#0A0A0C]" />
+              </div>
             </div>
           </div>
         </section>
@@ -183,69 +175,96 @@ export default function ContactPage() {
             </span>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Card 1 */}
-              <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-6">
-                <div className="space-y-4">
-                  <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-xs">
-                    💬
-                  </div>
-                  <h3 className="font-serif text-lg text-[#EDE8DE]">
-                    WHATSAPP CONCIERGE
-                  </h3>
-                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
-                    Begin a private conversation with the House.
-                  </p>
+              {/* Card 1: WhatsApp */}
+              <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src="/images/whatsapp_phone.png"
+                    alt="WhatsApp Concierge"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/40 to-transparent" />
                 </div>
-                <a
-                  href="https://wa.me/2348021234567"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline"
-                >
-                  OPEN WHATSAPP &rarr;
-                </a>
+                <div className="p-8 pt-2 space-y-6 flex flex-col justify-between flex-1">
+                  <div className="space-y-3">
+                    <h3 className="font-serif text-lg text-[#EDE8DE]">
+                      WHATSAPP CONCIERGE
+                    </h3>
+                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                      Begin a private conversation with the House.
+                    </p>
+                  </div>
+                  <a
+                    href="https://wa.me/2348021234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline font-medium block pt-2 border-t border-white/5"
+                  >
+                    OPEN WHATSAPP &rarr;
+                  </a>
+                </div>
               </div>
 
-              {/* Card 2 */}
-              <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-6">
-                <div className="space-y-4">
-                  <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-xs">
-                    ✉
-                  </div>
-                  <h3 className="font-serif text-lg text-[#EDE8DE]">
-                    EMAIL THE HOUSE
-                  </h3>
-                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
-                    For thoughtful correspondence and longer enquiries.
-                  </p>
+              {/* Card 2: Email */}
+              <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src="/images/hand_writing.png"
+                    alt="Email The House"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/40 to-transparent" />
                 </div>
-                <a
-                  href="mailto:concierge@maisonvereen.com"
-                  className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline"
-                >
-                  WRITE AN EMAIL &rarr;
-                </a>
+                <div className="p-8 pt-2 space-y-6 flex flex-col justify-between flex-1">
+                  <div className="space-y-3">
+                    <h3 className="font-serif text-lg text-[#EDE8DE]">
+                      EMAIL THE HOUSE
+                    </h3>
+                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                      For thoughtful correspondence and longer enquiries.
+                    </p>
+                  </div>
+                  <a
+                    href="mailto:concierge@maisonvereen.com"
+                    className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline font-medium block pt-2 border-t border-white/5"
+                  >
+                    WRITE AN EMAIL &rarr;
+                  </a>
+                </div>
               </div>
 
-              {/* Card 3 */}
-              <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-6">
-                <div className="space-y-4">
-                  <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-xs">
-                    📅
-                  </div>
-                  <h3 className="font-serif text-lg text-[#EDE8DE]">
-                    SCHEDULE A CONVERSATION
-                  </h3>
-                  <p className="text-xs text-[#8A8178] font-light leading-relaxed">
-                    Arrange a dedicated discussion with a member of the House.
-                  </p>
+              {/* Card 3: Schedule */}
+              <div className="bg-[#0A0A0C] border border-white/5 overflow-hidden flex flex-col justify-between group">
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src="/images/desk_globe.png"
+                    alt="Schedule A Conversation"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0C] via-[#0A0A0C]/40 to-transparent" />
                 </div>
-                <a
-                  href="mailto:appointments@maisonvereen.com?subject=Schedule%20a%20Conversation"
-                  className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline"
-                >
-                  REQUEST A TIME &rarr;
-                </a>
+                <div className="p-8 pt-2 space-y-6 flex flex-col justify-between flex-1">
+                  <div className="space-y-3">
+                    <h3 className="font-serif text-lg text-[#EDE8DE]">
+                      SCHEDULE A CONVERSATION
+                    </h3>
+                    <p className="text-xs text-[#8A8178] font-light leading-relaxed">
+                      Arrange a dedicated discussion with a member of the House.
+                    </p>
+                  </div>
+                  <a
+                    href="mailto:appointments@maisonvereen.com?subject=Schedule%20a%20Conversation"
+                    className="text-[9px] tracking-[0.25em] uppercase text-gold hover:underline font-medium block pt-2 border-t border-white/5"
+                  >
+                    REQUEST A TIME &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
