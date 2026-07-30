@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import BlankBox from "./ui/BlankBox";
+import Image from "next/image";
 
 interface HeroSectionProps {
   onOpenApply: () => void;
@@ -71,13 +71,22 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
 
           </div>
 
-          {/* Right Column — Elegant Blank Box (5 cols on lg) */}
+          {/* Right Column — Bottle Hero Image (5 cols on lg) */}
           <div className="lg:col-span-5 flex items-center justify-center">
-            <BlankBox
-              aspectRatio="3/4"
-              className="w-full max-w-115"
-              label="HERO BOTTLE FRAME"
-            />
+            <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "3/4" }}>
+              <Image
+                src="/images/the bottle.png"
+                alt="Maison Vereen Edition I — The Bottle"
+                fill
+                sizes="(max-width: 1024px) 100vw, 460px"
+                className="object-cover object-center"
+                priority
+              />
+              {/* Subtle vignette overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(6,5,6,0.45)_100%)] pointer-events-none" />
+              {/* Bottom fade */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#060506]/60 to-transparent pointer-events-none" />
+            </div>
           </div>
 
         </div>

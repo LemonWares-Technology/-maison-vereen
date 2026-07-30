@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import BlankBox from "../ui/BlankBox";
+import Image from "next/image";
 
 export default function FounderEdition() {
   return (
@@ -9,13 +9,19 @@ export default function FounderEdition() {
       <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-          {/* Left Column — Blank Box (5 cols on lg) */}
+          {/* Left Column — Founder Edition Image (5 cols on lg) */}
           <div className="lg:col-span-5 flex items-center justify-center order-2 lg:order-1">
-            <BlankBox
-              aspectRatio="4/5"
-              className="w-full max-w-115"
-              label="FOUNDER EDITION BOTTLE FRAME"
-            />
+            <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
+              <Image
+                src="/images/hand_writing.png"
+                alt="The founding chapter — Maison Vereen Edition I"
+                fill
+                sizes="(max-width: 1024px) 100vw, 460px"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(6,5,6,0.4)_100%)] pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#060506]/55 to-transparent pointer-events-none" />
+            </div>
           </div>
 
           {/* Right Column — Content (7 cols on lg) */}
