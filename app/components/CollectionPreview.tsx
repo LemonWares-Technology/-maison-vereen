@@ -1,4 +1,4 @@
-﻿// "use client";
+// "use client";
 
 // import Image from "next/image";
 // import Link from "next/link";
@@ -144,7 +144,7 @@ export default function CollectionPreview({
           <div className="relative min-h-[500px] lg:min-h-[660px] overflow-hidden bg-[#060608]">
             {/* Bottle barely visible — low opacity = pure suggestion */}
             <Image
-              src="/images/the bottle.png"
+              src="/file_00000000a75471f48402160a6ed179fc.png"
               alt="Maison Vereen Edition I — The Founding Expression"
               fill
               priority

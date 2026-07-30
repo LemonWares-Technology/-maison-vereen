@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { X, Check } from "lucide-react";
@@ -236,7 +236,7 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
 
         {/* RIGHT — dark panel */}
         <div className="hidden md:block relative bg-[#060606] overflow-hidden border-l border-white/4">
-          <Image src="/images/hero-bottle.png" alt="Maison Vereen Edition I" fill sizes="420px"
+          <Image src="/file_000000009ffc81f4b13c80251cc456a8.png" alt="Maison Vereen Edition I" fill sizes="420px"
             className="object-cover object-center"
             style={{ opacity: 0.15, filter: "blur(10px) brightness(0.3) saturate(0.15)" }} />
           <div className="absolute inset-0 pointer-events-none"

@@ -173,7 +173,7 @@ export default function AccessPage() {
                 </div>
               </div>
               <div className="relative min-h-65 sm:min-h-85 lg:min-h-0 overflow-hidden bg-[#050505]">
-                <Image src="/images/application-hero.png" alt="Maison Vereen Edition I" fill priority
+                <Image src="/file_00000000b1e872469e4def4b87dca0c3.png" alt="Maison Vereen Edition I" fill priority
                   sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-center" style={{ opacity: 0.9 }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent to-charcoal/40" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#050505]/70 via-transparent to-transparent" />
