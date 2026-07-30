@@ -62,7 +62,7 @@ export default function ChangePasswordForm() {
         <h2 className="font-serif font-light text-[#E8E2D9] text-lg">
           Update Credentials
         </h2>
-        <p className="text-xs text-[#5A5449] leading-relaxed">
+        <p className="text-xs text-[#EDE8DE] leading-relaxed">
           Ensure your account uses a secure password to prevent unauthorized
           access to the registry.
         </p>
@@ -71,7 +71,7 @@ export default function ChangePasswordForm() {
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Current Password */}
         <div className="space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.25em] text-[#5A5449] font-medium block">
+          <label className="text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] font-medium block">
             Current Password
           </label>
           <input
@@ -86,7 +86,7 @@ export default function ChangePasswordForm() {
 
         {/* New Password */}
         <div className="space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.25em] text-[#5A5449] font-medium block">
+          <label className="text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] font-medium block">
             New Password
           </label>
           <input
@@ -101,7 +101,7 @@ export default function ChangePasswordForm() {
 
         {/* Confirm New Password */}
         <div className="space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.25em] text-[#5A5449] font-medium block">
+          <label className="text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] font-medium block">
             Confirm New Password
           </label>
           <input

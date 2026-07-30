@@ -55,13 +55,13 @@ export default function SignatureHero() {
           </p>
 
           <p
-            className="font-serif font-light text-[#C8BFB2] italic anim-fade-up-d2"
+            className="font-serif font-light text-[#EDE8DE] italic anim-fade-up-d2"
             style={{ fontSize: "clamp(1rem, 1.8vw, 1.3rem)" }}
           >
             The Signature Collection represents Maison Vereen&apos;s permanent body of work — fragrances available on an ongoing basis, each developed with the same standard applied to Edition I.
           </p>
           <p
-            className="text-[#8A8070] font-light leading-[1.85] max-w-130 anim-fade-up-d2"
+            className="text-[#EDE8DE] font-light leading-[1.85] max-w-130 anim-fade-up-d2"
             style={{ fontSize: "1.0625rem" }}
           >
             Where Edition I is finite by design, the Signature Collection is the House&apos;s enduring body of work — fragrances intended to remain part of Maison Vereen&apos;s offering for years, refined and revisited as the House&apos;s craft continues to evolve, but never produced at the expense of quality.
@@ -79,7 +79,7 @@ export default function SignatureHero() {
             </a>
             <Link
               href="/contact"
-              className="inline-block border border-[#E8E2D9]/25 hover:border-gold/50 px-8 py-3.5 text-[#8A8070] hover:text-[#E8E2D9] transition-all duration-500"
+              className="inline-block border border-[#E8E2D9]/25 hover:border-gold/50 px-8 py-3.5 text-[#EDE8DE] hover:text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "10px", letterSpacing: "0.3em" }}
             >
               <span className="uppercase font-medium">Request Details</span>

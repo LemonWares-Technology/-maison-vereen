@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function Journal() {
           </div>
           <Link href="/housebook" className="link-gold self-end shrink-0">
             <span>Read The HouseBook</span>
-            <span className="text-gold">→</span>
+            <span className="text-gold">?</span>
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ export default function Journal() {
                     {a.title}
                   </h3>
                   <p
-                    className="text-[#5A5449] font-light leading-[1.7]"
+                    className="text-[#EDE8DE] font-light leading-[1.7]"
                     style={{ fontSize: "14px" }}
                   >
                     {a.excerpt}
@@ -85,7 +85,7 @@ export default function Journal() {
                       className="uppercase tracking-[0.22em] font-medium group-hover:text-gold transition-colors duration-300"
                       style={{ fontSize: "10px", color: "rgba(201,168,76,0.5)" }}
                     >
-                      Read →
+                      Read ?
                     </span>
                     <span style={{ fontSize: "10px", color: "#3A3530" }}>
                       {a.date}
@@ -101,4 +101,4 @@ export default function Journal() {
   );
 }
 
-// Maison Vereen — Journal home section preview
+// Maison Vereen � Journal home section preview

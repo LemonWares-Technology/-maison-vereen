@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { X, CheckCircle, XCircle, Eye, Clock } from "lucide-react";
@@ -35,7 +35,7 @@ function Field({ label, value }: { label: string; value: string }) {
       <p className="text-xs uppercase tracking-[0.22em] text-[#2A2420]">
         {label}
       </p>
-      <p className="text-xs text-[#8A8178] leading-relaxed">{value}</p>
+      <p className="text-xs text-[#EDE8DE] leading-relaxed">{value}</p>
     </div>
   );
 }
@@ -46,7 +46,7 @@ function LongField({ label, value }: { label: string; value: string }) {
       <p className="text-xs uppercase tracking-[0.22em] text-[#3A3530]">
         {label}
       </p>
-      <p className="text-xs text-[#7A7068] leading-[1.75] bg-[#0D0D0D] border border-white/5 px-4 py-3.5">
+      <p className="text-xs text-[#EDE8DE] leading-[1.75] bg-[#0D0D0D] border border-white/5 px-4 py-3.5">
         {value}
       </p>
     </div>
@@ -177,7 +177,7 @@ export default function ApplicationDrawer({
           </button>
         </div>
 
-        {/* Body — scrollable */}
+        {/* Body � scrollable */}
         <div className="flex-1 overflow-y-auto px-6 py-6 space-y-8">
           {/* Current status */}
           <div className="space-y-3">
@@ -267,7 +267,7 @@ export default function ApplicationDrawer({
               rows={4}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="Private notes about this applicant…"
+              placeholder="Private notes about this applicant�"
               className="w-full bg-[#0D0D0D] border border-white/7 px-4 py-3 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200 resize-none leading-[1.7]"
             />
             <button
@@ -277,7 +277,7 @@ export default function ApplicationDrawer({
               style={{ color: saved ? "#34D399" : "#C9A84C" }}
             >
               {saving && <span className="spinner spinner-sm" />}
-              {saved ? "✓ Saved" : saving ? "Saving…" : "Save notes"}
+              {saved ? "? Saved" : saving ? "Saving�" : "Save notes"}
             </button>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function ApplicationDrawer({
                 style={{ borderTopColor: "#f87171" }}
               />
             )}
-            {deleting ? "Deleting…" : "Delete application"}
+            {deleting ? "Deleting�" : "Delete application"}
           </button>
           <button
             onClick={handleClose}

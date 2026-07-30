@@ -51,7 +51,7 @@ export default function FutureVision({ onOpenApply }: FutureVisionProps) {
           </h2>
           {/* Exact copy from document Page 1 Future Vision */}
           <p
-            className="text-[#7A7068] font-light leading-[1.85]"
+            className="text-[#EDE8DE] font-light leading-[1.85]"
             style={{ fontSize: "17px" }}
           >
             Edition I is the beginning of a house that is designed to endure.
@@ -61,7 +61,7 @@ export default function FutureVision({ onOpenApply }: FutureVisionProps) {
             for.
           </p>
           <p
-            className="text-[#7A7068] font-light leading-[1.85]"
+            className="text-[#EDE8DE] font-light leading-[1.85]"
             style={{ fontSize: "17px" }}
           >
             The house being built today will still be standing in fifty years.
@@ -90,7 +90,7 @@ export default function FutureVision({ onOpenApply }: FutureVisionProps) {
                 {item.title}
               </h3>
               <p
-                className="text-[#5A5449] font-light leading-[1.75]"
+                className="text-[#EDE8DE] font-light leading-[1.75]"
                 style={{ fontSize: "16px" }}
               >
                 {item.body}

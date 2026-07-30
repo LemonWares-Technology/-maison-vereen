@@ -65,7 +65,7 @@ export default function Philosophy() {
                   {p.num}
                 </span>
               </div>
-              <p className="type-body-sm text-[#5A5449]">
+              <p className="type-body-sm text-[#EDE8DE]">
                 {p.body}
               </p>
             </div>

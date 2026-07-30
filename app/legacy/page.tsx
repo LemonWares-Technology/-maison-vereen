@@ -26,7 +26,7 @@ export default function LegacyPage() {
                     <em className="not-italic" style={{ color: "#C9A84C" }}>the intention.</em>
                   </h1>
                   {/* Exact opening from document Page 15 */}
-                  <p className="font-serif font-light text-[#7A7068] leading-[1.7]" style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)" }}>
+                  <p className="font-serif font-light text-[#EDE8DE] leading-[1.7]" style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)" }}>
                     Every institution that endures was once only an intention. What makes it endure is not the intention. It is the seriousness of the people who carried it forward.
                   </p>
                 </div>
@@ -54,10 +54,10 @@ export default function LegacyPage() {
                     <em className="not-italic" style={{ color: "#C9A84C" }}>A permanent contribution.</em>
                   </h2>
                   {/* Exact copy from document Page 15 */}
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The greatest luxury houses in the world are not remembered because they were profitable. They are remembered because they were serious. Because the people who built them were building for something beyond the commercial moment. Because they refused to compromise the things that mattered most, even when compromise would have been easier and more profitable.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     Maison Vereen is being built in that spirit. Not because we have earned the comparison yet. Because we have made the commitment. And commitment, held over decades, is what produces the thing you eventually call an institution.
                   </p>
                 </div>
@@ -127,10 +127,10 @@ export default function LegacyPage() {
                     History does not remember the people who arrived{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>when everyone else did.</em>
                   </h2>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The founding owners of the great houses — Hermès, Rolex, Chanel, Patek Philippe — were not celebrated in their moment. They were simply people with the judgment to recognize something extraordinary before the world caught up. That is all. No special knowledge. No particular access. Just the ability to see something serious and respond to it seriously.
                   </p>
-                  <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The founding owners of Maison Vereen are in the same position. The house is being built. The beginning is now. The question is not whether Maison Vereen will become something significant. The question is whether you will have been part of it from the beginning.
                   </p>
                 </div>
@@ -145,7 +145,7 @@ export default function LegacyPage() {
             <div className="max-w-170 mx-auto text-center space-y-12">
               <div className="w-8 h-px bg-gold/40 mx-auto" />
               {/* Exact closing statement from document Page 15 */}
-              <p className="font-serif font-light text-[#C8BFB2] leading-[1.55]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.7rem)" }}>
+              <p className="font-serif font-light text-[#EDE8DE] leading-[1.55]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.7rem)" }}>
                 We are building the house we always needed. We are building it with the seriousness it deserves. We are building it for the individuals who were always worthy of it. And we are building it to last.
               </p>
               <div className="w-8 h-px bg-gold/40 mx-auto" />

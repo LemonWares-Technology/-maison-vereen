@@ -63,7 +63,7 @@ export default function FinalInvitationPage() {
 
               {/* Supporting statement */}
               <p
-                className="font-serif font-light text-[#8A8070] italic leading-[1.6]"
+                className="font-serif font-light text-[#EDE8DE] italic leading-[1.6]"
                 style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
               >
                 Two hundred and fifty bottles. Three hundred and fifty founding positions.
@@ -75,13 +75,13 @@ export default function FinalInvitationPage() {
 
               {/* Body */}
               <div className="space-y-6 max-w-150 text-left">
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                   You have read this far. That means something. The people this House was built for tend to recognise themselves in its language quickly — not because the writing is persuasive, but because the idea behind it is something they have understood for a long time without quite having a name for it.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                   Edition I. Two hundred and fifty individually numbered bottles, made from African materials that carry the depth of the continent that produced them, built with a master perfumer to a standard with no lower tier. Authenticated, documented, and permanent in a way most things sold in the world of luxury no longer are.
                 </p>
-                <p className="text-[#7A7068] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                   The Founding Registry is open. Applying takes a matter of minutes, carries no financial obligation, and is read by a person. The question, ultimately, is not whether Maison Vereen will matter. It is whether you will have been part of it when it does.
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function FinalInvitationPage() {
                 </Link>
                 <Link
                   href="/fragrance-library"
-                  className="inline-block border border-white/15 hover:border-gold/50 px-10 py-4 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500 w-full sm:w-auto text-center"
+                  className="inline-block border border-white/15 hover:border-gold/50 px-10 py-4 text-[#EDE8DE] hover:text-[#E8E2D9] transition-all duration-500 w-full sm:w-auto text-center"
                   style={{ fontSize: "11px", letterSpacing: "0.28em" }}
                 >
                   <span className="uppercase font-medium">Discover the Signature Collection</span>
@@ -113,7 +113,7 @@ export default function FinalInvitationPage() {
             <div className="max-w-170 mx-auto space-y-8 text-center">
               <div className="w-8 h-px bg-gold/20 mx-auto" />
 
-              <p className="text-[#7A7068] font-light leading-[1.9]" style={{ fontSize: "15px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.9]" style={{ fontSize: "15px" }}>
                 The application is free and carries no financial obligation. Applications are reviewed personally within 24 to 48 hours. Your information is held privately and never shared. Questions before applying?{" "}
                 <a href="mailto:hello@maisonvereen.com" className="text-gold/70 hover:text-gold transition-colors">
                   hello@maisonvereen.com

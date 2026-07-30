@@ -42,7 +42,7 @@ export default function TheDifferencePage() {
                 <p>— Where other houses expand, this one closes.</p>
               </div>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Every serious luxury house has its own philosophy. This is the
                 architecture of Maison Vereen&apos;s — built around
                 collectability, emotional ownership, and a culture rather than a
@@ -63,7 +63,7 @@ export default function TheDifferencePage() {
 
         {/* ── INDENTED QUOTE / ESSAY SECTION ── */}
         <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="max-w-225 mx-auto border-l-2 border-gold/40 pl-6 sm:pl-10 md:pl-12 space-y-6 text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+          <div className="max-w-225 mx-auto border-l-2 border-gold/40 pl-6 sm:pl-10 md:pl-12 space-y-6 text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
             <p>
               Visitors who have considered other fragrance houses arrive here with a
               quiet, reasonable question: why is this different from everything
@@ -99,7 +99,7 @@ export default function TheDifferencePage() {
                 <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
                   Collectability &amp; Limited Editions
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Edition I will never be remade, reissued, or extended. What is
                   held by its two hundred and fifty owners is permanent in a way few
                   luxury objects remain today — its value is not protected by
@@ -116,7 +116,7 @@ export default function TheDifferencePage() {
                 <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
                   Emotional Ownership &amp; Future Value
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Owning something from Maison Vereen&apos;s founding chapter is
                   closer to holding an early work from an artist before the world
                   recognised their name. The House cannot promise future value — no
@@ -134,7 +134,7 @@ export default function TheDifferencePage() {
                 <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] leading-snug">
                   House Culture &amp; Private Acquisition
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Acquisition at Maison Vereen happens through relationship —
                   application, review, invitation — rather than instant purchase.
                   This is not designed to create friction for its own sake. It
@@ -174,7 +174,7 @@ export default function TheDifferencePage() {
                 <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
                   Ready to be part of the Maison?
                 </h3>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Applications are by consideration. For those who believe in what we
                   build.
                 </p>
@@ -205,7 +205,7 @@ export default function TheDifferencePage() {
 
           <Link
             href="/the-founder"
-            className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#8A8178] hover:text-gold transition-colors font-medium"
+            className="inline-block text-[10px] tracking-[0.3em] uppercase text-[#EDE8DE] hover:text-gold transition-colors font-medium"
           >
             NEXT: THE INDIVIDUAL BEHIND EVERY FRAGRANCE &rarr;
           </Link>

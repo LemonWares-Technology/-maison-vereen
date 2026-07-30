@@ -34,19 +34,19 @@ export default function PermanentClosureBanner() {
         <div className="pt-6 max-w-200 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 items-center justify-center border-t border-white/10 sm:border-none">
 
           <div className="sm:border-r border-white/10 py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#A3998E] font-medium">
+            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
               NO REPRINT.
             </span>
           </div>
 
           <div className="sm:border-r border-white/10 py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#A3998E] font-medium">
+            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
               NO REISSUE.
             </span>
           </div>
 
           <div className="py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#A3998E] font-medium">
+            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
               NO ANNIVERSARY RELEASE.
             </span>
           </div>

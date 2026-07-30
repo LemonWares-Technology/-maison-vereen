@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useTransition } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
@@ -117,7 +117,7 @@ export default function ApplicationsTable({
 
   return (
     <>
-      {/* ── Filters ── */}
+      {/* -- Filters -- */}
       <div className="flex flex-col sm:flex-row gap-2.5">
         {/* Search */}
         <form onSubmit={handleSearch} className="flex-1 flex min-w-0">
@@ -127,7 +127,7 @@ export default function ApplicationsTable({
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search name, email, country…"
+              placeholder="Search name, email, country�"
               className="w-full bg-[#0D0D0D] border border-white/7 pl-9 pr-8 py-2.5 text-xs text-[#E8E2D9] placeholder-[#2A2420] focus:outline-none focus:border-gold/40 transition-colors duration-200"
             />
             {search && (
@@ -159,7 +159,7 @@ export default function ApplicationsTable({
             onChange={(e) =>
               updateParams({ status: e.target.value, page: "1" })
             }
-            className="bg-[#0D0D0D] border border-white/7 pl-8 pr-4 py-2.5 text-xs text-[#8A8178] focus:outline-none focus:border-gold/40 transition-colors cursor-pointer appearance-none sm:w-[160px]"
+            className="bg-[#0D0D0D] border border-white/7 pl-8 pr-4 py-2.5 text-xs text-[#EDE8DE] focus:outline-none focus:border-gold/40 transition-colors cursor-pointer appearance-none sm:w-[160px]"
           >
             {STATUSES.map((s) => (
               <option key={s} value={s} className="bg-[#0D0D0D]">
@@ -170,7 +170,7 @@ export default function ApplicationsTable({
         </div>
       </div>
 
-      {/* ── Loading skeleton ── */}
+      {/* -- Loading skeleton -- */}
       {pending && (
         <div className="space-y-2 anim-fade-in">
           {Array.from({ length: 5 }).map((_, i) => (
@@ -183,7 +183,7 @@ export default function ApplicationsTable({
         </div>
       )}
 
-      {/* ── Table (hidden while loading) ── */}
+      {/* -- Table (hidden while loading) -- */}
       {!pending && (
         <div className="border border-white/6 overflow-hidden anim-fade-in">
           {/* Desktop table */}
@@ -251,10 +251,10 @@ export default function ApplicationsTable({
                           </div>
                         </div>
                       </td>
-                      <td className="px-5 py-3.5 text-xs text-[#5A5449]">
+                      <td className="px-5 py-3.5 text-xs text-[#EDE8DE]">
                         {app.country}
                       </td>
-                      <td className="px-5 py-3.5 text-xs text-[#5A5449] max-w-[160px] truncate">
+                      <td className="px-5 py-3.5 text-xs text-[#EDE8DE] max-w-[160px] truncate">
                         {app.whatYouDo}
                       </td>
                       <td className="px-5 py-3.5">
@@ -312,7 +312,7 @@ export default function ApplicationsTable({
                           {app.email}
                         </p>
                         <p className="text-xs text-[#2A2420] mt-0.5">
-                          {app.country} · {app.whatYouDo}
+                          {app.country} � {app.whatYouDo}
                         </p>
                       </div>
                     </div>
@@ -327,7 +327,7 @@ export default function ApplicationsTable({
           {pagination.pages > 1 && (
             <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-t border-white/5 bg-[#0C0C0C]">
               <span className="text-xs text-[#3A3530]">
-                {(pagination.page - 1) * pagination.limit + 1}–
+                {(pagination.page - 1) * pagination.limit + 1}�
                 {Math.min(pagination.page * pagination.limit, pagination.total)}{" "}
                 of {pagination.total}
               </span>
@@ -341,7 +341,7 @@ export default function ApplicationsTable({
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <span className="px-2 text-xs text-[#5A5449] tabular-nums">
+                <span className="px-2 text-xs text-[#EDE8DE] tabular-nums">
                   {pagination.page}/{pagination.pages}
                 </span>
                 <button

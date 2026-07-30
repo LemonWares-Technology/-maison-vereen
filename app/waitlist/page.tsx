@@ -221,10 +221,10 @@ export default function WaitlistPage() {
                   {b.icon}
                 </div>
                 <div className="w-4 h-px bg-gold/20 group-hover:w-8 group-hover:bg-gold/40 transition-all duration-500" />
-                <h3 className="type-caption uppercase tracking-widest text-[#8A8178]">
+                <h3 className="type-caption uppercase tracking-widest text-[#EDE8DE]">
                   {b.title}
                 </h3>
-                <p className="text-[13px] text-[#4A4440] font-light leading-[1.7]">
+                <p className="text-[13px] text-[#EDE8DE] font-light leading-[1.7]">
                   {b.body}
                 </p>
               </div>
@@ -267,7 +267,7 @@ export default function WaitlistPage() {
 
                     {/* Full Name */}
                     <div className="space-y-2">
-                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
+                      <label className="type-caption uppercase tracking-widest text-[#EDE8DE]">
                         Full Name
                       </label>
                       <input
@@ -284,7 +284,7 @@ export default function WaitlistPage() {
 
                     {/* Email */}
                     <div className="space-y-2">
-                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
+                      <label className="type-caption uppercase tracking-widest text-[#EDE8DE]">
                         Email Address
                       </label>
                       <input
@@ -301,7 +301,7 @@ export default function WaitlistPage() {
 
                     {/* Country */}
                     <div className="space-y-2">
-                      <label className="type-caption uppercase tracking-widest text-[#5A5449]">
+                      <label className="type-caption uppercase tracking-widest text-[#EDE8DE]">
                         Country
                       </label>
                       <div className="relative">
@@ -333,7 +333,7 @@ export default function WaitlistPage() {
                           >
                             <path
                               d="M1 1l4 4 4-4"
-                              stroke="#5A5449"
+                              stroke="#EDE8DE"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -374,7 +374,7 @@ export default function WaitlistPage() {
                           </svg>
                         )}
                       </button>
-                      <span className="type-caption text-[#5A5449]">
+                      <span className="type-caption text-[#EDE8DE]">
                         I agree to receive updates and understand that this is
                         not an application.
                       </span>
@@ -433,7 +433,7 @@ export default function WaitlistPage() {
                     </div>
                     <p className="type-caption">
                       Confirmation sent to{" "}
-                      <span className="text-[#4A4440]">{form.email}</span>
+                      <span className="text-[#EDE8DE]">{form.email}</span>
                     </p>
                   </div>
                 )}
@@ -609,11 +609,11 @@ function ApprovedList() {
                 <div className="space-y-1.5 border-t border-white/5 pt-4">
                   <div className="flex items-center gap-2">
                     <span className="type-mono">Location</span>
-                    <span className="type-caption text-[#7A7068]">{r.country}</span>
+                    <span className="type-caption text-[#EDE8DE]">{r.country}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="type-mono">Approved</span>
-                    <span className="type-caption text-[#7A7068]">{formatDate(r.approvedAt)}</span>
+                    <span className="type-caption text-[#EDE8DE]">{formatDate(r.approvedAt)}</span>
                   </div>
                 </div>
               </div>
@@ -678,7 +678,7 @@ function WaitlistCounter() {
             >
               {count === null ? "—" : displayed.toLocaleString()}
             </span>
-            <span className="font-serif font-light text-[#5A5449]" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)" }}>
+            <span className="font-serif font-light text-[#EDE8DE]" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)" }}>
               of 250
             </span>
           </div>
@@ -687,7 +687,7 @@ function WaitlistCounter() {
           <div className="hidden sm:block w-16 h-px bg-gold/30" />
 
           {/* Label */}
-          <p className="font-light text-[#7A7068] leading-[1.6]" style={{ fontSize: "14px" }}>
+          <p className="font-light text-[#EDE8DE] leading-[1.6]" style={{ fontSize: "14px" }}>
             {count === null ? (
               <span className="inline-block w-40 h-4 skeleton rounded" />
             ) : (

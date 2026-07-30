@@ -38,7 +38,7 @@ export default function FounderEdition() {
               The first.
             </h2>
 
-            <div className="space-y-6 text-[#8A8178] font-light leading-[1.9] max-w-150" style={{ fontSize: "1.0625rem" }}>
+            <div className="space-y-6 text-[#EDE8DE] font-light leading-[1.9] max-w-150" style={{ fontSize: "1.0625rem" }}>
               <p>
                 Those who hold a bottle from Edition I will hold something no House can ever offer again: the first.
               </p>
@@ -53,7 +53,7 @@ export default function FounderEdition() {
             <div className="pt-4">
               <Link
                 href="/edition-i"
-                className="inline-flex items-center gap-3 border border-[#7A7068]/40 hover:border-gold text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 bg-[#060506]"
+                className="inline-flex items-center gap-3 border border-[#EDE8DE]/40 hover:border-gold text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 bg-[#060506]"
               >
                 <span>DISCOVER EDITION I IN FULL</span>
                 <span>→</span>

@@ -68,7 +68,7 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
           </h2>
           {/* Exact copy from document Page 1 */}
           <p
-            className="text-[#7A7068] font-light leading-[1.85]"
+            className="text-[#EDE8DE] font-light leading-[1.85]"
             style={{ fontSize: "17px" }}
           >
             The Maison Vereen Registry is not a newsletter. It is the
@@ -110,7 +110,7 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
                   {tier.name}
                 </h3>
                 <span
-                  className="block uppercase tracking-[0.2em] text-[#5A5449]"
+                  className="block uppercase tracking-[0.2em] text-[#EDE8DE]"
                   style={{ fontSize: "9px" }}
                 >
                   {tier.eligibility}
@@ -119,7 +119,7 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
 
               {/* Body */}
               <p
-                className="text-[#5A5449] font-light leading-[1.75]"
+                className="text-[#EDE8DE] font-light leading-[1.75]"
                 style={{ fontSize: "16px" }}
               >
                 {tier.body}
@@ -131,7 +131,7 @@ export default function MembershipCircles({ onOpenApply }: MembershipCirclesProp
                   <li key={j} className="flex items-start gap-3">
                     <div className="shrink-0 w-3 h-px bg-gold/30 mt-[9px]" />
                     <span
-                      className="text-[#5A5449] font-light leading-[1.6]"
+                      className="text-[#EDE8DE] font-light leading-[1.6]"
                       style={{ fontSize: "16px" }}
                     >
                       {b}

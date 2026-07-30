@@ -62,7 +62,7 @@ export default async function ApplicationsPage({
           <h1 className="font-serif font-light text-[#E8E2D9] text-2xl md:text-3xl">
             Applications
           </h1>
-          <p className="text-[#5A5449] text-xs mt-1">
+          <p className="text-[#EDE8DE] text-xs mt-1">
             {total} total application{total !== 1 ? "s" : ""}
           </p>
         </div>

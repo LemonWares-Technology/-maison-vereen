@@ -32,7 +32,7 @@ export default function DualPathway() {
               >
                 Apply for a Position
               </h3>
-              <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "16px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "16px" }}>
                 Two hundred and fifty individually numbered bottles. Africa&apos;s first serious luxury fragrance house. Access by application only — reviewed personally by the House.
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function DualPathway() {
               >
                 Speak to a Concierge
               </h3>
-              <p className="text-[#5A5449] font-light leading-[1.75]" style={{ fontSize: "16px" }}>
+              <p className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "16px" }}>
                 The Signature Collection — the permanent, reorderable body of work. No application required. Every acquisition is a personal conversation with the House&apos;s concierge.
               </p>
             </div>

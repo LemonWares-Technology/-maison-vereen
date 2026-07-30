@@ -87,7 +87,7 @@ export default function SocialProofPage() {
                 Recognised by Those Who Know the Difference.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 This page exists as a living, growing record of recognition —
                 collector testimonials, press coverage, and milestones —
                 documented as the House&apos;s history, not displayed as advertising.
@@ -106,7 +106,7 @@ export default function SocialProofPage() {
 
           {/* Sub-hero paragraph */}
           <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
-            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
               Maison Vereen&apos;s social proof is designed never to feel like
               reviews. Reviews are what consumers leave for products. What appears
               here is documentation — the accumulating record of a House&apos;s
@@ -129,7 +129,7 @@ export default function SocialProofPage() {
                 <h2 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Collector &amp; Member Reflections
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   Reflections shared by Founding Registry members and collectors,
                   presented as quoted excerpts with name, country, and (where
                   relevant) bottle number — never as star ratings or review
@@ -146,7 +146,7 @@ export default function SocialProofPage() {
                       <p className="font-serif text-[#EDE8DE] italic leading-relaxed">
                         &ldquo;{r.quote}&rdquo;
                       </p>
-                      <div className="flex justify-between items-center text-[10px] text-[#8A8178]">
+                      <div className="flex justify-between items-center text-[10px] text-[#EDE8DE]">
                         <span>
                           &mdash; {r.author}, {r.country}
                         </span>
@@ -159,7 +159,7 @@ export default function SocialProofPage() {
                 </div>
               </div>
 
-              <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8178]">
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
                 MORE REFLECTIONS TO COME &rarr;
               </span>
             </div>
@@ -171,7 +171,7 @@ export default function SocialProofPage() {
                 <h2 className="font-serif text-2xl font-light text-[#EDE8DE]">
                   Press, Editorial &amp; Milestones
                 </h2>
-                <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                   A running record of press coverage, editorial features, interviews,
                   awards, notable events, and House milestones, displayed
                   chronologically as the unfolding record of Maison Vereen&apos;s
@@ -191,7 +191,7 @@ export default function SocialProofPage() {
                         </span>
                         <p className="font-serif text-[#EDE8DE]">{p.title}</p>
                       </div>
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-[#8A8178] shrink-0">
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE] shrink-0">
                         READ MORE &rarr;
                       </span>
                     </div>
@@ -199,7 +199,7 @@ export default function SocialProofPage() {
                 </div>
               </div>
 
-              <span className="text-[9px] uppercase tracking-[0.25em] text-[#8A8178]">
+              <span className="text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
                 MORE COVERAGE &amp; MILESTONES TO COME &rarr;
               </span>
             </div>
@@ -226,9 +226,9 @@ export default function SocialProofPage() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
               PRESS &amp; FEATURES
             </span>
-            <p className="text-xs text-[#8A8178]">As seen in</p>
+            <p className="text-xs text-[#EDE8DE]">As seen in</p>
 
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-sm sm:text-base font-serif tracking-[0.2em] text-[#8A8178]">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-sm sm:text-base font-serif tracking-[0.2em] text-[#EDE8DE]">
               {PRESS_LOGOS.map((logo) => (
                 <span
                   key={logo}

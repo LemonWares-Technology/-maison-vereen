@@ -16,16 +16,16 @@ export default function WhyOnly250() {
             </p>
 
             <div className="space-y-1 pt-2">
-              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium leading-relaxed">
+              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium leading-relaxed">
                 BOTTLES WORLDWIDE.
               </p>
-              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium leading-relaxed">
+              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium leading-relaxed">
                 NOT PER COUNTRY.
               </p>
-              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium leading-relaxed">
+              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium leading-relaxed">
                 NOT PER YEAR.
               </p>
-              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium leading-relaxed">
+              <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium leading-relaxed">
                 TOTAL, GLOBALLY, FOREVER.
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function WhyOnly250() {
               It is a commitment.
             </h2>
 
-            <div className="space-y-6 text-[#8A8178] font-light leading-[1.9] max-w-155" style={{ fontSize: "1.0625rem" }}>
+            <div className="space-y-6 text-[#EDE8DE] font-light leading-[1.9] max-w-155" style={{ fontSize: "1.0625rem" }}>
               <p>
                 The House&apos;s master perfumer determined this was the highest number that could be produced without compromising a single element of the formulation, the vessel, or the ceremony of ownership.
               </p>

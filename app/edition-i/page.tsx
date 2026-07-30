@@ -35,7 +35,7 @@ export default function EditionIPage() {
                 Two Hundred and Fifty. No More, Ever.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Edition I is Maison Vereen&apos;s founding chapter.
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function EditionIPage() {
         {/* ── LIGHT / CREAM PARCHMENT SECTION (02) ── */}
         <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 border-b border-[#D5CFBF]">
           <div className="max-w-225 mx-auto space-y-8">
-            <span className="font-serif text-2xl text-[#8A7A59] block text-center">
+            <span className="font-serif text-2xl text-[#EDE8DE] block text-center">
               02
             </span>
 
@@ -99,7 +99,7 @@ export default function EditionIPage() {
               <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
                 Numbering Philosophy
               </h2>
-              <p className="text-sm sm:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Numbers are assigned in the order applicants are formally accepted
                 into the Founding Registry — meaning a bottle&apos;s number reflects
                 not when it was purchased, but when its owner was recognised by the
@@ -125,12 +125,12 @@ export default function EditionIPage() {
               <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
                 Certificate of Authenticity &amp; Ownership Experience
               </h2>
-              <p className="text-sm sm:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Every Edition I bottle is accompanied by a signed certificate of
                 authenticity, recording its number, its owner&apos;s name, and its
                 place within the two hundred and fifty.
               </p>
-              <p className="text-sm sm:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Ownership includes private correspondence from the House at the
                 time of acquisition and continued recognition as a founding member
                 for as long as the House exists.
@@ -148,7 +148,7 @@ export default function EditionIPage() {
               <h3 className="font-serif text-lg text-[#EDE8DE]">
                 Number Assignment
               </h3>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 Bottles are numbered in the order of acceptance into the Founding
                 Registry — not purchase. Your number reflects when the House
                 recognised your place.
@@ -160,7 +160,7 @@ export default function EditionIPage() {
               <h3 className="font-serif text-lg text-[#EDE8DE]">
                 Authentication
               </h3>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 Each bottle is individually recorded and accompanied by a signed
                 certificate of authenticity. Its place in the edition is documented
                 for life.
@@ -172,7 +172,7 @@ export default function EditionIPage() {
               <h3 className="font-serif text-lg text-[#EDE8DE]">
                 Ownership Experience
               </h3>
-              <p className="text-xs sm:text-sm text-[#8A8178] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
                 You are not simply a buyer. You are a founding member. The House
                 maintains your record and honours your place in its founding
                 chapter.
@@ -195,7 +195,7 @@ export default function EditionIPage() {
         {/* ── SECTION 07: LIGHT PARCHMENT STATEMENT ── */}
         <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 text-center border-b border-[#D5CFBF]">
           <div className="max-w-200 mx-auto space-y-4">
-            <span className="font-serif text-2xl text-[#8A7A59] block">07</span>
+            <span className="font-serif text-2xl text-[#EDE8DE] block">07</span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2C2823]">
               History does not get a reprint.
             </h2>

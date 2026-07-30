@@ -105,7 +105,7 @@ export default function NotificationEmailsManager() {
         <h2 className="font-serif font-light text-[#E8E2D9] text-lg">
           Notification Recipients
         </h2>
-        <p className="text-xs text-[#5A5449] leading-relaxed">
+        <p className="text-xs text-[#EDE8DE] leading-relaxed">
           Manage extra email addresses (e.g. developers, business owners) that
           will receive notifications when a new application is registered.
         </p>
@@ -114,7 +114,7 @@ export default function NotificationEmailsManager() {
       {/* Add Recipient Form */}
       <form onSubmit={handleAdd} className="space-y-4">
         <div className="space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.25em] text-[#5A5449] font-medium block">
+          <label className="text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] font-medium block">
             Email Address
           </label>
           <input
@@ -128,7 +128,7 @@ export default function NotificationEmailsManager() {
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-[10px] uppercase tracking-[0.25em] text-[#5A5449] font-medium block">
+          <label className="text-[10px] uppercase tracking-[0.25em] text-[#EDE8DE] font-medium block">
             Recipient Name (Optional)
           </label>
           <input
@@ -196,7 +196,7 @@ export default function NotificationEmailsManager() {
                     {item.email}
                   </p>
                   {item.name && (
-                    <p className="text-[10px] text-[#5A5449] truncate mt-0.5">
+                    <p className="text-[10px] text-[#EDE8DE] truncate mt-0.5">
                       {item.name}
                     </p>
                   )}

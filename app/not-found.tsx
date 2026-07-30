@@ -36,7 +36,7 @@ export default function NotFound() {
           </Link>
           <div className="hidden md:flex items-center gap-3">
             <div className="w-4 h-px bg-gold/30" />
-            <span className="uppercase tracking-[0.3em] text-[#5A5449] font-medium" style={{ fontSize: "9px" }}>
+            <span className="uppercase tracking-[0.3em] text-[#EDE8DE] font-medium" style={{ fontSize: "9px" }}>
               Edition I · 250 Bottles
             </span>
           </div>
@@ -50,7 +50,7 @@ export default function NotFound() {
           {/* Gold rule */}
           <div className="flex items-center justify-center gap-4">
             <div className="w-12 h-px bg-gold/25" />
-            <span className="uppercase tracking-[0.4em] text-[#5A5449] font-medium" style={{ fontSize: "9px" }}>
+            <span className="uppercase tracking-[0.4em] text-[#EDE8DE] font-medium" style={{ fontSize: "9px" }}>
               404
             </span>
             <div className="w-12 h-px bg-gold/25" />
@@ -68,7 +68,7 @@ export default function NotFound() {
               </em>
             </h1>
             <p
-              className="font-serif font-light text-[#7A7068]"
+              className="font-serif font-light text-[#EDE8DE]"
               style={{ fontSize: "clamp(1rem, 1.6vw, 1.15rem)" }}
             >
               The address you followed has either moved or was never here. The House, however, is.
@@ -89,7 +89,7 @@ export default function NotFound() {
             </Link>
             <button
               onClick={() => router.back()}
-              className="inline-block border border-white/15 hover:border-gold/50 px-8 py-3.5 text-[#8A8178] hover:text-[#E8E2D9] transition-all duration-500"
+              className="inline-block border border-white/15 hover:border-gold/50 px-8 py-3.5 text-[#EDE8DE] hover:text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "11px", letterSpacing: "0.28em" }}
             >
               <span className="uppercase font-medium">Go Back</span>
@@ -112,7 +112,7 @@ export default function NotFound() {
                 <Link
                   key={href}
                   href={href}
-                  className="text-[#5A5449] hover:text-gold/70 transition-colors font-light"
+                  className="text-[#EDE8DE] hover:text-gold/70 transition-colors font-light"
                   style={{ fontSize: "12px", letterSpacing: "0.1em" }}
                 >
                   {label}

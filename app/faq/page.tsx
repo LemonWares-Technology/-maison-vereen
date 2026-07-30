@@ -144,7 +144,7 @@ export default function FAQPage() {
                 Everything You Would Ask, Answered Directly.
               </h1>
 
-              <p className="text-sm md:text-base text-[#8A8178] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
                 Twenty questions, answered in the unhurried, confident voice of
                 the House — designed to dissolve objection and deepen
                 understanding at once.
@@ -163,7 +163,7 @@ export default function FAQPage() {
 
           {/* Sub-hero paragraph */}
           <div className="mt-12 pt-8 border-t border-white/5 max-w-225">
-            <p className="text-sm md:text-base text-[#B3A99B] font-light leading-relaxed">
+            <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
               This page exists so that no serious applicant is left with an
               unanswered practical question before applying. Each answer is written
               in the House&apos;s own voice — confident, direct, and unhurried —
@@ -177,7 +177,7 @@ export default function FAQPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 DIRECT ANSWERS
               </span>
-              <p className="text-xs text-[#8A8178] font-light">
+              <p className="text-xs text-[#EDE8DE] font-light">
                 No ambiguity. No corporate filler.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function FAQPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 PRACTICAL CLARITY
               </span>
-              <p className="text-xs text-[#8A8178] font-light">
+              <p className="text-xs text-[#EDE8DE] font-light">
                 The details that matter, explained properly.
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function FAQPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 HOUSE PERSPECTIVE
               </span>
-              <p className="text-xs text-[#8A8178] font-light">
+              <p className="text-xs text-[#EDE8DE] font-light">
                 Answers in the voice of Maison Vereen.
               </p>
             </div>
@@ -204,7 +204,7 @@ export default function FAQPage() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold block">
                 TOTAL TRANSPARENCY
               </span>
-              <p className="text-xs text-[#8A8178] font-light">
+              <p className="text-xs text-[#EDE8DE] font-light">
                 Nothing hidden. Nothing exaggerated.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default function FAQPage() {
                 <h2 className="font-serif text-2xl font-light text-[#EDE8DE] leading-snug">
                   Edition I &amp; The Founding Registry
                 </h2>
-                <p className="text-xs text-[#8A8178] font-light mt-1">
+                <p className="text-xs text-[#EDE8DE] font-light mt-1">
                   Questions about Edition I, the Founding Registry, and the path
                   to becoming part of the House&apos;s founding chapter.
                 </p>
@@ -250,7 +250,7 @@ export default function FAQPage() {
                         </span>
                       </button>
                       {isOpen && (
-                        <p className="text-xs text-[#8A8178] font-light mt-3 leading-relaxed pl-6">
+                        <p className="text-xs text-[#EDE8DE] font-light mt-3 leading-relaxed pl-6">
                           {item.a}
                         </p>
                       )}
@@ -271,7 +271,7 @@ export default function FAQPage() {
                     &ldquo;The registry is not a queue. It is a circle of
                     recognition.&rdquo;
                   </p>
-                  <p className="text-[10px] text-[#8A8178] font-light">
+                  <p className="text-[10px] text-[#EDE8DE] font-light">
                     Every accepted member is chosen because the House believes in who
                     they are and what they represent — not because they were first.
                   </p>
@@ -286,7 +286,7 @@ export default function FAQPage() {
                 <h2 className="font-serif text-2xl font-light text-[#EDE8DE] leading-snug">
                   Membership, Signature Collection &amp; Practical Matters
                 </h2>
-                <p className="text-xs text-[#8A8178] font-light mt-1">
+                <p className="text-xs text-[#EDE8DE] font-light mt-1">
                   Questions about membership, the Signature Collection,
                   concierge purchasing, and everything practical.
                 </p>
@@ -315,7 +315,7 @@ export default function FAQPage() {
                         </span>
                       </button>
                       {isOpen && (
-                        <p className="text-xs text-[#8A8178] font-light mt-3 leading-relaxed pl-6">
+                        <p className="text-xs text-[#EDE8DE] font-light mt-3 leading-relaxed pl-6">
                           {item.a}
                         </p>
                       )}
@@ -335,7 +335,7 @@ export default function FAQPage() {
                   <p className="font-serif text-xs text-gold italic">
                     &ldquo;A conversation, not a cart.&rdquo;
                   </p>
-                  <p className="text-[10px] text-[#8A8178] font-light">
+                  <p className="text-[10px] text-[#EDE8DE] font-light">
                     Every acquisition is personal because every fragrance is
                     personal. That will never change.
                   </p>
@@ -350,7 +350,7 @@ export default function FAQPage() {
           <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE]">
             Still have a question not covered here?
           </h2>
-          <p className="text-xs text-[#8A8178] font-light">
+          <p className="text-xs text-[#EDE8DE] font-light">
             The House is always reachable. Some questions are better asked directly.
           </p>
           <Link

@@ -30,14 +30,14 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
               <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
                 EDITION I.
               </span>
-              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#A3998E] font-medium">
+              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium">
                 TWO HUNDRED AND FIFTY INDIVIDUALLY NUMBERED BOTTLES.
               </span>
             </div>
 
             {/* Supporting Copy */}
             <p
-              className="text-[#8A8178] font-light leading-[1.85] max-w-145"
+              className="text-[#EDE8DE] font-light leading-[1.85] max-w-145"
               style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.0625rem)" }}
             >
               Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
@@ -55,7 +55,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
 
               <Link
                 href="/edition-i"
-                className="border border-[#7A7068]/40 hover:border-gold` text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 text-center bg-[#060506]"
+                className="border border-[#EDE8DE]/40 hover:border-gold` text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 text-center bg-[#060506]"
               >
                 DISCOVER EDITION I
               </Link>
@@ -64,7 +64,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
             {/* Scroll Indicator */}
             <div className="pt-10 flex items-center gap-3">
               <span className="w-px h-5 bg-gold/60" />
-              <span className="font-mono text-[9px] uppercase tracking-[0.35em] text-[#7A7068]">
+              <span className="font-mono text-[9px] uppercase tracking-[0.35em] text-[#EDE8DE]">
                 SCROLL
               </span>
             </div>

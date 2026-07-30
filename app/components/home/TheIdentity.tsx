@@ -17,7 +17,7 @@ export default function TheIdentity() {
             </h1>
           </div>
           
-          <div className="type-body-sm max-w-[640px] mx-auto space-y-6 text-[#7A7068] anim-fade-up-d2">
+          <div className="type-body-sm max-w-[640px] mx-auto space-y-6 text-[#EDE8DE] anim-fade-up-d2">
             <p>
               Maison VEREEN exists at the intersection of rarity and artistry — offering two distinct ways to experience the world of exceptional fragrance.
             </p>

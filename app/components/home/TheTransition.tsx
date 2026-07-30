@@ -13,7 +13,7 @@ export default function TheTransition() {
 
         {/* Divider statement */}
         <p
-          className="font-serif font-light italic text-[#C8BFB2] leading-[1.6] max-w-[600px] mx-auto"
+          className="font-serif font-light italic text-[#EDE8DE] leading-[1.6] max-w-[600px] mx-auto"
           style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)" }}
         >
           Membership is one path into the House. The Signature Collection is another — open, permanent, and entirely its own.

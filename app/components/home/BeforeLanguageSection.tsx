@@ -14,7 +14,7 @@ export default function BeforeLanguageSection() {
               BEFORE LANGUAGE.
             </span>
 
-            <div className="space-y-6 text-[#8A8178] font-light leading-[1.9] max-w-155" style={{ fontSize: "1.0625rem" }}>
+            <div className="space-y-6 text-[#EDE8DE] font-light leading-[1.9] max-w-155" style={{ fontSize: "1.0625rem" }}>
               <p>
                 Before your name is known, before your story is told, before a single word has passed between you and a room — something has already been decided.
               </p>
