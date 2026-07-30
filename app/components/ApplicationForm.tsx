@@ -89,7 +89,7 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
       className="fixed inset-0 z-60 bg-black/92 backdrop-blur-sm overflow-y-auto flex items-start justify-center"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="relative w-full max-w-[1000px] min-h-screen md:min-h-0 md:my-10 bg-charcoal border-0 md:border border-white/7 shadow-2xl grid grid-cols-1 md:grid-cols-[1fr_420px]">
+      <div className="relative w-full max-w-250 min-h-screen md:min-h-0 md:my-10 bg-charcoal border-0 md:border border-white/7 shadow-2xl grid grid-cols-1 md:grid-cols-[1fr_420px]">
         <button onClick={onClose} className="absolute top-5 right-5 z-10 text-[#5A5449] hover:text-[#E8E2D9] transition-colors duration-300 p-1" aria-label="Close">
           <X className="w-5 h-5" />
         </button>
@@ -187,9 +187,8 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
                 <label className="flex items-start gap-4 cursor-pointer group">
                   <button type="button" role="checkbox" aria-checked={form.consent}
                     onClick={() => setForm({ ...form, consent: !form.consent })}
-                    className={`shrink-0 w-4 h-4 border mt-0.5 flex items-center justify-center transition-all duration-300 ${
-                      form.consent ? "border-gold bg-gold/10" : "border-white/12 group-hover:border-white/25"
-                    }`}>
+                    className={`shrink-0 w-4 h-4 border mt-0.5 flex items-center justify-center transition-all duration-300 ${form.consent ? "border-gold bg-gold/10" : "border-white/12 group-hover:border-white/25"
+                      }`}>
                     {form.consent && <Check className="w-2.5 h-2.5 text-gold" />}
                   </button>
                   <span className="text-xs text-[#5A5449] font-light leading-[1.7] tracking-wide">
@@ -218,7 +217,7 @@ export default function ApplicationForm({ isOpen, onClose }: ApplicationFormProp
                 <h3 className="font-serif font-light text-[#E8E2D9]" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}>
                   Welcome to Maison Vereen.
                 </h3>
-                <p className="text-[#7A7268] font-light leading-[1.7] max-w-[360px] mx-auto" style={{ fontSize: "15px" }}>
+                <p className="text-[#7A7268] font-light leading-[1.7] max-w-90 mx-auto" style={{ fontSize: "15px" }}>
                   Your application has been received. We will review it personally and respond within 48 hours.
                 </p>
                 <p className="text-[#3A3530] font-light" style={{ fontSize: "13px" }}>
