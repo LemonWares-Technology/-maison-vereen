@@ -84,7 +84,7 @@ export default function FragranceLibraryPage() {
             <div className="w-full flex justify-center lg:justify-end">
               <ImagePlaceholder
                 aspect="aspect-3/4"
-                className="w-full max-w-[500px] rounded-sm shadow-2xl"
+                className="w-full max-w-125 rounded-sm shadow-2xl"
                 label="Signature Collection Bottle &amp; Vessel"
               />
             </div>
@@ -139,7 +139,7 @@ export default function FragranceLibraryPage() {
         </section>
 
         {/* ── THE SIGNATURE COLLECTION GALLERY (5 BOTTLE CARDS) ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
           <div className="space-y-12">
             <div className="text-center space-y-3">
               <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
@@ -186,7 +186,7 @@ export default function FragranceLibraryPage() {
         </section>
 
         {/* ── 01 EACH FRAGRANCE & 02 CONCIERGE ACQUISITION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Card 01 */}
             <div className="bg-[#0A0A0C] border border-white/5 p-8 flex flex-col justify-between space-y-8">
@@ -227,12 +227,12 @@ export default function FragranceLibraryPage() {
         </section>
 
         {/* ── BOTTOM BANNER & CTAS ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 text-center space-y-8">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-8">
           <div className="w-8 h-8 border border-gold/40 mx-auto flex items-center justify-center bg-[#060506]">
             <span className="font-serif text-gold text-xs">MV</span>
           </div>
 
-          <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-[800px] mx-auto leading-relaxed">
+          <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-200 mx-auto leading-relaxed">
             The Signature Collection is the ongoing work. What follows is the
             institution behind all of it.
           </h2>
