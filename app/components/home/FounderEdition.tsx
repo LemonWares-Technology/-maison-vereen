@@ -16,6 +16,7 @@ export default function FounderEdition() {
                 src="/file_00000000a39471f4b5714dd0617de348.png"
                 alt="The founding chapter — Maison Vereen Edition I"
                 fill
+
                 sizes="(max-width: 1024px) 100vw, 460px"
                 className="object-cover object-center"
               />
