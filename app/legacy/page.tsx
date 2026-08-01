@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -18,12 +17,9 @@ const PAGE_NAV = [
 // Page 15 — LEGACY (exact copy from document)
 
 export default function LegacyPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── OPENING — melt hero + mobile stacked fix ── */}
@@ -290,24 +286,18 @@ export default function LegacyPage() {
                 to last.
               </p>
               <div className="w-8 h-px bg-gold/40 mx-auto" />
-              <button
-                type="button"
-                onClick={openApply}
+              <Link
+                href="/apply"
                 className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500 uppercase font-medium tracking-[0.3em] text-[11px]"
               >
                 Join the House. Begin the Story.
-              </button>
+              </Link>
             </div>
           </div>
         </section>
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

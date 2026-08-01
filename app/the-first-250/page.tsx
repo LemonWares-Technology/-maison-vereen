@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const MAX_MEMBERS = 350;
 
@@ -119,12 +118,9 @@ function formatMemberNo(verificationNumber: string) {
 }
 
 export default function LiveFoundingRegistryPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
   const [acceptedCount, setAcceptedCount] = useState(0);
   const [recent, setRecent] = useState<ApprovedRecord[]>([]);
   const [loaded, setLoaded] = useState(false);
-
-  const openApply = () => setIsApplyOpen(true);
 
   useEffect(() => {
     let cancelled = false;
@@ -163,7 +159,7 @@ export default function LiveFoundingRegistryPage() {
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero ── */}
@@ -458,14 +454,13 @@ export default function LiveFoundingRegistryPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
-              <button
-                type="button"
-                onClick={openApply}
+              <Link
+                href="/apply"
                 className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />
-              </button>
+              </Link>
               <Link
                 href="/membership"
                 className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
@@ -479,11 +474,6 @@ export default function LiveFoundingRegistryPage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

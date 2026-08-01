@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 import FragranceEnquiryModal from "../components/signature/FragranceEnquiryModal";
 
 const PAGE_NAV = [
@@ -189,16 +188,14 @@ function PillarIcon({ type }: { type: "quill" | "flask" | "lock" }) {
 }
 
 export default function FragranceLibraryPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
   const [enquiryFragrance, setEnquiryFragrance] = useState<{
     id: string;
     name: string;
   } | null>(null);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero ── */}
@@ -592,11 +589,6 @@ export default function FragranceLibraryPage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
 
       <FragranceEnquiryModal
         fragrance={enquiryFragrance}

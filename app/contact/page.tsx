@@ -1,10 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const CONTACT_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -93,12 +91,10 @@ function CalendarIcon() {
 }
 
 export default function ContactPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
-      <Header navItems={CONTACT_NAV} onOpenApply={openApply} />
+      <Header navItems={CONTACT_NAV} />
 
       {/* Hero — melt layout + mobile stacked fix */}
       <section className="relative min-h-screen bg-[#060506] overflow-hidden">
@@ -581,8 +577,6 @@ export default function ContactPage() {
       </section>
 
       <Footer navItems={CONTACT_NAV} />
-
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </div>
   );
 }

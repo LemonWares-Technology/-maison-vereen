@@ -1,12 +1,8 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 
-interface RegistryCTAProps {
-  onOpenApply: () => void;
-}
-
-export default function RegistryCTA({ onOpenApply }: RegistryCTAProps) {
+export default function RegistryCTA() {
   return (
     <section
       id="apply"
@@ -45,12 +41,12 @@ export default function RegistryCTA({ onOpenApply }: RegistryCTAProps) {
 
           {/* CTA Button */}
           <div className="pt-4">
-            <button
-              onClick={onOpenApply}
-              className="px-10 py-4 bg-charcoal text-cream hover:bg-gold-dark hover:text-cream text-xs font-semibold tracking-widest uppercase transition-all duration-500 ease-out shadow-lg"
+            <Link
+              href="/apply"
+              className="inline-block px-10 py-4 bg-charcoal text-cream hover:bg-gold-dark hover:text-cream text-xs font-semibold tracking-widest uppercase transition-all duration-500 ease-out shadow-lg"
             >
               Begin Your Application
-            </button>
+            </Link>
             <span className="block text-xs text-zinc-500 font-light tracking-wide mt-3">
               Application does not guarantee allocation. All positions are subject to review.
             </span>

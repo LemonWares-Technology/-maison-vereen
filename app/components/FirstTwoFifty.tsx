@@ -1,13 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
 // Section 6 of Page 1 — "The First 250 Bottles"
 // Blueprint Screen 07: "250 fills the screen. The number is the hero."
 
-interface FirstTwoFiftyProps {
-  onOpenApply: () => void;
-}
-
-export default function FirstTwoFifty({ onOpenApply }: FirstTwoFiftyProps) {
+export default function FirstTwoFifty() {
   return (
     <section id="first-250" className="bg-[#060606] border-y border-white/5 overflow-hidden relative">
       {/* Ambient glow behind the number */}
@@ -87,13 +85,13 @@ export default function FirstTwoFifty({ onOpenApply }: FirstTwoFiftyProps) {
 
             <div className="w-8 h-px bg-gold/40 mx-auto" />
 
-            <button
-              onClick={onOpenApply}
-              className="border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
+            <Link
+              href="/apply"
+              className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-10 py-4 text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "9px", letterSpacing: "0.3em" }}
             >
               <span className="uppercase font-medium">Apply for Ownership</span>
-            </button>
+            </Link>
           </div>
 
         </div>

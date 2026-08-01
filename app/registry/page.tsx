@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -115,11 +114,8 @@ function formatMemberNo(verificationNumber: string) {
 }
 
 export default function RegistryPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
   const [recent, setRecent] = useState<ApprovedRecord[]>([]);
   const [loaded, setLoaded] = useState(false);
-
-  const openApply = () => setIsApplyOpen(true);
 
   useEffect(() => {
     let cancelled = false;
@@ -147,7 +143,7 @@ export default function RegistryPage() {
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero ── */}
@@ -381,14 +377,13 @@ export default function RegistryPage() {
                   full registry application — every answer is read personally by
                   the House.
                 </p>
-                <button
-                  type="button"
-                  onClick={openApply}
-                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-[11px] tracking-[0.22em] uppercase font-semibold transition-colors"
-                >
-                  Apply to the Registry
+                <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-[11px] tracking-[0.22em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Registry
                   <ArrowIcon />
-                </button>
+              </Link>
               </div>
 
               <div className="relative w-full aspect-4/5 max-w-md mx-auto lg:max-w-none overflow-hidden">
@@ -588,14 +583,13 @@ export default function RegistryPage() {
                 It is growing, member by member, in real time.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-                <button
-                  type="button"
-                  onClick={openApply}
-                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors"
-                >
-                  Apply to the Registry
+                <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Registry
                   <ArrowIcon />
-                </button>
+              </Link>
                 <Link
                   href="/the-first-250"
                   className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-medium transition-colors"
@@ -610,11 +604,6 @@ export default function RegistryPage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }
