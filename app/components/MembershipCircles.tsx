@@ -2,10 +2,6 @@
 
 import Link from "next/link";
 
-interface MembershipCirclesProps {
-  onOpenApply: () => void;
-}
-
 // Exact three tiers from document — Page 1 Home + Page 7 Membership & Registry
 const tiers = [
   {
@@ -50,7 +46,7 @@ const tiers = [
   },
 ];
 
-export default function MembershipCircles({ onOpenApply }: MembershipCirclesProps) {
+export default function MembershipCircles() {
   return (
     <section id="registry" className="bg-charcoal border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">

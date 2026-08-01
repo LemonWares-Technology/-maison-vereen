@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -46,12 +44,10 @@ function ArrowIcon() {
 }
 
 export default function TheFounderPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero — dark text left, atelier right melting into black ── */}
@@ -275,14 +271,13 @@ export default function TheFounderPage() {
 
             {/* Secondary CTA */}
             <div className="flex flex-col justify-center gap-5 px-6 sm:px-10 md:px-12 py-12 md:py-16 border-t border-gold/20 lg:border-t-0">
-              <button
-                type="button"
-                onClick={openApply}
+              <Link
+                href="/apply"
                 className="inline-flex w-full items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] sm:text-xs tracking-[0.22em] uppercase font-medium transition-colors"
               >
                 Apply for a Position
                 <ArrowIcon />
-              </button>
+              </Link>
               <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85 max-w-sm">
                 For those who feel aligned with the mission and want to
                 contribute to its legacy.
@@ -293,11 +288,6 @@ export default function TheFounderPage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

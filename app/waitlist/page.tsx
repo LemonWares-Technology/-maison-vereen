@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const COUNTRY_OPTIONS = [
   "Select your country",
@@ -104,8 +103,6 @@ const benefits = [
 ];
 
 export default function WaitlistPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -447,10 +444,6 @@ export default function WaitlistPage() {
       <ApprovedList />
 
       <Footer />
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </>
   );
 }

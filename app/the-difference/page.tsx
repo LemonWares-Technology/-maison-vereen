@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -90,12 +88,9 @@ function CircleArrowIcon() {
 }
 
 export default function TheDifferencePage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero ── */}
@@ -278,14 +273,13 @@ export default function TheDifferencePage() {
                 >
                   Ready to be part of the Maison?
                 </h3>
-                <button
-                  type="button"
-                  onClick={openApply}
-                  className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
-                >
-                  Apply for a Position
+                <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
+              >
+                Apply for a Position
                   <ArrowIcon />
-                </button>
+              </Link>
                 <p className="font-serif text-base font-light leading-[1.75] text-[#EDE8DE]/85 max-w-sm">
                   Applications are by consideration. For those who believe in
                   what we build.
@@ -326,11 +320,6 @@ export default function TheDifferencePage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

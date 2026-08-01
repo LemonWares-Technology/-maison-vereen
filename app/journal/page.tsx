@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 import { articles } from "@/lib/journal";
 
 const JOURNAL_NAV = [
@@ -18,12 +16,9 @@ const JOURNAL_NAV = [
 ];
 
 export default function JournalPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={JOURNAL_NAV} onOpenApply={openApply} />
+      <Header navItems={JOURNAL_NAV} />
 
       <main className="flex-1">
         {/* ── Hero — melt layout + mobile stacked fix ── */}
@@ -227,23 +222,17 @@ export default function JournalPage() {
               &ldquo;Continue reading the house&apos;s story. Join the
               Registry.&rdquo;
             </p>
-            <button
-              type="button"
-              onClick={openApply}
-              className="shrink-0 inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#EDE8DE] transition-all duration-500 uppercase font-medium tracking-[0.3em] text-[11px]"
-            >
-              Apply for Access
-            </button>
+            <Link
+                href="/apply"
+                className="shrink-0 inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-8 py-3.5 text-[#EDE8DE] transition-all duration-500 uppercase font-medium tracking-[0.3em] text-[11px]"
+              >
+                Apply for Access
+              </Link>
           </div>
         </section>
       </main>
 
       <Footer navItems={JOURNAL_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

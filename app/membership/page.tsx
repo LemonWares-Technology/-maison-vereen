@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const MEMBERSHIP_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -160,12 +158,10 @@ function PillarIcon({ type }: { type: "key" | "gift" | "quill" | "shield" }) {
 }
 
 export default function MembershipPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
-      <Header navItems={MEMBERSHIP_NAV} onOpenApply={openApply} />
+      <Header navItems={MEMBERSHIP_NAV} />
 
       {/* Hero — full-bleed on desktop; stacked mobile fix */}
       <section className="relative min-h-screen overflow-hidden bg-[#060506]">
@@ -405,14 +401,13 @@ export default function MembershipPage() {
           </h2>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-            <button
-              type="button"
-              onClick={openApply}
-              className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
-            >
-              Apply to the Founding Registry
+            <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Founding Registry
               <ArrowIcon />
-            </button>
+              </Link>
             <Link
               href="/fragrance-library"
               className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
@@ -425,11 +420,6 @@ export default function MembershipPage() {
       </section>
 
       <Footer navItems={MEMBERSHIP_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

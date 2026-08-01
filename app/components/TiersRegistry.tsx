@@ -1,12 +1,8 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 
-interface TiersRegistryProps {
-  onOpenApply: () => void;
-}
-
-export default function TiersRegistry({ onOpenApply }: TiersRegistryProps) {
+export default function TiersRegistry() {
   const tiers = [
     {
       title: "Registry Archive",
@@ -85,12 +81,12 @@ export default function TiersRegistry({ onOpenApply }: TiersRegistryProps) {
               </div>
 
               <div className="pt-4">
-                <button
-                  onClick={onOpenApply}
-                  className="w-full py-3 border border-gold-dark/30 hover:border-gold-dark text-gold-dark text-xs tracking-widest uppercase font-semibold hover:bg-gold-dark hover:text-cream transition-all duration-500 ease-out"
+                <Link
+                  href="/apply"
+                  className="block w-full py-3 border border-gold-dark/30 hover:border-gold-dark text-gold-dark text-xs tracking-widest uppercase font-semibold hover:bg-gold-dark hover:text-cream transition-all duration-500 ease-out text-center"
                 >
                   Request Registration
-                </button>
+                </Link>
               </div>
             </div>
           ))}

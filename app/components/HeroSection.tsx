@@ -3,10 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface HeroSectionProps {
-  onOpenApply: () => void;
-}
-
 function ArrowIcon() {
   return (
     <svg
@@ -27,7 +23,7 @@ function ArrowIcon() {
   );
 }
 
-function HeroCopy({ onOpenApply }: HeroSectionProps) {
+function HeroCopy() {
   return (
     <div className="w-full max-w-lg lg:max-w-xl space-y-5 md:space-y-8">
       <h1
@@ -49,14 +45,13 @@ function HeroCopy({ onOpenApply }: HeroSectionProps) {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-stretch sm:items-center pt-1">
-        <button
-          type="button"
-          onClick={onOpenApply}
+        <Link
+          href="/apply"
           className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
         >
           Apply to the Registry
           <ArrowIcon />
-        </button>
+        </Link>
         <Link
           href="/edition-i"
           className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
@@ -68,7 +63,7 @@ function HeroCopy({ onOpenApply }: HeroSectionProps) {
   );
 }
 
-export default function HeroSection({ onOpenApply }: HeroSectionProps) {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen bg-[#060506] overflow-hidden">
       {/* ── Mobile: bottle lower under header, then solid dark copy ── */}
@@ -95,7 +90,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
         </div>
 
         <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
-          <HeroCopy onOpenApply={onOpenApply} />
+          <HeroCopy />
         </div>
       </div>
 
@@ -118,7 +113,7 @@ export default function HeroSection({ onOpenApply }: HeroSectionProps) {
 
       <div className="relative z-10 hidden lg:flex w-full max-w-7xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
         <div className="w-[95%] md:w-full mx-auto">
-          <HeroCopy onOpenApply={onOpenApply} />
+          <HeroCopy />
         </div>
 
         <div className="absolute bottom-12 left-[max(2.5%,calc((100%-80rem)/2))] flex items-center gap-3">

@@ -1,10 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-interface FoundingRegistrySectionProps {
-  onOpenApply: () => void;
-}
+import Link from "next/link";
 
 function ArrowIcon() {
   return (
@@ -26,9 +23,7 @@ function ArrowIcon() {
   );
 }
 
-export default function FoundingRegistrySection({
-  onOpenApply,
-}: FoundingRegistrySectionProps) {
+export default function FoundingRegistrySection() {
   return (
     <section className="relative bg-[#060506] overflow-hidden">
       {/* Right cap close-up — melts into black */}
@@ -70,14 +65,13 @@ export default function FoundingRegistrySection({
             </p>
 
             <div className="pt-2">
-              <button
-                type="button"
-                onClick={onOpenApply}
+              <Link
+                href="/apply"
                 className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
                 Apply to the Registry
                 <ArrowIcon />
-              </button>
+              </Link>
             </div>
           </div>
 

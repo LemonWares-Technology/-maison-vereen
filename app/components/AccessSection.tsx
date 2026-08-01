@@ -1,18 +1,16 @@
 "use client";
 
-// Section 9 of Page 1 � "Waiting List CTA"
-// Exact copy from document Page 1, final section
-interface AccessSectionProps {
-  onOpenApply: () => void;
-}
+import Link from "next/link";
 
-export default function AccessSection({ onOpenApply }: AccessSectionProps) {
+// Section 9 of Page 1 — "Waiting List CTA"
+// Exact copy from document Page 1, final section
+export default function AccessSection() {
   return (
     <section
       id="apply"
       className="relative bg-[#0D0D0D] border-t border-white/5 overflow-hidden"
     >
-      {/* Radial amber glow � single light source, subtle */}
+      {/* Radial amber glow — single light source, subtle */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
@@ -29,7 +27,7 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
 
           <span className="section-tag block">Ownership Application</span>
 
-          {/* Exact headline from document Page 1 � Waiting List CTA */}
+          {/* Exact headline from document Page 1 — Waiting List CTA */}
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.05]"
             style={{ fontSize: "clamp(2.2rem, 4.2vw, 3.8rem)" }}
@@ -59,15 +57,15 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
 
           <div className="w-8 h-px bg-gold/40 mx-auto" />
 
-          {/* Single CTA � doc: "Begin Your Application" */}
+          {/* Single CTA — doc: "Begin Your Application" */}
           <div className="space-y-4">
-            <a
-              href="/access"
+            <Link
+              href="/apply"
               className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500"
               style={{ fontSize: "9px", letterSpacing: "0.3em" }}
             >
               <span className="uppercase font-medium">Begin Your Application</span>
-            </a>
+            </Link>
             {/* Exact small-type disclaimer from document */}
             <p
               className="text-[#3A3530] font-light"
@@ -77,9 +75,9 @@ export default function AccessSection({ onOpenApply }: AccessSectionProps) {
             </p>
             <p className="text-[#3A3530] font-light" style={{ fontSize: "14px" }}>
               Not ready to apply?{" "}
-              <a href="/waitlist" className="text-gold/50 hover:text-gold transition-colors">
+              <Link href="/waitlist" className="text-gold/50 hover:text-gold transition-colors">
                 Join the waiting list ?
-              </a>
+              </Link>
             </p>
           </div>
         </div>

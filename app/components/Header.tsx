@@ -1,15 +1,12 @@
 "use client";
-
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 export type NavItem = {
   label: string;
   href: string;
 };
-
 export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
@@ -17,49 +14,32 @@ export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "JOURNAL", href: "/journal" },
   { label: "REGISTRY", href: "/registry" },
 ];
-
 /** Matches `h-30` — use as top padding on page content that should clear the header */
 export const HEADER_OFFSET_CLASS = "pt-30";
-
 interface HeaderProps {
   navItems?: NavItem[];
-  onOpenApply?: () => void;
 }
-
 export default function Header({
   navItems = DEFAULT_NAV_ITEMS,
-  onOpenApply,
 }: HeaderProps) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
-
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
-  const handleApplyClick = (e: MouseEvent) => {
-    if (onOpenApply) {
-      e.preventDefault();
-      onOpenApply();
-    }
-    setIsOpen(false);
-  };
-
   return (
     <>
       <header
@@ -80,7 +60,6 @@ export default function Header({
               className="block h-14 sm:h-16 md:h-18 w-auto"
             />
           </Link>
-
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map(({ label, href }) => {
               const active = pathname === href;
@@ -99,16 +78,13 @@ export default function Header({
               );
             })}
           </nav>
-
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <Link
-              href="/registry"
-              onClick={handleApplyClick}
+              href="/apply"
               className="border border-gold-dark px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] hover:text-gold hover:cursor-pointer transition-all duration-300"
             >
               Apply to the Registry
             </Link>
-
             <button
               type="button"
               onClick={() => setIsOpen((prev) => !prev)}
@@ -147,7 +123,6 @@ export default function Header({
           </div>
         </div>
       </header>
-
       {/* Mobile overlay — same navItems as the desktop header */}
       <div
         className={`fixed inset-0 z-40 bg-[#060506]/95 backdrop-blur-xl flex flex-col transition-all duration-500 md:hidden ${
@@ -157,7 +132,6 @@ export default function Header({
         }`}
       >
         <div className="h-30 shrink-0" aria-hidden />
-
         <div className="flex-1 flex flex-col justify-center items-center w-[95%] mx-auto px-2 space-y-8">
           <nav className="flex flex-col items-center gap-6 text-center">
             {navItems.map(({ label, href }) => {
@@ -178,12 +152,10 @@ export default function Header({
               );
             })}
           </nav>
-
           <div className="w-12 h-px bg-gold/30" />
-
           <Link
-            href="/registry"
-            onClick={handleApplyClick}
+            href="/apply"
+            onClick={() => setIsOpen(false)}
             className="border border-gold bg-gold/10 text-gold px-8 py-3.5 text-xs tracking-[0.28em] uppercase font-medium hover:bg-gold/20 transition-colors"
           >
             Apply to the Registry

@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -143,12 +141,9 @@ function ArrowIcon() {
 }
 
 export default function SocialProofPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+      <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
         {/* ── Hero ── */}
@@ -516,14 +511,13 @@ export default function SocialProofPage() {
             </h2>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-              <button
-                type="button"
-                onClick={openApply}
+              <Link
+                href="/apply"
                 className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />
-              </button>
+              </Link>
               <Link
                 href="/faqs"
                 className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
@@ -537,11 +531,6 @@ export default function SocialProofPage() {
       </main>
 
       <Footer navItems={PAGE_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

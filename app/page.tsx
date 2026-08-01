@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -9,7 +8,6 @@ import FounderEdition from "./components/home/FounderEdition";
 import WhyOnly250 from "./components/home/WhyOnly250";
 import PermanentClosureBanner from "./components/home/PermanentClosureBanner";
 import FoundingRegistrySection from "./components/home/FoundingRegistrySection";
-import ApplicationForm from "./components/ApplicationForm";
 
 const HOME_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -25,29 +23,22 @@ const HOME_FOOTER_NAV = [
 ];
 
 export default function HomePage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
-      <Header navItems={HOME_NAV} onOpenApply={openApply} />
+      <Header navItems={HOME_NAV} />
 
       <main className="flex-1">
         <p className="sr-only">Maison Vereen — Extrait de Parfum</p>
-        <HeroSection onOpenApply={openApply} />
+        <HeroSection />
         <BeforeLanguageSection />
         <FounderEdition />
         <WhyOnly250 />
         <PermanentClosureBanner />
-        <FoundingRegistrySection onOpenApply={openApply} />
+        <FoundingRegistrySection />
       </main>
 
       <Footer navItems={HOME_FOOTER_NAV} />
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

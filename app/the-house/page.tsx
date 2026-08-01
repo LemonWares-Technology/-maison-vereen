@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 const HOUSE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -117,12 +115,10 @@ function PillarIcon({ type }: { type: "fleur" | "mark" | "globe" }) {
 }
 
 export default function TheHousePage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
-      <Header navItems={HOUSE_NAV} onOpenApply={openApply} />
+      <Header navItems={HOUSE_NAV} />
 
       {/* Hero — bottle lower on mobile, melt desktop */}
       <section className="relative min-h-screen bg-[#060506] overflow-hidden">
@@ -414,14 +410,13 @@ export default function TheHousePage() {
           </h2>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-            <button
-              type="button"
-              onClick={openApply}
-              className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
-            >
-              Apply to the Founding Registry
+            <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Founding Registry
               <ArrowIcon />
-            </button>
+              </Link>
             <Link
               href="/social-proof"
               className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
@@ -434,8 +429,6 @@ export default function TheHousePage() {
       </section>
 
       <Footer navItems={HOUSE_NAV} />
-
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </div>
   );
 }

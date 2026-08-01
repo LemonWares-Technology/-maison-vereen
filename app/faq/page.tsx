@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ApplicationForm from "../components/ApplicationForm";
 
 import ImagePlaceholder from "../components/ui/ImagePlaceholder";
 
@@ -115,16 +114,13 @@ const GROUP_2_QUESTIONS = [
 ];
 
 export default function FAQPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   const [openGroup1, setOpenGroup1] = useState<string | null>(null);
   const [openGroup2, setOpenGroup2] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
       {/* ── Header ── */}
-      <Header onOpenApply={openApply} />
+      <Header />
 
       <main className="flex-1 pt-24 md:pt-28">
         {/* ── HERO SECTION ── */}
@@ -369,12 +365,12 @@ export default function FAQPage() {
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <button
-              onClick={openApply}
+            <Link
+              href="/apply"
               className="bg-gold hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
             >
               APPLY TO THE FOUNDING REGISTRY &rarr;
-            </button>
+            </Link>
 
             <Link
               href="/contact"
@@ -389,8 +385,6 @@ export default function FAQPage() {
       {/* ── Footer ── */}
       <Footer />
 
-      {/* ── Application Modal ── */}
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </div>
   );
 }

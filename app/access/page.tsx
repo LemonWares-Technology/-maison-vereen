@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ApplicationForm from "../components/ApplicationForm";
 
 const PILLARS = [
   {
@@ -217,9 +216,6 @@ function CircleIcon({
 }
 
 export default function AccessPage() {
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
-  const openApply = () => setIsApplyOpen(true);
-
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
       {/* Logo-only header — standalone shareable page */}
@@ -405,14 +401,13 @@ export default function AccessPage() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-start justify-center gap-5">
               <div className="space-y-3 flex-1 sm:max-w-xs">
-                <button
-                  type="button"
-                  onClick={openApply}
-                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors w-full"
-                >
-                  Apply to the Founding Registry
+                <Link
+                href="/apply"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors w-full"
+              >
+                Apply to the Founding Registry
                   <ArrowIcon />
-                </button>
+              </Link>
                 <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-[#EDE8DE]/55">
                   Join the Founding Registry
                 </p>
@@ -447,11 +442,6 @@ export default function AccessPage() {
           </div>
         </section>
       </main>
-
-      <ApplicationForm
-        isOpen={isApplyOpen}
-        onClose={() => setIsApplyOpen(false)}
-      />
     </div>
   );
 }

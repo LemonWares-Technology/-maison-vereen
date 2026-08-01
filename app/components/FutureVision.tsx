@@ -2,10 +2,6 @@
 
 import Link from "next/link";
 
-interface FutureVisionProps {
-  onOpenApply: () => void;
-}
-
 // Exact copy from document — Page 1 Home: Future Vision + Page 8: The Future of the House
 const futureItems = [
   {
@@ -30,7 +26,7 @@ const futureItems = [
   },
 ];
 
-export default function FutureVision({ onOpenApply }: FutureVisionProps) {
+export default function FutureVision() {
   return (
     <section
       id="future-vision"
