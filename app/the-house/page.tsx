@@ -11,7 +11,7 @@ const HOUSE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/housebook" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "REGISTRY", href: "/registry" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -124,25 +124,71 @@ export default function TheHousePage() {
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
       <Header navItems={HOUSE_NAV} onOpenApply={openApply} />
 
-      {/* Hero — FAQs pattern */}
-      <section className="relative min-h-screen bg-[#060506]">
-        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
-          <div className="hidden lg:block bg-[#060506]" />
-          <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+      {/* Hero — bottle lower on mobile, melt desktop */}
+      <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+        {/* Mobile: image under header, copy on solid dark */}
+        <div className="lg:hidden flex flex-col min-h-screen">
+          <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
+            <Image
+              src="/images/the-house-hero.webp"
+              alt=""
+              fill
+              priority
+              className="object-cover object-[center_28%]"
+              sizes="100vw"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+              }}
+            />
+            <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+          </div>
+
+          <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="w-full max-w-lg flex flex-col items-start gap-5">
+              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">
+                12
+              </span>
+              <div className="w-8 h-px bg-gold" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
+                The House
+              </span>
+              <h1
+                className="font-serif font-light text-[#EDE8DE] leading-[1.08] tracking-tight"
+                style={{ fontSize: "clamp(2.1rem, 5.5vw, 4.25rem)" }}
+              >
+                A House Is Not Built in a Season.
+              </h1>
+              <div className="w-8 h-px bg-gold" />
+              <p className="font-serif text-base font-normal leading-[1.85] text-[#EDE8DE] max-w-md">
+                Maison Vereen is building toward institutional permanence — a House
+                whose values, culture, and craftsmanship are intended to outlast any
+                single collection, founder, or era.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: image on right, melts into black on left */}
+        <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
+          <div className="bg-[#060506]" />
+          <div className="relative overflow-hidden">
             <Image
               src="/images/the-house-hero.webp"
               alt=""
               fill
               priority
               className="object-cover object-[center_30%]"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="55vw"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/70 to-[#060506]/40 lg:bg-none" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
           </div>
         </div>
 
-        <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               12
@@ -242,7 +288,7 @@ export default function TheHousePage() {
           {/* 02 The Next Century */}
           <div className="relative min-h-150 overflow-hidden group">
             <Image
-              src="/images/dark-architecture.jpg"
+              src="/file_00000000a75471f48402160a6ed179fc.webp"
               alt=""
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"

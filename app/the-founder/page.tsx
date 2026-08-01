@@ -12,7 +12,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE FOUNDER", href: "/the-founder" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/housebook" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "REGISTRY", href: "/registry" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -205,7 +205,7 @@ export default function TheFounderPage() {
 
                 <div className="relative w-full aspect-3/4 sm:aspect-auto sm:h-full sm:min-h-80 overflow-hidden">
                   <Image
-                    src="/images/dark-architecture.jpg"
+                    src="/file_000000009ffc81f4b13c80251cc456a8.webp"
                     alt="Institutional vision — an enduring House"
                     fill
                     className="object-cover object-center"

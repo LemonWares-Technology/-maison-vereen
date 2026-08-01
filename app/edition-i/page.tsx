@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/housebook" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "REGISTRY", href: "/registry" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -65,26 +65,75 @@ export default function EditionIPage() {
       <main className="flex-1">
         {/* ── 01 Hero — dark text left, bottle right melting into black ── */}
         <section className="relative min-h-screen bg-[#060506] overflow-hidden">
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
-            <div className="hidden lg:block bg-[#060506]" />
-            <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+          {/* Mobile: bottle lower under header, copy on solid dark */}
+          <div className="lg:hidden flex flex-col min-h-screen">
+            <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
+              <Image
+                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                alt=""
+                fill
+                priority
+                className="object-cover object-[center_28%]"
+                sizes="100vw"
+              />
+              <div
+                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+                }}
+              />
+              <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+            </div>
+
+            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+              <div className="w-full max-w-lg space-y-5">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-lg text-gold">01</span>
+                  <div className="w-6 h-px bg-gold" />
+                </div>
+
+                <div className="space-y-2">
+                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                    Edition I: House of 250
+                  </span>
+                  <div className="w-10 h-px bg-gold" />
+                </div>
+
+                <h1
+                  className="font-serif font-light text-gold leading-[1.08] tracking-tight"
+                  style={{ fontSize: "clamp(2.1rem, 5vw, 4rem)" }}
+                >
+                  Two Hundred and Fifty.
+                  <br />
+                  No More, Ever.
+                </h1>
+
+                <p className="font-serif text-base sm:text-lg font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+                  Edition I is Maison Vereen&apos;s founding chapter.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: bottle on right, melts into black on left */}
+          <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
+            <div className="bg-[#060506]" />
+            <div className="relative overflow-hidden">
               <Image
                 src="/file_00000000a75471f48402160a6ed179fc.webp"
                 alt=""
                 fill
                 priority
                 className="object-cover object-[center_30%]"
-                sizes="(max-width: 1024px) 100vw, 55vw"
+                sizes="55vw"
               />
-              {/* Mobile: vertical melt into black behind text */}
-              <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/75 to-[#060506]/45 lg:bg-none" />
-              {/* Desktop: left edge melts into the dark text panel */}
-              <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
-              <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
+              <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
                 <span className="font-serif text-lg md:text-xl text-gold">01</span>
