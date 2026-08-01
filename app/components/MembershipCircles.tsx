@@ -49,9 +49,9 @@ const tiers = [
 export default function MembershipCircles() {
   return (
     <section id="registry" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy Page 1 + Page 7 */}
-        <div className="space-y-6 max-w-[680px]">
+        <div className="space-y-6 max-w-170">
           <span className="section-tag">Membership &amp; Registry</span>
           <h2
             className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
@@ -125,7 +125,7 @@ export default function MembershipCircles() {
               <ul className="space-y-2.5 flex-1">
                 {tier.benefits.map((b, j) => (
                   <li key={j} className="flex items-start gap-3">
-                    <div className="shrink-0 w-3 h-px bg-gold/30 mt-[9px]" />
+                    <div className="shrink-0 w-3 h-px bg-gold/30 mt-2.25" />
                     <span
                       className="text-[#EDE8DE] font-light leading-[1.6]"
                       style={{ fontSize: "16px" }}
