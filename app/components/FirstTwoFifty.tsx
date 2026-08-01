@@ -18,8 +18,8 @@ export default function FirstTwoFifty() {
         }}
       />
 
-      <div className="relative max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
-        <div className="max-w-[760px] mx-auto space-y-0">
+      <div className="relative max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
+        <div className="max-w-190 mx-auto space-y-0">
 
           {/* The number — the hero of this section per blueprint */}
           <div className="text-center pb-8 md:pb-12">
@@ -46,7 +46,7 @@ export default function FirstTwoFifty() {
           <div className="w-8 h-px bg-gold/40 mx-auto mb-12" />
 
           {/* Copy — centred, compressed */}
-          <div className="text-center space-y-6 max-w-[580px] mx-auto">
+          <div className="text-center space-y-6 max-w-145 mx-auto">
             <h2
               className="font-serif font-light text-[#E8E2D9] leading-[1.08]"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}

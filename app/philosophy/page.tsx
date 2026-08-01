@@ -122,7 +122,7 @@ export default function PhilosophyPage() {
             {/* Mobile: dissolve upward behind copy */}
             <div className="absolute inset-0 bg-linear-to-t from-[#060506] from-15% via-[#060506]/85 via-45% to-[#060506]/55 lg:hidden" />
             {/* Desktop: continuous left melt into the text field */}
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-[28%] via-[#060506]/95 via-[42%] to-transparent to-[68%]" />
+            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-28% via-[#060506]/95 via-42% to-transparent to-68%" />
             <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/60 via-transparent to-[#060506]/45" />
             <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/50" />
             <div className="absolute inset-0 hidden lg:block bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />

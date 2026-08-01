@@ -32,7 +32,7 @@ export default function ArticlePage() {
       <Header navItems={JOURNAL_NAV} />
 
       <main className="bg-charcoal">
-        <section className="pt-[72px] border-b border-white/5">
+        <section className="pt-18 border-b border-white/5">
           <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden bg-[#060606]">
             <div
               className="absolute inset-0"
@@ -48,7 +48,7 @@ export default function ArticlePage() {
             <div className="absolute inset-0 bg-linear-to-b from-[#060606]/40 via-transparent to-transparent" />
 
             <div className="absolute bottom-0 left-0 right-0">
-              <div className="max-w-[860px] mx-auto px-6 sm:px-8 md:px-14 pb-10 md:pb-14 space-y-4">
+              <div className="max-w-215 mx-auto px-6 sm:px-8 md:px-14 pb-10 md:pb-14 space-y-4">
                 <div className="flex items-center gap-4">
                   <span
                     className="uppercase tracking-[0.2em] border px-2.5 py-1"
@@ -87,7 +87,7 @@ export default function ArticlePage() {
         </section>
 
         <section className="border-b border-white/5">
-          <div className="max-w-[860px] mx-auto px-6 sm:px-8 md:px-14 py-14 md:py-20">
+          <div className="max-w-215 mx-auto px-6 sm:px-8 md:px-14 py-14 md:py-20">
             <Link
               href="/journal"
               className="inline-flex items-center gap-2 text-[#EDE8DE] hover:text-gold transition-colors duration-300 mb-12 group"
@@ -147,7 +147,7 @@ export default function ArticlePage() {
 
         {(prev || next) && (
           <section className="border-b border-white/5 bg-[#0D0D0D]">
-            <div className="max-w-[1400px] mx-auto">
+            <div className="max-w-350 mx-auto">
               <div
                 className={`grid grid-cols-1 ${
                   prev && next ? "sm:grid-cols-2" : ""
@@ -217,9 +217,9 @@ export default function ArticlePage() {
         )}
 
         <section className="bg-charcoal">
-          <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
-              className="font-serif font-light italic text-[#4A4540] max-w-[500px]"
+              className="font-serif font-light italic text-[#4A4540] max-w-125"
               style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.2rem)" }}
             >
               &ldquo;Continue reading the house&apos;s story.&rdquo;

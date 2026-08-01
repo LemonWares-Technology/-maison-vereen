@@ -142,9 +142,9 @@ const PRIVILEGES = [
 ];
 
 const fieldClass =
-  "w-full bg-[#16130E] border border-gold/35 px-4 py-3.5 text-base font-light text-[#EDE8DE] placeholder:text-gold/55 outline-1 outline-gold/40 focus:border-gold transition-colors";
+  "w-full max-w-full min-w-0 bg-[#16130E] border border-gold/35 px-4 py-3.5 text-base font-light text-[#EDE8DE] placeholder:text-gold/55 outline-1 outline-gold/40 focus:border-gold transition-colors";
 const selectClass =
-  "w-full bg-[#16130E] border border-gold/35 px-4 py-3.5 text-base font-light text-gold outline-1 outline-gold/40 focus:border-gold transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%228%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84C%22%20stroke-width%3D%221.3%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_1rem_center] pr-10";
+  "w-full max-w-full min-w-0 bg-[#16130E] border border-gold/35 px-4 py-3.5 text-base font-light text-gold outline-1 outline-gold/40 focus:border-gold transition-colors appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%228%22%20fill%3D%22none%22%20stroke%3D%22%23C9A84C%22%20stroke-width%3D%221.3%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_1rem_center] pr-10";
 const dateClass =
   `${fieldClass} text-gold scheme-dark ` +
   "[&::-webkit-calendar-picker-indicator]:cursor-pointer " +
@@ -152,7 +152,7 @@ const dateClass =
   "[&::-webkit-calendar-picker-indicator]:[filter:invert(72%)_sepia(42%)_saturate(480%)_hue-rotate(5deg)_brightness(95%)]";
 /** Bordered shell with label + control inside (Taste / Intent pattern) */
 const floatShellClass =
-  "block w-full bg-[#16130E] border border-gold/35 px-4 py-3.5 outline-1 outline-gold/40 transition-colors focus-within:border-gold";
+  "block w-full max-w-full min-w-0 bg-[#16130E] border border-gold/35 px-4 py-3.5 outline-1 outline-gold/40 transition-colors focus-within:border-gold";
 const floatLabelClass =
   "block font-sans text-sm sm:text-base text-gold font-light leading-snug";
 const floatTextareaClass =
@@ -360,13 +360,13 @@ export default function ApplicationForm() {
   return (
     <div
       id="registry-application"
-      className={`relative bg-[#060506] text-[#EDE8DE] ${HEADER_OFFSET_CLASS}`}
+      className={`relative bg-[#060506] text-[#EDE8DE] overflow-x-clip ${HEADER_OFFSET_CLASS}`}
     >
-      <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+      <div className="w-[95%] md:w-full max-w-7xl mx-auto min-w-0">
         <div className="md:grid md:grid-cols-2 md:items-start md:gap-0">
           {/* LEFT — intro, image, privileges, quote, join */}
-          <aside className="relative bg-[#060506] border-b md:border-b-0 md:border-r border-gold/20">
-            <div className="w-full max-w-xl mx-auto md:mx-0 md:pr-10 lg:pr-14 py-10 md:py-16 space-y-10 md:space-y-12 pb-14">
+          <aside className="relative min-w-0 bg-[#060506] border-b md:border-b-0 md:border-r border-gold/20">
+            <div className="w-full max-w-xl mx-auto md:max-w-none md:mx-0 md:pr-10 lg:pr-14 py-10 md:py-16 space-y-10 md:space-y-12 pb-14">
               {/* Intro */}
               <div className="space-y-5">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -494,8 +494,8 @@ export default function ApplicationForm() {
           </aside>
 
           {/* RIGHT — application form */}
-          <div className="relative bg-[#060506] scroll-mt-4">
-            <div className="w-full max-w-2xl mx-auto md:mx-0 md:pl-10 lg:pl-14 py-10 md:py-16 space-y-10">
+          <div className="relative min-w-0 bg-[#060506] scroll-mt-4">
+            <div className="w-full max-w-2xl mx-auto md:max-w-none md:mx-0 md:pl-10 lg:pl-14 py-10 md:py-16 space-y-10 min-w-0">
               <div className="space-y-3">
                 <h2 className="font-serif text-xl sm:text-2xl uppercase tracking-[0.18em] text-gold font-light">
                   Registry Application
@@ -506,18 +506,19 @@ export default function ApplicationForm() {
               </div>
 
               {/* Stepper */}
-              <div className="flex items-start justify-between gap-1 sm:gap-2 pt-2">
+              <div className="flex items-start justify-between gap-1 sm:gap-2 pt-2 overflow-hidden">
                 {STEPS.map((step, i) => {
                   const active = activeStep === step.id;
                   const activeIdx = STEPS.findIndex((s) => s.id === activeStep);
                   const done = i < activeIdx;
                   return (
-                    <div key={step.id} className="flex-1 flex flex-col items-center gap-2 relative">
+                    <div key={step.id} className="flex-1 min-w-0 flex flex-col items-center gap-2 relative">
                       {i < STEPS.length - 1 && (
                         <div
-                          className={`absolute top-4 left-[calc(50%+14px)] right-[calc(-50%+14px)] h-px ${
+                          className={`absolute top-4 left-[calc(50%+14px)] w-[calc(100%-14px)] h-px ${
                             done || active ? "bg-gold/60" : "bg-gold/25"
                           }`}
+                          aria-hidden
                         />
                       )}
                       <div
