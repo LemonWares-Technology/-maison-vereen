@@ -1,58 +1,64 @@
 "use client";
 
+import Image from "next/image";
+
+const PLEDGES = ["No Reprint.", "No Reissue.", "No Anniversary Release."];
+
 export default function PermanentClosureBanner() {
   return (
-    <section className="bg-linear-to-b from-[#0B0A0A] via-[#0D0C0B] to-[#070606] border-b border-white/5 py-24 md:py-32 relative overflow-hidden">
-      {/* Subtle luxury glow effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.05)_0%,transparent_70%)] pointer-events-none" />
+    <section className="relative py-24 md:py-32 lg:py-36 overflow-hidden">
+      <Image
+        src="/file_00000000df2071f4ac2ce7694ace922d.webp"
+        alt=""
+        fill
+        className="object-cover object-[center_70%] opacity-40"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-[#060506]/78" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
 
-      <div className="max-w-300 mx-auto px-6 sm:px-8 text-center relative z-10 space-y-10">
-
-        {/* Crest Emblem Header */}
+      <div className="relative z-10 w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-12 md:space-y-14">
         <div className="flex justify-center">
-          <div className="w-12 h-12 rounded-full border border-gold/40 bg-[#060506] flex items-center justify-center shadow-lg">
-            <div className="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center">
-              <span className="font-serif text-gold text-sm font-semibold italic">M</span>
-            </div>
-          </div>
+          <Image
+            src="/logo-mark.webp"
+            alt=""
+            width={56}
+            height={46}
+            className="w-11 md:w-12 h-auto"
+          />
         </div>
 
-        {/* Main Quote Statement */}
-        <div className="max-w-225 mx-auto">
+        <div className="space-y-5 max-w-2xl mx-auto">
+          <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]">
+            When the two hundred and fiftieth bottle is placed into a
+            collector&apos;s hands,
+          </p>
           <p
-            className="font-serif font-light text-[#EDE8DE] leading-tight tracking-tight"
-            style={{ fontSize: "clamp(1.75rem, 3.8vw, 3rem)" }}
+            className="font-serif font-light italic text-gold leading-snug"
+            style={{ fontSize: "clamp(1.75rem, 4vw, 2.85rem)" }}
           >
-            When the two hundred and fiftieth bottle is placed into a collector&apos;s hands,{" "}
-            <span className="text-gold italic font-normal block sm:inline">
-              the edition closes permanently.
-            </span>
+            the edition closes permanently.
           </p>
         </div>
 
-        {/* Bottom 3 Callout Pillars */}
-        <div className="pt-6 max-w-200 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 items-center justify-center border-t border-white/10 sm:border-none">
-
-          <div className="sm:border-r border-white/10 py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
-              NO REPRINT.
-            </span>
-          </div>
-
-          <div className="sm:border-r border-white/10 py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
-              NO REISSUE.
-            </span>
-          </div>
-
-          <div className="py-2 sm:py-0 sm:px-6 text-center">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
-              NO ANNIVERSARY RELEASE.
-            </span>
-          </div>
-
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-0 pt-2">
+          {PLEDGES.map((label, i) => (
+            <div key={label} className="flex items-center">
+              {i > 0 && (
+                <span
+                  className="hidden sm:block w-px h-8 bg-[#EDE8DE]/25 mx-7 md:mx-10"
+                  aria-hidden
+                />
+              )}
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-7 h-px bg-gold" />
+                <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.32em] text-[#EDE8DE] font-medium">
+                  {label}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   );

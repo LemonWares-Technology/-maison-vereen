@@ -7,88 +7,94 @@ interface HeroSectionProps {
   onOpenApply: () => void;
 }
 
+function ArrowIcon() {
+  return (
+    <svg
+      width="28"
+      height="10"
+      viewBox="0 0 28 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M0 5h26M21 1l5 4-5 4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function HeroSection({ onOpenApply }: HeroSectionProps) {
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#060506] border-b border-white/5 pt-28 pb-16 md:pt-36 md:pb-24">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+      {/* Right bottle — melts into black on the left */}
+      <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
+        <div className="hidden lg:block bg-[#060506]" />
+        <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+          <Image
+            src="/file_00000000a75471f48402160a6ed179fc.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[center_30%]"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/75 to-[#060506]/45 lg:bg-none" />
+          <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-58%" />
+          <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/55 via-transparent to-[#060506]/30" />
+        </div>
+      </div>
 
-          {/* Left Content Column (7 cols on lg) */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
+      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-24 min-h-screen flex flex-col justify-center">
+        <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
+          <h1
+            className="font-serif font-light text-[#F2EDE4] leading-[1.06] tracking-tight"
+            style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)" }}
+          >
+            The room knows
+            <br />
+            before you speak.
+          </h1>
 
-            {/* Main Headline */}
-            <h1
-              className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
-              style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.75rem)" }}
+          <p className="font-sans text-xs uppercase tracking-[0.28em] text-gold font-medium leading-relaxed max-w-md">
+            Edition I. Two Hundred and Fifty Individually Numbered Bottles.
+          </p>
+
+          <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+            Africa&apos;s first serious luxury fragrance house, now privately
+            accepting applications into the Maison Vereen Founding Registry.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-1">
+            <button
+              type="button"
+              onClick={onOpenApply}
+              className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
             >
-              The room knows <br className="hidden sm:block" />
-              before you speak.
-            </h1>
-
-            {/* Subtitle / Eyebrow Block */}
-            <div className="space-y-1.5 pt-2">
-              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
-                EDITION I.
-              </span>
-              <span className="block font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] font-medium">
-                TWO HUNDRED AND FIFTY INDIVIDUALLY NUMBERED BOTTLES.
-              </span>
-            </div>
-
-            {/* Supporting Copy */}
-            <p
-              className="text-[#EDE8DE] font-light leading-[1.85] max-w-145"
-              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.0625rem)" }}
+              Apply to the Registry
+              <ArrowIcon />
+            </button>
+            <Link
+              href="/edition-i"
+              className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
             >
-              Africa&apos;s first serious luxury fragrance house, now privately accepting applications into the Maison Vereen Founding Registry.
-            </p>
-
-            {/* Action CTAs */}
-            <div className="pt-4 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-              <button
-                onClick={onOpenApply}
-                className="bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-semibold transition-all duration-300 flex items-center justify-center gap-3 group"
-              >
-                <span>APPLY TO THE REGISTRY</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </button>
-
-              <Link
-                href="/edition-i"
-                className="border border-[#EDE8DE]/40 hover:border-gold` text-[#EDE8DE] hover:text-gold px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-medium transition-all duration-300 text-center bg-[#060506]"
-              >
-                DISCOVER EDITION I
-              </Link>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className="pt-10 flex items-center gap-3">
-              <span className="w-px h-5 bg-gold/60" />
-              <span className="font-mono text-[9px] uppercase tracking-[0.35em] text-[#EDE8DE]">
-                SCROLL
-              </span>
-            </div>
-
+              Discover Edition I
+            </Link>
           </div>
+        </div>
 
-          {/* Right Column — Bottle Hero Image (5 cols on lg) */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "3/4" }}>
-              <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
-                alt="Maison Vereen Edition I — The Bottle"
-                fill
-                sizes="(max-width: 1024px) 100vw, 460px"
-                className="object-cover object-center"
-                priority
-              />
-              {/* Subtle vignette overlay */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(6,5,6,0.45)_100%)] pointer-events-none" />
-              {/* Bottom fade */}
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-[#060506]/60 to-transparent pointer-events-none" />
-            </div>
-          </div>
-
+        {/* Vertical SCROLL cue — bottom left */}
+        <div className="absolute bottom-8 left-0 md:bottom-12 flex items-center gap-3">
+          <span className="w-px h-10 bg-gold/70" />
+          <span
+            className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#EDE8DE]/80"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            Scroll
+          </span>
         </div>
       </div>
     </section>

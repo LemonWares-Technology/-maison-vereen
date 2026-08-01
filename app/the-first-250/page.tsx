@@ -1,229 +1,489 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 
-import ImagePlaceholder from "../components/ui/ImagePlaceholder";
+const MAX_MEMBERS = 350;
 
-const RECENTLY_WELCOMED = [
-  { no: "001", name: "James F.", country: "Nigeria", status: "Accepted" },
-  { no: "002", name: "Sarah M.", country: "United Kingdom", status: "Accepted" },
-  { no: "003", name: "Grace A.", country: "Ghana", status: "Accepted" },
-  { no: "004", name: "David K.", country: "Canada", status: "Accepted" },
+const PAGE_NAV = [
+  { label: "THE MAISON", href: "/the-house" },
+  { label: "EDITION I", href: "/edition-i" },
+  { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
+  { label: "JOURNAL", href: "/housebook" },
+  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
-export default function TheFirst250Page() {
+interface ApprovedRecord {
+  verificationNumber: string;
+  displayName: string;
+  country: string;
+  approvedAt: string;
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="28"
+      height="10"
+      viewBox="0 0 28 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M0 5h26M21 1l5 4-5 4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ShieldMarkIcon() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 36 36"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M18 4l11 4v9c0 7.5-5 13-11 15-6-2-11-7.5-11-15V8l11-4z"
+        strokeLinejoin="round"
+      />
+      <text
+        x="18"
+        y="21"
+        textAnchor="middle"
+        fill="currentColor"
+        stroke="none"
+        fontSize="10"
+        fontFamily="Georgia, serif"
+      >
+        M
+      </text>
+    </svg>
+  );
+}
+
+function SealMark() {
+  return (
+    <svg
+      width="120"
+      height="120"
+      viewBox="0 0 120 120"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      className="text-gold"
+      aria-hidden
+    >
+      <circle cx="60" cy="60" r="54" />
+      <circle cx="60" cy="60" r="46" />
+      <circle
+        cx="60"
+        cy="60"
+        r="50"
+        strokeDasharray="2.4 3.6"
+        opacity="0.55"
+      />
+      <text
+        x="60"
+        y="72"
+        textAnchor="middle"
+        fill="currentColor"
+        stroke="none"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize="42"
+        fontWeight="500"
+      >
+        M
+      </text>
+    </svg>
+  );
+}
+
+function formatMemberNo(verificationNumber: string) {
+  const n = Number(verificationNumber);
+  if (!Number.isFinite(n) || n <= 0) return "—";
+  return String(n).padStart(3, "0");
+}
+
+export default function LiveFoundingRegistryPage() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const [acceptedCount, setAcceptedCount] = useState(0);
+  const [recent, setRecent] = useState<ApprovedRecord[]>([]);
+  const [loaded, setLoaded] = useState(false);
+
   const openApply = () => setIsApplyOpen(true);
 
-  return (
-    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-[#C9A84C]/30 selection:text-[#EDE8DE]">
-      {/* ── Header ── */}
-      <Header onOpenApply={openApply} />
+  useEffect(() => {
+    let cancelled = false;
 
-      <main className="flex-1 pt-24 md:pt-28">
-        {/* ── HERO SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-12 md:py-20 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Narrative */}
-            <div className="space-y-8 max-w-[620px]">
-              <div className="flex items-center gap-3">
-                <span className="font-serif text-xl text-[#C9A84C]">09</span>
-                <div className="w-6 h-[1px] bg-[#C9A84C]" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium">
-                  LIVE FOUNDING REGISTRY
-                </span>
+    fetch("/api/applications/approved?limit=50")
+      .then((r) => r.json())
+      .then((data: { records?: ApprovedRecord[]; total?: number }) => {
+        if (cancelled) return;
+        const records = data.records ?? [];
+        const total =
+          typeof data.total === "number" ? data.total : records.length;
+        setAcceptedCount(total);
+        const newest = [...records]
+          .sort(
+            (a, b) =>
+              new Date(b.approvedAt).getTime() -
+              new Date(a.approvedAt).getTime()
+          )
+          .slice(0, 4);
+        setRecent(newest);
+        setLoaded(true);
+      })
+      .catch(() => {
+        if (!cancelled) setLoaded(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const progress = Math.min(
+    100,
+    Math.max(0, (acceptedCount / MAX_MEMBERS) * 100)
+  );
+
+  return (
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
+      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
+
+      <main className="flex-1">
+        {/* ── Hero ── */}
+        <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24 border-b border-white/5">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+              <div className="space-y-6 md:space-y-7 max-w-xl">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-lg md:text-xl text-gold">
+                    09
+                  </span>
+                  <div className="w-6 h-px bg-gold" />
+                </div>
+
+                <div className="space-y-2">
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                    Live Founding Registry
+                  </span>
+                  <div className="w-10 h-px bg-gold" />
+                </div>
+
+                <h1
+                  className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                  style={{ fontSize: "clamp(2.2rem, 4.8vw, 3.75rem)" }}
+                >
+                  <span
+                    className={`transition-opacity duration-700 ${
+                      loaded ? "opacity-100" : "opacity-40"
+                    }`}
+                  >
+                    {acceptedCount}
+                  </span>{" "}
+                  of {MAX_MEMBERS}. The House Is Being Assembled Now.
+                </h1>
+
+                <div className="w-10 h-px bg-gold" />
+
+                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+                  The live Founding Registry count reflects every applicant the
+                  House has personally reviewed and accepted — never an
+                  estimate, never inflated.
+                </p>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
-                127 of 350. The House Is Being Assembled Now.
-              </h1>
-
-              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
-                The live Founding Registry count reflects every applicant the House
-                has personally reviewed and accepted — never an estimate, never
-                inflated.
-              </p>
-            </div>
-
-            {/* Right Image Placeholder */}
-            <div className="w-full flex justify-center lg:justify-end">
-              <ImagePlaceholder
-                aspect="aspect-4/3"
-                className="w-full max-w-[500px] rounded-sm shadow-2xl"
-                label="Founding Registry Ledger"
-              />
+              <div className="relative w-full aspect-4/3 overflow-hidden bg-[#0A0A0C]">
+                <Image
+                  src="/file_000000005fc471f495c71bc758a16ffc.webp"
+                  alt="Maison Vereen Founding Registry ledger"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 95vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060506]/50 via-transparent to-transparent" />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── A LIVING RECORD ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="max-w-[800px] mx-auto text-center space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
-              A LIVING RECORD
-            </span>
-            <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
+        {/* ── A Living Record ── */}
+        <section className="relative bg-[#060506] py-20 md:py-28 border-b border-white/5">
+          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-10 h-px bg-gold" />
+              <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                A Living Record
+              </span>
+              <div className="w-10 h-px bg-gold" />
+            </div>
+
+            <p className="font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#EDE8DE]">
               This page exists as a living record of the Founding Registry&apos;s
               growth. The count displayed here rises only when Maison Vereen
               formally accepts an applicant — never automatically, never on a
               timer, and never adjusted for effect.
             </p>
-            <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
+            <p className="font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#EDE8DE]">
               As the count approaches three hundred and fifty, this page becomes
-              the clearest, most honest signal of how close the Founding Registry
-              is to closing.
+              the clearest, most honest signal of how close the Founding
+              Registry is to closing.
             </p>
           </div>
         </section>
 
-        {/* ── BIG COUNTER BOX ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="bg-[#0A0A0C] border border-[#C9A84C]/30 p-10 sm:p-16 max-w-[900px] mx-auto text-center space-y-8">
-            <span className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#C9A84C] font-light block leading-none">
-              127
-            </span>
-            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#EDE8DE] font-medium">
-              ACCEPTED MEMBERS
-            </p>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#EDE8DE]">
-              out of 350
-            </p>
+        {/* ── Accepted Members counter ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="border border-gold/40 bg-[#080808]/80 px-8 sm:px-12 md:px-16 py-14 md:py-20 text-center space-y-6">
+              <span
+                className={`font-serif text-gold font-light leading-none block transition-opacity duration-700 ${
+                  loaded ? "opacity-100" : "opacity-40"
+                }`}
+                style={{ fontSize: "clamp(4rem, 12vw, 7.5rem)" }}
+              >
+                {acceptedCount}
+              </span>
 
-            {/* Progress bar */}
-            <div className="w-full bg-white/10 h-1 relative overflow-hidden rounded-full max-w-[500px] mx-auto">
-              <div
-                className="bg-[#C9A84C] h-full transition-all duration-1000"
-                style={{ width: "36.2%" }}
-              />
-            </div>
-            <div className="flex justify-between text-[10px] font-mono text-[#EDE8DE] max-w-[500px] mx-auto">
-              <span>127</span>
-              <span>350</span>
-            </div>
-          </div>
-        </section>
+              <p className="font-sans text-xs sm:text-sm uppercase tracking-[0.35em] text-gold font-medium">
+                Accepted Members
+              </p>
 
-        {/* ── RECENTLY WELCOMED ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="max-w-[900px] mx-auto space-y-8">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block text-center">
-              RECENTLY WELCOMED
-            </span>
+              <p className="font-serif text-base md:text-lg italic text-[#EDE8DE]/90">
+                out of {MAX_MEMBERS}
+              </p>
 
-            <div className="bg-[#0A0A0C] border border-white/5 p-6">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs">
-                  <thead>
-                    <tr className="border-b border-white/10 text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE]">
-                      <th className="pb-3">MEMBER</th>
-                      <th className="pb-3">COUNTRY</th>
-                      <th className="pb-3 text-right">STATUS</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/5 text-[#EDE8DE]">
-                    {RECENTLY_WELCOMED.map((row) => (
-                      <tr key={row.no}>
-                        <td className="py-4 font-serif">
-                          <span className="text-[#C9A84C] font-mono mr-3">
-                            {row.no}
-                          </span>
-                          {row.name}
-                        </td>
-                        <td className="py-4 text-[#EDE8DE]">{row.country}</td>
-                        <td className="py-4 text-right text-[#C9A84C] font-medium">
-                          {row.status}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="pt-4 max-w-2xl mx-auto space-y-3">
+                <div className="w-full h-px bg-white/15 relative overflow-hidden">
+                  <div
+                    className="absolute inset-y-0 left-0 bg-gold transition-all duration-1000 ease-out"
+                    style={{ width: loaded ? `${progress}%` : "0%" }}
+                  />
+                </div>
+                <div className="flex justify-between font-sans text-sm text-[#EDE8DE]/80">
+                  <span>{acceptedCount}</span>
+                  <span>{MAX_MEMBERS}</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── WHY 350? ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Big Text */}
-            <div className="bg-[#0A0A0C] border border-white/5 p-10 text-center">
-              <span className="font-serif text-5xl sm:text-6xl text-[#C9A84C] font-light block mb-3">
-                350
+        {/* ── Recently Welcomed ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
+          <div className="w-[95%] md:w-full max-w-4xl mx-auto space-y-10">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-10 h-px bg-gold" />
+              <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                Recently Welcomed
               </span>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#EDE8DE] font-semibold">
-                MAXIMUM FOUNDING MEMBERS
-              </span>
+              <div className="w-10 h-px bg-gold" />
             </div>
 
-            {/* Right Explanation */}
-            <div className="space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-medium block">
-                WHY 350?
-              </span>
-              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                The Registry accepts a maximum of three hundred and fifty members
-                because the House honours scale as much as exclusivity. Only two
-                hundred and fifty bottles exist in Edition I. The Registry is
-                intentionally larger to ensure the House can select with care, never
-                compromise on standards, and protect the integrity of the founding
-                chapter.
-              </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="pb-4 pr-4 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                      Member
+                    </th>
+                    <th className="pb-4 pr-4 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                      Country
+                    </th>
+                    <th className="pb-4 text-right font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loaded && recent.length === 0 ? (
+                    <tr>
+                      <td
+                        colSpan={3}
+                        className="py-10 text-center font-serif text-lg font-medium text-[#EDE8DE]/70"
+                      >
+                        The first acceptances will appear here.
+                      </td>
+                    </tr>
+                  ) : (
+                    recent.map((row) => (
+                      <tr
+                        key={`${row.verificationNumber}-${row.displayName}`}
+                        className="border-b border-white/5"
+                      >
+                        <td className="py-5 pr-4 font-serif text-base md:text-lg text-[#F2EDE4]">
+                          <span className="text-gold font-mono text-sm mr-3 tracking-wider">
+                            {formatMemberNo(row.verificationNumber)}
+                          </span>
+                          {row.displayName}
+                        </td>
+                        <td className="py-5 pr-4 font-serif text-base md:text-lg text-[#EDE8DE]">
+                          {row.country}
+                        </td>
+                        <td className="py-5 text-right font-sans text-sm uppercase tracking-[0.2em] text-gold font-medium">
+                          Accepted
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
             </div>
-          </div>
-        </section>
 
-        {/* ── GOLD SHIELD EMBLEM BANNER ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 text-center space-y-4 border-b border-white/5">
-          <div className="w-10 h-10 border border-[#C9A84C]/40 mx-auto flex items-center justify-center bg-[#060506] mb-4">
-            <span className="font-serif text-[#C9A84C] text-xs">MV</span>
-          </div>
-
-          <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
-            This number only moves forward.
-          </h2>
-
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold">
-            NEVER ESTIMATED. NEVER INFLATED. NEVER RUSHED.
-          </p>
-        </section>
-
-        {/* ── BOTTOM CTA SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-[1400px] mx-auto py-16 md:py-24 text-center space-y-8">
-          <div className="space-y-4 max-w-[600px] mx-auto">
-            <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
-              Acceptance into the Registry is only the beginning
-            </h2>
-            <p className="text-xs sm:text-sm text-[#EDE8DE] font-light">
-              Membership in this House means much more.
+            <p className="font-serif text-base md:text-lg font-medium leading-relaxed text-[#EDE8DE]/75 text-center max-w-2xl mx-auto">
+              Recently accepted members are shown by first name, last initial,
+              and country only. The House will never display a member&apos;s
+              full identity without explicit permission.
             </p>
           </div>
+        </section>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <button
-              onClick={openApply}
-              className="bg-[#C9A84C] hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+        {/* ── Why 350? ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
+              <div className="flex items-center justify-center gap-6 md:gap-8 lg:pr-12 lg:border-r lg:border-gold/30">
+                <SealMark />
+                <div className="text-left space-y-2">
+                  <span
+                    className="font-serif text-gold font-light leading-none block"
+                    style={{ fontSize: "clamp(3.5rem, 8vw, 5.5rem)" }}
+                  >
+                    {MAX_MEMBERS}
+                  </span>
+                  <span className="font-sans text-xs uppercase tracking-[0.28em] text-gold font-medium block max-w-40">
+                    Maximum Founding Members
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-5 lg:pl-12 xl:pl-16">
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
+                  Why 350?
+                </span>
+                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-xl">
+                  The Registry accepts a maximum of three hundred and fifty
+                  members because the House honours scale as much as exclusivity.
+                  Only two hundred and fifty bottles exist in Edition I. The
+                  Registry is intentionally larger to ensure the House can select
+                  with care, never compromise on standards, and protect the
+                  integrity of the founding chapter.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── This number only moves forward ── */}
+        <section className="relative bg-[#060506] py-20 md:py-28 overflow-hidden border-b border-white/5">
+          <div className="absolute right-[8%] top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none hidden lg:block">
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={220}
+              height={180}
+              className="w-52 h-auto"
+            />
+          </div>
+
+          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
+            <div className="flex justify-center text-gold">
+              <ShieldMarkIcon />
+            </div>
+            <h2
+              className="font-serif font-light text-gold leading-snug"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
             >
-              APPLY TO THE FOUNDING REGISTRY &rarr;
-            </button>
-            <Link
-              href="/membership"
-              className="border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#EDE8DE] hover:text-[#C9A84C] px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
-            >
-              LEARN ABOUT MEMBERSHIP &amp; ACCESS &rarr;
-            </Link>
+              This number only moves forward.
+            </h2>
+            <p className="font-sans text-sm md:text-base uppercase tracking-[0.32em] text-[#EDE8DE] font-medium">
+              Never Estimated. Never Inflated. Never Rushed.
+            </p>
+          </div>
+        </section>
+
+        {/* ── Transition + CTAs ── */}
+        <section className="relative bg-[#060506] py-20 md:py-28 overflow-hidden">
+          <div className="absolute left-[4%] top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3 opacity-40 pointer-events-none">
+            <div className="w-px h-16 bg-gold/50" />
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={48}
+              height={40}
+              className="w-10 h-auto"
+            />
+            <div className="w-px h-16 bg-gold/50" />
+          </div>
+          <div className="absolute right-[4%] top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3 opacity-40 pointer-events-none">
+            <div className="w-px h-16 bg-gold/50" />
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={48}
+              height={40}
+              className="w-10 h-auto"
+            />
+            <div className="w-px h-16 bg-gold/50" />
+          </div>
+
+          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+            <div className="space-y-5">
+              <h2
+                className="font-serif font-light text-[#F2EDE4] leading-snug"
+                style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
+              >
+                Acceptance into the Registry is only the beginning
+              </h2>
+              <div className="w-10 h-px bg-gold mx-auto" />
+              <p className="font-serif text-lg md:text-xl text-gold font-medium">
+                Membership in this House means much more.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
+              <button
+                type="button"
+                onClick={openApply}
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Founding Registry
+                <ArrowIcon />
+              </button>
+              <Link
+                href="/membership"
+                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+              >
+                Learn About Membership &amp; Access
+                <ArrowIcon />
+              </Link>
+            </div>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ── */}
-      <Footer />
+      <Footer navItems={PAGE_NAV} />
 
-      {/* ── Application Modal ── */}
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+      <ApplicationForm
+        isOpen={isApplyOpen}
+        onClose={() => setIsApplyOpen(false)}
+      />
     </div>
   );
 }

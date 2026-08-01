@@ -2,78 +2,89 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import {
+  DEFAULT_NAV_ITEMS,
+  type NavItem,
+} from "./Header";
 
-const FOOTER_LINKS = [
-  { label: "THE MAISON", href: "/the-house" },
-  { label: "EDITION I", href: "/edition-i" },
-  { label: "THE EXPERIENCE", href: "/philosophy" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
-  { label: "CONTACT", href: "/contact" },
-];
+interface FooterProps {
+  navItems?: NavItem[];
+}
 
-export default function Footer() {
+export default function Footer({ navItems = DEFAULT_NAV_ITEMS }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#050405] border-t border-white/5 py-12 md:py-16">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-white/5">
-
-          {/* Left: Brand Logo */}
-          <Link href="/" className="flex items-center group py-1">
+    <footer className="bg-[#050405] border-t border-gold/20 py-12 md:py-14">
+      <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <Link href="/" className="shrink-0 leading-none">
             <Image
-              src="/logo.webp"
+              src="/logo-mark.webp"
               alt="Maison Vereen"
-              width={400}
-              height={140}
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
+              width={110}
+              height={90}
+              className="block h-14 sm:h-16 w-auto"
             />
           </Link>
 
-          {/* Center: Footer Navigation */}
-          <nav className="flex flex-wrap items-center gap-6 sm:gap-8">
-            {FOOTER_LINKS.map(({ label, href }) => (
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:gap-x-7">
+            {navItems.map(({ label, href }) => (
               <Link
-                key={label}
+                key={`${label}-${href}`}
                 href={href}
-                className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#EDE8DE] hover:text-[#EDE8DE] transition-colors font-medium"
+                className="font-sans text-[10px] tracking-[0.22em] uppercase text-gold/90 hover:text-gold transition-colors"
               >
                 {label}
               </Link>
             ))}
           </nav>
 
-          {/* Right: Copyright & Legal */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-right">
-            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE]">
-              © {year} MAISON VEREEN. ALL RIGHTS RESERVED.
-            </span>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="https://instagram.com/maisonvereen"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-9 h-9 rounded-full border border-gold/50 text-gold flex items-center justify-center hover:border-gold hover:bg-gold/10 transition-colors"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/maisonvereen"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="w-9 h-9 rounded-full border border-gold/50 text-gold flex items-center justify-center hover:border-gold hover:bg-gold/10 transition-colors"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.849L2.25 2.25h6.908l4.259 5.66 4.827-5.66zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
           </div>
-
         </div>
 
-        {/* Bottom Legal Links Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
-            AFRICA&apos;S FIRST SERIOUS LUXURY FRAGRANCE HOUSE
+        <div className="pt-6 border-t border-gold/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#EDE8DE]/55">
+            Extrait de Parfum
           </span>
-
-          <div className="flex items-center gap-5 font-mono text-[9px] uppercase tracking-[0.25em] text-[#EDE8DE]">
-            <a href="#" className="hover:text-gold transition-colors">
-              PRIVACY
-            </a>
-            <span className="text-[#EDE8DE]/40">|</span>
-            <a href="#" className="hover:text-gold transition-colors">
-              TERMS
-            </a>
-            <span className="text-[#EDE8DE]/40">|</span>
-            <a href="#" className="hover:text-gold transition-colors">
-              COOKIES
-            </a>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-sans text-[9px] uppercase tracking-[0.22em] text-[#EDE8DE]/55">
+            <span>© {year} Maison Vereen. All rights reserved.</span>
+            <Link href="/privacy" className="hover:text-gold transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-gold transition-colors">
+              Terms
+            </Link>
+            <Link href="/cookies" className="hover:text-gold transition-colors">
+              Cookies
+            </Link>
           </div>
         </div>
-
       </div>
     </footer>
   );

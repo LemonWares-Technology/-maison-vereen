@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState, type MouseEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
 
-interface HeaderProps {
-  onOpenApply?: () => void;
-}
+export type NavItem = {
+  label: string;
+  href: string;
+};
 
-const NAV_ITEMS = [
+export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE EXPERIENCE", href: "/philosophy" },
@@ -18,13 +18,25 @@ const NAV_ITEMS = [
   { label: "REGISTRY", href: "/registry" },
 ];
 
-export default function Header({ onOpenApply }: HeaderProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+/** Matches `h-30` — use as top padding on page content that should clear the header */
+export const HEADER_OFFSET_CLASS = "pt-30";
+
+interface HeaderProps {
+  navItems?: NavItem[];
+  onOpenApply?: () => void;
+}
+
+export default function Header({
+  navItems = DEFAULT_NAV_ITEMS,
+  onOpenApply,
+}: HeaderProps) {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -33,45 +45,54 @@ export default function Header({ onOpenApply }: HeaderProps) {
     setIsOpen(false);
   }, [pathname]);
 
-  const handleApplyClick = (e: React.MouseEvent) => {
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const handleApplyClick = (e: MouseEvent) => {
     if (onOpenApply) {
       e.preventDefault();
       onOpenApply();
     }
+    setIsOpen(false);
   };
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${scrolled
-          ? "bg-[#060506]/95 backdrop-blur-md border-white/10 py-4"
-          : "bg-transparent border-white/5 py-6 md:py-7"
-          }`}
+        className={`fixed top-0 left-0 z-50 w-full h-30 flex items-center justify-center transition-all duration-500 ${
+          scrolled
+            ? "bg-[#060506]/80 backdrop-blur-xl border-b border-white/10"
+            : "bg-[#060506]/40 backdrop-blur-xl border-b border-transparent"
+        }`}
       >
-        <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between">
-
-          {/* Logo Brand: Main Logo Image */}
-          <Link href="/" className="flex items-center group py-1">
+        <div className="w-[95%] md:w-full max-w-7xl uppercase text-[13px] h-full flex items-center justify-between mx-auto">
+          <Link href="/" className="shrink-0 leading-none">
             <Image
-              src="/logo.webp"
+              src="/logo-mark.webp"
               alt="Maison Vereen"
-              width={400}
-              height={140}
-              className="h-20 sm:h-24 md:h-28 lg:h-36 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
+              width={110}
+              height={90}
               priority
+              className="block h-14 sm:h-16 md:h-18 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
-            {NAV_ITEMS.map(({ label, href }) => {
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+            {navItems.map(({ label, href }) => {
               const active = pathname === href;
               return (
                 <Link
-                  key={label}
+                  key={`${label}-${href}`}
                   href={href}
-                  className={`text-[10px] tracking-[0.28em] uppercase transition-colors duration-300 font-medium ${active ? "text-gold" : "text-[#EDE8DE] hover:text-[#EDE8DE]"
-                    }`}
+                  className={`tracking-[0.2em] transition-colors duration-300 ${
+                    active
+                      ? "text-gold underline underline-offset-8 decoration-1"
+                      : "text-[#EDE8DE] hover:text-gold"
+                  }`}
                 >
                   {label}
                 </Link>
@@ -79,90 +100,90 @@ export default function Header({ onOpenApply }: HeaderProps) {
             })}
           </nav>
 
-          {/* Header Right Actions */}
-          <div className="flex items-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <Link
-              href="/access"
+              href="/registry"
               onClick={handleApplyClick}
-              className="border border-[#EDE8DE]/40 hover:border-gold hover:text-gold text-[#EDE8DE] px-4 py-2 sm:px-5 sm:py-2.5 text-[9px] sm:text-[10px] tracking-[0.25em] uppercase font-medium transition-all duration-300 bg-[#060506]/50"
+              className="border border-gold-dark px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] hover:text-gold hover:cursor-pointer transition-all duration-300"
             >
               Apply to the Registry
             </Link>
 
-            {/* Hamburger / Menu toggle button */}
             <button
+              type="button"
               onClick={() => setIsOpen((prev) => !prev)}
-              className="text-[#EDE8DE] hover:text-[#EDE8DE] p-1.5 transition-colors"
+              className="md:hidden text-[#EDE8DE] hover:text-gold p-1.5 transition-colors"
               aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
             >
               {isOpen ? (
-                <X className="w-5 h-5" />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  aria-hidden
+                >
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
               ) : (
-                <div className="flex flex-col gap-1 items-end w-5 group">
-                  <span className="w-5 h-[1.5px] bg-[#EDE8DE] group-hover:bg-gold transition-colors" />
-                  <span className="w-3.5 h-[1.5px] bg-[#EDE8DE] group-hover:bg-gold transition-colors" />
-                  <span className="w-5 h-[1.5px] bg-[#EDE8DE] group-hover:bg-gold transition-colors" />
-                </div>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  aria-hidden
+                >
+                  <path d="M2 5h16M5.5 10H18M2 15h16" />
+                </svg>
               )}
             </button>
           </div>
-
         </div>
       </header>
 
-      {/* Full-screen overlay menu — works on ALL screen sizes */}
+      {/* Mobile overlay — same navItems as the desktop header */}
       <div
-        className={`fixed inset-0 z-40 bg-[#060506] flex flex-col transition-all duration-500 ${isOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 z-40 bg-[#060506]/95 backdrop-blur-xl flex flex-col transition-all duration-500 md:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
       >
-        {/* Close button top-right */}
-        <div className="max-w-350 w-full mx-auto px-6 sm:px-8 md:px-12 flex items-center justify-between py-6 md:py-7">
-          {/* Logo repeated inside overlay */}
-          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center group py-1">
-            <Image
-              src="/logo.webp"
-              alt="Maison Vereen"
-              width={400}
-              height={140}
-              className="h-20 sm:h-24 md:h-28 lg:h-36 w-auto object-contain transition-opacity duration-300 opacity-95 group-hover:opacity-100"
-              priority
-            />
-          </Link>
+        <div className="h-30 shrink-0" aria-hidden />
 
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-[#EDE8DE] hover:text-[#EDE8DE] p-1.5 transition-colors"
-            aria-label="Close menu"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Nav Links */}
-        <div className="flex-1 flex flex-col justify-center items-center px-8 space-y-8">
+        <div className="flex-1 flex flex-col justify-center items-center w-[95%] mx-auto px-2 space-y-8">
           <nav className="flex flex-col items-center gap-6 text-center">
-            {NAV_ITEMS.map(({ label, href }) => (
-              <Link
-                key={label}
-                href={href}
-                onClick={() => setIsOpen(false)}
-                className="font-serif text-2xl md:text-3xl tracking-[0.25em] text-[#EDE8DE] hover:text-gold uppercase transition-colors"
-              >
-                {label}
-              </Link>
-            ))}
+            {navItems.map(({ label, href }) => {
+              const active = pathname === href;
+              return (
+                <Link
+                  key={`${label}-${href}`}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={`font-serif text-xl sm:text-2xl tracking-[0.25em] uppercase transition-colors ${
+                    active
+                      ? "text-gold underline underline-offset-8"
+                      : "text-[#EDE8DE] hover:text-gold"
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </nav>
 
-          <div className="w-12 h-px bg-gold/30 my-4" />
+          <div className="w-12 h-px bg-gold/30" />
 
           <Link
-            href="/access"
-            onClick={(e) => {
-              setIsOpen(false);
-              handleApplyClick(e);
-            }}
+            href="/registry"
+            onClick={handleApplyClick}
             className="border border-gold bg-gold/10 text-gold px-8 py-3.5 text-xs tracking-[0.28em] uppercase font-medium hover:bg-gold/20 transition-colors"
           >
             Apply to the Registry
