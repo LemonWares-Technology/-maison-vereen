@@ -6,56 +6,95 @@ interface FoundingRegistrySectionProps {
   onOpenApply: () => void;
 }
 
-export default function FoundingRegistrySection({ onOpenApply }: FoundingRegistrySectionProps) {
+function ArrowIcon() {
   return (
-    <section className="bg-[#060506] border-b border-white/5 py-20 md:py-28">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <svg
+      width="28"
+      height="10"
+      viewBox="0 0 28 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M0 5h26M21 1l5 4-5 4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
-          {/* Left Column — Copy & CTA (7 cols on lg) */}
-          <div className="lg:col-span-7 space-y-7">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-gold font-semibold block">
-              THE FOUNDING REGISTRY
-            </span>
+export default function FoundingRegistrySection({
+  onOpenApply,
+}: FoundingRegistrySectionProps) {
+  return (
+    <section className="relative bg-[#060506] overflow-hidden">
+      {/* Right cap close-up — melts into black */}
+      <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
+        <div className="hidden lg:block bg-[#060506]" />
+        <div className="relative min-h-full overflow-hidden opacity-0 lg:opacity-100">
+          <Image
+            src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+            alt=""
+            fill
+            className="object-cover object-center"
+            sizes="55vw"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-58%" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#060506]/55 via-transparent to-[#060506]/35" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_65%_45%,transparent_18%,#060506_85%)]" />
+        </div>
+      </div>
+
+      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-20 md:py-28 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-7 md:space-y-8 max-w-xl">
+            <div className="space-y-2.5">
+              <div className="w-8 h-px bg-gold" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">
+                The Founding Registry
+              </span>
+            </div>
 
             <h2
-              className="font-serif font-light text-[#EDE8DE] leading-[1.08]"
-              style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
+              className="font-serif font-light text-[#F2EDE4] leading-[1.08]"
+              style={{ fontSize: "clamp(2.1rem, 4.2vw, 3.5rem)" }}
             >
-              Applications remain open <br className="hidden sm:block" />
-              while Edition I remains available.
+              Applications remain open while Edition I remains available.
             </h2>
 
-            <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "1.0625rem" }}>
+            <p className="font-sans text-sm md:text-base font-light leading-[1.9] text-[#EDE8DE]/95">
               Apply to become one of the original 250 collectors.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <button
+                type="button"
                 onClick={onOpenApply}
-                className="bg-gold hover:bg-gold-white text-[#060506] px-7 py-3.5 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-semibold transition-all duration-300 flex items-center justify-center gap-3 group"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
-                <span>APPLY TO THE REGISTRY</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                Apply to the Registry
+                <ArrowIcon />
               </button>
             </div>
           </div>
 
-          {/* Right Column — Registry Desk Image (5 cols on lg) */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full max-w-115 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
-              <Image
-                src="/file_000000005fc471f495c71bc758a16ffc.webp"
-                alt="The Founding Registry — Maison Vereen Private Maison Desk"
-                fill
-                sizes="(max-width: 1024px) 100vw, 460px"
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(6,5,6,0.38)_100%)] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#060506]/50 to-transparent pointer-events-none" />
-            </div>
+          {/* Mobile image */}
+          <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden">
+            <Image
+              src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+              alt="Edition I octagonal cap — Maison Vereen"
+              fill
+              className="object-cover object-center"
+              sizes="95vw"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-[#060506]/55" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506]/70 via-transparent to-[#060506]/70" />
           </div>
 
+          <div className="hidden lg:block min-h-140" aria-hidden />
         </div>
       </div>
     </section>

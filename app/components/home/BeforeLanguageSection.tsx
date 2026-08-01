@@ -4,50 +4,74 @@ import Image from "next/image";
 
 export default function BeforeLanguageSection() {
   return (
-    <section className="bg-[#060506] border-b border-white/5 py-20 md:py-28">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="relative bg-[#060506] overflow-hidden">
+      {/* Right architecture — melts into black */}
+      <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
+        <div className="hidden lg:block bg-[#060506]" />
+        <div className="relative min-h-full overflow-hidden opacity-0 lg:opacity-100">
+          <Image
+            src="/images/dark-architecture.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+            sizes="55vw"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-58%" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#060506]/60 via-transparent to-[#060506]/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_50%,transparent_20%,#060506_88%)]" />
+        </div>
+      </div>
 
-          {/* Left Text Column (7 cols on lg) */}
-          <div className="lg:col-span-7 space-y-7">
-            <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-gold font-semibold block">
-              BEFORE LANGUAGE.
+      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-20 md:py-28 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-7 md:space-y-8 max-w-xl">
+            <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
+              Before Language.
             </span>
 
-            <div className="space-y-6 text-[#EDE8DE] font-light leading-[1.9] max-w-155" style={{ fontSize: "1.0625rem" }}>
+            <div className="space-y-6 font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE]">
               <p>
-                Before your name is known, before your story is told, before a single word has passed between you and a room — something has already been decided.
+                Before your name is known, before your story is told, before a
+                single word has passed between you and a room — something has
+                already been decided.
               </p>
               <p>
-                Maison Vereen was built for that instant. The one that happens before language.
+                Maison Vereen was built for that instant. The one that happens
+                before language.
               </p>
               <p>
-                This is not a house that asks you to become someone. It recognises who has already arrived.
+                This is not a house that asks you to become someone. It
+                recognises who has already arrived.
               </p>
               <p>
-                Edition I exists for the small number of people who have always understood the difference between fitting in and belonging — and who have been waiting, without quite knowing it, for something built to that standard.
+                Edition I exists for the small number of people who have always
+                understood the difference between fitting in and belonging — and
+                who have been waiting, without quite knowing it, for something
+                built to that standard.
               </p>
               <p>
-                Two hundred and fifty bottles. No more will ever be made. What follows on this page is not a product description. It is an invitation to understand what you would be applying to become part of.
+                Two hundred and fifty bottles. No more will ever be made. What
+                follows on this page is not a product description. It is an
+                invitation to understand what you would be applying to become
+                part of.
               </p>
             </div>
           </div>
 
-          {/* Right Column — Philosophy / Sensory Image (5 cols on lg) */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full max-w-120 overflow-hidden rounded-xs shadow-2xl" style={{ aspectRatio: "4/5" }}>
-              <Image
-                src="/founder-image-2.webp"
-                alt="The moment before language — Maison Vereen"
-                fill
-                sizes="(max-width: 1024px) 100vw, 480px"
-                className="object-cover object-top"
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(6,5,6,0.35)_100%)] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#060506]/50 to-transparent pointer-events-none" />
-            </div>
+          {/* Mobile image */}
+          <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden">
+            <Image
+              src="/images/dark-architecture.jpg"
+              alt="Before language — a threshold into the House"
+              fill
+              className="object-cover object-center"
+              sizes="95vw"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-[#060506]/55" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506]/70 via-transparent to-[#060506]/70" />
           </div>
 
+          <div className="hidden lg:block min-h-140" aria-hidden />
         </div>
       </div>
     </section>

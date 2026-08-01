@@ -1,237 +1,380 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 
-import ImagePlaceholder from "../components/ui/ImagePlaceholder";
+const PAGE_NAV = [
+  { label: "THE MAISON", href: "/the-house" },
+  { label: "EDITION I", href: "/edition-i" },
+  { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
+  { label: "JOURNAL", href: "/housebook" },
+  { label: "REGISTRY", href: "/registry" },
+  { label: "CONTACT", href: "/contact" },
+];
+
+const PILLARS = [
+  {
+    no: "01",
+    title: "Number Assignment",
+    body: "Bottles are numbered in the order of acceptance into the Founding Registry — not purchase. Your number reflects when the House recognised your place.",
+  },
+  {
+    no: "02",
+    title: "Authentication",
+    body: "Each bottle is individually recorded and accompanied by a signed certificate of authenticity. Its place in the edition is documented for life.",
+  },
+  {
+    no: "03",
+    title: "Ownership Experience",
+    body: "You are not simply a buyer. You are a founding member. The House maintains your record and honours your place in its founding chapter.",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="28"
+      height="10"
+      viewBox="0 0 28 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M0 5h26M21 1l5 4-5 4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function EditionIPage() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
   const openApply = () => setIsApplyOpen(true);
 
   return (
-    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
-      {/* ── Header ── */}
-      <Header onOpenApply={openApply} />
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
+      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
 
-      <main className="flex-1 pt-24 md:pt-28">
-        {/* ── HERO SECTION (01) ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Narrative */}
-            <div className="space-y-8 max-w-155">
+      <main className="flex-1">
+        {/* ── 01 Hero — dark text left, bottle right melting into black ── */}
+        <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
+            <div className="hidden lg:block bg-[#060506]" />
+            <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+              <Image
+                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                alt=""
+                fill
+                priority
+                className="object-cover object-[center_30%]"
+                sizes="(max-width: 1024px) 100vw, 55vw"
+              />
+              {/* Mobile: vertical melt into black behind text */}
+              <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/75 to-[#060506]/45 lg:bg-none" />
+              {/* Desktop: left edge melts into the dark text panel */}
+              <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
+              <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
+            </div>
+          </div>
+
+          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+            <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
-                <span className="font-serif text-xl text-gold">01</span>
+                <span className="font-serif text-lg md:text-xl text-gold">01</span>
                 <div className="w-6 h-px bg-gold" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
-                  EDITION I: HOUSE OF 250
-                </span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
-                Two Hundred and Fifty. No More, Ever.
+              <div className="space-y-2">
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                  Edition I: House of 250
+                </span>
+                <div className="w-10 h-px bg-gold" />
+              </div>
+
+              <h1
+                className="font-serif font-light text-gold leading-[1.08] tracking-tight"
+                style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
+              >
+                Two Hundred and Fifty.
+                <br />
+                No More, Ever.
               </h1>
 
-              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
+              <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
                 Edition I is Maison Vereen&apos;s founding chapter.
               </p>
-            </div>
-
-            {/* Right Image Placeholder */}
-            <div className="w-full flex justify-center lg:justify-end">
-              <ImagePlaceholder
-                aspect="aspect-3/4"
-                className="w-full max-w-125 rounded-sm shadow-2xl"
-                label="Edition I / 017 / 250"
-              />
             </div>
           </div>
         </section>
 
-        {/* ── LIGHT / CREAM PARCHMENT SECTION (02) ── */}
-        <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 border-b border-[#D5CFBF]">
-          <div className="max-w-225 mx-auto space-y-8">
-            <span className="font-serif text-2xl text-[#EDE8DE] block text-center">
+        {/* ── 02 Introduction (cream) ── */}
+        <section className="relative bg-[#EDE8DE] text-[#2C2823] py-20 md:py-28 overflow-hidden">
+          <div className="absolute left-[-4%] top-1/2 -translate-y-1/2 opacity-[0.12] pointer-events-none hidden md:block">
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={420}
+              height={340}
+              className="w-72 lg:w-96 h-auto brightness-0"
+            />
+          </div>
+
+          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto space-y-10">
+            <span className="font-serif text-lg md:text-xl text-gold/70 block">
               02
             </span>
 
-            <div className="space-y-6 text-sm sm:text-base text-[#4A433A] font-light leading-relaxed">
+            <div className="space-y-8 font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#2C2823]">
               <p>
-                Edition I exists once. When the two hundred and fiftieth bottle is
-                placed into a collector&apos;s hands, the edition closes permanently —
-                not paused, not revisited in a future &ldquo;anniversary&rdquo;
-                release, but closed, in the way a first edition of any serious work
-                closes the moment its print run ends.
+                Edition I exists once. When the two hundred and fiftieth bottle
+                is placed into a collector&apos;s hands, the edition closes
+                permanently — not paused, not revisited in a future
+                &ldquo;anniversary&rdquo; release, but closed, in the way a
+                first edition of any serious work closes the moment its print
+                run ends.
               </p>
               <p>
-                Each bottle carries an individual number, assigned in the sequence
-                of acceptance into the Founding Registry, and a certificate of
-                authenticity that documents its place within the two hundred and
-                fifty. Ownership of an Edition I bottle is, in effect, ownership of
-                a numbered position in the House&apos;s own founding history.
+                Each bottle carries an individual number, assigned in the
+                sequence of acceptance into the Founding Registry, and a
+                certificate of authenticity that documents its place within the
+                two hundred and fifty. Ownership of an Edition I bottle is, in
+                effect, ownership of a numbered position in the House&apos;s own
+                founding history.
               </p>
               <p>
                 This page exists to answer, in full, the questions a serious
                 collector will naturally ask: why this number, how authentication
-                works, what ownership actually entails, and why the House will never
-                be persuaded to extend the edition under any circumstance.
+                works, what ownership actually entails, and why the House will
+                never be persuaded to extend the edition under any circumstance.
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── SECTION 03: NUMBERING PHILOSOPHY ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Image Placeholder */}
-            <ImagePlaceholder
-              aspect="aspect-4/3"
-              className="w-full rounded-sm"
-              label="Engraved Number 017 / 250"
-            />
+        {/* ── 03 Numbering Philosophy — bottle left melting into black ── */}
+        <section className="relative bg-[#060506] overflow-hidden">
+          {/* Desktop: full-bleed left image with right-edge melt */}
+          <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2 pointer-events-none">
+            <div className="relative overflow-hidden">
+              <Image
+                src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+                alt=""
+                fill
+                className="object-cover object-center"
+                sizes="55vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-l from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
+            </div>
+            <div className="bg-[#060506]" />
+          </div>
 
-            {/* Right Content */}
-            <div className="space-y-6">
-              <span className="font-serif text-xl text-gold block">03</span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
-                Numbering Philosophy
-              </h2>
-              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
-                Numbers are assigned in the order applicants are formally accepted
-                into the Founding Registry — meaning a bottle&apos;s number reflects
-                not when it was purchased, but when its owner was recognised by the
-                House. Early conviction is rewarded with early numbering.
-              </p>
+          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-16 md:py-24 lg:py-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Mobile image — edges melt into black */}
+              <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden order-2">
+                <Image
+                  src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+                  alt="Edition I engraved numbering — 017 / 250"
+                  fill
+                  className="object-cover object-center"
+                  sizes="95vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-[#060506]/60" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#060506]/70 via-transparent to-[#060506]/70" />
+              </div>
+
+              <div className="hidden lg:block min-h-120" aria-hidden />
+
+              <div className="space-y-6 max-w-xl lg:ml-auto order-1">
+                <span className="font-serif text-lg md:text-xl text-gold block">
+                  03
+                </span>
+                <h2
+                  className="font-serif font-light text-gold leading-snug"
+                  style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}
+                >
+                  Numbering Philosophy
+                </h2>
+                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE]">
+                  Numbers are assigned in the order applicants are formally
+                  accepted into the Founding Registry — meaning a bottle&apos;s
+                  number reflects not when it was purchased, but when its owner
+                  was recognised by the House. Early conviction is rewarded with
+                  early numbering.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── SECTION 04: CERTIFICATE OF AUTHENTICITY ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Image Placeholder */}
-            <ImagePlaceholder
-              aspect="aspect-4/3"
-              className="w-full rounded-sm"
-              label="Certificate of Authenticity &amp; Wax Seal"
-            />
+        {/* ── 04 Certificate & Ownership ── */}
+        <section className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="relative min-h-80 md:min-h-105 lg:min-h-140 bg-[#060506]">
+              <Image
+                src="/images/certificate.webp"
+                alt="Certificate of Authenticity with Edition I bottle and wax seal"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-[#060506]/20" />
+            </div>
 
-            {/* Right Content */}
-            <div className="space-y-6">
-              <span className="font-serif text-xl text-gold block">04</span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
-                Certificate of Authenticity &amp; Ownership Experience
-              </h2>
-              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
-                Every Edition I bottle is accompanied by a signed certificate of
-                authenticity, recording its number, its owner&apos;s name, and its
-                place within the two hundred and fifty.
-              </p>
-              <p className="text-sm sm:text-base text-[#EDE8DE] font-light leading-relaxed">
-                Ownership includes private correspondence from the House at the
-                time of acquisition and continued recognition as a founding member
-                for as long as the House exists.
-              </p>
+            <div className="bg-[#EDE8DE] text-[#2C2823] flex items-center">
+              <div className="w-full px-8 sm:px-12 md:px-14 lg:px-16 py-16 md:py-20 space-y-6 max-w-xl">
+                <span className="font-serif text-lg md:text-xl text-gold block">
+                  04
+                </span>
+                <h2
+                  className="font-serif font-light text-[#2C2823] leading-snug"
+                  style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
+                >
+                  Certificate of Authenticity &amp; Ownership Experience
+                </h2>
+                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#2C2823]">
+                  Every Edition I bottle is accompanied by a signed certificate
+                  of authenticity, recording its number, its owner&apos;s name,
+                  and its place within the two hundred and fifty.
+                </p>
+                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#2C2823]">
+                  Ownership includes private correspondence from the House at
+                  the time of acquisition and continued recognition as a founding
+                  member for as long as the House exists.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── SECTION 05: 3 COLUMNS FEATURE GRID ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <span className="font-serif text-xl text-gold block mb-8">05</span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="font-serif text-2xl text-gold">01</span>
-              <h3 className="font-serif text-lg text-[#EDE8DE]">
-                Number Assignment
-              </h3>
-              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                Bottles are numbered in the order of acceptance into the Founding
-                Registry — not purchase. Your number reflects when the House
-                recognised your place.
-              </p>
-            </div>
+        {/* ── 05 Three pillars ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/15">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10 md:space-y-14">
+            <span className="font-serif text-lg md:text-xl text-gold block">
+              05
+            </span>
 
-            <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="font-serif text-2xl text-gold">02</span>
-              <h3 className="font-serif text-lg text-[#EDE8DE]">
-                Authentication
-              </h3>
-              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                Each bottle is individually recorded and accompanied by a signed
-                certificate of authenticity. Its place in the edition is documented
-                for life.
-              </p>
-            </div>
-
-            <div className="bg-[#0A0A0C] border border-white/5 p-8 space-y-4">
-              <span className="font-serif text-2xl text-gold">03</span>
-              <h3 className="font-serif text-lg text-[#EDE8DE]">
-                Ownership Experience
-              </h3>
-              <p className="text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                You are not simply a buyer. You are a founding member. The House
-                maintains your record and honours your place in its founding
-                chapter.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3">
+              {PILLARS.map((pillar, i) => (
+                <div
+                  key={pillar.no}
+                  className={`flex flex-col gap-5 px-0 md:px-8 py-8 md:py-2 ${
+                    i > 0 ? "border-t md:border-t-0 md:border-l border-gold/30" : ""
+                  }`}
+                >
+                  <span className="font-serif text-2xl md:text-3xl text-gold font-light">
+                    {pillar.no}
+                  </span>
+                  <h3 className="font-serif text-xl md:text-2xl font-light text-gold">
+                    {pillar.title}
+                  </h3>
+                  <p className="font-serif text-lg font-medium leading-[1.85] text-[#EDE8DE] max-w-sm">
+                    {pillar.body}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── SECTION 06: BOLD GOLD BANNER ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-20 text-center space-y-4 border-b border-white/5">
-          <span className="font-serif text-xl text-gold block">06</span>
-          <span className="font-serif text-6xl sm:text-7xl lg:text-9xl text-gold font-light block leading-none">
-            250
-          </span>
-          <p className="text-sm sm:text-base uppercase tracking-[0.3em] text-[#EDE8DE] font-semibold">
-            WORLDWIDE. NEVER REPEATED. PERMANENT.
-          </p>
-        </section>
+        {/* ── 06 Big 250 ── */}
+        <section className="relative py-24 md:py-36 overflow-hidden">
+          <Image
+            src="/file_00000000df2071f4ac2ce7694ace922d.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-40"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[#060506]/70" />
 
-        {/* ── SECTION 07: LIGHT PARCHMENT STATEMENT ── */}
-        <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 text-center border-b border-[#D5CFBF]">
-          <div className="max-w-200 mx-auto space-y-4">
-            <span className="font-serif text-2xl text-[#EDE8DE] block">07</span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2C2823]">
-              History does not get a reprint.
-            </h2>
-            <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5A5245] font-medium">
-              Maison Vereen will never reproduce Edition I under any circumstance.
+          <div className="relative w-[95%] md:w-full max-w-7xl mx-auto text-center space-y-6">
+            <span className="font-serif text-lg md:text-xl text-gold block text-left">
+              06
+            </span>
+            <span
+              className="font-serif text-gold font-light leading-none block"
+              style={{ fontSize: "clamp(5rem, 18vw, 12rem)" }}
+            >
+              250
+            </span>
+            <p className="font-sans text-sm md:text-base uppercase tracking-[0.35em] text-[#EDE8DE] font-medium">
+              Worldwide. Never Repeated. Permanent.
             </p>
           </div>
         </section>
 
-        {/* ── SECTION 08: BOTTOM CTAS ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-8">
-          <span className="font-serif text-xl text-gold block">08</span>
+        {/* ── 07 History statement (cream) ── */}
+        <section className="relative bg-[#EDE8DE] text-[#2C2823] py-20 md:py-28 overflow-hidden">
+          <div className="absolute right-[-2%] top-1/2 -translate-y-1/2 opacity-[0.12] pointer-events-none hidden md:block">
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={360}
+              height={290}
+              className="w-64 lg:w-80 h-auto brightness-0"
+            />
+          </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button
-              onClick={openApply}
-              className="bg-gold hover:bg-[#b5953d] text-[#060506] px-8 py-4 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
+            <span className="font-serif text-lg md:text-xl text-gold/70 block text-left">
+              07
+            </span>
+            <h2
+              className="font-serif font-light text-[#2C2823] leading-snug"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
             >
-              APPLY TO THE FOUNDING REGISTRY &rarr;
-            </button>
+              History does not get a reprint.
+            </h2>
+            <p className="font-serif text-lg md:text-xl font-medium leading-relaxed text-[#4A433A] max-w-2xl mx-auto">
+              Maison Vereen will never reproduce Edition I under any
+              circumstance.
+            </p>
+          </div>
+        </section>
 
-            <Link
-              href="/registry"
-              className="border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-8 py-4 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
-            >
-              UNDERSTAND THE FOUNDING REGISTRY &rarr;
-            </Link>
+        {/* ── 08 CTAs ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10">
+            <span className="font-serif text-lg md:text-xl text-gold block">
+              08
+            </span>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-5 sm:gap-8">
+              <button
+                type="button"
+                onClick={openApply}
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              >
+                Apply to the Founding Registry
+                <ArrowIcon />
+              </button>
+              <Link
+                href="/registry"
+                className="inline-flex items-center justify-center gap-3 text-[#EDE8DE] hover:text-gold px-2 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors border-b border-gold/50 hover:border-gold"
+              >
+                Understand the Founding Registry
+                <ArrowIcon />
+              </Link>
+            </div>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ── */}
-      <Footer />
+      <Footer navItems={PAGE_NAV} />
 
-      {/* ── Application Modal ── */}
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+      <ApplicationForm
+        isOpen={isApplyOpen}
+        onClose={() => setIsApplyOpen(false)}
+      />
     </div>
   );
 }
