@@ -21,6 +21,8 @@ const BASE_URL = "https://maisonvereen.com";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: "#0A0A0A",
 };
 
@@ -84,9 +86,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
     apple: "/favicon.png",
   },
 
@@ -104,7 +104,8 @@ export default function RootLayout({
     name: "Maison Vereen",
     url: BASE_URL,
     logo: `${BASE_URL}/maison-vereen-logo-dark.png`,
-    description: "Africa's first serious luxury fragrance house. Edition I — 250 numbered bottles, the founding expression.",
+    description:
+      "Africa's first serious luxury fragrance house. Edition I — 250 numbered bottles, the founding expression.",
     foundingDate: "2024",
     foundingLocation: { "@type": "Place", name: "Lagos, Nigeria" },
     contactPoint: {
@@ -112,9 +113,7 @@ export default function RootLayout({
       email: "hello@maisonvereen.com",
       contactType: "customer service",
     },
-    sameAs: [
-      "https://instagram.com/maisonvereen",
-    ],
+    sameAs: ["https://instagram.com/maisonvereen"],
   };
 
   return (
