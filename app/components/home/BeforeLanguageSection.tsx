@@ -10,7 +10,7 @@ export default function BeforeLanguageSection() {
         <div className="hidden lg:block bg-[#060506]" />
         <div className="relative min-h-full overflow-hidden opacity-0 lg:opacity-100">
           <Image
-            src="/images/dark-architecture.jpg"
+            src="/file_00000000a75471f48402160a6ed179fc.webp"
             alt=""
             fill
             className="object-cover object-center"
@@ -61,8 +61,8 @@ export default function BeforeLanguageSection() {
           {/* Mobile image */}
           <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden">
             <Image
-              src="/images/dark-architecture.jpg"
-              alt="Before language — a threshold into the House"
+              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              alt="Before language — Maison Vereen Edition I"
               fill
               className="object-cover object-center"
               sizes="95vw"

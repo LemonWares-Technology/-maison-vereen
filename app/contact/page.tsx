@@ -10,12 +10,12 @@ const CONTACT_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/housebook" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "REGISTRY", href: "/registry" },
   { label: "CONTACT", href: "/contact" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/2348021234567";
+const WHATSAPP_URL = "https://wa.me/2348144413526";
 const EMAIL_CONCIERGE = "mailto:concierge@maisonvereen.com";
 const EMAIL_APPOINTMENTS =
   "mailto:appointments@maisonvereen.com?subject=Schedule%20a%20Conversation";
@@ -100,25 +100,84 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
       <Header navItems={CONTACT_NAV} onOpenApply={openApply} />
 
-      {/* Hero — FAQs pattern */}
-      <section className="relative min-h-screen bg-[#060506]">
-        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
-          <div className="hidden lg:block bg-[#060506]" />
-          <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+      {/* Hero — melt layout + mobile stacked fix */}
+      <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+        {/* Mobile: image under header, copy on solid dark */}
+        <div className="lg:hidden flex flex-col min-h-screen">
+          <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
+            <Image
+              src="/images/private_maison_desk.webp"
+              alt=""
+              fill
+              priority
+              className="object-cover object-[center_32%]"
+              sizes="100vw"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+              }}
+            />
+            <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+          </div>
+
+          <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="w-full max-w-lg flex flex-col items-start gap-5">
+              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">
+                15
+              </span>
+              <div className="w-8 h-px bg-gold" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
+                Contact &amp; Concierge
+              </span>
+              <h1
+                className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
+                style={{ fontSize: "clamp(2.1rem, 5.5vw, 4.25rem)" }}
+              >
+                Speak With the House Directly.
+              </h1>
+              <p className="font-sans text-[11px] uppercase tracking-[0.25em] text-gold font-semibold">
+                Not a support ticket. A conversation.
+              </p>
+              <div className="w-8 h-px bg-gold" />
+              <p className="font-sans text-base font-light leading-[1.85] text-[#EDE8DE]/90 max-w-md">
+                Every enquiry to Maison Vereen — whether from a collector, a
+                journalist, or a future partner — is read and answered personally
+                by the House.
+              </p>
+              <a
+                href="#conversation"
+                className="mt-2 inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.28em] text-[#EDE8DE]/70 hover:text-gold transition-colors"
+              >
+                <svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden>
+                  <rect x="1" y="1" width="12" height="20" rx="6" />
+                  <path d="M7 5v4" strokeLinecap="round" />
+                </svg>
+                Scroll to begin
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: image on right, melts into black on left */}
+        <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
+          <div className="bg-[#060506]" />
+          <div className="relative overflow-hidden">
             <Image
               src="/images/private_maison_desk.webp"
               alt=""
               fill
               priority
               className="object-cover object-[center_35%]"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="55vw"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/70 to-[#060506]/40 lg:bg-none" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
           </div>
         </div>
 
-        <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               15
@@ -412,7 +471,7 @@ export default function ContactPage() {
                     <span className="block text-xs uppercase tracking-[0.2em] text-gold mb-0.5">
                       WhatsApp
                     </span>
-                    <span className="text-[#EDE8DE]">+234 802 123 4567</span>
+                    <span className="text-[#EDE8DE]">+234 814 441 3526</span>
                   </span>
                 </a>
               </li>

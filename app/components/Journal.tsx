@@ -10,11 +10,11 @@ const previewArticles = articles.slice(0, 3);
 export default function Journal() {
   return (
     <section id="journal" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-24 md:py-32 space-y-14">
+      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-24 md:py-32 space-y-14">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-5">
-            <span className="section-tag">The HouseBook</span>
+            <span className="section-tag">The Journal</span>
             <h2
               className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
               style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
@@ -26,9 +26,9 @@ export default function Journal() {
               </em>
             </h2>
           </div>
-          <Link href="/housebook" className="link-gold self-end shrink-0">
-            <span>Read The HouseBook</span>
-            <span className="text-gold">?</span>
+          <Link href="/journal" className="link-gold self-end shrink-0">
+            <span>Read The Journal</span>
+            <span className="text-gold">→</span>
           </Link>
         </div>
 
@@ -36,7 +36,7 @@ export default function Journal() {
           {previewArticles.map((a) => (
             <Link
               key={a.slug}
-              href={`/housebook/${a.slug}`}
+              href={`/journal/${a.slug}`}
               className="group block bg-charcoal hover:bg-white/1.5 transition-colors duration-500"
             >
               <article>

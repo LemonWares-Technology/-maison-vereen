@@ -38,13 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/waitlist`,             lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE_URL}/the-first-250`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/legacy`,               lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/housebook`,            lastModified: new Date(), changeFrequency: "weekly",  priority: 0.7 },
+    { url: `${BASE_URL}/journal`,            lastModified: new Date(), changeFrequency: "weekly",  priority: 0.7 },
     { url: `${BASE_URL}/future`,               lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     // /discover excluded — noindex standalone shareable page
   ];
 
   const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
-    url:             `${BASE_URL}/housebook/${article.slug}`,
+    url:             `${BASE_URL}/journal/${article.slug}`,
     lastModified:    new Date(),
     changeFrequency: "monthly" as const,
     priority:        0.6,

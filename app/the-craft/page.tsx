@@ -1,165 +1,428 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationForm from "../components/ApplicationForm";
 
-import ImagePlaceholder from "../components/ui/ImagePlaceholder";
+const PAGE_NAV = [
+  { label: "THE MAISON", href: "/the-house" },
+  { label: "EDITION I", href: "/edition-i" },
+  { label: "THE CRAFT", href: "/the-craft" },
+  { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
+  { label: "JOURNAL", href: "/journal" },
+  { label: "REGISTRY", href: "/registry" },
+  { label: "CONTACT", href: "/contact" },
+];
+
+const HERO_POINTS = [
+  "Nothing here was rushed to market.",
+  "Raw material, refined by obsession.",
+  "Craft is not a department. It is the entire House.",
+  "Years, distilled into millilitres.",
+  "The hand behind the formula.",
+];
 
 const RAW_MATERIALS = [
-  { name: "RESINS", label: "Frankincense & Myrrh" },
-  { name: "WOODS", label: "Sandalwood & Oud" },
-  { name: "BOTANICALS", label: "Rare Herbs & Leaves" },
-  { name: "FLOWERS", label: "Orange Blossom & Jasmine" },
-  { name: "SPICES", label: "Peppercorn & Cinnamon" },
+  {
+    name: "RESINS",
+    src: "/file_00000000df2071f4ac2ce7694ace922d.webp",
+    alt: "Rare resins and amber materials",
+  },
+  {
+    name: "WOODS",
+    src: "/file_00000000a75471f48402160a6ed179fc.webp",
+    alt: "Maison Vereen bottle — woods and amber depth",
+  },
+  {
+    name: "BOTANICALS",
+    src: "/file_00000000520071f4915a7351029b1f7b.webp",
+    alt: "Craft materials for the House",
+  },
+  {
+    name: "FLOWERS",
+    src: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    alt: "Maison Vereen vessel — floral character",
+  },
+  {
+    name: "SPICES",
+    src: "/file_00000000a97471f4be1bee83e5dedea0.webp",
+    alt: "Maison Vereen bottle detail — spice and warmth",
+  },
 ];
 
 const PROCESS_STEPS = [
-  { step: "SOURCE", icon: "🌱", text: "Rare materials chosen for character." },
-  { step: "STUDY", icon: "🔍", text: "Each material is studied in depth." },
-  { step: "BLEND", icon: "🧪", text: "Ideas are combined with precision." },
-  { step: "REJECT", icon: "✕", text: "More ideas are set aside than kept." },
-  { step: "REBUILD", icon: "↻", text: "We begin again with new insight." },
-  { step: "AGE", icon: "⌛", text: "Time is allowed to transform the blend." },
-  { step: "EVALUATE", icon: "👁", text: "Every detail is judged impartially." },
-  { step: "APPROVE", icon: "✓", text: "Only what meets the standard moves forward." },
-  { step: "MAISON VEREEN", icon: "MV", text: "Only then does it carry the House's name." },
+  {
+    step: "SOURCE",
+    text: "Rare materials chosen for character.",
+    icon: "leaf" as const,
+  },
+  {
+    step: "STUDY",
+    text: "Each material is studied in depth.",
+    icon: "study" as const,
+  },
+  {
+    step: "BLEND",
+    text: "Ideas are combined with precision.",
+    icon: "flask" as const,
+  },
+  {
+    step: "REJECT",
+    text: "More ideas are set aside than kept.",
+    icon: "reject" as const,
+  },
+  {
+    step: "REBUILD",
+    text: "We begin again with new insight.",
+    icon: "rebuild" as const,
+  },
+  {
+    step: "AGE",
+    text: "Time is allowed to transform the blend.",
+    icon: "age" as const,
+  },
+  {
+    step: "EVALUATE",
+    text: "Every detail is judged impartially.",
+    icon: "evaluate" as const,
+  },
+  {
+    step: "APPROVE",
+    text: "Only what meets the standard moves forward.",
+    icon: "approve" as const,
+  },
+  {
+    step: "MAISON VEREEN",
+    text: "Only then does it carry the House's name.",
+    icon: "maison" as const,
+  },
 ];
+
+const GALLERY = [
+  {
+    src: "/file_00000000df2071f4ac2ce7694ace922d.webp",
+    alt: "Hands with resinous materials",
+  },
+  {
+    src: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    alt: "Maison Vereen fragrance vessel",
+  },
+  {
+    src: "/file_00000000a75471f48402160a6ed179fc.webp",
+    alt: "Edition I bottle and founding chapter box",
+  },
+  {
+    src: "/file_00000000520071f4915a7351029b1f7b.webp",
+    alt: "Craft and formulation at the House",
+  },
+  {
+    src: "/file_000000005fc471f495c71bc758a16ffc.webp",
+    alt: "Maison Vereen gold-foiled box",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="22"
+      height="8"
+      viewBox="0 0 28 10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      aria-hidden
+    >
+      <path
+        d="M0 5h26M21 1l5 4-5 4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function StepChevron() {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      className="text-gold/50 shrink-0"
+      aria-hidden
+    >
+      <path d="M4 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function StepIcon({
+  type,
+}: {
+  type: (typeof PROCESS_STEPS)[number]["icon"];
+}) {
+  if (type === "maison") {
+    return (
+      <Image
+        src="/logo-mark.webp"
+        alt=""
+        width={28}
+        height={24}
+        className="w-7 h-auto"
+      />
+    );
+  }
+
+  const common = {
+    width: 28,
+    height: 28,
+    viewBox: "0 0 28 28",
+    fill: "none" as const,
+    stroke: "currentColor",
+    strokeWidth: 1.2,
+    className: "text-gold",
+    "aria-hidden": true as const,
+  };
+
+  if (type === "leaf") {
+    return (
+      <svg {...common}>
+        <path
+          d="M14 24c0-10 8-14 10-18-6 1-14 5-16 14 2-1 4-1 6 0-1 2-2 3-4 4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (type === "study") {
+    return (
+      <svg {...common}>
+        <circle cx="12" cy="12" r="6.5" />
+        <path d="M17 17l5.5 5.5" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (type === "flask") {
+    return (
+      <svg {...common}>
+        <path
+          d="M11 4h6M12 4v7L7 22a2 2 0 001.8 3h10.4A2 2 0 0021 22L16 11V4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (type === "reject") {
+    return (
+      <svg {...common}>
+        <circle cx="14" cy="14" r="9" />
+        <path d="M10 10l8 8M18 10l-8 8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (type === "rebuild") {
+    return (
+      <svg {...common}>
+        <path
+          d="M20 9.5A7 7 0 107 17.5M20 9.5V5M20 9.5h-4.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (type === "age") {
+    return (
+      <svg {...common}>
+        <path
+          d="M9 5h10M9 23h10M10 5l4 7-4 7h8l-4-7 4-7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (type === "evaluate") {
+    return (
+      <svg {...common}>
+        <path
+          d="M3.5 14S8 7 14 7s10.5 7 10.5 7-4.5 7-10.5 7S3.5 14 3.5 14z"
+          strokeLinejoin="round"
+        />
+        <circle cx="14" cy="14" r="3" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <circle cx="14" cy="14" r="9" />
+      <path
+        d="M9 14.5l3 3 7-7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function TheCraftPage() {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
   const openApply = () => setIsApplyOpen(true);
 
   return (
-    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col font-sans selection:bg-gold/30 selection:text-[#EDE8DE]">
-      {/* ── Header ── */}
-      <Header onOpenApply={openApply} />
+    <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
+      <Header navItems={PAGE_NAV} onOpenApply={openApply} />
 
-      <main className="flex-1 pt-24 md:pt-28">
-        {/* ── HERO SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Narrative */}
-            <div className="space-y-8 max-w-155">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-px bg-gold" />
-                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
-                  THE INDIVIDUAL BEHIND EVERY FRAGRANCE
-                </span>
-              </div>
+      <main className="flex-1">
+        {/* ── Hero ── */}
+        <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+              <div className="space-y-7 md:space-y-8 max-w-xl">
+                <div className="space-y-3">
+                  <div className="w-10 h-px bg-gold" />
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                    The Individual Behind Every Fragrance
+                  </span>
+                </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#EDE8DE] leading-[1.1]">
-                Every Bottle Carries a Person&apos;s Patience.
-              </h1>
+                <h1
+                  className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                  style={{ fontSize: "clamp(2.15rem, 4.6vw, 3.5rem)" }}
+                >
+                  Every Bottle Carries a Person&apos;s Patience.
+                </h1>
 
-              {/* Bullet points */}
-              <div className="space-y-3 font-serif text-sm sm:text-base text-gold/90 italic tracking-wide">
-                <p>— Nothing here was rushed to market.</p>
-                <p>— Raw material, refined by obsession.</p>
-                <p>— Craft is not a department. It is the entire House.</p>
-                <p>— Years, distilled into millilitres.</p>
-                <p>— The hand behind the formula.</p>
-              </div>
+                <ul className="space-y-3.5">
+                  {HERO_POINTS.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 font-serif text-base md:text-lg font-light leading-snug text-gold"
+                    >
+                      <span
+                        className="mt-[0.7em] w-4 h-px bg-gold shrink-0"
+                        aria-hidden
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <p className="text-sm md:text-base text-[#EDE8DE] font-light leading-relaxed">
-                A finished fragrance from Maison Vereen represents years of
-                refinement — sourcing, testing, rejecting, and beginning again,
-                until the formula deserved the House&apos;s name.
-              </p>
+                <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#EDE8DE] max-w-md">
+                  A finished fragrance from Maison Vereen represents years of
+                  refinement — sourcing, testing, rejecting, and beginning
+                  again, until the formula deserved the House&apos;s name.
+                </p>
 
-              <div>
                 <Link
                   href="/edition-i"
-                  className="inline-flex items-center gap-3 border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-6 py-3.5 text-xs uppercase tracking-[0.25em] font-medium transition-colors"
+                  className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors"
                 >
-                  <span>DISCOVER EDITION I IN FULL</span>
-                  <span>&rarr;</span>
+                  Discover Edition I in Full
+                  <ArrowIcon />
                 </Link>
               </div>
-            </div>
 
-            {/* Right Image Placeholder */}
-            <div className="w-full flex justify-center lg:justify-end">
-              <ImagePlaceholder
-                aspect="aspect-3/4"
-                className="w-full max-w-125 rounded-sm shadow-2xl"
-                label="Master Perfumer at Work"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── THE PROCESS BEHIND PERFECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Narrative */}
-            <div className="space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
-                THE PROCESS BEHIND PERFECTION
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE] leading-snug">
-                Behind every Maison Vereen fragrance is a process most houses no
-                longer have the patience for.
-              </h2>
-              <div className="space-y-4 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                <p>
-                  It begins with sourcing — rare African materials selected not for
-                  cost efficiency but for character, often requiring relationships
-                  with growers and harvesters built over years rather than
-                  transactions completed in weeks.
-                </p>
-                <p>
-                  From there, development is slow and frequently unforgiving.
-                  Formulas are tested, set aside, revisited months later with fresh
-                  judgment, and rejected as often as they are advanced.
-                  Refinement continues until the master perfumer judges a formulation
-                  worthy of the House&apos;s name — a standard that has no lower tier,
-                  and no exceptions for deadlines.
-                </p>
-                <p>
-                  This page exists to honour that process, and the discipline of the
-                  people who carry it out, long before any visitor ever encounters
-                  the finished bottle.
-                </p>
+              <div className="relative w-full aspect-3/4 max-w-md lg:max-w-none mx-auto lg:mx-0 overflow-hidden">
+                <Image
+                  src="/file_00000000520071f4915a7351029b1f7b.webp"
+                  alt="Master perfumer at work with glass dropper"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                />
               </div>
             </div>
-
-            {/* Right Image Placeholder */}
-            <ImagePlaceholder
-              aspect="aspect-4/3"
-              className="w-full rounded-sm"
-              label="Perfumer Formula Notebook &amp; Vials"
-            />
           </div>
         </section>
 
-        {/* ── RAW MATERIALS (LIGHT PARCHMENT SECTION) ── */}
-        <section className="bg-[#EDE8DE] text-[#2C2823] px-6 sm:px-8 md:px-14 lg:px-20 py-16 md:py-24 border-b border-[#D5CFBF]">
-          <div className="max-w-350 mx-auto space-y-12">
-            <div className="max-w-175 mx-auto text-center space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#EDE8DE] font-medium block">
-                RAW MATERIALS
-              </span>
-              <p className="text-xs sm:text-sm text-[#4A433A] font-light leading-relaxed">
-                Maison Vereen sources materials others overlook — rare resins, woods,
-                and botanicals drawn from across the African continent, selected for
-                the particular depth and character they bring rather than for ease of
-                supply.
+        {/* ── Process Behind Perfection ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="space-y-6 max-w-xl">
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
+                  The Process Behind Perfection
+                </span>
+                <h2
+                  className="font-serif font-light text-[#F2EDE4] leading-snug"
+                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.35rem)" }}
+                >
+                  Behind every Maison Vereen fragrance is a process most houses
+                  no longer have the patience for.
+                </h2>
+                <div className="space-y-5 font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                  <p>
+                    It begins with sourcing — rare African materials selected
+                    not for cost efficiency but for character, often requiring
+                    relationships with growers and harvesters built over years
+                    rather than transactions completed in weeks.
+                  </p>
+                  <p>
+                    From there, development is slow and frequently unforgiving.
+                    Formulas are tested, set aside, revisited months later with
+                    fresh judgment, and rejected as often as they are advanced.
+                    Refinement continues until the master perfumer judges a
+                    formulation worthy of the House&apos;s name — a standard
+                    that has no lower tier, and no exceptions for deadlines.
+                  </p>
+                  <p>
+                    This page exists to honour that process, and the discipline
+                    of the people who carry it out, long before any visitor ever
+                    encounters the finished bottle.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative w-full aspect-4/3 overflow-hidden">
+                <Image
+                  src="/images/hand_writing.webp"
+                  alt="Perfumer formula notebook and vials"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 95vw, 45vw"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Raw Materials (cream) ── */}
+        <section className="relative bg-[#EDE8DE] text-[#2C2823] py-16 md:py-24">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+            <div className="max-w-2xl mx-auto text-center space-y-4">
+              <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.32em] text-[#2C2823] font-medium">
+                Raw Materials
+              </h2>
+              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#2C2823]/85">
+                Maison Vereen sources materials others overlook — rare resins,
+                woods, and botanicals drawn from across the African continent,
+                selected for the particular depth and character they bring
+                rather than for ease of supply.
               </p>
             </div>
 
-            {/* 5 Material Cards Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
               {RAW_MATERIALS.map((mat) => (
                 <div key={mat.name} className="space-y-3 text-center">
-                  <ImagePlaceholder
-                    theme="light"
-                    aspect="aspect-square"
-                    label={mat.label}
-                  />
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#2C2823] font-semibold block">
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={mat.src}
+                      alt={mat.alt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
+                    />
+                  </div>
+                  <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#2C2823] font-medium block">
                     {mat.name}
                   </span>
                 </div>
@@ -168,124 +431,151 @@ export default function TheCraftPage() {
           </div>
         </section>
 
-        {/* ── THE PROCESS — UNHURRIED BY DESIGN (9 STEP PIPELINE) ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="space-y-12">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block text-center">
-              THE PROCESS &mdash; UNHURRIED BY DESIGN
-            </span>
+        {/* ── Process steps ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+            <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium text-center">
+              The Process — Unhurried by Design
+            </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4 text-center">
-              {PROCESS_STEPS.map((item, idx) => (
-                <div
-                  key={item.step}
-                  className="bg-[#0A0A0C] border border-white/5 p-4 flex flex-col items-center space-y-3 relative group"
-                >
-                  <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-xs font-serif text-gold">
-                    {item.icon}
+            <div className="overflow-x-auto pb-2 -mx-1 px-1">
+              <div className="flex items-start min-w-max lg:min-w-0 lg:w-full gap-0">
+                {PROCESS_STEPS.map((item, idx) => (
+                  <div
+                    key={item.step}
+                    className="flex items-start shrink-0 lg:shrink lg:flex-1"
+                  >
+                    <div className="flex flex-col items-center text-center gap-3 w-36 sm:w-40 lg:w-full px-2">
+                      <StepIcon type={item.icon} />
+                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-gold font-medium">
+                        {item.step}
+                      </span>
+                      <p className="font-serif text-sm font-light leading-snug text-[#EDE8DE]">
+                        {item.text}
+                      </p>
+                    </div>
+                    {idx < PROCESS_STEPS.length - 1 ? (
+                      <div className="flex items-center pt-3 px-0.5">
+                        <StepChevron />
+                      </div>
+                    ) : null}
                   </div>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-[#EDE8DE] font-semibold">
-                    {item.step}
-                  </span>
-                  <p className="text-[10px] text-[#EDE8DE] font-light leading-snug">
-                    {item.text}
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Development & Refinement ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10 md:space-y-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="space-y-6 max-w-xl">
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
+                  Development &amp; Refinement
+                </span>
+                <h2
+                  className="font-serif font-light text-[#F2EDE4] leading-snug"
+                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.35rem)" }}
+                >
+                  A single formula may pass through dozens of trials before
+                  approval.
+                </h2>
+                <div className="space-y-5 font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                  <p>
+                    Patience is treated as a material in its own right — as
+                    essential to the finished work as any oil or absolute in the
+                    formula.
                   </p>
-                  {idx < PROCESS_STEPS.length - 1 && (
-                    <span className="hidden lg:block absolute -right-2 top-1/2 -translate-y-1/2 text-gold/40 text-xs z-10">
-                      &rarr;
-                    </span>
-                  )}
+                  <p>
+                    We would rather wait years for a fragrance that will last
+                    for generations than release something the House cannot
+                    stand behind for a century.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative w-full aspect-16/10 overflow-hidden">
+                <Image
+                  src="/file_00000000520071f4915a7351029b1f7b.webp"
+                  alt="Glass vials and formulations in the atelier"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 95vw, 45vw"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+              {GALLERY.map((img) => (
+                <div
+                  key={img.src + img.alt}
+                  className="relative aspect-square overflow-hidden"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
+                  />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── DEVELOPMENT & REFINEMENT ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left text */}
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-medium block">
-                DEVELOPMENT &amp; REFINEMENT
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#EDE8DE]">
-                A single formula may pass through dozens of trials before
-                approval.
-              </h2>
-              <div className="space-y-4 text-xs sm:text-sm text-[#EDE8DE] font-light leading-relaxed">
-                <p>
-                  Patience is treated as a material in its own right — as essential
-                  to the finished work as any oil or absolute in the formula.
-                </p>
-                <p>
-                  We would rather wait years for a fragrance that will last for
-                  generations than release something the House cannot stand behind
-                  for a century.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Photo Grid */}
-            <div className="lg:col-span-6 space-y-4">
-              <ImagePlaceholder aspect="aspect-21/9" label="Glass Vials &amp; Formulations" />
-              <div className="grid grid-cols-4 gap-3">
-                <ImagePlaceholder aspect="aspect-square" label="Resin" />
-                <ImagePlaceholder aspect="aspect-square" label="Flowers" />
-                <ImagePlaceholder aspect="aspect-square" label="Smoke" />
-                <ImagePlaceholder aspect="aspect-square" label="Gold Box" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── BOTTOM CTA BANNER ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left Text */}
-            <div>
-              <h3 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE]">
-                Understanding the craft makes one number mean something it did not
-                before — <span className="text-gold">250.</span>
+        {/* ── Closing CTAs ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
+              <h3
+                className="font-serif font-light text-[#F2EDE4] leading-snug"
+                style={{ fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)" }}
+              >
+                Understanding the craft makes one number mean something it did
+                not before —{" "}
+                <span className="text-gold">250.</span>
               </h3>
-            </div>
 
-            {/* Middle Button */}
-            <div className="bg-[#0A0A0C] border border-white/5 p-6 flex flex-col justify-between space-y-4">
-              <Link
-                href="/edition-i"
-                className="inline-flex items-center justify-between w-full bg-gold hover:bg-[#b5953d] text-[#060506] px-6 py-3.5 text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
-              >
-                <span>DISCOVER EDITION I IN FULL</span>
-                <span>&rarr;</span>
-              </Link>
-              <p className="text-[10px] text-[#EDE8DE] font-light">
-                Return to Edition I with full appreciation for the craft behind it.
-              </p>
-            </div>
+              <div className="space-y-4 lg:border-l lg:border-gold/25 lg:pl-10">
+                <Link
+                  href="/edition-i"
+                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors w-full sm:w-auto"
+                >
+                  Discover Edition I in Full
+                  <ArrowIcon />
+                </Link>
+                <p className="font-serif text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85">
+                  Return to Edition I with full appreciation for the craft
+                  behind it.
+                </p>
+              </div>
 
-            {/* Right Button */}
-            <div className="bg-[#0A0A0C] border border-white/5 p-6 flex flex-col justify-between space-y-4">
-              <button
-                onClick={openApply}
-                className="inline-flex items-center justify-between w-full border border-gold/60 hover:border-gold text-[#EDE8DE] hover:text-gold px-6 py-3.5 text-xs uppercase tracking-[0.25em] font-medium transition-colors bg-transparent"
-              >
-                <span>APPLY FOR A POSITION</span>
-                <span>&rarr;</span>
-              </button>
-              <p className="text-[10px] text-[#EDE8DE] font-light">
-                For those who want to be part of something built to last.
-              </p>
+              <div className="space-y-4 lg:border-l lg:border-gold/25 lg:pl-10">
+                <button
+                  type="button"
+                  onClick={openApply}
+                  className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-medium transition-colors w-full sm:w-auto"
+                >
+                  Apply for a Position
+                  <ArrowIcon />
+                </button>
+                <p className="font-serif text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85">
+                  For those who want to be part of something built to last.
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ── */}
-      <Footer />
+      <Footer navItems={PAGE_NAV} />
 
-      {/* ── Application Modal ── */}
-      <ApplicationForm isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
+      <ApplicationForm
+        isOpen={isApplyOpen}
+        onClose={() => setIsApplyOpen(false)}
+      />
     </div>
   );
 }
