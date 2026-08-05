@@ -54,7 +54,7 @@ export default function FuturePage() {
 
         {/* ── HERO — split layout ── */}
         <section className="pt-18 border-b border-white/5">
-          <div className="max-w-350 mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-135 space-y-8">
@@ -70,7 +70,7 @@ export default function FuturePage() {
               </div>
               {/* Bottle — top cap emerging from darkness */}
               <div className="relative min-h-100 lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.webp)", backgroundSize: "cover", backgroundPosition: "center 0%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
+                <div className="absolute inset-0" style={{ backgroundImage: "url(/edition1bottle.webp)", backgroundSize: "cover", backgroundPosition: "center 0%", opacity: 0.5, filter: "brightness(0.58) saturate(0.38)" }} />
                 <div className="absolute inset-0 bg-linear-to-l from-transparent via-transparent to-charcoal/52" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/92 via-[#060608]/32 to-[#060608]/12" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 45% 52% at 54% 15%, rgba(180,130,40,0.09) 0%, transparent 65%)" }} />
@@ -81,7 +81,7 @@ export default function FuturePage() {
 
         {/* ── WHAT IS COMING ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-170">
               <span className="section-tag">What Is Coming</span>
               <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
@@ -113,11 +113,11 @@ export default function FuturePage() {
 
         {/* ── CLOSING — split layout ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-350 mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[48vh]">
               {/* Bottle on left */}
               <div className="relative min-h-75 lg:min-h-0 overflow-hidden bg-[#060608]">
-                <div className="absolute inset-0" style={{ backgroundImage: "url(/file_000000009ffc81f4b13c80251cc456a8.webp)", backgroundSize: "cover", backgroundPosition: "center 60%", opacity: 0.46, filter: "brightness(0.55) saturate(0.35)" }} />
+                <div className="absolute inset-0" style={{ backgroundImage: "url(/edition1bottle.webp)", backgroundSize: "cover", backgroundPosition: "center 60%", opacity: 0.46, filter: "brightness(0.55) saturate(0.35)" }} />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-charcoal/55" />
                 <div className="absolute inset-0 bg-linear-to-t from-[#060608]/88 via-[#060608]/20 to-transparent" />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 40% 48% at 48% 58%, rgba(180,130,40,0.07) 0%, transparent 62%)" }} />

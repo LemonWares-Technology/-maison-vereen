@@ -31,7 +31,7 @@ export default function FoundingRegistrySection() {
         <div className="hidden lg:block bg-[#060506]" />
         <div className="relative min-h-full overflow-hidden opacity-0 lg:opacity-100">
           <Image
-            src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+            src="/edition1.webp"
             alt=""
             fill
             className="object-cover object-center"
@@ -43,7 +43,7 @@ export default function FoundingRegistrySection() {
         </div>
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-7 md:space-y-8 max-w-xl">
             <div className="space-y-2.5">
@@ -78,7 +78,7 @@ export default function FoundingRegistrySection() {
           {/* Mobile image */}
           <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden">
             <Image
-              src="/file_00000000a97471f4be1bee83e5dedea0.webp"
+              src="/edition1.webp"
               alt="Edition I octagonal cap — Maison Vereen"
               fill
               className="object-cover object-center"

@@ -71,7 +71,7 @@ export default function HeroSection() {
         {/* Dark spacer under fixed header, then bottle band */}
         <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
           <Image
-            src="/file_00000000a75471f48402160a6ed179fc.webp"
+            src="/edition1perfumebottle.webp"
             alt=""
             fill
             priority
@@ -99,7 +99,7 @@ export default function HeroSection() {
         <div className="bg-[#060506]" />
         <div className="relative overflow-hidden">
           <Image
-            src="/file_00000000a75471f48402160a6ed179fc.webp"
+            src="/edition1perfumebottle.webp"
             alt=""
             fill
             priority
@@ -111,19 +111,19 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 hidden lg:flex w-full max-w-7xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
+      <div className="relative z-10 hidden lg:flex w-full max-w-6xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
         <div className="w-[95%] md:w-full mx-auto">
           <HeroCopy />
         </div>
 
         <div className="absolute bottom-12 left-[max(2.5%,calc((100%-80rem)/2))] flex items-center gap-3">
-          <span className="w-px h-10 bg-gold/70" />
+          {/* <span className="w-px h-10 bg-gold/70" />
           <span
             className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#EDE8DE]/80"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
           >
             Scroll
-          </span>
+          </span> */}
         </div>
       </div>
     </section>

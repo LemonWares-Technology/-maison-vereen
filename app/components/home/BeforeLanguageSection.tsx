@@ -10,7 +10,7 @@ export default function BeforeLanguageSection() {
         <div className="hidden lg:block bg-[#060506]" />
         <div className="relative min-h-full overflow-hidden opacity-0 lg:opacity-100">
           <Image
-            src="/file_00000000a75471f48402160a6ed179fc.webp"
+            src="/edition1bottle.webp"
             alt=""
             fill
             className="object-cover object-center"
@@ -22,7 +22,7 @@ export default function BeforeLanguageSection() {
         </div>
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-7 md:space-y-8 max-w-xl">
             <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -61,7 +61,7 @@ export default function BeforeLanguageSection() {
           {/* Mobile image */}
           <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden">
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              src="/edition1bottle.webp"
               alt="Before language — Maison Vereen Edition I"
               fill
               className="object-cover object-center"

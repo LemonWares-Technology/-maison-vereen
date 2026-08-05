@@ -6,7 +6,7 @@ export default function TheIdentity() {
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
       
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 relative z-10">
         <div className="max-w-[800px] mx-auto text-center space-y-8 md:space-y-12">
           
           <div className="space-y-4">

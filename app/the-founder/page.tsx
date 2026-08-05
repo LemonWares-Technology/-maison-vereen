@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "THE FOUNDER", href: "/the-founder" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -56,7 +56,7 @@ export default function TheFounderPage() {
             <div className="hidden lg:block bg-[#060506]" />
             <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
               <Image
-                src="/founder-image-1.webp"
+                src="/womancreatingperfume.webp"
                 alt=""
                 fill
                 priority
@@ -69,7 +69,7 @@ export default function TheFounderPage() {
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-8">
               <div className="space-y-2">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
@@ -135,7 +135,7 @@ export default function TheFounderPage() {
 
         {/* ── 01 & 02 pillars — text | image side-by-side, gold divider ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:divide-x lg:divide-gold/30">
               {/* 01 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-6 lg:gap-8 items-center pb-14 lg:pb-0 lg:pr-10 xl:pr-14 border-b border-gold/25 lg:border-b-0">
@@ -162,7 +162,7 @@ export default function TheFounderPage() {
 
                 <div className="relative w-full aspect-3/4 sm:aspect-auto sm:h-full sm:min-h-80 overflow-hidden">
                   <Image
-                    src="/images/hand_writing.webp"
+                    src="/womancreatingperfume.webp"
                     alt="Craft archives — journal and tools of the House"
                     fill
                     className="object-cover object-center"
@@ -201,7 +201,7 @@ export default function TheFounderPage() {
 
                 <div className="relative w-full aspect-3/4 sm:aspect-auto sm:h-full sm:min-h-80 overflow-hidden">
                   <Image
-                    src="/file_000000009ffc81f4b13c80251cc456a8.webp"
+                    src="/womancreatingperfume.webp"
                     alt="Institutional vision — an enduring House"
                     fill
                     className="object-cover object-center"
@@ -218,7 +218,7 @@ export default function TheFounderPage() {
 
         {/* ── Quote + CTAs ── */}
         <section className="relative bg-[#060506] overflow-hidden">
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-20 md:pt-28 pb-10 md:pb-14">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-20 md:pt-28 pb-10 md:pb-14">
             <div className="max-w-3xl mx-auto text-center space-y-5">
               <span
                 className="font-serif text-gold block leading-none"
@@ -243,7 +243,7 @@ export default function TheFounderPage() {
             {/* Left — bottle + candle atmosphere melting into black */}
             <div className="relative hidden lg:block min-h-72 overflow-hidden">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/womancreatingperfume.webp"
                 alt=""
                 fill
                 className="object-cover object-[40%_center]"

@@ -154,7 +154,7 @@ export default function WaitlistPage() {
 
         {/* ── HERO ── */}
         <section className="pt-18 border-b border-white/5">
-          <div className="max-w-350 mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[55vh]">
 
               {/* Left */}
@@ -189,7 +189,7 @@ export default function WaitlistPage() {
               {/* Right — hero image */}
               <div className="relative min-h-70 sm:min-h-85 lg:min-h-0 overflow-hidden bg-[#060606]">
                 <Image
-                  src="/file_00000000b1e872469e4def4b87dca0c3.webp"
+                  src="/privateacquisition.webp"
                   alt="Maison Vereen"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -207,7 +207,7 @@ export default function WaitlistPage() {
         <WaitlistCounter />
 
         {/* ── FOUR BENEFITS ── */}
-        <section className="bg-[#080808] border-b border-white/5">          <div className="max-w-350 mx-auto">
+        <section className="bg-[#080808] border-b border-white/5">          <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-x sm:divide-y-0 md:divide-y-0 divide-white/5">
             {benefits.map((b, i) => (
               <div
@@ -232,13 +232,13 @@ export default function WaitlistPage() {
 
         {/* ── IMAGE + FORM ── */}
         <section id="waitlist-form" className="border-b border-white/5">
-          <div className="max-w-350 mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-130">
 
               {/* Left — image: hidden on mobile, visible lg+ */}
               <div className="hidden lg:block relative overflow-hidden bg-[#040404]">
                 <Image
-                  src="/file_00000000a39471f4b5714dd0617de348.webp"
+                  src="/womancreatingperfume.webp"
                   alt="Maison Vereen"
                   fill
                   sizes="50vw"
@@ -489,7 +489,7 @@ function ApprovedList() {
 
   return (
     <section className="bg-[#080808] border-t border-white/5">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 space-y-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 space-y-10">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
@@ -657,7 +657,7 @@ function WaitlistCounter() {
 
   return (
     <section className="border-b border-white/5 bg-[#0D0D0D]">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-10 md:py-12">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-10 md:py-12">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center sm:text-left">
 
           {/* Rule */}

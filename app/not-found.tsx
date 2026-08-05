@@ -15,7 +15,7 @@ export default function NotFound() {
 
       {/* ── HEADER — logo only ── */}
       <header className="w-full border-b border-white/5 bg-black/95 backdrop-blur-md">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 md:px-14 h-[100px] md:h-[125px] flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-14 h-25 md:h-31/25 flex items-center justify-between">
           <Link href="/" className="group shrink-0" aria-label="Maison Vereen — Home">
             <Image
               src="/logo.webp"
@@ -30,7 +30,7 @@ export default function NotFound() {
               alt="Maison Vereen"
               width={320}
               height={110}
-              className="h-[110px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 hidden md:block"
+              className="h-27.5 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 hidden md:block"
               priority
             />
           </Link>
@@ -45,7 +45,7 @@ export default function NotFound() {
 
       {/* ── MAIN ── */}
       <main className="flex-1 flex items-center justify-center px-6 sm:px-8 md:px-14">
-        <div className="max-w-[640px] w-full text-center space-y-10 py-24">
+        <div className="max-w-160 w-full text-center space-y-10 py-24">
 
           {/* Gold rule */}
           <div className="flex items-center justify-center gap-4">
@@ -105,7 +105,7 @@ export default function NotFound() {
               {[
                 { label: "Discover Maison Vereen", href: "/our-story" },
                 { label: "Edition I", href: "/edition-i" },
-                { label: "Founding Registry", href: "/registry" },
+                { label: "Founding Registry", href: "/the-first-250" },
                 { label: "Apply for Access", href: "/access" },
                 { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (
@@ -126,7 +126,7 @@ export default function NotFound() {
 
       {/* ── FOOTER STRIP ── */}
       <footer className="border-t border-white/5 bg-[#040404]">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span className="uppercase tracking-[0.25em] text-[#2A2520] font-medium" style={{ fontSize: "9px" }}>
             Maison Vereen · Edition I · Lagos
           </span>

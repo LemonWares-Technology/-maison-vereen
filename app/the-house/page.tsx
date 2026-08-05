@@ -10,7 +10,7 @@ const HOUSE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -184,7 +184,7 @@ export default function TheHousePage() {
           </div>
         </div>
 
-        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               12
@@ -211,7 +211,7 @@ export default function TheHousePage() {
 
       {/* Philosophy intro + pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-16 md:space-y-20">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
           <p className="font-serif font-normal text-center text-[#F2EDE4] leading-[1.7] max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl">
             Everything explored elsewhere on this site — Edition I, the Signature
             Collection, the Founding Registry — exists within something larger: the
@@ -284,7 +284,7 @@ export default function TheHousePage() {
           {/* 02 The Next Century */}
           <div className="relative min-h-150 overflow-hidden group">
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              src="/images/the-house-hero.webp"
               alt=""
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -325,7 +325,7 @@ export default function TheHousePage() {
 
       {/* Timeline */}
       <section className="relative bg-[#060506] py-20 md:py-28 border-t border-gold/15">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
           <div className="text-center space-y-4">
             <span className="font-serif text-xs uppercase tracking-[0.3em] text-gold font-medium block">
               A Journey Measured in Generations

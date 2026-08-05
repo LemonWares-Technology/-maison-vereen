@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "THE CRAFT", href: "/the-craft" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -26,27 +26,27 @@ const HERO_POINTS = [
 const RAW_MATERIALS = [
   {
     name: "RESINS",
-    src: "/file_00000000df2071f4ac2ce7694ace922d.webp",
+    src: "/oud.webp",
     alt: "Rare resins and amber materials",
   },
   {
     name: "WOODS",
-    src: "/file_00000000a75471f48402160a6ed179fc.webp",
-    alt: "Maison Vereen bottle — woods and amber depth",
+    src: "/chemist.webp",
+    alt: "Dark woods and amber depth",
   },
   {
     name: "BOTANICALS",
-    src: "/file_00000000520071f4915a7351029b1f7b.webp",
-    alt: "Craft materials for the House",
+    src: "/oud.webp",
+    alt: "Botanical craft materials for the House",
   },
   {
     name: "FLOWERS",
-    src: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    src: "/chemist.webp",
     alt: "Maison Vereen vessel — floral character",
   },
   {
     name: "SPICES",
-    src: "/file_00000000a97471f4be1bee83e5dedea0.webp",
+    src: "/oud.webp",
     alt: "Maison Vereen bottle detail — spice and warmth",
   },
 ];
@@ -101,24 +101,24 @@ const PROCESS_STEPS = [
 
 const GALLERY = [
   {
-    src: "/file_00000000df2071f4ac2ce7694ace922d.webp",
-    alt: "Hands with resinous materials",
+    src: "/oud.webp",
+    alt: "Hands with dropper and vials in the atelier",
   },
   {
-    src: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    src: "/chemist.webp",
     alt: "Maison Vereen fragrance vessel",
   },
   {
-    src: "/file_00000000a75471f48402160a6ed179fc.webp",
+    src: "/oud.webp",
     alt: "Edition I bottle and founding chapter box",
   },
   {
-    src: "/file_00000000520071f4915a7351029b1f7b.webp",
-    alt: "Craft and formulation at the House",
+    src: "/chemist.webp",
+    alt: "Maison Vereen gold-foiled box",
   },
   {
-    src: "/file_000000005fc471f495c71bc758a16ffc.webp",
-    alt: "Maison Vereen gold-foiled box",
+    src: "/oud.webp",
+    alt: "Private acquisition correspondence",
   },
 ];
 
@@ -278,7 +278,7 @@ export default function TheCraftPage() {
       <main className="flex-1">
         {/* ── Hero ── */}
         <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-7 md:space-y-8 max-w-xl">
                 <div className="space-y-3">
@@ -327,13 +327,16 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-3/4 max-w-md lg:max-w-none mx-auto lg:mx-0 overflow-hidden">
                 <Image
-                  src="/file_00000000520071f4915a7351029b1f7b.webp"
+                  src="/oud.webp"
                   alt="Master perfumer at work with glass dropper"
                   fill
                   priority
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 90vw, 45vw"
                 />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/20 to-[#060506]/55" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#060506]/60 via-transparent to-[#060506]/60" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#060506_90%)]" />
               </div>
             </div>
           </div>
@@ -341,7 +344,7 @@ export default function TheCraftPage() {
 
         {/* ── Process Behind Perfection ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6 max-w-xl">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -379,12 +382,15 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden">
                 <Image
-                  src="/images/hand_writing.webp"
+                  src="/chemist.webp"
                   alt="Perfumer formula notebook and vials"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 95vw, 45vw"
                 />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/20 to-[#060506]/55" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#060506]/60 via-transparent to-[#060506]/60" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#060506_90%)]" />
               </div>
             </div>
           </div>
@@ -392,12 +398,12 @@ export default function TheCraftPage() {
 
         {/* ── Raw Materials (cream) ── */}
         <section className="relative bg-[#EDE8DE] text-[#2C2823] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="max-w-2xl mx-auto text-center space-y-4">
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.32em] text-[#2C2823] font-medium">
                 Raw Materials
               </h2>
-              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#2C2823]/85">
+              <p className="font-serif font-bold text-base md:text-lg leading-[1.85] text-[#2C2823]/85">
                 Maison Vereen sources materials others overlook — rare resins,
                 woods, and botanicals drawn from across the African continent,
                 selected for the particular depth and character they bring
@@ -428,7 +434,7 @@ export default function TheCraftPage() {
 
         {/* ── Process steps ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium text-center">
               The Process — Unhurried by Design
             </h2>
@@ -463,7 +469,7 @@ export default function TheCraftPage() {
 
         {/* ── Development & Refinement ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10 md:space-y-12">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6 max-w-xl">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -492,7 +498,7 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-16/10 overflow-hidden">
                 <Image
-                  src="/file_00000000520071f4915a7351029b1f7b.webp"
+                  src="/oud.webp"
                   alt="Glass vials and formulations in the atelier"
                   fill
                   className="object-cover object-center"
@@ -522,7 +528,7 @@ export default function TheCraftPage() {
 
         {/* ── Closing CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
               <h3
                 className="font-serif font-light text-[#F2EDE4] leading-snug"

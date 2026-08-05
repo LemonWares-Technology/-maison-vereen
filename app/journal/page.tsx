@@ -11,7 +11,7 @@ const JOURNAL_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -90,7 +90,7 @@ export default function JournalPage() {
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#060506]/45" />
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 The Journal
@@ -131,7 +131,7 @@ export default function JournalPage() {
 
         {/* ── Articles ── */}
         <section className="bg-[#060506] border-t border-gold/15">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/4">
               {articles.map((a, i) => (
                 <Link
@@ -214,7 +214,7 @@ export default function JournalPage() {
 
         {/* ── Registry CTA ── */}
         <section className="border-t border-gold/15 bg-charcoal">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
               className="font-serif font-light italic text-[#EDE8DE]/55 max-w-125"
               style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}

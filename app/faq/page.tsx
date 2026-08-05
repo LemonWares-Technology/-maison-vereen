@@ -124,7 +124,7 @@ export default function FAQPage() {
 
       <main className="flex-1 pt-24 md:pt-28">
         {/* ── HERO SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 md:py-20 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-6xl mx-auto py-12 md:py-20 border-b border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Narrative */}
             <div className="space-y-8 max-w-155">
@@ -153,6 +153,7 @@ export default function FAQPage() {
                 aspect="aspect-4/3"
                 className="w-full max-w-125 rounded-sm shadow-2xl"
                 label="FAQ Ledger Manuscript Desk"
+                src="/images/founder.webp"
               />
             </div>
           </div>
@@ -208,7 +209,7 @@ export default function FAQPage() {
         </section>
 
         {/* ── 2 COLUMNS ACCORDION SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 md:py-24 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-6xl mx-auto py-16 md:py-24 border-b border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Column 01 */}
             <div className="space-y-8">
@@ -261,6 +262,7 @@ export default function FAQPage() {
                   aspect="aspect-square"
                   className="w-16 h-16 shrink-0"
                   label="Wax Seal"
+                  src="/images/founder.webp"
                 />
                 <div className="space-y-1">
                   <p className="font-serif text-xs text-gold italic">
@@ -326,6 +328,7 @@ export default function FAQPage() {
                   aspect="aspect-square"
                   className="w-16 h-16 shrink-0"
                   label="Bottle Hands"
+                  src="/images/founder.webp"
                 />
                 <div className="space-y-1">
                   <p className="font-serif text-xs text-gold italic">
@@ -342,7 +345,7 @@ export default function FAQPage() {
         </section>
 
         {/* ── STILL HAVE A QUESTION SECTION ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-12 text-center space-y-4 border-b border-white/5">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-6xl mx-auto py-12 text-center space-y-4 border-b border-white/5">
           <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE]">
             Still have a question not covered here?
           </h2>
@@ -358,7 +361,7 @@ export default function FAQPage() {
         </section>
 
         {/* ── BOTTOM BANNER ── */}
-        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-350 mx-auto py-16 text-center space-y-8">
+        <section className="px-6 sm:px-8 md:px-14 lg:px-20 max-w-6xl mx-auto py-16 text-center space-y-8">
           <h2 className="font-serif text-xl sm:text-2xl font-light text-[#EDE8DE] max-w-200 mx-auto leading-relaxed">
             Some questions are better asked directly. The House is always
             reachable.

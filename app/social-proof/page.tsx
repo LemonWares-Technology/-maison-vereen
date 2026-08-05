@@ -10,7 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "SOCIAL PROOF", href: "/social-proof" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -103,19 +103,19 @@ const MILESTONES = [
 
 const GALLERY = [
   {
-    src: "/file_00000000520071f4915a7351029b1f7b.webp",
+    src: "/images/hero-city.webp",
     alt: "Archival document and craft of the House",
   },
   {
-    src: "/images/hero-city.jpg",
+    src: "/images/hero-city.webp",
     alt: "City skyline through a Maison window",
   },
   {
-    src: "/images/wax-seal.jpg",
+    src: "/images/hero-city.webp",
     alt: "Gold wax seal of Maison Vereen",
   },
   {
-    src: "/file_00000000a39471f4b5714dd0617de348.webp",
+    src: "/images/hero-city.webp",
     alt: "Private Maison gathering",
   },
 ];
@@ -152,7 +152,7 @@ export default function SocialProofPage() {
             <div className="hidden lg:block bg-[#060506]" />
             <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
               <Image
-                src="/file_00000000a39471f4b5714dd0617de348.webp"
+                src="/images/hero-city.webp"
                 alt=""
                 fill
                 priority
@@ -165,7 +165,7 @@ export default function SocialProofPage() {
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
                 <span className="font-serif text-lg md:text-xl text-gold">13</span>
@@ -210,7 +210,7 @@ export default function SocialProofPage() {
 
         {/* ── 01 Reflections | 02 Press ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:divide-x lg:divide-white/15 gap-14 lg:gap-0">
               {/* 01 — three cards in a responsive row */}
               <div className="lg:pr-10 xl:pr-14 space-y-8 flex flex-col">
@@ -330,7 +330,7 @@ export default function SocialProofPage() {
 
         {/* ── Editorial preview quote — responsive 3-col grid frame ── */}
         <section className="relative bg-[#060506] py-10 md:py-14">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="border border-gold/45 grid grid-cols-[minmax(2.5rem,auto)_minmax(0,1fr)_minmax(2.5rem,auto)] sm:grid-cols-[minmax(3.5rem,auto)_minmax(0,1fr)_minmax(3.5rem,auto)] md:grid-cols-[minmax(4.5rem,auto)_minmax(0,1fr)_minmax(4.5rem,auto)] items-center gap-x-2 sm:gap-x-4 md:gap-x-6 py-12 sm:py-16 md:py-20 lg:py-24 px-3 sm:px-5 md:px-8">
               <span
                 className="justify-self-center self-center font-serif text-gold leading-none select-none"
@@ -366,7 +366,7 @@ export default function SocialProofPage() {
 
         {/* ── Press logos ── */}
         <section className="relative bg-[#060506] py-16 md:py-20 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto text-center space-y-8">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-8">
             <div className="space-y-2">
               <div className="w-8 h-px bg-gold mx-auto" />
               <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">
@@ -404,7 +404,7 @@ export default function SocialProofPage() {
 
         {/* ── House milestones timeline ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5 overflow-hidden">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium text-center">
               House Milestones (The Record Continues)
             </h2>

@@ -9,7 +9,7 @@ export default function HouseOf250() {
         {/* Image / Visual side */}
         <div className="relative min-h-100 lg:min-h-0 overflow-hidden bg-[#020202] group">
           <Image
-            src="/file_00000000b1e872469e4def4b87dca0c3.webp"
+            src="/privateacquisition.webp"
             alt="The House of 250"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

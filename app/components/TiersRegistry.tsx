@@ -32,7 +32,7 @@ export default function TiersRegistry() {
       id="registry"
       className="relative py-24 md:py-32 bg-cream text-charcoal overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 space-y-16">
         
         {/* Header Block */}
         <div className="max-w-3xl space-y-6 text-center md:text-left mx-auto md:mx-0">

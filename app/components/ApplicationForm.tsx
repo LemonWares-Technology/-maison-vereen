@@ -13,7 +13,6 @@ const STEPS = [
 ] as const;
 
 const HOW_HEARD = [
-  "How did you hear about Maison Vereen?",
   "Personal referral",
   "Instagram",
   "LinkedIn",
@@ -197,7 +196,7 @@ const INITIAL_FORM: FormState = {
   city: "",
   dob: "",
   occupation: "",
-  howHeard: HOW_HEARD[0],
+  howHeard: "",
   presence: "",
   lifestyle: LIFESTYLE_OPTIONS[0],
   values: [],
@@ -313,7 +312,7 @@ export default function ApplicationForm() {
           country: form.country,
           whatYouDo: form.occupation.trim(),
           howHeard:
-            form.howHeard === HOW_HEARD[0] ? "Not specified" : form.howHeard,
+            form.howHeard === "" ? "Not specified" : form.howHeard,
           whatMadeApply: form.drawsYou.trim(),
           earlyThing: earlyThing || null,
           anythingElse: anythingElse || null,
@@ -362,7 +361,7 @@ export default function ApplicationForm() {
       id="registry-application"
       className={`relative bg-[#060506] text-[#EDE8DE] overflow-x-clip ${HEADER_OFFSET_CLASS}`}
     >
-      <div className="w-[95%] md:w-full max-w-7xl mx-auto min-w-0">
+      <div className="w-[95%] md:w-full max-w-6xl mx-auto min-w-0">
         <div className="md:grid md:grid-cols-2 md:items-start md:gap-0">
           {/* LEFT — intro, image, privileges, quote, join */}
           <aside className="relative min-w-0 bg-[#060506] border-b md:border-b-0 md:border-r border-gold/20">
@@ -404,7 +403,7 @@ export default function ApplicationForm() {
               {/* Product image — dark edges blend into page */}
               <div className="relative w-full aspect-4/5 overflow-hidden">
                 <Image
-                  src="/file_00000000a75471f48402160a6ed179fc.webp"
+                  src="/edition1perfumebottle.webp"
                   alt="Maison Vereen Edition I — House of 250"
                   fill
                   priority
@@ -501,7 +500,7 @@ export default function ApplicationForm() {
                   Registry Application
                 </h2>
                 <p className="font-sans text-base text-[#EDE8DE]/75 font-light leading-relaxed max-w-lg">
-                  Tell use about you. Not just what you like - but what moves you. This helps us understand if we're right fit, and how we can best serve you as part of the House.
+                  Tell us about you. Not just what you like - but what moves you. This helps us understand if we're the right fit, and how we can best serve you as part of the House.
                 </p>
               </div>
 
@@ -516,7 +515,7 @@ export default function ApplicationForm() {
                       {i < STEPS.length - 1 && (
                         <div
                           className={`absolute top-4 left-[calc(50%+14px)] w-[calc(100%-14px)] h-px ${
-                            done || active ? "bg-gold/60" : "bg-gold/25"
+                            done || active ? "bg-gold/60 " : "bg-gold/25"
                           }`}
                           aria-hidden
                         />
@@ -672,24 +671,31 @@ export default function ApplicationForm() {
                       </label>
                     </div>
 
-                    <select
-                      className={selectClass}
-                      value={form.howHeard}
-                      onChange={(e) => setField("howHeard", e.target.value)}
-                    >
-                      {HOW_HEARD.map((o) => (
-                        <option key={o} value={o} className={optionClass}>
-                          {o}
-                        </option>
-                      ))}
-                    </select>
+                    <label className={floatShellClass}>
+                      <span className={floatLabelClass}>How did you hear about Maison Vereen?</span>
+                      <select
+                        className="mt-2 w-full bg-transparent border-0 p-0 text-base font-light text-gold outline-none appearance-none cursor-pointer"
+                        value={form.howHeard}
+                        onChange={(e) => setField("howHeard", e.target.value)}
+                      >
+                        <option value="" disabled className={optionClass}>Select an option</option>
+                        {HOW_HEARD.map((o) => (
+                          <option key={o} value={o} className={optionClass}>
+                            {o}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
 
-                    <textarea
-                      className={`${fieldClass} min-h-28 resize-y`}
-                      placeholder="What does presence mean to you? Share your thoughts..."
-                      value={form.presence}
-                      onChange={(e) => setField("presence", e.target.value)}
-                    />
+                    <label className={floatShellClass}>
+                      <span className={floatLabelClass}>What does presence mean to you?</span>
+                      <textarea
+                        className={floatTextareaClass}
+                        placeholder="Share your thoughts..."
+                        value={form.presence}
+                        onChange={(e) => setField("presence", e.target.value)}
+                      />
+                    </label>
                   </section>
 
                   <section

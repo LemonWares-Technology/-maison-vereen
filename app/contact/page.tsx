@@ -9,7 +9,7 @@ const CONTACT_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               15
@@ -247,7 +247,7 @@ export default function ContactPage() {
           {/* Left rail — bottle */}
           <div className="relative hidden lg:block min-h-120 overflow-hidden">
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              src="/images/private_maison_desk.webp"
               alt=""
               fill
               className="object-cover object-[40%_center]"
@@ -334,7 +334,7 @@ export default function ContactPage() {
           {/* Right rail — wax seal */}
           <div className="relative hidden lg:block min-h-120 overflow-hidden">
             <Image
-              src="/file_000000005fc471f495c71bc758a16ffc.webp"
+              src="/images/whatsapp_phone.webp"
               alt=""
               fill
               className="object-cover object-[60%_center]"
@@ -347,7 +347,7 @@ export default function ContactPage() {
 
       {/* Preferred ways */}
       <section className="relative bg-[#060506] py-14 md:py-20 border-t border-gold/15">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-10">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <div className="h-px flex-1 max-w-24 sm:max-w-40 bg-gold/50" />
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium shrink-0">
@@ -381,7 +381,7 @@ export default function ContactPage() {
                 body: "Arrange a dedicated discussion with a member of the House.",
                 href: EMAIL_APPOINTMENTS,
                 linkLabel: "Request a Time",
-                image: "/images/desk_globe.webp",
+                image: "/images/whatsapp_phone.webp",
                 external: false,
                 icon: <CalendarIcon />,
               },
@@ -444,7 +444,7 @@ export default function ContactPage() {
 
       {/* Details & response times */}
       <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/15 overflow-hidden">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10 lg:gap-12 xl:gap-16 items-stretch">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10 lg:gap-12 xl:gap-16 items-stretch">
           <div className="space-y-6">
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium block">
               Maison Vereen
@@ -528,7 +528,7 @@ export default function ContactPage() {
           {/* Door plaque atmosphere */}
           <div className="relative hidden lg:block min-h-64 overflow-hidden">
             <Image
-              src="/file_00000000b1e872469e4def4b87dca0c3.webp"
+              src="/images/private_maison_desk.webp"
               alt=""
               fill
               className="object-cover object-center"

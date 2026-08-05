@@ -8,7 +8,7 @@ export default function PermanentClosureBanner() {
   return (
     <section className="relative py-24 md:py-32 lg:py-36 overflow-hidden">
       <Image
-        src="/file_00000000df2071f4ac2ce7694ace922d.webp"
+        src="/thunderrock.webp"
         alt=""
         fill
         className="object-cover object-[center_70%] opacity-40"

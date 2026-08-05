@@ -32,7 +32,7 @@ export default function FutureVision() {
       id="future-vision"
       className="bg-[#0D0D0D] border-t border-white/5"
     >
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy Page 1 */}
         <div className="space-y-6 max-w-[680px]">
           <span className="section-tag">The Future of the House</span>
