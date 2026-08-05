@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "OUR STORY", href: "/our-story" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -47,7 +47,7 @@ export default function OurStoryPage() {
           <div className="lg:hidden flex flex-col min-h-screen">
             <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/images/philosophy-hero.webp"
                 alt="Maison Vereen Edition I bottle on black marble"
                 fill
                 priority
@@ -99,7 +99,7 @@ export default function OurStoryPage() {
           <div className="absolute inset-0 hidden lg:block pointer-events-none">
             <div className="absolute inset-0 left-[32%] xl:left-[28%]">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/images/philosophy-hero.webp"
                 alt="Maison Vereen Edition I bottle on black marble"
                 fill
                 priority
@@ -113,7 +113,7 @@ export default function OurStoryPage() {
             <div className="absolute inset-0 bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 Discover Maison Vereen
@@ -149,7 +149,7 @@ export default function OurStoryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative min-h-80 md:min-h-105 lg:min-h-full aspect-4/5 lg:aspect-auto overflow-hidden">
               <Image
-                src="/images/the-house-hero.webp"
+                src="/images/philosophy-hero.webp"
                 alt="Coastline light — the origin of the House"
                 fill
                 className="object-cover object-center"
@@ -215,7 +215,7 @@ export default function OurStoryPage() {
 
             <article className="relative min-h-120 lg:min-h-140 overflow-hidden lg:border-r lg:border-gold/30">
               <Image
-                src="/file_00000000520071f4915a7351029b1f7b.webp"
+                src="/images/philosophy-hero.webp"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -258,7 +258,7 @@ export default function OurStoryPage() {
 
             <article className="relative min-h-120 lg:min-h-140 overflow-hidden">
               <Image
-                src="/file_000000009ffc81f4b13c80251cc456a8.webp"
+                src="/images/philosophy-hero.webp"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -307,7 +307,7 @@ export default function OurStoryPage() {
         <section className="relative bg-[#EDE8DE] text-[#2C2823] overflow-hidden">
           <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-[0.12] pointer-events-none hidden md:block">
             <Image
-              src="/images/hand_writing.webp"
+              src="/images/philosophy-hero.webp"
               alt=""
               fill
               className="object-cover object-left"
@@ -315,7 +315,7 @@ export default function OurStoryPage() {
             />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-7xl mx-auto py-16 md:py-24">
+          <div className="relative w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
               <div className="space-y-5 lg:pr-12 xl:pr-16">
                 <h3

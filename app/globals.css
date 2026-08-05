@@ -15,11 +15,11 @@
   --font-display:   clamp(3.5rem, 8vw, 5rem);    /* Hero display: 56–80px */
   --font-headline:  clamp(2rem, 4vw, 2.75rem);    /* Section heads: 32–44px */
   --font-subhead:   clamp(1.35rem, 2.2vw, 1.875rem); /* Pull quotes: 22–30px */
-  --font-body:      1.0625rem;                    /* Body: 17px */
-  --font-body-sm:   1rem;                         /* Body small: 16px */
-  --font-label:     0.6875rem;                    /* Labels/eyebrows: 11px */
-  --font-caption:   0.625rem;                     /* Captions: 10px */
-  --font-micro:     0.5625rem;                    /* Micro: 9px */
+  --font-body:      1.1875rem;                    /* Body: 19px */
+  --font-body-sm:   1.0625rem;                    /* Body small: 17px */
+  --font-label:     0.75rem;                      /* Labels/eyebrows: 12px */
+  --font-caption:   0.6875rem;                    /* Captions: 11px */
+  --font-micro:     0.625rem;                     /* Micro: 10px */
 
   --font-sans:  var(--font-geist-sans);
   --font-serif: var(--font-cormorant);
@@ -37,6 +37,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 18px;
   overflow-x: hidden;
   -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -30,7 +30,7 @@ export default function FounderEdition() {
       <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2 pointer-events-none">
         <div className="relative overflow-hidden">
           <Image
-            src="/file_00000000a75471f48402160a6ed179fc.webp"
+            src="/certifcicateofauthenticity.webp"
             alt=""
             fill
             className="object-cover object-[center_40%]"
@@ -42,11 +42,11 @@ export default function FounderEdition() {
         <div className="bg-[#060506]" />
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
           <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden order-2">
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              src="/certifcicateofauthenticity.webp"
               alt="Maison Vereen Edition I — the founding chapter"
               fill
               className="object-cover object-center"

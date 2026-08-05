@@ -45,7 +45,7 @@ export const articles: Article[] = [
     excerpt: "The word luxury has been borrowed, diluted, and redistributed until it covers almost everything. What remains when you remove the borrowed meaning? What does genuine craft actually look like?",
     date: "May 2024",
     readTime: "5 min read",
-    image: "/file_00000000520071f4915a7351029b1f7b.webp",
+    image: "/chemist.webp",
     imagePos: "50% center",
     body: [
       "The word luxury has been borrowed so many times it has almost lost its shape. It now covers hotel chains and skincare serums and rental cars and airline seats. It is used to describe things that are merely expensive, things that are merely pleasant, things that are merely new.",
@@ -66,7 +66,7 @@ export const articles: Article[] = [
     excerpt: "Africa is the youngest continent by median age. The fastest-growing consumer class. The source of more undocumented creative and intellectual authority than perhaps any civilization in recent history.",
     date: "April 2024",
     readTime: "7 min read",
-    image: "/file_00000000a75471f48402160a6ed179fc.webp",
+    image: "/edition1perfumebottle.webp",
     imagePos: "40% center",
     body: [
       "Africa is the youngest continent by median age. It is the fastest-growing consumer class in the world. It is the source of more undocumented creative and intellectual authority than perhaps any civilization in recent history. The world is beginning to understand what those of us who have built things on this continent have always known: the quality of mind that comes from building in difficult environments is exceptional.",
@@ -109,7 +109,7 @@ export const articles: Article[] = [
     excerpt: "250 was not chosen for scarcity's sake. It was chosen because the founding chapter of a house should be owned by people who understand its significance.",
     date: "February 2024",
     readTime: "6 min read",
-    image: "/file_000000005fc471f495c71bc758a16ffc.webp",
+    image: "/certifcicateofauthenticity.webp",
     imagePos: "50% center",
     body: [
       "Scarcity in luxury is almost always manufactured. A brand produces ten times what it needs, stores nine of them, and releases one — creating the impression of rarity while keeping the economics of volume. The customer feels privileged. The brand books the margin. The scarcity is theater.",
@@ -130,7 +130,7 @@ export const articles: Article[] = [
     excerpt: "The houses she admires most were built by people who were not thinking about next quarter. They were thinking about next century. She is building with the same intention.",
     date: "January 2024",
     readTime: "5 min read",
-    image: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    image: "/edition1bottle.webp",
     imagePos: "30% center",
     body: [
       "Success and legacy are not the same thing. They can coexist, but they require different orientations. Success is measured from the outside — revenue, recognition, scale, market position. Legacy is measured from the inside — by the decisions made when no one was watching, by what was refused as much as what was built.",

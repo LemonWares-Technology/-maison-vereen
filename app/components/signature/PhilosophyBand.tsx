@@ -6,7 +6,7 @@
 export default function PhilosophyBand() {
   return (
     <section className="bg-[#0D0D0D] border-b border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-28 items-start">
 
           {/* Left — headline */}

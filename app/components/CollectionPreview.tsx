@@ -6,13 +6,13 @@ import Link from "next/link";
 export default function CollectionPreview() {
   return (
     <section id="edition-i" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-350 mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left — bottle image: SILHOUETTE ONLY — anticipation, not unveiling */}
           <div className="relative min-h-125 lg:min-h-165 overflow-hidden bg-[#060608]">
             {/* Bottle barely visible — low opacity = pure suggestion */}
             <Image
-              src="/file_00000000a75471f48402160a6ed179fc.webp"
+              src="/edition1perfumebottle.webp"
               alt="Maison Vereen Edition I — The Founding Expression"
               fill
               priority

@@ -14,7 +14,7 @@ export default function WhyOnly250() {
     <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
       {/* Shared marble field with the closure banner below */}
       <Image
-        src="/file_00000000df2071f4ac2ce7694ace922d.webp"
+        src="/thunderrock.webp"
         alt=""
         fill
         className="object-cover object-center opacity-40"
@@ -22,7 +22,7 @@ export default function WhyOnly250() {
       />
       <div className="absolute inset-0 bg-[#060506]/78" />
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto">
+      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 xl:gap-24 items-start">
           <div className="space-y-8 md:space-y-10">
             <p

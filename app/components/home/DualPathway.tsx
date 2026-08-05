@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function DualPathway() {
   return (
     <section className="bg-charcoal py-24 md:py-32 lg:py-40 border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-14">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14">
 
         <div className="text-center space-y-6 mb-16 md:mb-24">
           <span className="section-tag">Two Paths. One House.</span>

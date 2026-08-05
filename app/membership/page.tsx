@@ -11,7 +11,7 @@ const MEMBERSHIP_NAV = [
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
   { label: "MEMBERSHIP", href: "/membership" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -169,7 +169,7 @@ export default function MembershipPage() {
         <div className="lg:hidden flex flex-col min-h-screen">
           <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
             <Image
-              src="/images/maison-vereen-access.webp"
+              src="/images/house-section-image.webp"
               alt=""
               fill
               priority
@@ -216,7 +216,7 @@ export default function MembershipPage() {
         {/* Desktop: full-bleed photo with left text fade */}
         <div className="absolute inset-0 hidden lg:block pointer-events-none">
           <Image
-            src="/images/maison-vereen-access.webp"
+            src="/images/house-section-image.webp"
             alt=""
             fill
             priority
@@ -227,7 +227,7 @@ export default function MembershipPage() {
           <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-[#060506]/25" />
         </div>
 
-        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               10
@@ -256,7 +256,7 @@ export default function MembershipPage() {
 
       {/* Philosophy statement */}
       <section className="relative bg-[#060506] py-20 md:py-28">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-16">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-16">
           <div className="flex justify-center text-gold">
             <ShieldMarkIcon />
           </div>
@@ -292,7 +292,7 @@ export default function MembershipPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative min-h-100 lg:min-h-130 overflow-hidden">
             <Image
-              src="/file_000000005fc471f495c71bc758a16ffc.webp"
+              src="/images/house-section-image.webp"
               alt="Private release invitation"
               fill
               className="object-cover object-center"
@@ -347,7 +347,7 @@ export default function MembershipPage() {
 
       {/* Four pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28 border-t border-gold/15">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((pillar, i) => (
               <div

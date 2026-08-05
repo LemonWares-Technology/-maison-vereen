@@ -14,7 +14,7 @@ const HOME_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE EXPERIENCE", href: "/philosophy" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
 ];
 
 const HOME_FOOTER_NAV = [

@@ -6,7 +6,7 @@ export function buildMetadata({
   title,
   description,
   path = "",
-  image = "/logo.png",
+  image = "/logo.webp",
 }: {
   title: string;
   description: string;

@@ -15,15 +15,15 @@ interface ImagePlaceholderProps {
 
 // ─── Real image files living in /public/ ────────────────────────────────────
 const IMG = {
-  bottleMain: "/file_00000000a75471f48402160a6ed179fc.webp",  // MV bottle on black marble
-  bottleEleris: "/file_000000009ffc81f4b13c80251cc456a8.webp",  // ELERIS bottle on marble
-  bottleCap: "/file_00000000a97471f4be1bee83e5dedea0.webp",  // Edition I cap close-up
-  certificate: "/file_000000005fc471f495c71bc758a16ffc.webp",  // Box + Certificate of Authenticity
-  craftDropper: "/file_00000000520071f4915a7351029b1f7b.webp",  // Hand dropper / atelier craft
-  founderAtelier: "/file_00000000a39471f4b5714dd0617de348.webp",  // Founder in MV atelier
-  hourglass: "/file_00000000aba081f49f4ebc11da3f8c3d.webp",  // Brass hourglass on marble
-  privateAcq: "/file_00000000b1e872469e4def4b87dca0c3.webp",  // Private Acquisition door plaque
-  blackStone: "/file_00000000df2071f4ac2ce7694ace922d.webp",  // Black stone with gold veins
+  bottleMain: "/edition1perfumebottle.webp",  // MV bottle on black marble
+  bottleEleris: "/edition1bottle.webp",  // ELERIS bottle on marble
+  bottleCap: "/edition1.webp",  // Edition I cap close-up
+  certificate: "/certifcicateofauthenticity.webp",  // Box + Certificate of Authenticity
+  craftDropper: "/chemist.webp",  // Hand dropper / atelier craft
+  founderAtelier: "/womancreatingperfume.webp",  // Founder in MV atelier
+  hourglass: "/timesand.webp",  // Brass hourglass on marble
+  privateAcq: "/privateacquisition.webp",  // Private Acquisition door plaque
+  blackStone: "/thunderrock.webp",  // Black stone with gold veins
   founderPortrait1: "/founder-image-1.webp",                     // Founder portrait side profile
   founderPortrait2: "/founder-image-2.webp",                     // Founder portrait wider
 } as const;

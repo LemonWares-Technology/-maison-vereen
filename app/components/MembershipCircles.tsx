@@ -49,7 +49,7 @@ const tiers = [
 export default function MembershipCircles() {
   return (
     <section id="registry" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-32 space-y-16">
         {/* Header — exact doc copy Page 1 + Page 7 */}
         <div className="space-y-6 max-w-170">
           <span className="section-tag">Membership &amp; Registry</span>

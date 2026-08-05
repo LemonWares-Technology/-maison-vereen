@@ -11,7 +11,7 @@ const JOURNAL_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -147,7 +147,7 @@ export default function ArticlePage() {
 
         {(prev || next) && (
           <section className="border-b border-white/5 bg-[#0D0D0D]">
-            <div className="max-w-350 mx-auto">
+            <div className="max-w-6xl mx-auto">
               <div
                 className={`grid grid-cols-1 ${
                   prev && next ? "sm:grid-cols-2" : ""
@@ -217,7 +217,7 @@ export default function ArticlePage() {
         )}
 
         <section className="bg-charcoal">
-          <div className="max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
               className="font-serif font-light italic text-[#4A4540] max-w-125"
               style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.2rem)" }}

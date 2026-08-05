@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "THE EXPERIENCE", href: "/philosophy" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -21,7 +21,7 @@ const CONVICTIONS = [
     title: "CRAFTSMANSHIP",
     purpose: "Purpose: State the House's standard for making.",
     body: "Nothing leaves Maison Vereen because a deadline arrived. It leaves because it is finished, by the only standard that matters here — the master perfumer's own.",
-    src: "/file_00000000520071f4915a7351029b1f7b.webp",
+    src: "/founder-image-2.webp",
     alt: "Master perfumer craft with glass dropper and vials",
   },
   {
@@ -29,7 +29,7 @@ const CONVICTIONS = [
     title: "TIME",
     purpose: "Purpose: State the House's relationship to pace.",
     body: "Formulation, ageing, and refinement are permitted the time they require. The House would rather delay a release by a year than release something it cannot stand behind for a century.",
-    src: "/file_00000000aba081f49f4ebc11da3f8c3d.webp",
+    src: "/timesand.webp",
     alt: "Hourglass marking the House's patience with time",
   },
   {
@@ -37,7 +37,7 @@ const CONVICTIONS = [
     title: "MEMORY",
     purpose: "Purpose: Frame fragrance as an instrument of memory.",
     body: "A fragrance is the only object capable of returning someone, instantly and involuntarily, to a moment they thought they had lost. Maison Vereen designs for that return, not merely for how a scent performs in the first hour.",
-    src: "/file_00000000a97471f4be1bee83e5dedea0.webp",
+    src: "/founder-image-2.webp",
     alt: "Raw amber resin and materials of memory",
   },
   {
@@ -45,7 +45,7 @@ const CONVICTIONS = [
     title: "IDENTITY",
     purpose: "Purpose: Position fragrance as self-expression, not costume.",
     body: "A signature scent is not a mask. It is closer to a signature itself — unrepeatable, and recognisably the wearer's own. The House creates fragrances built to be worn for decades, not seasons.",
-    src: "/images/hand_writing.webp",
+    src: "/timesand.webp",
     alt: "Fountain pen and handwritten signature",
   },
   {
@@ -53,7 +53,7 @@ const CONVICTIONS = [
     title: "RARITY & LEGACY",
     purpose: "Purpose: Tie scarcity to permanence rather than marketing urgency.",
     body: "What is rare is rare because it was never compromised to meet demand. What is rare and well made becomes legacy — passed forward, told about, remembered after the person who first wore it is gone.",
-    src: "/file_00000000df2071f4ac2ce7694ace922d.webp",
+    src: "/founder-image-2.webp",
     alt: "Dark stone with veins of gold — rarity and permanence",
   },
 ];
@@ -111,7 +111,7 @@ export default function PhilosophyPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 lg:left-[32%] xl:left-[28%]">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/timesand.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
@@ -128,7 +128,7 @@ export default function PhilosophyPage() {
             <div className="absolute inset-0 hidden lg:block bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
                 <div className="w-10 h-px bg-gold" />
@@ -170,7 +170,7 @@ export default function PhilosophyPage() {
 
         {/* ── Convictions 01–05 — open rows, images dissolve into black ── */}
         <section className="relative bg-[#060506]">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             {CONVICTIONS.map((c, i) => (
               <article
                 key={c.number}

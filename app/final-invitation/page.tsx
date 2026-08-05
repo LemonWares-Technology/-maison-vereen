@@ -10,7 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "FINAL INVITATION", href: "/final-invitation" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -195,7 +195,7 @@ export default function FinalInvitationPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 lg:left-[30%] xl:left-[26%]">
               <Image
-                src="/file_000000005fc471f495c71bc758a16ffc.webp"
+                src="/images/application-hero.webp"
                 alt="Maison Vereen Edition I bottle, box, and sealed correspondence"
                 fill
                 priority
@@ -209,7 +209,7 @@ export default function FinalInvitationPage() {
             <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/50" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
                 <span className="font-serif text-lg md:text-xl text-gold block">
@@ -246,7 +246,7 @@ export default function FinalInvitationPage() {
 
         {/* ── Three pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/25">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -340,7 +340,7 @@ export default function FinalInvitationPage() {
 
         {/* ── Closing affirmations ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="text-center space-y-3">
               <h2 className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 Closing Affirmations

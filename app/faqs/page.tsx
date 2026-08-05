@@ -117,7 +117,7 @@ const FAQ_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "FAQS", href: "/faqs" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -342,7 +342,7 @@ export default function FAQs() {
           <div className="hidden lg:block bg-[#060506]" />
           <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
             <Image
-              src="/file_00000000a39471f4b5714dd0617de348.webp"
+              src="/images/founder.webp"
               alt=""
               fill
               priority
@@ -354,7 +354,7 @@ export default function FAQs() {
           </div>
         </div>
 
-        <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+        <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
               14
@@ -385,7 +385,7 @@ export default function FAQs() {
 
       {/* Philosophy + pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-16 md:space-y-20">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
           <p className="font-serif font-light text-center text-[#F2EDE4] leading-[1.7] max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl">
             This page exists so that no serious applicant is left with an
             unanswered practical question before applying. Each answer is written
@@ -425,7 +425,7 @@ export default function FAQs() {
 
       {/* Two-column FAQ accordions + callouts */}
       <section className="relative bg-[#060506] pb-16 md:pb-20">
-        <div className="w-[95%] md:w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="w-[95%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <AccordionColumn
             index="01"
             title="Edition I & The Founding Registry"
@@ -436,7 +436,7 @@ export default function FAQs() {
               setOpenGroup1((prev) => (prev === num ? null : num))
             }
             callout={{
-              image: "/file_000000005fc471f495c71bc758a16ffc.webp",
+              image: "/images/founder.webp",
               imageAlt: "Wax seal correspondence",
               quote: "The registry is not a queue. It is a circle of recognition.",
               body: "Every accepted member is chosen because the House believes in who they are and what they represent — not because they were first.",
@@ -452,7 +452,7 @@ export default function FAQs() {
               setOpenGroup2((prev) => (prev === num ? null : num))
             }
             callout={{
-              image: "/file_00000000520071f4915a7351029b1f7b.webp",
+              image: "/images/founder.webp",
               imageAlt: "Hands with fragrance bottle",
               quote: "A conversation, not a cart.",
               body: "Every acquisition is personal because every fragrance is personal. That will never change.",
@@ -472,7 +472,7 @@ export default function FAQs() {
             className="w-40 lg:w-52 h-auto"
           />
         </div>
-        <div className="relative w-[95%] md:w-full max-w-7xl mx-auto text-center space-y-5">
+        <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-5">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-[#F2EDE4]">
             Still have a question not covered here?
           </h2>
@@ -501,7 +501,7 @@ export default function FAQs() {
           <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-44 h-auto" />
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-7xl mx-auto text-center space-y-10">
+        <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-10">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-[2.5rem] font-light text-[#F2EDE4] leading-snug max-w-3xl mx-auto">
             Some questions are better asked directly. The House is always
             reachable.

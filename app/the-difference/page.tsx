@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "THE DIFFERENCE", href: "/the-difference" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -27,21 +27,21 @@ const PILLARS = [
     no: "01",
     title: "Collectability & Limited Editions",
     body: "Edition I will never be remade, reissued, or extended. What is held by its two hundred and fifty owners is permanent in a way few luxury objects remain today — its value is not protected by marketing, but by the simple fact that it cannot be replicated.",
-    src: "/file_00000000a97471f4be1bee83e5dedea0.webp",
+    src: "/edition1.webp",
     alt: "Edition I bottle engraved 017 / 250",
   },
   {
     no: "02",
     title: "Emotional Ownership & Future Value",
     body: "Owning something from Maison Vereen's founding chapter is closer to holding an early work from an artist before the world recognised their name. The House cannot promise future value — no serious house ever should — but it can promise that nothing about Edition I will ever be diminished by overproduction.",
-    src: "/file_000000005fc471f495c71bc758a16ffc.webp",
+    src: "/edition1.webp",
     alt: "Maison Vereen box and archival documents",
   },
   {
     no: "03",
     title: "House Culture & Private Acquisition",
     body: "Acquisition at Maison Vereen happens through relationship — application, review, invitation — rather than instant purchase. This is not designed to create friction for its own sake. It exists because a House is assembled deliberately, member by member, the same way any institution intended to last is built.",
-    src: "/file_00000000b1e872469e4def4b87dca0c3.webp",
+    src: "/edition1.webp",
     alt: "Private Acquisition doorway plaque",
   },
 ];
@@ -99,7 +99,7 @@ export default function TheDifferencePage() {
             <div className="hidden lg:block bg-[#060506]" />
             <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/edition1.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
@@ -113,7 +113,7 @@ export default function TheDifferencePage() {
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
                 <div className="w-10 h-px bg-gold" />
@@ -187,7 +187,7 @@ export default function TheDifferencePage() {
 
         {/* ── 01 / 02 / 03 pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
               {PILLARS.map((p, i) => (
                 <article
@@ -230,7 +230,7 @@ export default function TheDifferencePage() {
 
         {/* ── Dual CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
               {/* Discover craft */}
               <div
@@ -238,7 +238,7 @@ export default function TheDifferencePage() {
               >
                 <div className="relative w-full sm:w-44 lg:w-48 shrink-0 aspect-3/4 sm:aspect-auto sm:min-h-56 overflow-hidden">
                   <Image
-                    src="/file_00000000a75471f48402160a6ed179fc.webp"
+                    src="/edition1.webp"
                     alt="Maison Vereen bottle on black marble"
                     fill
                     className="object-cover object-center"

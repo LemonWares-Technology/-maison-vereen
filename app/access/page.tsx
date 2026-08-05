@@ -246,7 +246,7 @@ export default function AccessPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 lg:left-[34%] xl:left-[30%]">
               <Image
-                src="/file_00000000a75471f48402160a6ed179fc.webp"
+                src="/images/maison-vereen-access.webp"
                 alt="Maison Vereen Edition I bottle and founding chapter box"
                 fill
                 priority
@@ -260,7 +260,7 @@ export default function AccessPage() {
             <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/55" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto pt-10 md:pt-16 pb-20 min-h-[85vh] md:min-h-screen flex items-center">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-10 md:pt-16 pb-20 min-h-[85vh] md:min-h-screen flex items-center">
             <div className="w-full max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
                 <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed block max-w-sm">
@@ -289,7 +289,7 @@ export default function AccessPage() {
 
         {/* ── Five pillars ── */}
         <section className="relative bg-[#060506] py-14 md:py-20 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -345,11 +345,11 @@ export default function AccessPage() {
 
         {/* ── Why Now ── */}
         <section className="relative bg-charcoal border-y border-gold/20 overflow-hidden">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto py-14 md:py-16">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)_auto] gap-10 lg:gap-12 items-center">
               <div className="relative w-full aspect-square max-w-48 mx-auto lg:max-w-none overflow-hidden">
                 <Image
-                  src="/file_00000000aba081f49f4ebc11da3f8c3d.webp"
+                  src="/images/maison-vereen-access.webp"
                   alt="Hourglass — the Founding Registry is finite"
                   fill
                   className="object-cover object-center"

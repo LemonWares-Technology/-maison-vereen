@@ -164,7 +164,7 @@ export default function LiveFoundingRegistryPage() {
       <main className="flex-1">
         {/* ── Hero ── */}
         <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-6 md:space-y-7 max-w-xl">
                 <div className="flex items-center gap-3">
@@ -206,7 +206,7 @@ export default function LiveFoundingRegistryPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden bg-[#0A0A0C]">
                 <Image
-                  src="/file_000000005fc471f495c71bc758a16ffc.webp"
+                  src="/privateacquisition.webp"
                   alt="Maison Vereen Founding Registry ledger"
                   fill
                   priority
@@ -246,7 +246,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── Accepted Members counter ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="border border-gold/40 bg-[#080808]/80 px-8 sm:px-12 md:px-16 py-14 md:py-20 text-center space-y-6">
               <span
                 className={`font-serif text-gold font-light leading-none block transition-opacity duration-700 ${
@@ -352,7 +352,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── Why 350? ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
               <div className="flex items-center justify-center gap-6 md:gap-8 lg:pr-12 lg:border-r lg:border-gold/30">
                 <SealMark />

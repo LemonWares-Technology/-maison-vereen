@@ -18,7 +18,7 @@ export default function FirstTwoFifty() {
         }}
       />
 
-      <div className="relative max-w-350 mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
+      <div className="relative max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 lg:py-36">
         <div className="max-w-190 mx-auto space-y-0">
 
           {/* The number — the hero of this section per blueprint */}

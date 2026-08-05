@@ -38,7 +38,7 @@ export default function ScentFamilies() {
 
   return (
     <section className="bg-[#141410] py-24 border-b border-[#8C7235]/10">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-16 text-center">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16 text-center">
         
         <span className="section-tag mb-4 block">Navigation</span>
         <h2 className="type-headline text-[#F5F0E8] mb-16">

@@ -12,7 +12,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -43,7 +43,7 @@ const SIGNATURE_BOTTLES = [
     name: "VEREEN",
     notes: "WOODY / AMBER",
     desc: "Warmth grounded in depth. Confidence without noise.",
-    src: "/file_00000000a75471f48402160a6ed179fc.webp",
+    src: "/edition1bottle.webp",
     alt: "Maison Vereen Edition I bottle — Vereen",
   },
   {
@@ -52,7 +52,7 @@ const SIGNATURE_BOTTLES = [
     name: "LUMIÈRE",
     notes: "FLORAL / MUSK",
     desc: "Light that lingers. Grace with intention.",
-    src: "/file_000000009ffc81f4b13c80251cc456a8.webp",
+    src: "/images/hero-bottle.webp",
     alt: "Maison Vereen vessel — Lumière",
   },
   {
@@ -61,7 +61,7 @@ const SIGNATURE_BOTTLES = [
     name: "OBSIDIAN",
     notes: "AMBER / LEATHER",
     desc: "Power in stillness. Presence that remains.",
-    src: "/file_00000000a97471f4be1bee83e5dedea0.webp",
+    src: "/images/the bottle.webp",
     alt: "Maison Vereen bottle detail — Obsidian",
   },
   {
@@ -70,7 +70,7 @@ const SIGNATURE_BOTTLES = [
     name: "SANTALIS",
     notes: "WOODY / SPICY",
     desc: "Quiet strength. Refined and timeless.",
-    src: "/file_000000005fc471f495c71bc758a16ffc.webp",
+    src: "/edition1bottle.webp",
     alt: "Maison Vereen packaging — Santalis",
   },
   {
@@ -204,7 +204,7 @@ export default function FragranceLibraryPage() {
           <div className="lg:hidden flex flex-col min-h-screen">
             <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
-                src="/file_000000009ffc81f4b13c80251cc456a8.webp"
+                src="/images/hero-bottle.webp"
                 alt="Maison Vereen Signature Collection bottle and vessel"
                 fill
                 priority
@@ -259,7 +259,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#060506]" />
             <div className="relative overflow-hidden">
               <Image
-                src="/file_000000009ffc81f4b13c80251cc456a8.webp"
+                src="/images/hero-bottle.webp"
                 alt="Maison Vereen Signature Collection bottle and vessel"
                 fill
                 priority
@@ -272,7 +272,7 @@ export default function FragranceLibraryPage() {
             </div>
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-7xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
                 <span className="font-serif text-lg md:text-xl text-gold">
@@ -322,7 +322,7 @@ export default function FragranceLibraryPage() {
 
         {/* ── Philosophy pillars ── */}
         <section className="relative bg-[#060506] pb-16 md:pb-24">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -349,7 +349,7 @@ export default function FragranceLibraryPage() {
           id="fragrances"
           className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5"
         >
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="text-center space-y-3">
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium">
                 The Signature Collection
@@ -412,7 +412,7 @@ export default function FragranceLibraryPage() {
           <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2 pointer-events-none">
             <div className="relative overflow-hidden">
               <Image
-                src="/images/hand_writing.webp"
+                src="/edition1bottle.webp"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -424,11 +424,11 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#060506]" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-16 md:py-24 lg:py-28">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden">
                 <Image
-                  src="/images/hand_writing.webp"
+                  src="/edition1bottle.webp"
                   alt="Archival journal and fountain pen of the House"
                   fill
                   className="object-cover object-center"
@@ -471,7 +471,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#060506]" />
             <div className="relative overflow-hidden">
               <Image
-                src="/images/wax-seal.jpg"
+                src="/images/the bottle.webp"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -482,7 +482,7 @@ export default function FragranceLibraryPage() {
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-7xl mx-auto py-16 md:py-24 lg:py-28">
+          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="space-y-5 max-w-xl order-2 lg:order-1">
                 <div className="space-y-3">
@@ -508,7 +508,7 @@ export default function FragranceLibraryPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden order-1">
                 <Image
-                  src="/images/wax-seal.jpg"
+                  src="/images/the bottle.webp"
                   alt="Gold wax seal correspondence of Maison Vereen"
                   fill
                   className="object-cover object-center"

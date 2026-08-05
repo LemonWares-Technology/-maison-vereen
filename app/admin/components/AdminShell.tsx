@@ -105,9 +105,9 @@ export default function AdminShell({
             >
               {/* Active left bar */}
               {active && (
-                <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-gold rounded-r anim-fade-in" />
+                <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-gold rounded-r anim-fade-in" />
               )}
-              <Icon className="w-[15px] h-[15px] shrink-0" />
+              <Icon className="w-3.75 h-3.75 shrink-0" />
               <span
                 className="font-medium"
                 style={{ fontSize: "16px", letterSpacing: "0.07em" }}
@@ -135,7 +135,7 @@ export default function AdminShell({
           target="_blank"
           className="flex items-center gap-2.5 px-3 py-2.5 rounded-sm text-[#3A3530] hover:text-[#EDE8DE] transition-colors duration-200"
         >
-          <ExternalLink className="w-[14px] h-[14px]" />
+          <ExternalLink className="w-3.75 h-3.75" />
           <span
             style={{ fontSize: "16px", letterSpacing: "0.07em" }}
             className="font-medium"
@@ -150,7 +150,7 @@ export default function AdminShell({
           disabled={logging}
           className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-sm text-[#4A4438] hover:text-red-400 hover:bg-red-900/8 transition-all duration-200 disabled:opacity-50"
         >
-          <LogOut className="w-[14px] h-[14px] shrink-0" />
+          <LogOut className="w-3.75 h-3.75 shrink-0" />
           <span
             style={{ fontSize: "16px", letterSpacing: "0.07em" }}
             className="font-medium"
@@ -165,7 +165,7 @@ export default function AdminShell({
   return (
     <div className="flex h-screen overflow-hidden bg-charcoal">
       {/* ── Desktop sidebar ── */}
-      <aside className="hidden md:flex flex-col w-[220px] lg:w-[240px] shrink-0 bg-charcoal border-r border-white/5">
+      <aside className="hidden md:flex flex-col w-55 lg:w-60 shrink-0 bg-charcoal border-r border-white/5">
         {SidebarInner}
       </aside>
 
@@ -179,7 +179,7 @@ export default function AdminShell({
             aria-label="Close menu"
           />
           {/* Drawer */}
-          <aside className="relative w-[240px] shrink-0 bg-charcoal border-r border-white/6 flex flex-col admin-drawer">
+          <aside className="relative w-60 shrink-0 bg-charcoal border-r border-white/6 flex flex-col admin-drawer">
             {SidebarInner}
           </aside>
         </div>
@@ -209,7 +209,7 @@ export default function AdminShell({
 
         {/* Scrollable content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="px-5 py-6 md:px-8 md:py-8 lg:px-10 lg:py-10 max-w-[1280px] w-full mx-auto">
+          <div className="px-5 py-6 md:px-8 md:py-8 lg:px-10 lg:py-10 max-w-6xl w-full mx-auto">
             {children}
           </div>
         </main>
@@ -219,7 +219,7 @@ export default function AdminShell({
       {showLogoutConfirm && (
         <div className="fixed inset-0 z-70 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
           <div
-            className="w-full max-w-[400px] bg-charcoal border border-white/8 p-6 space-y-6 shadow-2xl anim-scale-in"
+            className="w-full max-w-100 bg-charcoal border border-white/8 p-6 space-y-6 shadow-2xl anim-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="space-y-2">
