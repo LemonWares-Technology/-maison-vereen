@@ -145,13 +145,13 @@ export default function TheHousePage() {
 
           <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
-              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">
-                12
-              </span>
-              <div className="w-8 h-px bg-gold" />
-              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
+              <div className="flex items-center gap-3">
+              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">12</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
                 The House
               </span>
+            </div>
               <h1
                 className="font-serif font-light text-[#EDE8DE] leading-[1.08] tracking-tight"
                 style={{ fontSize: "clamp(2.1rem, 5.5vw, 4.25rem)" }}
@@ -159,7 +159,7 @@ export default function TheHousePage() {
                 A House Is Not Built in a Season.
               </h1>
               <div className="w-8 h-px bg-gold" />
-              <p className="font-serif text-base font-normal leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Maison Vereen is building toward institutional permanence — a House
                 whose values, culture, and craftsmanship are intended to outlast any
                 single collection, founder, or era.
@@ -186,13 +186,13 @@ export default function TheHousePage() {
 
         <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
-            <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
-              12
-            </span>
-            <div className="w-8 h-px bg-gold" />
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium">
-              The House
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">12</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-semibold">
+                The House
+              </span>
+            </div>
             <h1
               className="font-serif font-light text-[#EDE8DE] leading-[1.08] tracking-tight"
               style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)" }}
@@ -200,7 +200,7 @@ export default function TheHousePage() {
               A House Is Not Built in a Season.
             </h1>
             <div className="w-8 h-px bg-gold" />
-            <p className="font-serif text-base md:text-lg font-normal leading-[1.85] text-[#EDE8DE] max-w-md">
+            <p className="body-copy max-w-md">
               Maison Vereen is building toward institutional permanence — a House
               whose values, culture, and craftsmanship are intended to outlast any
               single collection, founder, or era.
@@ -212,7 +212,7 @@ export default function TheHousePage() {
       {/* Philosophy intro + pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28">
         <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
-          <p className="font-serif font-normal text-center text-[#F2EDE4] leading-[1.7] max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl">
+          <p className="body-copy text-center max-w-3xl mx-auto">
             Everything explored elsewhere on this site — Edition I, the Signature
             Collection, the Founding Registry — exists within something larger: the
             House itself. This page steps back from any single product to describe
@@ -230,7 +230,7 @@ export default function TheHousePage() {
                 <div className="text-gold">
                   <PillarIcon type={pillar.icon} />
                 </div>
-                <p className="font-serif text-base sm:text-lg font-normal leading-[1.85] text-[#EDE8DE] max-w-sm">
+                <p className="body-copy max-w-sm">
                   {pillar.body}
                 </p>
               </div>
@@ -239,7 +239,7 @@ export default function TheHousePage() {
         </div>
       </section>
 
-      {/* Values & Culture / The Next Century */}
+      {/* Values & Culture / The Next Century — full-bleed media, text on header rail */}
       <section className="relative bg-[#060506] border-t border-gold/15">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* 01 Values & Culture */}
@@ -253,7 +253,7 @@ export default function TheHousePage() {
             />
             <div className="absolute inset-0 bg-[#060506]/70" />
             <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/50 to-[#060506]/40" />
-            <div className="relative z-10 flex h-full min-h-150 flex-col justify-end gap-6 px-8 py-12 md:px-12 md:py-16 xl:px-14">
+            <div className="relative z-10 flex h-full min-h-150 flex-col justify-end gap-6 content-rail-inset-l py-12 md:py-16">
               <div className="space-y-2">
                 <span className="font-sans text-sm text-gold tracking-wide">01</span>
                 <div className="w-8 h-px bg-gold" />
@@ -261,7 +261,7 @@ export default function TheHousePage() {
               <h2 className="font-serif text-3xl md:text-4xl font-light text-[#EDE8DE]">
                 Values &amp; Culture
               </h2>
-              <p className="font-serif text-lg md:text-xl font-medium leading-[1.75] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Every person who works within Maison Vereen, in any capacity, is
                 held to the same standard: craftsmanship first, growth second.
                 Decisions that would compromise quality for speed or scale are not
@@ -271,7 +271,7 @@ export default function TheHousePage() {
                 {VALUES_LIST.map((item) => (
                   <li
                     key={item}
-                    className="flex items-center gap-3 font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold"
+                    className="flex items-center gap-3 font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold font-semibold"
                   >
                     <span className="h-px w-4 shrink-0 bg-gold/70" aria-hidden />
                     {item}
@@ -292,7 +292,7 @@ export default function TheHousePage() {
             />
             <div className="absolute inset-0 bg-[#060506]/70" />
             <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/50 to-[#060506]/40" />
-            <div className="relative z-10 flex h-full min-h-150 flex-col justify-end gap-6 px-8 py-12 md:px-12 md:py-16 xl:px-14">
+            <div className="relative z-10 flex h-full min-h-150 flex-col justify-end gap-6 content-rail-inset-r py-12 md:py-16">
               <div className="space-y-2">
                 <span className="font-sans text-sm text-gold tracking-wide">02</span>
                 <div className="w-8 h-px bg-gold" />
@@ -300,7 +300,7 @@ export default function TheHousePage() {
               <h2 className="font-serif text-3xl md:text-4xl font-light text-[#EDE8DE]">
                 The Next Century
               </h2>
-              <p className="font-serif text-lg md:text-xl font-medium leading-[1.75] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Maison Vereen is not building toward a successful launch. It is
                 building toward an institution capable of outliving its founder,
                 its first collectors, and its first century — the same way the
@@ -311,7 +311,7 @@ export default function TheHousePage() {
                 {CENTURY_LIST.map((item) => (
                   <li
                     key={item}
-                    className="flex items-center gap-3 font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold"
+                    className="flex items-center gap-3 font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold font-semibold"
                   >
                     <span className="h-px w-4 shrink-0 bg-gold/70" aria-hidden />
                     {item}
@@ -327,7 +327,7 @@ export default function TheHousePage() {
       <section className="relative bg-[#060506] py-20 md:py-28 border-t border-gold/15">
         <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
           <div className="text-center space-y-4">
-            <span className="font-serif text-xs uppercase tracking-[0.3em] text-gold font-medium block">
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-semibold block">
               A Journey Measured in Generations
             </span>
             <div className="mx-auto h-px w-10 bg-gold" />
@@ -355,12 +355,12 @@ export default function TheHousePage() {
                       <span className="absolute inset-1 rounded-full bg-gold" />
                     )}
                   </div>
-                  <p className="font-serif text-[11px] xl:text-xs uppercase tracking-[0.16em] text-gold leading-snug">
+                  <p className="font-sans text-[11px] xl:text-xs uppercase tracking-[0.16em] text-gold font-semibold leading-snug">
                     {step.year}
                     <br />
                     {step.title}
                   </p>
-                  <p className="mt-4 font-sans text-sm font-medium leading-relaxed text-[#EDE8DE]">
+                  <p className="mt-4 body-copy">
                     {step.body}
                   </p>
                 </div>
@@ -382,10 +382,10 @@ export default function TheHousePage() {
                       : "h-2.5 w-2.5"
                   }`}
                 />
-                <p className="font-serif text-xs uppercase tracking-[0.18em] text-gold leading-snug">
+                <p className="font-sans text-xs uppercase tracking-[0.18em] text-gold font-semibold leading-snug">
                   {step.year} {step.title}
                 </p>
-                <p className="mt-3 font-sans text-sm font-medium leading-relaxed text-[#EDE8DE]">
+                <p className="mt-3 body-copy">
                   {step.body}
                 </p>
               </div>
@@ -403,23 +403,23 @@ export default function TheHousePage() {
           <Image src="/logo-mark.webp" alt="" width={180} height={140} className="w-40 h-auto" />
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-[2.5rem] font-light text-[#F2EDE4] leading-snug">
+        <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+          <h2 className="body-copy">
             An institution is proven not by what it says about itself, but by what
             others say about it.
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
               <ArrowIcon />
               </Link>
             <Link
               href="/social-proof"
-              className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Read What Others Are Saying
               <ArrowIcon />

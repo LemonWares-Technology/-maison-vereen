@@ -195,7 +195,7 @@ export default function FinalInvitationPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 lg:left-[30%] xl:left-[26%]">
               <Image
-                src="/images/application-hero.webp"
+                src="/images/fragrance-dark.webp"
                 alt="Maison Vereen Edition I bottle, box, and sealed correspondence"
                 fill
                 priority
@@ -211,12 +211,10 @@ export default function FinalInvitationPage() {
 
           <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
-              <div className="space-y-3">
-                <span className="font-serif text-lg md:text-xl text-gold block">
-                  16
-                </span>
-                <div className="w-10 h-px bg-gold" />
-                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-lg md:text-xl text-gold">16</span>
+                <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
                   Final Invitation
                 </span>
               </div>
@@ -262,7 +260,7 @@ export default function FinalInvitationPage() {
                   >
                     {p.title}
                   </h2>
-                  <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE]">
+                  <p className="body-copy">
                     {p.body}
                   </p>
                 </div>
@@ -311,23 +309,22 @@ export default function FinalInvitationPage() {
                 </span>
 
                 <h2
-                  className="font-serif font-light text-[#F2EDE4] leading-snug"
-                  style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}
+                  className="body-copy"
                 >
                   The choice, as always, is yours.
                 </h2>
 
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
                   <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors text-center"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-6 sm:px-8 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors text-center"
               >
                 Apply to the Maison Vereen Founding Registry
                     <ArrowIcon />
               </Link>
                   <Link
                     href="/fragrance-library"
-                    className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-medium transition-colors text-center"
+                    className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 sm:px-8 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors text-center"
                   >
                     Discover the Signature Collection
                     <ArrowIcon />
@@ -363,12 +360,12 @@ export default function FinalInvitationPage() {
                   {a.href ? (
                     <a
                       href={a.href}
-                      className="font-serif text-base font-light text-gold hover:text-gold-light transition-colors"
+                      className="font-sans text-base font-normal text-gold hover:text-gold-light transition-colors"
                     >
                       {a.body}
                     </a>
                   ) : (
-                    <p className="font-serif text-base font-light leading-[1.75] text-[#EDE8DE]">
+                    <p className="body-copy">
                       {a.body}
                     </p>
                   )}

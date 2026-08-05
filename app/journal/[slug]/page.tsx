@@ -219,7 +219,7 @@ export default function ArticlePage() {
         <section className="bg-charcoal">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-16 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
-              className="font-serif font-light italic text-[#4A4540] max-w-125"
+              className="body-copy-on-cream max-w-125"
               style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.2rem)" }}
             >
               &ldquo;Continue reading the house&apos;s story.&rdquo;

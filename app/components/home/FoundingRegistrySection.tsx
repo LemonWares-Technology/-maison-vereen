@@ -60,14 +60,14 @@ export default function FoundingRegistrySection() {
               Applications remain open while Edition I remains available.
             </h2>
 
-            <p className="font-sans text-sm md:text-base font-light leading-[1.9] text-[#EDE8DE]/95">
+            <p className="body-copy">
               Apply to become one of the original 250 collectors.
             </p>
 
             <div className="pt-2">
               <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Registry
                 <ArrowIcon />

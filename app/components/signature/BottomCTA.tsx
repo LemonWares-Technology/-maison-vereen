@@ -48,7 +48,7 @@ export default function BottomCTA() {
       {/* PAGE 11 → PAGE 12 transition */}
       <section className="bg-[#060506] border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-10 text-center">
-          <p className="font-serif font-light italic text-[#EDE8DE]" style={{ fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)" }}>
+          <p className="body-copy">
             The Signature Collection is the ongoing work. What follows is the institution behind all of it.
           </p>
           <Link

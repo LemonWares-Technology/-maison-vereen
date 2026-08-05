@@ -27,21 +27,21 @@ const PILLARS = [
     no: "01",
     title: "Collectability & Limited Editions",
     body: "Edition I will never be remade, reissued, or extended. What is held by its two hundred and fifty owners is permanent in a way few luxury objects remain today — its value is not protected by marketing, but by the simple fact that it cannot be replicated.",
-    src: "/edition1.webp",
+    src: "/privateacquisition.webp",
     alt: "Edition I bottle engraved 017 / 250",
   },
   {
     no: "02",
     title: "Emotional Ownership & Future Value",
     body: "Owning something from Maison Vereen's founding chapter is closer to holding an early work from an artist before the world recognised their name. The House cannot promise future value — no serious house ever should — but it can promise that nothing about Edition I will ever be diminished by overproduction.",
-    src: "/edition1.webp",
+    src: "/privateacquisition.webp",
     alt: "Maison Vereen box and archival documents",
   },
   {
     no: "03",
     title: "House Culture & Private Acquisition",
     body: "Acquisition at Maison Vereen happens through relationship — application, review, invitation — rather than instant purchase. This is not designed to create friction for its own sake. It exists because a House is assembled deliberately, member by member, the same way any institution intended to last is built.",
-    src: "/edition1.webp",
+    src: "/privateacquisition.webp",
     alt: "Private Acquisition doorway plaque",
   },
 ];
@@ -99,7 +99,7 @@ export default function TheDifferencePage() {
             <div className="hidden lg:block bg-[#060506]" />
             <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
               <Image
-                src="/edition1.webp"
+                src="/privateacquisition.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
@@ -133,7 +133,7 @@ export default function TheDifferencePage() {
                 {HERO_POINTS.map((point) => (
                   <li
                     key={point}
-                    className="flex items-start gap-3 font-serif text-base md:text-lg font-light leading-snug text-gold"
+                    className="flex items-start gap-3 font-sans text-base font-normal leading-snug text-gold"
                   >
                     <span
                       className="mt-[0.7em] w-4 h-px bg-gold shrink-0"
@@ -144,7 +144,7 @@ export default function TheDifferencePage() {
                 ))}
               </ul>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-gold/90 max-w-md">
+              <p className="body-copy max-w-md">
                 Every serious luxury house has its own philosophy. This is the
                 architecture of Maison Vereen&apos;s — built around
                 collectability, emotional ownership, and a culture rather than a
@@ -157,7 +157,7 @@ export default function TheDifferencePage() {
         {/* ── Extended philosophy ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto">
-            <div className="border-l border-gold/50 pl-6 sm:pl-10 md:pl-12 space-y-7 font-serif text-lg md:text-xl lg:text-[1.35rem] font-light leading-[1.85] text-[#EDE8DE]">
+            <div className="border-l border-gold/50 pl-6 sm:pl-10 md:pl-12 space-y-7 body-copy">
               <p>
                 Visitors who have considered other fragrance houses arrive here
                 with a quiet, reasonable question: why is this different from
@@ -209,7 +209,7 @@ export default function TheDifferencePage() {
                   </div>
 
                   <div className="space-y-3">
-                    <span className="font-serif text-xl text-gold font-light block">
+                    <span className="font-sans text-sm text-gold tracking-wide font-semibold block">
                       {p.no}
                     </span>
                     <h2
@@ -218,7 +218,7 @@ export default function TheDifferencePage() {
                     >
                       {p.title}
                     </h2>
-                    <p className="font-serif text-base md:text-[1.05rem] font-light leading-[1.8] text-[#EDE8DE]">
+                    <p className="body-copy">
                       {p.body}
                     </p>
                   </div>
@@ -229,16 +229,14 @@ export default function TheDifferencePage() {
         </section>
 
         {/* ── Dual CTAs ── */}
-        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
+        <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5 overflow-hidden">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
               {/* Discover craft */}
-              <div
-                className={`flex flex-col sm:flex-row gap-6 lg:gap-8 items-stretch lg:pr-10 xl:pr-14`}
-              >
+              <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 items-stretch lg:pr-10 xl:pr-14 min-w-0">
                 <div className="relative w-full sm:w-44 lg:w-48 shrink-0 aspect-3/4 sm:aspect-auto sm:min-h-56 overflow-hidden">
                   <Image
-                    src="/edition1.webp"
+                    src="/privateacquisition.webp"
                     alt="Maison Vereen bottle on black marble"
                     fill
                     className="object-cover object-center"
@@ -257,16 +255,20 @@ export default function TheDifferencePage() {
                   </h3>
                   <Link
                     href="/the-founder"
-                    className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-5 py-3.5 text-[10px] sm:text-[11px] tracking-[0.18em] uppercase font-semibold transition-colors self-start text-center"
+                    className="inline-flex w-full max-w-md items-center justify-between gap-3 bg-gold hover:bg-gold-light text-[#060506] px-5 py-3.5 text-[10px] sm:text-[11px] tracking-[0.14em] sm:tracking-[0.16em] uppercase font-semibold transition-colors text-left"
                   >
-                    Meet the Artisans Behind Every Fragrance
-                    <ArrowIcon />
+                    <span className="min-w-0 leading-snug">
+                      Meet the Artisans Behind Every Fragrance
+                    </span>
+                    <span className="shrink-0" aria-hidden>
+                      <ArrowIcon />
+                    </span>
                   </Link>
                 </div>
               </div>
 
               {/* Apply */}
-              <div className="flex flex-col justify-center gap-6 lg:pl-10 xl:pl-14 lg:border-l lg:border-gold/25">
+              <div className="relative z-10 flex flex-col justify-center gap-6 lg:pl-10 xl:pl-14 lg:border-l lg:border-gold/25 min-w-0 bg-[#060506]">
                 <h3
                   className="font-serif font-light text-[#F2EDE4] leading-snug"
                   style={{ fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)" }}
@@ -274,13 +276,13 @@ export default function TheDifferencePage() {
                   Ready to be part of the Maison?
                 </h3>
                 <Link
-                href="/apply"
-                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
-              >
-                Apply for a Position
+                  href="/apply"
+                  className="inline-flex w-full max-w-md items-center justify-between gap-3 border border-gold text-gold hover:bg-gold/10 px-5 py-3.5 text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors"
+                >
+                  <span>Apply for a Position</span>
                   <ArrowIcon />
-              </Link>
-                <p className="font-serif text-base font-light leading-[1.75] text-[#EDE8DE]/85 max-w-sm">
+                </Link>
+                <p className="body-copy max-w-sm">
                   Applications are by consideration. For those who believe in
                   what we build.
                 </p>
@@ -300,17 +302,14 @@ export default function TheDifferencePage() {
               className="w-10 h-auto mx-auto"
             />
 
-            <h2
-              className="font-serif font-light text-gold leading-snug italic"
-              style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
-            >
+            <h2 className="body-copy">
               Philosophy explains why the House exists. The individuals behind
               every bottle explain how it is made real.
             </h2>
 
             <Link
               href="/the-craft"
-              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors font-medium"
+              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors font-semibold"
             >
               Next: The Individual Behind Every Fragrance
               <CircleArrowIcon />

@@ -182,7 +182,7 @@ export default function SocialProofPage() {
                 Recognised by Those Who Know the Difference.
               </h1>
 
-              <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 This page exists as a living, growing record of recognition —
                 collector testimonials, press coverage, and milestones —
                 documented as the House&apos;s history, not displayed as
@@ -195,7 +195,7 @@ export default function SocialProofPage() {
         {/* ── Documentation statement ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto">
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] text-center">
+            <p className="body-copy text-center">
               Maison Vereen&apos;s social proof is designed never to feel like
               reviews. Reviews are what consumers leave for products. What
               appears here is documentation — the accumulating record of a
@@ -222,7 +222,7 @@ export default function SocialProofPage() {
                   >
                     Collector &amp; Member Reflections
                   </h2>
-                  <p className="font-sans text-sm md:text-base font-light leading-[1.85] text-[#EDE8DE]/85 max-w-md">
+                  <p className="body-copy max-w-md">
                     Reflections shared by Founding Registry members and
                     collectors, presented as quoted excerpts with name, country,
                     and (where relevant) bottle number — never as star ratings or
@@ -244,7 +244,7 @@ export default function SocialProofPage() {
                         &ldquo;
                       </span>
 
-                      <p className="font-serif text-sm sm:text-[0.9rem] lg:text-[0.95rem] font-medium leading-[1.7] text-[#EDE8DE] min-w-0">
+                      <p className="body-copy min-w-0">
                         {r.quote}
                         <span className="text-gold" aria-hidden>
                           &rdquo;
@@ -279,7 +279,7 @@ export default function SocialProofPage() {
                   >
                     Press, Editorial &amp; Milestones
                   </h2>
-                  <p className="font-sans text-sm md:text-base font-light leading-[1.85] text-[#EDE8DE]/85 max-w-md">
+                  <p className="body-copy max-w-md">
                     A running record of press coverage, editorial features,
                     interviews, awards, notable events, and House milestones,
                     displayed chronologically as the unfolding record of Maison
@@ -379,7 +379,7 @@ export default function SocialProofPage() {
               {PRESS_LOGOS.map((logo) => (
                 <span
                   key={logo}
-                  className="font-serif text-sm sm:text-base tracking-[0.18em] text-[#EDE8DE]/55 hover:text-[#EDE8DE]/85 transition-colors"
+                  className="font-sans text-sm sm:text-base tracking-[0.18em] text-[#EDE8DE]/55 hover:text-[#EDE8DE]/85 transition-colors"
                 >
                   {logo}
                 </span>
@@ -438,7 +438,7 @@ export default function SocialProofPage() {
                       }`}
                     />
 
-                    <p className="font-serif text-sm font-light leading-[1.7] text-[#EDE8DE] pt-6 max-w-44">
+                    <p className="body-copy pt-6 max-w-44">
                       {m.body}
                     </p>
                   </div>
@@ -467,7 +467,7 @@ export default function SocialProofPage() {
                       ) : null}
                       {m.title}
                     </h3>
-                    <p className="font-serif text-base font-light leading-[1.7] text-[#EDE8DE]">
+                    <p className="body-copy">
                       {m.body}
                     </p>
                   </div>
@@ -501,26 +501,23 @@ export default function SocialProofPage() {
 
         {/* ── Closing CTAs ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
-            <h2
-              className="font-serif font-light text-[#F2EDE4] leading-snug"
-              style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.35rem)" }}
-            >
+          <div className="w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+            <h2 className="body-copy">
               Recognition answers some questions. Practical ones remain — and
               deserve clear answers.
             </h2>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />
               </Link>
               <Link
                 href="/faqs"
-                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Read Frequently Asked Questions
                 <ArrowIcon />

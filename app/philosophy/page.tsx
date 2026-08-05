@@ -144,20 +144,20 @@ export default function PhilosophyPage() {
                 Luxury Is Not Volume. It Is Conviction.
               </h1>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-gold max-w-lg">
+              <p className="body-copy max-w-lg">
                 Ten convictions govern Maison Vereen. None of them are
                 negotiable, and none of them were chosen for how they would
                 market.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-2">
-                <p className="font-serif text-base font-light leading-[1.8] text-[#EDE8DE]">
+                <p className="body-copy">
                   Every house, knowingly or not, is built on a set of beliefs.
                   Most never state them. Maison Vereen states them plainly,
                   because a House that intends to last a century cannot afford
                   to leave its convictions unwritten.
                 </p>
-                <p className="font-serif text-base font-light leading-[1.8] text-[#EDE8DE]">
+                <p className="body-copy">
                   These beliefs are not slogans. They are the standard against
                   which every formulation, every material, every piece of
                   correspondence with a collector, and every page of this
@@ -200,10 +200,10 @@ export default function PhilosophyPage() {
                     <h2 className="font-serif text-xl md:text-2xl font-light tracking-[0.12em] uppercase text-gold">
                       {c.title}
                     </h2>
-                    <p className="font-serif text-base md:text-lg italic font-light text-gold/90 leading-snug">
+                    <p className="body-copy">
                       {c.purpose}
                     </p>
-                    <p className="font-serif text-base md:text-[1.1rem] font-light leading-[1.85] text-[#EDE8DE]">
+                    <p className="body-copy">
                       {c.body}
                     </p>
                   </div>
@@ -234,7 +234,7 @@ export default function PhilosophyPage() {
                 </h3>
                 <Link
                   href="/the-founder"
-                  className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
+                  className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
                 >
                   Meet the Founder
                   <ArrowIcon />
@@ -250,7 +250,7 @@ export default function PhilosophyPage() {
                 </h3>
                 <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
               >
                 Apply for a Position
                   <ArrowIcon />
@@ -264,8 +264,7 @@ export default function PhilosophyPage() {
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <h2
-              className="font-serif font-light text-gold leading-snug italic"
-              style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
+              className="body-copy"
             >
               A philosophy this deliberate does not appear by accident. It
               begins with one person&apos;s conviction.

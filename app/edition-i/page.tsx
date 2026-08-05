@@ -86,14 +86,10 @@ export default function EditionIPage() {
               <div className="w-full max-w-lg space-y-5">
                 <div className="flex items-center gap-3">
                   <span className="font-serif text-lg text-gold">01</span>
-                  <div className="w-6 h-px bg-gold" />
-                </div>
-
-                <div className="space-y-2">
-                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-semibold">
                     Edition I: House of 250
                   </span>
-                  <div className="w-10 h-px bg-gold" />
                 </div>
 
                 <h1
@@ -105,7 +101,7 @@ export default function EditionIPage() {
                   No More, Ever.
                 </h1>
 
-                <p className="font-serif text-base sm:text-lg font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   Edition I is Maison Vereen&apos;s founding chapter.
                 </p>
               </div>
@@ -132,16 +128,12 @@ export default function EditionIPage() {
           <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
-                <span className="font-serif text-lg md:text-xl text-gold">01</span>
-                <div className="w-6 h-px bg-gold" />
-              </div>
-
-              <div className="space-y-2">
-                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
-                  Edition I: House of 250
-                </span>
-                <div className="w-10 h-px bg-gold" />
-              </div>
+                  <span className="font-serif text-lg md:text-xl text-gold">01</span>
+                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
+                    Edition I: House of 250
+                  </span>
+                </div>
 
               <h1
                 className="font-serif font-light text-gold leading-[1.08] tracking-tight"
@@ -152,7 +144,7 @@ export default function EditionIPage() {
                 No More, Ever.
               </h1>
 
-              <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Edition I is Maison Vereen&apos;s founding chapter.
               </p>
             </div>
@@ -176,7 +168,7 @@ export default function EditionIPage() {
               02
             </span>
 
-            <div className="space-y-8 font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#2C2823]">
+            <div className="space-y-8 body-copy-on-cream">
               <p>
                 Edition I exists once. When the two hundred and fiftieth bottle
                 is placed into a collector&apos;s hands, the edition closes
@@ -248,7 +240,7 @@ export default function EditionIPage() {
                 >
                   Numbering Philosophy
                 </h2>
-                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE]">
+                <p className="body-copy">
                   Numbers are assigned in the order applicants are formally
                   accepted into the Founding Registry — meaning a bottle&apos;s
                   number reflects not when it was purchased, but when its owner
@@ -285,12 +277,12 @@ export default function EditionIPage() {
                 >
                   Certificate of Authenticity &amp; Ownership Experience
                 </h2>
-                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#2C2823]">
+                <p className="body-copy-on-cream">
                   Every Edition I bottle is accompanied by a signed certificate
                   of authenticity, recording its number, its owner&apos;s name,
                   and its place within the two hundred and fifty.
                 </p>
-                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#2C2823]">
+                <p className="body-copy-on-cream">
                   Ownership includes private correspondence from the House at
                   the time of acquisition and continued recognition as a founding
                   member for as long as the House exists.
@@ -321,7 +313,7 @@ export default function EditionIPage() {
                   <h3 className="font-serif text-xl md:text-2xl font-light text-gold">
                     {pillar.title}
                   </h3>
-                  <p className="font-serif text-lg font-medium leading-[1.85] text-[#EDE8DE] max-w-sm mx-auto">
+                  <p className="body-copy max-w-sm mx-auto">
                     {pillar.body}
                   </p>
                 </div>
@@ -379,7 +371,7 @@ export default function EditionIPage() {
             >
               History does not get a reprint.
             </h2>
-            <p className="font-serif text-lg md:text-xl font-medium leading-relaxed text-[#4A433A] max-w-2xl mx-auto">
+            <p className="body-copy-on-cream max-w-2xl mx-auto">
               Maison Vereen will never reproduce Edition I under any
               circumstance.
             </p>
@@ -396,7 +388,7 @@ export default function EditionIPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-5 sm:gap-8">
               <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />

@@ -98,7 +98,7 @@ export default function FutureVision() {
         {/* Closing — exact copy from document Page 8 */}
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <p
-            className="font-serif font-light italic text-[#4A4540] tracking-[0.04em] max-w-[580px]"
+            className="body-copy-on-cream tracking-[0.04em] max-w-[580px]"
             style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}
           >
             &ldquo;The people who are part of Maison Vereen in its founding

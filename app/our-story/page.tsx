@@ -86,7 +86,7 @@ export default function OurStoryPage() {
                   Some houses sell scent. This one builds legacy.
                 </p>
 
-                <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   Maison Vereen exists to elevate fragrance into collectible art —
                   and to prove that a luxury house of true global standing can be
                   born in Africa.
@@ -135,7 +135,7 @@ export default function OurStoryPage() {
                 Some houses sell scent. This one builds legacy.
               </p>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Maison Vereen exists to elevate fragrance into collectible art —
                 and to prove that a luxury house of true global standing can be
                 born in Africa.
@@ -157,7 +157,7 @@ export default function OurStoryPage() {
               />
             </div>
 
-            <div className="flex items-center px-8 sm:px-12 md:px-14 lg:px-16 py-16 md:py-20">
+            <div className="flex items-center content-rail-inset-r py-16 md:py-20 lg:pl-12">
               <div className="space-y-8 max-w-xl">
                 <div className="space-y-3">
                   <span className="font-serif text-2xl md:text-3xl text-gold font-light block">
@@ -166,7 +166,7 @@ export default function OurStoryPage() {
                   <div className="w-10 h-px bg-gold" />
                 </div>
 
-                <div className="space-y-6 font-serif text-base md:text-lg font-medium leading-[1.85] text-[#2C2823]">
+                <div className="space-y-6 body-copy-on-cream">
                   <p>
                     Maison Vereen is a luxury maison built around two distinct
                     experiences: Edition I, the founding collector&apos;s
@@ -224,7 +224,7 @@ export default function OurStoryPage() {
               {/* Scrim for text legibility — not an edge melt */}
               <div className="absolute inset-0 bg-[#060506]/72" />
 
-              <div className="relative z-10 h-full flex items-end lg:items-center px-8 sm:px-10 md:px-12 lg:px-14 py-14 md:py-16">
+              <div className="relative z-10 h-full flex items-end lg:items-center content-rail-inset-l py-14 md:py-16 lg:pr-12">
                 <div className="space-y-5 max-w-md">
                   <div className="space-y-3">
                     <span className="font-serif text-xl text-gold font-light block">
@@ -234,11 +234,10 @@ export default function OurStoryPage() {
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.1rem)" }}
-                  >
+                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
                     What We Are
                   </h2>
-                  <div className="space-y-4 font-serif text-base md:text-[1.05rem] font-light leading-[1.8] text-[#EDE8DE]">
+                  <div className="space-y-4 body-copy">
                     <p>
                       Maison Vereen is a fragrance house, not a fragrance brand
                       — a distinction the House holds carefully. A brand sells
@@ -266,7 +265,7 @@ export default function OurStoryPage() {
               />
               <div className="absolute inset-0 bg-[#060506]/72" />
 
-              <div className="relative z-10 h-full flex items-end lg:items-center px-8 sm:px-10 md:px-12 lg:px-14 py-14 md:py-16">
+              <div className="relative z-10 h-full flex items-end lg:items-center content-rail-inset-r py-14 md:py-16 lg:pl-12">
                 <div className="space-y-5 max-w-md">
                   <div className="space-y-3">
                     <span className="font-serif text-xl text-gold font-light block">
@@ -276,11 +275,10 @@ export default function OurStoryPage() {
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.1rem)" }}
-                  >
+                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
                     Why Fragrance Can Become Art
                   </h2>
-                  <div className="space-y-4 font-serif text-base md:text-[1.05rem] font-light leading-[1.8] text-[#EDE8DE]">
+                  <div className="space-y-4 body-copy">
                     <p>
                       Wine, watches, and rare manuscripts are collected for
                       scarcity, craftsmanship, provenance, and the story a
@@ -303,59 +301,59 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* ── Cream CTAs ── */}
+        {/* ── Cream CTAs — full-bleed split, text on header rail ── */}
         <section className="relative bg-[#EDE8DE] text-[#2C2823] overflow-hidden">
-          <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-[0.12] pointer-events-none hidden md:block">
-            <Image
-              src="/images/philosophy-hero.webp"
-              alt=""
-              fill
-              className="object-cover object-left"
-              sizes="50vw"
-            />
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Left: cream */}
+            <div className="relative flex flex-col justify-center gap-5 content-rail-inset-l py-16 md:py-24 lg:pr-12">
+              <h3
+                className="font-serif font-light text-[#2C2823] leading-snug"
+                style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)" }}
+              >
+                Continue the journey.
+              </h3>
+              <p className="body-copy-on-cream max-w-md">
+                Understanding what Maison Vereen is naturally raises a deeper
+                question — what does it believe?
+              </p>
+              <Link
+                href="/philosophy"
+                className="inline-flex w-full max-w-md items-center justify-between gap-4 border border-[#2C2823] hover:bg-[#2C2823] hover:text-[#EDE8DE] text-[#2C2823] px-5 sm:px-6 py-3.5 text-[11px] tracking-[0.18em] sm:tracking-[0.2em] uppercase font-semibold transition-colors whitespace-nowrap"
+              >
+                <span>Continue to the Philosophy</span>
+                <ArrowIcon />
+              </Link>
+            </div>
 
-          <div className="relative w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
-              <div className="space-y-5 lg:pr-12 xl:pr-16">
-                <h3
-                  className="font-serif font-light text-[#2C2823] leading-snug"
-                  style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)" }}
-                >
-                  Continue the journey.
-                </h3>
-                <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#2C2823]/85 max-w-md">
-                  Understanding what Maison Vereen is naturally raises a deeper
-                  question — what does it believe?
-                </p>
-                <Link
-                  href="/philosophy"
-                  className="inline-flex items-center justify-center gap-3 border border-[#2C2823]/50 hover:border-[#2C2823] text-[#2C2823] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-medium transition-colors"
-                >
-                  Continue to the Philosophy
-                  <ArrowIcon />
-                </Link>
-              </div>
-
-              <div className="space-y-5 lg:pl-12 xl:pl-16 lg:border-l lg:border-[#2C2823]/20">
+            {/* Right: image with readable overlay */}
+            <div className="relative min-h-90 lg:min-h-full overflow-hidden">
+              <Image
+                src="/images/philosophy-hero.webp"
+                alt=""
+                fill
+                className="object-cover object-[center_30%]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-[#EDE8DE]/78" />
+              <div className="relative z-10 flex h-full flex-col justify-center gap-5 content-rail-inset-r py-16 md:py-24 lg:pl-12">
                 <h3
                   className="font-serif font-light text-[#2C2823] leading-snug"
                   style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)" }}
                 >
                   Ready to be part of the House?
                 </h3>
-                <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#2C2823]/85 max-w-md">
+                <p className="body-copy-on-cream max-w-md">
                   Applications are by consideration. If you believe you have
                   what it takes to contribute to a legacy in the making, we
                   invite you to apply.
                 </p>
                 <Link
-                href="/apply"
-                className="inline-flex items-center justify-center gap-3 border border-[#2C2823]/50 hover:border-[#2C2823] text-[#2C2823] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-medium transition-colors"
-              >
-                Apply for a Position
+                  href="/apply"
+                  className="inline-flex w-full max-w-md items-center justify-between gap-4 border border-[#2C2823] hover:bg-[#2C2823] hover:text-[#EDE8DE] text-[#2C2823] px-5 sm:px-6 py-3.5 text-[11px] tracking-[0.18em] sm:tracking-[0.2em] uppercase font-semibold transition-colors whitespace-nowrap"
+                >
+                  <span>Apply for a Position</span>
                   <ArrowIcon />
-              </Link>
+                </Link>
               </div>
             </div>
           </div>

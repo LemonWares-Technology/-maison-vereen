@@ -383,7 +383,7 @@ export default function ApplicationForm() {
 
                 <div className="w-10 h-px bg-gold" />
 
-                <div className="space-y-4 font-serif text-base sm:text-lg font-light leading-[1.85] text-[#EDE8DE]/92">
+                <div className="space-y-4 body-copy">
                   <p>
                     Edition I is the first chapter in the story of Maison Vereen.
                     Only 250 bottles will ever exist. Once they are gone, they
@@ -430,7 +430,7 @@ export default function ApplicationForm() {
                     <li key={item.title} className="flex gap-3.5 items-start">
                       <span className="text-gold shrink-0 mt-0.5">{item.icon}</span>
                       <div className="space-y-1.5 min-w-0">
-                        <p className="font-serif text-sm sm:text-base uppercase tracking-[0.12em] text-gold font-light">
+                        <p className="font-sans text-sm sm:text-base uppercase tracking-[0.12em] text-gold font-semibold">
                           {item.title}
                         </p>
                         <p className="font-sans text-sm sm:text-[15px] text-[#EDE8DE]/80 font-light leading-relaxed">
@@ -447,7 +447,7 @@ export default function ApplicationForm() {
                 <span className="font-serif text-4xl text-gold leading-none block" aria-hidden>
                   &ldquo;
                 </span>
-                <p className="font-serif text-base sm:text-lg uppercase tracking-[0.14em] text-gold font-light leading-relaxed">
+                <p className="font-sans text-base sm:text-lg uppercase tracking-[0.14em] text-gold font-semibold leading-relaxed">
                   A fragrance from Maison Vereen is not something you wear. It is
                   something you become.
                 </p>

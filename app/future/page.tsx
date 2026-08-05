@@ -129,7 +129,7 @@ export default function FuturePage() {
                   </p>
                   <div className="border-t border-white/5 pt-8">
                     <div className="w-8 h-px bg-gold/40 mb-6" />
-                    <p className="font-serif font-light italic text-[#EDE8DE]" style={{ fontSize: "clamp(1.15rem, 1.9vw, 1.45rem)" }}>
+                    <p className="body-copy">
                       &ldquo;Edition I is the beginning of a house that is designed to endure. The house being built today will still be standing in fifty years. The only question is whether you were there when it started.&rdquo;
                     </p>
                   </div>

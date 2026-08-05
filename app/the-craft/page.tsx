@@ -31,7 +31,7 @@ const RAW_MATERIALS = [
   },
   {
     name: "WOODS",
-    src: "/chemist.webp",
+    src: "/thunderrock.webp",
     alt: "Dark woods and amber depth",
   },
   {
@@ -41,7 +41,7 @@ const RAW_MATERIALS = [
   },
   {
     name: "FLOWERS",
-    src: "/chemist.webp",
+    src: "/thunderrock.webp",
     alt: "Maison Vereen vessel — floral character",
   },
   {
@@ -105,7 +105,7 @@ const GALLERY = [
     alt: "Hands with dropper and vials in the atelier",
   },
   {
-    src: "/chemist.webp",
+    src: "/thunderrock.webp",
     alt: "Maison Vereen fragrance vessel",
   },
   {
@@ -113,7 +113,7 @@ const GALLERY = [
     alt: "Edition I bottle and founding chapter box",
   },
   {
-    src: "/chemist.webp",
+    src: "/thunderrock.webp",
     alt: "Maison Vereen gold-foiled box",
   },
   {
@@ -299,7 +299,7 @@ export default function TheCraftPage() {
                   {HERO_POINTS.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-3 font-serif text-base md:text-lg font-light leading-snug text-gold"
+                      className="flex items-start gap-3 font-sans text-base font-normal leading-snug text-gold"
                     >
                       <span
                         className="mt-[0.7em] w-4 h-px bg-gold shrink-0"
@@ -310,7 +310,7 @@ export default function TheCraftPage() {
                   ))}
                 </ul>
 
-                <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   A finished fragrance from Maison Vereen represents years of
                   refinement — sourcing, testing, rejecting, and beginning
                   again, until the formula deserved the House&apos;s name.
@@ -357,7 +357,7 @@ export default function TheCraftPage() {
                   Behind every Maison Vereen fragrance is a process most houses
                   no longer have the patience for.
                 </h2>
-                <div className="space-y-5 font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                <div className="space-y-5 body-copy">
                   <p>
                     It begins with sourcing — rare African materials selected
                     not for cost efficiency but for character, often requiring
@@ -382,7 +382,7 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden">
                 <Image
-                  src="/chemist.webp"
+                  src="/thunderrock.webp"
                   alt="Perfumer formula notebook and vials"
                   fill
                   className="object-cover object-center"
@@ -403,7 +403,7 @@ export default function TheCraftPage() {
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.32em] text-[#2C2823] font-medium">
                 Raw Materials
               </h2>
-              <p className="font-serif font-bold text-base md:text-lg leading-[1.85] text-[#2C2823]/85">
+              <p className="body-copy-on-cream">
                 Maison Vereen sources materials others overlook — rare resins,
                 woods, and botanicals drawn from across the African continent,
                 selected for the particular depth and character they bring
@@ -451,7 +451,7 @@ export default function TheCraftPage() {
                       <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-gold font-medium">
                         {item.step}
                       </span>
-                      <p className="font-serif text-sm font-light leading-snug text-[#EDE8DE]">
+                      <p className="body-copy">
                         {item.text}
                       </p>
                     </div>
@@ -482,7 +482,7 @@ export default function TheCraftPage() {
                   A single formula may pass through dozens of trials before
                   approval.
                 </h2>
-                <div className="space-y-5 font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                <div className="space-y-5 body-copy">
                   <p>
                     Patience is treated as a material in its own right — as
                     essential to the finished work as any oil or absolute in the
@@ -547,7 +547,7 @@ export default function TheCraftPage() {
                   Discover Edition I in Full
                   <ArrowIcon />
                 </Link>
-                <p className="font-serif text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85">
+                <p className="body-copy">
                   Return to Edition I with full appreciation for the craft
                   behind it.
                 </p>
@@ -561,7 +561,7 @@ export default function TheCraftPage() {
                 Apply for a Position
                   <ArrowIcon />
               </Link>
-                <p className="font-serif text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85">
+                <p className="body-copy">
                   For those who want to be part of something built to last.
                 </p>
               </div>

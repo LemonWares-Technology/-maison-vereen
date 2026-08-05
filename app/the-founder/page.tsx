@@ -89,14 +89,14 @@ export default function TheFounderPage() {
                 {HERO_LINES.map((line) => (
                   <li key={line} className="flex items-start gap-4">
                     <span className="mt-[0.7em] w-5 h-px shrink-0 bg-gold" />
-                    <span className="font-serif text-base md:text-lg font-medium leading-relaxed text-gold">
+                    <span className="font-sans text-base text-gold">
                       {line}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-gold/90 max-w-md pt-2">
+              <p className="body-copy max-w-md pt-2">
                 The most prestigious houses in the world communicate through
                 their work, not their founders. Maison Vereen was built in that
                 tradition.
@@ -107,7 +107,7 @@ export default function TheFounderPage() {
 
         {/* ── Narrative ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto space-y-8 font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#EDE8DE]">
+          <div className="w-[95%] md:w-full max-w-3xl mx-auto space-y-8 body-copy">
             <p>
               Maison Vereen was founded on a simple, stubborn conviction: that a
               luxury fragrance house built to the world&apos;s highest standard
@@ -148,11 +148,10 @@ export default function TheFounderPage() {
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                    style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.15rem)" }}
-                  >
+                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
                     Conviction Over Credentials
                   </h2>
-                  <p className="font-serif text-base md:text-lg font-medium leading-[1.85] text-[#EDE8DE]">
+                  <p className="body-copy">
                     The most prestigious houses in the world are remembered for
                     their work, not their founders&apos; faces. Maison Vereen
                     follows that same discipline deliberately — the House, not
@@ -186,11 +185,10 @@ export default function TheFounderPage() {
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                    style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.15rem)" }}
-                  >
+                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
                     Building to Outlive Her
                   </h2>
-                  <p className="font-serif text-base md:text-lg font-medium leading-[1.85] text-[#EDE8DE]">
+                  <p className="body-copy">
                     Every decision made today — from Edition I&apos;s scarcity to
                     the Founding Registry&apos;s careful structure — is made with
                     one question in mind: will this still make sense in a
@@ -263,7 +261,7 @@ export default function TheFounderPage() {
                 See What Makes the House Different
                 <ArrowIcon />
               </Link>
-              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85 max-w-sm">
+              <p className="body-copy max-w-sm">
                 Discover what sets Maison Vereen apart and why nothing here is
                 ordinary.
               </p>
@@ -278,7 +276,7 @@ export default function TheFounderPage() {
                 Apply for a Position
                 <ArrowIcon />
               </Link>
-              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/85 max-w-sm">
+              <p className="body-copy max-w-sm">
                 For those who feel aligned with the mission and want to
                 contribute to its legacy.
               </p>

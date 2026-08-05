@@ -316,7 +316,7 @@ function AccordionColumn({
           />
         </div>
         <div className="space-y-2 min-w-0">
-          <p className="font-serif text-sm sm:text-base text-gold font-light leading-snug">
+          <p className="font-sans text-sm sm:text-base text-gold font-normal leading-snug">
             &ldquo;{callout.quote}&rdquo;
           </p>
           <p className="font-sans text-xs sm:text-sm text-[#EDE8DE]/80 font-light leading-relaxed">
@@ -356,13 +356,13 @@ export default function FAQs() {
 
         <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
-            <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
-              14
-            </span>
-            <div className="w-8 h-px bg-gold" />
-            <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold font-medium">
-              Frequently Asked Questions
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">14</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
+                Frequently Asked Questions
+              </span>
+            </div>
             <h1
               className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
               style={{ fontSize: "clamp(2.75rem, 6vw, 4.5rem)" }}
@@ -374,7 +374,7 @@ export default function FAQs() {
               Answered Directly.
             </h1>
             <div className="w-8 h-px bg-gold" />
-            <p className="font-sans text-sm md:text-base font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+            <p className="body-copy max-w-md">
               Twenty questions, answered in the unhurried, confident voice of
               the House — designed to dissolve objection and deepen
               understanding at once.
@@ -386,7 +386,7 @@ export default function FAQs() {
       {/* Philosophy + pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28">
         <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
-          <p className="font-serif font-light text-center text-[#F2EDE4] leading-[1.7] max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl">
+          <p className="body-copy text-center max-w-3xl mx-auto">
             This page exists so that no serious applicant is left with an
             unanswered practical question before applying. Each answer is written
             in the House&apos;s own voice — confident, direct, and unhurried —
@@ -502,15 +502,15 @@ export default function FAQs() {
         </div>
 
         <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-10">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-[2.5rem] font-light text-[#F2EDE4] leading-snug max-w-3xl mx-auto">
+          <h2 className="body-copy max-w-3xl mx-auto">
             Some questions are better asked directly. The House is always
             reachable.
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/access"
-              className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-[11px] tracking-[0.25em] uppercase font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-[11px] tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Apply to the Founding Registry
               <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
@@ -519,7 +519,7 @@ export default function FAQs() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-[11px] tracking-[0.25em] uppercase font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-[11px] tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Speak with the House directly
               <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden>

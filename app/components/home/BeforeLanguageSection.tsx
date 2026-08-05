@@ -29,7 +29,7 @@ export default function BeforeLanguageSection() {
               Before Language.
             </span>
 
-            <div className="space-y-6 font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE]">
+            <div className="space-y-6 body-copy">
               <p>
                 Before your name is known, before your story is told, before a
                 single word has passed between you and a room — something has
