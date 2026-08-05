@@ -29,12 +29,12 @@ export default function PermanentClosureBanner() {
         </div>
 
         <div className="space-y-5 max-w-2xl mx-auto">
-          <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]">
+          <p className="body-copy">
             When the two hundred and fiftieth bottle is placed into a
             collector&apos;s hands,
           </p>
           <p
-            className="font-serif font-light italic text-gold leading-snug"
+            className="font-sans font-normal text-gold leading-snug"
             style={{ fontSize: "clamp(1.75rem, 4vw, 2.85rem)" }}
           >
             the edition closes permanently.

@@ -64,7 +64,7 @@ export default function WhyOnly250() {
               commitment.
             </h2>
 
-            <div className="space-y-5 font-sans text-sm md:text-base font-light leading-[1.9] text-[#EDE8DE]/95 max-w-xl">
+            <div className="space-y-5 body-copy max-w-xl">
               <p>
                 The House&apos;s master perfumer determined this was the highest
                 number that could be produced without compromising a single

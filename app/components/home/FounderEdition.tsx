@@ -73,7 +73,7 @@ export default function FounderEdition() {
               The first.
             </h2>
 
-            <div className="space-y-5 font-sans text-sm md:text-base font-light leading-[1.9] text-[#EDE8DE]/95">
+            <div className="space-y-5 body-copy">
               <p>
                 Those who hold a bottle from Edition I will hold something no
                 House can ever offer again: the first.

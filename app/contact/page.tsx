@@ -121,13 +121,13 @@ export default function ContactPage() {
 
           <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
-              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">
-                15
-              </span>
-              <div className="w-8 h-px bg-gold" />
-              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
+              <div className="flex items-center gap-3">
+              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">15</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
                 Contact &amp; Concierge
               </span>
+            </div>
               <h1
                 className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
                 style={{ fontSize: "clamp(2.1rem, 5.5vw, 4.25rem)" }}
@@ -138,7 +138,7 @@ export default function ContactPage() {
                 Not a support ticket. A conversation.
               </p>
               <div className="w-8 h-px bg-gold" />
-              <p className="font-sans text-base font-light leading-[1.85] text-[#EDE8DE]/90 max-w-md">
+              <p className="body-copy max-w-md">
                 Every enquiry to Maison Vereen — whether from a collector, a
                 journalist, or a future partner — is read and answered personally
                 by the House.
@@ -175,13 +175,13 @@ export default function ContactPage() {
 
         <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
-            <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
-              15
-            </span>
-            <div className="w-8 h-px bg-gold" />
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium">
-              Contact &amp; Concierge
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">15</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-semibold">
+                Contact &amp; Concierge
+              </span>
+            </div>
             <h1
               className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
               style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)" }}
@@ -192,7 +192,7 @@ export default function ContactPage() {
               Not a support ticket. A conversation.
             </p>
             <div className="w-8 h-px bg-gold" />
-            <p className="font-sans text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]/90 max-w-md">
+            <p className="body-copy max-w-md">
               Every enquiry to Maison Vereen — whether from a collector, a
               journalist, or a future partner — is read and answered personally
               by the House.
@@ -220,7 +220,7 @@ export default function ContactPage() {
           <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium block">
             A Conversation Begins Here
           </span>
-          <p className="font-serif text-lg sm:text-xl md:text-2xl font-light text-[#F2EDE4] leading-[1.7]">
+          <p className="body-copy">
             Maison Vereen does not operate a customer service desk. Every message
             that arrives through this page is read personally, and answered in the
             same considered tone found throughout this website. Visitors are
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="mx-auto h-px w-10 bg-gold/60" />
               </div>
-              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/80">
+              <p className="body-copy">
                 Speak with a concierge for fragrance advice, questions about
                 Edition I, or guidance on the Founding Registry application.
               </p>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="mx-auto h-px w-10 bg-gold/60" />
               </div>
-              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#EDE8DE]/80">
+              <p className="body-copy">
                 Media enquiries, partnership proposals, wholesale discussions, and
                 gifting arrangements are each directed to the right person within
                 the House.
@@ -405,7 +405,7 @@ export default function ContactPage() {
                     <h3 className="font-serif text-lg font-light text-gold uppercase tracking-wide">
                       {card.title}
                     </h3>
-                    <p className="font-sans text-sm font-light leading-relaxed text-[#EDE8DE]/80">
+                    <p className="body-copy">
                       {card.body}
                     </p>
                   </div>
@@ -435,7 +435,7 @@ export default function ContactPage() {
           <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-40 lg:w-48 h-auto" />
         </div>
         <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center">
-          <p className="font-serif text-xl sm:text-2xl md:text-3xl font-light text-[#F2EDE4] leading-[1.6]">
+          <p className="body-copy">
             Every enquiry deserves a considered reply. That is why every message
             is read personally.
           </p>
@@ -449,7 +449,7 @@ export default function ContactPage() {
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium block">
               Maison Vereen
             </span>
-            <p className="font-serif text-2xl font-light text-[#EDE8DE]">
+            <p className="body-copy text-xl md:text-2xl">
               Lagos, Nigeria
             </p>
             <ul className="space-y-4 pt-2">
@@ -458,32 +458,32 @@ export default function ContactPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 font-sans text-base text-gold/90 hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-3 font-sans text-base hover:text-gold transition-colors"
                 >
                   <span className="text-gold shrink-0">
                     <WhatsAppIcon />
                   </span>
                   <span>
-                    <span className="block text-xs uppercase tracking-[0.2em] text-gold mb-0.5">
+                    <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       WhatsApp
                     </span>
-                    <span className="text-[#EDE8DE]">+234 814 441 3526</span>
+                    <span className="text-[#8A8178]">+234 814 441 3526</span>
                   </span>
                 </a>
               </li>
               <li>
                 <a
                   href={EMAIL_CONCIERGE}
-                  className="inline-flex items-center gap-3 font-sans text-base text-gold/90 hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-3 font-sans text-base hover:text-gold transition-colors"
                 >
                   <span className="text-gold shrink-0">
                     <EnvelopeIcon />
                   </span>
                   <span>
-                    <span className="block text-xs uppercase tracking-[0.2em] text-gold mb-0.5">
+                    <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       Email
                     </span>
-                    <span className="text-[#EDE8DE]">concierge@maisonvereen.com</span>
+                    <span className="text-[#8A8178]">concierge@maisonvereen.com</span>
                   </span>
                 </a>
               </li>
@@ -492,7 +492,7 @@ export default function ContactPage() {
                   href="https://instagram.com/maisonvereen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 font-sans text-base text-gold/90 hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-3 font-sans text-base hover:text-gold transition-colors"
                 >
                   <span className="text-gold shrink-0">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.3" aria-hidden>
@@ -502,10 +502,10 @@ export default function ContactPage() {
                     </svg>
                   </span>
                   <span>
-                    <span className="block text-xs uppercase tracking-[0.2em] text-gold mb-0.5">
+                    <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       Instagram
                     </span>
-                    <span className="text-[#EDE8DE]">@maisonvereen</span>
+                    <span className="text-[#8A8178]">@maisonvereen</span>
                   </span>
                 </a>
               </li>
@@ -519,7 +519,7 @@ export default function ContactPage() {
             <p className="font-serif text-3xl md:text-4xl font-light text-gold">
               Within 24—48 hours
             </p>
-            <p className="font-sans text-base font-light leading-relaxed text-[#EDE8DE]/75 max-w-md">
+            <p className="body-copy max-w-md">
               All enquiries, regardless of their nature, are read and answered
               personally by the House.
             </p>
@@ -549,25 +549,25 @@ export default function ContactPage() {
           <Image src="/logo-mark.webp" alt="" width={180} height={140} className="w-40 h-auto" />
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-[2.5rem] font-light text-[#F2EDE4] leading-snug">
+        <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+          <h2 className="body-copy">
             You now know the House completely. What remains is simply to begin
             the conversation.
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Speak to a Concierge
               <ArrowIcon />
             </a>
             <a
               href={EMAIL_CONCIERGE}
-              className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Continue by Email
               <ArrowIcon />

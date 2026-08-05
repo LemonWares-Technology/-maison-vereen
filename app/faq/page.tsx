@@ -265,7 +265,7 @@ export default function FAQPage() {
                   src="/images/founder.webp"
                 />
                 <div className="space-y-1">
-                  <p className="font-serif text-xs text-gold italic">
+                  <p className="font-sans text-xs text-gold">
                     &ldquo;The registry is not a queue. It is a circle of
                     recognition.&rdquo;
                   </p>
@@ -331,7 +331,7 @@ export default function FAQPage() {
                   src="/images/founder.webp"
                 />
                 <div className="space-y-1">
-                  <p className="font-serif text-xs text-gold italic">
+                  <p className="font-sans text-xs text-gold">
                     &ldquo;A conversation, not a cart.&rdquo;
                   </p>
                   <p className="text-[10px] text-[#EDE8DE] font-light">

@@ -10,13 +10,15 @@
   --color-charcoal:      #0A0A0A;
   --color-charcoal-light:#111111;
   --color-charcoal-mid:  #1A1A1A;
+  /* Soft body copy — rgb(138, 129, 120) */
+  --color-body-muted:    #8A8178;
 
   /* Typography scale — Brochure Blueprint */
   --font-display:   clamp(3.5rem, 8vw, 5rem);    /* Hero display: 56–80px */
   --font-headline:  clamp(2rem, 4vw, 2.75rem);    /* Section heads: 32–44px */
   --font-subhead:   clamp(1.35rem, 2.2vw, 1.875rem); /* Pull quotes: 22–30px */
-  --font-body:      1.1875rem;                    /* Body: 19px */
-  --font-body-sm:   1.0625rem;                    /* Body small: 17px */
+  --font-body:      1rem;                         /* Body: 16px */
+  --font-body-sm:   0.9375rem;                    /* Body small: 15px */
   --font-label:     0.75rem;                      /* Labels/eyebrows: 12px */
   --font-caption:   0.6875rem;                    /* Captions: 11px */
   --font-micro:     0.625rem;                     /* Micro: 10px */
@@ -37,10 +39,56 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   overflow-x: hidden;
   -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Readable body paragraphs — soft taupe, 16px, regular sans */
+.body-copy {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #8A8178;
+}
+
+/* Darker body copy for cream / light surfaces — still readable, not pure black */
+.body-copy-on-cream {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #5C564F;
+}
+
+/*
+ * Align text to the header content rail while keeping parent media full-bleed.
+ * Matches: w-[95%] md:w-full max-w-6xl mx-auto
+ * Below lg (stacked): both sides inset. At lg+ (split): only the outer edge.
+ */
+.content-rail-inset-l,
+.content-rail-inset-r {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+@media (min-width: 768px) {
+  .content-rail-inset-l,
+  .content-rail-inset-r {
+    padding-left: max(0px, calc((100vw - 72rem) / 2));
+    padding-right: max(0px, calc((100vw - 72rem) / 2));
+  }
+}
+@media (min-width: 1024px) {
+  .content-rail-inset-l {
+    padding-left: max(0px, calc((100vw - 72rem) / 2));
+    padding-right: 2.5rem; /* gutter off the center divider */
+  }
+  .content-rail-inset-r {
+    padding-left: 2.5rem; /* gutter off the center divider */
+    padding-right: max(0px, calc((100vw - 72rem) / 2));
+  }
 }
 
 /* ── Scrollbar — brand gold on hover ───────────────────────────────────────── */

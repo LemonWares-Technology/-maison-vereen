@@ -225,14 +225,10 @@ export default function FragranceLibraryPage() {
               <div className="w-full max-w-lg space-y-5">
                 <div className="flex items-center gap-3">
                   <span className="font-serif text-lg text-gold">II</span>
-                  <div className="w-6 h-px bg-gold" />
-                </div>
-
-                <div className="space-y-3">
-                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-semibold">
                     Signature Collection
                   </span>
-                  <div className="w-10 h-px bg-gold" />
                 </div>
 
                 <h1
@@ -244,7 +240,7 @@ export default function FragranceLibraryPage() {
 
                 <div className="w-10 h-px bg-gold" />
 
-                <p className="font-serif text-base font-light leading-[1.8] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   The Signature Collection represents Maison Vereen&apos;s
                   permanent body of work — fragrances available on an ongoing
                   basis, each developed with the same standard applied to Edition
@@ -275,18 +271,12 @@ export default function FragranceLibraryPage() {
           <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
-                <span className="font-serif text-lg md:text-xl text-gold">
-                  II
-                </span>
-                <div className="w-6 h-px bg-gold" />
-              </div>
-
-              <div className="space-y-3">
-                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
-                  Signature Collection
-                </span>
-                <div className="w-10 h-px bg-gold" />
-              </div>
+                  <span className="font-serif text-lg md:text-xl text-gold">II</span>
+                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
+                    Signature Collection
+                  </span>
+                </div>
 
               <h1
                 className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
@@ -297,7 +287,7 @@ export default function FragranceLibraryPage() {
 
               <div className="w-10 h-px bg-gold" />
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 The Signature Collection represents Maison Vereen&apos;s
                 permanent body of work — fragrances available on an ongoing
                 basis, each developed with the same standard applied to Edition
@@ -310,7 +300,7 @@ export default function FragranceLibraryPage() {
         {/* ── Intro ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center">
-            <p className="font-serif italic font-light text-[#EDE8DE] leading-[1.85] text-lg md:text-xl lg:text-[1.35rem]">
+            <p className="body-copy">
               Where Edition I is finite by design, the Signature Collection is
               the House&apos;s enduring body of work — fragrances intended to
               remain part of Maison Vereen&apos;s offering for years, refined
@@ -335,7 +325,7 @@ export default function FragranceLibraryPage() {
                   <h3 className="font-sans text-xs uppercase tracking-[0.22em] text-gold font-medium leading-snug">
                     {p.title}
                   </h3>
-                  <p className="font-serif text-base font-light leading-[1.75] text-[#EDE8DE] max-w-sm">
+                  <p className="body-copy max-w-sm">
                     {p.body}
                   </p>
                 </div>
@@ -354,7 +344,7 @@ export default function FragranceLibraryPage() {
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium">
                 The Signature Collection
               </h2>
-              <p className="font-serif text-base md:text-lg font-light text-[#EDE8DE]">
+              <p className="body-copy">
                 A selection of the House&apos;s ongoing work.
               </p>
             </div>
@@ -387,7 +377,7 @@ export default function FragranceLibraryPage() {
                     <span className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold">
                       {b.notes}
                     </span>
-                    <p className="font-serif text-sm md:text-[0.95rem] font-light leading-[1.7] text-[#EDE8DE] flex-1">
+                    <p className="body-copy flex-1">
                       {b.desc}
                     </p>
                     <button
@@ -449,11 +439,10 @@ export default function FragranceLibraryPage() {
                 </div>
                 <h2
                   className="font-serif font-light text-[#F2EDE4] leading-snug"
-                  style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.6rem)" }}
-                >
-                  Each Fragrance, In Full
-                </h2>
-                <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+                    Each Fragrance, In Full
+                  </h2>
+                <p className="body-copy">
                   Every fragrance page within the Signature Collection includes
                   its story and inspiration, a description of its character and
                   mood, its note structure, and the occasions or moments it was
@@ -493,11 +482,10 @@ export default function FragranceLibraryPage() {
                 </div>
                 <h2
                   className="font-serif font-light text-[#F2EDE4] leading-snug"
-                  style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.6rem)" }}
-                >
-                  Concierge-Based Acquisition
-                </h2>
-                <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+                    Concierge-Based Acquisition
+                  </h2>
+                <p className="body-copy">
                   At the close of every fragrance page, visitors are invited to
                   speak with a concierge, request details, or continue the
                   conversation by WhatsApp or email. There is no &ldquo;Add to
@@ -547,7 +535,7 @@ export default function FragranceLibraryPage() {
             />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+          <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
             <Image
               src="/logo-mark.webp"
               alt="Maison Vereen"
@@ -557,8 +545,7 @@ export default function FragranceLibraryPage() {
             />
 
             <h2
-              className="font-serif font-light text-[#F2EDE4] leading-snug"
-              style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.35rem)" }}
+              className="body-copy"
             >
               The Signature Collection is the ongoing work. What follows is the
               institution behind all of it.
@@ -566,19 +553,19 @@ export default function FragranceLibraryPage() {
 
             <div className="w-10 h-px bg-gold mx-auto" />
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Speak to a Concierge
                 <ChatIcon />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Request Details
                 <ArrowIcon />

@@ -270,7 +270,7 @@ export default function DiscoverPage() {
                   </span>{" "}
                   One Founding Chapter.
                 </h1>
-                <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   This page exists for one reason: to explain, briefly and
                   completely, what Maison Vereen is — and why joining the
                   Founding Registry now matters.
@@ -314,7 +314,7 @@ export default function DiscoverPage() {
                 One Founding Chapter.
               </h1>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 This page exists for one reason: to explain, briefly and
                 completely, what Maison Vereen is — and why joining the Founding
                 Registry now matters.
@@ -338,7 +338,7 @@ export default function DiscoverPage() {
                   <h2 className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gold font-medium leading-snug">
                     {p.title}
                   </h2>
-                  <p className="font-serif text-sm md:text-[0.95rem] font-light leading-[1.7] text-[#EDE8DE]">
+                  <p className="body-copy">
                     {p.body}
                   </p>
                 </div>
@@ -357,7 +357,7 @@ export default function DiscoverPage() {
                   <h3 className="font-sans text-[11px] uppercase tracking-[0.24em] text-gold font-medium">
                     {d.title}
                   </h3>
-                  <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]">
+                  <p className="body-copy">
                     {"body" in d ? (
                       d.body
                     ) : (
@@ -424,7 +424,7 @@ export default function DiscoverPage() {
                   The Founding Registry will close permanently once three
                   hundred and fifty applicants have been accepted.
                 </h2>
-                <p className="font-serif text-base font-light leading-[1.8] text-[#EDE8DE]/85">
+                <p className="body-copy">
                   There is no artificial countdown here — simply a real, finite
                   number that will eventually be reached.
                 </p>
@@ -455,10 +455,9 @@ export default function DiscoverPage() {
 
         {/* ── Final CTA ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+          <div className="w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
             <h2
-              className="font-serif font-light text-[#F2EDE4] leading-snug"
-              style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
+              className="body-copy"
             >
               This is your invitation to the beginning.
               <br />
@@ -471,7 +470,7 @@ export default function DiscoverPage() {
               <div className="space-y-3 flex-1 sm:max-w-xs">
                 <Link
                   href="/apply"
-                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors w-full"
+                  className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-6 sm:px-8 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors w-full"
                 >
                   Apply to the Founding Registry
                   <ArrowIcon />
@@ -484,7 +483,7 @@ export default function DiscoverPage() {
               <div className="space-y-3 flex-1 sm:max-w-xs">
                 <Link
                   href="/"
-                  className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-medium transition-colors w-full"
+                  className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 sm:px-8 py-3.5 text-[10px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors w-full"
                 >
                   Explore the Full Maison Vereen Website
                   <ArrowIcon />

@@ -594,7 +594,7 @@ function ApprovedList() {
                 </p>
 
                 {/* Name */}
-                <p className="font-serif font-light text-[#E8E2D9] text-[17px]">
+                <p className="body-copy">
                   {r.displayName}
                 </p>
 

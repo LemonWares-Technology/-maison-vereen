@@ -39,7 +39,7 @@ function HeroCopy() {
         Edition I. Two Hundred and Fifty Individually Numbered Bottles.
       </p>
 
-      <p className="font-serif text-base sm:text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+      <p className="body-copy max-w-md">
         Africa&apos;s first serious luxury fragrance house, now privately
         accepting applications into the Maison Vereen Founding Registry.
       </p>
@@ -47,14 +47,14 @@ function HeroCopy() {
       <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-stretch sm:items-center pt-1">
         <Link
           href="/apply"
-          className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+          className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
         >
           Apply to the Registry
           <ArrowIcon />
         </Link>
         <Link
           href="/edition-i"
-          className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+          className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
         >
           Discover Edition I
         </Link>

@@ -65,7 +65,7 @@ export default function JournalPage() {
                   is not a blog. It is the house&apos;s intellectual record.
                 </p>
 
-                <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   Here, we write about the things we think about — distinction,
                   excellence, craft, identity, and the nature of legacy.
                 </p>
@@ -111,7 +111,7 @@ export default function JournalPage() {
                 is not a blog. It is the house&apos;s intellectual record.
               </p>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Here, we write about the things we think about — which are the
                 same things the people this house was built for think about.
                 Distinction. Excellence. Craft. The relationship between identity
@@ -120,7 +120,7 @@ export default function JournalPage() {
                 success and significance.
               </p>
 
-              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE]/85 max-w-md">
+              <p className="body-copy/85 max-w-md">
                 These are not lifestyle posts. They are essays. Written with the
                 belief that the people who read them are serious thinkers who
                 deserve serious content.
@@ -216,8 +216,7 @@ export default function JournalPage() {
         <section className="border-t border-gold/15 bg-charcoal">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
-              className="font-serif font-light italic text-[#EDE8DE]/55 max-w-125"
-              style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
+              className="body-copy/55 max-w-125"
             >
               &ldquo;Continue reading the house&apos;s story. Join the
               Registry.&rdquo;

@@ -168,17 +168,11 @@ export default function LiveFoundingRegistryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-6 md:space-y-7 max-w-xl">
                 <div className="flex items-center gap-3">
-                  <span className="font-serif text-lg md:text-xl text-gold">
-                    09
-                  </span>
-                  <div className="w-6 h-px bg-gold" />
-                </div>
-
-                <div className="space-y-2">
-                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                  <span className="font-serif text-lg md:text-xl text-gold">09</span>
+                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
                     Live Founding Registry
                   </span>
-                  <div className="w-10 h-px bg-gold" />
                 </div>
 
                 <h1
@@ -197,7 +191,7 @@ export default function LiveFoundingRegistryPage() {
 
                 <div className="w-10 h-px bg-gold" />
 
-                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+                <p className="body-copy max-w-md">
                   The live Founding Registry count reflects every applicant the
                   House has personally reviewed and accepted — never an
                   estimate, never inflated.
@@ -230,13 +224,13 @@ export default function LiveFoundingRegistryPage() {
               <div className="w-10 h-px bg-gold" />
             </div>
 
-            <p className="font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#EDE8DE]">
+            <p className="body-copy">
               This page exists as a living record of the Founding Registry&apos;s
               growth. The count displayed here rises only when Maison Vereen
               formally accepts an applicant — never automatically, never on a
               timer, and never adjusted for effect.
             </p>
-            <p className="font-serif text-lg md:text-xl lg:text-[1.35rem] font-medium leading-[1.85] text-[#EDE8DE]">
+            <p className="body-copy">
               As the count approaches three hundred and fifty, this page becomes
               the clearest, most honest signal of how close the Founding
               Registry is to closing.
@@ -261,7 +255,7 @@ export default function LiveFoundingRegistryPage() {
                 Accepted Members
               </p>
 
-              <p className="font-serif text-base md:text-lg italic text-[#EDE8DE]/90">
+              <p className="body-copy italic">
                 out of {MAX_MEMBERS}
               </p>
 
@@ -312,7 +306,7 @@ export default function LiveFoundingRegistryPage() {
                     <tr>
                       <td
                         colSpan={3}
-                        className="py-10 text-center font-serif text-lg font-medium text-[#EDE8DE]/70"
+                        className="py-10 text-center body-copy"
                       >
                         The first acceptances will appear here.
                       </td>
@@ -323,13 +317,13 @@ export default function LiveFoundingRegistryPage() {
                         key={`${row.verificationNumber}-${row.displayName}`}
                         className="border-b border-white/5"
                       >
-                        <td className="py-5 pr-4 font-serif text-base md:text-lg text-[#F2EDE4]">
+                        <td className="py-5 pr-4 font-sans text-base text-[#8A8178]">
                           <span className="text-gold font-mono text-sm mr-3 tracking-wider">
                             {formatMemberNo(row.verificationNumber)}
                           </span>
                           {row.displayName}
                         </td>
-                        <td className="py-5 pr-4 font-serif text-base md:text-lg text-[#EDE8DE]">
+                        <td className="py-5 pr-4 body-copy">
                           {row.country}
                         </td>
                         <td className="py-5 text-right font-sans text-sm uppercase tracking-[0.2em] text-gold font-medium">
@@ -342,7 +336,7 @@ export default function LiveFoundingRegistryPage() {
               </table>
             </div>
 
-            <p className="font-serif text-base md:text-lg font-medium leading-relaxed text-[#EDE8DE]/75 text-center max-w-2xl mx-auto">
+            <p className="body-copy text-center max-w-2xl mx-auto">
               Recently accepted members are shown by first name, last initial,
               and country only. The House will never display a member&apos;s
               full identity without explicit permission.
@@ -373,7 +367,7 @@ export default function LiveFoundingRegistryPage() {
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
                   Why 350?
                 </span>
-                <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-xl">
+                <p className="body-copy max-w-xl">
                   The Registry accepts a maximum of three hundred and fifty
                   members because the House honours scale as much as exclusivity.
                   Only two hundred and fifty bottles exist in Edition I. The
@@ -439,31 +433,28 @@ export default function LiveFoundingRegistryPage() {
             <div className="w-px h-16 bg-gold/50" />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+          <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
             <div className="space-y-5">
-              <h2
-                className="font-serif font-light text-[#F2EDE4] leading-snug"
-                style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)" }}
-              >
+              <h2 className="body-copy">
                 Acceptance into the Registry is only the beginning
               </h2>
               <div className="w-10 h-px bg-gold mx-auto" />
-              <p className="font-serif text-lg md:text-xl text-gold font-medium">
+              <p className="font-sans text-sm md:text-base uppercase tracking-[0.2em] text-gold font-semibold">
                 Membership in this House means much more.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
               <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />
               </Link>
               <Link
                 href="/membership"
-                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Learn About Membership &amp; Access
                 <ArrowIcon />

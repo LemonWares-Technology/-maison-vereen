@@ -159,7 +159,7 @@ export default function FragranceGallery() {
                     <h3 className="font-serif font-light text-[#F5F0E8] mb-1 leading-none" style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)" }}>{f.name}</h3>
                     <p className="font-mono text-[#6B6450] mb-4" style={{ fontSize: "13px" }}>{f.accord}</p>
 
-                    <p className="font-serif font-light italic text-[#A09888] mb-6 leading-[1.6] flex-1" style={{ fontSize: "20px" }}>
+                    <p className="body-copy mb-6 flex-1">
                       {f.quote}
                     </p>
 

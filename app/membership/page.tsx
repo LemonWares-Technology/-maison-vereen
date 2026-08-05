@@ -188,13 +188,13 @@ export default function MembershipPage() {
 
           <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
-              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">
-                10
-              </span>
-              <div className="w-8 h-px bg-gold" />
-              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
+              <div className="flex items-center gap-3">
+              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">10</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
                 Membership &amp; Access
               </span>
+            </div>
               <h1
                 className="font-serif font-light text-[#EDE8DE] leading-[1.08] tracking-tight"
                 style={{ fontSize: "clamp(2.1rem, 5.2vw, 4rem)" }}
@@ -204,7 +204,7 @@ export default function MembershipPage() {
                 It Is a Relationship.
               </h1>
               <div className="w-8 h-px bg-gold" />
-              <p className="font-serif text-base sm:text-lg font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+              <p className="body-copy max-w-md">
                 Membership in Maison Vereen extends well beyond a single
                 acquisition — it is an ongoing relationship between the House and
                 the people who help compose its history.
@@ -229,13 +229,13 @@ export default function MembershipPage() {
 
         <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
-            <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">
-              10
-            </span>
-            <div className="w-8 h-px bg-gold" />
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium">
-              Membership &amp; Access
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">10</span>
+              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-semibold">
+                Membership &amp; Access
+              </span>
+            </div>
             <h1
               className="font-serif font-light text-[#EDE8DE] leading-[1.08] tracking-tight"
               style={{ fontSize: "clamp(2.4rem, 5.2vw, 4rem)" }}
@@ -245,7 +245,7 @@ export default function MembershipPage() {
               It Is a Relationship.
             </h1>
             <div className="w-8 h-px bg-gold" />
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+            <p className="body-copy max-w-md">
               Membership in Maison Vereen extends well beyond a single
               acquisition — it is an ongoing relationship between the House and
               the people who help compose its history.
@@ -261,7 +261,7 @@ export default function MembershipPage() {
             <ShieldMarkIcon />
           </div>
 
-          <p className="font-serif font-normal text-center text-[#F2EDE4] leading-[1.7] max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl">
+          <p className="body-copy text-center max-w-3xl mx-auto">
             For most luxury brands, the relationship with a customer effectively
             ends at the point of sale. Maison Vereen was built on the opposite
             premise — that acquiring a piece of the House&apos;s work is the
@@ -269,14 +269,14 @@ export default function MembershipPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto">
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] px-2 md:px-8 md:pr-10 pb-8 md:pb-0 border-b md:border-b-0 md:border-r border-gold/30">
+            <p className="body-copy px-2 md:px-8 md:pr-10 pb-8 md:pb-0 border-b md:border-b-0 md:border-r border-gold/30">
               Founding Registry members and Edition I owners are afforded a
               continuing place within the House: priority access to future
               editions before they are announced publicly, private experiences
               extended only to members, and a direct line of communication with
               the House that does not exist for the general public.
             </p>
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] px-2 md:px-8 md:pl-10 pt-8 md:pt-0">
+            <p className="body-copy px-2 md:px-8 md:pl-10 pt-8 md:pt-0">
               This page sets expectations honestly. Membership does not entitle
               anyone to a future bottle, and the House makes no promises it
               cannot keep. What it does promise is recognition, priority, and
@@ -287,7 +287,7 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* 01 Priority Access */}
+      {/* 01 Priority Access — full-bleed media, text on header rail */}
       <section className="relative bg-[#060506] border-t border-gold/15">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative min-h-100 lg:min-h-130 overflow-hidden">
@@ -299,14 +299,14 @@ export default function MembershipPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="flex flex-col justify-center gap-5 px-8 py-16 md:px-12 lg:px-16 xl:px-20">
+          <div className="flex flex-col justify-center gap-5 content-rail-inset-r py-16 lg:pl-10">
             <span className="font-sans text-sm text-gold tracking-wide">
               01
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-light text-[#EDE8DE] leading-tight">
               Priority Access &amp; Future Editions
             </h2>
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+            <p className="body-copy max-w-md">
               Members are informed of future editions, collaborations, and
               limited releases before any public announcement is made — a
               courtesy extended in recognition of their early conviction in the
@@ -316,7 +316,7 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* 02 Private Experiences */}
+      {/* 02 Private Experiences — full-bleed media, text on header rail */}
       <section className="relative bg-[#060506] border-t border-gold/15">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative min-h-100 lg:min-h-130 overflow-hidden">
@@ -328,14 +328,14 @@ export default function MembershipPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="flex flex-col justify-center gap-5 px-8 py-16 md:px-12 lg:px-16 xl:px-20">
+          <div className="flex flex-col justify-center gap-5 content-rail-inset-r py-16 lg:pl-10">
             <span className="font-sans text-sm text-gold tracking-wide">
               02
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-light text-[#EDE8DE] leading-tight">
               Private Experiences &amp; Invitations
             </h2>
-            <p className="font-serif text-lg md:text-xl font-medium leading-[1.85] text-[#EDE8DE] max-w-md">
+            <p className="body-copy max-w-md">
               From time to time, the House extends private invitations to
               members — tastings, workshops, and gatherings designed to deepen
               the relationship between Maison Vereen and the people who compose
@@ -364,7 +364,7 @@ export default function MembershipPage() {
                 <h3 className="font-sans text-xs uppercase tracking-[0.28em] text-gold font-medium">
                   {pillar.title}
                 </h3>
-                <p className="font-serif text-lg font-medium leading-relaxed text-[#EDE8DE] max-w-60">
+                <p className="body-copy max-w-60">
                   {pillar.body}
                 </p>
               </div>
@@ -394,23 +394,23 @@ export default function MembershipPage() {
           />
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
-          <h2 className="font-serif text-xl md:text-3xl lg:text-[2.5rem] font-light text-[#F2EDE4] leading-snug">
+        <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+          <h2 className="body-copy">
             Membership is one path into the House. The Signature Collection is
             another — open, permanent, and entirely its own.
           </h2>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
               <ArrowIcon />
               </Link>
             <Link
               href="/fragrance-library"
-              className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
             >
               Explore the Signature Collection
               <ArrowIcon />

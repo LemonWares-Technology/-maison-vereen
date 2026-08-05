@@ -58,7 +58,7 @@ export default function LegacyPage() {
                   What makes it endure is not{" "}
                   <span className="text-gold">the intention.</span>
                 </h1>
-                <p className="font-serif font-light text-[#EDE8DE] leading-[1.7] text-base sm:text-lg max-w-md">
+                <p className="body-copy max-w-md">
                   Every institution that endures was once only an intention. What
                   makes it endure is not the intention. It is the seriousness of
                   the people who carried it forward.
@@ -98,8 +98,7 @@ export default function LegacyPage() {
                 <span className="text-gold">the intention.</span>
               </h1>
               <p
-                className="font-serif font-light text-[#EDE8DE] leading-[1.7] max-w-md"
-                style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)" }}
+                className="body-copy max-w-md"
               >
                 Every institution that endures was once only an intention. What
                 makes it endure is not the intention. It is the seriousness of
@@ -277,7 +276,7 @@ export default function LegacyPage() {
             <div className="max-w-170 mx-auto text-center space-y-12">
               <div className="w-8 h-px bg-gold/40 mx-auto" />
               <p
-                className="font-serif font-light text-[#EDE8DE] leading-[1.55]"
+                className="body-copy"
                 style={{ fontSize: "clamp(1.2rem, 2vw, 1.7rem)" }}
               >
                 We are building the house we always needed. We are building it
