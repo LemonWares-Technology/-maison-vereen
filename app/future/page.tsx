@@ -63,7 +63,7 @@ export default function FuturePage() {
                     We are not building for the current moment.{" "}
                     <em className="not-italic" style={{ color: "#C9A84C" }}>We are building for the permanent record.</em>
                   </h1>
-                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-body-muted font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     Every decision made in the founding of Maison Vereen is made with one question: will this be the right decision in twenty years? The scarcity model. The authentication system. The collector ecosystem. The Africa positioning. The founder-led communication. None of these are tactics. They are architecture. The house is being built to last. That is not aspiration. It is design.
                   </p>
                 </div>
@@ -97,10 +97,10 @@ export default function FuturePage() {
                     <span className="uppercase tracking-[0.25em] font-medium" style={{ fontSize: "10px", color: "rgba(201,168,76,0.6)" }}>{item.tag}</span>
                     <span className="uppercase tracking-[0.15em] text-[#3A3530]" style={{ fontSize: "9px" }}>{item.status}</span>
                   </div>
-                  <h3 className="font-serif font-light text-[#C8C0B4] group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "20px" }}>
+                  <h3 className="font-serif font-light text-body-muted group-hover:text-[#E8E2D9] transition-colors duration-300" style={{ fontSize: "20px" }}>
                     {item.title}
                   </h3>
-                  <p className="text-[#EDE8DE] font-light leading-[1.75]" style={{ fontSize: "16px" }}>{item.body}</p>
+                  <p className="text-body-muted font-light leading-[1.75]" style={{ fontSize: "16px" }}>{item.body}</p>
                   <div className="flex items-center gap-3 pt-1">
                     <div className="w-3 h-px bg-gold/25" />
                     <span className="text-[#4A4438] font-light" style={{ fontSize: "13px" }}>{item.access}</span>
@@ -124,7 +124,7 @@ export default function FuturePage() {
               </div>
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-130 space-y-8">
-                  <p className="text-[#EDE8DE] font-light leading-[1.85]" style={{ fontSize: "17px" }}>
+                  <p className="text-body-muted font-light leading-[1.85]" style={{ fontSize: "17px" }}>
                     The people who are part of Maison Vereen in its founding decade are not buying into what it is. They are buying into what it will be. And we are building to be worthy of that trust.
                   </p>
                   <div className="border-t border-white/5 pt-8">

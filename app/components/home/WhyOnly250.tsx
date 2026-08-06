@@ -32,25 +32,20 @@ export default function WhyOnly250() {
               250
             </p>
 
-            <div className="max-w-xs space-y-0">
-              <div className="w-full h-px bg-gold/50 mb-4" />
-              {WORLDWIDE_LINES.map((line, i) => (
-                <div key={line}>
-                  <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed py-2.5">
-                    {line}
-                  </p>
-                  {i < WORLDWIDE_LINES.length - 1 && (
-                    <div className="w-full h-px bg-gold/25" />
-                  )}
-                </div>
+            <div className="max-w-xs space-y-1">
+              {WORLDWIDE_LINES.map((line) => (
+                <p
+                  key={line}
+                  className="font-sans text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed py-1.5"
+                >
+                  {line}
+                </p>
               ))}
-              <div className="w-full h-px bg-gold/50 mt-4" />
             </div>
           </div>
 
           <div className="space-y-6 md:space-y-7 lg:pt-8">
             <div className="space-y-2.5">
-              <div className="w-8 h-px bg-gold" />
               <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">
                 Why Only 250
               </span>

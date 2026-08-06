@@ -8,8 +8,7 @@ const CONTACT_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -122,8 +121,8 @@ export default function ContactPage() {
           <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
               <div className="flex items-center gap-3">
-              <span className="font-sans text-sm text-[#EDE8DE] tracking-wide">15</span>
-              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-sm text-gold tracking-wide">15</span>
+              {/* <div className="h-px w-6 sm:w-8 bg-gold shrink-0" /> */}
               <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-semibold">
                 Contact &amp; Concierge
               </span>
@@ -137,7 +136,7 @@ export default function ContactPage() {
               <p className="font-sans text-[11px] uppercase tracking-[0.25em] text-gold font-semibold">
                 Not a support ticket. A conversation.
               </p>
-              <div className="w-8 h-px bg-gold" />
+              {/* <div className="w-8 h-px bg-gold" /> */}
               <p className="body-copy max-w-md">
                 Every enquiry to Maison Vereen — whether from a collector, a
                 journalist, or a future partner — is read and answered personally
@@ -176,8 +175,8 @@ export default function ContactPage() {
         <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <div className="flex items-center gap-3">
-              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">15</span>
-              <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+              <span className="font-sans text-sm md:text-base text-gold tracking-wide">15</span>
+              {/* <div className="h-px w-6 sm:w-8 bg-gold shrink-0" /> */}
               <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-semibold">
                 Contact &amp; Concierge
               </span>
@@ -191,7 +190,7 @@ export default function ContactPage() {
             <p className="font-sans text-xs uppercase tracking-[0.25em] text-gold font-semibold">
               Not a support ticket. A conversation.
             </p>
-            <div className="w-8 h-px bg-gold" />
+            {/* <div className="w-8 h-px bg-gold" /> */}
             <p className="body-copy max-w-md">
               Every enquiry to Maison Vereen — whether from a collector, a
               journalist, or a future partner — is read and answered personally
@@ -432,10 +431,10 @@ export default function ContactPage() {
           <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-40 lg:w-48 h-auto" />
         </div>
         <div className="absolute right-[8%] top-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none hidden md:block">
-          <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-40 lg:w-48 h-auto" />
+          {/* <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-40 lg:w-48 h-auto" /> */}
         </div>
         <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center">
-          <p className="body-copy">
+          <p className="font-serif text-body-muted text-3xl font-light ">
             Every enquiry deserves a considered reply. That is why every message
             is read personally.
           </p>

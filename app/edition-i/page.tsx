@@ -9,8 +9,7 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -154,17 +153,17 @@ export default function EditionIPage() {
         {/* ── 02 Introduction (cream) ── */}
         <section className="relative bg-[#EDE8DE] text-[#2C2823] py-20 md:py-28 overflow-hidden">
           <div className="absolute left-[-4%] top-1/2 -translate-y-1/2 opacity-[0.12] pointer-events-none hidden md:block">
-            <Image
+            {/* <Image
               src="/logo-mark.webp"
               alt=""
               width={420}
               height={340}
               className="w-72 lg:w-96 h-auto brightness-0"
-            />
+            /> */}
           </div>
 
           <div className="relative w-[95%] md:w-full max-w-3xl mx-auto space-y-10">
-            <span className="font-serif text-lg md:text-xl text-gold/70 block">
+            <span className="font-serif text-lg md:text-xl text-gold-dark block text-center">
               02
             </span>
 
@@ -295,28 +294,26 @@ export default function EditionIPage() {
         {/* ── 05 Three pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/15">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-14">
-            <span className="font-serif text-lg md:text-xl text-gold block">
+            <span className="font-serif text-lg md:text-xl text-gold block text-center">
               05
             </span>
 
-            <div className="grid grid-cols-1 md:grid-cols-3">
-              {PILLARS.map((pillar, i) => (
-                <div
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+              {PILLARS.map((pillar) => (
+                <article
                   key={pillar.no}
-                  className={`flex flex-col gap-5 px-0 md:px-8 py-8 md:py-2 text-center md:text-center ${
-                    i > 0 ? "border-t md:border-t-0 md:border-l border-gold/30" : ""
-                  }`}
+                  className="flex flex-col gap-4 border border-[#EDE8DE]/12 bg-[#0C0B0A] px-6 py-8 sm:px-7 sm:py-9 md:px-8 md:py-10"
                 >
-                  <span className="font-serif text-2xl md:text-3xl text-gold font-light">
+                  <span className="font-serif text-xl md:text-2xl text-gold font-light">
                     {pillar.no}
                   </span>
-                  <h3 className="font-serif text-xl md:text-2xl font-light text-gold">
+                  <h3 className="font-serif text-xl md:text-2xl font-light text-[#EDE8DE] leading-snug">
                     {pillar.title}
                   </h3>
-                  <p className="body-copy max-w-sm mx-auto">
+                  <p className="font-sans text-[13px] sm:text-[14px] font-normal leading-[1.7] text-body-muted">
                     {pillar.body}
                   </p>
-                </div>
+                </article>
               ))}
             </div>
           </div>
@@ -334,7 +331,7 @@ export default function EditionIPage() {
           <div className="absolute inset-0 bg-[#060506]/70" />
 
           <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-6">
-            <span className="font-serif text-lg md:text-xl text-gold block text-left">
+            <span className="font-serif text-lg md:text-xl text-gold block">
               06
             </span>
             <span
@@ -362,7 +359,7 @@ export default function EditionIPage() {
           </div>
 
           <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
-            <span className="font-serif text-lg md:text-xl text-gold/70 block text-left">
+            <span className="font-serif text-lg md:text-xl text-gold-dark block">
               07
             </span>
             <h2
@@ -371,7 +368,7 @@ export default function EditionIPage() {
             >
               History does not get a reprint.
             </h2>
-            <p className="body-copy-on-cream max-w-2xl mx-auto">
+            <p className="body-copy-on-cream w-full uppercase tracking-widest max-w-3xl mx-auto">
               Maison Vereen will never reproduce Edition I under any
               circumstance.
             </p>
@@ -381,7 +378,7 @@ export default function EditionIPage() {
         {/* ── 08 CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10">
-            <span className="font-serif text-lg md:text-xl text-gold block">
+            <span className="font-serif text-lg md:text-xl text-gold block text-center">
               08
             </span>
 
@@ -395,7 +392,7 @@ export default function EditionIPage() {
               </Link>
               <Link
                 href="/registry"
-                className="inline-flex items-center justify-center gap-3 text-[#EDE8DE] hover:text-gold px-2 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors border-b border-gold/50 hover:border-gold"
+                className="inline-flex border hover:text-gold border-gold items-center justify-center gap-3 whitespace-nowrap shrink-0  px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
               >
                 Understand the Founding Registry
                 <ArrowIcon />

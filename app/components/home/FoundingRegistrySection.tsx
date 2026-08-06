@@ -47,7 +47,7 @@ export default function FoundingRegistrySection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-7 md:space-y-8 max-w-xl">
             <div className="space-y-2.5">
-              <div className="w-8 h-px bg-gold" />
+              {/* <div className="w-8 h-px bg-gold" /> */}
               <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">
                 The Founding Registry
               </span>

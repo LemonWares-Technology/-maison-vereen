@@ -15,7 +15,6 @@ export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE EXPERIENCE", href: "/philosophy" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
 ];
 
 const DIRECTORY_NAV_ITEMS: NavItem[] = [
@@ -29,8 +28,7 @@ const DIRECTORY_NAV_ITEMS: NavItem[] = [
   { label: "THE CRAFT", href: "/the-craft" },
   { label: "THE DIFFERENCE", href: "/the-difference" },
   { label: "MEMBERSHIP", href: "/membership" },
-  { label: "LIVE REGISTRY", href: "/the-first-250" },
-  { label: "REGISTRY", href: "/registry" },
+  { label: "LEGACY", href: "/legacy" },
   { label: "FAQS", href: "/faqs" },
   { label: "CONTACT", href: "/contact" },
   { label: "APPLY", href: "/apply" },
@@ -44,6 +42,11 @@ export const HEADER_OFFSET_CLASS = "pt-30";
 /** Shared content rail — keep page sections aligned with the header */
 export const CONTENT_RAIL_CLASS = "w-[95%] md:w-full max-w-6xl mx-auto";
 
+function isNavActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 interface HeaderProps {
   navItems?: NavItem[];
 }
@@ -52,7 +55,22 @@ export default function Header({
   navItems = DEFAULT_NAV_ITEMS,
 }: HeaderProps) {
   const pathname = usePathname();
-  const primaryNavItems = navItems.slice(0, MAX_PRIMARY_NAV_ITEMS);
+  const currentDirectoryItem = DIRECTORY_NAV_ITEMS.find((item) =>
+    isNavActive(pathname, item.href)
+  );
+
+  // Keep up to 5 primary links, always including the page in view when known
+  let primaryNavItems = navItems.slice(0, MAX_PRIMARY_NAV_ITEMS);
+  if (
+    currentDirectoryItem &&
+    !primaryNavItems.some((item) => isNavActive(pathname, item.href))
+  ) {
+    primaryNavItems = [
+      ...primaryNavItems.slice(0, Math.max(0, MAX_PRIMARY_NAV_ITEMS - 1)),
+      currentDirectoryItem,
+    ];
+  }
+
   const [scrolled, setScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [drawerPath, setDrawerPath] = useState(pathname);
@@ -100,7 +118,7 @@ export default function Header({
 
           <nav className="hidden md:flex items-center gap-x-3 lg:gap-x-4 min-w-0 flex-1 justify-center px-4">
             {primaryNavItems.map(({ label, href }) => {
-              const active = pathname === href;
+              const active = isNavActive(pathname, href);
               return (
                 <Link
                   key={`${label}-${href}`}
@@ -108,7 +126,7 @@ export default function Header({
                   className={`tracking-[0.12em] lg:tracking-[0.16em] transition-colors duration-300 whitespace-nowrap shrink-0 ${
                     active
                       ? "text-gold underline underline-offset-8 decoration-1"
-                      : "text-[#EDE8DE] hover:text-gold"
+                      : "text-body-muted hover:text-gold"
                   }`}
                   style={{ fontSize: "clamp(9px, 0.85vw, 13px)" }}
                 >
@@ -121,7 +139,11 @@ export default function Header({
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <Link
               href="/apply"
-              className="border border-gold-dark px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] hover:text-gold hover:cursor-pointer transition-all duration-300"
+              className={`border px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] hover:cursor-pointer transition-all duration-300 ${
+                isNavActive(pathname, "/apply")
+                  ? "border-gold text-gold"
+                  : "border-gold-dark hover:text-gold"
+              }`}
             >
               Apply to the Registry
             </Link>
@@ -210,7 +232,7 @@ export default function Header({
 
         <nav className="h-[calc(100%-7.5rem)] overflow-y-auto py-4">
           {DIRECTORY_NAV_ITEMS.map(({ label, href }) => {
-            const active = pathname === href;
+            const active = isNavActive(pathname, href);
             return (
               <Link
                 key={`drawer-${label}-${href}`}

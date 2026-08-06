@@ -10,7 +10,6 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
   { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -50,7 +49,7 @@ export default function LegacyPage() {
                 <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
                   Legacy
                 </span>
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
                 <h1
                   className="font-serif font-light text-[#F2EDE4] leading-[1.06] tracking-tight"
                   style={{ fontSize: "clamp(2.1rem, 5vw, 4.2rem)" }}
@@ -89,7 +88,7 @@ export default function LegacyPage() {
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 Legacy
               </span>
-              <div className="w-10 h-px bg-gold" />
+              {/* <div className="w-10 h-px bg-gold" /> */}
               <h1
                 className="font-serif font-light text-[#F2EDE4] leading-[1.06] tracking-tight"
                 style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}
@@ -125,7 +124,7 @@ export default function LegacyPage() {
                     </em>
                   </h2>
                   <p
-                    className="text-[#EDE8DE] font-light leading-[1.85]"
+                    className="text-body-muted font-light leading-[1.85]"
                     style={{ fontSize: "17px" }}
                   >
                     The greatest luxury houses in the world are not remembered
@@ -136,7 +135,7 @@ export default function LegacyPage() {
                     compromise would have been easier and more profitable.
                   </p>
                   <p
-                    className="text-[#EDE8DE] font-light leading-[1.85]"
+                    className="text-body-muted font-light leading-[1.85]"
                     style={{ fontSize: "17px" }}
                   >
                     Maison Vereen is being built in that spirit. Not because we
@@ -244,7 +243,7 @@ export default function LegacyPage() {
                     </em>
                   </h2>
                   <p
-                    className="text-[#EDE8DE] font-light leading-[1.85]"
+                    className="text-body-muted font-light leading-[1.85]"
                     style={{ fontSize: "17px" }}
                   >
                     The founding owners of the great houses — Hermès, Rolex,
@@ -255,7 +254,7 @@ export default function LegacyPage() {
                     ability to see something serious and respond to it seriously.
                   </p>
                   <p
-                    className="text-[#EDE8DE] font-light leading-[1.85]"
+                    className="text-body-muted font-light leading-[1.85]"
                     style={{ fontSize: "17px" }}
                   >
                     The founding owners of Maison Vereen are in the same
@@ -274,9 +273,9 @@ export default function LegacyPage() {
         <section className="border-b border-white/5">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-24 md:py-36">
             <div className="max-w-170 mx-auto text-center space-y-12">
-              <div className="w-8 h-px bg-gold/40 mx-auto" />
+              {/* <div className="w-8 h-px bg-gold/40 mx-auto" /> */}
               <p
-                className="body-copy"
+                className="font-serif text-body-muted text-base font-light"
                 style={{ fontSize: "clamp(1.2rem, 2vw, 1.7rem)" }}
               >
                 We are building the house we always needed. We are building it
@@ -284,7 +283,7 @@ export default function LegacyPage() {
                 individuals who were always worthy of it. And we are building it
                 to last.
               </p>
-              <div className="w-8 h-px bg-gold/40 mx-auto" />
+              {/* <div className="w-8 h-px bg-gold/40 mx-auto" /> */}
               <Link
                 href="/apply"
                 className="inline-block border border-gold/50 hover:border-gold hover:bg-gold/10 px-12 py-4 text-[#E8E2D9] transition-all duration-500 uppercase font-medium tracking-[0.3em] text-[11px]"

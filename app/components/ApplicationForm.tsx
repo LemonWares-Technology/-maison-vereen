@@ -381,7 +381,7 @@ export default function ApplicationForm() {
                   This is a calling.
                 </h1>
 
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
 
                 <div className="space-y-4 body-copy">
                   <p>

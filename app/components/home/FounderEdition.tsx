@@ -60,7 +60,6 @@ export default function FounderEdition() {
 
           <div className="space-y-6 md:space-y-7 max-w-lg order-1 lg:ml-auto">
             <div className="space-y-2.5">
-              <div className="w-8 h-px bg-gold" />
               <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">
                 The Founder Edition
               </span>
@@ -93,10 +92,10 @@ export default function FounderEdition() {
                 href="/edition-i"
                 className="group inline-flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors"
               >
-                <span className="border-b border-gold pb-1.5 group-hover:border-gold-light transition-colors">
+                <span className="border flex items-center gap-3  border-gold px-4 py-3 group-hover:border-gold-light transition-colors">
                   Discover Edition I in Full
-                </span>
                 <ArrowIcon />
+                </span>
               </Link>
             </div>
           </div>
