@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
@@ -10,8 +11,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE CRAFT", href: "/the-craft" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -145,13 +145,13 @@ function ArrowIcon() {
 function StepChevron() {
   return (
     <svg
-      width="12"
-      height="12"
+      width="10"
+      height="10"
       viewBox="0 0 12 12"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.2"
-      className="text-gold/50 shrink-0"
+      className="text-gold/60 shrink-0"
       aria-hidden
     >
       <path d="M4 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
@@ -164,109 +164,111 @@ function StepIcon({
 }: {
   type: (typeof PROCESS_STEPS)[number]["icon"];
 }) {
-  if (type === "maison") {
-    return (
-      <Image
-        src="/logo-mark.webp"
-        alt=""
-        width={28}
-        height={24}
-        className="w-7 h-auto"
-      />
-    );
-  }
-
-  const common = {
-    width: 28,
-    height: 28,
-    viewBox: "0 0 28 28",
+  const svgProps = {
+    width: 20,
+    height: 20,
+    viewBox: "0 0 24 24",
     fill: "none" as const,
     stroke: "currentColor",
-    strokeWidth: 1.2,
-    className: "text-gold",
+    strokeWidth: 1.35,
     "aria-hidden": true as const,
   };
 
-  if (type === "leaf") {
-    return (
-      <svg {...common}>
-        <path
-          d="M14 24c0-10 8-14 10-18-6 1-14 5-16 14 2-1 4-1 6 0-1 2-2 3-4 4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (type === "study") {
-    return (
-      <svg {...common}>
-        <circle cx="12" cy="12" r="6.5" />
-        <path d="M17 17l5.5 5.5" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  if (type === "flask") {
-    return (
-      <svg {...common}>
-        <path
-          d="M11 4h6M12 4v7L7 22a2 2 0 001.8 3h10.4A2 2 0 0021 22L16 11V4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (type === "reject") {
-    return (
-      <svg {...common}>
-        <circle cx="14" cy="14" r="9" />
-        <path d="M10 10l8 8M18 10l-8 8" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  if (type === "rebuild") {
-    return (
-      <svg {...common}>
-        <path
-          d="M20 9.5A7 7 0 107 17.5M20 9.5V5M20 9.5h-4.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (type === "age") {
-    return (
-      <svg {...common}>
-        <path
-          d="M9 5h10M9 23h10M10 5l4 7-4 7h8l-4-7 4-7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (type === "evaluate") {
-    return (
-      <svg {...common}>
-        <path
-          d="M3.5 14S8 7 14 7s10.5 7 10.5 7-4.5 7-10.5 7S3.5 14 3.5 14z"
-          strokeLinejoin="round"
-        />
-        <circle cx="14" cy="14" r="3" />
-      </svg>
-    );
-  }
-  return (
-    <svg {...common}>
-      <circle cx="14" cy="14" r="9" />
-      <path
-        d="M9 14.5l3 3 7-7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+  let glyph: ReactNode;
+
+  if (type === "maison") {
+    glyph = (
+      <Image
+        src="/logo-mark.webp"
+        alt=""
+        width={22}
+        height={18}
+        className="w-5 h-auto"
       />
-    </svg>
+    );
+  } else if (type === "leaf") {
+    glyph = (
+      <svg {...svgProps}>
+        <path
+          d="M12 21c0-7 6-10 8-14-5 1-11 4-12 11 1.5-.8 3-.8 4.5 0C11.5 19.5 11 20.5 9.5 21.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M12 21V11" strokeLinecap="round" />
+      </svg>
+    );
+  } else if (type === "study") {
+    glyph = (
+      <svg {...svgProps}>
+        <circle cx="10.5" cy="10.5" r="6" />
+        <path d="M15 15l5 5" strokeLinecap="round" />
+      </svg>
+    );
+  } else if (type === "flask") {
+    glyph = (
+      <svg {...svgProps}>
+        <path
+          d="M9 3h6M10 3v7L5.5 19a2 2 0 001.8 3h9.4a2 2 0 001.8-3L14 10V3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M8 16h8" strokeLinecap="round" />
+      </svg>
+    );
+  } else if (type === "reject") {
+    glyph = (
+      <svg {...svgProps}>
+        <path d="M7 7l10 10M17 7L7 17" strokeLinecap="round" />
+      </svg>
+    );
+  } else if (type === "rebuild") {
+    glyph = (
+      <svg {...svgProps}>
+        <path
+          d="M4 12a8 8 0 0113.66-5.66M20 12a8 8 0 01-13.66 5.66"
+          strokeLinecap="round"
+        />
+        <path d="M17.5 3.5V6.5H14.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M6.5 20.5V17.5H9.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  } else if (type === "age") {
+    glyph = (
+      <svg {...svgProps}>
+        <path d="M7 3h10M7 21h10" strokeLinecap="round" />
+        <path
+          d="M8 3l4 7-4 8h8l-4-8 4-7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  } else if (type === "evaluate") {
+    glyph = (
+      <svg {...svgProps}>
+        <path
+          d="M2.5 12S6.5 5.5 12 5.5 21.5 12 21.5 12 17.5 18.5 12 18.5 2.5 12 2.5 12z"
+          strokeLinejoin="round"
+        />
+        <circle cx="12" cy="12" r="2.75" />
+      </svg>
+    );
+  } else {
+    glyph = (
+      <svg {...svgProps}>
+        <path
+          d="M5.5 12.5l4 4 9-9"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold text-gold">
+      {glyph}
+    </span>
   );
 }
 
@@ -282,7 +284,7 @@ export default function TheCraftPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-7 md:space-y-8 max-w-xl">
                 <div className="space-y-3">
-                  <div className="w-10 h-px bg-gold" />
+                  {/* <div className="w-10 h-px bg-gold" /> */}
                   <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                     The Individual Behind Every Fragrance
                   </span>
@@ -310,7 +312,7 @@ export default function TheCraftPage() {
                   ))}
                 </ul>
 
-                <p className="body-copy max-w-md">
+                <p className="text-body-muted text-base font-light leading-[1.85] max-w-md">
                   A finished fragrance from Maison Vereen represents years of
                   refinement — sourcing, testing, rejecting, and beginning
                   again, until the formula deserved the House&apos;s name.
@@ -357,7 +359,7 @@ export default function TheCraftPage() {
                   Behind every Maison Vereen fragrance is a process most houses
                   no longer have the patience for.
                 </h2>
-                <div className="space-y-5 body-copy">
+                <div className="space-y-5 text-body-muted text-base font-light leading-[1.85]">
                   <p>
                     It begins with sourcing — rare African materials selected
                     not for cost efficiency but for character, often requiring
@@ -403,7 +405,7 @@ export default function TheCraftPage() {
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.32em] text-[#2C2823] font-medium">
                 Raw Materials
               </h2>
-              <p className="body-copy-on-cream">
+              <p className="text-body-muted text-[14px] font-light leading-[1.85]">
                 Maison Vereen sources materials others overlook — rare resins,
                 woods, and botanicals drawn from across the African continent,
                 selected for the particular depth and character they bring
@@ -434,29 +436,29 @@ export default function TheCraftPage() {
 
         {/* ── Process steps ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
             <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium text-center">
               The Process — Unhurried by Design
             </h2>
 
-            <div className="overflow-x-auto pb-2 -mx-1 px-1">
-              <div className="flex items-start min-w-max lg:min-w-0 lg:w-full gap-0">
+            <div className="overflow-x-auto pb-2">
+              <div className="flex items-stretch justify-center min-w-max xl:min-w-0 xl:w-full gap-0">
                 {PROCESS_STEPS.map((item, idx) => (
                   <div
                     key={item.step}
-                    className="flex items-start shrink-0 lg:shrink lg:flex-1"
+                    className="flex items-stretch shrink-0 xl:shrink xl:flex-1"
                   >
-                    <div className="flex flex-col items-center text-center gap-3 w-36 sm:w-40 lg:w-full px-2">
+                    <article className="flex w-36 sm:w-40 xl:w-full flex-col items-center text-center gap-3 border border-[#EDE8DE]/12 bg-[#0C0B0A] px-3 py-6 sm:px-3.5 sm:py-7">
                       <StepIcon type={item.icon} />
-                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-gold font-medium">
+                      <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-[0.16em] text-gold font-medium leading-snug">
                         {item.step}
                       </span>
-                      <p className="body-copy">
+                      <p className="font-sans text-[11px] sm:text-[12px] font-normal leading-[1.55] text-body-muted">
                         {item.text}
                       </p>
-                    </div>
+                    </article>
                     {idx < PROCESS_STEPS.length - 1 ? (
-                      <div className="flex items-center pt-3 px-0.5">
+                      <div className="flex items-center px-1 sm:px-1.5">
                         <StepChevron />
                       </div>
                     ) : null}
@@ -482,7 +484,7 @@ export default function TheCraftPage() {
                   A single formula may pass through dozens of trials before
                   approval.
                 </h2>
-                <div className="space-y-5 body-copy">
+                <div className="text-body-muted text-base font-light leading-[1.85]">
                   <p>
                     Patience is treated as a material in its own right — as
                     essential to the finished work as any oil or absolute in the
@@ -532,7 +534,7 @@ export default function TheCraftPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
               <h3
                 className="font-serif font-light text-[#F2EDE4] leading-snug"
-                style={{ fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)" }}
+                style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)" }}
               >
                 Understanding the craft makes one number mean something it did
                 not before —{" "}
@@ -547,7 +549,7 @@ export default function TheCraftPage() {
                   Discover Edition I in Full
                   <ArrowIcon />
                 </Link>
-                <p className="body-copy">
+                <p className="text-body-muted text-[14px] font-light leading-[1.85]">
                   Return to Edition I with full appreciation for the craft
                   behind it.
                 </p>
@@ -561,7 +563,7 @@ export default function TheCraftPage() {
                 Apply for a Position
                   <ArrowIcon />
               </Link>
-                <p className="body-copy">
+                <p className="text-body-muted text-[14px] font-light leading-[1.85]">
                   For those who want to be part of something built to last.
                 </p>
               </div>

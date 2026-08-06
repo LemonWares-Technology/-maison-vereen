@@ -10,8 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE EXPERIENCE", href: "/philosophy" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -21,7 +20,7 @@ const CONVICTIONS = [
     title: "CRAFTSMANSHIP",
     purpose: "Purpose: State the House's standard for making.",
     body: "Nothing leaves Maison Vereen because a deadline arrived. It leaves because it is finished, by the only standard that matters here — the master perfumer's own.",
-    src: "/founder-image-2.webp",
+    src: "/images/philosophy-hero.webp",
     alt: "Master perfumer craft with glass dropper and vials",
   },
   {
@@ -37,7 +36,7 @@ const CONVICTIONS = [
     title: "MEMORY",
     purpose: "Purpose: Frame fragrance as an instrument of memory.",
     body: "A fragrance is the only object capable of returning someone, instantly and involuntarily, to a moment they thought they had lost. Maison Vereen designs for that return, not merely for how a scent performs in the first hour.",
-    src: "/founder-image-2.webp",
+    src: "/images/journal-dark.webp",
     alt: "Raw amber resin and materials of memory",
   },
   {
@@ -45,7 +44,7 @@ const CONVICTIONS = [
     title: "IDENTITY",
     purpose: "Purpose: Position fragrance as self-expression, not costume.",
     body: "A signature scent is not a mask. It is closer to a signature itself — unrepeatable, and recognisably the wearer's own. The House creates fragrances built to be worn for decades, not seasons.",
-    src: "/timesand.webp",
+    src: "/images/philosophy-hero.webp",
     alt: "Fountain pen and handwritten signature",
   },
   {
@@ -53,7 +52,7 @@ const CONVICTIONS = [
     title: "RARITY & LEGACY",
     purpose: "Purpose: Tie scarcity to permanence rather than marketing urgency.",
     body: "What is rare is rare because it was never compromised to meet demand. What is rare and well made becomes legacy — passed forward, told about, remembered after the person who first wore it is gone.",
-    src: "/founder-image-2.webp",
+    src: "/timesand.webp",
     alt: "Dark stone with veins of gold — rarity and permanence",
   },
 ];
@@ -111,7 +110,7 @@ export default function PhilosophyPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 lg:left-[32%] xl:left-[28%]">
               <Image
-                src="/timesand.webp"
+                src="/images/philosophy-hero.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
@@ -131,7 +130,7 @@ export default function PhilosophyPage() {
           <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                   The Philosophy of the House
                 </span>
@@ -144,20 +143,20 @@ export default function PhilosophyPage() {
                 Luxury Is Not Volume. It Is Conviction.
               </h1>
 
-              <p className="body-copy max-w-lg">
+              <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-gold max-w-lg">
                 Ten convictions govern Maison Vereen. None of them are
                 negotiable, and none of them were chosen for how they would
                 market.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-2">
-                <p className="body-copy">
+                <p className="text-body-muted text-[14px] font-light leading-[1.8] ">
                   Every house, knowingly or not, is built on a set of beliefs.
                   Most never state them. Maison Vereen states them plainly,
                   because a House that intends to last a century cannot afford
                   to leave its convictions unwritten.
                 </p>
-                <p className="body-copy">
+                <p className="text-body-muted text-[14px] font-light leading-[1.8]">
                   These beliefs are not slogans. They are the standard against
                   which every formulation, every material, every piece of
                   correspondence with a collector, and every page of this
@@ -183,7 +182,6 @@ export default function PhilosophyPage() {
                     <span className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-gold font-light leading-none block">
                       {c.number}
                     </span>
-                    <div className="w-10 h-px bg-gold" />
                   </div>
 
                   <div className="relative aspect-square max-w-xs lg:max-w-none overflow-hidden">
@@ -200,10 +198,10 @@ export default function PhilosophyPage() {
                     <h2 className="font-serif text-xl md:text-2xl font-light tracking-[0.12em] uppercase text-gold">
                       {c.title}
                     </h2>
-                    <p className="body-copy">
+                    <p className="font-serif text-base md:text-lg italic font-light text-gold/90 leading-snug">
                       {c.purpose}
                     </p>
-                    <p className="body-copy">
+                    <p className="text-body-muted text-[14px] font-light leading-[1.8]">
                       {c.body}
                     </p>
                   </div>
@@ -213,49 +211,41 @@ export default function PhilosophyPage() {
           </div>
         </section>
 
-        {/* ── Dual CTAs — open columns, gold rule only ── */}
+        {/* ── Dual CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-5xl mx-auto space-y-12 md:space-y-14">
-            <Image
-              src="/logo-mark.webp"
-              alt="Maison Vereen"
-              width={48}
-              height={40}
-              className="w-10 h-auto mx-auto"
-            />
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0">
-              <div className="flex flex-col gap-6 lg:pr-12 xl:pr-16">
+          <div className="w-[95%] md:w-full max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+              <article className="flex flex-col gap-8 border border-[#EDE8DE]/12 bg-[#0C0B0A] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
                 <h3
-                  className="font-serif font-light text-[#F2EDE4] leading-snug"
-                  style={{ fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)" }}
+                  className="font-serif font-light text-[#EDE8DE] leading-snug"
+                  style={{ fontSize: "clamp(1.25rem, 2.2vw, 1.65rem)" }}
                 >
                   Curious to know the person behind these convictions?
                 </h3>
                 <Link
                   href="/the-founder"
-                  className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
+                  className="inline-flex w-full items-center justify-between gap-3 border border-gold text-gold hover:bg-gold/10 px-5 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors"
                 >
                   Meet the Founder
                   <ArrowIcon />
                 </Link>
-              </div>
+              </article>
 
-              <div className="flex flex-col gap-6 lg:pl-12 xl:pl-16 lg:border-l lg:border-gold/25">
+              <article className="flex flex-col gap-8 border border-[#EDE8DE]/12 bg-[#0C0B0A] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
                 <h3
-                  className="font-serif font-light text-[#F2EDE4] leading-snug"
-                  style={{ fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)" }}
+                  className="font-serif font-light text-[#EDE8DE] leading-snug"
+                  style={{ fontSize: "clamp(1.25rem, 2.2vw, 1.65rem)" }}
                 >
                   Ready to be part of the House?
                 </h3>
                 <Link
-                href="/apply"
-                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors self-start"
-              >
-                Apply for a Position
+                  href="/apply"
+                  className="inline-flex w-full items-center justify-between gap-3 border border-gold text-gold hover:bg-gold/10 px-5 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors"
+                >
+                  Apply for a Position
                   <ArrowIcon />
-              </Link>
-              </div>
+                </Link>
+              </article>
             </div>
           </div>
         </section>
@@ -264,7 +254,8 @@ export default function PhilosophyPage() {
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <h2
-              className="body-copy"
+              className="font-serif font-light text-gold leading-snug italic"
+              style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
             >
               A philosophy this deliberate does not appear by accident. It
               begins with one person&apos;s conviction.

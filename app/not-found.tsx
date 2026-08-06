@@ -105,7 +105,6 @@ export default function NotFound() {
               {[
                 { label: "Discover Maison Vereen", href: "/our-story" },
                 { label: "Edition I", href: "/edition-i" },
-                { label: "Founding Registry", href: "/the-first-250" },
                 { label: "Apply for Access", href: "/access" },
                 { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (

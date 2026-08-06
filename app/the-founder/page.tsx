@@ -10,8 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE FOUNDER", href: "/the-founder" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -75,7 +74,7 @@ export default function TheFounderPage() {
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                   The Founder&apos;s Story
                 </span>
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
               </div>
 
               <h1
@@ -89,14 +88,14 @@ export default function TheFounderPage() {
                 {HERO_LINES.map((line) => (
                   <li key={line} className="flex items-start gap-4">
                     <span className="mt-[0.7em] w-5 h-px shrink-0 bg-gold" />
-                    <span className="font-sans text-base text-gold">
+                    <span className=" text-[15px] font-medium leading-relaxed text-gold">
                       {line}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <p className="body-copy max-w-md pt-2">
+              <p className="text-body-muted text-[16px] font-medium max-w-md pt-2">
                 The most prestigious houses in the world communicate through
                 their work, not their founders. Maison Vereen was built in that
                 tradition.
@@ -107,7 +106,7 @@ export default function TheFounderPage() {
 
         {/* ── Narrative ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto space-y-8 body-copy">
+          <div className="w-[95%] md:w-full max-w-3xl mx-auto space-y-8 text-body-muted text-[16px] font-light leading-[1.85] ">
             <p>
               Maison Vereen was founded on a simple, stubborn conviction: that a
               luxury fragrance house built to the world&apos;s highest standard
@@ -144,14 +143,15 @@ export default function TheFounderPage() {
                     <span className="font-serif text-lg md:text-xl text-gold block">
                       01
                     </span>
-                    <div className="w-8 h-px bg-gold" />
+                    {/* <div className="w-8 h-px bg-gold" /> */}
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+                    style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.15rem)" }}
+                  >
                     Conviction Over Credentials
                   </h2>
-                  <p className="body-copy">
+                  <p className="text-base text-body-muted font-light leading-[1.85]">
                     The most prestigious houses in the world are remembered for
                     their work, not their founders&apos; faces. Maison Vereen
                     follows that same discipline deliberately — the House, not
@@ -161,7 +161,7 @@ export default function TheFounderPage() {
 
                 <div className="relative w-full aspect-3/4 sm:aspect-auto sm:h-full sm:min-h-80 overflow-hidden">
                   <Image
-                    src="/womancreatingperfume.webp"
+                    src="/chemist.webp"
                     alt="Craft archives — journal and tools of the House"
                     fill
                     className="object-cover object-center"
@@ -185,10 +185,11 @@ export default function TheFounderPage() {
                   </div>
                   <h2
                     className="font-serif font-light text-[#F2EDE4] leading-snug"
-                   style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+                    style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.15rem)" }}
+                  >
                     Building to Outlive Her
                   </h2>
-                  <p className="body-copy">
+                  <p className="text-body-muted text-base font-light leading-[1.85] ">
                     Every decision made today — from Edition I&apos;s scarcity to
                     the Founding Registry&apos;s careful structure — is made with
                     one question in mind: will this still make sense in a
@@ -199,7 +200,7 @@ export default function TheFounderPage() {
 
                 <div className="relative w-full aspect-3/4 sm:aspect-auto sm:h-full sm:min-h-80 overflow-hidden">
                   <Image
-                    src="/womancreatingperfume.webp"
+                    src="/edition1bottle.webp"
                     alt="Institutional vision — an enduring House"
                     fill
                     className="object-cover object-center"
@@ -226,13 +227,13 @@ export default function TheFounderPage() {
               </span>
               <h2
                 className="font-serif font-light text-gold leading-snug"
-                style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.35rem)" }}
+                style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)" }}
               >
                 Conviction explains why the House exists.
                 <br className="hidden sm:block" />
                 What follows explains why it could only ever look like this.
               </h2>
-              <div className="w-10 h-px bg-gold mx-auto" />
+              {/* <div className="w-10 h-px bg-gold mx-auto" /> */}
             </div>
           </div>
 
@@ -241,7 +242,7 @@ export default function TheFounderPage() {
             {/* Left — bottle + candle atmosphere melting into black */}
             <div className="relative hidden lg:block min-h-72 overflow-hidden">
               <Image
-                src="/womancreatingperfume.webp"
+                src="/edition1.webp"
                 alt=""
                 fill
                 className="object-cover object-[40%_center]"
@@ -261,7 +262,7 @@ export default function TheFounderPage() {
                 See What Makes the House Different
                 <ArrowIcon />
               </Link>
-              <p className="body-copy max-w-sm">
+              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-body-muted max-w-sm">
                 Discover what sets Maison Vereen apart and why nothing here is
                 ordinary.
               </p>
@@ -276,7 +277,7 @@ export default function TheFounderPage() {
                 Apply for a Position
                 <ArrowIcon />
               </Link>
-              <p className="body-copy max-w-sm">
+              <p className="font-sans text-sm md:text-base font-light leading-relaxed text-body-muted max-w-sm">
                 For those who feel aligned with the mission and want to
                 contribute to its legacy.
               </p>

@@ -12,8 +12,7 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -167,12 +166,18 @@ export default function LiveFoundingRegistryPage() {
           <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-6 md:space-y-7 max-w-xl">
-                <div className="flex items-center gap-3">
-                  <span className="font-serif text-lg md:text-xl text-gold">09</span>
-                  <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
-                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
+                {/* <div className="flex items-center gap-3">
+                  <span className="font-serif text-lg md:text-xl text-gold">
+                    09
+                  </span>
+                  <div className="w-6 h-px bg-gold" />
+                </div> */}
+
+                <div className="space-y-2">
+                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                     Live Founding Registry
                   </span>
+                  {/* <div className="w-10 h-px bg-gold" /> */}
                 </div>
 
                 <h1
@@ -189,9 +194,9 @@ export default function LiveFoundingRegistryPage() {
                   of {MAX_MEMBERS}. The House Is Being Assembled Now.
                 </h1>
 
-                <div className="w-10 h-px bg-gold" />
+                <div className="w-10 h-px" />
 
-                <p className="body-copy max-w-md">
+                <p className="text-body-muted font-light leading-[1.85] max-w-md">
                   The live Founding Registry count reflects every applicant the
                   House has personally reviewed and accepted — never an
                   estimate, never inflated.
@@ -200,7 +205,7 @@ export default function LiveFoundingRegistryPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden bg-[#0A0A0C]">
                 <Image
-                  src="/privateacquisition.webp"
+                  src="/temple.webp"
                   alt="Maison Vereen Founding Registry ledger"
                   fill
                   priority
@@ -217,20 +222,20 @@ export default function LiveFoundingRegistryPage() {
         <section className="relative bg-[#060506] py-20 md:py-28 border-b border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-px bg-gold" />
+              {/* <div className="w-10 h-px bg-gold" /> */}
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 A Living Record
               </span>
-              <div className="w-10 h-px bg-gold" />
+              {/* <div className="w-10 h-px bg-gold" /> */}
             </div>
 
-            <p className="body-copy">
+            <p className=" text-body-muted text-base font-light leading-[1.85]">
               This page exists as a living record of the Founding Registry&apos;s
               growth. The count displayed here rises only when Maison Vereen
               formally accepts an applicant — never automatically, never on a
               timer, and never adjusted for effect.
             </p>
-            <p className="body-copy">
+            <p className="text-body-muted font-light leading-[1.85] ">
               As the count approaches three hundred and fifty, this page becomes
               the clearest, most honest signal of how close the Founding
               Registry is to closing.
@@ -255,12 +260,12 @@ export default function LiveFoundingRegistryPage() {
                 Accepted Members
               </p>
 
-              <p className="body-copy italic">
+              <p className="text-base md:text-lg  text-body-muted">
                 out of {MAX_MEMBERS}
               </p>
 
               <div className="pt-4 max-w-2xl mx-auto space-y-3">
-                <div className="w-full h-px bg-white/15 relative overflow-hidden">
+                <div className="w-full h-1 rounded-2xl bg-white/15 relative overflow-hidden">
                   <div
                     className="absolute inset-y-0 left-0 bg-gold transition-all duration-1000 ease-out"
                     style={{ width: loaded ? `${progress}%` : "0%" }}
@@ -278,25 +283,21 @@ export default function LiveFoundingRegistryPage() {
         {/* ── Recently Welcomed ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
           <div className="w-[95%] md:w-full max-w-4xl mx-auto space-y-10">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-px bg-gold" />
-              <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
-                Recently Welcomed
-              </span>
-              <div className="w-10 h-px bg-gold" />
-            </div>
+            <h2 className="text-center font-serif text-xs sm:text-sm uppercase tracking-[0.32em] text-gold font-light">
+              Recently Welcomed
+            </h2>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
+            <div className="border border-[#EDE8DE]/12 bg-[#0C0B0A] overflow-x-auto">
+              <table className="w-full text-left ">
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="pb-4 pr-4 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                  <tr className="border-b border-[#EDE8DE]/10">
+                    <th className="px-5 sm:px-8 pt-6 pb-4 font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
                       Member
                     </th>
-                    <th className="pb-4 pr-4 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                    <th className="px-4 pt-6 pb-4 text-center font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
                       Country
                     </th>
-                    <th className="pb-4 text-right font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
+                    <th className="px-5 sm:px-8 pt-6 pb-4 text-right font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE]/55 font-medium">
                       Status
                     </th>
                   </tr>
@@ -306,27 +307,31 @@ export default function LiveFoundingRegistryPage() {
                     <tr>
                       <td
                         colSpan={3}
-                        className="py-10 text-center body-copy"
+                        className="px-5 sm:px-8 py-10 text-center font-serif text-base md:text-lg font-light text-[#EDE8DE]/70"
                       >
                         The first acceptances will appear here.
                       </td>
                     </tr>
                   ) : (
-                    recent.map((row) => (
+                    recent.map((row, i) => (
                       <tr
                         key={`${row.verificationNumber}-${row.displayName}`}
-                        className="border-b border-white/5"
+                        className={
+                          i < recent.length - 1
+                            ? "border-b border-[#EDE8DE]/10"
+                            : undefined
+                        }
                       >
-                        <td className="py-5 pr-4 font-sans text-base text-[#8A8178]">
-                          <span className="text-gold font-mono text-sm mr-3 tracking-wider">
+                        <td className="px-5 sm:px-8 py-5 sm:py-6 text-[14px] text-[#F2EDE4] font-light">
+                          <span className="text-gold mr-3 tracking-wider">
                             {formatMemberNo(row.verificationNumber)}
                           </span>
                           {row.displayName}
                         </td>
-                        <td className="py-5 pr-4 body-copy">
+                        <td className="px-4 py-5 sm:py-6 text-center text-[14px] font-light text-body-muted">
                           {row.country}
                         </td>
-                        <td className="py-5 text-right font-sans text-sm uppercase tracking-[0.2em] text-gold font-medium">
+                        <td className="px-5 sm:px-8 py-5 sm:py-6 text-right text-[14px] font-light text-gold">
                           Accepted
                         </td>
                       </tr>
@@ -336,7 +341,7 @@ export default function LiveFoundingRegistryPage() {
               </table>
             </div>
 
-            <p className="body-copy text-center max-w-2xl mx-auto">
+            <p className="font-sans text-[13px] sm:text-sm font-normal leading-relaxed text-body-muted text-center max-w-2xl mx-auto">
               Recently accepted members are shown by first name, last initial,
               and country only. The House will never display a member&apos;s
               full identity without explicit permission.
@@ -349,15 +354,16 @@ export default function LiveFoundingRegistryPage() {
           <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
               <div className="flex items-center justify-center gap-6 md:gap-8 lg:pr-12 lg:border-r lg:border-gold/30">
-                <SealMark />
-                <div className="text-left space-y-2">
+                {/* <SealMark /> */}
+                <div className="text-center space-y-2">
                   <span
                     className="font-serif text-gold font-light leading-none block"
                     style={{ fontSize: "clamp(3.5rem, 8vw, 5.5rem)" }}
                   >
                     {MAX_MEMBERS}
                   </span>
-                  <span className="font-sans text-xs uppercase tracking-[0.28em] text-gold font-medium block max-w-40">
+                  <div className="w-10 h-1  mx-auto" />
+                  <span className="font-sans text-xs uppercase tracking-[0.28em] text-body-muted font-medium block max-w-full">
                     Maximum Founding Members
                   </span>
                 </div>
@@ -367,7 +373,7 @@ export default function LiveFoundingRegistryPage() {
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
                   Why 350?
                 </span>
-                <p className="body-copy max-w-xl">
+                <p className=" font-light leading-[1.85] text-body-muted text-[14px] max-w-xl">
                   The Registry accepts a maximum of three hundred and fifty
                   members because the House honours scale as much as exclusivity.
                   Only two hundred and fifty bottles exist in Edition I. The
@@ -383,13 +389,7 @@ export default function LiveFoundingRegistryPage() {
         {/* ── This number only moves forward ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 overflow-hidden border-b border-white/5">
           <div className="absolute right-[8%] top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none hidden lg:block">
-            <Image
-              src="/logo-mark.webp"
-              alt=""
-              width={220}
-              height={180}
-              className="w-52 h-auto"
-            />
+           
           </div>
 
           <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
@@ -397,12 +397,12 @@ export default function LiveFoundingRegistryPage() {
               <ShieldMarkIcon />
             </div>
             <h2
-              className="font-serif font-light text-gold leading-snug"
+              className="font-serif font-ligh leading-snug"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
             >
               This number only moves forward.
             </h2>
-            <p className="font-sans text-sm md:text-base uppercase tracking-[0.32em] text-[#EDE8DE] font-medium">
+            <p className="font-sans text-[13px] text-gold uppercase tracking-[0.32em] font-medium">
               Never Estimated. Never Inflated. Never Rushed.
             </p>
           </div>
@@ -411,50 +411,38 @@ export default function LiveFoundingRegistryPage() {
         {/* ── Transition + CTAs ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 overflow-hidden">
           <div className="absolute left-[4%] top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3 opacity-40 pointer-events-none">
-            <div className="w-px h-16 bg-gold/50" />
-            <Image
-              src="/logo-mark.webp"
-              alt=""
-              width={48}
-              height={40}
-              className="w-10 h-auto"
-            />
-            <div className="w-px h-16 bg-gold/50" />
+           
           </div>
           <div className="absolute right-[4%] top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3 opacity-40 pointer-events-none">
             <div className="w-px h-16 bg-gold/50" />
-            <Image
-              src="/logo-mark.webp"
-              alt=""
-              width={48}
-              height={40}
-              className="w-10 h-auto"
-            />
-            <div className="w-px h-16 bg-gold/50" />
+           
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
             <div className="space-y-5">
-              <h2 className="body-copy">
+              <h2
+                className="font-serif font-light text-[#F2EDE4] leading-snug"
+                style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)" }}
+              >
                 Acceptance into the Registry is only the beginning
               </h2>
-              <div className="w-10 h-px bg-gold mx-auto" />
-              <p className="font-sans text-sm md:text-base uppercase tracking-[0.2em] text-gold font-semibold">
+              {/* <div className="w-10 h-px bg-gold mx-auto" /> */}
+              <p className="text-[15px] text-body-muted font-light tracking-wider">
                 Membership in this House means much more.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
               <Link
                 href="/apply"
-                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
                 Apply to the Founding Registry
                 <ArrowIcon />
               </Link>
               <Link
                 href="/membership"
-                className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 border border-gold text-gold hover:bg-gold/10 px-7 sm:px-8 py-3.5 text-xs tracking-[0.18em] sm:tracking-[0.22em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-7 py-3.5 text-xs tracking-[0.25em] uppercase font-medium transition-colors"
               >
                 Learn About Membership &amp; Access
                 <ArrowIcon />

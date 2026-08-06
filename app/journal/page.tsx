@@ -10,8 +10,7 @@ const JOURNAL_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -49,7 +48,7 @@ export default function JournalPage() {
                 <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
                   The Journal
                 </span>
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
 
                 <h1
                   className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
@@ -93,15 +92,15 @@ export default function JournalPage() {
           <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
-                The Journal
+                The Housebook
               </span>
-              <div className="w-10 h-px bg-gold" />
+              {/* <div className="w-10 h-px bg-gold" /> */}
 
               <h1
                 className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
                 style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)" }}
               >
-                The Journal of Maison Vereen
+                The Housebook of Maison Vereen
               </h1>
 
               <p
@@ -120,7 +119,7 @@ export default function JournalPage() {
                 success and significance.
               </p>
 
-              <p className="body-copy/85 max-w-md">
+              <p className="text-body-muted text-[14px] max-w-md">
                 These are not lifestyle posts. They are essays. Written with the
                 belief that the people who read them are serious thinkers who
                 deserve serious content.
@@ -216,7 +215,7 @@ export default function JournalPage() {
         <section className="border-t border-gold/15 bg-charcoal">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
-              className="body-copy/55 max-w-125"
+              className="text-body-muted font-serif text-xl max-w-125"
             >
               &ldquo;Continue reading the house&apos;s story. Join the
               Registry.&rdquo;

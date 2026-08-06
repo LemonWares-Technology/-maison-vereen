@@ -10,8 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE DIFFERENCE", href: "/the-difference" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
-  { label: "REGISTRY", href: "/the-first-250" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -27,14 +26,14 @@ const PILLARS = [
     no: "01",
     title: "Collectability & Limited Editions",
     body: "Edition I will never be remade, reissued, or extended. What is held by its two hundred and fifty owners is permanent in a way few luxury objects remain today — its value is not protected by marketing, but by the simple fact that it cannot be replicated.",
-    src: "/privateacquisition.webp",
+    src: "/edition1bottle.webp",
     alt: "Edition I bottle engraved 017 / 250",
   },
   {
     no: "02",
     title: "Emotional Ownership & Future Value",
     body: "Owning something from Maison Vereen's founding chapter is closer to holding an early work from an artist before the world recognised their name. The House cannot promise future value — no serious house ever should — but it can promise that nothing about Edition I will ever be diminished by overproduction.",
-    src: "/privateacquisition.webp",
+    src: "/certifcicateofauthenticity.webp",
     alt: "Maison Vereen box and archival documents",
   },
   {
@@ -116,7 +115,7 @@ export default function TheDifferencePage() {
           <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
-                <div className="w-10 h-px bg-gold" />
+                {/* <div className="w-10 h-px bg-gold" /> */}
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                   The Maison Vereen Difference
                 </span>
@@ -157,7 +156,7 @@ export default function TheDifferencePage() {
         {/* ── Extended philosophy ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-3xl mx-auto">
-            <div className="border-l border-gold/50 pl-6 sm:pl-10 md:pl-12 space-y-7 body-copy">
+            <div className="border-l border-gold/50 pl-6 sm:pl-10 md:pl-12 space-y-7 text-body-muted font-light">
               <p>
                 Visitors who have considered other fragrance houses arrive here
                 with a quiet, reasonable question: why is this different from
@@ -188,15 +187,13 @@ export default function TheDifferencePage() {
         {/* ── 01 / 02 / 03 pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
           <div className="w-[95%] md:w-full max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
-              {PILLARS.map((p, i) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+              {PILLARS.map((p) => (
                 <article
                   key={p.no}
-                  className={`flex flex-col gap-6 md:px-6 lg:px-8 ${
-                    i > 0 ? "md:border-l md:border-gold/25" : ""
-                  }`}
+                  className="flex flex-col gap-5 border border-[#EDE8DE]/12 bg-[#0C0B0A] p-4 sm:p-5 md:p-6"
                 >
-                  <div className="relative aspect-4/3 overflow-hidden">
+                  <div className="relative aspect-4/3 overflow-hidden border border-gold/40">
                     <Image
                       src={p.src}
                       alt={p.alt}
@@ -204,21 +201,19 @@ export default function TheDifferencePage() {
                       className="object-cover object-center"
                       sizes="(max-width: 768px) 95vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/25 to-[#060506]/40" />
-                    <div className="absolute inset-0 bg-linear-to-r from-[#060506]/55 via-transparent to-[#060506]/55" />
                   </div>
 
-                  <div className="space-y-3">
-                    <span className="font-sans text-sm text-gold tracking-wide font-semibold block">
+                  <div className="space-y-3 px-1 pb-1">
+                    <span className="font-serif text-sm md:text-base text-gold font-light tracking-wide block">
                       {p.no}
                     </span>
                     <h2
                       className="font-serif font-light text-[#F2EDE4] leading-snug"
-                      style={{ fontSize: "clamp(1.25rem, 2vw, 1.55rem)" }}
+                      style={{ fontSize: "clamp(1.2rem, 2vw, 1.5rem)" }}
                     >
                       {p.title}
                     </h2>
-                    <p className="body-copy">
+                    <p className="font-sans text-[13px] sm:text-[14px] font-normal leading-[1.7] text-body-muted">
                       {p.body}
                     </p>
                   </div>
@@ -302,14 +297,14 @@ export default function TheDifferencePage() {
               className="w-10 h-auto mx-auto"
             />
 
-            <h2 className="body-copy">
+            <h2 className="font-serif text-2xl text-gold">
               Philosophy explains why the House exists. The individuals behind
               every bottle explain how it is made real.
             </h2>
 
             <Link
               href="/the-craft"
-              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors font-semibold"
+              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-body-muted hover:text-gold transition-colors font-semibold"
             >
               Next: The Individual Behind Every Fragrance
               <CircleArrowIcon />
