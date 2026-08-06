@@ -51,7 +51,6 @@ export default function WhyOnly250() {
               </span>
             </div>
 
-            {/* /I don't just understand what the issue is anymoreg */}
 
             <h2
               className="font-serif font-light text-[#F2EDE4] leading-[1.2]"
