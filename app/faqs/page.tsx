@@ -116,7 +116,8 @@ const FAQ_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+
   { label: "FAQS", href: "/faqs" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -356,7 +357,7 @@ export default function FAQs() {
         <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <div className="flex items-center gap-3">
-              <span className="font-sans text-sm md:text-base text-[#EDE8DE] tracking-wide">14</span>
+              <span className="font-sans text-sm md:text-base text-gold tracking-wide">14</span>
               <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
               <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
                 Frequently Asked Questions
@@ -372,7 +373,7 @@ export default function FAQs() {
               <br />
               Answered Directly.
             </h1>
-            <div className="w-8 h-px bg-gold" />
+            {/* <div className="w-8 h-px bg-gold" /> */}
             <p className="body-copy max-w-md">
               Twenty questions, answered in the unhurried, confident voice of
               the House — designed to dissolve objection and deepen
@@ -497,7 +498,7 @@ export default function FAQs() {
           <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-44 h-auto" />
         </div>
         <div className="absolute right-[5%] top-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none hidden lg:block">
-          <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-44 h-auto" />
+          {/* <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-44 h-auto" /> */}
         </div>
 
         <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-10">

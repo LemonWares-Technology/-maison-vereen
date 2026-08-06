@@ -51,6 +51,7 @@ export default function WhyOnly250() {
               </span>
             </div>
 
+
             <h2
               className="font-serif font-light text-[#F2EDE4] leading-[1.2]"
               style={{ fontSize: "clamp(1.65rem, 3.2vw, 2.5rem)" }}

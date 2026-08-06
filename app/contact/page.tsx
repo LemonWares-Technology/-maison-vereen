@@ -8,7 +8,8 @@ const CONTACT_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -466,7 +467,7 @@ export default function ContactPage() {
                     <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       WhatsApp
                     </span>
-                    <span className="text-[#8A8178]">+234 814 441 3526</span>
+                    <span className="text-body-muted">+234 814 441 3526</span>
                   </span>
                 </a>
               </li>
@@ -482,7 +483,7 @@ export default function ContactPage() {
                     <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       Email
                     </span>
-                    <span className="text-[#8A8178]">concierge@maisonvereen.com</span>
+                    <span className="text-body-muted">concierge@maisonvereen.com</span>
                   </span>
                 </a>
               </li>
@@ -504,7 +505,7 @@ export default function ContactPage() {
                     <span className="block text-xs uppercase tracking-[0.2em] text-gold font-semibold mb-0.5">
                       Instagram
                     </span>
-                    <span className="text-[#8A8178]">@maisonvereen</span>
+                    <span className="text-body-muted">@maisonvereen</span>
                   </span>
                 </a>
               </li>
