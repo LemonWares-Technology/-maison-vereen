@@ -59,9 +59,11 @@ export default function Header({
     isNavActive(pathname, item.href)
   );
 
-  // Keep up to 5 primary links, always including the page in view when known
+  // Keep up to 5 primary links, always including the page in view when known.
+  // Skip on `/` — Home should not appear in the primary nav strip.
   let primaryNavItems = navItems.slice(0, MAX_PRIMARY_NAV_ITEMS);
   if (
+    pathname !== "/" &&
     currentDirectoryItem &&
     !primaryNavItems.some((item) => isNavActive(pathname, item.href))
   ) {
