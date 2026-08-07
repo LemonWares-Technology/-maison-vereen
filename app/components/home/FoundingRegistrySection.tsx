@@ -43,7 +43,7 @@ export default function FoundingRegistrySection() {
         </div>
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-7 md:space-y-8 max-w-xl">
             <div className="space-y-2.5">
@@ -60,7 +60,7 @@ export default function FoundingRegistrySection() {
               Applications remain open while Edition I remains available.
             </h2>
 
-            <p className="body-copy">
+            <p className="text-body-muted text-base font-light leading-widest">
               Apply to become one of the original 250 collectors.
             </p>
 

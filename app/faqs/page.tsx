@@ -336,25 +336,74 @@ export default function FAQs() {
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE]">
       <Header navItems={FAQ_NAV} />
 
-      {/* Two-panel hero */}
-      <section className="relative min-h-screen bg-[#060506]">
-        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
-          <div className="hidden lg:block bg-[#060506]" />
-          <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+      {/* Hero — image up top on mobile, melt desktop */}
+      <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+        {/* Mobile: image under header, then solid dark copy */}
+        <div className="lg:hidden flex flex-col min-h-screen">
+          <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
             <Image
               src="/images/founder.webp"
               alt=""
               fill
               priority
               className="object-cover object-[center_20%]"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="100vw"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/70 to-[#060506]/40 lg:bg-none" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
+            <div
+              className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+              }}
+            />
+            <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+          </div>
+
+          <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
+            <div className="w-full max-w-lg flex flex-col items-start gap-5">
+              <div className="flex items-center gap-3">
+                <span className="font-sans text-sm text-gold tracking-wide">14</span>
+                <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
+                <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
+                  Frequently Asked Questions
+                </span>
+              </div>
+              <h1
+                className="font-serif font-light text-[#EDE8DE] leading-[1.06] tracking-tight"
+                style={{ fontSize: "clamp(2.4rem, 7vw, 4.5rem)" }}
+              >
+                Everything You
+                <br />
+                Would Ask,
+                <br />
+                Answered Directly.
+              </h1>
+              <p className="body-copy max-w-md">
+                Twenty questions, answered in the unhurried, confident voice of
+                the House — designed to dissolve objection and deepen
+                understanding at once.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+        {/* Desktop: image on right, melts into black on left */}
+        <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
+          <div className="bg-[#060506]" />
+          <div className="relative overflow-hidden">
+            <Image
+              src="/images/founder.webp"
+              alt=""
+              fill
+              priority
+              className="object-cover object-[center_20%]"
+              sizes="55vw"
+            />
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/85 via-25% to-transparent to-55%" />
+          </div>
+        </div>
+
+        <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <div className="flex items-center gap-3">
               <span className="font-sans text-sm md:text-base text-gold tracking-wide">14</span>
@@ -373,7 +422,6 @@ export default function FAQs() {
               <br />
               Answered Directly.
             </h1>
-            {/* <div className="w-8 h-px bg-gold" /> */}
             <p className="body-copy max-w-md">
               Twenty questions, answered in the unhurried, confident voice of
               the House — designed to dissolve objection and deepen
@@ -385,7 +433,7 @@ export default function FAQs() {
 
       {/* Philosophy + pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-16 md:space-y-20">
           <p className="body-copy text-center max-w-3xl mx-auto">
             This page exists so that no serious applicant is left with an
             unanswered practical question before applying. Each answer is written
@@ -425,7 +473,7 @@ export default function FAQs() {
 
       {/* Two-column FAQ accordions + callouts */}
       <section className="relative bg-[#060506] pb-16 md:pb-20">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <AccordionColumn
             index="01"
             title="Edition I & The Founding Registry"
@@ -472,7 +520,7 @@ export default function FAQs() {
             className="w-40 lg:w-52 h-auto"
           />
         </div>
-        <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-5">
+        <div className="relative w-[90%] md:w-full max-w-6xl mx-auto text-center space-y-5">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-[#F2EDE4]">
             Still have a question not covered here?
           </h2>
@@ -501,7 +549,7 @@ export default function FAQs() {
           {/* <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-44 h-auto" /> */}
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-10">
+        <div className="relative w-[90%] md:w-full max-w-6xl mx-auto text-center space-y-10">
           <h2 className="body-copy max-w-3xl mx-auto">
             Some questions are better asked directly. The House is always
             reachable.

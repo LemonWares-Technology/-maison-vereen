@@ -9,7 +9,7 @@ export default function FounderStory() {
       id="founder-story"
       className="bg-charcoal border-t border-white/5"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-160">
           {/* Left — image: side profile, low light, looking away — from document design note */}
           <div className="relative min-h-110 lg:min-h-0 overflow-hidden bg-[#060608] order-2 lg:order-1 group">

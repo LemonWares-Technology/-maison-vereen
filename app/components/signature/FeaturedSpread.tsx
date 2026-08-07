@@ -11,7 +11,7 @@ export default function FeaturedSpread() {
   return (
     <>
       <section id="ebene-sacre" className="bg-[#0A0A08] py-24 md:py-32 scroll-mt-24">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#8C7235]/20 border border-[#8C7235]/20 rounded-sm overflow-hidden">
           

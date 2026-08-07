@@ -22,7 +22,7 @@ export default function WhyOnly250() {
       />
       <div className="absolute inset-0 bg-[#060506]/78" />
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto">
+      <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 xl:gap-24 items-start">
           <div className="space-y-8 md:space-y-10">
             <p
@@ -36,7 +36,7 @@ export default function WhyOnly250() {
               {WORLDWIDE_LINES.map((line) => (
                 <p
                   key={line}
-                  className="font-sans text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed py-1.5"
+                  className="font-sans text-[11px] uppercase tracking-[0.28em] text-body-muted font-light leading-relaxed py-1"
                 >
                   {line}
                 </p>
@@ -60,7 +60,7 @@ export default function WhyOnly250() {
               commitment.
             </h2>
 
-            <div className="space-y-5 body-copy max-w-xl">
+            <div className="space-y-5 text-body-muted text-base font-light leading-widest max-w-xl">
               <p>
                 The House&apos;s master perfumer determined this was the highest
                 number that could be produced without compromising a single

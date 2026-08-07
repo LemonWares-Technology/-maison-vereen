@@ -16,7 +16,7 @@ export default function Experience() {
 
   return (
     <section className="bg-[#0A0A08] py-24 md:py-32 border-b border-[#8C7235]/10">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           

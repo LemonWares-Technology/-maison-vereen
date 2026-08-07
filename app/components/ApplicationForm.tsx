@@ -361,7 +361,7 @@ export default function ApplicationForm() {
       id="registry-application"
       className={`relative bg-[#060506] text-[#EDE8DE] overflow-x-clip ${HEADER_OFFSET_CLASS}`}
     >
-      <div className="w-[95%] md:w-full max-w-6xl mx-auto min-w-0">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto min-w-0">
         <div className="md:grid md:grid-cols-2 md:items-start md:gap-0">
           {/* LEFT — intro, image, privileges, quote, join */}
           <aside className="relative min-w-0 bg-[#060506] border-b md:border-b-0 md:border-r border-gold/20">

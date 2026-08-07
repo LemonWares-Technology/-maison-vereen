@@ -11,7 +11,8 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -153,7 +154,7 @@ export default function FragranceLibraryPage() {
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
 
-            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-5">
                 {/* <div className="flex items-center gap-3">
                   <span className="font-serif text-lg text-gold">II</span>
@@ -176,11 +177,11 @@ export default function FragranceLibraryPage() {
 
                 {/* <div className="w-10 h-px bg-gold" /> */}
 
-                <p className="font-serif text-base font-light leading-[1.8] text-[#EDE8DE] max-w-md">
+                <p className="text-base font-light leading-[1.8] text-body-muted max-w-md">
                   The Signature Collection represents Maison Vereen&apos;s
                   permanent body of work — fragrances available on an ongoing
-                  basis, each developed with the same standard applied to Edition
-                  I.
+                  basis, each developed with the same standard applied to
+                  Edition I.
                 </p>
               </div>
             </div>
@@ -204,7 +205,7 @@ export default function FragranceLibraryPage() {
             </div>
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               {/* <div className="flex items-center gap-3">
                 <span className="font-serif text-lg md:text-xl text-gold">
@@ -221,7 +222,7 @@ export default function FragranceLibraryPage() {
               </div>
 
               <h1
-                className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                className="font-serif font-light text-body-muted leading-[1.08] tracking-tight"
                 style={{ fontSize: "clamp(2.2rem, 4.8vw, 3.75rem)" }}
               >
                 The Permanent Work of the House.
@@ -229,7 +230,7 @@ export default function FragranceLibraryPage() {
 
               {/* <div className="w-10 h-px bg-gold" /> */}
 
-              <p className="text-base text-body-muted md:text-lg font-light leading-[1.8]  max-w-md">
+              <p className="text-base text-body-muted font-light leading-[1.8]  max-w-md">
                 The Signature Collection represents Maison Vereen&apos;s
                 permanent body of work — fragrances available on an ongoing
                 basis, each developed with the same standard applied to Edition
@@ -241,8 +242,8 @@ export default function FragranceLibraryPage() {
 
         {/* ── Intro ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] font-serif md:w-full max-w-3xl mx-auto text-center">
-            <p className="font-light text-body-muted leading-[1.85] text-lg md:text-xl lg:text-[1.35rem]">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
+            <p className="font-light text-body-muted text-base leading-[1.85] text-left">
               Where Edition I is finite by design, the Signature Collection is
               the House&apos;s enduring body of work — fragrances intended to
               remain part of Maison Vereen&apos;s offering for years, refined
@@ -254,7 +255,7 @@ export default function FragranceLibraryPage() {
 
         {/* ── Philosophy pillars ── */}
         <section className="relative bg-[#060506] pb-16 md:pb-24">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
               {PILLARS.map((p) => (
                 <article
@@ -278,7 +279,7 @@ export default function FragranceLibraryPage() {
           id="fragrances"
           className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5"
         >
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="text-center space-y-3">
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium">
                 The Signature Collection
@@ -353,7 +354,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#060506]" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
+          <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden">
                 <Image
@@ -411,7 +412,7 @@ export default function FragranceLibraryPage() {
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
+          <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-28">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="space-y-5 max-w-xl order-2 lg:order-1">
                 <div className="space-y-3">
@@ -447,10 +448,7 @@ export default function FragranceLibraryPage() {
                 <div className="absolute inset-0 bg-linear-to-r from-[#060506]/65 via-transparent to-[#060506]/65" />
               </div>
 
-              <div
-                className="hidden lg:block min-h-100 order-2"
-                aria-hidden
-              />
+              <div className="hidden lg:block min-h-100 order-2" aria-hidden />
             </div>
           </div>
         </section>
@@ -476,7 +474,7 @@ export default function FragranceLibraryPage() {
             />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+          <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-10">
             <Image
               src="/logo-mark.webp"
               alt="Maison Vereen"

@@ -10,7 +10,8 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+  { label: "REGISTRY", href: "/the-first-250" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -114,23 +115,21 @@ export default function RegistryPage() {
         <section className="relative min-h-screen bg-[#060506] overflow-hidden">
           <div className="lg:hidden flex flex-col min-h-screen">
             <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
-              <Image src="/temple.webp" alt="" fill priority className="object-cover object-center" sizes="100vw" />
+              <Image src="/images/application-hero.webp" alt="" fill priority className="object-cover object-center" sizes="100vw" />
               <div className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)" }} />
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
             <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-6">
-                <div className="flex items-center gap-3">
-                <span className="font-serif text-lg text-gold">01</span>
-                <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
-                <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-semibold">
-                  The Maison Vereen Founding Registry
-                </span>
-              </div>
+                <div className="space-y-3">
+                  <span className="font-serif text-lg text-gold block">01</span>
+                  <div className="w-10 h-px bg-gold" />
+                  <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">The Maison Vereen Founding Registry</span>
+                </div>
                 <h1 className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight" style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>
                   The House Is Assembled Before the Bottles Are Released.
                 </h1>
-                <p className="body-copy max-w-md">
+                <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE] max-w-md">
                   The Founding Registry is the official record of those who apply to become founding members of Maison Vereen — and, for those accepted, the path toward Edition I.
                 </p>
               </div>
@@ -139,7 +138,7 @@ export default function RegistryPage() {
 
           <div className="absolute inset-0 hidden lg:block pointer-events-none">
             <div className="absolute inset-0 left-[30%] xl:left-[26%]">
-              <Image src="/temple.webp" alt="" fill priority className="object-cover object-center" sizes="70vw" />
+              <Image src="/images/application-hero.webp" alt="" fill priority className="object-cover object-center" sizes="70vw" />
             </div>
             <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-26% via-[#060506]/95 via-40% to-transparent to-68%" />
             <div className="absolute inset-0 bg-linear-to-t from-[#060506]/55 via-transparent to-[#060506]/40" />
@@ -148,17 +147,15 @@ export default function RegistryPage() {
 
           <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7">
-              <div className="flex items-center gap-3">
-                <span className="font-serif text-lg md:text-xl text-gold">01</span>
-                <div className="h-px w-6 sm:w-8 bg-gold shrink-0" />
-                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-semibold">
-                  The Maison Vereen Founding Registry
-                </span>
+              <div className="space-y-3">
+                <span className="font-serif text-lg md:text-xl text-gold block">01</span>
+                <div className="w-10 h-px bg-gold" />
+                <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">The Maison Vereen Founding Registry</span>
               </div>
               <h1 className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight" style={{ fontSize: "clamp(2.1rem, 4.5vw, 3.5rem)" }}>
                 The House Is Assembled Before the Bottles Are Released.
               </h1>
-              <p className="body-copy max-w-md">
+              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE] max-w-md">
                 The Founding Registry is the official record of those who apply to become founding members of Maison Vereen — and, for those accepted, the path toward Edition I.
               </p>
             </div>
@@ -167,10 +164,10 @@ export default function RegistryPage() {
 
         {/* ── 02 INTRO — dark marble texture + centered para + 3 columns ── */}
         <section className="relative py-16 md:py-24 border-t border-gold/20 overflow-hidden">
-          <Image src="/temple.webp" alt="" fill className="object-cover object-center opacity-30" sizes="100vw" />
+          <Image src="/images/application-hero.webp" alt="" fill className="object-cover object-center opacity-30" sizes="100vw" />
           <div className="absolute inset-0 bg-[#060506]/82" />
           <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto space-y-14">
-            <p className="body-copy text-center max-w-3xl mx-auto">
+            <p className="font-serif text-base md:text-lg lg:text-xl font-light leading-[1.9] text-[#EDE8DE] text-center max-w-3xl mx-auto">
               Before a single bottle of Edition I is offered for acquisition, the House is assembled.
               The Maison Vereen Founding Registry exists for that purpose — an official, reviewed
               record of the individuals who have applied to become part of Maison Vereen&apos;s founding chapter.
@@ -178,7 +175,7 @@ export default function RegistryPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
               {INTRO_PILLARS.map((p, i) => (
                 <div key={p.title} className={`md:px-8 ${i > 0 ? "md:border-l md:border-gold/20" : ""}`}>
-                  <p className="body-copy">{p.body}</p>
+                  <p className="font-serif text-sm font-light leading-[1.95] text-[#EDE8DE]/80">{p.body}</p>
                 </div>
               ))}
             </div>
@@ -191,7 +188,7 @@ export default function RegistryPage() {
             {/* Left — ledger image with subtle melt only on right edge */}
             <div className="relative min-h-80 md:min-h-100 lg:min-h-120 overflow-hidden">
               <Image
-                src="/temple.webp"
+                src="/images/application-hero.webp"
                 alt="Open Founding Registry ledger"
                 fill
                 className="object-cover object-center"
@@ -206,13 +203,13 @@ export default function RegistryPage() {
                 <span className="font-serif text-2xl text-gold font-light block">03</span>
                 <div className="w-8 h-px bg-gold" />
               </div>
-              <h2 className="font-serif font-light text-[#F2EDE4] leading-snug" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
-                    The Registry
-                  </h2>
-              <p className="body-copy max-w-md">
+              <h2 className="font-serif font-light text-[#F2EDE4] leading-snug" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+                The Registry
+              </h2>
+              <p className="font-serif text-base md:text-lg font-light leading-[1.85] text-[#EDE8DE] max-w-md">
                 The Founding Registry is the living record of those recognised by the House.
               </p>
-              <p className="body-copy max-w-md">
+              <p className="font-serif text-base font-light leading-[1.85] text-[#EDE8DE]/80 max-w-md">
                 It is not a queue. It is the beginning of the Maison Vereen legacy.
               </p>
             </div>
@@ -230,7 +227,7 @@ export default function RegistryPage() {
                 <h2 className="font-sans text-[10px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed">
                   The Application &amp;<br />Review Process
                 </h2>
-                <p className="body-copy">
+                <p className="font-serif text-sm font-light leading-[1.85] text-[#EDE8DE]/80">
                   A clear and intentional process. Designed to protect the integrity of the House and the meaning of founding membership.
                 </p>
               </div>
@@ -248,7 +245,7 @@ export default function RegistryPage() {
                       <h3 className="font-sans text-[10px] uppercase tracking-[0.22em] text-[#F2EDE4] font-medium">
                         {step.title}
                       </h3>
-                      <p className="body-copy">
+                      <p className="font-serif text-sm font-light leading-[1.75] text-[#EDE8DE]/75">
                         {step.body}
                       </p>
                     </div>
@@ -275,7 +272,7 @@ export default function RegistryPage() {
                 <h2 className="font-sans text-[10px] uppercase tracking-[0.28em] text-gold font-medium">
                   Apply to the Founding Registry
                 </h2>
-                <p className="body-copy max-w-sm">
+                <p className="font-serif text-sm font-light leading-[1.85] text-[#EDE8DE]/80 max-w-sm">
                   There is no cost to apply. The application is read personally by the House.
                 </p>
               </div>
@@ -306,7 +303,7 @@ export default function RegistryPage() {
             {/* Right — wax seal book image */}
             <div className="relative min-h-80 lg:min-h-0 overflow-hidden">
               <Image
-                src="/temple.webp"
+                src="/images/the bottle.webp"
                 alt="Gold wax seal correspondence of Maison Vereen"
                 fill
                 className="object-cover object-center"
@@ -330,7 +327,7 @@ export default function RegistryPage() {
                 <h3 className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold font-medium">
                   The Acceptance Means
                 </h3>
-                <p className="body-copy">
+                <p className="font-serif text-sm font-light leading-[1.9] text-[#EDE8DE]/85">
                   Acceptance into the Founding Registry confirms you as a founding member of the House. It does not, by itself, guarantee a bottle. Invitations to acquire are extended individually as the House determines, in the order reflected by each member&apos;s assigned position.
                 </p>
               </div>
@@ -342,7 +339,7 @@ export default function RegistryPage() {
                 <h3 className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold font-medium">
                   When the Registry Closes
                 </h3>
-                <p className="body-copy">
+                <p className="font-serif text-sm font-light leading-[1.9] text-[#EDE8DE]/85">
                   Once three hundred and fifty applicants have been accepted, the Founding Registry closes permanently. No further applications will be reviewed for Edition I. The House will not extend this number to in order to sell the remaining two hundred and fifty bottles — the House does not need to reach the cutoff before it could close to new applicants.
                 </p>
               </div>
@@ -384,7 +381,7 @@ export default function RegistryPage() {
                 <h2 className="font-sans text-[10px] uppercase tracking-[0.28em] text-gold font-medium">
                   Live Registry
                 </h2>
-                <p className="body-copy">
+                <p className="font-serif text-sm font-light leading-[1.85] text-[#EDE8DE]/85">
                   The Registry is growing. Member by member. In real time.
                 </p>
                 <Link
@@ -412,13 +409,13 @@ export default function RegistryPage() {
                     <tbody>
                       {!loaded ? (
                         <tr>
-                          <td colSpan={4} className="py-6 font-sans text-sm text-[#8A8178]">
+                          <td colSpan={4} className="py-6 font-serif text-sm text-[#EDE8DE]/50">
                             Loading the record…
                           </td>
                         </tr>
                       ) : recent.length === 0 ? (
                         <tr>
-                          <td colSpan={4} className="py-6 font-sans text-sm text-[#8A8178]">
+                          <td colSpan={4} className="py-6 font-serif text-sm text-[#EDE8DE]/50">
                             The first accepted names will appear here.
                           </td>
                         </tr>
@@ -426,9 +423,9 @@ export default function RegistryPage() {
                         recent.map((r) => (
                           <tr key={r.verificationNumber} className="border-b border-white/5">
                             <td className="py-3 pr-4 font-mono text-xs text-gold">{formatMemberNo(r.verificationNumber)}</td>
-                            <td className="py-3 pr-4 font-sans text-sm text-[#8A8178]">{r.country}</td>
+                            <td className="py-3 pr-4 font-serif text-sm text-[#EDE8DE]">{r.country}</td>
                             <td className="py-3 pr-4 font-sans text-[10px] uppercase tracking-[0.15em] text-gold">Accepted</td>
-                            <td className="py-3 font-sans text-sm text-[#8A8178]">{formatDate(r.approvedAt)}</td>
+                            <td className="py-3 font-serif text-sm text-[#EDE8DE]/70">{formatDate(r.approvedAt)}</td>
                           </tr>
                         ))
                       )}
@@ -448,7 +445,7 @@ export default function RegistryPage() {
               {/* Right image */}
               <div className="relative w-full aspect-square max-w-xs mx-auto lg:max-w-none overflow-hidden">
                 <Image
-                  src="/temple.webp"
+                  src="/images/the bottle.webp"
                   alt="Maison Vereen registry correspondence"
                   fill
                   className="object-cover object-center"
@@ -467,17 +464,18 @@ export default function RegistryPage() {
           <div className="w-[95%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_auto] gap-8 lg:gap-10 items-center">
               <h2
-                className="body-copy"
+                className="font-serif font-light text-[#F2EDE4] leading-snug"
+                style={{ fontSize: "clamp(1.4rem, 2.6vw, 2rem)" }}
               >
                 The Registry is not<br />an abstraction.
               </h2>
-              <p className="body-copy">
+              <p className="font-serif text-base md:text-lg font-light leading-[1.8] text-[#EDE8DE]">
                 It is growing, member by member, in real time.
               </p>
               <div className="flex flex-col gap-3">
                 <Link
                   href="/apply"
-                  className="inline-flex items-center justify-center gap-3 whitespace-nowrap shrink-0 bg-gold hover:bg-gold-light text-[#060506] px-6 sm:px-8 py-3.5 text-[11px] tracking-[0.18em] sm:tracking-[0.2em] uppercase font-semibold transition-colors"
+                  className="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-[#060506] px-6 py-3.5 text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors"
                 >
                   Apply to the Registry
                   <ArrowIcon />

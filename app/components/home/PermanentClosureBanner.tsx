@@ -5,23 +5,26 @@ import Image from "next/image";
 const PLEDGES = [
   { lines: ["No Reprint."] },
   { lines: ["No Reissue."] },
-  { lines: ["No Anniversary", "Release."] },
+  {
+    lines: ["No Anniversary Release."],
+    desktopLines: ["No Anniversary", "Release."],
+  },
 ];
 
 export default function PermanentClosureBanner() {
   return (
     <section className="relative py-24 md:py-32 lg:py-36 overflow-hidden">
-      <Image
+      {/* <Image
         src="/thunderrock.webp"
         alt=""
         fill
         className="object-cover object-[center_70%] opacity-40"
         sizes="100vw"
-      />
+      /> */}
       <div className="absolute inset-0 bg-[#060506]/88" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-12 md:space-y-14">
+      <div className="relative z-10 w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-12 md:space-y-14">
         <div className="flex justify-center">
           <Image
             src="/logo-mark.webp"
@@ -49,12 +52,19 @@ export default function PermanentClosureBanner() {
                   aria-hidden
                 />
               )}
-              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.32em] text-gold font-medium leading-relaxed text-center min-w-28">
-                {pledge.lines.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
+              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] sm:tracking-[0.32em] text-body-muted font-medium leading-relaxed text-center whitespace-nowrap sm:whitespace-normal min-w-0 sm:min-w-36 md:min-w-40">
+                {/* Mobile: single line */}
+                <span className="sm:hidden block whitespace-nowrap">
+                  {pledge.lines.join(" ")}
+                </span>
+                {/* Desktop: stacked when desktopLines provided */}
+                <span className="hidden sm:block">
+                  {(pledge.desktopLines ?? pledge.lines).map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </span>
               </span>
             </div>
           ))}

@@ -22,14 +22,14 @@ export default function BeforeLanguageSection() {
         </div>
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-7 md:space-y-8 max-w-xl">
             <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
               Before Language.
             </span>
 
-            <div className="space-y-6 body-copy">
+            <div className="space-y-6 text-body-muted text-base font-light leading-widest">
               <p>
                 Before your name is known, before your story is told, before a
                 single word has passed between you and a room — something has

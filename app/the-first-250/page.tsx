@@ -163,7 +163,7 @@ export default function LiveFoundingRegistryPage() {
       <main className="flex-1">
         {/* ── Hero ── */}
         <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
               <div className="space-y-6 md:space-y-7 max-w-xl">
                 {/* <div className="flex items-center gap-3">
@@ -220,7 +220,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── A Living Record ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <div className="flex flex-col items-center gap-3">
               {/* <div className="w-10 h-px bg-gold" /> */}
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
@@ -245,7 +245,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── Accepted Members counter ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="border border-gold/40 bg-[#080808]/80 px-8 sm:px-12 md:px-16 py-14 md:py-20 text-center space-y-6">
               <span
                 className={`font-serif text-gold font-light leading-none block transition-opacity duration-700 ${
@@ -282,7 +282,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── Recently Welcomed ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-4xl mx-auto space-y-10">
+          <div className="w-[90%] md:w-full max-w-4xl mx-auto space-y-10">
             <h2 className="text-center font-serif text-xs sm:text-sm uppercase tracking-[0.32em] text-gold font-light">
               Recently Welcomed
             </h2>
@@ -351,7 +351,7 @@ export default function LiveFoundingRegistryPage() {
 
         {/* ── Why 350? ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-b border-white/5">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
               <div className="flex items-center justify-center gap-6 md:gap-8 lg:pr-12 lg:border-r lg:border-gold/30">
                 {/* <SealMark /> */}
@@ -392,7 +392,7 @@ export default function LiveFoundingRegistryPage() {
            
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
+          <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-6">
             <div className="flex justify-center text-gold">
               <ShieldMarkIcon />
             </div>
@@ -418,7 +418,7 @@ export default function LiveFoundingRegistryPage() {
            
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+          <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-10">
             <div className="space-y-5">
               <h2
                 className="font-serif font-light text-[#F2EDE4] leading-snug"

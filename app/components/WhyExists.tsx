@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function WhyExists() {
   return (
     <section id="why-exists" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-145`">
 
           {/* Left — text panel */}

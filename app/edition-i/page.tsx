@@ -9,7 +9,8 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -81,7 +82,7 @@ export default function EditionIPage() {
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
 
-            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-5">
                 <div className="flex items-center gap-3">
                   <span className="font-serif text-lg text-gold">01</span>
@@ -124,7 +125,7 @@ export default function EditionIPage() {
             </div>
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <div className="flex items-center gap-3">
                   <span className="font-serif text-lg md:text-xl text-gold">01</span>
@@ -162,14 +163,14 @@ export default function EditionIPage() {
             /> */}
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto space-y-10">
+          <div className="relative w-[90%] md:w-full max-w-3xl mx-auto space-y-10">
             <span className="font-serif text-lg md:text-xl text-gold-dark block text-center">
               02
             </span>
 
             <div className="space-y-8 body-copy-on-cream">
               <p>
-                Edition I exists once. When the two hundred and fiftieth bottle
+                Edition I exists once. Whe the two hundred and fiftieth bottle
                 is placed into a collector&apos;s hands, the edition closes
                 permanently — not paused, not revisited in a future
                 &ldquo;anniversary&rdquo; release, but closed, in the way a
@@ -212,7 +213,7 @@ export default function EditionIPage() {
             <div className="bg-[#060506]" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-32">
+          <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-16 md:py-24 lg:py-32">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               {/* Mobile image — edges melt into black */}
               <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden order-2">
@@ -239,7 +240,7 @@ export default function EditionIPage() {
                 >
                   Numbering Philosophy
                 </h2>
-                <p className="body-copy">
+                <p className="text-body-muted text-base font-light leading-widest">
                   Numbers are assigned in the order applicants are formally
                   accepted into the Founding Registry — meaning a bottle&apos;s
                   number reflects not when it was purchased, but when its owner
@@ -265,23 +266,23 @@ export default function EditionIPage() {
               <div className="absolute inset-0 bg-[#060506]/20" />
             </div>
 
-            <div className="bg-[#EDE8DE] text-[#2C2823] flex items-center">
+            <div className="bg-[#060506] text-[#EDE8DE] flex items-center">
               <div className="w-full px-8 sm:px-12 md:px-14 lg:px-16 py-16 md:py-20 space-y-6 max-w-xl">
                 <span className="font-serif text-lg md:text-xl text-gold block">
                   04
                 </span>
                 <h2
-                  className="font-serif font-light text-[#2C2823] leading-snug"
+                  className="font-serif font-light text-[#EDE8DE] leading-snug"
                   style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
                 >
                   Certificate of Authenticity &amp; Ownership Experience
                 </h2>
-                <p className="body-copy-on-cream">
+                <p className="text-body-muted text-base font-light leading-widest">
                   Every Edition I bottle is accompanied by a signed certificate
                   of authenticity, recording its number, its owner&apos;s name,
                   and its place within the two hundred and fifty.
                 </p>
-                <p className="body-copy-on-cream">
+                <p className="body-copy">
                   Ownership includes private correspondence from the House at
                   the time of acquisition and continued recognition as a founding
                   member for as long as the House exists.
@@ -293,7 +294,7 @@ export default function EditionIPage() {
 
         {/* ── 05 Three pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/15">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-14">
             <span className="font-serif text-lg md:text-xl text-gold block text-center">
               05
             </span>
@@ -321,16 +322,16 @@ export default function EditionIPage() {
 
         {/* ── 06 Big 250 ── */}
         <section className="relative py-24 md:py-36 overflow-hidden">
-          <Image
+          {/* <Image
             src="/images/certificate.webp"
             alt=""
             fill
             className="object-cover object-center opacity-40"
             sizes="100vw"
-          />
+          /> */}
           <div className="absolute inset-0 bg-[#060506]/70" />
 
-          <div className="relative w-[95%] md:w-full max-w-6xl mx-auto text-center space-y-6">
+          <div className="relative w-[90%] md:w-full max-w-6xl mx-auto text-center space-y-6">
             <span className="font-serif text-lg md:text-xl text-gold block">
               06
             </span>
@@ -358,7 +359,7 @@ export default function EditionIPage() {
             />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-6">
+          <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-6">
             <span className="font-serif text-lg md:text-xl text-gold-dark block">
               07
             </span>
@@ -377,7 +378,7 @@ export default function EditionIPage() {
 
         {/* ── 08 CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-10">
             <span className="font-serif text-lg md:text-xl text-gold block text-center">
               08
             </span>

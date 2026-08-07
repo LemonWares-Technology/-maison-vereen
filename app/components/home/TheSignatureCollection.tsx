@@ -29,7 +29,7 @@ const fragrances = [
 export default function TheSignatureCollection() {
   return (
     <section className="bg-[#080808] py-24 md:py-32 lg:py-40 border-b border-white/5">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 space-y-20">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-20">
 
         {/* Header — exact blueprint copy */}
         <div className="max-w-170 space-y-6 flex flex-col items-start">

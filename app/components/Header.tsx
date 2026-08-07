@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,7 +14,7 @@ export type NavItem = {
 export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
-  { label: "THE EXPERIENCE", href: "/philosophy" },
+  { label: "PHILOSOPHY", href: "/philosophy" },
   { label: "JOURNAL", href: "/journal" },
 ];
 
@@ -21,8 +22,9 @@ const DIRECTORY_NAV_ITEMS: NavItem[] = [
   { label: "HOME", href: "/" },
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
-  { label: "THE EXPERIENCE", href: "/philosophy" },
+  { label: "PHILOSOPHY", href: "/philosophy" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "OUR STORY", href: "/our-story" },
   { label: "THE FOUNDER", href: "/the-founder" },
   { label: "THE CRAFT", href: "/the-craft" },
@@ -40,7 +42,7 @@ const MAX_PRIMARY_NAV_ITEMS = 5;
 export const HEADER_OFFSET_CLASS = "pt-30";
 
 /** Shared content rail — keep page sections aligned with the header */
-export const CONTENT_RAIL_CLASS = "w-[95%] md:w-full max-w-6xl mx-auto";
+export const CONTENT_RAIL_CLASS = "w-[90%] md:w-full max-w-6xl mx-auto";
 
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -55,6 +57,10 @@ export default function Header({
   navItems = DEFAULT_NAV_ITEMS,
 }: HeaderProps) {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
   const currentDirectoryItem = DIRECTORY_NAV_ITEMS.find((item) =>
     isNavActive(pathname, item.href)
   );
@@ -73,15 +79,13 @@ export default function Header({
     ];
   }
 
-  const [scrolled, setScrolled] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [drawerPath, setDrawerPath] = useState(pathname);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  // Close the directory when the route changes (render-time sync, not an effect)
-  if (pathname !== drawerPath) {
-    setDrawerPath(pathname);
-    if (isDrawerOpen) setIsDrawerOpen(false);
-  }
+  useEffect(() => {
+    setIsDrawerOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -91,22 +95,101 @@ export default function Header({
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isDrawerOpen ? "hidden" : "";
+    if (!isDrawerOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsDrawerOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, [isDrawerOpen]);
+
+  const drawer = (
+    <>
+      <div
+        className={`fixed inset-0 z-200 bg-black/55 transition-opacity duration-300 ${
+          isDrawerOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsDrawerOpen(false)}
+        aria-hidden
+      />
+
+      <aside
+        id="site-directory-drawer"
+        className={`fixed top-0 right-0 z-210 h-full w-[min(22rem,85vw)] lg:w-[30vw] bg-[#080706] border-l border-gold/25 shadow-2xl transition-transform duration-300 ease-out ${
+          isDrawerOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        aria-hidden={!isDrawerOpen}
+      >
+        <div className="h-30 flex items-center justify-between px-6 border-b border-gold/20">
+          <span className="font-sans text-[11px] uppercase tracking-[0.28em] text-gold">
+            Menu
+          </span>
+          <button
+            type="button"
+            onClick={() => setIsDrawerOpen(false)}
+            className="text-[#EDE8DE] hover:text-gold flex items-center justify-center min-h-12 min-w-12 -mr-2 touch-manipulation transition-colors"
+            aria-label="Close menu"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              aria-hidden
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="h-[calc(100%-7.5rem)] overflow-y-auto overscroll-contain py-2 pb-8">
+          {DIRECTORY_NAV_ITEMS.map(({ label, href }) => {
+            const active = isNavActive(pathname, href);
+            return (
+              <Link
+                key={`drawer-${label}-${href}`}
+                href={href}
+                onClick={() => setIsDrawerOpen(false)}
+                className={`block px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase transition-colors ${
+                  active
+                    ? "text-gold bg-gold/10"
+                    : "text-[#EDE8DE] hover:text-gold hover:bg-gold/8 active:bg-gold/10"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+      </aside>
+    </>
+  );
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 w-full h-30 flex items-center justify-center transition-all duration-500 ${
+        className={`fixed top-0 left-0 z-100 w-full h-30 flex items-center justify-center transition-all duration-500 ${
           scrolled
             ? "bg-[#060506]/80 backdrop-blur-xl border-b border-white/10"
             : "bg-[#060506]/40 backdrop-blur-xl border-b border-transparent"
         }`}
       >
-        <div className={`${CONTENT_RAIL_CLASS} uppercase text-[13px] h-full flex items-center justify-between`}>
+        <div
+          className={`${CONTENT_RAIL_CLASS} uppercase text-[13px] h-full flex items-center justify-between gap-2`}
+        >
           <Link href="/" className="shrink-0 leading-none">
             <Image
               src="/logo-mark.webp"
@@ -141,7 +224,7 @@ export default function Header({
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <Link
               href="/apply"
-              className={`border px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] hover:cursor-pointer transition-all duration-300 ${
+              className={`border px-3 py-1.5 sm:px-4 sm:py-2 rounded-md text-[11px] sm:text-[13px] whitespace-nowrap hover:cursor-pointer transition-all duration-300 ${
                 isNavActive(pathname, "/apply")
                   ? "border-gold text-gold"
                   : "border-gold-dark hover:text-gold"
@@ -153,19 +236,19 @@ export default function Header({
             <button
               type="button"
               onClick={() => setIsDrawerOpen((prev) => !prev)}
-              className="text-[#EDE8DE] hover:text-gold p-1.5 transition-colors"
+              className="text-[#EDE8DE] hover:text-gold flex items-center justify-center min-h-12 min-w-12 -mr-1.5 touch-manipulation transition-colors"
               aria-label={isDrawerOpen ? "Close menu" : "Open menu"}
               aria-expanded={isDrawerOpen}
               aria-controls="site-directory-drawer"
             >
               {isDrawerOpen ? (
                 <svg
-                  width="22"
-                  height="22"
+                  width="30"
+                  height="30"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="1.6"
                   strokeLinecap="round"
                   aria-hidden
                 >
@@ -173,16 +256,16 @@ export default function Header({
                 </svg>
               ) : (
                 <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 20 20"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="1.6"
                   strokeLinecap="round"
                   aria-hidden
                 >
-                  <path d="M2 5h16M5.5 10H18M2 15h16" />
+                  <path d="M3 6h18M3 12h18M3 18h18" />
                 </svg>
               )}
             </button>
@@ -190,68 +273,8 @@ export default function Header({
         </div>
       </header>
 
-      {/* Backdrop */}
-      <div
-        className={`fixed inset-0 z-40 bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 ${
-          isDrawerOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setIsDrawerOpen(false)}
-        aria-hidden
-      />
-
-      {/* Right slide drawer (~30% desktop, usable width on mobile) */}
-      <aside
-        id="site-directory-drawer"
-        className={`fixed top-0 right-0 z-50 h-full w-[min(22rem,85vw)] lg:w-[30vw] bg-[#080706] border-l border-gold/25 shadow-2xl transition-transform duration-300 ease-out ${
-          isDrawerOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-        aria-hidden={!isDrawerOpen}
-      >
-        <div className="h-30 flex items-center justify-between px-6 border-b border-gold/20">
-          <span className="font-sans text-[11px] uppercase tracking-[0.28em] text-gold">
-            Menu
-          </span>
-          <button
-            type="button"
-            onClick={() => setIsDrawerOpen(false)}
-            className="text-[#EDE8DE] hover:text-gold p-1.5 transition-colors"
-            aria-label="Close menu"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              aria-hidden
-            >
-              <path d="M6 6l12 12M18 6L6 18" />
-            </svg>
-          </button>
-        </div>
-
-        <nav className="h-[calc(100%-7.5rem)] overflow-y-auto py-4">
-          {DIRECTORY_NAV_ITEMS.map(({ label, href }) => {
-            const active = isNavActive(pathname, href);
-            return (
-              <Link
-                key={`drawer-${label}-${href}`}
-                href={href}
-                onClick={() => setIsDrawerOpen(false)}
-                className={`block px-6 py-3 text-[11px] tracking-[0.22em] uppercase transition-colors ${
-                  active
-                    ? "text-gold bg-gold/10"
-                    : "text-[#EDE8DE] hover:text-gold hover:bg-gold/8"
-                }`}
-              >
-                {label}
-              </Link>
-            );
-          })}
-        </nav>
-      </aside>
+      {/* Portal to body so backdrop-filter on header cannot trap fixed positioning on iOS */}
+      {mounted ? createPortal(drawer, document.body) : null}
     </>
   );
 }

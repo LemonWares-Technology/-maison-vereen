@@ -16,7 +16,7 @@ export default function Footer({ navItems = DEFAULT_NAV_ITEMS }: FooterProps) {
 
   return (
     <footer className="bg-[#050405] border-t border-gold/20 py-12 md:py-14">
-      <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <Link href="/" className="shrink-0 leading-none">
             <Image
@@ -33,7 +33,7 @@ export default function Footer({ navItems = DEFAULT_NAV_ITEMS }: FooterProps) {
               <Link
                 key={`${label}-${href}`}
                 href={href}
-                className="font-sans text-[10px] tracking-[0.22em] uppercase text-gold/90 hover:text-gold transition-colors"
+                className="font-sans text-[10px] tracking-[0.22em] uppercase text-body-muted font-light transition-colors"
               >
                 {label}
               </Link>

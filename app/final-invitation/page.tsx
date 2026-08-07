@@ -208,7 +208,7 @@ export default function FinalInvitationPage() {
             <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/50" />
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="flex items-center gap-3">
                 <span className="font-serif text-lg md:text-xl text-gold">16</span>
@@ -243,7 +243,7 @@ export default function FinalInvitationPage() {
 
         {/* ── Three pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/25">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -270,7 +270,7 @@ export default function FinalInvitationPage() {
 
         {/* ── Invitation frame ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-5xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-5xl mx-auto">
             <div className="relative border border-gold/45 px-6 sm:px-10 md:px-16 py-14 md:py-20 text-center">
               {/* Corner accents */}
               <span
@@ -336,7 +336,7 @@ export default function FinalInvitationPage() {
 
         {/* ── Closing affirmations ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="text-center space-y-3">
               <h2 className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 Closing Affirmations

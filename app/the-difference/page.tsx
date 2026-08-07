@@ -10,7 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE DIFFERENCE", href: "/the-difference" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -92,30 +92,88 @@ export default function TheDifferencePage() {
       <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
-        {/* ── Hero ── */}
+        {/* ── Hero — image up top on mobile, melt desktop ── */}
         <section className="relative min-h-screen bg-[#060506] overflow-hidden">
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none">
-            <div className="hidden lg:block bg-[#060506]" />
-            <div className="relative min-h-screen lg:min-h-0 overflow-hidden">
+          {/* Mobile: image under header, then solid dark copy */}
+          <div className="lg:hidden flex flex-col min-h-screen">
+            <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
                 src="/privateacquisition.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
                 className="object-cover object-[center_30%]"
-                sizes="(max-width: 1024px) 100vw, 55vw"
+                sizes="100vw"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/75 to-[#060506]/45 lg:bg-none" />
-              <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
-              <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
-              <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/55" />
+              <div
+                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+                }}
+              />
+              <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+            </div>
+
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
+              <div className="w-full max-w-lg space-y-6">
+                <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                  The Maison Vereen Difference
+                </span>
+
+                <h1
+                  className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                  style={{ fontSize: "clamp(2.1rem, 5.5vw, 3.6rem)" }}
+                >
+                  The Difference Was Never the Scent Alone.
+                </h1>
+
+                <ul className="space-y-3.5">
+                  {HERO_POINTS.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 font-sans text-base font-normal leading-snug text-gold"
+                    >
+                      <span
+                        className="mt-[0.7em] w-4 h-px bg-gold shrink-0"
+                        aria-hidden
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="body-copy max-w-md">
+                  Every serious luxury house has its own philosophy. This is the
+                  architecture of Maison Vereen&apos;s — built around
+                  collectability, emotional ownership, and a culture rather than
+                  a catalogue.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          {/* Desktop: image on right, melts into black on left */}
+          <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
+            <div className="bg-[#060506]" />
+            <div className="relative overflow-hidden">
+              <Image
+                src="/privateacquisition.webp"
+                alt="Maison Vereen bottle on black marble"
+                fill
+                priority
+                className="object-cover object-[center_30%]"
+                sizes="55vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-60%" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#060506]/50 via-transparent to-[#060506]/35" />
+              <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#060506]/55" />
+            </div>
+          </div>
+
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
-                {/* <div className="w-10 h-px bg-gold" /> */}
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                   The Maison Vereen Difference
                 </span>
@@ -155,7 +213,7 @@ export default function TheDifferencePage() {
 
         {/* ── Extended philosophy ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto">
             <div className="border-l border-gold/50 pl-6 sm:pl-10 md:pl-12 space-y-7 text-body-muted font-light">
               <p>
                 Visitors who have considered other fragrance houses arrive here
@@ -186,7 +244,7 @@ export default function TheDifferencePage() {
 
         {/* ── 01 / 02 / 03 pillars ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
               {PILLARS.map((p) => (
                 <article
@@ -225,7 +283,7 @@ export default function TheDifferencePage() {
 
         {/* ── Dual CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5 overflow-hidden">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
               {/* Discover craft */}
               <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 items-stretch lg:pr-10 xl:pr-14 min-w-0">
@@ -288,7 +346,7 @@ export default function TheDifferencePage() {
 
         {/* ── Closing lead-in ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <Image
               src="/logo-mark.webp"
               alt="Maison Vereen"
