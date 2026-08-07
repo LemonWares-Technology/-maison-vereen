@@ -11,7 +11,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "THE CRAFT", href: "/the-craft" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -278,21 +278,38 @@ export default function TheCraftPage() {
       <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
-        {/* ── Hero ── */}
-        <section className="relative bg-[#060506] pt-36 md:pt-40 pb-16 md:pb-24">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-              <div className="space-y-7 md:space-y-8 max-w-xl">
-                <div className="space-y-3">
-                  {/* <div className="w-10 h-px bg-gold" /> */}
-                  <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
-                    The Individual Behind Every Fragrance
-                  </span>
-                </div>
+        {/* ── Hero — image up top on mobile, two-column desktop ── */}
+        <section className="relative min-h-screen bg-[#060506] overflow-hidden">
+          {/* Mobile: image under header, then solid dark copy */}
+          <div className="lg:hidden flex flex-col min-h-screen">
+            <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
+              <Image
+                src="/oud.webp"
+                alt="Master perfumer at work with glass dropper"
+                fill
+                priority
+                className="object-cover object-[center_28%]"
+                sizes="100vw"
+              />
+              <div
+                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+                }}
+              />
+              <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
+            </div>
+
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
+              <div className="w-full max-w-lg space-y-6">
+                <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                  The Individual Behind Every Fragrance
+                </span>
 
                 <h1
                   className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
-                  style={{ fontSize: "clamp(2.15rem, 4.6vw, 3.5rem)" }}
+                  style={{ fontSize: "clamp(2.1rem, 5.5vw, 3.5rem)" }}
                 >
                   Every Bottle Carries a Person&apos;s Patience.
                 </h1>
@@ -326,19 +343,70 @@ export default function TheCraftPage() {
                   <ArrowIcon />
                 </Link>
               </div>
+            </div>
+          </div>
 
-              <div className="relative w-full aspect-3/4 max-w-md lg:max-w-none mx-auto lg:mx-0 overflow-hidden">
-                <Image
-                  src="/oud.webp"
-                  alt="Master perfumer at work with glass dropper"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 90vw, 45vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/20 to-[#060506]/55" />
-                <div className="absolute inset-0 bg-linear-to-r from-[#060506]/60 via-transparent to-[#060506]/60" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#060506_90%)]" />
+          {/* Desktop: copy left, image right */}
+          <div className="hidden lg:block pt-40 pb-24">
+            <div className="w-[90%] md:w-full max-w-6xl mx-auto">
+              <div className="grid grid-cols-2 gap-16 xl:gap-20 items-center">
+                <div className="space-y-7 md:space-y-8 max-w-xl">
+                  <div className="space-y-3">
+                    <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
+                      The Individual Behind Every Fragrance
+                    </span>
+                  </div>
+
+                  <h1
+                    className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                    style={{ fontSize: "clamp(2.15rem, 4.6vw, 3.5rem)" }}
+                  >
+                    Every Bottle Carries a Person&apos;s Patience.
+                  </h1>
+
+                  <ul className="space-y-3.5">
+                    {HERO_POINTS.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 font-sans text-base font-normal leading-snug text-gold"
+                      >
+                        <span
+                          className="mt-[0.7em] w-4 h-px bg-gold shrink-0"
+                          aria-hidden
+                        />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="text-body-muted text-base font-light leading-[1.85] max-w-md">
+                    A finished fragrance from Maison Vereen represents years of
+                    refinement — sourcing, testing, rejecting, and beginning
+                    again, until the formula deserved the House&apos;s name.
+                  </p>
+
+                  <Link
+                    href="/edition-i"
+                    className="inline-flex items-center justify-center gap-3 border border-gold text-gold hover:bg-gold/10 px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase font-medium transition-colors"
+                  >
+                    Discover Edition I in Full
+                    <ArrowIcon />
+                  </Link>
+                </div>
+
+                <div className="relative w-full aspect-3/4 overflow-hidden">
+                  <Image
+                    src="/oud.webp"
+                    alt="Master perfumer at work with glass dropper"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                    sizes="45vw"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-[#060506]/20 to-[#060506]/55" />
+                  <div className="absolute inset-0 bg-linear-to-r from-[#060506]/60 via-transparent to-[#060506]/60" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#060506_90%)]" />
+                </div>
               </div>
             </div>
           </div>
@@ -346,7 +414,7 @@ export default function TheCraftPage() {
 
         {/* ── Process Behind Perfection ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6 max-w-xl">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -400,7 +468,7 @@ export default function TheCraftPage() {
 
         {/* ── Raw Materials (cream) ── */}
         <section className="relative bg-[#EDE8DE] text-[#2C2823] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-14">
             <div className="max-w-2xl mx-auto text-center space-y-4">
               <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.32em] text-[#2C2823] font-medium">
                 Raw Materials
@@ -436,7 +504,7 @@ export default function TheCraftPage() {
 
         {/* ── Process steps ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-7xl mx-auto space-y-12 md:space-y-14">
             <h2 className="font-sans text-xs sm:text-sm uppercase tracking-[0.28em] text-gold font-medium text-center">
               The Process — Unhurried by Design
             </h2>
@@ -471,7 +539,7 @@ export default function TheCraftPage() {
 
         {/* ── Development & Refinement ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-12">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-10 md:space-y-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-6 max-w-xl">
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium block">
@@ -530,7 +598,7 @@ export default function TheCraftPage() {
 
         {/* ── Closing CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-start">
               <h3
                 className="font-serif font-light text-[#F2EDE4] leading-snug"

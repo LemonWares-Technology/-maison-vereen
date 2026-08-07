@@ -33,7 +33,7 @@ export default function SignatureHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 md:px-14 pb-20 md:pb-28">
+      <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto pb-20 md:pb-28">
         <div className="max-w-170 space-y-8">
           <span className="section-tag">Signature Collection</span>
           <h1

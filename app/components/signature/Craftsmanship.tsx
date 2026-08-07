@@ -38,7 +38,7 @@ export default function Craftsmanship() {
 
   return (
     <section className="bg-[#141410] py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         
         <div className="mb-16 md:mb-24 max-w-2xl">
           <span className="section-tag mb-6">Our Process</span>

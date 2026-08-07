@@ -8,9 +8,9 @@ import Footer from "../components/Footer";
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
-  { label: "THE EXPERIENCE", href: "/philosophy" },
+  { label: "PHILOSOPHY", href: "/philosophy" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -104,33 +104,87 @@ export default function PhilosophyPage() {
       <Header navItems={PAGE_NAV} />
 
       <main className="flex-1">
-        {/* ── Hero — image melts into black like Edition I ── */}
+        {/* ── Hero — image up top on mobile, melt desktop ── */}
         <section className="relative min-h-screen bg-[#060506] overflow-hidden">
-          {/* Full-bleed photo plane; melts hard into the left copy zone */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 lg:left-[32%] xl:left-[28%]">
+          {/* Mobile: image under header, then solid dark copy */}
+          <div className="lg:hidden flex flex-col min-h-screen">
+            <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
                 src="/images/philosophy-hero.webp"
                 alt="Maison Vereen bottle on black marble"
                 fill
                 priority
                 className="object-cover object-[center_28%]"
-                sizes="(max-width: 1024px) 100vw, 70vw"
+                sizes="100vw"
               />
+              <div
+                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, transparent 0%, rgba(6,5,6,0.55) 45%, #060506 100%)",
+                }}
+              />
+              <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
-            {/* Mobile: dissolve upward behind copy */}
-            <div className="absolute inset-0 bg-linear-to-t from-[#060506] from-15% via-[#060506]/85 via-45% to-[#060506]/55 lg:hidden" />
-            {/* Desktop: continuous left melt into the text field */}
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-r from-[#060506] from-28% via-[#060506]/95 via-42% to-transparent to-68%" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-t from-[#060506]/60 via-transparent to-[#060506]/45" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-b from-transparent via-transparent to-[#060506]/50" />
-            <div className="absolute inset-0 hidden lg:block bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />
+
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
+              <div className="w-full max-w-lg space-y-6">
+                <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
+                  The Philosophy of the House
+                </span>
+
+                <h1
+                  className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
+                  style={{ fontSize: "clamp(2.1rem, 5.5vw, 3.6rem)" }}
+                >
+                  Luxury Is Not Volume. It Is Conviction.
+                </h1>
+
+                <p className="font-serif text-base font-light leading-[1.8] text-gold max-w-lg">
+                  Ten convictions govern Maison Vereen. None of them are
+                  negotiable, and none of them were chosen for how they would
+                  market.
+                </p>
+
+                <div className="grid grid-cols-1 gap-5 pt-1">
+                  <p className="text-body-muted text-[14px] font-light leading-[1.8]">
+                    Every house, knowingly or not, is built on a set of beliefs.
+                    Most never state them. Maison Vereen states them plainly,
+                    because a House that intends to last a century cannot afford
+                    to leave its convictions unwritten.
+                  </p>
+                  <p className="text-body-muted text-[14px] font-light leading-[1.8]">
+                    These beliefs are not slogans. They are the standard against
+                    which every formulation, every material, every piece of
+                    correspondence with a collector, and every page of this
+                    website has been measured before being approved.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto pt-36 md:pt-40 pb-20 min-h-screen flex items-center">
+          {/* Desktop: image melts into black on the left */}
+          <div className="absolute inset-0 hidden lg:block pointer-events-none">
+            <div className="absolute inset-0 left-[32%] xl:left-[28%]">
+              <Image
+                src="/images/philosophy-hero.webp"
+                alt="Maison Vereen bottle on black marble"
+                fill
+                priority
+                className="object-cover object-[center_28%]"
+                sizes="70vw"
+              />
+            </div>
+            <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-28% via-[#060506]/95 via-42% to-transparent to-68%" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#060506]/60 via-transparent to-[#060506]/45" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#060506]/50" />
+            <div className="absolute inset-0 bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />
+          </div>
+
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
-                {/* <div className="w-10 h-px bg-gold" /> */}
                 <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                   The Philosophy of the House
                 </span>
@@ -150,7 +204,7 @@ export default function PhilosophyPage() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 pt-2">
-                <p className="text-body-muted text-[14px] font-light leading-[1.8] ">
+                <p className="text-body-muted text-[14px] font-light leading-[1.8]">
                   Every house, knowingly or not, is built on a set of beliefs.
                   Most never state them. Maison Vereen states them plainly,
                   because a House that intends to last a century cannot afford
@@ -167,41 +221,36 @@ export default function PhilosophyPage() {
           </div>
         </section>
 
-        {/* ── Convictions 01–05 — open rows, images dissolve into black ── */}
-        <section className="relative bg-[#060506]">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
-            {CONVICTIONS.map((c, i) => (
+        {/* ── Convictions — bordered cards, image left / copy right ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-5 md:space-y-6">
+            {CONVICTIONS.map((c) => (
               <article
                 key={c.number}
-                className={`py-12 md:py-16 lg:py-20 ${
-                  i < CONVICTIONS.length - 1 ? "border-b border-gold/20" : ""
-                }`}
+                className="border border-[#EDE8DE]/12 bg-[#0A0A0C] p-5 sm:p-6 md:p-8"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-[5.5rem_minmax(0,15rem)_minmax(0,1fr)] xl:grid-cols-[6.5rem_minmax(0,17rem)_minmax(0,1fr)] gap-8 lg:gap-10 xl:gap-14 items-start">
-                  <div className="space-y-3">
-                    <span className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-gold font-light leading-none block">
-                      {c.number}
-                    </span>
-                  </div>
-
-                  <div className="relative aspect-square max-w-xs lg:max-w-none overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-[minmax(0,14rem)_1fr] lg:grid-cols-[minmax(0,16rem)_1fr] gap-6 md:gap-8 lg:gap-10 items-start">
+                  <div className="relative aspect-4/3 md:aspect-square w-full overflow-hidden border border-gold/35">
                     <Image
                       src={c.src}
                       alt={c.alt}
                       fill
                       className="object-cover object-center"
-                      sizes="(max-width: 1024px) 280px, 272px"
+                      sizes="(max-width: 768px) 90vw, 256px"
                     />
                   </div>
 
-                  <div className="space-y-4 max-w-2xl">
-                    <h2 className="font-serif text-xl md:text-2xl font-light tracking-[0.12em] uppercase text-gold">
+                  <div className="flex flex-col gap-3 md:gap-4">
+                    <span className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-gold font-light leading-none">
+                      {c.number}
+                    </span>
+                    <h2 className="font-serif text-xl md:text-2xl font-light tracking-widest uppercase text-[#EDE8DE]">
                       {c.title}
                     </h2>
-                    <p className="font-serif text-base md:text-lg italic font-light text-gold/90 leading-snug">
+                    <p className="font-serif text-base md:text-lg italic font-light text-gold leading-snug">
                       {c.purpose}
                     </p>
-                    <p className="text-body-muted text-[14px] font-light leading-[1.8]">
+                    <p className="text-body-muted text-[14px] font-light leading-[1.8] max-w-xl">
                       {c.body}
                     </p>
                   </div>
@@ -213,7 +262,7 @@ export default function PhilosophyPage() {
 
         {/* ── Dual CTAs ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-5xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
               <article className="flex flex-col gap-8 border border-[#EDE8DE]/12 bg-[#0C0B0A] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
                 <h3
@@ -252,7 +301,7 @@ export default function PhilosophyPage() {
 
         {/* ── Closing ── */}
         <section className="relative bg-[#060506] py-16 md:py-24 border-t border-white/5">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-8">
             <h2
               className="font-serif font-light text-gold leading-snug italic"
               style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
@@ -263,7 +312,7 @@ export default function PhilosophyPage() {
 
             <Link
               href="/the-founder"
-              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors font-medium"
+              className="inline-flex items-center justify-center gap-3 font-sans text-[11px] uppercase tracking-[0.28em] text-[#EDE8DE] hover:text-gold transition-colors font-light"
             >
               Next: The Founder&apos;s Story
               <CircleArrowIcon />

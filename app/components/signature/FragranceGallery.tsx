@@ -99,7 +99,7 @@ export default function FragranceGallery() {
   return (
     <>
       <section id="gallery" className="bg-[#0A0A08] py-20 md:py-28 overflow-hidden border-b border-[#8C7235]/20">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto">
 
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-8">

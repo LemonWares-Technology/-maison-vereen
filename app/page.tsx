@@ -12,7 +12,7 @@ import FoundingRegistrySection from "./components/home/FoundingRegistrySection";
 const HOME_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
-  { label: "THE EXPERIENCE", href: "/philosophy" },
+  { label: "PHILOSOPHY", href: "/philosophy" },
   { label: "JOURNAL", href: "/journal" },
 ];
 

@@ -185,7 +185,7 @@ export default function MembershipPage() {
             <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
           </div>
 
-          <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+          <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
              
               <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-gold font-medium">
@@ -223,7 +223,7 @@ export default function MembershipPage() {
           <div className="absolute inset-0 bg-linear-to-t from-[#060506] via-transparent to-[#060506]/25" />
         </div>
 
-        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+        <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
            
             {/* <div className="w-8 h-px bg-gold" /> */}
@@ -250,7 +250,7 @@ export default function MembershipPage() {
 
       {/* Philosophy statement */}
       <section className="relative bg-[#060506] py-20 md:py-28">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-16">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-12 md:space-y-16">
           <div className="flex justify-center text-gold">
             <ShieldMarkIcon />
           </div>
@@ -341,7 +341,7 @@ export default function MembershipPage() {
 
       {/* Four pillars */}
       <section className="relative bg-[#060506] py-20 md:py-28 border-t border-gold/15">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {PILLARS.map((pillar) => (
               <article
@@ -384,7 +384,7 @@ export default function MembershipPage() {
           /> */}
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-10">
+        <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-10">
           <h2 className="text-body-muted font-light leading-[1.85] font-serif text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem]">
             Membership is one path into the House. The Signature Collection is
             another — open, permanent, and entirely its own.

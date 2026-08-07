@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function CollectionPreview() {
   return (
     <section id="edition-i" className="bg-charcoal border-t border-white/5">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left — bottle image: SILHOUETTE ONLY — anticipation, not unveiling */}
           <div className="relative min-h-125 lg:min-h-165 overflow-hidden bg-[#060608]">

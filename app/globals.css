@@ -58,20 +58,20 @@ body {
 .body-copy-on-cream {
   font-family: var(--font-geist-sans), Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.75;
   color: #5C564F;
 }
 
 /*
  * Align text to the header content rail while keeping parent media full-bleed.
- * Matches: w-[95%] md:w-full max-w-6xl mx-auto
+ * Matches: w-[90%] md:w-full max-w-6xl mx-auto
  * Below lg (stacked): both sides inset. At lg+ (split): only the outer edge.
  */
 .content-rail-inset-l,
 .content-rail-inset-r {
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 @media (min-width: 768px) {
   .content-rail-inset-l,

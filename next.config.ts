@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Allow phone / LAN testing against the network URL (e.g. http://192.168.x.x:3000)
+  allowedDevOrigins: ["192.168.100.17", "127.0.0.1", "localhost"],
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,

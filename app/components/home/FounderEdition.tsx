@@ -42,7 +42,7 @@ export default function FounderEdition() {
         <div className="bg-[#060506]" />
       </div>
 
-      <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-20 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
           <div className="relative w-full aspect-4/5 overflow-hidden lg:hidden order-2">
             <Image
@@ -72,7 +72,7 @@ export default function FounderEdition() {
               The first.
             </h2>
 
-            <div className="space-y-5 body-copy">
+            <div className="space-y-5 text-body-muted text-base font-light leading-widest">
               <p>
                 Those who hold a bottle from Edition I will hold something no
                 House can ever offer again: the first.

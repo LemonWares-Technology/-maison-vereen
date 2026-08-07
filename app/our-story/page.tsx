@@ -10,7 +10,8 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "OUR STORY", href: "/our-story" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "JOURNAL", href: "/journal" },
+
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -63,7 +64,7 @@ export default function OurStoryPage() {
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
 
-            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-6">
                 <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
                   Discover Maison Vereen
@@ -112,7 +113,7 @@ export default function OurStoryPage() {
             <div className="absolute inset-0 bg-linear-to-l from-[#060506]/35 via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-7 md:space-y-8">
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 Discover Maison Vereen
@@ -198,101 +199,70 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* ── 02 / 03 dual panels ── */}
-        <section className="relative bg-[#060506]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 relative">
-            {/* Center monogram on divider */}
-            <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-[#060506]">
-              <Image
-                src="/logo-mark.webp"
-                alt=""
-                width={36}
-                height={30}
-                className="w-8 h-auto"
-              />
+        {/* ── 02 / 03 bordered cards ── */}
+        <section className="relative bg-[#060506] py-16 md:py-24">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+              {(
+                [
+                  {
+                    num: "02",
+                    title: "What We Are",
+                    paragraphs: [
+                      "Maison Vereen is a fragrance house, not a fragrance brand — a distinction the House holds carefully. A brand sells a product range. A house builds a body of work, a philosophy, and a relationship with the people who choose to be part of it.",
+                      "Every decision here, from the number of bottles in Edition I to the language used to describe a single note, is made in service of that distinction.",
+                    ],
+                    image: "/images/dark-architecture.webp",
+                    alt: "",
+                  },
+                  {
+                    num: "03",
+                    title: "Why Fragrance Can Become Art",
+                    paragraphs: [
+                      "Wine, watches, and rare manuscripts are collected for scarcity, craftsmanship, provenance, and the story a single object carries forward.",
+                      "Fragrance has rarely been built with the same discipline — most houses treat scent as renewable inventory rather than a finished work.",
+                      "Maison Vereen treats every formulation, especially within Edition I, as a singular work: created once, documented permanently, and never diluted by repetition.",
+                    ],
+                    image: "/images/the-house-last.webp",
+                    alt: "",
+                  },
+                ] as const
+              ).map((card) => (
+                <article
+                  key={card.num}
+                  className="flex flex-col gap-6 md:gap-7 border border-[#EDE8DE]/12 bg-[#0A0A0C] p-5 sm:p-6 md:p-8"
+                >
+                  <div className="flex flex-col gap-4 md:gap-5 flex-1">
+                    <span className="font-serif text-xl text-gold font-light">
+                      {card.num}
+                    </span>
+                    <h2
+                      className="font-serif font-light text-[#F2EDE4] leading-snug"
+                      style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.1rem)" }}
+                    >
+                      {card.title}
+                    </h2>
+                    <div className="space-y-4 font-sans text-[15px] md:text-base font-normal leading-[1.8] text-body-muted">
+                      {card.paragraphs.map((p) => (
+                        <p key={p.slice(0, 40)} className="m-0">
+                          {p}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="relative aspect-16/10 w-full overflow-hidden border border-gold/25">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 90vw, 45vw"
+                    />
+                  </div>
+                </article>
+              ))}
             </div>
-
-            <article className="relative min-h-120 lg:min-h-140 overflow-hidden lg:border-r lg:border-gold/30">
-              <Image
-                src="/images/dark-architecture.webp"
-                alt=""
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {/* Scrim for text legibility — not an edge melt */}
-              <div className="absolute inset-0 bg-[#060506]/72" />
-
-              <div className="relative z-10 h-full flex items-end lg:items-center px-8 sm:px-10 md:px-12 lg:px-10 xl:px-14 py-14 md:py-16">
-                <div className="w-full max-w-md flex flex-col items-start gap-5 text-left">
-                  <span className="font-serif text-xl text-gold font-light">
-                    02
-                  </span>
-                  <h2
-                    className="font-serif font-light text-[#F2EDE4] leading-snug w-full"
-                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.1rem)" }}
-                  >
-                    What We Are
-                  </h2>
-                  <div className="w-full space-y-4 font-sans text-[15px] md:text-base font-normal leading-[1.8] text-body-muted">
-                    <p className="m-0">
-                      Maison Vereen is a fragrance house, not a fragrance brand
-                      — a distinction the House holds carefully. A brand sells
-                      a product range. A house builds a body of work, a
-                      philosophy, and a relationship with the people who choose
-                      to be part of it.
-                    </p>
-                    <p className="m-0">
-                      Every decision here, from the number of bottles in Edition
-                      I to the language used to describe a single note, is made
-                      in service of that distinction.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article className="relative min-h-120 lg:min-h-140 overflow-hidden">
-              <Image
-                src="/images/the-house-last.webp"
-                alt=""
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-[#060506]/72" />
-
-              <div className="relative z-10 h-full flex items-end lg:items-center px-8 sm:px-10 md:px-12 lg:px-10 xl:px-14 py-14 md:py-16">
-                <div className="w-full max-w-md flex flex-col items-start gap-5 text-left">
-                  <span className="font-serif text-xl text-gold font-light">
-                    03
-                  </span>
-                  <h2
-                    className="font-serif font-light text-[#F2EDE4] leading-snug w-full"
-                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.1rem)" }}
-                  >
-                    Why Fragrance Can Become Art
-                  </h2>
-                  <div className="w-full space-y-4 font-sans text-[15px] md:text-base font-normal leading-[1.8] text-body-muted">
-                    <p className="m-0">
-                      Wine, watches, and rare manuscripts are collected for
-                      scarcity, craftsmanship, provenance, and the story a
-                      single object carries forward.
-                    </p>
-                    <p className="m-0">
-                      Fragrance has rarely been built with the same discipline
-                      — most houses treat scent as renewable inventory rather
-                      than a finished work.
-                    </p>
-                    <p className="m-0">
-                      Maison Vereen treats every formulation, especially within
-                      Edition I, as a singular work: created once, documented
-                      permanently, and never diluted by repetition.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
           </div>
         </section>
 
@@ -308,7 +278,7 @@ export default function OurStoryPage() {
             />
           </div>
 
-          <div className="relative w-[95%] md:w-full max-w-6xl mx-auto py-16 md:py-24">
+          <div className="relative w-[90%] md:w-full max-w-6xl mx-auto py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
               <div className="space-y-5 lg:pr-12 xl:pr-16">
                 <h3

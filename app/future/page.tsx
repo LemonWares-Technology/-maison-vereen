@@ -54,7 +54,7 @@ export default function FuturePage() {
 
         {/* ── HERO — split layout ── */}
         <section className="pt-18 border-b border-white/5">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[65vh]">
               <div className="flex items-center px-6 sm:px-8 md:px-14 py-20 md:py-28">
                 <div className="max-w-135 space-y-8">
@@ -81,7 +81,7 @@ export default function FuturePage() {
 
         {/* ── WHAT IS COMING ── */}
         <section className="border-b border-white/5 bg-[#0D0D0D]">
-          <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-14 py-20 md:py-28 space-y-12">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto py-20 md:py-28 space-y-12">
             <div className="space-y-4 max-w-170">
               <span className="section-tag">What Is Coming</span>
               <h2 className="font-serif font-light text-[#E8E2D9] leading-[1.1]" style={{ fontSize: "clamp(2rem, 3vw, 2.6rem)" }}>
@@ -113,7 +113,7 @@ export default function FuturePage() {
 
         {/* ── CLOSING — split layout ── */}
         <section className="border-b border-white/5">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[48vh]">
               {/* Bottle on left */}
               <div className="relative min-h-75 lg:min-h-0 overflow-hidden bg-[#060608]">

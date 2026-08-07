@@ -43,7 +43,7 @@ export default function JournalPage() {
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
 
-            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-5">
                 <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
                   The Journal
@@ -89,7 +89,7 @@ export default function JournalPage() {
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#060506]/45" />
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-lg lg:max-w-xl space-y-6 md:space-y-7">
               <span className="font-sans text-xs uppercase tracking-[0.32em] text-gold font-medium">
                 The Housebook
@@ -213,7 +213,7 @@ export default function JournalPage() {
 
         {/* ── Registry CTA ── */}
         <section className="border-t border-gold/15 bg-charcoal">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto py-14 md:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <p
               className="text-body-muted font-serif text-xl max-w-125"
             >

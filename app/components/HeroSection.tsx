@@ -35,11 +35,16 @@ function HeroCopy() {
         before you speak.
       </h1>
 
-      <p className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-gold font-medium leading-relaxed max-w-md">
-        Edition I. Two Hundred and Fifty Individually Numbered Bottles.
-      </p>
+      <div className="flex flex-col gap-2">
+        <p className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-gold font-medium max-w-md">
+          Edition I.
+        </p>
+        <p className="text-body-muted text-[11px] leading-widest max-w-md uppercase">
+          Two Hundred and Fifty Individually Numbered Bottles.
+        </p>
+      </div>
 
-      <p className="body-copy max-w-md">
+      <p className="text-body-muted text-base font-light leading-widest max-w-md">
         Africa&apos;s first serious luxury fragrance house, now privately
         accepting applications into the Maison Vereen Founding Registry.
       </p>
@@ -89,7 +94,7 @@ export default function HeroSection() {
           <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+        <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
           <HeroCopy />
         </div>
       </div>
@@ -112,11 +117,11 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 hidden lg:flex w-full max-w-6xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
-        <div className="w-[95%] md:w-full mx-auto">
+        <div className="w-[90%] md:w-full mx-auto">
           <HeroCopy />
         </div>
 
-        <div className="absolute bottom-12 left-[max(2.5%,calc((100%-80rem)/2))] flex items-center gap-3">
+        <div className="absolute bottom-12 left-[max(5%,calc((100%-80rem)/2))] flex items-center gap-3">
           {/* <span className="w-px h-10 bg-gold/70" />
           <span
             className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#EDE8DE]/80"

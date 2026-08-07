@@ -119,7 +119,7 @@ export default function ContactPage() {
             <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
           </div>
 
-          <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+          <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
             <div className="w-full max-w-lg flex flex-col items-start gap-5">
               <div className="flex items-center gap-3">
               <span className="font-sans text-sm text-gold tracking-wide">15</span>
@@ -173,7 +173,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+        <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
           <div className="w-full max-w-lg lg:max-w-xl flex flex-col items-start gap-5 md:gap-6">
             <div className="flex items-center gap-3">
               <span className="font-sans text-sm md:text-base text-gold tracking-wide">15</span>
@@ -216,7 +216,7 @@ export default function ContactPage() {
         id="conversation"
         className="relative bg-[#060506] py-20 md:py-28 scroll-mt-28"
       >
-        <div className="w-[95%] md:w-full max-w-3xl mx-auto text-center space-y-8">
+        <div className="w-[90%] md:w-full max-w-3xl mx-auto text-center space-y-8">
           <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium block">
             A Conversation Begins Here
           </span>
@@ -347,7 +347,7 @@ export default function ContactPage() {
 
       {/* Preferred ways */}
       <section className="relative bg-[#060506] py-14 md:py-20 border-t border-gold/15">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto space-y-10">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto space-y-10">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <div className="h-px flex-1 max-w-24 sm:max-w-40 bg-gold/50" />
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium shrink-0">
@@ -434,7 +434,7 @@ export default function ContactPage() {
         <div className="absolute right-[8%] top-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none hidden md:block">
           {/* <Image src="/logo-mark.webp" alt="" width={200} height={160} className="w-40 lg:w-48 h-auto" /> */}
         </div>
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto text-center">
+        <div className="relative w-[90%] md:w-full max-w-3xl mx-auto text-center">
           <p className="font-serif text-body-muted text-3xl font-light ">
             Every enquiry deserves a considered reply. That is why every message
             is read personally.
@@ -444,7 +444,7 @@ export default function ContactPage() {
 
       {/* Details & response times */}
       <section className="relative bg-[#060506] py-16 md:py-24 border-t border-gold/15 overflow-hidden">
-        <div className="w-[95%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10 lg:gap-12 xl:gap-16 items-stretch">
+        <div className="w-[90%] md:w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10 lg:gap-12 xl:gap-16 items-stretch">
           <div className="space-y-6">
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold font-medium block">
               Maison Vereen
@@ -549,7 +549,7 @@ export default function ContactPage() {
           <Image src="/logo-mark.webp" alt="" width={180} height={140} className="w-40 h-auto" />
         </div>
 
-        <div className="relative w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+        <div className="relative w-[90%] md:w-full max-w-5xl mx-auto text-center space-y-10">
           <h2 className="body-copy">
             You now know the House completely. What remains is simply to begin
             the conversation.

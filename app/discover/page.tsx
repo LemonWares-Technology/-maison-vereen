@@ -251,7 +251,7 @@ export default function DiscoverPage() {
               <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-[#060506] to-transparent pointer-events-none" />
             </div>
 
-            <div className="relative z-10 flex-1 bg-[#060506] w-[95%] mx-auto pt-2 pb-14">
+            <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-7">
                 <div className="space-y-3">
                   <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed block">
@@ -295,7 +295,7 @@ export default function DiscoverPage() {
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#060506]/55" />
           </div>
 
-          <div className="relative z-10 hidden lg:flex w-[95%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
+          <div className="relative z-10 hidden lg:flex w-[90%] md:w-full max-w-6xl mx-auto pt-40 pb-20 min-h-screen items-center">
             <div className="w-full max-w-xl space-y-7 md:space-y-8">
               <div className="space-y-3">
                 <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-gold font-medium leading-relaxed block max-w-sm">
@@ -324,7 +324,7 @@ export default function DiscoverPage() {
 
         {/* ── Five pillars ── */}
         <section className="relative bg-[#060506] py-14 md:py-20 border-t border-gold/20">
-          <div className="w-[95%] md:w-full max-w-6xl mx-auto">
+          <div className="w-[90%] md:w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-0">
               {PILLARS.map((p, i) => (
                 <div
@@ -348,7 +348,7 @@ export default function DiscoverPage() {
 
         {/* ── Detail list ── */}
         <section className="relative bg-[#060506] py-14 md:py-20 border-t border-gold/15">
-          <div className="w-[95%] md:w-full max-w-3xl mx-auto space-y-12 md:space-y-14">
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto space-y-12 md:space-y-14">
             {DETAILS.map((d) => (
               <article key={d.title} className="flex gap-5 md:gap-7 items-start">
                 <CircleIcon type={d.icon} />
@@ -390,7 +390,7 @@ export default function DiscoverPage() {
           />
           <div className="absolute inset-0 bg-[#060506]/80" />
 
-          <div className="relative z-10 w-[95%] md:w-full max-w-6xl mx-auto py-14 md:py-16">
+          <div className="relative z-10 w-[90%] md:w-full max-w-6xl mx-auto py-14 md:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)_auto] gap-10 lg:gap-12 items-center">
 
               {/* Hourglass — full bleed on desktop, centred on mobile */}
@@ -454,7 +454,7 @@ export default function DiscoverPage() {
 
         {/* ── Final CTA ── */}
         <section className="relative bg-[#060506] py-16 md:py-24">
-          <div className="w-[95%] md:w-full max-w-5xl mx-auto text-center space-y-10">
+          <div className="w-[90%] md:w-full max-w-5xl mx-auto text-center space-y-10">
             <h2
               className="body-copy"
             >

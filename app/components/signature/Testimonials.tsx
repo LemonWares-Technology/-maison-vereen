@@ -32,7 +32,7 @@ export default function Testimonials() {
 
   return (
     <section className="bg-[#0A0A08] py-24 md:py-32 border-b border-[#8C7235]/10">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-16 text-center">
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto text-center">
         
         <span className="section-tag mb-4 block">Testimonials</span>
         <h2 className="type-headline text-[#F5F0E8] mb-16">
