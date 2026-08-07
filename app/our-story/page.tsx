@@ -212,8 +212,8 @@ export default function OurStoryPage() {
                       "Maison Vereen is a fragrance house, not a fragrance brand — a distinction the House holds carefully. A brand sells a product range. A house builds a body of work, a philosophy, and a relationship with the people who choose to be part of it.",
                       "Every decision here, from the number of bottles in Edition I to the language used to describe a single note, is made in service of that distinction.",
                     ],
-                    image: "/images/dark-architecture.webp",
-                    alt: "",
+                    image: "/privateacquisition.webp",
+                    alt: "Private Acquisition — the House's culture of belonging",
                   },
                   {
                     num: "03",
@@ -223,8 +223,8 @@ export default function OurStoryPage() {
                       "Fragrance has rarely been built with the same discipline — most houses treat scent as renewable inventory rather than a finished work.",
                       "Maison Vereen treats every formulation, especially within Edition I, as a singular work: created once, documented permanently, and never diluted by repetition.",
                     ],
-                    image: "/images/the-house-last.webp",
-                    alt: "",
+                    image: "/images/certificate.webp",
+                    alt: "Certificate of authenticity — fragrance as collectible art",
                   },
                 ] as const
               ).map((card) => (
