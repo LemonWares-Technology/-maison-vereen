@@ -30,6 +30,7 @@ const DIRECTORY_NAV_ITEMS: NavItem[] = [
   { label: "THE CRAFT", href: "/the-craft" },
   { label: "THE DIFFERENCE", href: "/the-difference" },
   { label: "MEMBERSHIP", href: "/membership" },
+  { label: "LIVE FOUNDING REGISTRY", href: "/the-first-250" },
   { label: "LEGACY", href: "/legacy" },
   { label: "FAQS", href: "/faqs" },
   { label: "CONTACT", href: "/contact" },
