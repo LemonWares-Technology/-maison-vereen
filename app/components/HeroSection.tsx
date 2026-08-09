@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 function ArrowIcon() {
   return (
@@ -20,6 +19,26 @@ function ArrowIcon() {
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+function HeroVideo({ objectPosition }: { objectPosition: string }) {
+  return (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      disablePictureInPicture
+      disableRemotePlayback
+      aria-hidden
+      tabIndex={-1}
+      className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+      style={{ objectPosition }}
+    >
+      <source src="/maisonvereenvid.mp4" type="video/mp4" />
+    </video>
   );
 }
 
@@ -75,14 +94,7 @@ export default function HeroSection() {
       <div className="lg:hidden flex flex-col min-h-screen">
         {/* Dark spacer under fixed header, then bottle band */}
         <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
-          <Image
-            src="/edition1perfumebottle.webp"
-            alt=""
-            fill
-            priority
-            className="object-cover object-[center_28%]"
-            sizes="100vw"
-          />
+          <HeroVideo objectPosition="center 28%" />
           {/* Melt image down into the copy band */}
           <div
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
@@ -99,21 +111,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ── Desktop: bottle on right, melts into black on left ── */}
-      <div className="absolute inset-0 hidden lg:grid grid-cols-2 pointer-events-none">
-        <div className="bg-[#060506]" />
-        <div className="relative overflow-hidden">
-          <Image
-            src="/edition1perfumebottle.webp"
-            alt=""
-            fill
-            priority
-            className="object-cover object-[center_30%]"
-            sizes="55vw"
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/88 via-28% to-transparent to-58%" />
-          <div className="absolute inset-0 bg-linear-to-t from-[#060506]/55 via-transparent to-[#060506]/30" />
-        </div>
+      {/* ── Desktop: full-bleed looping background video ── */}
+      <div className="absolute inset-0 hidden lg:block pointer-events-none">
+        <HeroVideo objectPosition="center center" />
+        <div className="absolute inset-0 bg-[#060506]/45" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/80 via-35% to-[#060506]/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#060506]/70 via-transparent to-[#060506]/35" />
       </div>
 
       <div className="relative z-10 hidden lg:flex w-full max-w-6xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
