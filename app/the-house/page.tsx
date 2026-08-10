@@ -113,7 +113,7 @@ export default function TheHousePage() {
         <div className="lg:hidden flex flex-col">
           <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
             <Image
-              src="/images/the-house-hero.webp"
+              src="/maisonlabhand.webp"
               alt=""
               fill
               priority
@@ -162,7 +162,7 @@ export default function TheHousePage() {
           <div className="bg-[#060506]" />
           <div className="relative overflow-hidden">
             <Image
-              src="/images/the-house-hero.webp"
+              src="/maisonlabhand.webp"
               alt=""
               fill
               priority
@@ -239,8 +239,7 @@ export default function TheHousePage() {
                   title: "Values & Culture",
                   body: "Every person who works within Maison Vereen, in any capacity, is held to the same standard: craftsmanship first, growth second. Decisions that would compromise quality for speed or scale are not made here, regardless of opportunity.",
                   items: VALUES_LIST,
-                  image: "/images/the-house-belonging.webp",
-                },
+                  image: "/valuesandculture.webp",                },
                 {
                   num: "02",
                   title: "The Next Century",

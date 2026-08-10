@@ -452,7 +452,7 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-4/3 overflow-hidden">
                 <Image
-                  src="/thunderrock.webp"
+                  src="/woods.webp"
                   alt="Perfumer formula notebook and vials"
                   fill
                   className="object-cover object-center"
@@ -568,7 +568,7 @@ export default function TheCraftPage() {
 
               <div className="relative w-full aspect-16/10 overflow-hidden">
                 <Image
-                  src="/oud.webp"
+                  src="/thecraft.webp"
                   alt="Glass vials and formulations in the atelier"
                   fill
                   className="object-cover object-center"
@@ -577,7 +577,7 @@ export default function TheCraftPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+            {/* <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
               {GALLERY.map((img) => (
                 <div
                   key={img.src + img.alt}
@@ -592,7 +592,7 @@ export default function TheCraftPage() {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 

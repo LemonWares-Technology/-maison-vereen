@@ -36,7 +36,7 @@ const CONVICTIONS = [
     title: "MEMORY",
     purpose: "Purpose: Frame fragrance as an instrument of memory.",
     body: "A fragrance is the only object capable of returning someone, instantly and involuntarily, to a moment they thought they had lost. Maison Vereen designs for that return, not merely for how a scent performs in the first hour.",
-    src: "/images/journal-dark.webp",
+    src: "/memory.webp",
     alt: "Raw amber resin and materials of memory",
   },
   {
@@ -44,7 +44,7 @@ const CONVICTIONS = [
     title: "IDENTITY",
     purpose: "Purpose: Position fragrance as self-expression, not costume.",
     body: "A signature scent is not a mask. It is closer to a signature itself — unrepeatable, and recognisably the wearer's own. The House creates fragrances built to be worn for decades, not seasons.",
-    src: "/images/philosophy-hero.webp",
+    src: "/theidentity.webp",
     alt: "Fountain pen and handwritten signature",
   },
   {

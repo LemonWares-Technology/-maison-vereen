@@ -286,7 +286,7 @@ export default function MembershipPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative min-h-100 lg:min-h-130 overflow-hidden">
             <Image
-              src="/images/wax-seal.webp"
+              src="/thispage.webp"
               alt="Private release invitation"
               fill
               className="object-cover object-center"
@@ -315,7 +315,7 @@ export default function MembershipPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative min-h-100 lg:min-h-130 overflow-hidden">
             <Image
-              src="/images/the-house-belonging.webp"
+              src="/privateaccess.webp"
               alt="Private gathering"
               fill
               className="object-cover object-[center_35%]"
