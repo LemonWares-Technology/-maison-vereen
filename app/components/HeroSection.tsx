@@ -114,9 +114,13 @@ export default function HeroSection() {
       {/* ── Desktop: full-bleed looping background video ── */}
       <div className="absolute inset-0 hidden lg:block pointer-events-none">
         <HeroVideo objectPosition="center center" />
-        <div className="absolute inset-0 bg-[#060506]/45" />
-        <div className="absolute inset-0 bg-linear-to-r from-[#060506] from-0% via-[#060506]/80 via-35% to-[#060506]/20" />
-        <div className="absolute inset-0 bg-linear-to-t from-[#060506]/70 via-transparent to-[#060506]/35" />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to right, #060506 0%, #060506 40%, rgba(6,5,6,0.3) 50%, transparent 70%, transparent 100%)",
+          }}
+        />
       </div>
 
       <div className="relative z-10 hidden lg:flex w-full max-w-6xl mx-auto min-h-screen flex-col justify-center pt-40 pb-24">
