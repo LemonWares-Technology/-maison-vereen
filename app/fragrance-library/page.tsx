@@ -35,50 +35,50 @@ const PILLARS = [
 
 const SIGNATURE_BOTTLES = [
   {
-    id: "vereen",
+    id: "aletheia",
     no: "No. I",
-    name: "VEREEN",
+    name: "ALETHEIA",
     notes: "WOODY / AMBER",
     desc: "Warmth grounded in depth. Confidence without noise.",
-    src: "/images/perfume-bottle.webp",
-    alt: "Maison Vereen Edition I bottle — Vereen",
+    src: "/aletheia.webp",
+    alt: "Maison Vereen Edition I bottle — Aletheia",
   },
   {
-    id: "lumiere",
+    id: "orenze",
     no: "No. II",
-    name: "LUMIÈRE",
+    name: "ORENZE",
     notes: "FLORAL / MUSK",
     desc: "Light that lingers. Grace with intention.",
-    src: "/images/phil.webp",
-    alt: "Maison Vereen vessel — Lumière",
+    src: "/orenze.webp",
+    alt: "Maison Vereen vessel — Orenze",
   },
   {
-    id: "obsidian",
+    id: "vaelor",
     no: "No. III",
-    name: "OBSIDIAN",
+    name: "VAELOR",
     notes: "AMBER / LEATHER",
     desc: "Power in stillness. Presence that remains.",
-    src: "/images/dark-stone.webp",
-    alt: "Maison Vereen bottle detail — Obsidian",
+    src: "/vaelor.webp",
+    alt: "Maison Vereen bottle detail — Vaelor",
   },
   {
-    id: "santalis",
+    id: "alther",
     no: "No. IV",
-    name: "SANTALIS",
+    name: "ALTHER",
     notes: "WOODY / SPICY",
     desc: "Quiet strength. Refined and timeless.",
-    src: "/images/fragrance-alt.webp",
-    alt: "Maison Vereen packaging — Santalis",
+    src: "/alther.webp",
+    alt: "Maison Vereen packaging — Alther",
   },
-  {
-    id: "clairvoyant",
-    no: "No. V",
-    name: "CLAIRVOYANT",
-    notes: "CITRUS / AROMATIC",
-    desc: "Clarity in motion. Crisp, intelligent, assured.",
-    src: "/images/hero-section-image.webp",
-    alt: "Maison Vereen bottle — Clairvoyant",
-  },
+  // {
+  //   id: "clairvoyant",
+  //   no: "No. V",
+  //   name: "CLAIRVOYANT",
+  //   notes: "CITRUS / AROMATIC",
+  //   desc: "Clarity in motion. Crisp, intelligent, assured.",
+  //   src: "/images/hero-section-image.webp",
+  //   alt: "Maison Vereen bottle — Clairvoyant",
+  // },
 ];
 
 function ArrowIcon() {
@@ -137,7 +137,7 @@ export default function FragranceLibraryPage() {
           <div className="lg:hidden flex flex-col min-h-screen">
             <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
-                src="/images/hero-bottle.webp"
+                src="/signaturecollection.webp"
                 alt="Maison Vereen Signature Collection bottle and vessel"
                 fill
                 priority
@@ -192,7 +192,7 @@ export default function FragranceLibraryPage() {
             <div className="bg-[#060506]" />
             <div className="relative overflow-hidden">
               <Image
-                src="/images/hero-bottle.webp"
+                src="/signaturecollection.webp"
                 alt="Maison Vereen Signature Collection bottle and vessel"
                 fill
                 priority
@@ -289,7 +289,7 @@ export default function FragranceLibraryPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-4">
               {SIGNATURE_BOTTLES.map((b) => (
                 <article
                   key={b.id}
@@ -342,7 +342,7 @@ export default function FragranceLibraryPage() {
           <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2 pointer-events-none">
             <div className="relative overflow-hidden">
               <Image
-                src="/founder-image-1.webp"
+                src="/eachinful.webp"
                 alt=""
                 fill
                 className="object-cover object-center"
@@ -358,7 +358,7 @@ export default function FragranceLibraryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="relative w-full aspect-4/3 overflow-hidden lg:hidden">
                 <Image
-                  src="/founder-image-1.webp"
+                  src="/eachinful.webp"
                   alt="Archival journal and fountain pen of the House"
                   fill
                   className="object-cover object-center"
