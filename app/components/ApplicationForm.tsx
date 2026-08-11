@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Country, State } from "country-state-city";
 import { HEADER_OFFSET_CLASS } from "./Header";
 
 const STEPS = [
@@ -23,20 +24,8 @@ const HOW_HEARD = [
   "Other",
 ];
 
-const COUNTRIES = [
-  "Select country",
-  "Nigeria",
-  "South Africa",
-  "Ghana",
-  "Kenya",
-  "United States",
-  "United Kingdom",
-  "France",
-  "Germany",
-  "Canada",
-  "United Arab Emirates",
-  "Other",
-];
+const COUNTRY_PLACEHOLDER = "Select country";
+const STATE_PLACEHOLDER = "Select state / province";
 
 const LIFESTYLE_OPTIONS = [
   "Which statement best describes your lifestyle?",
@@ -169,6 +158,7 @@ type FormState = {
   email: string;
   phone: string;
   country: string;
+  stateProvince: string;
   city: string;
   dob: string;
   occupation: string;
@@ -192,7 +182,8 @@ const INITIAL_FORM: FormState = {
   preferredName: "",
   email: "",
   phone: "",
-  country: COUNTRIES[0],
+  country: COUNTRY_PLACEHOLDER,
+  stateProvince: STATE_PLACEHOLDER,
   city: "",
   dob: "",
   occupation: "",
@@ -220,6 +211,23 @@ export default function ApplicationForm() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [newsletterError, setNewsletterError] = useState("");
+  const countries = useMemo(
+    () =>
+      Country.getAllCountries().sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+      ),
+    []
+  );
+  const selectedCountry = useMemo(
+    () => countries.find((c) => c.name === form.country),
+    [countries, form.country]
+  );
+  const states = useMemo(() => {
+    if (!selectedCountry) return [];
+    return State.getStatesOfCountry(selectedCountry.isoCode).sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+    );
+  }, [selectedCountry]);
 
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -250,6 +258,13 @@ export default function ApplicationForm() {
   const setField = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
+  const setCountry = (country: string) => {
+    setForm((prev) => ({
+      ...prev,
+      country,
+      stateProvince: STATE_PLACEHOLDER,
+    }));
+  };
 
   const toggleValue = (value: string) => {
     setForm((prev) => {
@@ -263,7 +278,7 @@ export default function ApplicationForm() {
   const requiredComplete =
     form.fullName.trim().length > 0 &&
     form.email.trim().length > 0 &&
-    form.country !== COUNTRIES[0] &&
+    form.country !== COUNTRY_PLACEHOLDER &&
     form.occupation.trim().length > 0 &&
     form.drawsYou.trim().length > 0;
 
@@ -281,6 +296,7 @@ export default function ApplicationForm() {
     try {
       const earlyThing = [
         form.preferredName && `Preferred name: ${form.preferredName}`,
+        form.stateProvince !== STATE_PLACEHOLDER && `State / Province: ${form.stateProvince}`,
         form.city && `City: ${form.city}`,
         form.dob && `DOB: ${form.dob}`,
         form.lifestyle !== LIFESTYLE_OPTIONS[0] && `Lifestyle: ${form.lifestyle}`,
@@ -551,7 +567,7 @@ export default function ApplicationForm() {
                     You will receive a response at the email you provided.
                   </p>
                   <Link
-                    href="/"
+                    href="/the-first-250"
                     className="inline-block border border-gold/60 hover:border-gold text-gold px-8 py-3 text-xs tracking-[0.28em] uppercase font-medium transition-colors"
                   >
                     Return to the House
@@ -627,13 +643,39 @@ export default function ApplicationForm() {
                         <select
                           className={selectClass}
                           value={form.country}
-                          onChange={(e) => setField("country", e.target.value)}
+                          onChange={(e) => setCountry(e.target.value)}
                           required
                           aria-required="true"
                         >
-                          {COUNTRIES.map((c) => (
-                            <option key={c} value={c} className={optionClass}>
-                              {c}
+                          <option value={COUNTRY_PLACEHOLDER} className={optionClass}>
+                            {COUNTRY_PLACEHOLDER}
+                          </option>
+                          {countries.map((country) => (
+                            <option
+                              key={country.isoCode}
+                              value={country.name}
+                              className={optionClass}
+                            >
+                              {country.name}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label className="block space-y-2">
+                        <span className={labelClass}>State / Province</span>
+                        <select
+                          className={selectClass}
+                          value={form.stateProvince}
+                          onChange={(e) => setField("stateProvince", e.target.value)}
+                          disabled={form.country === COUNTRY_PLACEHOLDER || states.length === 0}
+                          aria-disabled={form.country === COUNTRY_PLACEHOLDER || states.length === 0}
+                        >
+                          <option value={STATE_PLACEHOLDER} className={optionClass}>
+                            {STATE_PLACEHOLDER}
+                          </option>
+                          {states.map((state) => (
+                            <option key={state.isoCode} value={state.name} className={optionClass}>
+                              {state.name}
                             </option>
                           ))}
                         </select>
