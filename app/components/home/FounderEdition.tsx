@@ -66,16 +66,17 @@ export default function FounderEdition() {
             </div>
 
             <h2
-              className="font-serif font-light text-gold leading-[1.05]"
+              className="font-serif font-light leading-[1.05]"
               style={{ fontSize: "clamp(2.75rem, 5.5vw, 4.25rem)" }}
             >
               The first.
             </h2>
 
             <div className="space-y-5 text-body-muted text-base font-light leading-widest">
-              <p className="text-gold">
+              <p className="">
                 Those who hold a bottle from Edition I will hold something no
-                House can ever offer again: the first.
+                House can ever offer again:{" "}
+                <span className="text-gold">the first</span>.
               </p>
               <p>
                 Edition I is the founding chapter of Maison Vereen — the work
@@ -94,7 +95,7 @@ export default function FounderEdition() {
               >
                 <span className="border flex items-center gap-3  border-gold px-4 py-3 group-hover:border-gold-light transition-colors">
                   Discover Edition I in Full
-                <ArrowIcon />
+                  <ArrowIcon />
                 </span>
               </Link>
             </div>
