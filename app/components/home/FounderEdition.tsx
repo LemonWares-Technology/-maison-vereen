@@ -66,14 +66,14 @@ export default function FounderEdition() {
             </div>
 
             <h2
-              className="font-serif font-light text-[#F2EDE4] leading-[1.05]"
+              className="font-serif font-light text-gold leading-[1.05]"
               style={{ fontSize: "clamp(2.75rem, 5.5vw, 4.25rem)" }}
             >
               The first.
             </h2>
 
             <div className="space-y-5 text-body-muted text-base font-light leading-widest">
-              <p>
+              <p className="text-gold">
                 Those who hold a bottle from Edition I will hold something no
                 House can ever offer again: the first.
               </p>

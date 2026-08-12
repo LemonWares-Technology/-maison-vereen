@@ -170,7 +170,7 @@ export default function EditionIPage() {
 
             <div className="space-y-8 body-copy-on-cream">
               <p>
-                Edition I exists once. Whe the two hundred and fiftieth bottle
+                Edition I exists once. When the two hundred and fiftieth bottle
                 is placed into a collector&apos;s hands, the edition closes
                 permanently — not paused, not revisited in a future
                 &ldquo;anniversary&rdquo; release, but closed, in the way a

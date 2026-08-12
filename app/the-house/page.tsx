@@ -51,34 +51,61 @@ const CENTURY_LIST: { label: string; icon: LucideIcon }[] = [
 
 const TIMELINE_STEPS = [
   {
-    year: "2024",
+    year: "2023",
     title: "FOUNDATION",
-    body: "The House is established with a clear vision and uncompromising standards.",
+    body: [
+      "Before there was a bottle, there was a memory.",
+      "Maison Vereen began with a thought shaped by my late father — his strength, his presence, and the imprint he left behind. There was something about encountering a familiar scent, one reminiscent of what he wore, that could bring his presence back with remarkable clarity.",
+      "That became part of the beginning: the belief that fragrance can preserve more than a moment. It can carry memory, character, and presence across generations.",
+      "The House begins with the decision to turn that belief into a craft.",
+    ],
   },
   {
-    year: "2024–2025",
+    year: "2026–2027",
     title: "EDITION I",
-    body: "The founding edition is created — finite by design, marking the first chapter of the House.",
+    body: [
+      "The first chapter of the House.",
+      "Edition I establishes Maison Vereen through a finite body of 250 individually numbered creations — developed, refined, and released with intention.",
+      "Finite by design. Foundational by nature.",
+    ],
   },
   {
-    year: "2025+",
+    year: "2026+",
     title: "SIGNATURE COLLECTION",
-    body: "The permanent body of work is released — fragrances that will endure and evolve with the House.",
+    body: [
+      "The permanent body of work.",
+      "Fragrances created to remain with the House beyond any single edition — evolving with Maison Vereen while preserving the standards and character upon which it was founded.",
+    ],
   },
   {
-    year: "2025+",
+    year: "2026+",
     title: "THE REGISTRY",
-    body: "The House is assembled through conviction, not transaction. The foundation of community.",
+    body: [
+      "The beginning of belonging.",
+      "The Maison Vereen Registry is not simply a record of ownership. It is the House's living record of those who entered its story through conviction.",
+      "Edition I is not simply purchased. It is applied for.",
+      "Those admitted into the Edition become part of the Registry, creating a lasting relationship between the House and the people who carry its work into the world.",
+      "The House is assembled through conviction, not transaction.",
+    ],
   },
   {
     year: "2030+",
     title: "GROWTH WITH PURPOSE",
-    body: "The House expands its craft, its culture, and its impact without compromising its values.",
+    body: [
+      "Expansion without dilution.",
+      "Maison Vereen grows deliberately — extending its craft, manufacturing capability, cultural presence, and reach while protecting the principles that made the House worth building in the first place.",
+      "Growth is not measured by how far the House travels, but by what remains uncompromised as it does.",
+    ],
   },
   {
-    year: "2124",
-    title: "A CENTURY STRONG",
-    body: "Maison Vereen is remembered not for trends, but for timeless craft and character.",
+    year: "2124+",
+    title: "THE LONG HOUSE",
+    body: [
+      "A century of character.",
+      "The ambition is not to remain relevant to a particular era, but to become part of the language of fragrance itself.",
+      "A House carried forward through generations — remembered for the depth of its craft, the integrity of its standards, and the character of what it created.",
+      "Not built for a moment. Built to leave an imprint.",
+    ],
   },
 ];
 
@@ -313,7 +340,7 @@ export default function TheHousePage() {
             A Journey Measured in Generations
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-2 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {TIMELINE_STEPS.map((step) => (
               <article
                 key={`${step.year}-${step.title}`}
@@ -327,9 +354,16 @@ export default function TheHousePage() {
                     {step.title}
                   </h3>
                 </div>
-                <p className="font-sans text-[12px] sm:text-[13px] font-normal leading-[1.7] text-body-muted flex-1">
-                  {step.body}
-                </p>
+                <div className="flex flex-col gap-3 flex-1">
+                  {step.body.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 48)}
+                      className="font-sans text-[13px] sm:text-[14px] font-normal leading-[1.75] text-body-muted"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </article>
             ))}
           </div>

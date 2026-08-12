@@ -144,56 +144,189 @@ export default function OurStoryPage() {
           </div>
         </section>
 
-        {/* ── 01 cream ── */}
+        {/* ── 01 cream — Origin / Conviction / House / Work ── */}
         <section className="relative bg-[#EDE8DE] text-[#2C2823]">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="relative min-h-80 md:min-h-105 lg:min-h-full aspect-4/5 lg:aspect-auto overflow-hidden">
-              <Image
-                src="/images/house-section-image.webp"
-                alt="Coastline light — the origin of the House"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+          <div className="relative w-full aspect-21/9 max-h-80 md:max-h-105 overflow-hidden">
+            <Image
+              src="/images/house-section-image.webp"
+              alt="Coastline light — the origin of the House"
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </div>
+
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto px-0 sm:px-2 py-16 md:py-24 space-y-14 md:space-y-16">
+            <div className="space-y-3">
+              <span className="font-serif text-2xl md:text-3xl text-gold font-light block">
+                01
+              </span>
             </div>
 
-            <div className="flex items-center px-8 sm:px-12 md:px-14 lg:px-16 py-16 md:py-20">
-              <div className="space-y-8 max-w-xl">
-                <div className="space-y-3">
-                  <span className="font-serif text-2xl md:text-3xl text-gold font-light block">
-                    01
-                  </span>
-                  {/* <div className="w-10 h-px bg-gold" /> */}
-                </div>
+            {/* THE ORIGIN OF THE HOUSE */}
+            <div className="space-y-6">
+              <h2 className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#2C2823] font-semibold">
+                The Origin of the House
+              </h2>
+              <div className="space-y-5 text-[#2C2823]/85 text-base font-light leading-[1.85]">
+                <p>It began with a scent.</p>
+                <p>
+                  For as long as I can remember, my father wore one particular
+                  fragrance.
+                </p>
+                <p>
+                  He never seemed to need another. Over the years, that scent
+                  became inseparable from him — so much so that even today,
+                  encountering something that carries a trace of it can bring
+                  him back with remarkable clarity.
+                </p>
+                <p>But what returns is not simply a memory.</p>
+                <p>It is a presence.</p>
+                <p>
+                  My father was a man who left an impression wherever he went.
+                  He had a natural command of a room. He was passionate, kind,
+                  and deeply committed to building. He believed in the
+                  possibility of people — in the conviction that, with belief
+                  and intention, a person could become the fullest expression of
+                  who they were capable of becoming.
+                </p>
+                <p>Those principles became part of me.</p>
+                <p>
+                  And years after his passing, I began to understand the
+                  extraordinary relationship between scent and identity.
+                </p>
+                <p>
+                  A fragrance can become so intimately associated with a person
+                  that it does more than remind you of them. It can return
+                  something of their character — their strength, their warmth,
+                  their voice, their presence.
+                </p>
+                <p>It can make the intangible feel almost tangible.</p>
+                <p>
+                  That realization became one of the earliest convictions behind
+                  Maison Vereen:
+                </p>
+                <p className="font-medium text-[#2C2823]">
+                  Fragrance has the power to preserve presence.
+                </p>
+                <p>Not merely to make someone smell beautiful.</p>
+                <p>Not merely to complete an appearance.</p>
+                <p>But to become part of how a person is remembered.</p>
+                <p>This is where Maison Vereen begins.</p>
+              </div>
+            </div>
 
-                <div className="space-y-6 text-body-muted text-base  font-light leading-[1.85]">
-                  <p>
-                    Maison Vereen is a luxury maison built around two distinct
-                    experiences: Edition I, the founding collector&apos;s
-                    chapter limited to two hundred and fifty bottles, and the
-                    Signature Collection, the House&apos;s permanent body of
-                    artistic work. Both are expressions of the same conviction
-                    — that fragrance, made without compromise, deserves to be
-                    treated as art rather than inventory.
-                  </p>
-                  <p>
-                    The House exists because a gap was left unfilled. Africa has
-                    supplied the world&apos;s perfumers with some of their
-                    rarest materials for generations, yet has never produced a
-                    fragrance house the world recognised as a serious luxury
-                    institution in its own right. Maison Vereen was founded to
-                    close that gap — not by imitating the houses of Paris or
-                    Geneva, but by holding itself to the same uncompromising
-                    standard while remaining unmistakably of its own origin.
-                  </p>
-                  <p>
-                    This is a long-term undertaking. Maison Vereen is not
-                    building toward a season or a single collection. It is
-                    building toward a century — a House whose name will mean,
-                    decades from now, what the world&apos;s oldest maisons mean
-                    today.
-                  </p>
-                </div>
+            <div className="h-px w-full bg-[#2C2823]/15" />
+
+            {/* THE CONVICTION */}
+            <div className="space-y-6">
+              <h2 className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#2C2823] font-semibold">
+                The Conviction
+              </h2>
+              <div className="space-y-5 text-[#2C2823]/85 text-base font-light leading-[1.85]">
+                <p>We believe fragrance can be an expression of identity.</p>
+                <p>
+                  A well-made fragrance does not simply sit on the skin. Over
+                  time, it can become associated with the person who wears it —
+                  their presence, their character, their moments, their movement
+                  through the world.
+                </p>
+                <p>It becomes part of their story.</p>
+                <p>
+                  And that is why the House is concerned with more than luxury.
+                </p>
+                <p>We are concerned with presence.</p>
+                <p>With the authority of a distinct voice.</p>
+                <p>With authenticity that does not need permission.</p>
+                <p>With the power of becoming.</p>
+                <p>With the things worth carrying forward.</p>
+                <p>And ultimately, with legacy.</p>
+              </div>
+            </div>
+
+            <div className="h-px w-full bg-[#2C2823]/15" />
+
+            {/* THE HOUSE */}
+            <div className="space-y-6">
+              <h2 className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#2C2823] font-semibold">
+                The House
+              </h2>
+              <div className="space-y-5 text-[#2C2823]/85 text-base font-light leading-[1.85]">
+                <p>
+                  Maison Vereen was created from this conviction, and from
+                  another belief equally important to us:
+                </p>
+                <p>
+                  Africa should not only be a source of materials for the
+                  world&apos;s fragrance industry. It can also be a source of
+                  houses, ideas, artistry and enduring authorship.
+                </p>
+                <p>
+                  The continent has contributed extraordinary raw materials,
+                  landscapes, traditions and cultural richness to the world of
+                  fragrance for generations.
+                </p>
+                <p>
+                  Maison Vereen exists to contribute something further:
+                </p>
+                <p>a house with its own voice.</p>
+                <p>
+                  A house conceived and developed from Africa, with an
+                  uncompromising standard of creation and an ambition that is
+                  not confined by geography.
+                </p>
+                <p>
+                  We do not seek to reproduce the language of another fragrance
+                  capital.
+                </p>
+                <p>We seek to develop our own.</p>
+                <p>
+                  Because a true House is not defined by where it stands.
+                </p>
+                <p>
+                  It is defined by what it creates, what it believes, and what
+                  it leaves behind.
+                </p>
+              </div>
+            </div>
+
+            <div className="h-px w-full bg-[#2C2823]/15" />
+
+            {/* THE WORK OF THE HOUSE */}
+            <div className="space-y-6">
+              <h2 className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#2C2823] font-semibold">
+                The Work of the House
+              </h2>
+              <div className="space-y-5 text-[#2C2823]/85 text-base font-light leading-[1.85]">
+                <p>
+                  From this philosophy emerge the two expressions of Maison
+                  Vereen.
+                </p>
+                <p>
+                  Edition I is the founding chapter — a finite collection of 250
+                  individually numbered bottles, marking the beginning of the
+                  House&apos;s permanent record.
+                </p>
+                <p>
+                  The Signature Collection is the continuing body of work:
+                  fragrances developed to remain within the House and to carry
+                  its artistic language forward.
+                </p>
+                <p>Different expressions.</p>
+                <p>One conviction.</p>
+                <p>
+                  That fragrance can become more than an object of consumption.
+                </p>
+                <p>It can become an imprint.</p>
+                <p>A signature.</p>
+                <p>A part of how someone is known.</p>
+                <p>
+                  And, with time, perhaps part of what they leave behind.
+                </p>
+                <p>
+                  A fragrance from Maison Vereen is not something you simply
+                  wear. It is something you become.
+                </p>
               </div>
             </div>
           </div>
