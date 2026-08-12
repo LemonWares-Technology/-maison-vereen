@@ -31,17 +31,17 @@ const RAW_MATERIALS = [
   },
   {
     name: "WOODS",
-    src: "/thunderrock.webp",
+    src: "/ingredients.webp",
     alt: "Dark woods and amber depth",
   },
   {
     name: "BOTANICALS",
-    src: "/oud.webp",
+    src: "/cinamon.png",
     alt: "Botanical craft materials for the House",
   },
   {
     name: "FLOWERS",
-    src: "/thunderrock.webp",
+    src: "/woods.webp",
     alt: "Maison Vereen vessel — floral character",
   },
   {
@@ -105,11 +105,11 @@ const GALLERY = [
     alt: "Hands with dropper and vials in the atelier",
   },
   {
-    src: "/thunderrock.webp",
+    src: "/cinamon.png",
     alt: "Maison Vereen fragrance vessel",
   },
   {
-    src: "/oud.webp",
+    src: "/ingredients.webp",
     alt: "Edition I bottle and founding chapter box",
   },
   {
@@ -577,7 +577,7 @@ export default function TheCraftPage() {
               </div>
             </div>
 
-            {/* <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
               {GALLERY.map((img) => (
                 <div
                   key={img.src + img.alt}
@@ -592,7 +592,7 @@ export default function TheCraftPage() {
                   />
                 </div>
               ))}
-            </div> */}
+            </div>
           </div>
         </section>
 

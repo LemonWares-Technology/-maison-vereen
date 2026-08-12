@@ -164,10 +164,10 @@ export default function Header({
                 key={`drawer-${label}-${href}`}
                 href={href}
                 onClick={() => setIsDrawerOpen(false)}
-                className={`block px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase transition-colors ${
+                className={`block px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase transition-colors text-gold ${
                   active
-                    ? "text-gold bg-gold/10"
-                    : "text-[#EDE8DE] hover:text-gold hover:bg-gold/8 active:bg-gold/10"
+                    ? "bg-gold/10"
+                    : "hover:bg-gold/8 active:bg-gold/10"
                 }`}
               >
                 {label}
