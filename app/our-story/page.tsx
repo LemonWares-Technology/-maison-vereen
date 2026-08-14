@@ -10,7 +10,7 @@ const PAGE_NAV = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "OUR STORY", href: "/our-story" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
 
   { label: "CONTACT", href: "/contact" },
 ];

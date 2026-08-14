@@ -13,7 +13,7 @@ const HOME_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "PHILOSOPHY", href: "/philosophy" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
 ];
 
 const HOME_FOOTER_NAV = [

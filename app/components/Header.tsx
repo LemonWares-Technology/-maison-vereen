@@ -15,7 +15,7 @@ export const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "PHILOSOPHY", href: "/philosophy" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
 ];
 
 const DIRECTORY_NAV_ITEMS: NavItem[] = [
@@ -24,7 +24,7 @@ const DIRECTORY_NAV_ITEMS: NavItem[] = [
   { label: "EDITION I", href: "/edition-i" },
   { label: "PHILOSOPHY", href: "/philosophy" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
   { label: "OUR STORY", href: "/our-story" },
   { label: "THE FOUNDER", href: "/the-founder" },
   { label: "THE CRAFT", href: "/the-craft" },
