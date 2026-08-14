@@ -3,15 +3,17 @@
 import { useState, useEffect } from "react";
 
 interface FragranceEnquiryModalProps {
-  fragrance: { id: string; name: string; price?: string } | null;
+  fragrance: { id: string; name: string; no?: string; price?: string } | null;
   onClose: () => void;
 }
+
+const TEAM_WHATSAPP = "2348144413526";
 
 export default function FragranceEnquiryModal({
   fragrance,
   onClose,
 }: FragranceEnquiryModalProps) {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -41,7 +43,7 @@ export default function FragranceEnquiryModal({
     setTimeout(() => {
       onClose();
       setSubmitted(false);
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", phone: "", message: "" });
       setError("");
     }, 280);
   }
@@ -58,7 +60,9 @@ export default function FragranceEnquiryModal({
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          phone: form.phone,
           fragrance: fragrance.name,
+          fragranceNo: fragrance.no ?? "",
           message: form.message,
         }),
       });
@@ -67,6 +71,22 @@ export default function FragranceEnquiryModal({
         setError(data.error ?? "Something went wrong.");
         return;
       }
+      const whatsappText = [
+        "New Signature Collection enquiry",
+        "",
+        `Fragrance: ${fragrance.name}${fragrance.no ? ` (${fragrance.no})` : ""}`,
+        `Name: ${form.name.trim()}`,
+        `Email: ${form.email.trim()}`,
+        `Phone: ${form.phone.trim()}`,
+        form.message.trim() ? `Message: ${form.message.trim()}` : null,
+      ]
+        .filter(Boolean)
+        .join("\n");
+      window.open(
+        `https://wa.me/${TEAM_WHATSAPP}?text=${encodeURIComponent(whatsappText)}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
       setSubmitted(true);
     } catch {
       setError("Network error. Please try again.");
@@ -105,8 +125,8 @@ export default function FragranceEnquiryModal({
             >
               {fragrance.name}
             </h2>
-            {fragrance.price ? (
-              <p className="text-gold/80 font-light text-sm">{fragrance.price}</p>
+            {fragrance.no ? (
+              <p className="text-gold/80 font-light text-sm">{fragrance.no}</p>
             ) : null}
           </div>
           <button
@@ -167,10 +187,24 @@ export default function FragranceEnquiryModal({
 
               <div className="space-y-2">
                 <label className="block uppercase tracking-[0.25em] text-[#EDE8DE]/45 font-medium text-[10px]">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="WhatsApp / phone number"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  className={inputClass}
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block uppercase tracking-[0.25em] text-[#EDE8DE]/45 font-medium text-[10px]">
                   Fragrance of Interest
                 </label>
                 <div className="px-4 py-3 border border-gold/30 text-[#EDE8DE] font-light text-sm">
-                  {fragrance.name}
+                  {fragrance.no ? `${fragrance.no} — ${fragrance.name}` : fragrance.name}
                 </div>
               </div>
 

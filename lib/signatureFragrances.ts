@@ -1,0 +1,38 @@
+export const DEFAULT_SIGNATURE_FRAGRANCES = [
+  {
+    slug: "aletheia",
+    name: "ALETHEIA",
+    notes: "WOODY / AMBER",
+    description: "Warmth grounded in depth. Confidence without noise.",
+    imageSrc: "/aletheia.webp",
+    imageAlt: "Maison Vereen Edition I bottle — Aletheia",
+    sortOrder: 1,
+  },
+  {
+    slug: "orenze",
+    name: "ORENZE",
+    notes: "FLORAL / MUSK",
+    description: "Light that lingers. Grace with intention.",
+    imageSrc: "/orenze.webp",
+    imageAlt: "Maison Vereen vessel — Orenze",
+    sortOrder: 2,
+  },
+  {
+    slug: "vaelor",
+    name: "VAELOR",
+    notes: "AMBER / LEATHER",
+    description: "Power in stillness. Presence that remains.",
+    imageSrc: "/vaelor.webp",
+    imageAlt: "Maison Vereen bottle detail — Vaelor",
+    sortOrder: 3,
+  },
+  {
+    slug: "alther",
+    name: "ALTHER",
+    notes: "WOODY / SPICY",
+    description: "Quiet strength. Refined and timeless.",
+    imageSrc: "/alther.webp",
+    imageAlt: "Maison Vereen packaging — Alther",
+    sortOrder: 4,
+  },
+] as const;
