@@ -10,8 +10,10 @@ const adapter = new PrismaPg({
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-  const email = "admin@maisonvereen.com";
+  const email = "apply@maisonvereen.com";
   const plainPassword = "MaisonAdmin2024!"; // Change immediately after first login
+
+
 
   const existing = await prisma.admin.findUnique({ where: { email } });
   if (existing) {
