@@ -70,13 +70,15 @@ enum ApplicationStatus {
 
 // ── Fragrance Enquiry — Signature Collection acquire flow ─────────────────────
 model FragranceEnquiry {
-  id        String        @id @default(cuid())
-  name      String
-  email     String
-  fragrance String
-  message   String?       @db.Text
-  status    EnquiryStatus @default(NEW)
-  createdAt DateTime      @default(now())
+  id           String        @id @default(cuid())
+  name         String
+  email        String
+  phone        String?
+  fragrance    String
+  fragranceNo  String?
+  message      String?       @db.Text
+  status       EnquiryStatus @default(NEW)
+  createdAt    DateTime      @default(now())
 
   @@index([email])
   @@index([status])
@@ -87,4 +89,22 @@ enum EnquiryStatus {
   NEW
   CONTACTED
   COMPLETED
+}
+
+// ── Signature Collection — admin-managed bottles + display order ─────────────
+model SignatureFragrance {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  notes       String
+  description String
+  imageSrc    String
+  imageAlt    String   @default("")
+  sortOrder   Int
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+  @@index([published])
 }

@@ -1,5 +1,6 @@
 "use client";
 
+// Why not working?
 import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
@@ -32,7 +33,7 @@ const HERO_LINES: { text: string; icon: LucideIcon }[] = [
     icon: LucideScale,
   },
   {
-    text: "The House speaks. The founder rarely needs to.",
+    text: "The House speaks. I rarely need to.",
     icon: LucideLandmark,
   },
   {
@@ -43,6 +44,66 @@ const HERO_LINES: { text: string; icon: LucideIcon }[] = [
     text: "This was never meant to be finished quickly.",
     icon: LucideHourglass,
   },
+];
+
+const STORY_PARAGRAPHS = [
+  "I did not begin with the intention of building a fragrance company. The beginning was much more personal than that.",
+  "For as long as I can remember, my father wore one particular fragrance.",
+  "He never seemed to need another.",
+  "Over time, that scent became inseparable from him. Even years after his passing, encountering something that carries a trace of it can bring him back with remarkable clarity.",
+  "But what returns is not simply a memory.",
+  "It is a presence.",
+  "My father was a man who left an impression wherever he went. He had a natural command of a room. He was passionate, kind, and deeply committed to building. He believed in the possibility of people — that with belief, intention and discipline, a person could become the fullest expression of who they were capable of becoming.",
+  "Those convictions became part of me.",
+  "And somewhere along the way, I began to understand something about fragrance that I could not unsee.",
+  "A fragrance can become part of a person.",
+  "It can become associated with their character, their presence, their moments, their way of moving through the world.",
+  "It can preserve something that cannot otherwise be held.",
+  "That changed the way I thought about scent.",
+  "I no longer saw fragrance simply as something beautiful to wear.",
+  "I began to see it as a form of identity.",
+  "A form of memory.",
+  "A form of presence.",
+  "And eventually, a form of legacy.",
+  "That was the conviction from which Maison Vereen emerged.",
+  "But building the House required another conviction.",
+  "I believed that work of exceptional standard did not have to come from somewhere else to be worthy of the world.",
+  "It could begin here.",
+  "In Lagos.",
+  "It could be conceived and built by an African founder without borrowing another house's identity, imitating another city's language, or asking permission to belong.",
+  "I did not want to reproduce someone else's idea of what a great fragrance house should look like.",
+  "I wanted to build one.",
+  "That conviction did not arrive as a business plan.",
+  "It arrived as a refusal.",
+  "A refusal to accept that certain levels of craftsmanship belonged only to certain places, certain histories, or certain names.",
+  "So I began the work.",
+  "Quietly.",
+  "Formulation. Materials. Refinement. Structure. Proportion. Testing. Reworking. Starting again.",
+  "And then the details most people may never see — because I believe the difference between something good and something truly considered is often found in the details no one is expected to notice.",
+  "The way a fragrance develops.",
+  "The balance of a formula.",
+  "The character of a material.",
+  "The weight of the bottle in the hand.",
+  "The discipline behind what is included — and what is deliberately left out.",
+  "I became obsessed with getting things right.",
+  "Not quickly.",
+  "Not loudly.",
+  "Properly.",
+  "Because I was never interested in creating something that would simply exist for my lifetime.",
+  "I wanted to build something that could continue to speak when I no longer could.",
+  "Something with enough substance to become larger than its maker.",
+  "Something that could still mean something a hundred years from now.",
+  "That is why Maison Vereen is not ultimately about me.",
+  "I may have started the work.",
+  "I may be the one giving it its first voice.",
+  "But the ambition has always been greater than its founder.",
+  "The House must eventually speak for itself.",
+  "Through what it creates.",
+  "Through what it believes.",
+  "Through the standard it refuses to compromise.",
+  "And through what it leaves behind.",
+  "I am not building Maison Vereen to be remembered as the woman who started a fragrance brand.",
+  "I am building it so that the work itself can be remembered.",
 ];
 
 function ArrowIcon() {
@@ -105,7 +166,7 @@ export default function TheFounderPage() {
                   className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
                   style={{ fontSize: "clamp(2.1rem, 5.5vw, 3.75rem)" }}
                 >
-                  She Did Not Set Out to Build a Perfume Brand.
+                  I Did Not Set Out to Build a Perfume Brand.
                 </h1>
 
                 <ul className="space-y-3.5 pt-1">
@@ -122,12 +183,6 @@ export default function TheFounderPage() {
                     </li>
                   ))}
                 </ul>
-
-                <p className="text-body-muted text-[16px] font-light max-w-md pt-2">
-                  The most prestigious houses in the world communicate through
-                  their work, not their founders. Maison Vereen was built in that
-                  tradition.
-                </p>
               </div>
             </div>
           </div>
@@ -161,7 +216,7 @@ export default function TheFounderPage() {
                 className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
                 style={{ fontSize: "clamp(2.2rem, 4.8vw, 3.75rem)" }}
               >
-                She Did Not Set Out to Build a Perfume Brand.
+                I Did Not Set Out to Build a Perfume Brand.
               </h1>
 
               <ul className="space-y-3.5 pt-1">
@@ -178,41 +233,16 @@ export default function TheFounderPage() {
                   </li>
                 ))}
               </ul>
-
-              <p className="text-body-muted text-[16px] font-light max-w-md pt-2">
-                The most prestigious houses in the world communicate through
-                their work, not their founders. Maison Vereen was built in that
-                tradition.
-              </p>
             </div>
           </div>
         </section>
 
         {/* ── Narrative ── */}
         <section className="relative bg-[#060506] py-20 md:py-28 border-t border-white/5">
-          <div className="w-[90%] md:w-full max-w-3xl mx-auto space-y-8 text-body-muted text-[16px] font-light leading-[1.85] ">
-            <p>
-              Maison Vereen was founded on a simple, stubborn conviction: that a
-              luxury fragrance house built to the world&apos;s highest standard
-              could be built in Lagos, by an African founder, without asking
-              permission or imitating anyone else&apos;s idea of what luxury
-              should sound like.
-            </p>
-            <p>
-              That conviction did not arrive as a business plan. It arrived as a
-              refusal — a refusal to accept that craftsmanship of this calibre
-              belonged only to certain cities, certain histories, certain names.
-              What followed was years of formulation, refinement, and quiet
-              obsession with getting every detail, from the raw material to the
-              bottle&apos;s weight in the hand, exactly right.
-            </p>
-            <p>
-              The founder&apos;s full story will be told over time, the way any
-              serious house reveals itself — gradually, through the work. What
-              matters at this stage is not her biography, but her intention: to
-              build something that will still mean something in a hundred years,
-              long after she is no longer the one telling its story.
-            </p>
+          <div className="w-[90%] md:w-full max-w-3xl mx-auto space-y-6 text-body-muted text-[16px] font-light leading-[1.85]">
+            {STORY_PARAGRAPHS.map((paragraph) => (
+              <p key={paragraph.slice(0, 72)}>{paragraph}</p>
+            ))}
           </div>
         </section>
 

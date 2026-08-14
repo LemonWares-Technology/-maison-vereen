@@ -5,10 +5,10 @@ import { getAdminFromRequest } from "@/lib/auth";
 // ── POST — public fragrance enquiry submission ────────────────────────────────
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, fragrance, message } = await req.json();
+    const { name, email, phone, fragrance, fragranceNo, message } = await req.json();
 
-    if (!name?.trim() || !email?.trim() || !fragrance?.trim()) {
-      return NextResponse.json({ error: "Name, email and fragrance are required." }, { status: 400 });
+    if (!name?.trim() || !email?.trim() || !fragrance?.trim() || !phone?.trim()) {
+      return NextResponse.json({ error: "Name, email, phone and fragrance are required." }, { status: 400 });
     }
 
     const emailLower = email.toLowerCase().trim();
@@ -20,7 +20,9 @@ export async function POST(req: NextRequest) {
       data: {
         name: name.trim(),
         email: emailLower,
+        phone: phone.trim(),
         fragrance: fragrance.trim(),
+        fragranceNo: fragranceNo?.trim() || null,
         message: message?.trim() || null,
       },
     });

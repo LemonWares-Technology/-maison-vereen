@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FragranceEnquiryModal from "../components/signature/FragranceEnquiryModal";
+import { DEFAULT_SIGNATURE_FRAGRANCES } from "@/lib/signatureFragrances";
+import { fragranceNumberLabel } from "@/lib/roman";
 
 const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
@@ -33,53 +35,27 @@ const PILLARS = [
   },
 ];
 
-const SIGNATURE_BOTTLES = [
-  {
-    id: "aletheia",
-    no: "No. I",
-    name: "ALETHEIA",
-    notes: "WOODY / AMBER",
-    desc: "Warmth grounded in depth. Confidence without noise.",
-    src: "/aletheia.webp",
-    alt: "Maison Vereen Edition I bottle — Aletheia",
-  },
-  {
-    id: "orenze",
-    no: "No. II",
-    name: "ORENZE",
-    notes: "FLORAL / MUSK",
-    desc: "Light that lingers. Grace with intention.",
-    src: "/orenze.webp",
-    alt: "Maison Vereen vessel — Orenze",
-  },
-  {
-    id: "vaelor",
-    no: "No. III",
-    name: "VAELOR",
-    notes: "AMBER / LEATHER",
-    desc: "Power in stillness. Presence that remains.",
-    src: "/vaelor.webp",
-    alt: "Maison Vereen bottle detail — Vaelor",
-  },
-  {
-    id: "alther",
-    no: "No. IV",
-    name: "ALTHER",
-    notes: "WOODY / SPICY",
-    desc: "Quiet strength. Refined and timeless.",
-    src: "/alther.webp",
-    alt: "Maison Vereen packaging — Alther",
-  },
-  // {
-  //   id: "clairvoyant",
-  //   no: "No. V",
-  //   name: "CLAIRVOYANT",
-  //   notes: "CITRUS / AROMATIC",
-  //   desc: "Clarity in motion. Crisp, intelligent, assured.",
-  //   src: "/images/hero-section-image.webp",
-  //   alt: "Maison Vereen bottle — Clairvoyant",
-  // },
-];
+type SignatureBottle = {
+  id: string;
+  no: string;
+  name: string;
+  notes: string;
+  desc: string;
+  src: string;
+  alt: string;
+};
+
+const FALLBACK_BOTTLES: SignatureBottle[] = DEFAULT_SIGNATURE_FRAGRANCES.map(
+  (item) => ({
+    id: item.slug,
+    no: fragranceNumberLabel(item.sortOrder),
+    name: item.name,
+    notes: item.notes,
+    desc: item.description,
+    src: item.imageSrc,
+    alt: item.imageAlt,
+  })
+);
 
 function ArrowIcon() {
   return (
@@ -124,7 +100,37 @@ export default function FragranceLibraryPage() {
   const [enquiryFragrance, setEnquiryFragrance] = useState<{
     id: string;
     name: string;
+    no: string;
   } | null>(null);
+  const [bottles, setBottles] = useState<SignatureBottle[]>(FALLBACK_BOTTLES);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/signature-fragrances")
+      .then((res) => res.json())
+      .then((data) => {
+        if (cancelled || !Array.isArray(data.fragrances) || data.fragrances.length === 0) {
+          return;
+        }
+        setBottles(
+          data.fragrances.map((item: SignatureBottle & { src?: string; desc?: string }) => ({
+            id: item.id,
+            no: item.no,
+            name: item.name,
+            notes: item.notes,
+            desc: item.desc,
+            src: item.src,
+            alt: item.alt,
+          }))
+        );
+      })
+      .catch(() => {
+        /* keep fallback bottles */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#060506] text-[#EDE8DE] flex flex-col">
@@ -290,7 +296,7 @@ export default function FragranceLibraryPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-4">
-              {SIGNATURE_BOTTLES.map((b) => (
+              {bottles.map((b) => (
                 <article
                   key={b.id}
                   className="group border border-gold/25 hover:border-gold/55 transition-colors duration-400 flex flex-col bg-[#060506] overflow-hidden"
@@ -323,7 +329,7 @@ export default function FragranceLibraryPage() {
                     <button
                       type="button"
                       onClick={() =>
-                        setEnquiryFragrance({ id: b.id, name: b.name })
+                        setEnquiryFragrance({ id: b.id, name: b.name, no: b.no })
                       }
                       className="inline-flex items-center gap-2.5 mt-2 font-sans text-[11px] uppercase tracking-[0.22em] text-gold hover:text-gold-light transition-colors self-start"
                     >
