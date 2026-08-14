@@ -14,7 +14,7 @@ export default function Journal() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-5">
-            <span className="section-tag">The Journal</span>
+            <span className="section-tag">The House</span>
             <h2
               className="font-serif font-light text-[#E8E2D9] leading-[1.1]"
               style={{ fontSize: "clamp(2rem, 3.2vw, 3rem)" }}
@@ -27,7 +27,7 @@ export default function Journal() {
             </h2>
           </div>
           <Link href="/journal" className="link-gold self-end shrink-0">
-            <span>Read The Journal</span>
+            <span>Read The House</span>
             <span className="text-gold">→</span>
           </Link>
         </div>

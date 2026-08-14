@@ -9,7 +9,7 @@ const PAGE_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 

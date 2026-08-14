@@ -10,7 +10,7 @@ const JOURNAL_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -27,7 +27,7 @@ export default function JournalPage() {
             <div className="relative w-full mt-28 h-[42vh] min-h-70 shrink-0 overflow-hidden">
               <Image
                 src="/images/application-hero.webp"
-                alt="Maison Vereen Journal — the intellectual record of the House"
+                alt="The House — the intellectual record of Maison Vereen"
                 fill
                 priority
                 className="object-cover object-[center_30%]"
@@ -46,7 +46,7 @@ export default function JournalPage() {
             <div className="relative z-10 flex-1 bg-[#060506] w-[90%] mx-auto pt-2 pb-14">
               <div className="w-full max-w-lg space-y-5">
                 <span className="font-sans text-[11px] uppercase tracking-[0.32em] text-gold font-medium">
-                  The Journal
+                  The House
                 </span>
                 {/* <div className="w-10 h-px bg-gold" /> */}
 
@@ -54,7 +54,7 @@ export default function JournalPage() {
                   className="font-serif font-light text-[#F2EDE4] leading-[1.08] tracking-tight"
                   style={{ fontSize: "clamp(2rem, 4.5vw, 3.8rem)" }}
                 >
-                  The Journal of Maison Vereen
+                  The House of Maison Vereen
                 </h1>
 
                 <p
@@ -77,7 +77,7 @@ export default function JournalPage() {
             <div className="absolute inset-0 left-[30%] xl:left-[26%]">
               <Image
                 src="/images/application-hero.webp"
-                alt="Maison Vereen Journal — the intellectual record of the House"
+                alt="The House — the intellectual record of Maison Vereen"
                 fill
                 priority
                 className="object-cover object-[center_30%]"

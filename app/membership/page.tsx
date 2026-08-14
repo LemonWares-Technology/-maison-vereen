@@ -9,7 +9,7 @@ const MEMBERSHIP_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
   { label: "MEMBERSHIP", href: "/membership" },
   { label: "CONTACT", href: "/contact" },
 ];

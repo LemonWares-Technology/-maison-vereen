@@ -10,7 +10,7 @@ const JOURNAL_NAV = [
   { label: "THE MAISON", href: "/the-house" },
   { label: "EDITION I", href: "/edition-i" },
   { label: "SIGNATURE COLLECTION", href: "/fragrance-library" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "THE HOUSE", href: "/journal" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -101,7 +101,7 @@ export default function ArticlePage() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="uppercase font-medium">The Journal</span>
+              <span className="uppercase font-medium">The House</span>
             </Link>
 
             <div className="w-8 h-px bg-gold/40 mb-10" />
@@ -125,7 +125,7 @@ export default function ArticlePage() {
                   className="block uppercase tracking-[0.3em] text-[#3A3530] font-medium"
                   style={{ fontSize: "9px" }}
                 >
-                  Maison Vereen Journal
+                  The House
                 </span>
                 <span
                   className="block uppercase tracking-[0.2em] text-[#2A2520]"
